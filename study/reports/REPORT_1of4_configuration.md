@@ -373,7 +373,7 @@ deliberation by roughly 5–20×, in every placement.*
 
 *Table 1. The strong agent (gpt-5.6-sol) on the primary case, n = 4 per row.*
 
-### 3.2 The benefit is capability-dependent, and not monotone in placement (H2, H3)
+### 3.2 The benefit is capability-dependent, and not monotonic in placement (H2, H3)
 
 H2 predicted the reference's benefit would grow as cognition recedes. It does not,
 and the reason is instructive (Fig. 2). For the capable agent the reference saves
@@ -546,11 +546,12 @@ provision-and-read-back — so that class of evidence is gated by live cognition
 populated case seeded with structurally-identical devices and same-named-but-distinct
 services, an agent running a tool-use loop over a live-cognition oracle resolves the
 individuals in full at both-cognitive, at perfect precision, and the resolvability shortfall
-becomes *structural* as a side goes inert. The sharpest result is a measured curve: at
-both-cognitive, more probe budget drives the hardest ("experiment-only") residual
-monotonically to zero (experiment-only resolved fraction 0.00 → 0.38 → 1.00); with one side inert the
-same unbounded budget barely moves it (→ 0.08), because the inert side cannot be interrogated
-at any budget (Fig. 6). Capability governs how the shortfall is paid, exactly as at the
+becomes *structural* as a side goes inert. The sharpest result is a measured curve. The **probe
+budget** is how many live-system interrogations the agent is allowed — its allowance of
+authoritative experiments against ground truth. At both-cognitive, spending more of that budget
+drives the hardest ("experiment-only") residual monotonically to zero (experiment-only resolved
+fraction 0.00 → 0.38 → 1.00); with one side inert the same unbounded budget barely moves it
+(→ 0.08), because the inert side cannot be interrogated at any budget (Fig. 6). Capability governs how the shortfall is paid, exactly as at the
 schema level — the strong agent resolves and defers cleanly at perfect precision, the weaker
 agents trade precision for reach, take the traps as the oracle is lost, and are no less
 confident on a wrong merge than on a right one. This is the instance-level proof of the
@@ -560,9 +561,12 @@ placement.
 
 ![The instance resolvability curve: budget-limited at full cognition, structural once a side is inert.](../figures/fig_instance_budget.png)
 
-*Figure 6. Experiment-only resolved fraction against oracle budget, strong agent. At both-cognitive the
-residual is budget-limited and drives to zero; at one-inert it is structural and no budget
-helps.*
+*Figure 6. The hardest look-alike individuals, for the strong agent: what fraction gets resolved as the
+live-system probe budget is swept from none through bounded to unbounded, at two spectrum placements.
+Budget (the x-axis) and placement (the two lines) are crossed, so the curves isolate their interaction.
+At both-cognitive a live side can be interrogated and the residual is budget-limited — it drives to zero
+as probes are spent. At one-inert there is nothing live to probe and it is structural — no budget helps.
+Same sweep, opposite outcomes, decided by placement, not by effort.*
 
 **Verification as its own object** (method note, `notes/studies/verification-modes.md`). §3.5 ran
 verification as a *step* in the pipeline; the companion study makes the verifier itself the

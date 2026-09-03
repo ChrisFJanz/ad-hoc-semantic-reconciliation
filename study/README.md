@@ -12,18 +12,24 @@ reconciliation.** Descriptor methods — matching names, then names plus a gloss
 and stop, historically leaving the rest to a standard or a person. Where both systems can reason, the
 remainder is closed **autonomously**, with no model agreed in advance and no human in the loop, and
 only as cognition recedes does a residual have to be referred onward. A thin, published **reference**
-can substitute for cognition or supply an inert side the information it lacks — but it reaches
-information and stops at authority. And the **pragmatic** layer — what a reconciled thing is *for*,
+can substitute for cognition, or supply an inert side the facts it lacks — but its reach ends there:
+it hands over information, never the **authority** to decide, whose value governs or whether a
+trade-off is acceptable. And the **pragmatic** layer — what a reconciled thing is *for*,
 whether it matters, who decides — is the frontier the descriptor methods never reach: decisive for
 meaning, and itself bounded by the agent's capability.
 
 ## Start here — the master report
 
 **[reports/MASTER_REPORT.md](reports/MASTER_REPORT.md)** &nbsp;·&nbsp;
-**[PDF](reports/MASTER_REPORT.pdf)** — the synthesis that sits atop the four settings: the idea (the
-lift, portable semantic models, the cognition spectrum, the thin reference), each setting distilled to
-its essentials, and the findings gathered so they can be read as one result, with two tables mapping
-every finding to the process stage it acts on.
+**[PDF](reports/MASTER_REPORT.pdf)** &nbsp;·&nbsp;
+**[slides (PDF)](reports/MASTER_REPORT_Deck.pdf)** — the synthesis that sits atop the four settings. It
+introduces the idea once (the lift, portable semantic models, the family of reconciliation operations,
+and the cognition spectrum), distils each setting to its essentials, and then gathers the findings so
+they can be read as one result: what works and how far, the **six theses** the settings establish, the
+evidence behind them along four cross-cutting axes (cognitive load, the reference, placement and
+failure, and the pragmatic layer), two tables mapping every finding to its placement and to the process
+stage it acts on, the surprises, and the scope. The slide deck carries the same synthesis for readers
+who prefer slides.
 
 ![The lift — a data model becomes a portable, self-describing semantic model.](figures/fig_master_lift.png)
 
@@ -77,11 +83,16 @@ model strength rather than provider or architecture.
 
 ## How it works
 
-The **lift** is the move from a *data model* — a schema and its records, meaningful only to whoever
-wrote it — to a *semantic model*: the same elements given grounded meaning, so each concept carries a
-lexicon (labels and synonyms), an ontology (its kind and relations), definitions and worked examples,
-and concrete instances as evidence, with an optional binding to a shared reference. Being
-self-describing, a lifted model is **portable** — any cognitive consumer can pick it up with no
+The **lift** is the move from a *data model* (a schema and its records: already a partial semantic
+picture, but a fixed one, with much of its meaning left implicit) to a *semantic model* that carries
+its meaning explicitly. A semantic model has three
+parts: an **ontology**, including its **lexicon**, with a schematic layer (concepts, their kinds and
+relations, and the labels and synonyms that name them) and a concrete layer (the instances that
+populate them); **pragmatics**, the contextual information a consumer needs (what a thing is for, whose
+authority governs it, in what context it holds); and **provenance** (who asserted each part, by what
+method, how firmly). The lift itself is a cognitive act, aided by supports that are not parts of the
+model: definitions, worked examples, a canonical example, and an optional link to a shared reference.
+Being self-describing, a lifted model is **portable**: any cognitive consumer can pick it up with no
 pre-agreed standard. Reconciliation runs over these lifted models, not over labels.
 
 A **case** is two lifted semantic models plus a gold standard *derived from the models and validated*,

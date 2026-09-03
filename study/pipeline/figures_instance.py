@@ -68,7 +68,7 @@ def fig_spectrum():
 def fig_budget():
     rows = load(ROOT / "results" / "instance_instance_hard_stage3_gpt-5.6-sol.csv")
     budgets = ["0", "3", "unbounded"]
-    blabel = {"0": "0\n(no oracle)", "3": "3\n(bounded)", "unbounded": "unbounded"}
+    blabel = {"0": "0\n(none)", "3": "3\n(bounded)", "unbounded": "unbounded"}
     fig, ax = plt.subplots(figsize=(7.4, 4.5))
     for pl, color, lbl, mk in (("both_cognitive", BLUE, "both cognitive", "-o"),
                                ("one_inert", ORANGE, "one inert", "-s")):
@@ -76,10 +76,12 @@ def fig_budget():
                 "experiment_only_recall") for b in budgets]
         ax.plot(range(3), ys, mk, color=color, label=lbl, markersize=7)
     ax.set_xticks(range(3)); ax.set_xticklabels([blabel[b] for b in budgets], fontsize=9)
+    ax.set_xlabel("live-system probe budget (interrogations allowed)", fontsize=9)
     ax.set_ylabel("experiment-only resolved fraction")
     ax.set_ylim(-0.03, 1.08)
-    ax.set_title("Resolution complete in principle is a measured curve:\n"
-                 "budget-limited at full cognition, structural once a side is inert", fontsize=11)
+    ax.set_title("Live probing resolves the hardest cases only where a live side remains:\n"
+                 "budget-limited at both-cognitive (drives to zero), structural at one-inert (no budget helps)",
+                 fontsize=10.5)
     ax.legend(frameon=False, fontsize=10, loc="center left")
     ax.set_facecolor(SURFACE)
     for s in ("top", "right"):

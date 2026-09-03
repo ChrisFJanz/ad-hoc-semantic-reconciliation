@@ -66,16 +66,26 @@ def fig_negotiation_spectrum():
     for md in MODELS:
         ys = [m([r for r in rows if r["model"] == md and r["placement"] == pl], "decision_accuracy")
               for pl in SPECTRUM]
-        ax.plot(range(len(SPECTRUM)), ys, "-o", color=COLOR[md], label=LABEL[md], markersize=7)
+        # sol tracks mini exactly here; nudge it up a hair (and thin it) so the blue line stays visible
+        # instead of hiding under the orange one
+        dy = 0.018 if md == "gpt-5.6-sol" else 0.0
+        lw = 1.6 if md == "gpt-5.6-sol" else 2.0
+        ax.plot(range(len(SPECTRUM)), [y + dy for y in ys], "-o", color=COLOR[md], label=LABEL[md],
+                markersize=6.5 if md == "gpt-5.6-sol" else 7, linewidth=lw,
+                zorder=5 if md == "gpt-5.6-sol" else 3)
     ax.set_xticks(range(len(SPECTRUM))); ax.set_xticklabels([SLABEL[p] for p in SPECTRUM], fontsize=9)
     ax.set_ylabel("decision closed correctly (accept/reject)")
     ax.set_ylim(-0.03, 1.08)
     ax.set_title("The negotiation across the cognition spectrum:\n"
                  "a pre-placed movable policy closes decisions a mute consumer must refer", fontsize=11)
     ax.legend(frameon=False, fontsize=9, loc="lower left")
-    ax.annotate("pre-placed policy\nrecovers the residual", xy=(2, 0.9), xytext=(2.4, 0.55),
-                fontsize=8.5, color=AQUA, ha="left",
-                arrowprops=dict(arrowstyle="->", color=AQUA, lw=1))
+    # neutral ink (not AQUA — AQUA is the nano series); text sits in the empty upper-right and the
+    # arrow runs above the plunging lines, targeting the consumer-(policy) column it explains
+    INK = "#14314f"
+    ax.annotate("pre-placed policy recovers\nthe decision a mute consumer loses",
+                xy=(2.06, 0.86), xytext=(2.62, 0.94),
+                fontsize=8.5, color=INK, ha="left", va="center",
+                arrowprops=dict(arrowstyle="->", color=INK, lw=1.1))
     _clean(ax)
     save(fig, "fig_intent_negotiation.png")
 

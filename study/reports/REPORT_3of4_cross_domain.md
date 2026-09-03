@@ -37,8 +37,8 @@ under-commits and the weak agent mis-commits.** The strong model, faced with two
 vocabularies and no shared ground, will not guess: it binds only the names that already coincide
 and leaves the rest in the residual — a low resolved fraction, but perfect precision and no
 false cognates. The weak model does the opposite: it binds freely and wrongly, taking the
-cross-domain "grade" trap at a precision of barely one-half. A single thin thing repays both: the
-constructed reference lifts the strong agent to a full close and lifts the weak agent's precision
+cross-domain "grade" trap at a precision of barely one-half. A single thin reference repays both:
+constructed, it lifts the strong agent to a full close and lifts the weak agent's precision
 toward perfect. Ablating the reference field by field shows the ground it supplies is remarkably
 thin — **any one** descriptive field (a shared label, a class, a one-line definition, or a
 canonical example) is enough to unlock the strong agent's commitment, while a bare shared
@@ -185,8 +185,8 @@ own at both-cognitive but beginning to take the trap as disclosure recedes.
 
 So the reference-construction step, when it is skipped, costs the two ends of the capability range
 in mirror-image ways: the strong agent's cost is a larger residual — deferral — and the weak
-agent's is lower precision — error. And a single thin thing repays both. Constructed, the
-reference lifts sol's binding to a full close, and lifts nano's precision toward 1.0 while
+agent's is lower precision — error. And a single thin reference repays both. Constructed, it
+lifts sol's binding to a full close, and lifts nano's precision toward 1.0 while
 pre-empting the trap; it does double duty, supplying the strong agent the ground it needs to
 commit and the weak agent the discipline it needs to be right.
 
