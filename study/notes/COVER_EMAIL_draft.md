@@ -1,0 +1,16 @@
+**Subject:** Ad hoc semantic reconciliation - a first full pass
+
+Qin, Brad, Thomas, Chong, and team —
+
+I've started the experimental work behind the ad hoc reconciliation proposal, and wanted to share an early result while it is fresh. I've taken the first of the four target settings - transport-network service provisioning, an ONF TAPI model reconciled against an IETF TEAS/ACTN model of the same network - through close to a full analytical pass: five short studies on the one case, each with a validated benchmark and metrics rather than a single hand-run demonstration. The repository, with the full code harness and a short report per study, is here: https://github.com/ChrisFJanz/ad-hoc-semantic-reconciliation; the README indexes them.
+
+The point I think matters most is that cognition is what completes a reconciliation. Lexical and descriptor methods carry it most of the way, and there such methods stop, handing the remainder to an agreed standard or to a person. That remainder need not go to either. Between two systems that can both reason, the reconciliation completes on its own - no model agreed in advance, no human in the loop; only as cognition recedes, one side inert and then both, does closing the gap fall back to human effort or verification. The reach of full, ad hoc, machine-to-machine reconciliation is therefore set by how much cognition is present, and the spectrum - both systems live, one inert, both inert - is the measure of it: how far the machine carries the work before a person is needed.
+
+That bears directly on your work, Brad. Matching on bare labels leaves a quarter to a third of the correspondences undiscovered; adding a descriptor to each name recovers the resolved fraction to about ninety percent, consistent with what you found on an assessment you shared with me some time ago. The part I would draw out lies past that ninety percent: the remaining correspondences are the shortfall from full cognition, and between two reasoning agents the machine closes them itself. That the ceiling could be passed by machine cognition, rather than only by a human or a prior agreement, is the possibility I think was not in view.
+
+The same holds beyond the schema terms. Two further studies take it to instance co-reference - matching the individuals across the two populated graphs - and to verification as its own object. With both sides cognitive, the machine carries each through on its own: it resolves the individuals in full, its residual driven to zero by its own probing, and it catches every wrong correspondence; the shortfall reappears, structural, only as a side goes inert. A thin published reference sits inside all of this as the machine-side counterpart to that human effort: it substitutes for a capable agent's deliberation, makes the work scale linearly rather than quadratically, and prevents errors most where cognition is weakest. The reports take each apart.
+
+I'm moving next to the other three settings in the proposal - intent, cross-domain stitching, and observability - carrying the same harness and metrics across. The proposal being executed here is on GitHub as a reminder: https://github.com/ChrisFJanz/Research-Project-Proposal. Comments and pushback welcome, particularly on the case design and the metrics.
+
+Thanks,
+Chris
