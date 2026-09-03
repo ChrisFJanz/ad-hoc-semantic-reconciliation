@@ -60,13 +60,13 @@ def _clean(ax):
 def fig_scene():
     fig, ax = plt.subplots(figsize=(11.4, 5.2))
     ax.set_xlim(0, 12); ax.set_ylim(0, 9); ax.axis("off"); ax.set_facecolor(SURFACE)
-    # legacy side
-    ax.add_patch(FancyBboxPatch((0.4, 3.4), 3.0, 2.6, boxstyle="round,pad=0.1",
+    # legacy side (title sits clear above the box; text has margins inside it)
+    ax.add_patch(FancyBboxPatch((0.4, 3.2), 3.0, 2.7, boxstyle="round,pad=0.1",
                                 fc="#fdf1ea", ec=ORANGE, lw=1.6))
-    ax.text(1.9, 6.2, "Agent F — legacy", ha="center", fontsize=11, weight="bold", color="#14314f")
-    ax.text(1.9, 5.55, "one ALARM,\nbundling:", ha="center", fontsize=9.5, color="#333")
+    ax.text(1.9, 6.4, "Agent F — legacy", ha="center", fontsize=11, weight="bold", color="#14314f")
+    ax.text(1.9, 5.55, "one ALARM, bundling:", ha="center", fontsize=9.0, color="#333", style="italic")
     for j, t in enumerate(["event", "state", "fixed severity", "probable-cause"]):
-        ax.text(1.9, 4.75 - j * 0.42, "· " + t, ha="center", fontsize=8.6, color="#555")
+        ax.text(1.9, 5.02 - j * 0.42, "· " + t, ha="center", fontsize=8.6, color="#555")
     # arrow
     ax.annotate("", xy=(4.9, 4.7), xytext=(3.5, 4.7),
                 arrowprops=dict(arrowstyle="-|>", color="#777", lw=2))
@@ -98,27 +98,30 @@ def fig_scene():
 def fig_ontology():
     if not loadm("gpt-5.6-sol", 1):
         print("skip fig_obs_ontology: no phase-1 data"); return
-    fig, ax = plt.subplots(figsize=(7.4, 4.6))
+    fig, ax = plt.subplots(figsize=(7.6, 4.7))
     x = range(len(MODELS)); w = 0.35
-    for k, (ref, hatch, lab) in enumerate([("no-ref", "", "no reference"), ("ref", "//", "with reference")]):
+    for k, (ref, alpha, hatch) in enumerate([("no-ref", 0.55, ""), ("ref", 1.0, "//")]):
         ys = []
         for M in MODELS:
             inert = [r for r in loadm(M, 1) if r["placement"] in ("one_inert", "both_inert")
                      and r["reference"] == ref]
             ys.append(m(inert, "surviving_false_cognates"))
-        ax.bar([i + (k - 0.5) * w for i in x], ys, width=w,
-               color=[COL[M] for M in MODELS], alpha=0.55 if ref == "no-ref" else 1.0,
-               hatch=hatch, edgecolor="white", label=lab)
+        xs = [i + (k - 0.5) * w for i in x]
+        ax.bar(xs, ys, width=w, color=[COL[M] for M in MODELS], alpha=alpha,
+               hatch=hatch, edgecolor="white")
+        # explicit value labels so zero-height bars (sol; mini with reference) still read
+        for xi, yv in zip(xs, ys):
+            ax.text(xi, yv + 0.03, f"{yv:.2f}", ha="center", va="bottom", fontsize=7.8, color="#555")
     ax.set_xticks(list(x)); ax.set_xticklabels([LAB[M] for M in MODELS])
     ax.set_ylabel("alarm↔anomaly cognate survival\n(mean, inert placements)")
-    ax.set_ylim(0, 1.15)
+    ax.set_ylim(0, 1.28)
     ax.set_title("The ontological cognate, three rungs: sol never takes it; the reference rescues\n"
                  "mini (bar → 0); nano takes it with or without the reference (beyond rescue)",
                  fontsize=10.5)
     from matplotlib.patches import Patch
-    ax.legend(handles=[Patch(facecolor="#999", alpha=0.55, label="no reference"),
-                       Patch(facecolor="#999", hatch="//", label="with reference")],
-              frameon=False, fontsize=9, loc="upper left")
+    ax.legend(handles=[Patch(facecolor="#bbb", alpha=0.55, label="no reference (pale)"),
+                       Patch(facecolor="#bbb", hatch="//", label="with reference (hatched)")],
+              frameon=False, fontsize=8.5, loc="upper right")
     _clean(ax)
     save(fig, "fig_obs_ontology.png")
 

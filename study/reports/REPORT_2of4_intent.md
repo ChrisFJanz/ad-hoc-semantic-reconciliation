@@ -310,7 +310,7 @@ co-reference, and it reproduces the first study's texture on new data. With both
 same-site endpoint twins — indistinguishable on their static records — are resolvable only by
 interrogating an authoritative fibre-id, and the capability gradient shows in *how* each model gets
 there: sol resolves them efficiently (resolved fraction 1.0 on eight probes), nano resolves them by
-brute force (resolved fraction 1.0, but twelve probes), and — the honest non-monotone note familiar
+brute force (resolved fraction 1.0, but twelve probes), and — the honest non-monotonic note familiar
 from the first study — mini under-probes, gives up, and leaves the ambiguous pairs in the residual
 (resolved fraction 0.6). Once a side
 goes inert and the probe is gone, all three collapse to the same 0.6, the twins unresolvable. The

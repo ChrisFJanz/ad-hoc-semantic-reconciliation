@@ -9,4 +9,3 @@ __pycache__/
 
 # PDF build intermediate
 *.print.html
-.DS_Store

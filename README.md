@@ -22,7 +22,7 @@ plan). Both as papers and slide decks, with four interactive demonstrations.
 
 `study/` — the empirical realisation of the programme across four operational settings (configuration,
 intent, cross-domain, observability), each built, run against a validated gold standard, and reported,
-with a **master report** drawing them into one synthesis — plus the harness, benchmark, and per-run
+with a **master report** (and a companion slide deck) drawing them into one synthesis — plus the harness, benchmark, and per-run
 data behind them.
 
 ### → [The demonstrations](demos/) &nbsp;·&nbsp; four interactive HTML studies

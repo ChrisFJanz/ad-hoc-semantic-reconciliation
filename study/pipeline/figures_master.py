@@ -39,52 +39,68 @@ def chip(ax, cx, cy, w, h, text, fc, ec, fs=8.6, weight="normal", tc=INK):
 
 # --- Figure A: the lift -----------------------------------------------------------------------
 def fig_lift():
-    fig, ax = plt.subplots(figsize=(11.6, 5.6))
-    ax.set_xlim(0, 12); ax.set_ylim(0, 9); ax.axis("off"); ax.set_facecolor(SURFACE)
+    fig, ax = plt.subplots(figsize=(13.0, 7.2))
+    ax.set_xlim(0, 13); ax.set_ylim(0, 9.6); ax.axis("off"); ax.set_facecolor(SURFACE)
 
-    # LEFT: bare data model
-    box(ax, 0.4, 2.6, 3.0, 4.0, "#f3f1ee", GREY, lw=1.5)
-    ax.text(1.9, 6.15, "data model", ha="center", fontsize=11, weight="bold", color=INK)
-    ax.text(1.9, 5.7, "(schema + records)", ha="center", fontsize=8.4, color="#666", style="italic")
-    rows = ["term:  och_grade", "rec:  {id: 0x7a, v: 3}",
-            "rec:  {id: 0x7b, v: 1}", "— meaning only to", "   whoever wrote it"]
-    for j, t in enumerate(rows):
-        col = "#555" if j < 3 else "#8a8681"
-        st = "normal" if j < 3 else "italic"
-        ax.text(0.75, 5.25 - j * 0.5, t, ha="left", fontsize=8.1, color=col, style=st,
-                family="monospace" if j < 3 else "sans-serif")
+    # ---------- LEFT: data model ----------
+    box(ax, 0.3, 3.3, 2.5, 3.1, "#f3f1ee", GREY, lw=1.5)
+    ax.text(1.55, 6.05, "data model", ha="center", fontsize=11, weight="bold", color=INK)
+    ax.text(1.55, 5.62, "(schema + records)", ha="center", fontsize=8.2, color="#666", style="italic")
+    for j, t in enumerate(["term:  och_grade", "rec:  {id:0x7a, v:3}", "rec:  {id:0x7b, v:1}"]):
+        ax.text(0.5, 5.1 - j * 0.44, t, ha="left", fontsize=7.8, color="#555", family="monospace")
+    ax.text(0.5, 3.7, "— a fixed, partial picture", ha="left", fontsize=7.8, color="#8a8681", style="italic")
 
-    # THE LIFT arrow
-    ax.add_patch(FancyArrowPatch((3.65, 4.5), (5.0, 4.5), arrowstyle="-|>",
-                                 mutation_scale=22, color=INK, lw=2.4))
-    ax.text(4.32, 5.25, "the lift", ha="center", fontsize=10.5, weight="bold", color=INK)
-    ax.text(4.32, 3.75, "(cognition above\ngrounds it)", ha="center", fontsize=7.6, color="#777")
+    # ---------- MIDDLE: the lift = cognition, with its supports surrounding it ----------
+    ax.add_patch(FancyBboxPatch((3.05, 2.1), 2.5, 4.5, boxstyle="round,pad=0.08,rounding_size=0.06",
+                                fc="#fcf7f3", ec=ORANGE, lw=1.2, linestyle=(0, (4, 3))))
+    ax.text(4.3, 6.3, "supports to the lift", ha="center", fontsize=8.4, weight="bold", color=ORANGE)
+    ax.text(4.3, 6.02, "(aids to cognition)", ha="center", fontsize=7.4, color=ORANGE, style="italic")
+    for y, t in [(5.55, "· definitions"), (5.2, "· worked examples")]:
+        ax.text(4.3, y, t, ha="center", fontsize=7.9, color="#7a5a45")
+    # the arrow itself is the lift — a cognitive act — with the supports above and below it
+    ax.text(4.3, 4.58, "the lift", ha="center", fontsize=10.5, weight="bold", color=INK)
+    ax.add_patch(FancyArrowPatch((2.95, 4.26), (5.85, 4.26), arrowstyle="-|>",
+                                 mutation_scale=24, color=BLUE, lw=3.0))
+    ax.text(4.3, 3.9, "= a cognitive act", ha="center", fontsize=8.2, weight="bold", color=BLUE)
+    for y, t in [(3.35, "· a canonical example"), (3.0, "· linked reference (opt.)")]:
+        ax.text(4.3, y, t, ha="center", fontsize=7.9, color="#7a5a45")
 
-    # RIGHT: lifted semantic model — central concept + component families
-    cx, cy = 8.7, 4.5
-    box(ax, 5.25, 1.15, 6.5, 6.9, "#ffffff", BLUE, lw=1.6)
-    ax.text(8.5, 7.6, "ad hoc semantic model", ha="center", fontsize=11, weight="bold", color=INK)
-    chip(ax, cx, cy, 1.7, 0.7, "concept", "#eaf1fb", BLUE, fs=9.5, weight="bold")
+    # ---------- RIGHT: the semantic model — one object, three parts ----------
+    box(ax, 5.95, 0.85, 6.75, 6.5, "#ffffff", BLUE, lw=1.7)
+    ax.text(9.3, 7.02, "ad hoc semantic model", ha="center", fontsize=11.5, weight="bold", color=INK)
 
-    comps = [
-        (6.55, 6.55, "lexicon\nlabel + synonyms", AQUA, "#eafbf3"),
-        (10.45, 6.55, "ontology\nkind + relations", BLUE, "#eaf1fb"),
-        (6.4, 4.5, "definition\n+ worked example", BLUE, "#eaf1fb"),
-        (10.5, 4.5, "instances\n(as evidence)", AQUA, "#eafbf3"),
-        (8.5, 2.15, "reference binding  (optional identity anchor)", ORANGE, "#fdf1ea"),
-    ]
-    for (x, y, t, ec, fc) in comps[:4]:
-        chip(ax, x, y, 1.95, 0.9, t, fc, ec, fs=8.1)
-        ax.add_patch(FancyArrowPatch((cx, cy), (x, y), arrowstyle="-", color="#c7d3e2",
-                                     lw=1.1, connectionstyle="arc3,rad=0.0"))
-    x, y, t, ec, fc = comps[4]
-    chip(ax, x, y, 5.6, 0.62, t, fc, ec, fs=8.1)
-    ax.add_patch(FancyArrowPatch((cx, cy - 0.35), (x, y + 0.31), arrowstyle="-", color="#e6cbb9", lw=1.1))
+    # Part 1: ontology (incl lexicon), schematic + concrete
+    box(ax, 6.25, 3.7, 6.15, 2.85, "#eef4fc", "#9fc0e8", lw=1.2)
+    ax.text(6.45, 6.28, "ontology  (including lexicon)", ha="left", fontsize=9.6, weight="bold", color=INK)
+    ax.text(6.45, 5.92, "schematic — concepts, kinds, relations, lexicon", ha="left", fontsize=7.6,
+            color="#4a6580", style="italic")
+    nodes = {"service": (7.9, 5.35), "port": (9.9, 5.5), "link": (11.6, 5.0)}
+    for a, b in [("service", "port"), ("port", "link"), ("service", "link")]:
+        (x1, y1), (x2, y2) = nodes[a], nodes[b]
+        ax.plot([x1, x2], [y1, y2], color="#b9cbe0", lw=1.1, zorder=1)
+    for t, (nx, ny) in nodes.items():
+        chip(ax, nx, ny, 1.15, 0.5, t, "#eaf1fb", BLUE, fs=8.2)
+    ax.text(6.45, 4.55, "concrete — the individuals that populate them", ha="left", fontsize=7.6,
+            color="#4a6580", style="italic")
+    for (nx, ny) in nodes.values():
+        ax.scatter([nx - 0.28, nx, nx + 0.28], [4.15, 4.15, 4.15], s=16, color="#7fa8d6", zorder=2)
 
-    ax.text(6.0, 0.5, "self-describing  →  portable: any cognitive consumer can pick it up, "
-            "with no pre-agreed standard", ha="center", fontsize=9.2, color=ORANGE, weight="bold")
-    ax.set_title("The lift — a data model, meaningful only to its author, becomes an ad hoc semantic "
-                 "model that carries its own meaning", fontsize=11, y=1.02)
+    # Part 2: pragmatics
+    box(ax, 6.25, 2.45, 6.15, 1.05, "#eafbf3", AQUA, lw=1.2)
+    ax.text(6.45, 3.15, "pragmatics", ha="left", fontsize=9.4, weight="bold", color=INK)
+    ax.text(6.45, 2.78, "contextual information — use · authority · context", ha="left", fontsize=7.8,
+            color="#2a6b52")
+
+    # Part 3: provenance
+    box(ax, 6.25, 1.15, 6.15, 1.05, "#f0eeeb", GREY, lw=1.2)
+    ax.text(6.45, 1.85, "provenance", ha="left", fontsize=9.4, weight="bold", color=INK)
+    ax.text(6.45, 1.48, "who asserted it · by what method · how firmly", ha="left", fontsize=7.8,
+            color="#5a564f")
+
+    ax.text(9.3, 0.4, "self-describing  →  portable: this is what cognition consumes, with no "
+            "pre-agreed standard", ha="center", fontsize=8.8, weight="bold", color=ORANGE)
+    ax.set_title("The lift — cognition turns a data model into an ad hoc semantic model "
+                 "(ontology, pragmatics, provenance)", fontsize=11, y=1.01)
     save(fig, "fig_master_lift.png")
 
 
@@ -126,18 +142,18 @@ def fig_reconcile():
     ax.text(6.0, yR - 0.62, "false cognate rejected — same surface word, different kind",
             ha="center", fontsize=8.0, color=ORANGE, weight="bold")
 
-    # natives with no counterpart -> residual bucket
-    yN = 2.4
+    # natives with no counterpart -> residual bucket (descriptor lives inside the bucket, clear of arrows)
+    yN = 2.55
     chip(ax, lx, yN, 2.5, 0.6, "vlan  (native)", "#f0eeeb", GREY, fs=7.8, tc="#5a564f")
     chip(ax, rx, yN, 2.5, 0.6, "wavelength  (native)", "#f0eeeb", GREY, fs=7.8, tc="#5a564f")
-    box(ax, 4.5, 0.45, 3.0, 1.0, "#f0eeeb", GREY, lw=1.3)
-    ax.text(6.0, 0.95, "residual", ha="center", fontsize=9.0, weight="bold", color="#5a564f")
-    ax.text(6.0, 0.62, "referred onward", ha="center", fontsize=7.6, color="#6a655e", style="italic")
     for sx in (lx + 1.3, rx - 1.3):
-        ax.add_patch(FancyArrowPatch((sx, yN - 0.1), (6.0, 1.5), arrowstyle="-|>", mutation_scale=10,
-                                     color=GREY, lw=1.1, connectionstyle="arc3,rad=0.0"))
-    ax.text(6.0, 1.95, "native gaps · opaque items · what evidence cannot yet confirm",
-            ha="center", fontsize=7.4, color="#8a857d", style="italic")
+        ax.add_patch(FancyArrowPatch((sx, yN - 0.1), (6.0, 1.66), arrowstyle="-|>", mutation_scale=10,
+                                     color=GREY, lw=1.1))
+    box(ax, 4.15, 0.35, 3.7, 1.25, "#f0eeeb", GREY, lw=1.3)
+    ax.text(6.0, 1.26, "residual", ha="center", fontsize=9.0, weight="bold", color="#5a564f")
+    ax.text(6.0, 0.92, "referred onward", ha="center", fontsize=7.6, color="#6a655e", style="italic")
+    ax.text(6.0, 0.57, "native gaps · opaque items · unconfirmed", ha="center", fontsize=6.9,
+            color="#8a857d", style="italic")
 
     ax.set_title("Reconciliation over two lifted models — grounded correspondences bound through a "
                  "thin reference, a rejected cognate, and the residual referred onward",
@@ -201,10 +217,8 @@ def fig_observability():
     for j, t in enumerate(["· event", "· undesirable state", "· fixed severity", "· probable-cause"]):
         ax.text(1.15, 5.1 - j * 0.42, t, ha="left", fontsize=8.3, color="#555")
 
-    # lift + decompose arrow
-    ax.add_patch(FancyArrowPatch((3.55, 4.8), (4.9, 4.8), arrowstyle="-|>", mutation_scale=20,
-                                 color=INK, lw=2.2))
-    ax.text(4.2, 5.35, "lift +\ndecompose", ha="center", fontsize=7.8, color="#777")
+    # "lift + decompose" label — the three coloured arrows below carry the mapping itself
+    ax.text(4.3, 6.5, "lift + decompose", ha="center", fontsize=7.8, color="#777")
 
     # NMOP ladder rungs (targets)
     rungs = [
@@ -222,13 +236,13 @@ def fig_observability():
         if note:
             ax.text(x0 + w + 0.35, y, note, ha="left", va="center", fontsize=7.6,
                     color=ec if ec != AQUA else "#1b8f63", weight="bold" if "TRAP" in note else "normal")
-    # decomposition braces from alarm box to the two aqua rungs
-    for y in ys[:2]:
-        ax.add_patch(FancyArrowPatch((4.95, 4.8), (x0 + 0.1, y), arrowstyle="-|>", mutation_scale=12,
-                                     color=AQUA, lw=1.5, connectionstyle="arc3,rad=0.12"))
-    # trap line to anomaly (rejected)
-    ax.add_patch(FancyArrowPatch((4.95, 4.6), (x0 + 0.1, ys[2]), arrowstyle="-|>", mutation_scale=12,
-                                 color=ORANGE, lw=1.4, linestyle=(0, (3, 2)), connectionstyle="arc3,rad=0.05"))
+    # decomposition — three clean arrows straight from the ALARM box to the NMOP rungs, no mid-air junction
+    ax.add_patch(FancyArrowPatch((3.55, 5.5), (x0 + 0.03, ys[0] - 0.1), arrowstyle="-|>",
+                                 mutation_scale=13, color=AQUA, lw=1.6))          # -> alarm (State)
+    ax.add_patch(FancyArrowPatch((3.55, 4.9), (x0 + 0.03, ys[1]), arrowstyle="-|>",
+                                 mutation_scale=13, color=AQUA, lw=1.6))          # -> fault
+    ax.add_patch(FancyArrowPatch((3.55, 4.3), (x0 + 0.03, ys[2] + 0.05), arrowstyle="-|>",
+                                 mutation_scale=13, color=ORANGE, lw=1.5, linestyle=(0, (3, 2))))  # -> anomaly (trap)
 
     ax.text(7.3, 7.5, "NMOP  (RFC 9940 ladder)", ha="left", fontsize=9.6, weight="bold", color=INK)
 
@@ -238,7 +252,6 @@ def fig_observability():
             ha="center", fontsize=8.2, weight="bold", color=INK)
     ann = "concern · confidence · plane · pattern · lifecycle · season   →   act / watch / suppress"
     ax.text(8.25, 1.15, ann, ha="center", fontsize=8.0, color="#33506e")
-    ax.add_patch(FancyArrowPatch((7.2, 3.0), (8.25, 2.3), arrowstyle="-", color="#c7d3e2", lw=1.1))
 
     ax.text(1.9, 2.4, "an alarm is\nnot an anomaly", ha="center", fontsize=8.6, color=ORANGE,
             weight="bold")
@@ -248,8 +261,43 @@ def fig_observability():
     save(fig, "fig_master_observability.png")
 
 
+# --- Figure E: cognitive load is capability-signed (cross-setting synthesis) ------------------
+def fig_effort():
+    fig, ax = plt.subplots(figsize=(8.6, 4.9))
+    settings = ["intent\n(setting 2)", "observability\n(setting 4)"]
+    data = {"intent\n(setting 2)": {"sol": 150, "mini": 860, "nano": 5400},
+            "observability\n(setting 4)": {"sol": 60, "mini": 520, "nano": 1200}}
+    models = ["sol", "mini", "nano"]
+    colM = {"sol": BLUE, "mini": ORANGE, "nano": AQUA}
+    labM = {"sol": "sol (strong)", "mini": "mini (mid)", "nano": "nano (weak)"}
+    x = range(len(settings)); w = 0.26
+    for k, mdl in enumerate(models):
+        xs = [i + (k - 1) * w for i in x]
+        ys = [data[s][mdl] for s in settings]
+        ax.bar(xs, ys, width=w, color=colM[mdl], label=labM[mdl], edgecolor="white")
+        for xi, yv in zip(xs, ys):
+            ax.text(xi, yv * 1.07, f"{yv:,}", ha="center", va="bottom", fontsize=8, color="#555")
+    ax.set_yscale("log"); ax.set_ylim(35, 16000)
+    ax.set_xticks(list(x)); ax.set_xticklabels(settings, fontsize=9.5)
+    ax.set_ylabel("reasoning tokens to decide\n(mean, log scale)", fontsize=9)
+    ax.set_title("Cognitive load rises as capability falls: across settings the weak agent spends "
+                 "~20–35×\nthe strong agent's effort — to reach lower accuracy, not higher",
+                 fontsize=10.3)
+    # ratio brackets
+    for i, s in enumerate(settings):
+        r = data[s]["nano"] / data[s]["sol"]
+        ax.text(i, 13000, f"nano/sol ≈ {r:.0f}×", ha="center", fontsize=8.6, color="#14314f", weight="bold")
+    ax.set_facecolor(SURFACE)
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    ax.legend(frameon=False, fontsize=8.5, loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.28))
+    fig.subplots_adjust(bottom=0.22)
+    save(fig, "fig_master_effort.png")
+
+
 if __name__ == "__main__":
     fig_lift()
     fig_reconcile()
     fig_crossdomain()
     fig_observability()
+    fig_effort()
