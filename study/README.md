@@ -33,7 +33,7 @@ who prefer slides.
 
 ![The lift — a data model becomes a portable, self-describing semantic model.](figures/fig_master_lift.png)
 
-![Reconciliation over two lifted models — grounded correspondences bound through a thin reference, a rejected cognate, and the residual referred onward.](figures/fig_master_reconcile.png)
+![Reconciliation over two lifted models — grounded correspondences bound through a thin reference, a rejected cognate, and what is honestly left unbound (no counterpart, or the residual referred onward).](figures/fig_master_reconcile.png)
 
 ## The four settings
 
