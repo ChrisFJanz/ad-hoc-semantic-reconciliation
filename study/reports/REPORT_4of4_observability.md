@@ -119,7 +119,9 @@ cause the root symptom (lowest layer, earliest). The derivation refuses to write
 and proves the pragmatic axis is real — the same anomaly reaches different verdicts under different
 contexts.
 
-Correctness is the currency throughout: for Act 1, resolved fraction, precision, and surviving false
+Correctness is the currency throughout. For Act 1 the measures are **resolved fraction** (of the true
+correspondences that exist, the share the agent finds and commits, the rest deferred to the residual),
+**precision** (of the correspondences it commits to, the share that are correct), and surviving false
 cognates; for Act 2, verdict accuracy and false-page count, and incident-partition and cause accuracy.
 The model ladder is the programme's — sol (strong, `gpt-5.6-sol`), mini (mid, `gpt-5-mini`), nano (weak, `gpt-5-nano`).
 

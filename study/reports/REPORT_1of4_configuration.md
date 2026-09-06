@@ -192,7 +192,8 @@ disambiguating gloss and canonical example, its binding to the shared reference,
 and — so that an inert side has something to be reconstructed from — its structural
 relations to other concepts and a few concrete instances. The **gold standard**
 gives the correct cross-model correspondences, the planted false cognates that must
-*not* be proposed, the native gaps and opaque items expected to remain residual,
+*not* be proposed, the native gaps and proprietary items that have no counterpart and are expected to
+be **correctly returned as unmatched** (not counted as residual),
 the invariants a correct translation preserves, and the verification method each
 placement admits. Gold is *derived from the models' bindings by a script and
 validated*, so it cannot drift from the models it scores.
@@ -294,9 +295,11 @@ Quality is scored against the gold standard. **Precision** is, of the correspond
 stack proposes, the fraction that are correct; the **resolved fraction** is the share of the
 true correspondences (those in the gold) that the stack actually resolves — finds and commits
 to — with the rest referred to the residual. **Surviving false cognates** counts
-the planted traps that slip through as false positives, and the **residual** is the
-correspondences the stack does not commit — the native gaps and opaque items that should
-remain residual, together with any pairing it declines to assert. Resolved fraction below one is
+the planted traps that slip through as false positives, and the **residual** is the *true*
+correspondences the stack does not commit — the ones it declines to assert and refers onward rather
+than guessing. (Genuine native gaps and proprietary items have no counterpart at all; the stack
+correctly returns them as *unmatched* — a resolved outcome — and they are not part of the residual.)
+Resolved fraction below one is
 therefore not, by itself, an error: an unresolved correspondence is one the stack *referred
 onward* rather than asserted, and — the point that governs §3.5 — the honest response to
 evidence that cannot confirm a pairing is to leave it in the residual, not to guess. So
@@ -339,8 +342,8 @@ Two deterministic, model-free stacks bracket the space and do not vary by model.
 reference-blind label matcher reaches precision 0.50 and resolved fraction 0.67 on the primary
 case and lets a false cognate through. A reference-aware reconciler, binding each
 side once and corresponding by shared entry, reaches precision 1.00 and resolved fraction 1.00
-with every trap pre-empted and the seven native-gap and opaque items correctly left
-residual.
+with every trap pre-empted and the seven no-counterpart items (native gaps and proprietary fields)
+correctly returned as unmatched.
 
 ---
 
@@ -406,9 +409,9 @@ and it separates in **precision** — a trap that is accepted is a false positiv
 (0.94, 0.88, 0.91 for strong, mid, weak, averaged over placements), and traps
 survive — the weak model accepted a false cognate on every trial at one-inert. With
 the reference, precision rises (1.00, 0.96, 0.97) and the traps are pre-empted,
-because two labels that look alike bind to different reference entries. The opaque,
-vendor-coded items, which the reference deliberately does not cover, are correctly
-left residual rather than matched.
+because two labels that look alike bind to different reference entries. The
+vendor-coded items, which have no counterpart in the other model and which the reference deliberately
+does not cover, are correctly returned as *unmatched* rather than forced into a correspondence.
 
 ![Precision with and without the reference, by model, on the hard case.](../figures/fig_quality.png)
 
@@ -524,10 +527,13 @@ Two honesty notes on the mechanism. Our verifier is a single pass that drops on 
 active refutation and keeps an unjudged pair, so the resolved fraction it loses without the
 reference is the verifier *wrongly refusing* correct pairs under thinning evidence — a
 false negative — not a graceful abstention; either way the destination is the residual,
-not an assertion of falsehood. And the harness collapses "unconfirmed, refer onward"
-into the same residual pool as "genuinely no counterpart"; a fuller implementation
-would tag the two distinctly, but the metric already captures the *size* of the
-shortfall, which is the quantity the spectrum is about.
+not an assertion of falsehood. And two conceptually different outcomes must be kept apart here. A
+correspondence left *unconfirmed and referred onward* is a **residual** — a deferral a stronger or
+better-placed cognition could close. A concept with *genuinely no counterpart* is not a residual at
+all: "no match" is the correct, resolved answer, one any cognition returns identically. The resolved
+fraction we report tracks the first — the deferral, the shortfall the spectrum is about — while
+no-counterpart items are correct non-correspondences that persist at every placement, cognition or
+none.
 
 ### 3.6 Beyond the schema terms: instance co-reference and verification
 
@@ -806,7 +812,9 @@ detail behind this setting's report, not separate reports in the four-setting se
 ## Appendix: the metric families
 
 - **Reliability.** Precision and resolved fraction against the gold standard; surviving false
-  cognates; the residual, which should equal the native gaps plus opaque items.
+  cognates; and the residual — the true correspondences the reconciliation defers and refers onward
+  rather than guessing (the complement of the resolved fraction). Concepts with no counterpart are
+  counted separately, as correct non-correspondences, not as residual.
 - **Cognitive effort.** Reasoning tokens (hidden deliberation), total tokens, and
   latency — recorded only for a language-model stack.
 - **Scaling.** Reconciliation operations as a function of the number of systems:

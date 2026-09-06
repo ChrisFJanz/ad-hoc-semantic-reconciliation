@@ -207,7 +207,10 @@ agent's satisfy/refer verdict match the truth, and did a claimed satisfier reall
 **experiment-only correctness**. Negotiation is scored by **decision accuracy** (accept/reject
 matching the policy-correct verdict) and by whether the **best-achievable offer** was the right one,
 with the **refer rate** tracked alongside as the honest measure of what a placement cannot close.
-Endpoint co-reference reuses the first study's precision and resolved fraction. The lifecycle is scored by **hop
+Endpoint co-reference reuses the first study's two core measures: **precision** (of the correspondences
+the agent commits to, the share that are correct) and **resolved fraction** (of the true
+correspondences that exist, the share the agent finds and commits, the rest deferred to the residual
+rather than guessed). The lifecycle is scored by **hop
 accuracy** — fulfilment status, decision, and migration all correct — across the trajectory. Effort
 is reported as **reasoning tokens** and **negotiation turns**. The models are the same ladder as the
 first setting: a strong model (**sol**, `gpt-5.6-sol`), a mid model (**mini**, `gpt-5-mini`), and a weak one (**nano**, `gpt-5-nano`).
