@@ -67,7 +67,7 @@ reconciling with no public standard. Two **home-grown, private** models meet at 
 result is a **mirror**: without the constructed reference the strong agent **under-commits** (defers at
 perfect precision) and the weak agent **mis-commits** (binds wrongly). A single descriptive field
 unlocks a capable agent; a bare shared pointer is worse than nothing. Building the shared ground is the
-work.
+work — and, run end to end, an agent that builds it itself lifts from **0.40 to 0.93**.
 
 **4/4 · [Observability](reports/REPORT_4of4_observability.md)** &nbsp;·&nbsp;
 [PDF](reports/REPORT_4of4_observability.pdf) &nbsp;·&nbsp;
@@ -102,6 +102,55 @@ agent run at each point on the **cognition spectrum** (both live, one inert, bot
 *surviving false cognates*, and the *residual* — and, for the agent, cognitive effort (reasoning
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
+
+## What's new in this revision (2026-09-05)
+
+This revision strengthens the study in-house — the central findings are unchanged and hold — and
+closes the in-house gaps the first cut left open, leaving only the genuinely external one (real
+network data). The reports carry the results in place; this summary is here for readers tracking what
+moved between revisions.
+
+- **Construct-then-bind, end to end (setting 3).** The standard-free setting previously handed the
+  agents the shared reference and scored the binding alone. The agents now **build that reference
+  themselves** from the two models and then bind through it, with nothing pre-given. The strong agent
+  lifts from a no-reference resolved fraction of **0.40 to 0.93** — near the reference-given 1.00 — at
+  perfect precision and with no false cognate. Constructing the shared ground works, and building it is
+  the work.
+- **A six-model capability sweep.** The omit-to-commit mirror — strong agents omitting, weak agents
+  committing — resolves across six models into a **smooth gradient**, a continuous descent rather than a
+  cliff between three points.
+- **Instance co-reference measured beyond setting 1.** Entity-level co-reference is now measured in
+  settings 2 and 4 as well, reproducing the budget-limited-then-structural pattern: capable agents
+  resolve fully where a live side can be interrogated, the weakest only partially. (A fix to the
+  interrogation path — letting an agent ask which attributes exist rather than guess field names —
+  moved setting 4 from a floor to full resolution.)
+- **A classical descriptor baseline.** A non-cognitive matcher (labels, glosses, structure) is included
+  as an explicit baseline, confirming that descriptor methods carry a reconciliation to a ceiling that
+  cognition then passes.
+- **A reach study — what an agent can see and what it can ask.** Holding the strong agent at its best,
+  we vary two things independently: how much of a record it may *see* (from a bare key up to full
+  topology) and what it may *ask* of the live system (nothing; a named attribute; the open question
+  "what facts do you have?"; a full virtual experiment). Seeing more, on its own, caps the hardest
+  cases at one-half. The hinge is the open question: being able to ask what exists — rather than having
+  to name the field in advance — takes the reconciliation to a full, correct close. Run down the model
+  ladder, the same access lands by capability: the strong agent converts it to a full close, the mid
+  plateaus, and the weakest posts high recall but with slipping precision. (See §13.5 of the master
+  report, Figure 14.)
+- **Breadth — every signature reproduced on new cases.** Each of the four settings is now exercised on
+  **three independently-built cases, not one** — two new ones per setting, in different domains, with
+  different vocabularies and different traps. Every signature reappears: cognition completes the match
+  while the reference mainly prevents the weaker agents' errors (configuration); the strong-omit /
+  weak-commit mirror, repaired by a thin reference (cross-domain); refinement and negotiation completing
+  while the multi-hop lifecycle grades with capability (intent); and the alarm-is-not-an-anomaly
+  look-alike reliably told apart (observability). This closes the "you only showed it on one case"
+  worry as far as in-house work can. (See §16 of the master report, Figure 15.)
+- **Benchmark packaged.** The cases, harness, and leaderboard are packaged under `benchmark/` for
+  external use — now eighteen cases across the four settings.
+
+What remains is now genuinely external: larger and more varied cases drawn from real networks, and the
+real-data grounding that only carrier and standards-body collaboration can supply. The breadth cases
+above are still authored by the same hand, so they test robustness to *variation*, not to *real* data —
+which is exactly the gap that external collaboration exists to close.
 
 ## Repository layout (`study/`)
 
@@ -164,7 +213,7 @@ NMRG work on agentic network-as-a-service negotiation, the cross-domain provisio
 the IETF NMOP anomaly/alarm model (RFC 9940). The claims are **existential and mechanistic** — *this is
 how ad hoc reconciliation works, and here it is working* — established on single, seeded cases built to
 exercise each mechanism and prove each trap, across the model ladder; they are not population estimates.
-Natural next steps are larger and more varied cases, more rungs on the ladder, and the end-to-end
-construct-then-bind protocol in the standard-free setting.
+What remains is now external: larger and more varied cases drawn from real networks, and the real-data
+grounding that only carrier and standards-body collaboration can supply.
 
 *Choose a license before publishing.*

@@ -383,8 +383,13 @@ governs it — and a characteristic "transport owns everything it carries" bias 
 **What it means.** With no public standard beneath two models, cognition still closes — but only once
 it has built the shared ground, and **building that ground is the work**. The strong agent's low
 reference-absent numbers are not a limit of cognition; they measure the worth of the one step the
-study held back — constructing the shared reference — by running the binding pass without it. Even a
-very thin ground suffices for a capable agent, provided it carries meaning and not merely a pointer.
+study held back — constructing the shared reference — by running the binding pass without it. Run end
+to end — the agent constructing the shared reference itself from the two models and then binding through
+it, with none pre-given — the protocol confirms the reading: the strong agent lifts from a no-reference
+resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the reference-given 1.00, at
+perfect precision and with no false cognate, so constructing the ground is the work and a capable agent
+does it. Even a very thin ground suffices for a capable agent, provided it carries meaning and not
+merely a pointer.
 
 ## 10. Setting 4 — Observability: an alarm is not an anomaly
 
@@ -482,7 +487,13 @@ matters "here," the *here* is a named stage of the process, not a vague gesture.
 Lexical and descriptor matching carry a reconciliation to roughly ninety percent (setting 1's
 baseline: lexical surface 0.66–0.76, the lift recovering it to the mid-nineties); the remainder,
 historically left to a standard or a person, is closed by live cognition instead. This is the
-programme's spine, and it holds at every operation the settings put under test.
+programme's spine, and it holds at every operation the settings put under test. It holds against a
+strong classical matcher, not only the plain label baseline: a matcher using labels, synonyms,
+definitions, and structure with a 1:1 alignment reaches precision one and refuses the false cognates on
+the standard cases, but it cannot close — its resolved fraction stalls at 0.56 to 0.75 — and on the
+standard-free case it fails like the weak baseline, taking the *grade* cognate, because with two private
+vocabularies there is no lexical or structural signal to lean on. The ceiling is real even for a good
+descriptor method; cognition is what passes it.
 
 **Thesis 2 — The placement of cognition is the master variable: the further it recedes, the more the reconciliation leaves unresolved.**
 What a reconciliation can achieve, cost, and verify is governed by where the cognition sits. Between
@@ -600,8 +611,23 @@ thin reference remedies both, pulling each toward the top-right corner.
 Without the constructed reference sol sits top-left — commits little, all of it right — and nano
 lower-right — commits much of it wrongly; the reference pulls both to the corner.*
 
+This mirror is not a binary of strong against weak but a smooth gradient. Swept across a six-model
+ladder on the schema cases (Figure 8), precision falls (0.98 to 0.83) and surviving false cognates rise
+(from none to most) as capability drops, while resolved fraction rises the other way (0.78 to 0.94):
+the strong end's omission shades continuously into the weak end's commission, the strongest tier all
+deferring at near-perfect precision and the failure emerging through the smaller models. What moves
+along the ladder is not whether the agent can match — it can at every rung — but the quality of its
+judgement: when to commit, when to defer, and whether it refuses the trap.
+
+![The omit-to-commit mirror as a smooth six-model gradient.](../figures/fig_ladder_gradient.png)
+
+*Figure 8. Precision, resolved fraction, and surviving false cognates across a six-model capability
+ladder (no reference, both-cognitive, mean over the four schema cases). The strong end's omission —
+high precision, deferral, no traps — shades into the weak end's commission — lower precision, traps
+taken.*
+
 Where a standard *can* pin the distinction, capability decides who can use it — a clean three-rung
-gradient (Figure 8). On the programme's deepest false cognate, alarm↔anomaly, the strong agent never
+gradient (Figure 9). On the programme's deepest false cognate, alarm↔anomaly, the strong agent never
 conflates the two, with or without the reference (intrinsic mastery); the mid agent conflates them once
 a side is inert, and the RFC 9940-anchored reference **rescues it completely** (the cognate's survival
 goes 1.00 → 0.00); the weak agent conflates them either way (0.75 with or without — beyond rescue). The
@@ -609,7 +635,7 @@ lexicon pins the ontology for the middle of the ladder, not the bottom.
 
 ![The ontological cognate: intrinsic, then reference-rescuable, then beyond rescue.](../figures/fig_obs_ontology.png)
 
-*Figure 8 (setting 4). Survival of the alarm↔anomaly cognate at the inert placements, without and with
+*Figure 9 (setting 4). Survival of the alarm↔anomaly cognate at the inert placements, without and with
 the reference. sol never takes it; the reference drives mini to zero; nano barely moves.*
 
 ### 13.3 The reference — what it buys, by component and by placement
@@ -621,13 +647,13 @@ shared identifier with no description is worse than nothing** (precision 0.50, b
 floor): the reference works through shared *description*, never through the pointer. And the same field
 can *harm* the agent it was meant to help. This shows up in **setting 1**, the configuration
 reconciliation whose look-alike terms are the programme's richest source of false cognates: there a
-shallow **class** tag is, for the weak agent, the single worst condition in the programme (Figure 9),
+shallow **class** tag is, for the weak agent, the single worst condition in the programme (Figure 10),
 driving cognate survival *above* even the no-reference floor — because a class surface reads as
 evidence for the very cognate it should block.
 
 ![Which reference field matters is set by the agent — and class hurts the weak model.](../figures/fig_anatomy_fields.png)
 
-*Figure 9 (setting 1). Surviving false cognates by reference content, per model. The strong agent is
+*Figure 10 (setting 1). Surviving false cognates by reference content, per model. The strong agent is
 immune (no bar); for the weak agent the lexical field helps most and the shallow class tag actively
 hurts — the tallest bar, above the id-only floor.*
 
@@ -636,7 +662,7 @@ with strong, live cognition (§13.1), while its **correctness** benefit concentr
 and so verification — is weakest, disciplining the committing agent exactly where it would otherwise
 err. And independent of any per-reconciliation effect, a shared reference changes how the work
 **scales** with the number of systems. The unit here is one **reconciliation operation**: a single act
-of aligning two semantic models, the same operation whose effort §13.1 meters. The question Figure 10
+of aligning two semantic models, the same operation whose effort §13.1 meters. The question Figure 11
 asks is how many such operations it takes to give *N* systems mutual semantic interoperability.
 Reconciled pairwise, every system must be aligned with every other, which is N(N−1)/2 operations,
 growing as N². Bound instead to one shared reference, each system is reconciled once against the anchor
@@ -652,7 +678,7 @@ directly: the count is what decides whether the whole workload grows linearly or
 
 ![Work grows linearly with a reference, quadratically without.](../figures/fig_scaling.png)
 
-*Figure 10 (setting 1, constructed). A **count of reconciliation operations** (the pairings that must be
+*Figure 11 (setting 1, constructed). A **count of reconciliation operations** (the pairings that must be
 made) against the number of systems N: bind-once-to-a-shared-reference (~N) versus align-every-pair
 (~N²). A structural count established by construction to N = 12, not a measurement of reasoning effort;
 contrast Figures 5 and 6, which measure cognitive load directly.*
@@ -662,7 +688,7 @@ contrast Figures 5 and 6, which measure cognitive load directly.*
 Position on the cognition spectrum is the master variable, and moving along it degrades a reconciliation
 in a specific, measured way. This is sharpest in **setting 2**, the intent setting, where a consumer and a provider negotiate an
 intent to a workable deal, and the crux is a pragmatic judgement: whether a degraded counter-offer is
-acceptable to the customer. Across the cognition spectrum (Figure 11) that decision closes autonomously
+acceptable to the customer. Across the cognition spectrum (Figure 12) that decision closes autonomously
 while the customer's judgement is present — live at both-cognitive, or **pre-placed as a portable
 policy** — and falls to the floor at the mute and both-inert placements, where the correct behaviour is
 to refer the decision to a person. The pre-placed policy is the mechanism that holds the line where a mute customer
@@ -671,7 +697,7 @@ description must hand off.
 
 ![The negotiation across the spectrum; a pre-placed policy holds the line.](../figures/fig_intent_negotiation.png)
 
-*Figure 11 (setting 2). Decision accuracy across the cognition spectrum. It holds high while the
+*Figure 12 (setting 2). Decision accuracy across the cognition spectrum. It holds high while the
 customer's judgement is present — live, or pre-placed in a movable policy — and collapses to referral
 at consumer-mute and both-inert.*
 
@@ -682,7 +708,7 @@ distinct services — that the static descriptions simply cannot separate. Telli
 *acting on the live system*: interrogating it, or provisioning something and reading it back. The number
 of such live probes the agent is permitted is its **probe budget**.
 
-Whether spending that budget actually resolves the hard cases depends on placement, and Figure 12 shows
+Whether spending that budget actually resolves the hard cases depends on placement, and Figure 13 shows
 why by crossing the two: it sweeps the probe budget (none, bounded, unbounded) at each of two spectrum
 placements. At **both-cognitive** the live side is there to be interrogated, so more budget resolves
 more — the residual falls to zero at unbounded budget. This is what **budget-limited** means: enough
@@ -698,12 +724,67 @@ one-inert, no effort can, because the thing that would answer the probe is not t
 
 ![Live probing resolves the hardest cases only where a live side remains to probe.](../figures/fig_instance_budget.png)
 
-*Figure 12 (setting 1). The hardest look-alike individuals, for the strong agent: what fraction gets
+*Figure 13 (setting 1). The hardest look-alike individuals, for the strong agent: what fraction gets
 resolved as the live-system probe budget is swept from none through bounded to unbounded, at two spectrum
 placements. Budget (the x-axis) and placement (the two lines) are crossed, so the curves isolate their
 interaction. At **both-cognitive** a live side can be interrogated and the residual is budget-limited —
 it drives to zero as probes are spent. At **one-inert** there is nothing live to probe and it is
 structural — no budget helps. Same sweep, opposite outcomes, decided by placement, not by effort.*
+
+### 13.5 Reach — how far an agent can see and question
+
+The instance result above raises a question worth separating out. When an agent must *act on the live
+system* to settle the hardest cases, what limits how far it gets — how *capable* the agent is, or how much
+it is *allowed to see and to ask*? These are not the same thing. A brilliant investigator handed only a
+one-line summary cannot do much; a modest one who may interview the witnesses can do a great deal. To
+tell the two apart, this reading holds the agent at its strongest and holds liveness at the top (both
+systems reasoning), and varies only what the agent is given to work with, along two axes.
+
+The first axis is **what it can see**: how much of each individual's record is exposed to it — from just
+an opaque identifier, to that plus a name, plus its attributes, up to the full record including how it
+connects to its neighbours (its topology). The second axis is **what it can ask** of the live system —
+from nothing at all (decide from the record as given), to asking about a *named* attribute (where the
+agent must already know the field name to ask for it), to **discovery** (where it may ask the open
+question "what facts do you have?" and be told), up to running a small live experiment. As before, the
+measure is the share of the hardest cases settled correctly — the look-alike pairs that are identical on
+paper and can be told apart only by questioning the live system, which the study calls the
+*experiment-only* cases — reported alongside precision, the share of what the agent commits that is
+right.
+
+The result (Figure 14, left panel) is clean, and because precision stays at 1.00 across the whole grid it
+is a real gradient, not an artefact of guessing. Seeing more helps, but only up to a point: given no
+ability to ask, the agent settles none of the hardest cases when it sees only an identifier, and rises to
+just half of them (0.50) even when it can see the entire static record. Static evidence, however
+complete, cannot separate twins that differ only in a fact the record does not carry. Being allowed to
+ask about a *named* attribute barely improves this — the agent has to know in advance which field to ask
+for. The jump is at **discovery**: the moment the agent may ask the open question "what do you have?",
+every level of visibility goes straight to a full close (1.00). The decisive reach is not seeing more,
+and not even asking more, but being able to ask the question you did not know in advance to ask.
+
+The same access lands differently depending on the agent's power (Figure 14, right panel). Handed
+identical access, the strong agent converts it into a perfect close at perfect precision. The mid agent
+uses it but plateaus part-way, around 0.67 to 0.75. The weak agent posts high numbers that are not the
+same achievement: its precision slips (to 0.97–0.98) and it begins committing look-alikes, so its
+apparent resolution is partly indiscriminate binding rather than genuine settlement — read its recall
+without its precision beside it and you would misjudge it, which is the caution the whole study keeps
+returning to. Power sets the ceiling that reach can reach.
+
+The lesson is as much a design one as a scientific one. How far ad hoc reconciliation carries is not
+fixed by the agents alone; it is set jointly by how capable they are and by how *interrogable* the thing
+they meet is — whether the interface on the other side lets a capable agent ask the open questions it
+needs to. That is a concrete thing a real deployment would have to provide, and it is exactly what the
+carrier and standards-body engagement discussed under scope could help pin down.
+
+![How far the strong agent settles the hardest cases, as what it can see and what it can ask are varied; and the same across the model ladder.](../figures/fig_reach.png)
+
+*Figure 14 (reach). Left: the strong agent, with liveness held at the top. Each line is one level of
+visibility (how much of the record it can see); moving left to right widens what it may ask, from nothing,
+through asking a named attribute, to discovery (asking what exists), to a live experiment. The y-axis is
+the share of the hardest — experiment-only — cases it settles correctly. Seeing more (higher lines at the
+left) caps at one-half; discovery collapses that spread to a full close, at precision 1.00 throughout.
+Right: the same left-to-right axis, now one line per agent at full visibility. The strong agent reaches a
+perfect close; the mid agent plateaus; the weak agent's high values come with slipping precision (noted
+in the text), so they are not the same achievement.*
 
 ## 14. The maps
 
@@ -729,10 +810,10 @@ This is the map for locating any finding on the process: the *here* of "cognitio
 | operation (the *where*) | 1 · Configuration | 2 · Intent | 3 · Cross-domain | 4 · Observability |
 |---|---|---|---|---|
 | **Lift** | founds it; the lift is the lever (0.66–0.76 → 0.92–0.97) | reused | reused; both sides private | alarm lifted and **decomposed** |
-| **Reference construction** | given (lexical) | given (unit / invariant) | **constructed** — the pivotal act | given (RFC 9940-anchored) |
+| **Reference construction** | given (lexical) | given (unit / invariant) | **constructed** end to end — 0.40 → **0.93** | given (RFC 9940-anchored) |
 | **Schema binding** (lexical, ontological) | equivalence; reference **substitutes** | shared ground for satisfaction | **the measured stage**: omission vs commission | **ontological** cognate; 3-rung gradient |
 | **Attribute pinning** | — | bound vs measured metric | committed vs line rate | severity / scores |
-| **Instance co-reference** | budget-limited → **structural** | same gradient (endpoints) | bracketed (reproduces s.1) | bracketed (reproduces s.1) |
+| **Instance co-reference** | budget-limited → **structural** | measured (endpoints) | bracketed (reproduces s.1) | measured; reproduces s.1 |
 | **Verification** | own step; catches cognates, holds resolved fraction | by **satisfaction** | downstream of the isolated pass | verdict stands in |
 | **Pragmatic resolution** | left untouched (deferred) | movable **policy**; authority ≠ information | **authority** attribution; reference pins meaning, not authority | **verdict** carries operative meaning; capability-gated |
 | **Composition / correlation** | — | — | — | robust with the dependency map (all models) |
@@ -773,24 +854,61 @@ agent can do it.
 ## 16. Scope, threats, and what remains
 
 The claims here are **existential and mechanistic** — *this is how ad hoc reconciliation works, and
-here it is working* — not population estimates. Each setting rests on a single seeded case, built to
+here it is working* — not population estimates. Each setting is built around seeded cases, designed to
 exercise each mechanism and prove each trap rather than sampled from a distribution, with a small
 number of trials; the reported patterns are the ones stable across the model ladder and the treatment
-toggles, and the numbers are indicative rather than tight. The model ladder is three points spanning a
-capability range, so the *shape* of the gradient between the points is not resolved. Golds are derived
+toggles, and the numbers are indicative rather than tight. To guard against any one case being, unknowingly,
+chosen to work, each setting is exercised on **three independently-built cases**, not one — the breadth
+reading at the end of this section reports that the findings hold across them. The core ladder is three points spanning a
+capability range; a six-model sweep resolves the *shape* of the gradient between them, a smooth descent
+from the strong end's omission to the weak end's commission (§13.2). Golds are derived
 from the models and validated, which removes drift but leaves the modelling choices — including
 setting 4's verdict thresholds, stated openly — as authored rather than found. Public standards may
 have been seen in training, which could flatter the no-reference conditions; the effect relied on
 throughout is the *difference* a treatment makes under identical inputs.
 
-Two scoping decisions bound the reading of specific settings. Setting 3 measures a **single-pass schema
-binding** with the reference-construction step bracketed, so its reference-absent numbers measure the
-worth of that one step, not a limit of cognition; a direct test of the full **construct-then-bind**
-protocol — the agents building the reference themselves and then closing, with none pre-given — is the
-clean way to confirm the thesis in the hardest setting, and is left to further work. And
-**instance-level co-reference** is measured in full only in setting 1; the later settings bracket it on
-the argued grounds that it reproduces that result. Larger and more varied cases, more rungs on the
-ladder, and the end-to-end construct-then-bind run are the natural next steps.
+Two operations bear noting on how they are measured. Setting 3's schema-binding headline brackets the
+reference-construction step, isolating the worth of that step; the full **construct-then-bind**
+protocol — the agents building the reference themselves and then closing, with none pre-given — is also
+run, and it confirms the thesis in the hardest setting: the strong agent lifts from a no-reference
+recall of 0.40 to a constructed-reference **0.93**, approaching the reference-given 1.00, at perfect
+precision and with no false cognate, so constructing the shared ground works and building it is the work
+(§9). And **instance-level co-reference** is measured in settings 2 and 4 as well as setting 1,
+reproducing the same budget-limited-then-structural pattern, with a capability gradient in which capable
+agents resolve fully where a live side can be interrogated while the weakest agent only partially
+resolves.
+
+**The single-case worry, answered as far as in-house work can.** The sharpest threat to a mechanistic
+claim built on one case per setting is that the case was, unknowingly, chosen to work. To test that, two
+further cases were built for every setting — deliberately different in domain, vocabulary and traps — and
+the same agents were run on them under the same harness, so that three independent cases now stand behind
+each setting. The findings reappear on the new cases (Figure 15). In **configuration**, the strong agent
+again reconciles two new pairs of standard models on its own, and the thin shared reference again mainly
+serves to prevent the weaker agents' errors. In the **cross-domain** setting, the mirror returns on two
+new pairs of private, no-standard models: without a shared reference the strong agent under-commits
+(perfect precision on what it binds, but low recall because it refuses to guess the seam), and the
+constructed reference completes the close. In **intent**, working out which offers meet a customer's wish
+and deciding accept-or-refer under a policy again complete for capable agents, while the multi-hop
+service lifecycle again grades with capability. In **observability**, the deep alarm-versus-anomaly
+look-alike is again reliably avoided across two new fault domains. This moves each result from "here it
+is on one case" to "here it is again on cases built to be different". It does not, and cannot, stand in
+for real network data: the same hand built the new cases too, so they test robustness to *variation*, not
+*realism*.
+
+![Each setting's signature result, reproduced on two new independently-built cases.](../figures/fig_breadth.png)
+
+*Figure 15 (breadth). One panel per setting. Each shows the setting's signature result on the two new
+cases built for it, using the real agents scored against the validated answer key. Setting 1: the weaker
+agent's precision (share of committed matches that are correct) recovers to a clean close once the shared
+reference is added. Setting 3: the strong agent's recall (share of true matches found) is low without a
+reference — it is refusing to guess — and completes with one. Setting 2: the agents' accuracy at working
+out which offers satisfy the wish, high for the strong and mid agents and lower for the weak one. Setting
+4: precision stays at 1.0 (the look-alike is never taken) while recall sits at 0.75 (the one-to-many
+decomposition is the residual). The point of the figure is not any single bar but that all four signatures
+recur on cases built to differ.*
+
+What remains is therefore genuinely external — larger and more varied cases drawn from real networks, and
+the real-data grounding that only carrier and standards-body collaboration can supply.
 
 ## 17. In one paragraph
 

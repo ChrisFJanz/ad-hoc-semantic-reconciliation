@@ -115,10 +115,13 @@ P2_COLS = ["case", "phase", "model", "placement", "trial", "precision", "recall"
            "experiment_only_recall", "residual", "interrogate_calls", "reasoning_tokens", "latency_s"]
 
 
-def phase2(models, trials, budget, fresh, write):
+def phase2(models, trials, budget, fresh, write, save_transcripts=False):
     ecase = load_instance_case(ROOT / "benchmark" / "cases" / "obs_instance")
     path = ROOT / "results" / f"obs_instance_phase2{suffix(models)}.csv"
     fh, w, rows = (open_csv(path, P2_COLS, fresh) if write else (None, None, []))
+    tdir = ROOT / "results" / "obs_instance_transcripts"
+    if save_transcripts:
+        tdir.mkdir(parents=True, exist_ok=True)
     done = {(r["model"], r["placement"], r["trial"]) for r in rows}
     plan = [(m, pl) for m in models for pl in SPECTRUM]
     total = len(plan) * trials
@@ -150,6 +153,10 @@ def phase2(models, trials, budget, fresh, write):
             rows.append(row); done.add(key)
             if w:
                 w.writerow(row); fh.flush()
+            if save_transcripts:
+                (tdir / f"obs_instance_{m}_{pl}_t{t}.json").write_text(
+                    json.dumps({"model": m, "placement": pl, "trial": t, "row": row,
+                                "transcript": rec.transcript}, indent=2))
             print(f"      prec {row['precision']} rec {row['recall']} eo {row['experiment_only_recall']}",
                   file=sys.stderr, flush=True)
     if fh:
@@ -270,6 +277,8 @@ def main() -> int:
     ap.add_argument("--budget", type=int, default=20, help="instance-oracle call cap (phase 2)")
     ap.add_argument("--no-write", action="store_true")
     ap.add_argument("--fresh", action="store_true", help="ignore existing results (default: resume)")
+    ap.add_argument("--save-transcripts", action="store_true",
+                    help="phase 2: save a per-cell co-reference transcript to results/obs_instance_transcripts/")
     args = ap.parse_args()
 
     load_dotenv()
@@ -294,7 +303,7 @@ def main() -> int:
         if st == "1":
             phase1(case, models, trials, args.fresh, write)
         elif st == "2":
-            phase2(models, trials, args.budget, args.fresh, write)
+            phase2(models, trials, args.budget, args.fresh, write, save_transcripts=args.save_transcripts)
         elif st == "3":
             phase3(a2, gold, models, trials, args.fresh, write)
         elif st == "4":

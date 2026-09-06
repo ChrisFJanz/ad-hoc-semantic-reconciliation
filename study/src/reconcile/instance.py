@@ -148,8 +148,12 @@ class Oracle:
         facts = self.answers.get(ind_id, {})
         if attribute:
             val = facts.get(attribute)
-            answer = {attribute: val} if val is not None else {}
-            msg = "" if val is not None else f"no authoritative '{attribute}' for '{ind_id}'"
+            if val is not None:
+                answer, msg = {attribute: val}, ""
+            else:
+                available = sorted(facts.keys())
+                hint = f"; interrogable attributes: {', '.join(available)}" if available else ""
+                answer, msg = {}, f"no authoritative '{attribute}' for '{ind_id}'{hint}"
         else:
             answer, msg = dict(facts), ("" if facts else f"nothing further to interrogate on '{ind_id}'")
         self.log.append({"call": "interrogate", "id": ind_id, "attribute": attribute, "answer": answer})

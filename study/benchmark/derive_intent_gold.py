@@ -30,7 +30,8 @@ from reconcile.intent import (                                        # noqa: E4
     BOUND_KINDS, load_intent_case, violated_bounds, satisfies_all,
     best_achievable, policy_decision, fulfilment_status, remediation_class)
 
-CDIR = ROOT / "benchmark" / "cases" / "intent_hard"
+CASE = sys.argv[1] if (len(sys.argv) > 1 and not sys.argv[1].startswith("-")) else "intent_hard"
+CDIR = ROOT / "benchmark" / "cases" / CASE
 
 
 def actual_satisfiers(case, intent):
@@ -166,7 +167,7 @@ def main() -> int:
         return 1
 
     gold = {
-        "case": "intent_hard",
+        "case": CASE,
         "operational_case": case.traps.get("operational_case", ""),
         "seed": case.traps.get("seed", ""),
         "note": "DERIVED by derive_intent_gold.py from the domain predicates and hidden truth; "
@@ -180,7 +181,7 @@ def main() -> int:
     }
     (CDIR / "intent_gold.json").write_text(json.dumps(gold, indent=2) + "\n")
 
-    print("Wrote intent_hard/intent_gold.json")
+    print(f"Wrote {CASE}/intent_gold.json")
     print(f"  intents: {len(refine)}  (satisfiable: {sum(1 for r in refine.values() if r['satisfiable'])}, "
           f"experiment-only: {len(gold['experiment_only'])})")
     print(f"  negotiation cases: {len(negotiation_intents)} intents x {len(case.policies)} policies")

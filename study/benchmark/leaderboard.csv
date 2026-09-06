@@ -1,0 +1,9 @@
+case,setting,stack,model,placement,uses_reference,precision,recall,f1,surviving_false_cognates,residual,scaling,total_tokens,reasoning_tokens,latency_s
+config_big_hard,1 · configuration,baseline (no reference),-,n/a,False,0.5,0.667,0.571,1,9,~N^2,,,
+config_big_hard,1 · configuration,reference control,-,n/a,True,1.0,1.0,1.0,0,7,~N,,,
+config_cross_domain,3 · cross-domain,baseline (no reference),-,n/a,False,0.75,0.6,0.667,1,7,~N^2,,,
+config_cross_domain,3 · cross-domain,reference control,-,n/a,True,1.0,1.0,1.0,0,5,~N,,,
+config_observability,4 · observability,baseline (no reference),-,n/a,False,0.571,1.0,0.727,1,6,~N^2,,,
+config_observability,4 · observability,reference control,-,n/a,True,1.0,0.75,0.857,0,11,~N,,,
+config_tapi_teas,1 · configuration,baseline (no reference),-,n/a,False,0.5,0.556,0.526,1,5,~N^2,,,
+config_tapi_teas,1 · configuration,reference control,-,n/a,True,1.0,1.0,1.0,0,2,~N,,,
