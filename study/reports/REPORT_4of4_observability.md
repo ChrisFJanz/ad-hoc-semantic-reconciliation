@@ -93,7 +93,7 @@ gold of correspondences and false cognates, scored across the **cognition spectr
 one-inert, both-inert) with the reference present or absent. Two things make it harder than a plain
 binding. The gold correspondences include a **one-to-many decomposition** — the legacy alarm maps to
 *both* the NMOP alarm-State and the fault it implies — and the headline false cognate is the
-**ontological** one, alarm↔anomaly, which no structural cue separates. A second, bracketed phase
+**ontological** one, alarm↔anomaly, which no structural cue separates. A second, supporting phase
 co-refers *instances* — which legacy alarm and which NMOP anomaly are the same underlying condition
 (by resource and time) — reusing the instance machinery; as in the earlier settings it reproduces the
 first study's behaviour and is not the headline.
@@ -241,16 +241,36 @@ artefact to refine, not a settled answer.
 
 ## 5. Threats to validity
 
-The case is single and seeded, built to exercise each mechanism and prove each trap, not sampled; it
-establishes how the observability reconciliation behaves and why, not how often. The verdict gold rests
+The case is seeded rather than sampled — built to exercise each mechanism and prove each trap, not
+drawn from a population — so it establishes how the observability reconciliation behaves and why, not
+how often.
+
+To check that the one case above was not, unintentionally, built in a way that makes the point come out
+right, the same reconciliation was constructed from scratch in two further trouble domains: IP/routing
+faults (`obs_routing`) and compute/server faults (`obs_compute`). The signature finding of this setting
+is that a deep look-alike must be told apart: a legacy *alarm* — a declared bad state — is not the same
+kind of thing as an *anomaly* — a statistical deviation that may be perfectly benign — even though both
+read as "something looks off"; and, harder still, one overloaded legacy alarm actually corresponds to
+*two* modern concepts at once (a state and a fault), a one-to-many split. On both new domains the
+finding reappears. Across every agent, strong to weak, and both new fault domains, the alarm-versus-
+anomaly look-alike is reliably avoided — of the matches committed, every one is right, and none of
+these traps is taken. The residual is exactly the same as in the original: the agents reliably catch
+one half of the one-to-many split (finding 0.75 of the true matches) while the second half is the
+cognition-demanding step a thin glossary cannot supply. So the headline — the ontological look-alike is
+reliably distinguished — holds across fault domains, not just the one it was first shown on. (All three
+cases are the same author's constructions, so this demonstrates robustness to variation, not yet to
+real operational data.)
+
+The verdict gold rests
 on an explicit threshold model, reported as such; different thresholds would move the fine-gradation
 scores though not the maintenance-window contrast. The pragmatics-OFF baseline is a stylised legacy
 pipeline (page on severity, no correlation), faithful to the legacy pathology but not a specific
 product. Trials are few, so single-cell numbers carry noise; the reported patterns are the ones stable
 across the model ladder and the ON/OFF toggle. The instance-level alarm/anomaly co-reference is
-bracketed on the same grounds as in the earlier settings — it reproduces the first study's mechanism —
-rather than run as a headline. And the correlation model is a resource-dependency-and-time abstraction
-of the incident-yang correlation, not its full machinery.
+measured, and reproduces the first study's mechanism — capable agents resolve fully where a live side
+can be interrogated and fall to a structural floor once inert, while the weakest agent only partially
+resolves — as a supporting result rather than the setting's headline. And the correlation model is a
+resource-dependency-and-time abstraction of the incident-yang correlation, not its full machinery.
 
 ## 6. Reproducibility
 

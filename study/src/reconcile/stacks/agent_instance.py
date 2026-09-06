@@ -60,7 +60,7 @@ def _view(ind: dict, evidence: set) -> dict:
     return out
 
 
-SYSTEM = (
+SYSTEM_PREAMBLE = (
     "You reconcile INDIVIDUALS (specific entities) across two populated graphs of ONE "
     "network. The schema is already reconciled, so types are comparable; your job is "
     "entity resolution: decide which individual in graph A is the SAME real-world entity "
@@ -70,30 +70,50 @@ SYSTEM = (
     "merge them), and two individuals that look identical in their static record may be "
     "different entities. Rules: never merge two distinct individuals; hold every decision "
     "with a confidence in [0,1]; and where identity cannot be settled from the evidence, "
-    "leave the individual in the residual (refer it onward) rather than guess.\n\n"
-    "You have tools that act on the network where a side is live:\n"
-    " - interrogate(individual_id, attribute): ask one authoritative fact (e.g. 'serial', "
-    "'fibre_id') about a live individual. Use it to separate individuals whose static "
-    "records are identical.\n"
-    " - virtual_provision(a_id, b_id): exercise a candidate correspondence by provisioning "
-    "a service through it and reading the objects back, confirming or refuting it against "
-    "the semantic invariants (endpoint identity, connectivity, capacity, layering, "
-    "switching, multiplexing). Only services can be provisioned. Use it to CONFIRM a "
-    "service correspondence and to catch same-name services that are actually different.\n"
-    " - submit_alignment(correspondences, residual_a, residual_b): submit your final "
-    "answer. correspondences is a list of {a_id, b_id, confidence}.\n\n"
-    "Work by proposing, then verifying with the tools where you can, then submitting. "
+    "leave the individual in the residual (refer it onward) rather than guess."
+)
+
+# Per-tool descriptions, assembled into the prompt according to the interrogation level so the
+# prompt advertises exactly the tools the agent is actually given (the "reach" it has).
+TOOL_DESC = {
+    "interrogate_discovery":
+        " - interrogate(individual_id, attribute=optional): ask for one authoritative fact "
+        "about a live individual, or omit the attribute to receive all available facts. If you "
+        "name an attribute the individual does not have, the reply lists the attributes it does "
+        "have. Use it to separate individuals whose static records are identical.",
+    "interrogate_lookup":
+        " - interrogate(individual_id, attribute): ask for one authoritative fact about a live "
+        "individual by naming the attribute you want (e.g. serial). You must name the attribute; "
+        "there is no way to list an individual's available facts. Use it to separate individuals "
+        "whose static records are identical.",
+    "provision":
+        " - virtual_provision(a_id, b_id): exercise a candidate correspondence by provisioning "
+        "a service through it and reading the objects back, confirming or refuting it against "
+        "the semantic invariants (endpoint identity, connectivity, capacity, layering, "
+        "switching, multiplexing). Only services can be provisioned. Use it to CONFIRM a "
+        "service correspondence and to catch same-name services that are actually different.",
+    "submit":
+        " - submit_alignment(correspondences, residual_a, residual_b): submit your final "
+        "answer. correspondences is a list of {a_id, b_id, confidence}.",
+}
+
+CLOSER_TOOLS = (
+    "\n\nWork by proposing, then verifying with the tools where you can, then submitting. "
     "Prefer a confirmed correspondence to a guessed one; an unconfirmed guess belongs in "
     "the residual. Call submit_alignment exactly once, when you are done."
 )
+CLOSER_NOTOOLS = (
+    "\n\nYou have no tools to probe the network: decide identity from the static records above "
+    "alone. Where a record is underdetermined, leave the individual in the residual rather than "
+    "guess. Call submit_alignment exactly once, when you are done."
+)
 
 PLACEMENT_NOTE = {
-    "both_cognitive": "\n\nBOTH graphs are live: you may interrogate individuals on either "
-                      "side and run virtual provisions on either side.",
-    "one_inert": "\n\nGraph B is INERT — a static snapshot. You may interrogate and provision "
-                 "ONLY on graph A (the live side); for B rely on its static record and any "
-                 "published reference. Individuals on B that are separable only by a live probe "
-                 "cannot be confirmed — refer them onward.",
+    "both_cognitive": "\n\nBOTH graphs are live: any tools you are given act on either side.",
+    "one_inert": "\n\nGraph B is INERT — a static snapshot. Any tools you are given act ONLY "
+                 "on graph A (the live side); for B rely on its static record and any published "
+                 "reference. Individuals on B that are separable only by a live probe cannot be "
+                 "confirmed — refer them onward.",
     "both_inert": "\n\nBOTH graphs are INERT — static snapshots. The oracle is UNAVAILABLE; "
                   "no interrogation or provision is possible. Propose from static evidence "
                   "only, keep confidences modest, and leave underdetermined individuals in the "
@@ -119,28 +139,71 @@ def _fn_tool(name, description, properties, required):
                            "required": required, "additionalProperties": False}}
 
 
-TOOLS = [
-    _fn_tool("interrogate",
-             "Ask one authoritative fact about a live individual (e.g. serial, fibre_id).",
-             {"individual_id": {"type": "string"}, "attribute": {"type": "string"}},
-             ["individual_id", "attribute"]),
-    _fn_tool("virtual_provision",
-             "Provision a service through a candidate correspondence and read back the "
-             "invariant check (confirm/refute). One id from each side.",
-             {"a_id": {"type": "string"}, "b_id": {"type": "string"}},
-             ["a_id", "b_id"]),
-    _fn_tool("submit_alignment",
-             "Submit the final co-reference alignment.",
-             {"correspondences": {"type": "array", "items": {
-                 "type": "object", "properties": {
-                     "a_id": {"type": "string"}, "b_id": {"type": "string"},
-                     "confidence": {"type": "number"}},
-                 "required": ["a_id", "b_id", "confidence"], "additionalProperties": False}},
-              "residual_a": {"type": "array", "items": {"type": "string"}},
-              "residual_b": {"type": "array", "items": {"type": "string"}}},
-             ["correspondences", "residual_a", "residual_b"]),
-]
-SUBMIT_ONLY = [TOOLS[-1]]
+_INTERROGATE_DISCOVERY = _fn_tool(
+    "interrogate",
+    "Ask one authoritative fact about a live individual: name an attribute (e.g. "
+    "serial), or omit it to receive all available facts. Naming an absent attribute "
+    "returns the list of interrogable attributes.",
+    {"individual_id": {"type": "string"}, "attribute": {"type": "string"}},
+    ["individual_id"])
+_INTERROGATE_LOOKUP = _fn_tool(
+    "interrogate",
+    "Ask one authoritative fact about a live individual by naming the attribute you want "
+    "(e.g. serial). You must name the attribute; the individual's available facts are not "
+    "listed for you.",
+    {"individual_id": {"type": "string"}, "attribute": {"type": "string"}},
+    ["individual_id", "attribute"])
+_PROVISION = _fn_tool(
+    "virtual_provision",
+    "Provision a service through a candidate correspondence and read back the "
+    "invariant check (confirm/refute). One id from each side.",
+    {"a_id": {"type": "string"}, "b_id": {"type": "string"}},
+    ["a_id", "b_id"])
+_SUBMIT = _fn_tool(
+    "submit_alignment",
+    "Submit the final co-reference alignment.",
+    {"correspondences": {"type": "array", "items": {
+        "type": "object", "properties": {
+            "a_id": {"type": "string"}, "b_id": {"type": "string"},
+            "confidence": {"type": "number"}},
+        "required": ["a_id", "b_id", "confidence"], "additionalProperties": False}},
+     "residual_a": {"type": "array", "items": {"type": "string"}},
+     "residual_b": {"type": "array", "items": {"type": "string"}}},
+    ["correspondences", "residual_a", "residual_b"])
+
+TOOLS = [_INTERROGATE_DISCOVERY, _PROVISION, _SUBMIT]   # legacy full repertoire
+SUBMIT_ONLY = [_SUBMIT]
+
+# The interrogation "reach" axis: what the agent may DO on a live side, from no probing to
+# the full act-on-the-network repertoire. Each level names the tools it exposes and the
+# prompt snippets that advertise them. "full" reproduces the study's default behaviour.
+INTERROGATION_LEVELS = ("none", "lookup", "discovery", "full")
+
+
+def _tools_for(interrogation: str):
+    """Live-side tool list for an interrogation level (submit_alignment always included)."""
+    if interrogation == "none":
+        return [_SUBMIT]
+    if interrogation == "lookup":
+        return [_INTERROGATE_LOOKUP, _SUBMIT]
+    if interrogation == "discovery":
+        return [_INTERROGATE_DISCOVERY, _SUBMIT]
+    return [_INTERROGATE_DISCOVERY, _PROVISION, _SUBMIT]   # "full"
+
+
+def _tools_note(interrogation: str) -> str:
+    """The prompt block advertising exactly the tools the interrogation exposes."""
+    if interrogation == "none":
+        return CLOSER_NOTOOLS
+    parts = ["\n\nYou have tools that act on the network where a side is live:"]
+    if interrogation == "lookup":
+        parts.append(TOOL_DESC["interrogate_lookup"])
+    else:
+        parts.append(TOOL_DESC["interrogate_discovery"])
+    if interrogation == "full":
+        parts.append(TOOL_DESC["provision"])
+    parts.append(TOOL_DESC["submit"])
+    return "\n".join(parts) + CLOSER_TOOLS
 
 
 def _g(obj, key, default=None):
@@ -153,13 +216,17 @@ def _g(obj, key, default=None):
 class InstanceAgentStack:
     def __init__(self, case: InstanceCase, model: str, reference_variant: str = "none",
                  evidence: set | None = None, inert_side: str = "b",
-                 budget: int | None = 30, max_turns: int | None = None, client=None):
+                 budget: int | None = 30, max_turns: int | None = None,
+                 interrogation: str = "full", client=None):
         self.case = case
         self.model = model
         self.reference_variant = reference_variant
         self.evidence = set(EVIDENCE_ALL if evidence is None else evidence)
         self.inert_side = inert_side
         self.budget = budget
+        if interrogation not in INTERROGATION_LEVELS:
+            raise ValueError(f"interrogation must be one of {INTERROGATION_LEVELS}, got {interrogation!r}")
+        self.interrogation = interrogation
         # generous turn budget: a probe-happy weak model needs room to interrogate every
         # ambiguous individual and still submit. Too tight a cap makes it run out of turns
         # mid-probe and never submit. Min 12; 24 when the oracle budget is unbounded.
@@ -186,12 +253,25 @@ class InstanceAgentStack:
         return json.dumps(payload, indent=2)
 
     def _system(self, placement: str) -> str:
-        return SYSTEM + PLACEMENT_NOTE.get(placement, "") + REFERENCE_NOTE.get(self.reference_variant, "")
+        # both_inert has no live side, so no tools regardless of interrogation.
+        tools_note = CLOSER_NOTOOLS if placement == "both_inert" else _tools_note(self.interrogation)
+        return (SYSTEM_PREAMBLE + tools_note + PLACEMENT_NOTE.get(placement, "")
+                + REFERENCE_NOTE.get(self.reference_variant, ""))
 
     def _dispatch(self, oracle: Oracle, name: str, args: dict):
         if name == "interrogate":
-            r = oracle.interrogate(args.get("individual_id", ""), args.get("attribute"))
-            return {"ok": r.ok, "answer": r.answer, "message": r.message}
+            # In "lookup" mode the agent must name an attribute: no discovery. Refuse a bare
+            # interrogate, and suppress the oracle's available-attribute hint (itself a discovery
+            # interrogation) so the reach axis stays clean.
+            attribute = args.get("attribute")
+            if self.interrogation == "lookup" and not attribute:
+                return {"ok": False, "answer": {},
+                        "message": "interrogate requires an attribute name in this mode"}
+            r = oracle.interrogate(args.get("individual_id", ""), attribute)
+            message = r.message
+            if self.interrogation == "lookup" and "interrogable attributes:" in message:
+                message = message.split(";")[0].strip()
+            return {"ok": r.ok, "answer": r.answer, "message": message}
         if name == "virtual_provision":
             r = oracle.virtual_provision(args.get("a_id", ""), args.get("b_id", ""))
             return {"ok": r.ok, "answer": r.answer, "message": r.message}
@@ -205,9 +285,10 @@ class InstanceAgentStack:
                       {"role": "user", "content": self._user_payload()}]
         rec.transcript.append({"step": "prompt", "placement": placement,
                                "reference_variant": self.reference_variant,
-                               "evidence": sorted(self.evidence)})
+                               "evidence": sorted(self.evidence),
+                               "interrogation": self.interrogation})
         tok = {"prompt": 0, "completion": 0, "total": 0, "reasoning": 0}
-        tools = TOOLS if placement != "both_inert" else SUBMIT_ONLY
+        tools = SUBMIT_ONLY if placement == "both_inert" else _tools_for(self.interrogation)
         t0 = time.time()
         submitted_args = None
         turns = 0

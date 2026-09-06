@@ -309,13 +309,11 @@ Deciding which of O's endpoints and N's access points are the same physical enti
 co-reference, and it reproduces the first study's texture on new data. With both sides live, the
 same-site endpoint twins — indistinguishable on their static records — are resolvable only by
 interrogating an authoritative fibre-id, and the capability gradient shows in *how* each model gets
-there: sol resolves them efficiently (resolved fraction 1.0 on eight probes), nano resolves them by
-brute force (resolved fraction 1.0, but twelve probes), and — the honest non-monotonic note familiar
-from the first study — mini under-probes, gives up, and leaves the ambiguous pairs in the residual
-(resolved fraction 0.6). Once a side
-goes inert and the probe is gone, all three collapse to the same 0.6, the twins unresolvable. The
-step is supporting, not the headline, but it confirms that the live-probe mechanism and its
-capability-dependence carry over intact from the first setting.
+there: the strong and mid agents resolve the twins fully (resolved fraction 1.0), while the weak agent
+only partially resolves even with the live side present (0.67), leaving the ambiguous pairs in the
+residual. Once a side goes inert and the probe is gone, all three collapse to the same 0.6, the twins
+unresolvable. The step is supporting, not the headline, but it confirms that the live-probe mechanism
+and its capability-dependence carry over intact from the first setting.
 
 ### 3.5 The lifecycle, watched: a service that reconciles itself across its life
 
@@ -422,9 +420,30 @@ person would otherwise have to stand.
 
 ## 5. Threats to validity
 
-The case is single and seeded; it is constructed to exercise each mechanism and prove each trap, not
-sampled from a population, so the results establish that the mechanisms work and how, not how often
-they would work in the wild. The oracle is deterministic and the gold is derived and validated from a
+The case is seeded rather than sampled — constructed to exercise each mechanism and prove each trap,
+not drawn from a population — so the results establish that the mechanisms work and how, not how often
+they would work in the wild.
+
+To guard against the worry that the one scenario above happened to be built in a way that flatters the
+finding, two further intent scenarios were constructed for this setting from scratch: an enterprise
+metro-Ethernet case (`intent_metro`) and a data-centre-interconnect case (`intent_dci`), each with its
+own sites, rates, policies, and traps. Recall what the three operations mean in plain terms:
+*refinement* is working out which of the operator's concrete catalogue entries actually satisfy the
+customer's stated wish; *negotiation* is deciding, when nothing fully fits, whether to accept a
+near-miss or refer it upward under a stated policy; and the *lifecycle* is running the chosen service
+across its life, hop by hop, and reading whether it is still meeting its target. On the two new cases
+the setting's findings reappear. Refinement completes for the capable agents — the strong and mid
+agents get every case right, including all four of the deliberately hard "only a live check settles it"
+cases, where the advertised catalogue entry and the live truth disagree — while the weakest agent lags,
+because it does not reliably perform that live check, which ties back to the reach study's separate
+finding that asking the live system is a capability-gated act. Negotiation — applying a fixed policy to
+a fixed set of offers — is done correctly by all three agents including the weakest, on both new cases,
+exactly as in the original. And the multi-hop lifecycle remains the demanding operation that grades
+with capability, strongest to weakest. So the shape of the result is a property of the mechanism, not
+of the one scenario. (The same author built all three, so this tests robustness to variation, not to
+real network data — the latter needs carrier collaboration.)
+
+The oracle is deterministic and the gold is derived and validated from a
 hidden truth, which removes drift but also means the "difficulty" of the case is authored rather than
 found. The model ladder is three points, chosen to span a capability range; the gradient is clear but
 its shape between the points is not resolved. The measured cross-product is deliberately modest, and

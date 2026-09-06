@@ -716,6 +716,25 @@ per-reconciliation effort measured here, the two advantages compound. The gold
 standards are derived from the models and validated, which removes drift but does
 not make the modelling choices themselves beyond dispute.
 
+**The single-case worry, tested in-house.** The most natural objection is that the
+one pair of models above was, without anyone meaning it to be, chosen to make the
+point work. To probe that, two further cases were built for this setting from
+scratch — an IP/MPLS layer-3 VPN described once as a network model and once as
+device configuration (`config_l3vpn`), and a carrier-Ethernet VPN described in two
+different service vocabularies (`config_evpn`) — different domains, different words,
+different traps — and the same agents were run on them against the same kind of
+validated answer key. The finding of this setting reappears on both: the strong
+agent reconciles each new case correctly on its own (of the matches it commits, all
+are right, and it finds all the true matches), and the weaker agents commit a wrong
+match here and there until the small shared glossary — the *reference* — pulls them
+back to a clean, correct close. In other words, the pattern that cognition does the
+matching while the reference mainly prevents the weaker agents' mistakes is not a
+property of the one case; it shows up again on cases built to be different. This
+does not remove the deeper limitation — the same author built all three, so they
+test robustness to *variation*, not to *real network data* — but it closes the
+"you only showed it once" gap as far as in-house work can. The two new cases, their
+answer keys, and the recorded runs are in the repository alongside the original.
+
 A note on scope, in terms of the components of §1. This study reconciles at the
 **schema-term** level: it exercises the **lexical** and **ontological/structural**
 components, and its scored output is *concept* correspondences (which type in one model

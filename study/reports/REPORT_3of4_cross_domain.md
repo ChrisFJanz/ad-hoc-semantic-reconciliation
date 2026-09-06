@@ -51,7 +51,11 @@ close a reconciliation. What it measures is one early stage of that process, and
 one step — constructing the shared ground — that the stage was not allowed to take. The
 through-line holds and gains a clause: with no public standard beneath two models, cognition
 still closes, but only once it has built the shared ground, and **building that ground is the
-work**.
+work**. Run end to end — the two agents constructing the shared reference themselves from their models
+and then binding through it, with none pre-given — the protocol bears this out: the strong agent lifts
+from a no-reference resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the
+reference-given 1.00, at perfect precision and with no false cognate. Constructing the ground is the
+work, and a capable agent does it.
 
 The setting is grounded in the demonstration *Non-standard cross-domain provisioning* and in the
 programme's wider account of ad-hoc, agent-constructed references.
@@ -319,9 +323,29 @@ a thin one for an agent strong enough to take it.
 
 ## 6. Threats to validity
 
-The case is single and seeded, built to exercise the mechanism and prove the trap, not sampled from
-a population; it establishes how the standard-free binding behaves and why, not how often. The
-central measurement is the **single-pass schema binding**, and the reference-absent condition
+The case is seeded rather than sampled — built to exercise the mechanism and prove the trap, not drawn
+from a population — so it establishes how the standard-free binding behaves and why, not how often.
+
+To check that the one case above was not, unintentionally, built in a way that makes the point come out
+right, two further cross-domain cases were constructed from scratch: a private radio-access management
+system meeting a private mobile-core controller at the user-plane transport seam (`config_xdom_ran`),
+and a private data-centre fabric meeting a private overlay controller at the VLAN-to-VNI seam
+(`config_xdom_dc`). Each is a fresh pair of home-grown vocabularies with no shared standard between
+them — the hardest of the four settings. The signature finding here is a *mirror*: given no shared
+reference, a strong agent *under-commits* — it binds only what it is certain of and refuses to guess
+the rest, so of the matches it commits every one is right but it finds only some of the true matches —
+while a weaker agent *over-commits*, binding freely and taking a look-alike, so it finds more but
+commits wrong ones; a single small constructed reference then repairs both to a full, correct close.
+That mirror reappears on both new cases. Without a reference the strong agent holds perfect precision
+but finds only 0.40 of the true matches on the RAN-to-core seam and 0.60 on the fabric-to-overlay seam
+— correctly declining to guess a seam it cannot be sure of — while the mid agent sits in the opposite
+error, committing more and getting some of it wrong (about 0.80 precision and 0.80 recall). Adding the
+constructed reference takes every agent to a full, correct close on both. So "strong agents omit, weak
+agents commit, and a thin shared reference fixes both" is a property of the mechanism, not of the one
+original case. (All three cases are the same author's hand-built constructions, so this shows
+robustness to variation, not yet to real network data — which only carrier collaboration can supply.)
+
+The central measurement is the **single-pass schema binding**, and the reference-absent condition
 brackets the construction step rather than running the full construct-then-bind protocol; a direct
 test of the full protocol — the agents constructing the reference themselves and then closing, with
 no reference pre-given — is the clean way to confirm the thesis in this hardest setting, and is left
