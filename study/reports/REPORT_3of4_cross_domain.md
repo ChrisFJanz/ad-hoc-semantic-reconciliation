@@ -149,8 +149,9 @@ study, it behaves the same way here — the intent setting's endpoint phase, whi
 machinery, confirmed as much — and re-running it would largely replicate a known result. The
 **pragmatic component** — whose realm owns each shared field — we take up separately (§4).
 
-Correctness is the currency: we report the **resolved fraction** (the share of the gold
-correspondences the pass commits), precision, surviving false cognates, the residual, and
+Correctness is the currency: we report the **resolved fraction** (of the true correspondences that
+exist, the share the pass finds and commits), **precision** (of the correspondences it commits to, the
+share that are correct), surviving false cognates, the residual, and
 reasoning effort. The model ladder is the programme's: a strong model (**sol**, `gpt-5.6-sol`), a mid model
 (**mini**, `gpt-5-mini`), and a weak one (**nano**, `gpt-5-nano`).
 

@@ -114,9 +114,10 @@ family of **operations**, and naming them once is what lets the findings later b
 
 *Figure 2. Reconciliation over two lifted models. Correspondences are drawn on grounded evidence and
 bound through a thin reference that acts as a flat identity bridge; a look-alike that shares only a
-surface word is **rejected** as a false cognate on its kind, attachment, and instances; and what
-evidence cannot yet confirm — native gaps, opaque items — is left in the **residual**, referred
-onward. The reference carries no structure of its own; it is parasitic on the two grounded models it
+surface word is **rejected** as a false cognate on its kind, attachment, and instances; a concept
+with genuinely no counterpart in the other model is **correctly returned as unmatched** — a resolved
+outcome, not a gap; and a correspondence the evidence cannot *yet* confirm is left in the **residual**,
+referred onward. The reference carries no structure of its own; it is parasitic on the two grounded models it
 connects.*
 
 Two features of Figure 2 recur in every setting. The first is the **false cognate**: two concepts
@@ -156,6 +157,16 @@ experiment; with both inert there is no one to ask and no joint experiment to ru
 reconciliation must leave and refer onward is, in exactly this sense, the **shortfall from full
 cognition's reach** — and it grows as that reach recedes. It is not a fixed floor the fully-cognitive
 case merely reaches; between two fully-cognitive agents there is, in principle, none.
+
+This is worth stating as a finding in its own right. Across the four settings we found no semantic gap
+that a sufficiently capable, sufficiently reaching cognition could not close. What remains once two
+fully-cognitive agents have exchanged everything they can and run every decisive virtual experiment is
+never an *unbridgeable* correspondence: it is a concept with genuinely no counterpart (correctly
+returned as unmatched), a fact not yet realised in the running network (an absence in the world, not in
+meaning), or a question of *authority* rather than of fact (§5). None of these is a gap cognition is
+stuck on — and the first two a human reasoner would leave exactly where a machine does. What varies from
+one agent to the next is therefore not the *kind* of cognition but its power and reach, which is
+precisely what the capability gradient (§13.2) and the reach study (§13.5) measure.
 
 This is the frame inside which every finding sits, and it carries the programme's central claim.
 Lexical and descriptor methods carry a reconciliation to roughly ninety percent — names, then names

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+
+# secrets — never commit your API key
+.env
+
+# PDF build intermediate
+*.print.html
+.DS_Store
