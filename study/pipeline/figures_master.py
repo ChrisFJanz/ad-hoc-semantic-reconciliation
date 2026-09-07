@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Schematic figures for the master report. All are data-independent concept drawings.
-Fig A  the lift            — a bare data model becomes a portable, self-describing semantic model
-Fig B  reconciliation      — two lifted models: correspondences, a rejected cognate, the residual,
+Fig A  the lift - a bare data model becomes a portable, self-describing semantic model
+Fig B  reconciliation - two lifted models: correspondences, a rejected cognate, the residual,
                              and the thin reference as a flat identity bridge
-Fig C  cross-domain        — Meridian <-> Cascade at one seam; a thin descriptive toehold unlocks it
-Fig D  observability       — the overloaded legacy alarm lifted and decomposed against the NMOP ladder
+Fig C  cross-domain - Meridian <-> Cascade at one seam; a thin descriptive toehold unlocks it
+Fig D  observability - the overloaded legacy alarm lifted and decomposed against the NMOP ladder
 """
 from __future__ import annotations
 from pathlib import Path
@@ -48,7 +48,7 @@ def fig_lift():
     ax.text(1.55, 5.62, "(schema + records)", ha="center", fontsize=8.2, color="#666", style="italic")
     for j, t in enumerate(["term:  och_grade", "rec:  {id:0x7a, v:3}", "rec:  {id:0x7b, v:1}"]):
         ax.text(0.5, 5.1 - j * 0.44, t, ha="left", fontsize=7.8, color="#555", family="monospace")
-    ax.text(0.5, 3.7, "— a fixed, partial picture", ha="left", fontsize=7.8, color="#8a8681", style="italic")
+    ax.text(0.5, 3.7, "- a fixed, partial picture", ha="left", fontsize=7.8, color="#8a8681", style="italic")
 
     # ---------- MIDDLE: the lift = cognition, with its supports surrounding it ----------
     ax.add_patch(FancyBboxPatch((3.05, 2.1), 2.5, 4.5, boxstyle="round,pad=0.08,rounding_size=0.06",
@@ -57,7 +57,7 @@ def fig_lift():
     ax.text(4.3, 6.02, "(aids to cognition)", ha="center", fontsize=7.4, color=ORANGE, style="italic")
     for y, t in [(5.55, "· definitions"), (5.2, "· worked examples")]:
         ax.text(4.3, y, t, ha="center", fontsize=7.9, color="#7a5a45")
-    # the arrow itself is the lift — a cognitive act — with the supports above and below it
+    # the arrow itself is the lift - a cognitive act - with the supports above and below it
     ax.text(4.3, 4.58, "the lift", ha="center", fontsize=10.5, weight="bold", color=INK)
     ax.add_patch(FancyArrowPatch((2.95, 4.26), (5.85, 4.26), arrowstyle="-|>",
                                  mutation_scale=24, color=BLUE, lw=3.0))
@@ -65,14 +65,14 @@ def fig_lift():
     for y, t in [(3.35, "· a canonical example"), (3.0, "· linked reference (opt.)")]:
         ax.text(4.3, y, t, ha="center", fontsize=7.9, color="#7a5a45")
 
-    # ---------- RIGHT: the semantic model — one object, three parts ----------
+    # ---------- RIGHT: the semantic model - one object, three parts ----------
     box(ax, 5.95, 0.85, 6.75, 6.5, "#ffffff", BLUE, lw=1.7)
     ax.text(9.3, 7.02, "ad hoc semantic model", ha="center", fontsize=11.5, weight="bold", color=INK)
 
     # Part 1: ontology (incl lexicon), schematic + concrete
     box(ax, 6.25, 3.7, 6.15, 2.85, "#eef4fc", "#9fc0e8", lw=1.2)
     ax.text(6.45, 6.28, "ontology  (including lexicon)", ha="left", fontsize=9.6, weight="bold", color=INK)
-    ax.text(6.45, 5.92, "schematic — concepts, kinds, relations, lexicon", ha="left", fontsize=7.6,
+    ax.text(6.45, 5.92, "schematic - concepts, kinds, relations, lexicon", ha="left", fontsize=7.6,
             color="#4a6580", style="italic")
     nodes = {"service": (7.9, 5.35), "port": (9.9, 5.5), "link": (11.6, 5.0)}
     for a, b in [("service", "port"), ("port", "link"), ("service", "link")]:
@@ -80,7 +80,7 @@ def fig_lift():
         ax.plot([x1, x2], [y1, y2], color="#b9cbe0", lw=1.1, zorder=1)
     for t, (nx, ny) in nodes.items():
         chip(ax, nx, ny, 1.15, 0.5, t, "#eaf1fb", BLUE, fs=8.2)
-    ax.text(6.45, 4.55, "concrete — the individuals that populate them", ha="left", fontsize=7.6,
+    ax.text(6.45, 4.55, "concrete - the individuals that populate them", ha="left", fontsize=7.6,
             color="#4a6580", style="italic")
     for (nx, ny) in nodes.values():
         ax.scatter([nx - 0.28, nx, nx + 0.28], [4.15, 4.15, 4.15], s=16, color="#7fa8d6", zorder=2)
@@ -88,7 +88,7 @@ def fig_lift():
     # Part 2: pragmatics
     box(ax, 6.25, 2.45, 6.15, 1.05, "#eafbf3", AQUA, lw=1.2)
     ax.text(6.45, 3.15, "pragmatics", ha="left", fontsize=9.4, weight="bold", color=INK)
-    ax.text(6.45, 2.78, "contextual information — use · authority · context", ha="left", fontsize=7.8,
+    ax.text(6.45, 2.78, "contextual information - use · authority · context", ha="left", fontsize=7.8,
             color="#2a6b52")
 
     # Part 3: provenance
@@ -99,7 +99,7 @@ def fig_lift():
 
     ax.text(9.3, 0.4, "self-describing  →  portable: this is what cognition consumes, with no "
             "pre-agreed standard", ha="center", fontsize=8.8, weight="bold", color=ORANGE)
-    ax.set_title("The lift — cognition turns a data model into an ad hoc semantic model "
+    ax.set_title("The lift - cognition turns a data model into an ad hoc semantic model "
                  "(ontology, pragmatics, provenance)", fontsize=11, y=1.01)
     save(fig, "fig_master_lift.png")
 
@@ -129,20 +129,20 @@ def fig_reconcile():
                                     fc="white", ec=ORANGE, lw=0.9))
         ax.add_patch(FancyArrowPatch((lx + 1.3, y), (5.48, y), arrowstyle="-", color=AQUA, lw=1.9))
         ax.add_patch(FancyArrowPatch((6.52, y), (rx - 1.3, y), arrowstyle="-", color=AQUA, lw=1.9))
-    ax.text(6.0, 4.95, "resolved correspondences — drawn on grounded evidence, "
+    ax.text(6.0, 4.95, "resolved correspondences - drawn on grounded evidence, "
             "bound through the reference", ha="center", fontsize=8.3, color="#1b8f63", weight="bold")
 
-    # rejected false cognate — clear below the reference box
+    # rejected false cognate - clear below the reference box
     yR = 3.85
     chip(ax, lx, yR, 2.5, 0.72, "grade\n(protection class)", "#fdf1ea", ORANGE, fs=7.8)
     chip(ax, rx, yR, 2.5, 0.72, "grade\n(class of service)", "#fdf1ea", ORANGE, fs=7.8)
     ax.add_patch(FancyArrowPatch((lx + 1.3, yR), (rx - 1.3, yR), arrowstyle="-", color=ORANGE,
                                  lw=1.6, linestyle=(0, (4, 3))))
     ax.text(6.0, yR + 0.02, "✗", ha="center", va="center", fontsize=15, color=ORANGE, weight="bold")
-    ax.text(6.0, yR - 0.62, "false cognate rejected — same surface word, different kind",
+    ax.text(6.0, yR - 0.62, "false cognate rejected - same surface word, different kind",
             ha="center", fontsize=8.0, color=ORANGE, weight="bold")
 
-    # natives with no counterpart -> residual bucket (descriptor lives inside the bucket, clear of arrows)
+    # natives with no counterpart -> correctly-unmatched bucket (descriptor inside the bucket, clear of arrows)
     yN = 2.55
     chip(ax, lx, yN, 2.5, 0.6, "vlan  (native)", "#f0eeeb", GREY, fs=7.8, tc="#5a564f")
     chip(ax, rx, yN, 2.5, 0.6, "wavelength  (native)", "#f0eeeb", GREY, fs=7.8, tc="#5a564f")
@@ -150,13 +150,14 @@ def fig_reconcile():
         ax.add_patch(FancyArrowPatch((sx, yN - 0.1), (6.0, 1.66), arrowstyle="-|>", mutation_scale=10,
                                      color=GREY, lw=1.1))
     box(ax, 4.15, 0.35, 3.7, 1.25, "#f0eeeb", GREY, lw=1.3)
-    ax.text(6.0, 1.26, "residual", ha="center", fontsize=9.0, weight="bold", color="#5a564f")
-    ax.text(6.0, 0.92, "referred onward", ha="center", fontsize=7.6, color="#6a655e", style="italic")
-    ax.text(6.0, 0.57, "native gaps · opaque items · unconfirmed", ha="center", fontsize=6.9,
+    ax.text(6.0, 1.28, "left unbound", ha="center", fontsize=9.0, weight="bold", color="#5a564f")
+    ax.text(6.0, 0.93, "no counterpart · correctly unmatched", ha="center", fontsize=6.9,
+            color="#6a655e", style="italic")
+    ax.text(6.0, 0.57, "unconfirmed · the residual, referred onward", ha="center", fontsize=6.9,
             color="#8a857d", style="italic")
 
-    ax.set_title("Reconciliation over two lifted models — grounded correspondences bound through a "
-                 "thin reference, a rejected cognate, and the residual referred onward",
+    ax.set_title("Reconciliation over two lifted models - grounded correspondences bound through a "
+                 "thin reference, a rejected cognate, and what is honestly left unbound",
                  fontsize=10.6, y=1.02)
     save(fig, "fig_master_reconcile.png")
 
@@ -166,8 +167,8 @@ def fig_crossdomain():
     fig, ax = plt.subplots(figsize=(11.6, 5.9))
     ax.set_xlim(0, 12); ax.set_ylim(0, 9); ax.axis("off"); ax.set_facecolor(SURFACE)
 
-    ax.text(2.0, 8.4, "Meridian — transport OSS", ha="center", fontsize=10.2, weight="bold", color=INK)
-    ax.text(10.0, 8.4, "Cascade — IP / VPN", ha="center", fontsize=10.2, weight="bold", color=INK)
+    ax.text(2.0, 8.4, "Meridian - transport OSS", ha="center", fontsize=10.2, weight="bold", color=INK)
+    ax.text(10.0, 8.4, "Cascade - IP / VPN", ha="center", fontsize=10.2, weight="bold", color=INK)
     ax.text(6.0, 8.62, "(both home-grown; no public standard beneath either)", ha="center",
             fontsize=8.3, color="#777", style="italic")
 
@@ -196,11 +197,11 @@ def fig_crossdomain():
             ax.text(6.0, y + 0.34, tag, ha="center", va="center", fontsize=6.7, color="#6a6a6a")
 
     ax.text(6.0, 0.95, "constructed reference: a single descriptive field (label · class · "
-            "definition · example) unlocks the strong agent — a bare shared pointer does not",
+            "definition · example) unlocks the strong agent - a bare shared pointer does not",
             ha="center", fontsize=8.4, color=ORANGE, weight="bold")
-    ax.text(6.0, 0.45, "the seam — five bindings to make, one look-alike ('grade') to reject",
+    ax.text(6.0, 0.45, "the seam - five bindings to make, one look-alike ('grade') to reject",
             ha="center", fontsize=8.2, color="#5a564f", style="italic")
-    ax.set_title("Cross-domain, instantiated — one order across the Meridian/Cascade seam, "
+    ax.set_title("Cross-domain, instantiated - one order across the Meridian/Cascade seam, "
                  "with no standard to appeal to", fontsize=10.8, y=1.02)
     save(fig, "fig_master_crossdomain.png")
 
@@ -217,7 +218,7 @@ def fig_observability():
     for j, t in enumerate(["· event", "· undesirable state", "· fixed severity", "· probable-cause"]):
         ax.text(1.15, 5.1 - j * 0.42, t, ha="left", fontsize=8.3, color="#555")
 
-    # "lift + decompose" label — the three coloured arrows below carry the mapping itself
+    # "lift + decompose" label - the three coloured arrows below carry the mapping itself
     ax.text(4.3, 6.5, "lift + decompose", ha="center", fontsize=7.8, color="#777")
 
     # NMOP ladder rungs (targets)
@@ -236,7 +237,7 @@ def fig_observability():
         if note:
             ax.text(x0 + w + 0.35, y, note, ha="left", va="center", fontsize=7.6,
                     color=ec if ec != AQUA else "#1b8f63", weight="bold" if "TRAP" in note else "normal")
-    # decomposition — three clean arrows straight from the ALARM box to the NMOP rungs, no mid-air junction
+    # decomposition - three clean arrows straight from the ALARM box to the NMOP rungs, no mid-air junction
     ax.add_patch(FancyArrowPatch((3.55, 5.5), (x0 + 0.03, ys[0] - 0.1), arrowstyle="-|>",
                                  mutation_scale=13, color=AQUA, lw=1.6))          # -> alarm (State)
     ax.add_patch(FancyArrowPatch((3.55, 4.9), (x0 + 0.03, ys[1]), arrowstyle="-|>",
@@ -248,14 +249,14 @@ def fig_observability():
 
     # anomaly-semantics annotations chip (the lifted content)
     box(ax, 4.9, 0.55, 6.7, 1.7, "#eaf1fb", BLUE, lw=1.4)
-    ax.text(8.25, 1.9, "anomaly-semantics annotations  —  the lifted content the verdict runs on",
+    ax.text(8.25, 1.9, "anomaly-semantics annotations - the lifted content the verdict runs on",
             ha="center", fontsize=8.2, weight="bold", color=INK)
     ann = "concern · confidence · plane · pattern · lifecycle · season   →   act / watch / suppress"
     ax.text(8.25, 1.15, ann, ha="center", fontsize=8.0, color="#33506e")
 
     ax.text(1.9, 2.4, "an alarm is\nnot an anomaly", ha="center", fontsize=8.6, color=ORANGE,
             weight="bold")
-    ax.set_title("Observability, instantiated — the overloaded legacy alarm lifted and decomposed "
+    ax.set_title("Observability, instantiated - the overloaded legacy alarm lifted and decomposed "
                  "one-to-many into the NMOP ladder; the deep cognate is alarm ≠ anomaly",
                  fontsize=10.6, y=1.02)
     save(fig, "fig_master_observability.png")
@@ -281,7 +282,7 @@ def fig_effort():
     ax.set_xticks(list(x)); ax.set_xticklabels(settings, fontsize=9.5)
     ax.set_ylabel("reasoning tokens to decide\n(mean, log scale)", fontsize=9)
     ax.set_title("Cognitive load rises as capability falls: across settings the weak agent spends "
-                 "~20–35×\nthe strong agent's effort — to reach lower accuracy, not higher",
+                 "~20–35×\nthe strong agent's effort - to reach lower accuracy, not higher",
                  fontsize=10.3)
     # ratio brackets
     for i, s in enumerate(settings):

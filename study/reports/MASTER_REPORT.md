@@ -84,6 +84,19 @@ of cognitive consumption; the settings that follow will also refine an intent ag
 and read an anomaly for its significance, over the same lifted substrate. Get the lift, and the rest
 of the programme is operations over portable semantic models.
 
+One framing is worth making explicit, because it connects this work to a fast-growing body of
+practice. The ontology and the individuals that populate it are, together, a **knowledge graph**: the
+ontology is its schema (the typed concepts and the relations permitted among them) and the instances
+are its assertions (typed individuals and the edges realised among them). The reconciliation
+operations that follow divide along the same seam. Aligning the concepts is schema, or ontology,
+matching; deciding which individual is which is entity resolution over the graph. This is why the
+community's knowledge-graph work for network operations, and the canonical, AI-facing modelling
+interfaces now emerging, meet this approach squarely: a lifted semantic model is a knowledge graph a
+machine can consume, and a thin shared reference is exactly the kind of interoperable anchor such
+graphs and interfaces can bind to. What the semantic model adds beyond the graph is the pragmatic
+layer and the provenance base, the facets a bare knowledge graph carries only weakly, and, as the
+findings will show, exactly the facets a thin reference cannot supply.
+
 ## 3. Reconciliation over lifted models: the operations
 
 Given two lifted models, **reconciliation** aligns them: it works out which concept on one side
