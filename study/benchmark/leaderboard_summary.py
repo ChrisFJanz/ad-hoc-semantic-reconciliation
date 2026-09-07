@@ -17,7 +17,7 @@ from collections import defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-NUM = ("precision", "recall", "f1", "surviving_false_cognates", "residual")
+NUM = ("precision", "resolved_fraction", "f1", "surviving_false_cognates", "residual")
 
 
 def _f(v):
@@ -67,9 +67,9 @@ def render(summary):
     by_case = defaultdict(list)
     for (case, stack, model, pl), mv in summary.items():
         by_case[case].append((stack, model, pl, mv))
-    cols = ["stack", "model", "placement", "precision", "recall", "f1",
+    cols = ["stack", "model", "placement", "precision", "resolved", "f1",
             "surv_fc", "residual", "n"]
-    keymap = {"surv_fc": "surviving_false_cognates"}
+    keymap = {"surv_fc": "surviving_false_cognates", "resolved": "resolved_fraction"}
     lines = []
     for case in sorted(by_case):
         lines.append(f"\n=== {case} ===")

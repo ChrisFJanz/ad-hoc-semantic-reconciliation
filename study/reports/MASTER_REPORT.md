@@ -776,7 +776,7 @@ The same access lands differently depending on the agent's power (Figure 14, rig
 identical access, the strong agent converts it into a perfect close at perfect precision. The mid agent
 uses it but plateaus part-way, around 0.67 to 0.75. The weak agent posts high numbers that are not the
 same achievement: its precision slips (to 0.97–0.98) and it begins committing look-alikes, so its
-apparent resolution is partly indiscriminate binding rather than genuine settlement — read its recall
+apparent resolution is partly indiscriminate binding rather than genuine settlement — read its resolved fraction
 without its precision beside it and you would misjudge it, which is the caution the whole study keeps
 returning to. Power sets the ceiling that reach can reach.
 
@@ -796,6 +796,66 @@ left) caps at one-half; discovery collapses that spread to a full close, at prec
 Right: the same left-to-right axis, now one line per agent at full visibility. The strong agent reaches a
 perfect close; the mid agent plateaus; the weak agent's high values come with slipping precision (noted
 in the text), so they are not the same achievement.*
+
+### 13.6 The economics of the reference — when constructing it is worth the cognition
+
+The cross-domain setting (§9) showed that where no standard exists, a capable agent can *build* the thin
+shared reference itself and then bind through it, lifting a stalled reconciliation to a near-complete
+close. Building a reference is, however, itself an act of cognition, and that cognition is not free. So a
+sharper question follows, and it is the one an operator would actually ask: is it worth building a
+reference every time, or only sometimes? To answer it we ran the same reconciliation three ways on each
+of the three schema settings, and — this is the new measurement — recorded not just the **close** each
+reached but the **cognition each spent**, counting the cost of *constructing* the reference separately
+from the cost of *binding* through it. The three ways are: **no reference** (the agents bind with nothing
+shared to lean on — the floor); **constructed** (the agents build the reference themselves, then bind —
+the standard-free protocol, whose cost we are weighing); and **given reference** (the agents bind through
+a small, already-published reference — a standard, the cheap upper bound). Two plain reminders, since they
+carry the result: *resolved fraction* is, of the true correspondences that exist, the share the agent finds and
+commits — the completeness of the close; and *reasoning tokens* are the model's hidden deliberation, a
+direct measure of how hard it worked.
+
+The answer is a rule, not a blanket habit, and it has three parts. **Constructing the reference is
+load-bearing only where no standard exists and the agent is capable.** In the cross-domain setting (two
+private models, no shared standard) the strong agent with no reference finds only half the true matches —
+resolved fraction 0.50, because it honestly refuses to guess a seam it cannot be sure of — and building the reference
+itself carries it to 0.93 for only a little more cognition (about 1,300 reasoning tokens against 1,000
+with no reference). There is no cheaper route, because there is no standard to bind through; the
+construction spend is what buys the close. **Where an effective reference already exists, constructing one
+is redundant.** In the configuration setting (two public standards) and the observability setting (an
+RFC-anchored reference), binding through the *given* reference reaches the same close or better for a
+fraction of the cognition: in configuration the strong agent binds through the given reference to a
+perfect close for about 166 reasoning tokens, while *constructing* one spends about 1,109 to reach 0.97 —
+more work, slightly worse result. Building what you already have is wasted effort. **And for a weak agent,
+construction is actively counterproductive, everywhere.** It is capability-gated: a weak agent builds a
+poor reference and pays hugely to do it. Averaged over the three settings, constructing the reference
+costs the strong agent about 960 reasoning tokens, the mid agent about 3,700, and the weak agent about
+**14,200** — and the close it reaches gets *worse* down that ladder, not better (resolved fraction 0.89, 0.86, 0.72).
+Handing construction to a weak agent is maximum spend for minimum, or negative, return.
+
+Two things this sharpens. First, it puts a number on how cheap a *given* reference is for a capable agent
+— tens to low hundreds of reasoning tokens to bind through — which is exactly why a pre-agreed standard
+is worth so much: someone paid the construction cost once, and everyone binds through it cheaply
+thereafter. Second, it keeps one honest caveat in view. "Redundant for this one close" is not
+"worthless": a constructed reference is a durable, reusable, auditable artifact, and a standard is simply
+a constructed reference that has been *amortised* across everyone who binds through it. So the rule has
+two regimes — for a one-off reconciliation between capable live agents, build the reference only where no
+standard exists; but at scale, or over time, building it once and keeping it pays even where any single
+close did not need it. That, in the end, is the argument for lightweight shared references — constructed
+ad hoc when none exists, reused when they do — over either a heavy universal standard agreed in advance or
+paying the construction cost afresh on every exchange.
+
+![When constructing the shared reference is worth the cognition it costs.](../figures/fig_construct_cost.png)
+
+*Figure 15 (the economics of constructing a reference). Left: the strong agent's resolved fraction (share of true
+matches found) under the three conditions — no reference (grey), a reference the agents construct
+themselves (orange), and a given, already-published reference (blue) — across the three schema settings,
+with the reasoning tokens each condition spent written on each bar. In Setting 3, where no standard
+exists, building the reference lifts the strong agent from 0.50 to 0.93 (the arrow) and is the realistic
+path; in Settings 1 and 4 a given reference reaches the same close or better for far less cognition, so
+constructing one is redundant. Right: the cost of constructing the reference down the model ladder,
+averaged over the three settings — it explodes from about 960 reasoning tokens for the strong agent to
+about 14,200 for the weak one, while the close it reaches (the resolved fraction printed on each bar) gets worse, not
+better.*
 
 ## 14. The maps
 
@@ -882,7 +942,7 @@ Two operations bear noting on how they are measured. Setting 3's schema-binding 
 reference-construction step, isolating the worth of that step; the full **construct-then-bind**
 protocol — the agents building the reference themselves and then closing, with none pre-given — is also
 run, and it confirms the thesis in the hardest setting: the strong agent lifts from a no-reference
-recall of 0.40 to a constructed-reference **0.93**, approaching the reference-given 1.00, at perfect
+resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the reference-given 1.00, at perfect
 precision and with no false cognate, so constructing the shared ground works and building it is the work
 (§9). And **instance-level co-reference** is measured in settings 2 and 4 as well as setting 1,
 reproducing the same budget-limited-then-structural pattern, with a capability gradient in which capable
@@ -893,11 +953,11 @@ resolves.
 claim built on one case per setting is that the case was, unknowingly, chosen to work. To test that, two
 further cases were built for every setting — deliberately different in domain, vocabulary and traps — and
 the same agents were run on them under the same harness, so that three independent cases now stand behind
-each setting. The findings reappear on the new cases (Figure 15). In **configuration**, the strong agent
+each setting. The findings reappear on the new cases (Figure 16). In **configuration**, the strong agent
 again reconciles two new pairs of standard models on its own, and the thin shared reference again mainly
 serves to prevent the weaker agents' errors. In the **cross-domain** setting, the mirror returns on two
 new pairs of private, no-standard models: without a shared reference the strong agent under-commits
-(perfect precision on what it binds, but low recall because it refuses to guess the seam), and the
+(perfect precision on what it binds, but low resolved fraction because it refuses to guess the seam), and the
 constructed reference completes the close. In **intent**, working out which offers meet a customer's wish
 and deciding accept-or-refer under a policy again complete for capable agents, while the multi-hop
 service lifecycle again grades with capability. In **observability**, the deep alarm-versus-anomaly
@@ -908,13 +968,13 @@ for real network data: the same hand built the new cases too, so they test robus
 
 ![Each setting's signature result, reproduced on two new independently-built cases.](../figures/fig_breadth.png)
 
-*Figure 15 (breadth). One panel per setting. Each shows the setting's signature result on the two new
+*Figure 16 (breadth). One panel per setting. Each shows the setting's signature result on the two new
 cases built for it, using the real agents scored against the validated answer key. Setting 1: the weaker
 agent's precision (share of committed matches that are correct) recovers to a clean close once the shared
-reference is added. Setting 3: the strong agent's recall (share of true matches found) is low without a
+reference is added. Setting 3: the strong agent's resolved fraction (share of true matches found) is low without a
 reference — it is refusing to guess — and completes with one. Setting 2: the agents' accuracy at working
 out which offers satisfy the wish, high for the strong and mid agents and lower for the weak one. Setting
-4: precision stays at 1.0 (the look-alike is never taken) while recall sits at 0.75 (the one-to-many
+4: precision stays at 1.0 (the look-alike is never taken) while resolved fraction sits at 0.75 (the one-to-many
 decomposition is the residual). The point of the figure is not any single bar but that all four signatures
 recur on cases built to differ.*
 

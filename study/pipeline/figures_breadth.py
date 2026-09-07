@@ -44,9 +44,9 @@ def main():
     a3.axhline(1.0, color=NAVY, ls=":", lw=1)
     a3.set_title("Setting 3 - cross-domain (no standard between the two sides)\n"
                  "without a shared reference the STRONG agent under-commits (refuses to guess the seam):\n"
-                 "perfect precision but low recall; the constructed reference completes the close",
+                 "perfect precision but low resolved fraction; the constructed reference completes the close",
                  fontsize=9.5)
-    a3.set_ylabel("recall, strong agent\n(share of true matches found)", fontsize=9)
+    a3.set_ylabel("resolved fraction, strong agent\n(share of true matches found)", fontsize=9)
     a3.set_xticks(x); a3.set_xticklabels(cases3, fontsize=8.5)
     a3.set_ylim(0, 1.08); a3.legend(frameon=True, framealpha=0.9, edgecolor="none", facecolor=SURFACE, fontsize=8.5, loc="upper left")
 
@@ -70,13 +70,13 @@ def main():
     cases4 = ["obs_routing", "obs_compute"]
     prec = [1.00, 1.00]; rec = [0.75, 0.75]
     a4.bar(xx - w/2, prec, w, color=BLUE, label="precision (look-alike avoided)")
-    a4.bar(xx + w/2, rec, w, color=GREY, label="recall (decomposition half-done)")
+    a4.bar(xx + w/2, rec, w, color=GREY, label="resolved fraction (decomposition half-done)")
     a4.axhline(1.0, color=NAVY, ls=":", lw=1)
     a4.set_title("Setting 4 - observability (an alarm is not an anomaly)\n"
                  "across every agent and both fault domains the deep look-alike is avoided (precision 1.0,\n"
                  "zero traps taken); the one-to-many decomposition is the cognition-demanding residual",
                  fontsize=9.5)
-    a4.set_ylabel("precision / recall (all agents)", fontsize=9)
+    a4.set_ylabel("precision / resolved fraction (all agents)", fontsize=9)
     a4.set_xticks(xx); a4.set_xticklabels(cases4, fontsize=9)
     a4.set_ylim(0, 1.08); a4.legend(frameon=True, framealpha=0.9, edgecolor="none", facecolor=SURFACE, fontsize=8.5, loc="lower center")
 
