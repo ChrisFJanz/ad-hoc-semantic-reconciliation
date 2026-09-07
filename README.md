@@ -8,7 +8,10 @@ the systems on each side can **reason**: they reconcile their divergent models *
 occasion, machine-to-machine, with no standard settled beforehand. The through-line is a single
 thesis — **it is cognition that completes a reconciliation** — with a thin, published **reference** as
 the practical anchor that reduces the work, and the **pragmatic** layer as the frontier that carries
-the operative meaning.
+the operative meaning. Drawn out, a lifted model is a **knowledge graph** — concepts and relations as
+its schema, instances as its assertions — with pragmatics and provenance layered on; reconciliation is
+then ontology matching plus entity resolution over that graph, and a thin shared reference is the
+interoperable anchor such graphs can bind to.
 
 The work is in two parts. Pick a door:
 

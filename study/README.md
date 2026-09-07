@@ -95,6 +95,14 @@ model: definitions, worked examples, a canonical example, and an optional link t
 Being self-describing, a lifted model is **portable**: any cognitive consumer can pick it up with no
 pre-agreed standard. Reconciliation runs over these lifted models, not over labels.
 
+Drawn out, the ontology and its instances are a **knowledge graph**: the schematic layer is its schema
+(typed concepts and permitted relations) and the concrete layer is its assertions (typed individuals
+and the edges among them). Reconciliation divides the same way — aligning concepts is ontology
+matching, and co-referencing individuals is entity resolution over the graph — which is where the
+community's knowledge-graph work for network operations meets this approach. The pragmatics and
+provenance are what the semantic model adds beyond a bare graph, and they are exactly what a thin
+reference cannot supply.
+
 A **case** is two lifted semantic models plus a gold standard *derived from the models and validated*,
 so it cannot drift. A **reasoning stack** reconciles them — deterministic controls and a language-model
 agent run at each point on the **cognition spectrum** (both live, one inert, both inert). The
