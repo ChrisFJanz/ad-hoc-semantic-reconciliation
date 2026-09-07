@@ -55,7 +55,15 @@ work**. Run end to end — the two agents constructing the shared reference them
 and then binding through it, with none pre-given — the protocol bears this out: the strong agent lifts
 from a no-reference resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the
 reference-given 1.00, at perfect precision and with no false cognate. Constructing the ground is the
-work, and a capable agent does it.
+work, and a capable agent does it. A separate cost study across the schema settings (master report
+§13.6) puts a price on that work and locates where it is worth paying: constructing the reference is
+load-bearing precisely here, where no standard exists and the agent is capable, and it is cheap for such
+an agent (a few hundred extra reasoning tokens over binding with no reference); where a standard already
+exists — the configuration and observability settings — binding through the given reference reaches the
+same close for a fraction of the cognition, so building one is redundant; and for a weak agent,
+construction is capability-gated and its cost explodes for a worse close. In short, build the reference
+where there is none to bind through and the agent can build a good one; otherwise use the one that
+exists.
 
 The setting is grounded in the demonstration *Non-standard cross-domain provisioning* and in the
 programme's wider account of ad-hoc, agent-constructed references.
@@ -340,7 +348,7 @@ commits wrong ones; a single small constructed reference then repairs both to a 
 That mirror reappears on both new cases. Without a reference the strong agent holds perfect precision
 but finds only 0.40 of the true matches on the RAN-to-core seam and 0.60 on the fabric-to-overlay seam
 — correctly declining to guess a seam it cannot be sure of — while the mid agent sits in the opposite
-error, committing more and getting some of it wrong (about 0.80 precision and 0.80 recall). Adding the
+error, committing more and getting some of it wrong (about 0.80 precision and 0.80 resolved fraction). Adding the
 constructed reference takes every agent to a full, correct close on both. So "strong agents omit, weak
 agents commit, and a thin shared reference fixes both" is a property of the mechanism, not of the one
 original case. (All three cases are the same author's hand-built constructions, so this shows

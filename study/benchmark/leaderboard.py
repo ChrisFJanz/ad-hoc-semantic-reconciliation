@@ -34,8 +34,12 @@ from reconcile.stacks.classical_matcher import ClassicalMatcher             # no
 from pack import classify, SETTING                                           # noqa: E402
 
 COLS = ["case", "setting", "stack", "model", "placement", "uses_reference",
-        "precision", "recall", "f1", "surviving_false_cognates", "residual",
+        "precision", "resolved_fraction", "f1", "surviving_false_cognates", "residual",
         "scaling", "total_tokens", "reasoning_tokens", "latency_s"]
+
+# The scoring code emits the metric under the internal key ``recall``; the published
+# column is named ``resolved_fraction`` (the paper's and BENCHMARK.md's term for it).
+_METRIC_ALIAS = {"resolved_fraction": "recall"}
 
 
 def schema_cases() -> list[Path]:
@@ -49,7 +53,7 @@ def _row(case_name: str, stack_label: str, model: str, r: dict) -> dict:
     for k in COLS:
         if k in ("case", "setting", "stack", "model"):
             continue
-        out[k] = r.get(k, "")
+        out[k] = r.get(_METRIC_ALIAS.get(k, k), "")
     return out
 
 

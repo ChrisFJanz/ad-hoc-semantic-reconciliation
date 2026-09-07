@@ -134,7 +134,7 @@ moved between revisions.
   cases at one-half. The hinge is the open question: being able to ask what exists — rather than having
   to name the field in advance — takes the reconciliation to a full, correct close. Run down the model
   ladder, the same access lands by capability: the strong agent converts it to a full close, the mid
-  plateaus, and the weakest posts high recall but with slipping precision. (See §13.5 of the master
+  plateaus, and the weakest posts high resolved fraction but with slipping precision. (See §13.5 of the master
   report, Figure 14.)
 - **Breadth — every signature reproduced on new cases.** Each of the four settings is now exercised on
   **three independently-built cases, not one** — two new ones per setting, in different domains, with
@@ -143,7 +143,16 @@ moved between revisions.
   weak-commit mirror, repaired by a thin reference (cross-domain); refinement and negotiation completing
   while the multi-hop lifecycle grades with capability (intent); and the alarm-is-not-an-anomaly
   look-alike reliably told apart (observability). This closes the "you only showed it on one case"
-  worry as far as in-house work can. (See §16 of the master report, Figure 15.)
+  worry as far as in-house work can. (See §16 of the master report, Figure 16.)
+- **The economics of the reference — when constructing it is worth the cognition.** Building the shared
+  reference is itself an act of cognition, so we measured its cost against what it buys. The rule: it is
+  load-bearing only where **no standard exists and the agent is capable** (cross-domain, strong agent:
+  resolved fraction 0.50 → 0.93 for a little extra spend); where a reference already exists (configuration,
+  observability) the **given** reference reaches the same close for a fraction of the cognition, so
+  constructing one is **redundant**; and for a **weak agent it is counterproductive** — construction cost
+  explodes (to ~14k reasoning tokens on average) for a worse close, not a better one. So construct-then-
+  bind is not a blanket default: build the reference where there is none to bind through and the agent can
+  build a good one; otherwise use the one that exists. (See §13.6 of the master report, Figure 15.)
 - **Benchmark packaged.** The cases, harness, and leaderboard are packaged under `benchmark/` for
   external use — now eighteen cases across the four settings.
 

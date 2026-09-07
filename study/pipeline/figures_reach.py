@@ -72,7 +72,7 @@ def main():
         ys = [mean_eo(rows, model=mdl, evidence="name+key+attrs+rels", interrogation=a) for a in AFF]
         axl.plot(x, ys, "-o", color=MCOLOR[mdl], label=MLABEL[mdl], markersize=6, linewidth=2)
     axl.set_title("Reach x power (full visibility)\n"
-                  "strong converts reach to a full close; mid plateaus; weak's recall is commit-happy",
+                  "strong converts reach to a full close; mid plateaus; weak's resolved fraction is commit-happy",
                   fontsize=10)
     axl.set_xticks(list(x)); axl.set_xticklabels(AFF_LABEL, fontsize=8.5)
     axl.set_xlabel("interrogation (what the agent may ask)", fontsize=9.5)
