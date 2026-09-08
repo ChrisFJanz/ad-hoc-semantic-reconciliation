@@ -67,7 +67,8 @@ reconciling with no public standard. Two **home-grown, private** models meet at 
 result is a **mirror**: without the constructed reference the strong agent **under-commits** (defers at
 perfect precision) and the weak agent **mis-commits** (binds wrongly). A single descriptive field
 unlocks a capable agent; a bare shared pointer is worse than nothing. Building the shared ground is the
-work — and, run end to end, an agent that builds it itself lifts from **0.40 to 0.93**.
+work — and, run end to end, an agent that builds it itself lifts from **0.20 to 0.80** (0.90 with a
+decisive virtual experiment).
 
 **4/4 · [Observability](reports/REPORT_4of4_observability.md)** &nbsp;·&nbsp;
 [PDF](reports/REPORT_4of4_observability.pdf) &nbsp;·&nbsp;
@@ -105,13 +106,39 @@ reference cannot supply.
 
 A **case** is two lifted semantic models plus a gold standard *derived from the models and validated*,
 so it cannot drift. A **reasoning stack** reconciles them — deterministic controls and a language-model
-agent run at each point on the **cognition spectrum** (both live, one inert, both inert). The
+agent run at each point on the **cognition spectrum** (both live, one inert, both inert). At the
+fully-cognitive end the two live sides reconcile as two separate agents under information asymmetry, each
+holding only its own lifted model and a surface catalogue of the other's, proposing correspondences and
+ratifying the other's, with the option of a decisive virtual experiment to settle a hard pair; as a side
+goes inert a single agent reconstructs it. The
 **harness** scores the output against the gold and records quality — *precision*, *resolved fraction*,
 *surviving false cognates*, and the *residual* — and, for the agent, cognitive effort (reasoning
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
-## What's new in this revision (2026-09-05)
+## What's new (2026-09-08)
+
+This revision deepens the fully-cognitive end and adds two controls. As before, the central findings are
+unchanged and the reports carry the results in place; this note is for readers tracking what moved.
+
+- **Completion by decisive experiment, shown end to end.** At the fully-cognitive end, when the two agents
+  cannot settle a correspondence by discussion, either can provision the candidate in a private virtual copy
+  of the network, operate it, and read back whether it holds; the verdict binds or refutes. With this, two
+  agents reach the reference's close on three of the four schema settings with no reference at all, and the
+  master report now includes verbatim transcripts of the negotiation and of the experiment. (See §13.7.)
+- **The lift, performed by an agent.** The study reconciles lifted models whose explanation layer, each
+  concept's gloss and worked example, had been supplied ready-made. An agent is now asked to produce that
+  layer itself from a side's bare schema, and reconciliation over the agent's own lift matches the
+  ready-made one: identical for the capable agent binding through a reference, across all four settings. So
+  the results do not depend on the lift being authored in advance; what stays open is the lift from raw,
+  messy schema and a cold start before any instances exist. (See §13.8.)
+- **A memorisation control.** The flagship TAPI/TEAS case is re-run with the public-standard identities
+  stripped and relabelled, to separate reasoning from recall of a known standard: reasoning alone reaches a
+  resolved fraction of about 0.67 where the recognisable case reaches 1.00, and a shared reference restores
+  1.00 either way. (See §16.)
+- **Slide deck refreshed** to carry the negotiation, the decisive experiment, and the lift study.
+
+## What's new (2026-09-05)
 
 This revision strengthens the study in-house — the central findings are unchanged and hold — and
 closes the in-house gaps the first cut left open, leaving only the genuinely external one (real
@@ -121,12 +148,13 @@ moved between revisions.
 - **Construct-then-bind, end to end (setting 3).** The standard-free setting previously handed the
   agents the shared reference and scored the binding alone. The agents now **build that reference
   themselves** from the two models and then bind through it, with nothing pre-given. The strong agent
-  lifts from a no-reference resolved fraction of **0.40 to 0.93** — near the reference-given 1.00 — at
-  perfect precision and with no false cognate. Constructing the shared ground works, and building it is
-  the work.
-- **A six-model capability sweep.** The omit-to-commit mirror — strong agents omitting, weak agents
-  committing — resolves across six models into a **smooth gradient**, a continuous descent rather than a
-  cliff between three points.
+  lifts from a no-reference resolved fraction of **0.20 to 0.80** (0.90 with a decisive experiment), near
+  the reference-given 1.00, at perfect precision and with no false cognate. Constructing the shared ground
+  works, and building it is the work.
+- **A six-model capability sweep.** Swept across six models at both-cognitive, two-agent negotiation
+  **compresses** the capability gradient: bilateral ratification holds precision high and drives false
+  cognates to zero across almost the whole ladder, while resolution is uniformly lower. The discipline a
+  lone weak agent would lack is supplied by the negotiation structure itself.
 - **Instance co-reference measured beyond setting 1.** Entity-level co-reference is now measured in
   settings 2 and 4 as well, reproducing the budget-limited-then-structural pattern: capable agents
   resolve fully where a live side can be interrogated, the weakest only partially. (A fix to the
@@ -155,10 +183,11 @@ moved between revisions.
 - **The economics of the reference — when constructing it is worth the cognition.** Building the shared
   reference is itself an act of cognition, so we measured its cost against what it buys. The rule: it is
   load-bearing only where **no standard exists and the agent is capable** (cross-domain, strong agent:
-  resolved fraction 0.50 → 0.93 for a little extra spend); where a reference already exists (configuration,
+  resolved fraction 0.20 → 0.80, and 0.90 with a decisive experiment, for a little extra spend); where a
+  reference already exists (configuration,
   observability) the **given** reference reaches the same close for a fraction of the cognition, so
   constructing one is **redundant**; and for a **weak agent it is counterproductive** — construction cost
-  explodes (to ~14k reasoning tokens on average) for a worse close, not a better one. So construct-then-
+  explodes (to tens of thousands of reasoning tokens) for a worse close, not a better one. So construct-then-
   bind is not a blanket default: build the reference where there is none to bind through and the agent can
   build a good one; otherwise use the one that exists. (See §13.6 of the master report, Figure 15.)
 - **Benchmark packaged.** The cases, harness, and leaderboard are packaged under `benchmark/` for

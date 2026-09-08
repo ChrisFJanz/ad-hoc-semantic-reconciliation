@@ -41,7 +41,7 @@ python -m pip install -U pip >/dev/null
 python -m pip install -e ".[openai,dev]"
 
 echo "running offline sanity test ..."
-python -m pytest -q tests/test_construct_cost_study.py || \
+python -m pytest -q tests/ || \
   echo "  (offline test reported an issue — environment is installed, but check the output above)"
 
 echo
