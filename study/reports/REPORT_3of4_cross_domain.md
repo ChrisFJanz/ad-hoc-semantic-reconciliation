@@ -30,16 +30,18 @@ reference, the cognition spectrum — but with the standard removed, the *execut
 that divergence is the report's subject.
 
 We measured one stage of the reconciliation — the **schema-level binding**, the step that
-decides which concept on one side corresponds to which on the other — with a single reasoning
-pass, across the cognition spectrum, with and without the reference the two agents would
-construct. The central result is a mirror. **Without a constructed reference, the strong agent
-under-commits and the weak agent mis-commits.** The strong model, faced with two foreign
-vocabularies and no shared ground, will not guess: it binds only the names that already coincide
-and leaves the rest in the residual — a low resolved fraction, but perfect precision and no
-false cognates. The weak model does the opposite: it binds freely and wrongly, taking the
-cross-domain "grade" trap at a precision of barely one-half. A single thin reference repays both:
-constructed, it lifts the strong agent to a full close and lifts the weak agent's precision
-toward perfect. Ablating the reference field by field shows the ground it supplies is remarkably
+decides which concept on one side corresponds to which on the other — as an exchange between two
+live agents, across the cognition spectrum, with and without the reference the two agents would
+construct. The central result concerns what happens without that shared ground. **The strong agent
+defers, and where a single agent must reconstruct a side the weak agent over-commits.** The strong
+model, facing two foreign vocabularies with no shared ground, will not guess: it binds only the names
+that already coincide and leaves the rest in the residual — a low resolved fraction, but perfect
+precision and no false cognates. The weak model's error is the opposite — binding freely and taking the
+cross-domain "grade" trap at a precision of barely one-half — but it shows at the inert placements,
+where a lone agent reconstructs the mute side; at both-cognitive its partner's ratification refuses the
+over-bindings, so it under-resolves rather than mis-commits. A single thin reference repays the
+deferral: constructed, it lifts the strong agent to a full close and disciplines the weak agent's
+precision where it is a lone reconstructor. Ablating the reference field by field shows the ground it supplies is remarkably
 thin — **any one** descriptive field (a shared label, a class, a one-line definition, or a
 canonical example) is enough to unlock the strong agent's commitment, while a bare shared
 identifier with no description is worthless, and even harmful. And a separate axis — **whose
@@ -53,9 +55,10 @@ through-line holds and gains a clause: with no public standard beneath two model
 still closes, but only once it has built the shared ground, and **building that ground is the
 work**. Run end to end — the two agents constructing the shared reference themselves from their models
 and then binding through it, with none pre-given — the protocol bears this out: the strong agent lifts
-from a no-reference resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the
-reference-given 1.00, at perfect precision and with no false cognate. Constructing the ground is the
-work, and a capable agent does it. A separate cost study across the schema settings (master report
+from a no-reference resolved fraction of 0.20 to a constructed-reference **0.80**, and to **0.90** when
+the agents also run a decisive virtual experiment on the candidates, approaching the reference-given
+1.00, at perfect precision and with no false cognate. Constructing the ground is the work, and a capable
+agent does it. A separate cost study across the schema settings (master report
 §13.6) puts a price on that work and locates where it is worth paying: constructing the reference is
 load-bearing precisely here, where no standard exists and the agent is capable, and it is cheap for such
 an agent (a few hundred extra reasoning tokens over binding with no reference); where a standard already
@@ -119,13 +122,16 @@ programme's thesis, established across the earlier settings and not re-litigated
 study isolates is a single, early stage: the **schema-level binding** — given two already-lifted
 models, deciding which concept on one side corresponds to which concept on the other.
 
-We measure that one stage with a single reasoning pass. The agent is shown both lifted models and
-returns the correspondences it is willing to commit; it does not converse, it does not construct
-the reference, and it does not verify by provisioning — those are the later stages the binding
-hands off to. The quantity of interest is therefore not only how much the pass gets right, but
-how much it **leaves in the residual**: the correspondences it does not close, which pass
-downstream to the rest of the process — to further machine cognition where the agents are live to
-continue, or to a person where they are not.
+We measure that binding as an **exchange between two live agents**: each holds only its own lifted
+model and a surface catalogue of the other's, and they alternate turns — asking, answering, proposing
+correspondences, and **ratifying** the other's proposals about their own concepts, so a correspondence
+is confirmed only when one side proposes it and the owner accepts it. We isolate the binding from the
+later stages: in this measurement the agents do not construct the shared reference or verify by a worked
+provisioning — those are held to one side so the worth of the reference-construction step can be read
+cleanly. The quantity of interest is therefore not only how much they close, but how much they **leave
+in the residual**: the correspondences they do not confirm, which pass downstream to the rest of the
+process — to further machine cognition where the agents are live to continue, or to a person where they
+are not.
 
 Two variables shape the pass. The first is the **cognition spectrum**, exactly as in the first
 two settings. At **both-cognitive**, both sides disclose their lift in full — each concept's
@@ -139,12 +145,12 @@ condition is best read not as "the reference was withheld" but as "the reference
 constructed *yet*." It brackets the construction step, so that the gap between reference-absent
 and reference-present measures precisely what that one step is worth.
 
-One point deserves to be stated plainly, because it is easy to misread. **"Both-cognitive" here
-means both sides disclose their lift to the binding pass. It does not mean the agents have
-conversed, constructed a reference, or verified** — those are the stages this pass precedes. So a
-low result at both-cognitive with the reference absent is not the fully-cognitive process failing
-to close. It is a single early binding pass, denied the shared ground the agents would themselves
-construct, leaving the worth of that ground in the residual.
+One point deserves to be stated plainly, because it is easy to misread. A low result at
+both-cognitive with the reference absent is not the fully-cognitive process failing to close: it is two
+careful agents declining to guess across two foreign vocabularies without the shared ground they would
+themselves construct. They interrogate each other in full and then defer the pairs they cannot be sure
+of — honest deferral, not error — leaving the worth of that ground in the residual, precisely where the
+reference-construction step recovers it.
 
 **Scope, and a blurry line.** The setting's reconciliation touches several components — lexical,
 schema, instance-level co-reference, and pragmatic. This study measures the **schema binding**,
@@ -167,9 +173,9 @@ reasoning effort. The model ladder is the programme's: a strong model (**sol**, 
 
 ### 3.1 Without the shared ground, the strong agent defers and the weak one errs
 
-With the reference present, the binding closes cleanly — the strong and mid agents reach a
-resolved fraction of 1.0 at both-cognitive with perfect precision, and the deterministic
-reference reconciler confirms the case is fully resolvable in principle. The finding is what
+With the reference present, the binding closes cleanly — the strong agent reaches a
+resolved fraction of 1.0 at both-cognitive with perfect precision (the mid agent 0.70), and the
+deterministic reference reconciler confirms the case is fully resolvable in principle. The finding is what
 happens with the reference *absent* — the construction step bracketed out — and it is not the
 shape one might expect (Figure 2).
 
@@ -180,21 +186,23 @@ to on (filled). Without the constructed reference the strong agent sits top-left
 little but everything it commits is right; the weak agent sits lower-right — it commits much of it
 wrongly. The reference pulls both toward the top-right corner.*
 
-**The strong agent does not fail; it defers.** In a single binding pass over the two bespoke
-models with no shared reference, sol commits only the correspondences whose surface names already
-coincide, and leaves the foreign-named seam pairs — circuit-to-underlay, hand-off-to-attachment —
-in the residual: a resolved fraction of about 0.5 at both-cognitive, and 0.4 once a side goes
-inert, but with precision at 1.0 and not a single false cognate taken. This is omission, not
-error. Faced with two genuinely foreign vocabularies and no shared ground to bind on, the strong
-agent declines to guess and hands the unresolved pairs downstream. To be exact about what this
-is: it is a single early binding pass, denied the reference the agents would themselves construct
-— not the fully-cognitive process failing to close.
+**The strong agent does not fail; it defers.** Negotiating over the two bespoke models with no shared
+reference, sol interrogates the other side in full and then commits only the correspondences whose
+surface names already coincide, leaving the foreign-named seam pairs — circuit-to-underlay,
+hand-off-to-attachment — in the residual: a resolved fraction of 0.20 at both-cognitive, and around 0.4
+once a side goes inert, but with precision at 1.0 and not a single false cognate taken. This is
+omission, not error. Faced with two genuinely foreign vocabularies and no shared ground to bind on, the
+strong agent declines to guess and hands the unresolved pairs downstream — the fully-cognitive process
+deferring honestly, not failing to close.
 
-**The weak agent makes the opposite trade.** nano commits freely — a resolved fraction of 0.8–1.0
-— but at a precision that never clears 0.83 and falls to 0.57 once a side goes inert, taking the
-cross-domain "grade" false cognate at every placement. Its shortfall is commission: confident wrong
-bindings where the strong agent left silence. mini sits between the two, closing the seam on its
-own at both-cognitive but beginning to take the trap as disclosure recedes.
+**The weak agent's failure is commission — but where it shows depends on the placement.** Where a
+*single* agent must reconstruct a side, at the inert placements, nano binds freely and takes the
+cross-domain "grade" false cognate, its precision never clearing 0.83 and falling to 0.57. At
+both-cognitive, though, nano cannot bind without its partner's ratification, so the negotiation refuses
+its over-commitments: it under-resolves (0.40) rather than mis-commits, and the trap does not survive.
+Commission is confident wrong binding where the strong agent left silence, but it is a property of a
+lone reconstructing agent, not of two agents negotiating; mini sits between, closing the seam on its own
+at both-cognitive and beginning to slip only as a side goes inert.
 
 So the reference-construction step, when it is skipped, costs the two ends of the capability range
 in mirror-image ways: the strong agent's cost is a larger residual — deferral — and the weak
@@ -344,26 +352,38 @@ them — the hardest of the four settings. The signature finding here is a *mirr
 reference, a strong agent *under-commits* — it binds only what it is certain of and refuses to guess
 the rest, so of the matches it commits every one is right but it finds only some of the true matches —
 while a weaker agent *over-commits*, binding freely and taking a look-alike, so it finds more but
-commits wrong ones; a single small constructed reference then repairs both to a full, correct close.
+commits wrong ones; a small constructed reference then repairs both — lifting the strong agent's close
+and disciplining the weaker agent's precision.
 That mirror reappears on both new cases. Without a reference the strong agent holds perfect precision
-but finds only 0.40 of the true matches on the RAN-to-core seam and 0.60 on the fabric-to-overlay seam
-— correctly declining to guess a seam it cannot be sure of — while the mid agent sits in the opposite
-error, committing more and getting some of it wrong (about 0.80 precision and 0.80 resolved fraction). Adding the
-constructed reference takes every agent to a full, correct close on both. So "strong agents omit, weak
+but finds only 0.40 of the true matches on the RAN-to-core seam and 0.20 on the fabric-to-overlay seam
+— correctly declining to guess a seam it cannot be sure of — while the mid agent commits more and gets
+some of it wrong (about 0.80 precision and 0.80 resolved fraction on the RAN seam). Adding the
+constructed reference takes the strong agent to a full close on the fabric seam and to 0.80 on the
+harder RAN seam, and the given reference closes both fully. So "strong agents omit, weak
 agents commit, and a thin shared reference fixes both" is a property of the mechanism, not of the one
 original case. (All three cases are the same author's hand-built constructions, so this shows
 robustness to variation, not yet to real network data — which only carrier collaboration can supply.)
 
 The central measurement is the **single-pass schema binding**, and the reference-absent condition
-brackets the construction step rather than running the full construct-then-bind protocol; a direct
-test of the full protocol — the agents constructing the reference themselves and then closing, with
-no reference pre-given — is the clean way to confirm the thesis in this hardest setting, and is left
-to further work. The model ladder is three points spanning a capability range; the mirror is clear
+brackets the construction step rather than running the full construct-then-bind protocol; the full
+protocol — the two agents constructing the reference themselves and then closing, with no reference
+pre-given — is also run, and it confirms the thesis in this hardest setting: the strong agent lifts
+from 0.20 to 0.80, and to 0.90 when the agents also run a decisive virtual experiment. The model ladder is three points spanning a capability range; the mirror is clear
 but its shape between the points is not resolved. The pragmatic gold is largely clean but includes
 one field (committed rate) whose authority is genuinely contested, reported as such. And the
 instance-level co-reference is bracketed, not measured, on the argued grounds that it reproduces the
 first setting's result; that argument rests on the intent setting's endpoint phase and on the shared
 mechanism, not on a cross-domain instance run.
+
+One further check bears on *who performs the lift* here. These models, like the others, are reconciled
+over a materialised lift; re-running with the lift produced by an agent from each side's schema surface
+alone leaves the reference-bound close unchanged — the strong agent reaches a full 1.00 through the
+constructed or given reference on the agent-produced lift, exactly as on the fixture. The construct gap
+is where the agent-lift is most exposed: with no reference at all the strong agent's own glosses led it
+to commit one pair at the floor (where the fixture defers, resolving 0.20), and the mid agent took the
+*grade* look-alike its fixture avoided — the same weak-end over-commitment the mirror describes, now
+visible in the lift as well as in the bind. The full cross-setting table is in the master report
+(§13.8).
 
 ## 7. Reproducibility
 

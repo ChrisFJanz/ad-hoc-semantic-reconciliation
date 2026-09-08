@@ -62,7 +62,10 @@ holds. Third, **provenance**: who asserted each part, by what method, and how fi
 is a **cognitive act**, helped along by a few **supports** that are aids to that cognition rather than
 parts of the model — definitions, worked examples, a canonical example, and an optional link to a
 shared reference. Who performs the lift is itself a variable of the study: a live system lifts and
-explains itself; an inert one is lifted by whatever cognition reads it.
+explains itself; an inert one is lifted by whatever cognition reads it. In the benchmark cases that
+self-lift is provided as a materialised artefact, so the reconciliation runs over a fixed substrate;
+§13.8 lifts that assumption — an agent produces the lift from the schema surface alone — and finds the
+reconciliation unchanged where the study leans on it.
 
 ![The lift — a data model becomes a portable, self-describing semantic model.](../figures/fig_master_lift.png)
 
@@ -227,10 +230,14 @@ are not of equal value, and the cheapest useful one is not the cheapest possible
 
 Every setting is measured in the same harness. A **case** is two lifted semantic models plus a
 gold-standard reconciliation *derived from the models by a script and validated* before any run, so
-the gold cannot drift from the models it scores. A **reasoning stack** stands in for the reconciling
-cognition — in the fully-cognitive case, an exchange between two live agents; with a side inert, the
-live agent reconstructing the mute one; with both inert, a third party — and the harness scores the
-stack's output against the gold and records both quality and cognitive effort. Quality is measured by
+the gold cannot drift from the models it scores. In the fully-cognitive case the reconciliation is an
+**exchange between two live agents**: each holds only its own lifted model and a surface catalogue of
+the other's, and they alternate turns — advertising, asking and answering, proposing correspondences,
+and **ratifying** the other's proposals about their own concepts (a correspondence is confirmed only
+when one side proposes it and the owner accepts it, or both propose it independently), and may run
+joint decisive experiments in virtual space. With a side inert the live agent reconstructs the mute
+one; with both inert a third party reconstructs both. The harness scores the outcome against the gold
+and records both quality and cognitive effort. Quality is measured by
 **precision** (of what it proposes, the fraction correct), the **resolved fraction** (of the true
 correspondences, the fraction it actually commits, the rest referred to the residual), **surviving
 false cognates** (planted traps taken), and the **residual** itself; effort, for a language-model
@@ -279,13 +286,15 @@ later settings. The thin **reference** is the lexical one, switched on and off a
 
 **What was proven.** The concept holds, measured across conditions rather than shown once: cognitive
 agents reconcile the two models correctly and ad hoc. Within that, the reference **substitutes for
-cognition** — for the strong agent it collapses hidden deliberation by one to two orders of magnitude
-and yields a perfect, verified reconciliation (precision and resolved fraction of one) across the
-whole spectrum. The benefit is **capability-dependent** and not monotonic: for a weak agent the
-reference can *add* effort when a side is inert, and the naive "reference helps more as cognition
-recedes" hypothesis is refuted *for effort* even as it holds *for correctness* — precision separates
-the models on the hard case (strong 0.94→1.00, mid 0.88→0.96, weak 0.91→0.97 with the reference) and
-the reference prevents the errors a weak agent otherwise commits. **Verification** runs as its own
+cognition** — for the strong agent it yields a perfect, verified reconciliation (precision and
+resolved fraction of one) at both-cognitive and holds it as a side goes inert, collapsing the hidden
+deliberation a single reconstructing agent would otherwise spend by one to two orders of magnitude. The
+benefit is **capability-dependent** and not monotonic: for a weak agent the reference can *add* effort
+when a side is inert, and the naive "reference helps more as cognition recedes" hypothesis is refuted
+*for effort* even as it holds *for correctness*. At both-cognitive the two-agent negotiation itself
+holds precision at one and refuses the planted traps through bilateral ratification; the reference's
+error-prevention value shows where a single agent must reconstruct an inert side, raising the weaker
+agents' precision and pre-empting the cognates they otherwise commit. **Verification** runs as its own
 step, keeping only the correspondences it can confirm and referring the rest onward. It rejects the
 false cognates that slipped into the proposal, so precision climbs toward one across the spectrum. But
 confirming a correspondence draws on live cognition, which the spectrum removes. Without the reference,
@@ -297,9 +306,9 @@ resolved fraction at one. Reconciliation work scales **linearly** with a shared 
 the point past the schema terms: at the **instance** level the resolvability of same-looking
 individuals is budget-limited at full cognition (driven to a full resolve with more probing) but
 becomes **structural** once a side goes inert (no budget helps, because the inert side cannot be
-interrogated); and a **pre-lift baseline** confirms the lift itself is the lever — matching on the
-bare lexical surface leaves a quarter to a third of the correspondences unfound (resolved fraction
-0.66–0.76), and restoring the lifted content recovers them (0.92–0.97).
+interrogated); and the deterministic controls confirm the lift itself is the lever — a reference-blind
+matcher seeing only the bare lexical surface resolves about two-thirds of the correspondences and takes
+a trap, and it is cognition over the lifted models that closes the rest and refuses the look-alikes.
 
 **What it means.** The founding claim is in hand: cognition completes the reconciliation, a
 reference partly substitutes for it, saving cognitive effort and preventing errors, and the spectrum
@@ -386,15 +395,18 @@ authority attribution (whose realm owns each shared field). The instance operati
 the argued grounds that it reproduces the first setting's result.
 
 **What was proven.** The central result is a pair of **mirror-image failures** — the strong and weak
-agents breaking in opposite, symmetric ways. With the constructed reference absent, the **strong agent
-under-commits and the weak agent mis-commits**. The strong agent will not guess across
-two foreign vocabularies — it binds only the names that already coincide (resolved fraction ~0.5 at
-both-cognitive, ~0.4 once a side is inert) but at perfect precision and with no false cognate taken:
-this is **omission**, deferral, not error. The weak agent does the opposite — it binds freely
-(resolved fraction 0.8–1.0) at a precision that never clears 0.83 and falls to 0.57 inert, taking the
-cross-domain "grade" trap: **commission**, confident error. A single thin reference remedies both:
-constructed, it lifts the strong agent to a full close and lifts the weak agent's precision
-toward one. Stripping the reference's fields one at a time shows what it must carry: any *single* descriptive field —
+agents failing in opposite ways, and *where* each failure shows depends on how the cognition is
+placed. The strong agent will not guess across two foreign vocabularies — it binds only the names that
+already coincide (resolved fraction 0.20 at both-cognitive, around 0.4 once a side is inert), at
+perfect precision and with no false cognate taken: this is **omission**, deferral not error,
+throughout the spectrum. The weak agent's error is **commission** — binding freely and taking the
+cross-domain "grade" trap — but it emerges where a *single* agent must reconstruct a side: at the inert
+placements its precision never clears 0.83 and falls to 0.57. At both-cognitive the weak agent cannot
+bind unilaterally — its partner must ratify — so the negotiation refuses its over-commitments: it
+under-resolves (0.40) rather than mis-commits, and the trap does not survive. Commission is real, but
+it is a property of a single reconstructing agent, not of two agents negotiating. A single thin
+reference remedies the omission: constructed, it lifts the strong agent to a full close and disciplines
+the weak agent's precision at the inert placements. Stripping the reference's fields one at a time shows what it must carry: any *single* descriptive field —
 a shared label, a class, a definition, or an example — is enough to unlock the strong agent's
 commitment (each drives it to a near-perfect close), while a **bare shared identifier with no
 description is worse than nothing** (precision 0.50, below the no-reference floor), because the agent
@@ -407,12 +419,13 @@ governs it — and a characteristic "transport owns everything it carries" bias 
 **What it means.** With no public standard beneath two models, cognition still closes — but only once
 it has built the shared ground, and **building that ground is the work**. The strong agent's low
 reference-absent numbers are not a limit of cognition; they measure the worth of the one step the
-study held back — constructing the shared reference — by running the binding pass without it. Run end
-to end — the agent constructing the shared reference itself from the two models and then binding through
-it, with none pre-given — the protocol confirms the reading: the strong agent lifts from a no-reference
-resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the reference-given 1.00, at
-perfect precision and with no false cognate, so constructing the ground is the work and a capable agent
-does it. Even a very thin ground suffices for a capable agent, provided it carries meaning and not
+study held back — constructing the shared reference — by running the binding without it. Run end
+to end — the two agents constructing the shared reference themselves from their models and then binding
+through it, with none pre-given — the protocol confirms the reading: the strong agent lifts from a
+no-reference resolved fraction of 0.20 to a constructed-reference **0.80**, and to **0.90** when the
+agents also run a decisive virtual experiment on the candidates, approaching the reference-given 1.00,
+at perfect precision and with no false cognate, so constructing the ground is the work and a capable
+agent does it. Even a very thin ground suffices for a capable agent, provided it carries meaning and not
 merely a pointer.
 
 ## 10. Setting 4 — Observability: an alarm is not an anomaly
@@ -491,14 +504,21 @@ signals mean (setting 4) — measured against a validated gold across the cognit
 once by hand.
 
 The same exploration says, more sharply, **where the reconciliation needs no help**. At the
-fully-cognitive end of the spectrum it completes **autonomously in every setting** — no standard
-agreed in advance, no human in the loop — including the two operations that look least automatable: a two-sided
-negotiation (setting 2, decision accuracy 1.0 with both sides live) and deciding, for each anomaly,
-whether to act on it, watch it, or suppress it — the significance verdict, judging whether an observed
-deviation actually matters (setting 4, accuracy 1.0 with the pragmatics on). The fully-cognitive end is, across all four
-settings, the automatable end. That is the headline, and everything else in this synthesis is a
+fully-cognitive end of the spectrum it completes **autonomously** — no standard agreed in advance, no
+human in the loop. For the schema bind the two live agents reach a full close through a shared or
+constructed reference, or by running a **decisive virtual experiment** on the candidates they are
+unsure of; negotiating alone they defer the hardest correspondences rather than guess — the honest
+behaviour, not a failure. And it completes autonomously on the two operations that look least
+automatable: a two-sided negotiation (setting 2, decision accuracy 1.0 with both sides live) and the
+significance verdict — deciding, for each anomaly, whether to act, watch, or suppress (setting 4,
+accuracy 1.0 with the pragmatics on). The fully-cognitive end is, across all four settings, the
+automatable end. That is the headline, and everything else in this synthesis is a
 qualification of it: how the automation degrades as cognition recedes, what a thin reference buys
 back, and where an agent too weak for the task cuts the whole thing off.
+
+And the lift the whole thing runs on is itself agent-performable: an agent asked to lift a side from
+its schema surface produces a model that reconciles as the authored one does — identically, for the
+capable agent binding through a reference, across all four settings (§13.8).
 
 ## 12. The findings, as six theses — and mapped to where they act
 
@@ -508,9 +528,9 @@ whole out in two tables — so that when a finding says cognition (or a referenc
 matters "here," the *here* is a named stage of the process, not a vague gesture.
 
 **Thesis 1 — It is cognition that completes a reconciliation: descriptor methods carry it most of the way, then reach a ceiling and stop.**
-Lexical and descriptor matching carry a reconciliation to roughly ninety percent (setting 1's
-baseline: lexical surface 0.66–0.76, the lift recovering it to the mid-nineties); the remainder,
-historically left to a standard or a person, is closed by live cognition instead. This is the
+Lexical and descriptor matching carry a reconciliation only so far (setting 1's deterministic controls:
+a reference-blind matcher on the bare lexical surface resolves about two-thirds and takes a trap); the
+remainder, historically left to a standard or a person, is closed by live cognition instead. This is the
 programme's spine, and it holds at every operation the settings put under test. It holds against a
 strong classical matcher, not only the plain label baseline: a matcher using labels, synonyms,
 definitions, and structure with a 1:1 alignment reaches precision one and refuses the false cognates on
@@ -542,20 +562,22 @@ setting 4, the RFC 9940 reference rescuing the mid agent's ontology); but where 
 is judgement rather than fact, no reference moves it (setting 2's authority gap, setting 3's authority
 attribution). Information has a published stand-in; authority does not.
 
-**Thesis 4 — Strong and weak agents fail in opposite directions: strong agents omit, weak agents commit.** Denied
+**Thesis 4 — A strong agent's failure is omission, a weak agent's is commission — and two-agent negotiation suppresses commission by ratification.** Denied
 the ground it needs, a strong agent **defers** — it leaves the unresolved in the residual at perfect
 precision (setting 3's under-commitment; setting 2's strong agent refusing to affirm what it cannot
-verify). A weak agent **commits** — it binds freely and wrongly, takes the false cognate, and is no
-less confident on a wrong answer than a right one (setting 3's mis-commitment; setting 1's traps
-surviving for the weak agent). The strong agent's error is a larger residual; the weak agent's is
-lower precision. This is why a reference does two different things at the two ends of the spectrum. Its
-**correctness value** — pulling right the bindings that would otherwise go wrong — concentrates where
-cognition is weakest: the weak agent is the one that commits false cognates, and the reference is what
-disciplines it out of them. Its **effort value** — the reasoning it saves — peaks where cognition is
-strongest: a capable agent that would have reasoned its own way to the answer can instead lean on the
-reference and spend one-to-two orders less to get there. The strong agent needed the economy, not the
-correction; the weak agent needed the correction, and could not always use it. One thin artifact,
-a different benefit at each end of the spectrum.
+verify). A weak agent's error is **commission** — binding freely and wrongly, taking the false cognate —
+but *where* it shows depends on how the cognition is placed. Where a **single** agent must reconstruct a
+side, at the inert placements, commission is unchecked: the weak agent takes the traps and its precision
+falls. At **both-cognitive**, though, no side binds unilaterally — each proposal must be ratified by the
+concept's owner, and that bilateral loop refuses the weak agent's over-commitments. Swept across a
+six-model capability ladder at both-cognitive, the negotiation holds precision high and drives surviving
+false cognates to zero for all but the weakest model — **the two-agent structure itself doing
+verification work** — while resolution is uniformly lower (deferral) and the weakest agents fail by
+non-convergence rather than by confident error. So the reference's **correctness value** — pulling right
+the bindings that would otherwise go wrong — concentrates where a single weak agent reconstructs, exactly
+where negotiation's discipline is unavailable; its **effort value** — the reasoning it saves — peaks
+where a single strong agent reconstructs an inert side. One thin artifact, a different benefit at each end
+of the spectrum, and at both-cognitive the negotiation supplies much of the discipline itself.
 
 **Thesis 5 — The pragmatic layer — what a thing means in context and whether it matters — is the frontier the descriptor methods never reach: decisive and itself gated by cognitive power.** What a reconciled thing is *for* — whether a degraded offer
 is acceptable (setting 2), whose realm owns a field (setting 3), whether an anomaly warrants a page
@@ -621,13 +643,15 @@ Capability does not turn a single dial; it changes the *kind* of failure. The cl
 this is **setting 3, the cross-domain bind** (Figure 7): Meridian, a transport OSS, and Cascade, an
 IP/VPN controller, are two independently authored private models with **no public standard between
 them**, so no ready-made reference exists — the agents must construct the shared ground themselves.
-Run that bind with the reference withheld and capability alone decides the outcome. Denied the shared
-ground it needs, the strong agent **omits** and the weak agent **commits** — a mirror. Facing the two
-foreign vocabularies with no constructed reference, sol binds only the names that already coincide and
-leaves the rest in the residual: a low resolved fraction, but perfect precision and no trap taken. nano
-does the opposite, binding freely and wrongly at a precision that never clears 0.83. The strong agent's
-shortfall is a larger residual (deferral); the weak agent's is lower precision (error); and a single
-thin reference remedies both, pulling each toward the top-right corner.
+Run that bind with the reference withheld and capability alone decides the outcome. The strong agent
+**defers** — facing two foreign vocabularies with no constructed ground, sol binds only the names that
+already coincide and leaves the rest in the residual: a low resolved fraction (0.20 at both-cognitive),
+perfect precision, no trap taken. The weak agent's failure is **commission** — binding freely and
+wrongly — and it shows where a *single* agent must reconstruct a side: at the inert placements nano's
+precision never clears 0.83 and it takes the trap. At both-cognitive the two-agent loop checks it — nano
+cannot bind without its partner's ratification, so it under-resolves rather than mis-commits and the trap
+does not survive. A single thin constructed reference then lifts the strong agent to a full close and
+disciplines the weak agent's precision where it is a lone reconstructor.
 
 ![Mirror-image shortfalls: the strong agent omits, the weak commits.](../figures/fig_crossdomain_mirror.png)
 
@@ -635,20 +659,23 @@ thin reference remedies both, pulling each toward the top-right corner.
 Without the constructed reference sol sits top-left — commits little, all of it right — and nano
 lower-right — commits much of it wrongly; the reference pulls both to the corner.*
 
-This mirror is not a binary of strong against weak but a smooth gradient. Swept across a six-model
-ladder on the schema cases (Figure 8), precision falls (0.98 to 0.83) and surviving false cognates rise
-(from none to most) as capability drops, while resolved fraction rises the other way (0.78 to 0.94):
-the strong end's omission shades continuously into the weak end's commission, the strongest tier all
-deferring at near-perfect precision and the failure emerging through the smaller models. What moves
-along the ladder is not whether the agent can match — it can at every rung — but the quality of its
-judgement: when to commit, when to defer, and whether it refuses the trap.
+Swept across a six-model ladder on the schema cases at both-cognitive (Figure 8), two-agent negotiation
+**compresses** the gradient a lone reconstructing agent would show. Precision does not fall as capability
+drops: bilateral ratification holds it high across the whole ladder (roughly 0.9 to 1.0), and surviving
+false cognates are driven to zero for every model but the weakest, where about a quarter of the traps
+survive. What the negotiation costs is resolution — the resolved fraction is uniformly lower (about 0.4
+to 0.7) and rises then dips rather than climbing, because the weakest agents fail by non-convergence,
+grinding to the round limit without closing, rather than by confident over-commitment. The structure
+itself — each proposal ratified by the concept's owner — supplies the discipline that a reference, or a
+stronger cognition, would otherwise have to.
 
-![The omit-to-commit mirror as a smooth six-model gradient.](../figures/fig_ladder_gradient.png)
+![The six-model capability ladder under two-agent negotiation.](../figures/fig_ladder_gradient.png)
 
 *Figure 8. Precision, resolved fraction, and surviving false cognates across a six-model capability
-ladder (no reference, both-cognitive, mean over the four schema cases). The strong end's omission —
-high precision, deferral, no traps — shades into the weak end's commission — lower precision, traps
-taken.*
+ladder (two-agent negotiation, no reference, both-cognitive, mean over the four schema cases). Bilateral
+ratification holds precision high and suppresses false cognates across almost the whole ladder;
+resolution is uniformly lower and non-monotonic, the weakest models failing by non-convergence rather
+than by taking the traps.*
 
 Where a standard *can* pin the distinction, capability decides who can use it — a clean three-rung
 gradient (Figure 9). On the programme's deepest false cognate, alarm↔anomaly, the strong agent never
@@ -829,21 +856,19 @@ direct measure of how hard it worked.
 
 The answer is a rule, not a blanket habit, and it has three parts. **Constructing the reference is
 load-bearing only where no standard exists and the agent is capable.** In the cross-domain setting (two
-private models, no shared standard) the strong agent with no reference finds only half the true matches —
-resolved fraction 0.50, because it honestly refuses to guess a seam it cannot be sure of — and building the reference
-itself carries it to 0.93 for only a little more cognition (about 1,300 reasoning tokens against 1,000
-with no reference). There is no cheaper route, because there is no standard to bind through; the
-construction spend is what buys the close. **Where an effective reference already exists, constructing one
-is redundant.** In the configuration setting (two public standards) and the observability setting (an
-RFC-anchored reference), binding through the *given* reference reaches the same close or better for a
-fraction of the cognition: in configuration the strong agent binds through the given reference to a
-perfect close for about 166 reasoning tokens, while *constructing* one spends about 1,109 to reach 0.97 —
-more work, slightly worse result. Building what you already have is wasted effort. **And for a weak agent,
-construction is actively counterproductive, everywhere.** It is capability-gated: a weak agent builds a
-poor reference and pays hugely to do it. Averaged over the three settings, constructing the reference
-costs the strong agent about 960 reasoning tokens, the mid agent about 3,700, and the weak agent about
-**14,200** — and the close it reaches gets *worse* down that ladder, not better (resolved fraction 0.89, 0.86, 0.72).
-Handing construction to a weak agent is maximum spend for minimum, or negative, return.
+private models, no shared standard) the two agents with no shared reference reach only a fifth of the
+true matches — resolved fraction 0.20, because they honestly refuse to guess a seam they cannot be sure
+of — and constructing the reference themselves carries them to 0.80, and to 0.90 when they also run a
+decisive experiment on the candidates, for a few thousand reasoning tokens of construction. There is no
+cheaper route, because there is no standard to bind through; the construction spend is what buys the
+close. **Where an effective reference already exists, constructing one is redundant.** In the
+configuration and observability settings, binding through the *given* reference reaches the same close
+for a fraction of the cognition: the strong agent binds through the given reference to a full close for a
+few hundred reasoning tokens, where *constructing* one spends several thousand for no better result.
+Building what you already have is wasted effort. **And construction is capability-gated.** A weak agent
+cannot build a good reference cheaply — the same non-convergence that makes weak two-agent negotiation
+expensive, grinding to the round limit at tens of thousands of tokens, makes weak construction expensive
+too, and for a worse close. Handing construction to a weak agent is maximum spend for minimum return.
 
 Two things this sharpens. First, it puts a number on how cheap a *given* reference is for a capable agent
 — tens to low hundreds of reasoning tokens to bind through — which is exactly why a pre-agreed standard
@@ -859,16 +884,136 @@ paying the construction cost afresh on every exchange.
 
 ![When constructing the shared reference is worth the cognition it costs.](../figures/fig_construct_cost.png)
 
-*Figure 15 (the economics of constructing a reference). Left: the strong agent's resolved fraction (share of true
-matches found) under the three conditions — no reference (grey), a reference the agents construct
-themselves (orange), and a given, already-published reference (blue) — across the three schema settings,
-with the reasoning tokens each condition spent written on each bar. In Setting 3, where no standard
-exists, building the reference lifts the strong agent from 0.50 to 0.93 (the arrow) and is the realistic
-path; in Settings 1 and 4 a given reference reaches the same close or better for far less cognition, so
-constructing one is redundant. Right: the cost of constructing the reference down the model ladder,
-averaged over the three settings — it explodes from about 960 reasoning tokens for the strong agent to
-about 14,200 for the weak one, while the close it reaches (the resolved fraction printed on each bar) gets worse, not
-better.*
+*Figure 15 (the economics of constructing a reference). The strong agent's resolved fraction under three
+conditions — no shared reference (grey), a reference the two agents construct themselves (orange), and a
+given, already-published reference (blue) — across the schema settings, with the reasoning each condition
+spent noted on each bar. In Setting 3, where no standard exists, constructing the reference lifts the two
+agents from 0.20 to 0.80 (0.90 with a decisive experiment on the candidates) and is the realistic path;
+in Settings 1 and 4 a given reference reaches the same close for a fraction of the cognition, so
+constructing one is redundant. Construction is capability-gated: a weak agent pays far more to build a
+worse reference, as the six-model ladder's non-convergence at the weak end shows.*
+
+### 13.7 The negotiation in the act, and the decisive experiment
+
+The numbers above are outcomes; the process that produces them is itself a result, because it is a window
+into machine cognition reconciling. The box below is a verbatim excerpt, lightly trimmed, of two live
+agents reconciling the cross-domain seam — Agent A holding only the transport model (the `m.*` concepts),
+Agent B only the IP-service model (the `c.*` concepts), each seeing the other only through a surface
+catalogue and the answers it volunteers.
+
+> **Without a shared reference — interrogate, then defer.**
+> **A → B:** "Is `rate` the guaranteed end-to-end client payload rate, a physical bearer line rate, or an
+> IP-service commitment?" … (eight questions, one per concept).
+> **B → A:** `m.rate` = "the committed client payload rate guaranteed end to end by the transport
+> circuit"; `c.rate` = "the committed information rate guaranteed to customer traffic by the IP service".
+> **A proposes, B ratifies — one correspondence:** `c.underlay ↔ m.circuit`, "both denote the transport
+> circuit itself." **Accepted.** Everything else — rate, latency, protection, the attachment point — is a
+> transport-domain view set against a service-domain view; neither side asserts the pairing without more
+> ground, so all are referred onward. *Confirmed 1 of 5; precision 1.00, resolved fraction 0.20.*
+>
+> **With a thin shared reference — bind through it.** Same interrogation; then, each concept now carrying
+> its binding to a shared entry, A proposes five correspondences at confidence 1.00 and B ratifies all
+> five: `m.rate ↔ c.rate`, `m.latency ↔ c.latency`, `m.protection ↔ c.protection`,
+> `m.handoff ↔ c.attachment`, `m.circuit ↔ c.underlay`. The stated rationale names exactly what the
+> reference settled: "Although A represents a measured propagation value and B represents its SLA tier,
+> they correspond." *Confirmed 5; precision 1.00, resolved fraction 1.00.*
+>
+> **Refused in both conditions.** `m.grade ↔ c.grade` is never proposed: a transport quality grade
+> (protection and restoration class) is not an IP class of service (scheduling and drop priority). The
+> planted false cognate is declined with or without the reference.
+>
+> *One illustrative run of one case; the rationales are the agents' own stated reasons, presented as such.*
+
+Two things in the box are the programme's claims caught in the act. The interrogation is real, not
+asserted: the agents ask and answer about each concept before deciding, and because each is the authority
+on its own side a correspondence is confirmed only when one proposes it and the other ratifies. And the
+behaviour is honestly conservative — without a shared reference two careful agents confirm only the one
+identity they are sure of and defer the rest rather than guess across the transport/service divide, and a
+thin shared reference is exactly what lets them bind the pairs they otherwise defer.
+
+Where the agents are unsure, though, they need not defer. At both-cognitive they can run a **decisive
+virtual experiment**: provision a candidate correspondence in virtual space, operate it, and read back
+whether the invariants a correct translation must preserve still hold, so the question is settled by
+operation rather than by argument. The box below is that experiment firing, verbatim, on the
+configuration case with no reference.
+
+> **The decisive experiment settles what dialogue defers (configuration, no reference).** Two agents
+> reconcile TAPI (`t.*`) with TEAS (`i.*`). Where a candidate is uncertain, an agent provisions it in
+> virtual space and reads the verdict back:
+> **A:** provision `t.sip ↔ i.ttp`? (does a service-interface point translate to a tunnel-termination
+> point?) → **REFUTE [no-correspondence]** — both sides then mark those concepts no-counterpart.
+> **A:** provision `t.cs ↔ i.tunnel`? (does the external connectivity-service abstraction translate to
+> the tunnel that realises it?) → **CONFIRM [identity]**.
+> **A:** provision `t.lpq ↔ i.otnlabel`? → **CONFIRM**; and `t.translink ↔ i.stp` → **CONFIRM**.
+> The agents then ratify citing the verdict verbatim — "the decisive experiment confirmed identity" —
+> and the reconciliation closes **fully: nine confirmed, precision 1.00, resolved fraction 1.00, four
+> experiments spent, no reference**. The correspondences dialogue would have deferred — a service
+> abstraction against the tunnel that realises it — are settled by operation, and a look-alike is
+> refused the same way. Given that power, two agents reach the reference's close **without a
+reference on three of the four schema settings**, and refute a suspected false cognate by operation. The
+one exception is the cross-domain seam above: there the correspondences do not exist in either agent's
+private model as candidates to test — they live only in a constructed shared frame — so the experiment
+settles the candidates the agents can pose but cannot, by itself, surface the ones a construction must
+first make visible. **Construction surfaces the candidates; the experiment settles them; a shared
+reference amortises both.** That is the completion the fully-cognitive case promises, shown rather than
+argued.
+
+### 13.8 The lift, performed by an agent
+
+Everything above runs over *lifted* models, and in the benchmark those lifts are provided as
+materialised artefacts — each concept's gloss and worked example, the self-explanation a cognitive side
+would volunteer — so the reconciliation runs over a fixed substrate. That leaves a fair question: does
+the result depend on the lift being authored in advance, or can an agent perform the lift itself and
+does reconciliation hold when it does? One half of this is already exercised elsewhere — at one-inert
+and both-inert a live agent reconstructs the mute side's meaning from its structure and instances, with
+no volunteered gloss, scored right across the spectrum. What was held fixed is the *self*-lift.
+
+To close it, an agent is given one side's data-model surface alone — its labels, synonyms, kinds,
+relations, and instances, with the explanation layer, the reference binding, the other model, and the
+gold all withheld — and asked to produce each concept's gloss and worked example. The result is an
+agent-lifted model whose explanation layer was generated rather than authored, otherwise identical to
+the fixture. Reconciling over it, under the same conditions, and comparing to the fixture lift, measures
+whether the lift is agent-performable and whether the reconciliation depends on who performed it.
+
+| setting | model | no-ref: fixture | no-ref: agent-lift | ref: fixture | ref: agent-lift |
+|---|---|---|---|---|---|
+| configuration (flagship) | strong | 0.56 (1.00) | 0.56 (1.00) | 1.00 (1.00) | 1.00 (1.00) |
+| configuration (hard) | strong | 0.83 (1.00) | 0.75 (1.00) | 1.00 (1.00) | 1.00 (1.00) |
+| cross-domain | strong | 0.20 (1.00) | 0.00 (0.00) | 1.00 (1.00) | 1.00 (1.00) |
+| observability | strong | 0.25 (1.00) | 0.50 (1.00) | 0.75 (1.00) | 0.75 (1.00) |
+| configuration (flagship) | mid | 1.00 (0.90) | 0.78 (1.00) | 1.00 (1.00) | 0.78 (1.00) |
+| configuration (hard) | mid | 1.00 (0.92) | 0.86 (1.00) | 0.92 (1.00) | 0.92 (0.92) |
+| cross-domain | mid | 1.00 (1.00) | 0.80 (0.80)† | 0.80 (1.00) | 1.00 (0.83)† |
+| observability | mid | 0.50 (1.00) | 0.75 (1.00) | 0.75 (1.00) | 0.75 (1.00) |
+
+*Resolved fraction (precision in parentheses), fixture lift versus agent-produced lift, at
+both-cognitive, with and without the shared reference, on the strong and mid agents. Coverage 1.00
+throughout — the agent glossed every concept. †the agent-lift committed one false cognate the fixture
+avoided (surviving false cognate = 1); false cognates were zero in every other cell.*
+
+Three things read off it. First, **the lift is always complete** — the agent produced a gloss and
+example for every concept on both models at both capability levels — and its **cost is
+capability-gated**, like everything else here: the strong agent lifts a side for a few hundred reasoning
+tokens, the mid agent for several thousand. Second, **reconciliation over the agent-produced lift lands
+in the same regime as over the fixture**, and for the capable agent binding through a reference — the
+mainline condition the study leans on — it is **identical across all four settings**. Without a
+reference the two track within the reconciliation's own single-trial variance: equal on the flagship, a
+little lower on the hard configuration case, higher on observability, with one soft cell at the
+cross-domain construct gap where the strong agent's lift led it to commit a pair the fixture deferred.
+Third, the divergences that do appear are **the study's own capability-gating, not a new failure**: at
+mid capability the agent-lifted cross-domain case slips the very false cognate the strong agent and the
+fixture avoid — the weak end taking a look-alike, exactly as it does everywhere — while on the
+configuration cases the agent's own glosses make the mid agent *more* conservative, deferring a little
+more and holding precision at 1.00.
+
+A smaller point is worth keeping: the agent's glosses overlap the fixture's only weakly in wording (a
+lexical fidelity of 0.13 to 0.23), yet reconciliation stays in the same regime — the lift need not
+reproduce the authored phrasing to carry the same meaning. So the results do not rest on the lifted
+models being pre-authored. Who performs the lift, a materialised fixture or a live agent from the schema
+surface, does not change the reconciliation, most cleanly where the study leans on it; producing a good
+lift, like consuming one, is gated by cognitive power. What the study still holds fixed is the lift from
+*raw schema text* — inferring the ontology's structure, not only its explanation layer — and a cold
+start with no instances yet to read; both are natural experiments for real data (§16).
 
 ## 14. The maps
 
@@ -882,7 +1027,7 @@ reference can buy — consolidated across all four settings.
 
 | placement | what the reconciliation can do | the residual | what a reference buys |
 |---|---|---|---|
-| **both-cognitive** | completes **autonomously** in every setting — bind, negotiate, verdict | none, in principle | partly substitutes for cognition (effort ↓ 1–2 orders); little correctness room left |
+| **both-cognitive** | completes **autonomously** — bind (via a shared/constructed reference or a decisive virtual experiment), negotiate, verdict | none once a reference or experiment closes it; dialogue alone defers the hardest | speeds the close and can substitute for reasoning; but the negotiation itself already holds precision and catches the traps |
 | **one-inert** | live side reconstructs the mute side; probes gone, so some resolutions turn **structural** | grows — the shortfall appears | supplies missing **information**; rescues the mid agent (ontology, satisfaction) |
 | **both-inert** | third party can only **propose** for adjudication; no interrogation, no experiment | largest; every judgement referred onward | supplies information, **not authority** — cannot move a judgement |
 | **pre-placed policy** (intent) | closes the decisions the policy was **authorised** for — pushes the hand-off boundary outward | only the un-authorised judgements | policy carries the **authority**; a reference still cannot |
@@ -893,12 +1038,12 @@ This is the map for locating any finding on the process: the *here* of "cognitio
 
 | operation (the *where*) | 1 · Configuration | 2 · Intent | 3 · Cross-domain | 4 · Observability |
 |---|---|---|---|---|
-| **Lift** | founds it; the lift is the lever (0.66–0.76 → 0.92–0.97) | reused | reused; both sides private | alarm lifted and **decomposed** |
-| **Reference construction** | given (lexical) | given (unit / invariant) | **constructed** end to end — 0.40 → **0.93** | given (RFC 9940-anchored) |
+| **Lift** | founds it; the lift is the lever (controls: surface ~two-thirds, cognition closes the rest) | reused | reused; both sides private | alarm lifted and **decomposed** |
+| **Reference construction** | given (lexical) | given (unit / invariant) | **constructed** end to end — 0.20 → **0.80** (0.90 with a decisive experiment) | given (RFC 9940-anchored) |
 | **Schema binding** (lexical, ontological) | equivalence; reference **substitutes** | shared ground for satisfaction | **the measured stage**: omission vs commission | **ontological** cognate; 3-rung gradient |
 | **Attribute pinning** | — | bound vs measured metric | committed vs line rate | severity / scores |
 | **Instance co-reference** | budget-limited → **structural** | measured (endpoints) | bracketed (reproduces s.1) | measured; reproduces s.1 |
-| **Verification** | own step; catches cognates, holds resolved fraction | by **satisfaction** | downstream of the isolated pass | verdict stands in |
+| **Verification** | ratification + decisive experiment; catches cognates, holds precision | by **satisfaction** | downstream of the bind | the verdict carries it |
 | **Pragmatic resolution** | left untouched (deferred) | movable **policy**; authority ≠ information | **authority** attribution; reference pins meaning, not authority | **verdict** carries operative meaning; capability-gated |
 | **Composition / correlation** | — | — | — | robust with the dependency map (all models) |
 | **Lifecycle recurrence** | — | four-hop loop (self-heal, refer, restore) | — | — |
@@ -944,23 +1089,34 @@ number of trials; the reported patterns are the ones stable across the model lad
 toggles, and the numbers are indicative rather than tight. To guard against any one case being, unknowingly,
 chosen to work, each setting is exercised on **three independently-built cases**, not one — the breadth
 reading at the end of this section reports that the findings hold across them. The core ladder is three points spanning a
-capability range; a six-model sweep resolves the *shape* of the gradient between them, a smooth descent
-from the strong end's omission to the weak end's commission (§13.2). Golds are derived
+capability range; a six-model sweep at both-cognitive shows how two-agent negotiation shapes the
+gradient — bilateral ratification holding precision and suppressing false cognates across the ladder,
+resolution lower and non-monotonic (§13.2). Golds are derived
 from the models and validated, which removes drift but leaves the modelling choices — including
 setting 4's verdict thresholds, stated openly — as authored rather than found. Public standards may
-have been seen in training, which could flatter the no-reference conditions; the effect relied on
+have been seen in training, which could flatter the no-reference conditions; a **relabelled-identity
+control** isolates this directly — strip the TAPI/TEAS identity from the flagship case and reasoning
+alone reaches a resolved fraction of 0.67 where the recognisable case reaches 1.00, while a shared
+reference restores 1.00 either way, so recall of a known standard accounts for part of the recognisable
+close but the reasoning is real and a reference substitutes for the recall. The effect relied on
 throughout is the *difference* a treatment makes under identical inputs.
 
 Two operations bear noting on how they are measured. Setting 3's schema-binding headline brackets the
 reference-construction step, isolating the worth of that step; the full **construct-then-bind**
 protocol — the agents building the reference themselves and then closing, with none pre-given — is also
 run, and it confirms the thesis in the hardest setting: the strong agent lifts from a no-reference
-resolved fraction of 0.40 to a constructed-reference **0.93**, approaching the reference-given 1.00, at perfect
+resolved fraction of 0.20 to a constructed-reference **0.80** (0.90 with a decisive virtual experiment on
+the candidates), approaching the reference-given 1.00, at perfect
 precision and with no false cognate, so constructing the shared ground works and building it is the work
 (§9). And **instance-level co-reference** is measured in settings 2 and 4 as well as setting 1,
 reproducing the same budget-limited-then-structural pattern, with a capability gradient in which capable
 agents resolve fully where a live side can be interrogated while the weakest agent only partially
-resolves.
+resolves. And the **lift** itself is measured as an agent act, not only assumed: an agent producing each
+side's explanation from its schema surface reconciles as the authored lift does (§13.8) — identically
+for the capable agent through a reference — so the results do not rest on the lifted models being
+authored in advance. What stays fixed on this axis, and is natural real-data work, is the lift from
+*raw schema text* (inferring the ontology's structure, not only its explanation layer) and a **cold
+start** with no instances yet populated to read.
 
 **The single-case worry, answered as far as in-house work can.** The sharpest threat to a mechanistic
 claim built on one case per setting is that the case was, unknowingly, chosen to work. To test that, two

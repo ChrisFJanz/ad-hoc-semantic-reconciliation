@@ -64,9 +64,9 @@ lexical ceiling can be closed by machine cognition, rather than only by a human 
 prior agreement, is the shift this work rests on.
 
 Within that frame, four findings concern the reference. First, for a capable agent a
-thin reference **substitutes for cognition**: it collapses the model's hidden
-deliberation by one to two orders of magnitude and yields a perfect reconciliation,
-across the whole spectrum. Second, the effect is **capability-dependent**: a weak
+thin reference **substitutes for cognition**: it yields a perfect reconciliation across the
+whole spectrum, and where a single agent must reconstruct an inert side it collapses that agent's
+hidden deliberation by one to two orders of magnitude. Second, the effect is **capability-dependent**: a weak
 agent cannot always exploit the reference, and when one or both sides are inert it
 can become a cognitive *burden* rather than an aid — its cheaper effort buys error,
 not savings. Third, on a hard case seeded with false cognates and opaque items, the
@@ -190,7 +190,9 @@ A **case** is two lifted semantic models of one network plus a gold-standard
 reconciliation. Each concept carries a label and synonyms, a shallow kind, a
 disambiguating gloss and canonical example, its binding to the shared reference,
 and — so that an inert side has something to be reconstructed from — its structural
-relations to other concepts and a few concrete instances. The **gold standard**
+relations to other concepts and a few concrete instances. The gloss and example are the **self-lift** a
+cognitive side would volunteer, provided here as a materialised artefact so the reconciliation runs over
+a fixed substrate; §3.7 lifts that assumption and has an agent produce them from the schema surface. The **gold standard**
 gives the correct cross-model correspondences, the planted false cognates that must
 *not* be proposed, the native gaps and proprietary items that have no counterpart and are expected to
 be **correctly returned as unmatched** (not counted as residual),
@@ -198,19 +200,17 @@ the invariants a correct translation preserves, and the verification method each
 placement admits. Gold is *derived from the models' bindings by a script and
 validated*, so it cannot drift from the models it scores.
 
-A **reasoning stack** is the harness's stand-in for the reconciling cognition: it
-consumes the two models (and, if it uses one, the reference) and returns the correspondences
-it proposes and the concepts it leaves residual. Implementing it as one process is a
-measurement convenience, not a claim about who reasons. What it stands for is, in the
-fully-cognitive case, an exchange *between two live agents* — each the authority on its own
-model, trading explanations and running joint experiments in virtual space, as in the worked
-demonstration; with one side inert, the live agent reconstructs the mute side from what it can
-read off it; with both inert, a third party reconstructs both. The single stack measures the
-*outcome* of that reconciliation against the gold; it does not collapse the concept into one
-reasoner that privately owns both models. How many sides are live is the **placement** (§2.2).
-Three stacks share one interface: a reference-blind classical matcher and a
-reference-aware reconciler (both deterministic controls), and a language-model
-agent. The **evaluation harness** scores a stack's output against the gold
+The reconciling cognition is run directly. In the fully-cognitive case it is an exchange
+**between two live agents**: each agent holds only its own lifted model and a surface catalogue of
+the other's, and they alternate turns — advertising, asking and answering, proposing correspondences,
+and **ratifying** the other's proposals about their own concepts (a correspondence is confirmed only
+when one side proposes it and the owner accepts it, or both propose it independently), with the option
+to run a joint decisive experiment in virtual space. Each agent is the authority on its own model.
+With one side inert the live agent reconstructs the mute side from what it can read off it; with both
+inert a third party reconstructs both. The harness scores the *outcome* of that exchange against the
+gold. How many sides are live is the **placement** (§2.2).
+Two deterministic controls share the same interface: a reference-blind classical matcher and a
+reference-aware reconciler. The **evaluation harness** scores a stack's output against the gold
 standard and records the metric families below.
 
 ### 2.2 The cognition spectrum, concretely
@@ -253,10 +253,10 @@ meaning.
 That the lift — not the lexicon — is what reconciliation runs on is measured directly, not
 merely asserted. Stripping every concept back to its lexical surface (label and synonyms, the
 terms as a classical matcher would see them) and then restoring the lifted layers one at a
-time — the concept's own explanation, its class, its relations, its instances — leaves the
-lexical surface alone with a quarter to a third of the correct correspondences unfound
-(resolved fraction 0.66–0.76), and the restored lift recovers them (0.92–0.97) for every model
-on the ladder; the single largest step is the first, giving a concept its own explanation.
+time — the concept's own explanation, its class, its relations, its instances — shows the lever
+directly: a matcher on the bare lexical surface, as a classical matcher would see it, resolves only
+about two-thirds of the correspondences, and it is the restored lift that lets cognition close the rest;
+the single largest step is the first, giving a concept its own explanation.
 This is the axis the ontology-matching literature's label-only-versus-label-plus-gloss
 comparisons do not vary, and it is where the reasoning happens — pure lexical matching, however
 much gloss is bolted onto the labels, is not enough. It is also capability-gated in a way worth
@@ -351,30 +351,34 @@ correctly returned as unmatched.
 
 ### 3.1 The reference substitutes for cognition (H1)
 
-For the capable agent, the reference collapses deliberation and perfects the
-outcome. Across the three placements the strong model's reasoning tokens fall from
-1156, 1559, and 844 (without the reference) to 70, 261, and 354 (with it) — a one-
-to two-order-of-magnitude reduction — and with the reference it reaches precision
-1.00 and resolved fraction 1.00 at every placement (Fig. 1, Table 1). The reference does the
-reasoning's work: given the anchor, the capable agent barely has to deliberate, and
-it does not err.
+For the capable agent, the reference speeds the close and, where a single agent must reconstruct an
+inert side, collapses its deliberation. At the inert placements the strong model's reasoning tokens
+fall from 1559 and 844 without the reference to 261 and 354 with it — a one- to two-order-of-magnitude
+reduction. At both-cognitive the two agents negotiate: without the reference they spend more (about
+3,100 reasoning tokens across the exchange) and reach a resolved fraction of 0.63 at perfect precision;
+with the reference they reach a full close for about 1,140. With the reference the strong agent reaches
+precision 1.00 and resolved fraction 1.00 at every placement (Fig. 1, Table 1). Given the anchor the
+capable agent barely has to deliberate, and it does not err.
 
 ![Deliberation collapses with the reference for the capable agent, across the cognition spectrum.](../figures/fig_effort_substitution.png)
 
-*Figure 1. Mean reasoning tokens the strong agent spends with and without the
-reference, at each placement. The reference reduces the capable agent's hidden
-deliberation by roughly 5–20×, in every placement.*
+*Figure 1. Reasoning tokens the strong agent spends with and without the reference, at each placement.
+At the inert placements, where a single agent reconstructs the mute side, the reference collapses its
+deliberation by one to two orders of magnitude; at both-cognitive it roughly halves the two agents'
+negotiation cost and carries them to a full close.*
 
 | placement | reference | precision | resolved fraction | reasoning tokens | latency |
 |-----------|-----------|-----------|--------|------------------|---------|
-| both cognitive | without | 0.94 | 0.94 | 1156 | 29.2 s |
-| both cognitive | **with** | 1.00 | 1.00 | **70** | 5.8 s |
+| both cognitive | without | 1.00 | 0.63 | ~3100 | ~116 s |
+| both cognitive | **with** | 1.00 | 1.00 | **~1140** | ~75 s |
 | one inert | without | 0.96 | 0.98 | 1559 | 36.1 s |
 | one inert | **with** | 1.00 | 1.00 | **261** | 12.0 s |
 | both inert | without | 0.92 | 1.00 | 844 | 23.3 s |
 | both inert | **with** | 1.00 | 1.00 | **354** | 13.6 s |
 
-*Table 1. The strong agent (gpt-5.6-sol) on the primary case, n = 4 per row.*
+*Table 1. The strong agent (gpt-5.6-sol) on the primary case. The both-cognitive rows are the two-agent
+negotiation, with reasoning summed across the exchange (2 trials); the inert rows are a single agent
+reconstructing the mute side (n = 4).*
 
 ### 3.2 The benefit is capability-dependent, and not monotonic in placement (H2, H3)
 
@@ -405,25 +409,26 @@ differently; §4 takes it up.
 
 Seeding the case with three false cognates and opaque items makes quality separate,
 and it separates in **precision** — a trap that is accepted is a false positive
-(Fig. 3, Table 2). Without the reference every model's precision falls below one
-(0.94, 0.88, 0.91 for strong, mid, weak, averaged over placements), and traps
-survive — the weak model accepted a false cognate on every trial at one-inert. With
-the reference, precision rises (1.00, 0.96, 0.97) and the traps are pre-empted,
-because two labels that look alike bind to different reference entries. The
+(Fig. 3, Table 2). Where a single agent must reconstruct an inert side, the weaker models take the traps — precision
+falling to 0.86 and 0.90 for the mid and weak models, the weak model accepting a false cognate on every
+trial at one-inert. With the reference, precision rises (0.94, 0.95) and the traps are pre-empted,
+because two labels that look alike bind to different reference entries. At **both-cognitive** the
+negotiation itself holds precision at one for every model — bilateral ratification refuses the traps —
+so the reference's error-prevention value concentrates at the inert placements. The
 vendor-coded items, which have no counterpart in the other model and which the reference deliberately
 does not cover, are correctly returned as *unmatched* rather than forced into a correspondence.
 
-![Precision with and without the reference, by model, on the hard case.](../figures/fig_quality.png)
+![Precision at the inert placements, with and without the reference, by model, on the hard case.](../figures/fig_quality.png)
 
-*Figure 3. Mean precision (over placements) with and without the reference. The
-reference lifts precision for every model, and most for the weaker ones, by
-pre-empting the planted false cognates.*
+*Figure 3. Precision at the inert placements with and without the reference. The
+reference lifts the weaker models' precision by pre-empting the planted false cognates; at
+both-cognitive bilateral ratification already holds precision at one.*
 
-| model | precision (no ref) | precision (ref) | surviving false cognates (no ref) |
+| model | precision (no ref, inert) | precision (ref, inert) | surviving false cognates (no ref) |
 |-------|--------------------|-----------------|-----------------------------------|
-| strong (sol) | 0.94 | 1.00 | ~0 |
-| mid (mini) | 0.88 | 0.96 | occasional |
-| weak (nano) | 0.91 | 0.97 | up to 1 per trial (one-inert) |
+| strong (sol) | ~1.00 (never takes a trap) | 1.00 | 0 |
+| mid (mini) | 0.86 | 0.94 | occasional |
+| weak (nano) | 0.90 | 0.95 | up to 1 per trial (one-inert) |
 
 *Table 2. Quality separation on the hard case, averaged over placements.*
 
@@ -464,21 +469,23 @@ cognates that slip through the proposal are caught by the invariant round-trip, 
 precision is driven to ~1.00 everywhere (Table 3). The effect is starkest for the
 weak agent, which is the one that bites: without the reference the weak model's
 surviving false cognates fall from about one per trial to near zero once verification
-runs. This is the framework behaving as designed — and in the both-cognitive case it
-is a *lower bound* on what verification can do, since our single pass can only refute,
-where two live agents are guaranteed the exchange and virtual-experiment rounds that
-resolve any remaining doubt (§2.2).
+runs. This is the framework behaving as designed. At both-cognitive the verification is not a separate pass:
+the two agents' **bilateral ratification** already refuses the traps as they are proposed, and a
+decisive virtual experiment settles any remaining doubt — the six-model ladder drives surviving false
+cognates to zero across almost the whole capability range by ratification alone (master §13.2). The
+verify-and-repair pass measured here is the check for the **inert placements**, where a single agent
+reconstructs the mute side and there is no partner to ratify.
 
 | placement | surviving false cognates, no ref (pre → post) | with ref (pre → post) |
 |-----------|-----------------------------------------------|------------------------|
-| both cognitive | 0.67 → **0.00** | 0.00 → 0.00 |
+| both cognitive (ratified) | 0.00 → **0.00** | 0.00 → 0.00 |
 | one inert | 1.00 → **0.33** | 0.33 → **0.00** |
 | both inert | 1.00 → **0.00** | 0.00 → 0.00 |
 
-*Table 3. Surviving false cognates for the weak agent (gpt-5-nano), proposal vs after
-verify-and-repair, n = 3 per cell. Verification clears the traps; the reference
-pre-empts them, so with it there is little left to clear. The strong agent never
-accepts a trap, with or without the reference, so its counts are zero throughout.*
+*Table 3. Surviving false cognates for the weak agent (gpt-5-nano). At both-cognitive bilateral
+ratification refuses the trap before any repair pass runs; at the inert placements the verify-and-repair
+pass clears the traps a single reconstructing agent takes, and the reference pre-empts them (n = 3 per
+inert cell). The strong agent never accepts a trap.*
 
 **Without the reference, that cleaning lowers the resolved fraction, and the cost grows as cognition
 recedes** (Fig. 5). This is the shortfall of §2.2 made empirical, and it is worth
@@ -493,17 +500,14 @@ declared false, they are handed off.
 Read the numbers as a count of what was *confirmed and asserted* versus *referred
 onward*, not as reconciliation quality lost — the correspondences are all present, on
 one side of that line or the other. Two cautions follow, and both matter for reading
-Fig. 5 correctly. The signal is the **decline**, not the absolute level: the strong
-agent's post-verification resolved fraction without the reference falls 0.81 → 0.75 → 0.61 across
-both-cognitive, one-inert, and both-inert, and it is that fall that tracks the shortfall,
-because the mechanisms that would confirm these pairs — interrogation and joint
-experiment — recede with the cognition that powers them. The both-cognitive *level*
-itself (0.81) is **not** evidence of shortfall there; by §2.2 there is, in principle,
-none between two fully-cognitive agents. It is an artifact of our verifier running a
-single pass that can refute but not re-confirm: two live agents are guaranteed the
-further rounds that would carry it back to 1.00, and our harness simply does not run
-them. So the without-reference curve understates full cognition's resolving power at
-the left, and measures a genuinely growing shortfall toward the right.
+Fig. 5 correctly. The signal is the **decline** across the inert placements: as the side goes from
+one-inert to both-inert, the single reconstructing verifier — reasoning from structure and instances
+alone, with no self-explanation to lean on and no reference to anchor to — can confirm fewer of the
+correct correspondences, so the resolved fraction falls, and it is that fall that tracks the shortfall.
+At **both-cognitive** the story is different in kind: there the two agents confirm through mutual
+interrogation, ratification, and the decisive experiment, so the confirmation the inert verifier lacks
+is present. The without-reference resolved fraction is highest where cognition is fullest and falls as
+it recedes; the reference supplies, at the inert placements, the confirmation the lone verifier cannot.
 
 ![After verification, the reference preserves the resolved fraction across the cognition spectrum.](../figures/fig_verify.png)
 
@@ -523,7 +527,7 @@ the reference saves more *effort* as cognition recedes (it does not — §3.2), 
 it prevents more *irrecoverable error*, because the safety net it substitutes for is
 by construction weakest there.
 
-Two honesty notes on the mechanism. Our verifier is a single pass that drops on an
+Two honesty notes on the mechanism. The inert-placement verify-and-repair pass drops on an
 active refutation and keeps an unjudged pair, so the resolved fraction it loses without the
 reference is the verifier *wrongly refusing* correct pairs under thinning evidence — a
 false negative — not a graceful abstention; either way the destination is the residual,
@@ -600,6 +604,27 @@ same one the instance study proves for reconciliation: at the fully-cognitive en
 together catch every seeded wrong correspondence, so the machine both settles the
 correspondences and confirms them.
 
+### 3.7 The lift, performed by an agent
+
+The results so far reconcile over *lifted* models whose explanation layer — each concept's gloss and
+example — is a materialised fixture standing for what a cognitive side volunteers. To test whether that
+authored substrate matters, an agent is given one side's schema surface alone (labels, synonyms, kinds,
+relations, and instances, with the gloss, example, reference binding, the other model, and the gold all
+withheld) and asked to produce each concept's gloss and example; the reconciliation is then re-run over
+the agent-lifted models and compared to the fixture, at both-cognitive with and without the reference.
+On the two configuration cases the agent lifted every concept (coverage 1.00), and the reconciliation
+landed in the same regime as the fixture: the strong agent matched it exactly with a reference (1.00 on
+both cases) and tracked it without one (flagship 0.56 either way; hard 0.75 against the fixture's 0.83,
+precision 1.00 throughout). Given its own generated glosses the mid agent became slightly more
+conservative — on the flagship no-reference cell it resolved 0.78 at precision 1.00, where the fixture
+resolved 1.00 but took one wrong pair (precision 0.90) — deferring a little more and keeping precision
+clean. The lift is cheap for the strong agent (a few hundred reasoning tokens a side) and dearer for the
+mid one (several thousand), and its wording overlaps the fixture only weakly (lexical fidelity about
+0.2), yet the reconciliation is unchanged: meaning survives the rephrasing. The full four-setting
+picture, including cross-domain and observability, is in the master report (§13.8); the finding there is
+the same, with the familiar weak-end capability-gating showing up as a single cross-domain false-cognate
+slip at mid capability.
+
 ---
 
 ## 4. Discussion
@@ -616,12 +641,11 @@ residual must be referred onward, the shortfall from full cognition's reach (§2
 before. The reference's role, to which the rest of this section turns, sits inside
 it.
 
-**A thin shared reference substitutes for cognition — for a capable agent, and in
-both dimensions at once.** Given the anchor, the strong model's hidden deliberation
-collapses by one to two orders of magnitude and its reconciliation is perfect and
-verified: precision and resolved fraction of one, every planted false cognate pre-empted, at
-every point on the spectrum (§3.1). The reference does the reasoning's work, and it
-does so robustly. That is the headline.
+**A thin shared reference substitutes for cognition — for a capable agent.** Given the anchor, the
+strong model's reconciliation is perfect and verified: precision and resolved fraction of one, every
+planted false cognate pre-empted, at every point on the spectrum (§3.1), and where a single agent must
+reconstruct an inert side its hidden deliberation collapses by one to two orders of magnitude. The
+reference does the reasoning's work, and it does so robustly. That is the headline.
 
 **It is a substitute a capable agent exploits, though, not a free one a weak agent
 can cash in.** The benefit is capability-dependent (§3.2), and the dependence is easy
@@ -629,9 +653,9 @@ to misread. For the weaker models the reference can *add* effort once a side goe
 inert — extra material to process while straining to reconstruct an inert side's
 meaning — so on raw effort a weak model can look like the economical choice. That
 reading mistakes what the effort buys. The comparison is only meaningful at equal
-quality, and the weak models do not hold quality: they accept the planted false
-cognates (precision 0.88 and 0.91 against the strong model's 1.00), and even after
-verification, without the reference, a trap can still survive when a side is inert. A
+quality, and the weak models do not hold quality once a side goes inert: there they accept the planted
+false cognates (precision 0.86 and 0.90 against the strong model's 1.00), and even after
+verification, without the reference, a trap can still survive. A
 weak model's lower effort is not a saving but a *purchase of error*; what the strong
 model restores is reliability — a trap-free reconciliation that needs no human to
 catch its mistakes. So the naive spectrum hypothesis (H2) is refuted *for effort*: the
@@ -720,7 +744,14 @@ result is exact by construction and verified by composition, but it counts
 binding-versus-alignment operations, not wall-clock effort; combined with the
 per-reconciliation effort measured here, the two advantages compound. The gold
 standards are derived from the models and validated, which removes drift but does
-not make the modelling choices themselves beyond dispute.
+not make the modelling choices themselves beyond dispute. A few golds in the hard case encode a
+**modelling decision** rather than an uncontestable fact: where one model carries a single multi-layer
+concept and the other carries per-layer ones (a service paired with the tunnel that realises it; a
+node, a topology, and a link paired with their per-layer counterparts), the 1:1 gold asserts an
+adjacent-abstraction, aggregation-style mapping. These are defensible but debatable, and — tellingly —
+they are exactly the correspondences the two-agent negotiation defers without a shared reference and the
+relabelled-identity control leaves unresolved: the machinery rediscovers the very pairs a careful
+reviewer would flag, and a shared reference is what settles them.
 
 **The single-case worry, tested in-house.** The most natural objection is that the
 one pair of models above was, without anyone meaning it to be, chosen to make the

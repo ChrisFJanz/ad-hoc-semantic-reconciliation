@@ -152,8 +152,9 @@ So the lexicon pins the ontology for the middle of the ladder, not the bottom: i
 reference-rescuable, then beyond rescue. (All three agents bind the easy correspondences with perfect
 precision; where they fall short of a full close is the **one-to-many decomposition** — even the
 strong agent tends to map the legacy alarm to the NMOP alarm-State but miss the fault constituent, so
-the resolved fraction sits near 0.75. Decomposing an overloaded concept into its several parts is the
-honest hard edge of Act 1.)
+the resolved fraction sits near 0.75 with the RFC-anchored reference in play (without it the two agents
+defer more of the decomposition, to about 0.25, as in the other settings). Decomposing an overloaded
+concept into its several parts is the honest hard edge of Act 1.)
 
 ### 3.2 Act 2, the verdict: the pragmatics collapse the false-page storm — for agents that can carry them
 
@@ -273,6 +274,11 @@ measured, and reproduces the first study's mechanism — capable agents resolve 
 can be interrogated and fall to a structural floor once inert, while the weakest agent only partially
 resolves — as a supporting result rather than the setting's headline. And the correlation model is a
 resource-dependency-and-time abstraction of the incident-yang correlation, not its full machinery.
+
+Finally, the lift here is agent-performable as well as assumed: re-running with each side's explanation
+produced by an agent from its schema surface reconciles as the materialised lift does — equal with the
+reference (0.75) and, if anything, a little higher without it (0.75 against the fixture's 0.50 for the
+strong agent) at unchanged precision, with no cognate taken (master §13.8).
 
 ## 6. Reproducibility
 

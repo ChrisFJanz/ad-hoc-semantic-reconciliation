@@ -3,6 +3,7 @@
 independent (it draws the setting); the results figures read the wave CSVs."""
 from __future__ import annotations
 import csv, glob
+import numpy as np
 from pathlib import Path
 from statistics import mean
 import matplotlib
@@ -14,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 FIG = ROOT / "figures"
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
 GREY, SURFACE = "#9a958d", "#fbfaf8"
+NAVY, INK = "#14314f", "#1a1a1a"
 
 
 def save(fig, name):
@@ -95,43 +97,49 @@ def load(pat):
 
 
 def fig_mirror():
-    """Omission vs commission: resolved fraction against precision, reference off -> on."""
-    rows = [r for r in load("config_cross_domain.csv") if r["stack"].startswith("openai-agent")]
+    """Cross-domain at both-cognitive (two agents): resolved fraction without vs with the constructed
+    reference, precision annotated. Grouped bars (no positional collisions)."""
+    rows = [r for r in load("two_agent_full.csv")
+            if r.get("stack") == "two-agent" and r.get("case") == "config_cross_domain"]
     if not rows:
-        print("skip fig_crossdomain_mirror: no wave-1 data"); return
-    MODELS = ["gpt-5.6-sol", "gpt-5-mini", "gpt-5-nano"]
-    LAB = {"gpt-5.6-sol": "sol (strong)", "gpt-5-mini": "mini", "gpt-5-nano": "nano (weak)"}
-    COL = {"gpt-5.6-sol": BLUE, "gpt-5-mini": ORANGE, "gpt-5-nano": AQUA}
+        print("skip fig_crossdomain_mirror: no two_agent_full data"); return
+    MODELS = [("gpt-5.6-sol", "sol\n(strong)"), ("gpt-5-mini", "mini\n(mid)"), ("gpt-5-nano", "nano\n(weak)")]
 
-    def mean(rs, k):
-        xs = [fl(r[k]) for r in rs if fl(r[k]) is not None]
+    def cell(md, ref, k):
+        xs = [fl(r[k]) for r in rows if r["model"] == md and r["uses_reference"] == ref and fl(r[k]) is not None]
         return sum(xs) / len(xs) if xs else 0.0
 
-    fig, ax = plt.subplots(figsize=(7.6, 6.0))
-    for md in MODELS:
-        pts = {}
-        for ref in ("False", "True"):
-            sel = [r for r in rows if r["model"] == md and r["uses_reference"] == ref]
-            pts[ref] = (mean(sel, "recall"), mean(sel, "precision"))
-        (x0, y0), (x1, y1) = pts["False"], pts["True"]
-        ax.annotate("", xy=(x1, y1), xytext=(x0, y0),
-                    arrowprops=dict(arrowstyle="->", color=COL[md], lw=2, alpha=0.9))
-        ax.scatter([x0], [y0], s=120, facecolor="white", edgecolor=COL[md], lw=2, zorder=3)
-        ax.scatter([x1], [y1], s=150, color=COL[md], zorder=3)
-        ax.text(x1 + 0.012, y1, LAB[md], fontsize=9.5, color=COL[md], va="center")
-    ax.scatter([], [], s=120, facecolor="white", edgecolor="#555", lw=2, label="no reference")
-    ax.scatter([], [], s=150, color="#555", label="constructed reference")
-    ax.set_xlabel("resolved fraction  (how much the binding pass commits)")
-    ax.set_ylabel("precision  (how much of it is right)")
-    ax.set_xlim(0.35, 1.06); ax.set_ylim(0.45, 1.06)
-    ax.legend(frameon=False, fontsize=9, loc="lower left")
-    ax.set_title("Mirror-image shortfalls, one cure. Without the constructed reference the "
-                 "strong\nagent under-commits (omission, top-left) and the weak one mis-commits\n"
-                 "(commission, lower-right); the reference pulls both to the corner.", fontsize=10.5)
-    _clean(ax) if False else None
+    fig, ax = plt.subplots(figsize=(9.2, 5.8))
+    x = np.arange(len(MODELS)); w = 0.36
+    rf_no = [cell(m, "False", "resolved_fraction") for m, _ in MODELS]
+    rf_re = [cell(m, "True", "resolved_fraction") for m, _ in MODELS]
+    p_no = [cell(m, "False", "precision") for m, _ in MODELS]
+    p_re = [cell(m, "True", "precision") for m, _ in MODELS]
+    b0 = ax.bar(x - w / 2, rf_no, w, color=GREY, label="no shared reference", zorder=3)
+    b1 = ax.bar(x + w / 2, rf_re, w, color=BLUE, label="constructed reference", zorder=3)
+    for xi, rf, p in zip(x - w / 2, rf_no, p_no):
+        ax.annotate(f"precision\n{p:.2f}", (xi, rf), textcoords="offset points", xytext=(0, 4),
+                    ha="center", va="bottom", fontsize=8, color=INK,
+                    bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.85))
+    for xi, rf, p in zip(x + w / 2, rf_re, p_re):
+        ax.annotate(f"precision\n{p:.2f}", (xi, rf), textcoords="offset points", xytext=(0, 4),
+                    ha="center", va="bottom", fontsize=8, color=INK,
+                    bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.85))
+    ax.axhline(1.0, color=NAVY, ls=":", lw=1)
+    ax.set_ylabel("resolved fraction  (share of true matches found)", fontsize=9.5)
+    ax.set_xticks(x); ax.set_xticklabels([m[1] for m in MODELS], fontsize=9.5)
+    ax.set_ylim(0, 1.22)
+    ax.legend(frameon=True, framealpha=0.95, edgecolor="none", facecolor=SURFACE, fontsize=9,
+              loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.0))
+    ax.set_title("Cross-domain at both-cognitive (two agents): the mirror.\n"
+                 "Without the constructed reference the strong agent under-commits (0.20 resolved, precision\n"
+                 "1.00 — omission) while the weak agent commits some wrong (precision 0.67); the reference\n"
+                 "carries the strong agent to a full close and restores the weak agent's precision.",
+                 fontsize=9.8, color=NAVY)
     ax.set_facecolor(SURFACE)
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
+    ax.grid(axis="y", ls=":", alpha=0.4); ax.set_axisbelow(True)
     save(fig, "fig_crossdomain_mirror.png")
 
 
