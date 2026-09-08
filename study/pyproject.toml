@@ -8,7 +8,7 @@ dependencies = []  # the walking skeleton is standard-library only
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
-openai = ["openai>=1.40"]  # for the language-model agent stack (src/reconcile/stacks/agent_openai.py)
+openai = ["openai>=1.40", "pydantic>=2"]  # language-model agent stacks; structured outputs use pydantic
 
 [build-system]
 requires = ["setuptools>=61"]

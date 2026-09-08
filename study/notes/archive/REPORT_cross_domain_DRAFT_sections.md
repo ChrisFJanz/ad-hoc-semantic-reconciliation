@@ -11,10 +11,10 @@ re-litigated here. What this study isolates is a single, early stage: the **sche
 binding** — given two already-lifted models, deciding which concept on one side corresponds to
 which concept on the other.
 
-We measure that one stage with a single reasoning pass. The agent is shown both lifted models
-and returns the correspondences it is willing to commit; it does not converse, it does not
-construct the reference, and it does not verify by provisioning — those are the later stages
-the binding hands off to. The quantity of interest is therefore not only how much the pass
+We measure that one stage as a negotiation between two agents, each holding only its own lifted
+model and a surface catalogue of the other's; they propose correspondences and ratify the other's.
+Constructing the reference and settling a hard pair by a decisive experiment are separate stages
+the binding can call on. The quantity of interest is therefore not only how much the pass
 gets right, but how much it **leaves in the residual**: the correspondences it does not close,
 which pass downstream to the rest of the process — to further machine cognition where the
 agents are live to continue, or to a person where they are not.
