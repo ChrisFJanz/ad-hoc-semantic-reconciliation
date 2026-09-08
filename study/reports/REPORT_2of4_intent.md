@@ -34,7 +34,8 @@ authority, which this study carries in a small, portable **policy** the customer
 because a live service's circumstances change, the whole exchange **recurs across the service's
 life**, a loop rather than a single hand-off.
 
-We built a harness in which two language-model agents perform this reconciliation over a seeded case
+We built a harness in which a live reasoning agent performs this reconciliation against the provider's
+capabilities and the customer's policy, given as deterministic oracles, over a seeded case
 grounded in the first setting's OTN/optical network, and scored every step against a validated gold
 standard. The headline is a single, sharp result. **When both agents can reason, the reconciliation
 completes autonomously — including the negotiation, with no human in the loop. As cognition recedes,
@@ -124,8 +125,12 @@ customer's.
 
 ### 2.1 The agents, the oracle, and the phases
 
-As in the first setting, the reconciling cognition is played by a reasoning stack — in the
-fully-cognitive case, an exchange between two live agents, O and N. The stack runs a **bounded
+Here the reconciling cognition is one live reasoning agent, the consumer's agent O, working against the
+provider's live capabilities and the customer's policy, each supplied as a **deterministic tool** that
+returns a hidden ground truth: the negotiation is between a reasoning agent and those authoritative
+oracles, not between two language models. (This differs from the schema settings, where both sides are
+live reasoning agents; here the provider's feasibility and best-achievable offer are determinate facts,
+so modelling them as an oracle is exact rather than a simplification.) The agent runs a **bounded
 tool-use loop**: the model is given the intents, the catalogue, and the policy in force, and a small
 set of tools that stand for the live capabilities of each side. The provider side, when live, can be
 asked to **check the feasibility** of a realisation (does it actually satisfy the bounds, using the

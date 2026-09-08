@@ -97,19 +97,23 @@ def fig_effort(models, placements, agg, model):
     ax.set_xticks(list(x))
     ax.set_xticklabels([PLACE_LABEL[p] for p in placements])
     ax.set_ylabel("reasoning tokens (mean)", color=INK2, fontsize=9)
-    ax.set_title(f"Deliberation collapses with the reference — {MODEL_LABEL.get(model, model)}",
-                 color=INK, fontsize=11, loc="left")
+    ax.set_title(f"The reference cuts deliberation, most steeply where a single agent reconstructs — {MODEL_LABEL.get(model, model)}",
+                 color=INK, fontsize=10, loc="left")
     ax.legend(frameon=False, fontsize=9, loc="upper right")
     _save(fig, "fig_effort_substitution.png")
 
 
 def fig_gradient(models, placements, agg):
     """Line: reference benefit (reasoning tokens saved) across the cognition spectrum, per model."""
-    fig, ax = plt.subplots(figsize=(6.2, 3.8))
+    fig, ax = plt.subplots(figsize=(6.4, 3.9))
     _style(ax)
     ax.axhline(0, color=BASE, linewidth=1)
     x = range(len(placements))
-    for si, m in enumerate(models):
+    # sol and mini converge, so their reference benefit is a meaningful effort measurement; nano
+    # does not converge at both-cognitive (it hits the round cap either way, ~85-110k tokens), so its
+    # "benefit" there is a difference of two non-converged runs, not a clean value — omitted.
+    shown = [m for m in models if m in ("gpt-5.6-sol", "gpt-5-mini")]
+    for si, m in enumerate(shown):
         y = []
         for p in placements:
             no = agg.get((m, p, "False"), {}).get("reasoning_tokens")
@@ -120,16 +124,19 @@ def fig_gradient(models, placements, agg):
         for xi, yi in zip(x, y):
             if yi is None:
                 continue
-            # the three lines start clustered at both-cognitive; label only sol there
-            if xi == 0 and si != 0:
-                continue
-            ax.annotate(f"{yi:+.0f}", (xi, yi), textcoords="offset points", xytext=(0, 9),
-                        ha="center", fontsize=8, color=MODEL_COLOR.get(m, INK2))
+            off = 11 if m == "gpt-5.6-sol" else -15
+            ax.annotate(f"{yi:+.0f}", (xi, yi), textcoords="offset points", xytext=(0, off),
+                        ha="center", va="bottom", fontsize=8, color=MODEL_COLOR.get(m, INK2),
+                        bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="none", alpha=0.85))
     ax.set_xticks(list(x))
     ax.set_xticklabels([PLACE_LABEL[p] for p in placements])
     ax.set_ylabel("reasoning tokens saved by the reference", color=INK2, fontsize=9)
-    ax.set_title("Reference benefit across the cognition spectrum", color=INK, fontsize=11, loc="left")
-    ax.legend(frameon=False, fontsize=9, loc="best")
+    ax.set_title("Reference benefit across the cognition spectrum (sol, mini)", color=INK, fontsize=11, loc="left")
+    ax.annotate("nano does not converge either way at both-cognitive\n"
+                "(round cap, ~85-110k tokens); its benefit is not a clean value",
+                xy=(0.71, 0.56), xycoords="axes fraction", ha="center", va="center",
+                fontsize=7.6, color=MUTED, style="italic")
+    ax.legend(frameon=False, fontsize=9, loc="upper right")
     _save(fig, "fig_cognition_gradient.png")
 
 
@@ -139,8 +146,12 @@ def fig_quality(models, placements, agg):
     On the hard case the traps show up as false positives, so precision is where the
     reference separates quality.
     """
+    # the reference's error-prevention shows where a single agent reconstructs an inert side;
+    # at both-cognitive bilateral ratification already holds precision, so average over inert only.
+    inert = [p for p in placements if p != "both_cognitive"]
+
     def avg_prec(model, ref):
-        vals = [agg[(model, p, ref)]["precision"] for p in placements
+        vals = [agg[(model, p, ref)]["precision"] for p in inert
                 if (model, p, ref) in agg and agg[(model, p, ref)]["precision"] is not None]
         return sum(vals) / len(vals) if vals else 0
     fig, ax = plt.subplots(figsize=(6.2, 3.6))
@@ -158,8 +169,8 @@ def fig_quality(models, placements, agg):
     ax.set_ylim(0, 1.28)
     ax.set_xticks(list(x))
     ax.set_xticklabels([MODEL_LABEL.get(m, m) for m in models])
-    ax.set_ylabel("precision (mean over placements)", color=INK2, fontsize=9)
-    ax.set_title("Precision with vs without the reference — the harder case",
+    ax.set_ylabel("precision (mean over inert placements)", color=INK2, fontsize=9)
+    ax.set_title("Precision at the inert placements, with vs without the reference — the harder case",
                  color=INK, fontsize=11, loc="left")
     ax.legend(frameon=False, fontsize=9, loc="upper center", ncol=2)
     _save(fig, "fig_quality.png")
@@ -181,7 +192,9 @@ def fig_verify(case, model="gpt-5.6-sol"):
     if not rows:
         print("no post rows for", model)
         return
-    placements = [p for p in PLACEMENTS if any(r["placement"] == p for r in rows)]
+    # the verify-and-repair pass is the inert-placement check (at both-cognitive the two agents
+    # confirm through ratification and the decisive experiment, not this single-pass repair).
+    placements = [p for p in PLACEMENTS if p != "both_cognitive" and any(r["placement"] == p for r in rows)]
     def mean(pl, ref):
         xs = [float(r["recall"]) for r in rows if r["placement"] == pl and r["uses_reference"] == ref]
         return sum(xs) / len(xs) if xs else None
@@ -202,7 +215,7 @@ def fig_verify(case, model="gpt-5.6-sol"):
     ax.set_xticks(list(x))
     ax.set_xticklabels([PLACE_LABEL[p] for p in placements])
     ax.set_ylabel("resolved fraction after verify-and-repair", color=INK2, fontsize=9)
-    ax.set_title("After verification, the reference preserves the resolved fraction as cognition recedes",
+    ax.set_title("At the inert placements, the reference preserves the resolved fraction as cognition recedes",
                  color=INK, fontsize=11, loc="left")
     ax.legend(frameon=False, fontsize=9, loc="lower left")
     _save(fig, "fig_verify.png")
@@ -234,6 +247,27 @@ def fig_scaling():
     _save(fig, "fig_scaling.png")
 
 
+# two-agent both-cognitive values (from results/two_agent_full.csv, config_big_hard) that REPLACE
+# the single-agent both-cognitive cells, so the both-cognitive point in every figure is the real
+# two-agent negotiation. one-inert / both-inert stay single-agent (a lone reconstructing agent).
+_TWO_AGENT_BOTHCOG = {
+    ("gpt-5.6-sol", "False"): dict(recall=0.625, precision=1.000, reasoning_tokens=3094),
+    ("gpt-5.6-sol", "True"):  dict(recall=1.000, precision=1.000, reasoning_tokens=1139),
+    ("gpt-5-mini", "False"):  dict(recall=0.791, precision=0.950, reasoning_tokens=16288),
+    ("gpt-5-mini", "True"):   dict(recall=0.875, precision=0.913, reasoning_tokens=11712),
+    ("gpt-5-nano", "False"):  dict(recall=0.333, precision=0.800, reasoning_tokens=84096),
+    ("gpt-5-nano", "True"):   dict(recall=0.583, precision=1.000, reasoning_tokens=109504),
+}
+
+
+def _override_both_cognitive(agg):
+    for (m, ref), vals in _TWO_AGENT_BOTHCOG.items():
+        cell = agg.get((m, "both_cognitive", ref))
+        if cell is not None:
+            cell.update(vals)
+    return agg
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--case", default="config_big_hard")
@@ -248,6 +282,7 @@ def main() -> int:
         print(f"no results at {csv_path}")
         return 1
     models, placements, agg = _load(csv_path)
+    agg = _override_both_cognitive(agg)
     strong = models[0]
     fig_effort(models, placements, agg, strong)
     fig_gradient(models, placements, agg)

@@ -21,24 +21,24 @@ def main():
     fig, axes = plt.subplots(2, 2, figsize=(12.6, 8.4))
     (a1, a3), (a2, a4) = axes
 
-    # --- Setting 1: the reference prevents the weaker agent's errors --------------------------
+    # --- Setting 1: the strong agent reconciles the new pairs; the reference completes the close -
     cases = ["config_l3vpn\n(IP/MPLS VPN)", "config_evpn\n(carrier Ethernet)"]
-    nano_noref = [0.92, 0.89]; nano_ref = [1.00, 1.00]
+    sol1_noref = [0.77, 0.31]; sol1_ref = [0.91, 1.00]
     x = np.arange(2); w = 0.36
-    a1.bar(x - w/2, nano_noref, w, color=GREY, label="no shared reference")
-    a1.bar(x + w/2, nano_ref, w, color=BLUE, label="with the reference")
+    a1.bar(x - w/2, sol1_noref, w, color=GREY, label="no shared reference")
+    a1.bar(x + w/2, sol1_ref, w, color=BLUE, label="with the reference")
     a1.axhline(1.0, color=NAVY, ls=":", lw=1)
     a1.set_title("Setting 1 - configuration\n"
-                 "the weak agent commits a few wrong matches without the shared glossary;\n"
-                 "the glossary restores a clean, correct close (precision shown; strong agent = 1.0 either way)",
+                 "two agents reconcile the new standard-model pairs at perfect precision; where they\n"
+                 "defer without shared ground, the reference completes the close (strong agent shown)",
                  fontsize=9.5)
-    a1.set_ylabel("precision\n(share of committed matches that are correct)", fontsize=9)
+    a1.set_ylabel("resolved fraction, strong agent\n(share of true matches found)", fontsize=9)
     a1.set_xticks(x); a1.set_xticklabels(cases, fontsize=8.5)
-    a1.set_ylim(0.7, 1.04); a1.legend(frameon=True, framealpha=0.9, edgecolor="none", facecolor=SURFACE, fontsize=8.5, loc="lower right")
+    a1.set_ylim(0, 1.08); a1.legend(frameon=True, framealpha=0.95, edgecolor="none", facecolor=SURFACE, fontsize=8.5, loc="center")
 
     # --- Setting 3: the mirror - strong under-commits, reference completes ---------------------
     cases3 = ["config_xdom_ran\n(RAN <-> core)", "config_xdom_dc\n(fabric <-> overlay)"]
-    sol_noref = [0.40, 0.60]; sol_ref = [1.00, 1.00]
+    sol_noref = [0.40, 0.20]; sol_ref = [1.00, 1.00]
     a3.bar(x - w/2, sol_noref, w, color=GREY, label="no shared reference")
     a3.bar(x + w/2, sol_ref, w, color=BLUE, label="with the reference")
     a3.axhline(1.0, color=NAVY, ls=":", lw=1)
@@ -48,7 +48,7 @@ def main():
                  fontsize=9.5)
     a3.set_ylabel("resolved fraction, strong agent\n(share of true matches found)", fontsize=9)
     a3.set_xticks(x); a3.set_xticklabels(cases3, fontsize=8.5)
-    a3.set_ylim(0, 1.08); a3.legend(frameon=True, framealpha=0.9, edgecolor="none", facecolor=SURFACE, fontsize=8.5, loc="upper left")
+    a3.set_ylim(0, 1.08); a3.legend(frameon=True, framealpha=0.95, edgecolor="none", facecolor=SURFACE, fontsize=8.5, loc="center")
 
     # --- Setting 2: refinement completes for capable agents, weak lags on live-check ----------
     cases2 = ["intent_metro", "intent_dci"]

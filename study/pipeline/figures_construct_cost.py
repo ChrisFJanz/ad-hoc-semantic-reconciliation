@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Construct-cost / redundancy figure (Track A6): when is building the shared reference
-worth the cognition it costs? Left: the strong agent's close by condition across the three
-schema settings, with the cognition spent written on each bar — construction is load-bearing
-only where no standard exists (cross-domain), and redundant where a given reference already
-does the job cheaply. Right: construction cost down the model ladder — it explodes for weak
-agents and buys a worse close, not a better one.
+"""Construct-cost figure (master Figure 15), TWO-AGENT.
 
-Reads results/construct_cost_config_{big_hard,cross_domain,observability}.csv.
-Writes figures/fig_construct_cost.png (light background).
+When is building the shared reference worth the cognition it costs? The strong agent's close by
+condition across three schema settings, with the cognition spent annotated on each bar. Construction is
+load-bearing only where no standard exists (cross-domain, 0.20 -> 0.80); where a given reference already
+exists it matches the close for far less cognition.
+
+Reads results/two_agent_full.csv (no-reference floor, both-cognitive, sol) and
+results/experiment_closer.csv (constructed and given-reference, two-agent, sol, 2 trials).
+Writes figures/fig_construct_cost.png (light background). Single panel: the mini/nano construction-cost
+ladder is not re-run two-agent; the master text carries that point via the six-model ladder.
 """
 from __future__ import annotations
-import csv, statistics as st
+import csv
+from collections import defaultdict
 from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
@@ -19,82 +22,76 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 FIG = ROOT / "figures"
-BLUE, ORANGE, GREY, AQUA = "#2a78d6", "#eb6834", "#b8c2cc", "#1baf7a"
+BLUE, ORANGE, GREY = "#2a78d6", "#eb6834", "#b8c2cc"
 NAVY, SURFACE, INK, FAINT = "#14314f", "#fbfaf8", "#1a1a1a", "#6a655e"
 SETTINGS = [("config_big_hard", "Setting 1\nconfiguration\n(a standard exists)"),
             ("config_cross_domain", "Setting 3\ncross-domain\n(no standard)"),
             ("config_observability", "Setting 4\nobservability\n(RFC anchor)")]
-CONDS = [("no-ref", "no reference", GREY), ("constructed", "constructed", ORANGE),
-         ("given-ref", "given reference", BLUE)]
 
 
-def load(c):
-    return list(csv.DictReader(open(ROOT / "results" / f"construct_cost_{c}.csv")))
+def _mean(rs, k):
+    v = [float(x[k]) for x in rs if x.get(k) not in ("", "None", None)]
+    return sum(v) / len(v) if v else 0.0
 
 
-def mean(rows, k):
-    v = [float(r[k]) for r in rows if r.get(k) not in ("", None)]
-    return st.mean(v) if v else float("nan")
+def _data():
+    full = [r for r in csv.DictReader(open(ROOT / "results" / "two_agent_full.csv"))
+            if r["stack"] == "two-agent" and r["model"] == "gpt-5.6-sol" and r["uses_reference"] == "False"]
+    fa = defaultdict(list)
+    for r in full:
+        fa[r["case"]].append(r)
+    clo = list(csv.DictReader(open(ROOT / "results" / "experiment_closer.csv")))
+    ca = defaultdict(list)
+    for r in clo:
+        ca[(r["case"], r["condition"])].append(r)
+    out = {}
+    for case, _ in SETTINGS:
+        nr = fa.get(case, [])
+        co = ca.get((case, "construct-only"), [])
+        rf = ca.get((case, "reference"), [])
+        out[case] = {
+            "no-ref": (_mean(nr, "resolved_fraction"), _mean(nr, "reasoning_tokens")),
+            "constructed": (_mean(co, "resolved_fraction"),
+                            _mean(co, "construct_tokens") + _mean(co, "reasoning_tokens")),
+            "given-ref": (_mean(rf, "resolved_fraction"), _mean(rf, "reasoning_tokens")),
+        }
+    return out
 
 
 def main():
-    fig, (axL, axR) = plt.subplots(1, 2, figsize=(13.2, 5.4), gridspec_kw={"width_ratios": [1.7, 1]})
-
-    # ---- Left: strong agent (sol), recall by condition per setting, spend annotated ----
+    d = _data()
+    fig, ax = plt.subplots(figsize=(11.2, 5.6))
     x = np.arange(len(SETTINGS)); w = 0.26
-    for i, (cond, clabel, color) in enumerate(CONDS):
-        recs, spends = [], []
-        for c, _ in SETTINGS:
-            rc = [r for r in load(c) if r["condition"] == cond and r["model"] == "gpt-5.6-sol"]
-            recs.append(mean(rc, "recall")); spends.append(mean(rc, "total_reasoning_tokens"))
+    conds = [("no-ref", "no reference", GREY), ("constructed", "constructed", ORANGE),
+             ("given-ref", "given reference", BLUE)]
+    for i, (key, label, color) in enumerate(conds):
         xs = x + (i - 1) * w
-        bars = axL.bar(xs, recs, w, color=color, label=clabel, zorder=3)
+        recs = [d[c][key][0] for c, _ in SETTINGS]
+        spends = [d[c][key][1] for c, _ in SETTINGS]
+        ax.bar(xs, recs, w, color=color, label=label, zorder=3)
         for xi, r, s in zip(xs, recs, spends):
             sp = f"{s / 1000:.1f}k" if s >= 1000 else f"{s:.0f}"
-            axL.annotate(f"{r:.2f}\n{sp} tok", (xi, r), textcoords="offset points", xytext=(0, 3),
-                         ha="center", va="bottom", fontsize=7.2, color=INK,
-                         bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.85))
-    axL.set_title("The strong agent: resolved fraction by condition, with the cognition spent (tokens)\n"
-                  "construction is load-bearing only where no standard exists (Setting 3);\n"
-                  "elsewhere a given reference matches it far more cheaply",
-                  fontsize=10, color=NAVY)
-    axL.set_ylabel("resolved fraction  (share of true matches found)", fontsize=9.5)
-    axL.set_xticks(x); axL.set_xticklabels([s[1] for s in SETTINGS], fontsize=9)
-    axL.set_ylim(0, 1.28); axL.axhline(1.0, color=NAVY, ls=":", lw=1)
-    axL.legend(frameon=True, framealpha=0.9, edgecolor="none", facecolor=SURFACE,
-               fontsize=9, loc="upper center", ncol=3)
-    axL.annotate("no standard →\nbuilding it pays\n(0.50 → 0.93)", xy=(1 - 0.26, 0.50),
-                 xytext=(1 - 0.72, 0.30), fontsize=8.2, color=ORANGE, fontweight="bold",
-                 arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.3))
-
-    # ---- Right: construction cost explodes down the ladder, close gets worse ----
-    models = [("gpt-5.6-sol", "sol\n(strong)"), ("gpt-5-mini", "mini\n(mid)"), ("gpt-5-nano", "nano\n(weak)")]
-    spend, rec = [], []
-    for m, _ in models:
-        rows = [r for c, _ in SETTINGS for r in load(c) if r["condition"] == "constructed" and r["model"] == m]
-        spend.append(mean(rows, "total_reasoning_tokens")); rec.append(mean(rows, "recall"))
-    xm = np.arange(len(models))
-    bars = axR.bar(xm, spend, 0.6, color=[AQUA, ORANGE, "#b23a48"], zorder=3)
-    for xi, s, r in zip(xm, spend, rec):
-        axR.annotate(f"{s:,.0f} tok", (xi, s), textcoords="offset points", xytext=(0, 14),
-                     ha="center", va="bottom", fontsize=8.5, color=INK, fontweight="bold")
-        axR.annotate(f"resolved fraction {r:.2f}", (xi, s), textcoords="offset points", xytext=(0, 3),
-                     ha="center", va="bottom", fontsize=7.6, color=FAINT)
-    axR.set_title("Cost of CONSTRUCTING the reference, down the ladder\n"
-                  "(mean over the three settings): it explodes for weaker\n"
-                  "agents and buys a worse close, not a better one",
-                  fontsize=10, color=NAVY)
-    axR.set_ylabel("reasoning tokens to construct + bind", fontsize=9.5)
-    axR.set_xticks(xm); axR.set_xticklabels([m[1] for m in models], fontsize=9)
-    axR.set_ylim(0, max(spend) * 1.30)
-
-    for ax in (axL, axR):
-        ax.set_facecolor(SURFACE)
-        for sname in ("top", "right"):
-            ax.spines[sname].set_visible(False)
-        ax.grid(axis="y", ls=":", alpha=0.5); ax.set_axisbelow(True)
+            ax.annotate(f"{r:.2f}\n{sp} tok", (xi, r), textcoords="offset points", xytext=(0, 3),
+                        ha="center", va="bottom", fontsize=7.4, color=INK,
+                        bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.85))
+    ax.set_title("The strong agent (two agents negotiating): resolved fraction by condition,\n"
+                 "with the cognition spent — construction is load-bearing only where no standard exists\n"
+                 "(Setting 3, 0.20 to 0.80); elsewhere a given reference matches it far more cheaply",
+                 fontsize=10.5, color=NAVY)
+    ax.set_ylabel("resolved fraction  (share of true matches found)", fontsize=9.5)
+    ax.set_xticks(x); ax.set_xticklabels([s[1] for s in SETTINGS], fontsize=9)
+    ax.set_ylim(0, 1.24); ax.axhline(1.0, color=NAVY, ls=":", lw=1)
+    ax.legend(frameon=True, framealpha=0.9, edgecolor="none", facecolor=SURFACE,
+              fontsize=9, loc="upper center", ncol=3, bbox_to_anchor=(0.5, 1.005))
+    ax.annotate("no standard —\nbuilding it pays\n(0.20 to 0.80)", xy=(1, 0.80),
+                xytext=(1.42, 0.62), fontsize=8.4, color=ORANGE, fontweight="bold",
+                ha="left", arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.3))
+    ax.set_facecolor(SURFACE)
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    ax.grid(axis="y", ls=":", alpha=0.5); ax.set_axisbelow(True)
     fig.suptitle("When is constructing the shared reference worth the cognition it costs?",
-                 fontsize=12.5, fontweight="bold", color=NAVY, y=1.005)
+                 fontsize=12.5, fontweight="bold", color=NAVY, y=1.0)
     fig.tight_layout()
     fig.savefig(FIG / "fig_construct_cost.png", dpi=150, facecolor=SURFACE, bbox_inches="tight")
     print("wrote", (FIG / "fig_construct_cost.png").name)
