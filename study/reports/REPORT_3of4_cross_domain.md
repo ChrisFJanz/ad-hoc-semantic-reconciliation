@@ -368,8 +368,8 @@ The central measurement is the **single-pass schema binding**, and the reference
 brackets the construction step rather than running the full construct-then-bind protocol; the full
 protocol — the two agents constructing the reference themselves and then closing, with no reference
 pre-given — is also run, and it confirms the thesis in this hardest setting: the strong agent lifts
-from 0.20 to 0.80, and to 0.90 when the agents also run a decisive virtual experiment. The model ladder is three points spanning a capability range; the mirror is clear
-but its shape between the points is not resolved. The pragmatic gold is largely clean but includes
+from 0.20 to 0.80, and to 0.90 when the agents also run a decisive virtual experiment. The core ladder is three points; the shape of the capability gradient between them is filled in by a
+six-model sweep at both-cognitive (master report §13.2, Figure 8), the cross-domain mirror included. The pragmatic gold is largely clean but includes
 one field (committed rate) whose authority is genuinely contested, reported as such. And the
 instance-level co-reference is bracketed, not measured, on the argued grounds that it reproduces the
 first setting's result; that argument rests on the intent setting's endpoint phase and on the shared

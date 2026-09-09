@@ -453,8 +453,9 @@ real network data — the latter needs carrier collaboration.)
 
 The oracle is deterministic and the gold is derived and validated from a
 hidden truth, which removes drift but also means the "difficulty" of the case is authored rather than
-found. The model ladder is three points, chosen to span a capability range; the gradient is clear but
-its shape between the points is not resolved. The measured cross-product is deliberately modest, and
+found. The intent setting is run on the three-point core ladder; the six-model sweep that fills in the shape of
+the gradient covers the schema settings, so within intent the gradient is clear but its shape between the
+points is not resolved. The measured cross-product is deliberately modest, and
 the lifecycle in particular rests on a small number of worked trajectories; the accuracies reported
 are stable across the trials run but are illustrations of behaviour, not tight estimates. Finally, the
 negotiation and policy are a faithful but simplified rendering of the NMRG draft's richer model —
