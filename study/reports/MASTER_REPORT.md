@@ -1163,6 +1163,25 @@ which is the capability-gated frontier of Thesis 5 and the decisive operation of
 turn. These are operations over any lifted model, not tricks of reconciliation; reconciliation is only
 where we have instrumented them most fully.
 
+Seen this way, the static artefacts of the study are not rivals to the live operation but **frozen
+outputs** of it. A published reference or lexicon is a frozen *pull-in*: a description someone
+interrogated out of a system earlier. A snapshot, the ABox the lift holds, is a frozen *refresh*: an
+observation taken at lift time. And a pre-placed policy, the movable policy of the intent setting, is a
+frozen *resolve*: a pragmatic verdict judged once and carried forward. Each stands in for its live
+mechanism, and each holds only until the context it assumed drifts, which is exactly the point at which
+the live mechanism would have had to run again. You can freeze a past judgement, but not the judgement for
+a context not yet met, and that is the irreducible reason a static model can describe pragmatics but never
+carry them resolved for an unforeseen case. This also fixes the behaviour across the cognition spectrum,
+because the mechanisms are gated by two things at once. The first is **liveness**: pulling in needs a live
+peer to interrogate, refreshing a live source to re-observe, creating certainty a live substrate to
+experiment on, so as sides go inert these fall away in order, until at both-inert only the frozen
+description survives and every pragmatic verdict must be referred onward. The second is **capability**,
+which bites hardest on resolution: even with a live side present, pulling in and refreshing are close to
+mechanical, while judging significance, acceptability, or authority is the capability-gated frontier. The
+two gates are why the observability verdict is settled only by a capable agent with a live side to read,
+while correlation, a structural test, holds across the whole ladder. The framework does not merely extend
+to the operations beyond reconciliation; it predicts their signatures.
+
 The whole picture, then, is this. The lift is powerful and, as the eleven cases show, robustly performable
 by an agent for the layers that are structural, at every capability. But the pragmatic layer is not
 something a lift, however careful, or an ontology, however standard, ever holds resolved. It is pulled in,
