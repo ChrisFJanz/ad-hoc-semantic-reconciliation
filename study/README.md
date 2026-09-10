@@ -88,10 +88,10 @@ The **lift** is the move from a *data model* (a schema and its records: already 
 picture, but a fixed one, with much of its meaning left implicit) to a *semantic model* that carries
 its meaning explicitly. A semantic model has three
 parts: an **ontology**, including its **lexicon**, with a schematic layer (concepts, their kinds and
-relations, and the labels and synonyms that name them) and a concrete layer (the instances that
-populate them); **pragmatics**, the contextual information a consumer needs (what a thing is for, whose
-authority governs it, in what context it holds); and **provenance** (who asserted each part, by what
-method, how firmly). The lift itself is a cognitive act, aided by supports that are not parts of the
+relations, and the labels and synonyms that name them: the **TBox**) and a concrete layer (the
+instances that populate them: the **ABox**); **pragmatics**, the contextual information a consumer needs
+(what a thing is for, whose authority governs it, in what context it holds), obtained not by lookup but
+by judgement; and **provenance** (who asserted each part, by what method, how firmly). The lift itself is a cognitive act, aided by supports that are not parts of the
 model: definitions, worked examples, a canonical example, and an optional link to a shared reference.
 Being self-describing, a lifted model is **portable**: any cognitive consumer can pick it up with no
 pre-agreed standard. Reconciliation runs over these lifted models, not over labels.
@@ -115,6 +115,49 @@ goes inert a single agent reconstructs it. The
 *surviving false cognates*, and the *residual* — and, for the agent, cognitive effort (reasoning
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
+
+## What's new (2026-09-10)
+
+This revision brings the **pragmatic layer** to the front, shows the **lift itself** as an act of
+cognition, and makes the agent-performed lift **replicable from the command line**. The central findings
+are unchanged; the reports carry the results in place.
+
+- **Pragmatics across the lifecycle — new master-report §13.9.** The report now separates the three
+  layers of a lifted model by *how each is obtained*. The ontology's schematic layer (the **TBox**) and
+  its instances (the **ABox**) are both *observed*: a determinate lookup any consumer, even a
+  non-cognitive one, can do. The **pragmatics** (whether a state matters, whether an offer is acceptable,
+  who decides) are *judged*, from schema, instances and context, and are defeasible and context-relative.
+  A static model, ours or an OWL export, holds the TBox in full and the ABox as a refreshable snapshot,
+  but can only *describe* pragmatics, never carry them resolved; the section shows the OWL mapping and its
+  limit. A live operation supplies them through four general mechanisms: pulling a pragmatic fact *in* by
+  interrogating a live peer, *refreshing* it against the current context, *creating certainty* by a
+  decisive virtual experiment, and *resolving* the verdict itself by judgement, the last being the
+  capability-gated frontier. The point is carried through the rest of the report: §14's second map gains a
+  note tying its **Lift** and **Pragmatic-resolution** rows to §13.8 and §13.9, and the one-paragraph
+  close (§17) now states it.
+- **The lift, shown and performed — extended §13.8.** Three things land in the lift section. A *concrete
+  lifted model* is now printed in full (§2 shows one complete concept as JSON, with a note that the shape
+  is encoding-agnostic), so "what exactly is in a lifted model?" has a definite answer. A *lift-in-the-act*
+  trace box shows the agent naming its own per-concept evidence on the relabelled control, where the
+  recognisable names are replaced by invented ones so only the structure remains: the agent names the
+  surface signals it used and the look-alikes it ruled out, confirming the reading is structural, not
+  recalled. And the agent-performed lift is run *lift-only across eleven schema cases and the whole model
+  ladder*: coverage is complete and structure intact at every rung, every false-cognate trap is caught
+  (the relabelled control included), and the differences are of verbosity, not accuracy — so §16 gains a
+  clause that lift correctness is robust across the ladder.
+- **New code, and the replicable work it supports.** The agent-performed lift is now a first-class,
+  reproducible entry point. `pipeline/lift_study.py` gains `--lift-only` (produce the lift without running
+  reconciliation), `--cases all` (discover and run every schema case), and `--trace` (record the agent's
+  stated per-concept evidence); `src/reconcile/lift.py` gains the trace mode, and `src/reconcile/model.py`
+  a `to_dict()` that serialises a lifted model back to the case JSON shape, with offline tests added under
+  `tests/`. Running `pipeline/lift_study.py --lift-only --cases all` over the three-model ladder is what
+  produced the eleven-case result above; the lifted models it emits are committed under
+  `results/agent_lifted_models/` so the finding can be inspected and rebuilt.
+- **Figures and deck updated to match.** Figure 1 now labels the ontology's schematic and concrete layers
+  as the **TBox** and the **ABox**, tying the opening picture to §13.9. The constructed scaling chart
+  (former Figure 11) is dropped — it was not a peer to the measured figures and its point is made in the
+  text — and the later figures are renumbered. The master slide deck carries the new material: the
+  pragmatics-across-the-lifecycle distinction, the four operation-time mechanisms, and the lift in the act.
 
 ## What's new (2026-09-08)
 
@@ -247,6 +290,10 @@ python pipeline/run.py --case config_big_hard --agent --trials 4 \
 python pipeline/intent_study.py     --model gpt-5.6-sol,gpt-5-mini,gpt-5-nano
 python pipeline/pragmatics_study.py --model gpt-5.6-sol,gpt-5-mini,gpt-5-nano
 python pipeline/observability_study.py --model gpt-5.6-sol,gpt-5-mini,gpt-5-nano
+
+# the agent-performed lift, on its own, across every schema case (dumps each lifted model to JSON;
+# add --trace to record the agent's stated evidence per concept):
+python pipeline/lift_study.py --lift-only --cases all --model gpt-5.6-sol,gpt-5-mini,gpt-5-nano
 ```
 
 Per-setting run commands are in each report's Reproducibility section, and the method notes under

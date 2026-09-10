@@ -73,8 +73,8 @@ reconciliation unchanged where the study leans on it.
 in specifications, convention, and the engineers who built around it. The lift is a cognitive act,
 aided by a few supports (definitions, worked examples, a canonical example, an optional linked
 reference), that turns the data model into an ad hoc semantic model built from three parts: an
-ontology including its lexicon (schematic concepts and the concrete instances that populate them),
-pragmatics (use, authority, context), and provenance. Being self-describing, the result is
+ontology including its lexicon (a schematic layer of concepts, kinds and relations, the **TBox**, and
+the concrete instances that populate them, the **ABox**), pragmatics (use, authority, context), and provenance. Being self-describing, the result is
 **portable**: any cognitive consumer can pick it up and understand it, with no pre-agreed standard.*
 
 The payload of the picture is the word **portable**. A lifted semantic model is **self-describing**,
