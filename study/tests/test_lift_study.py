@@ -114,6 +114,49 @@ def test_lift_coverage_counts_missing_concepts():
     assert eff["lift_coverage"] == 0.5
 
 
+def test_to_dict_round_trips_and_matches_fixture_shape(tmp_path=None):
+    """The agent-lift dump serialises a SemanticModel back to the fixture's JSON shape, round-trips
+    through from_json, and carries the agent's gloss/example while preserving every other field."""
+    sm = _model()
+    parsed = _lift_result([("t.node", "produced gloss node", "produced ex node"),
+                           ("t.link", "produced gloss link", "produced ex link")])
+    lifted, _ = lift_model(sm, "gpt-test", client=StubClient([(parsed, 1, 1)]))
+
+    d = lifted.to_dict(note="agent lift")
+    assert list(d["concepts"][0].keys()) == [
+        "id", "label", "synonyms", "kind", "gloss", "example", "ref", "relations", "instances"]
+    assert d["note"] == "agent lift"
+
+    # write and read back through the real loader
+    p = Path(__file__).resolve().parent / "_tmp_agent_lift.json"
+    try:
+        p.write_text(json.dumps(d))
+        back = SemanticModel.from_json(p)
+        by = {c.id: c for c in back.concepts}
+        assert by["t.node"].gloss == "produced gloss node"          # agent's explanation layer
+        assert by["t.node"].ref == "forwarding-node"                 # source field preserved
+        assert by["t.node"].relations == ({"rel": "part-of", "target": "t.topo"},)
+        assert by["t.node"].instances == ("R1", "R2")
+    finally:
+        p.unlink(missing_ok=True)
+
+
+def test_trace_records_evidence_and_asks_for_it():
+    """--trace mode: the lift asks for a per-concept EVIDENCE note and returns it in effort['trace'],
+    without disturbing the lifted model itself."""
+    from reconcile.lift import _LiftResultTraced, _LiftedTraced
+    sm = _model()
+    parsed = _LiftResultTraced(concepts=[
+        _LiftedTraced(id="t.node", evidence="kind=node; relation part-of->t.topo", gloss="g", example="e"),
+        _LiftedTraced(id="t.link", evidence="kind=link; between->t.node", gloss="g", example="e")])
+    client = StubClient([(parsed, 1, 1)])
+    lifted, eff = lift_model(sm, "gpt-test", client=client, trace=True)
+    assert "trace" in eff and eff["trace"]["t.node"].startswith("kind=node")
+    assert "EVIDENCE" in json.dumps(client.calls[0])           # the prompt asked for it
+    by = {c.id: c for c in lifted.concepts}                     # model unaffected
+    assert by["t.node"].gloss == "g" and by["t.node"].ref == "forwarding-node"
+
+
 def test_gloss_fidelity_range():
     assert gloss_fidelity("the same content words here", "same content words here") == 1.0
     assert gloss_fidelity("alpha beta gamma", "delta epsilon zeta") == 0.0

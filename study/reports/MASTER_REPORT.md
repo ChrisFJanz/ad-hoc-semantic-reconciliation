@@ -87,6 +87,28 @@ of cognitive consumption; the settings that follow will also refine an intent ag
 and read an anomaly for its significance, over the same lifted substrate. Get the lift, and the rest
 of the programme is operations over portable semantic models.
 
+To make this concrete, here is one concept of a lifted model, the TAPI connectivity-service from the
+flagship configuration case (a model is the list of such concepts under a short header):
+
+```json
+{ "id": "t.cs", "label": "connectivity-service", "kind": "service",
+  "synonyms": ["service"], "ref": "connection-service",
+  "gloss": "an end-to-end connectivity service across the network",
+  "example": "the A1-A3 ODU2 service",
+  "relations": [ {"rel": "uses", "target": "t.sip"},
+                 {"rel": "realized-by", "target": "t.cep"},
+                 {"rel": "over", "target": "t.topo"} ],
+  "instances": ["cs-a1a3-odu2 (ODU2, A1 to A3)"] }
+```
+
+The fields carry the lexicon (label, synonyms), the ontology (kind, relations), the concrete layer
+(instances), the explanation supports (gloss, example), and the binding to a shared reference (ref); a
+live side volunteers gloss and example, an inert side exposes only the structural fields. The content is
+independent of its serialisation: shown here as JSON, the same model emits just as readily as OWL/RDF,
+which is also how a deterministic pipeline that compiles a formal schema (such as YANG) to an ontology
+carries it. What such a compiler cannot supply, and what the cognitive lift adds, is the pragmatic and
+explanation layer the schema does not contain.
+
 One framing is worth making explicit, because it connects this work to a fast-growing body of
 practice. The ontology and the individuals that populate it are, together, a **knowledge graph**: the
 ontology is its schema (the typed concepts and the relations permitted among them) and the instances
@@ -711,35 +733,23 @@ hurts: the tallest bar, above the id-only floor.*
 The reference's two roles run in opposite directions along the spectrum: its **effort** benefit peaks
 with strong, live cognition (§13.1), while its **correctness** benefit concentrates where cognition
 (and so verification) is weakest, disciplining the committing agent exactly where it would otherwise
-err. And independent of any per-reconciliation effect, a shared reference changes how the work
-**scales** with the number of systems. The unit here is one **reconciliation operation**: a single act
-of aligning two semantic models, the same operation whose effort §13.1 meters. The question Figure 11
-asks is how many such operations it takes to give *N* systems mutual semantic interoperability.
-Reconciled pairwise, every system must be aligned with every other, which is N(N−1)/2 operations,
-growing as N². Bound instead to one shared reference, each system is reconciled once against the anchor
-and any two then interoperate *through* it: N operations, growing linearly. This is a structural count,
-not an experimental average: the number of pairings needed to connect N nodes is a property of the
-interoperability graph (a full mesh versus a hub-and-spoke), fixed by the topology and exact at every
-N, which is why the figure is established by construction to N = 12 rather than sampled. Its standing as
-a measure of *real* work rests on two things. The unit is the very operation the programme meters
-everywhere else; and the linear branch is licensed by setting 1's own finding that binding to a shared
-reference is *correct and composes*, so that reconciling A and B each to the anchor genuinely yields an
-A↔B alignment and the mesh can be collapsed to the hub without loss. Per-operation effort (Figures 5 and 6) is then a roughly constant multiplier, so total cognitive load inherits the N-versus-N² split
-directly: the count is what decides whether the whole workload grows linearly or quadratically.
-
-![Work grows linearly with a reference, quadratically without.](../figures/fig_scaling.png)
-
-*Figure 11 (setting 1, constructed). A **count of reconciliation operations** (the pairings that must be
-made) against the number of systems N: bind-once-to-a-shared-reference (~N) versus align-every-pair
-(~N²). A structural count established by construction to N = 12, not a measurement of reasoning effort;
-contrast Figures 5 and 6, which measure cognitive load directly.*
+err. And independent of any per-reconciliation effect, a shared reference changes how the work **scales**
+with the number of systems. The unit is one **reconciliation operation**, a single act of aligning two
+semantic models, the same operation whose effort §13.1 meters. Reconciled pairwise, every system must be
+aligned with every other, N(N−1)/2 operations, growing as N²; bound instead to one shared reference,
+each system is reconciled once against the anchor and any two then interoperate *through* it, N
+operations, growing linearly. This is a structural count, not an experimental average: the number of
+pairings that connect N nodes is a property of the interoperability graph, a full mesh against a
+hub-and-spoke, and collapsing the mesh to the hub is licensed by setting 1's own finding that binding to
+a shared reference is *correct and composes*. Per-operation effort is a roughly constant multiplier
+(Figures 5 and 6), so the total workload inherits the linear-versus-quadratic split directly.
 
 ### 13.4 Position on the cognition spectrum: what degrades, and how
 
 Position on the cognition spectrum is the master variable, and moving along it degrades a reconciliation
 in a specific, measured way. This is sharpest in **setting 2**, the intent setting, where a consumer and a provider negotiate an
 intent to a workable deal, and the crux is a pragmatic judgement: whether a degraded counter-offer is
-acceptable to the customer. Across the cognition spectrum (Figure 12) that decision closes autonomously
+acceptable to the customer. Across the cognition spectrum (Figure 11) that decision closes autonomously
 while the customer's judgement is present (live at both-cognitive, or **pre-placed as a portable
 policy**) and falls to the floor at the mute and both-inert placements, where the correct behaviour is
 to refer the decision to a person. The pre-placed policy is the mechanism that holds the line where a mute customer
@@ -748,7 +758,7 @@ description must hand off.
 
 ![The negotiation across the spectrum; a pre-placed policy holds the line.](../figures/fig_intent_negotiation.png)
 
-*Figure 12 (setting 2). Decision accuracy across the cognition spectrum. It holds high while the
+*Figure 11 (setting 2). Decision accuracy across the cognition spectrum. It holds high while the
 customer's judgement is present (live, or pre-placed in a movable policy) and collapses to referral
 at consumer-mute and both-inert.*
 
@@ -759,7 +769,7 @@ distinct services) that the static descriptions simply cannot separate. Telling 
 *acting on the live system*: interrogating it, or provisioning something and reading it back. The number
 of such live probes the agent is permitted is its **probe budget**.
 
-Whether spending that budget actually resolves the hard cases depends on placement, and Figure 13 shows
+Whether spending that budget actually resolves the hard cases depends on placement, and Figure 12 shows
 why by crossing the two: it sweeps the probe budget (none, bounded, unbounded) at each of two spectrum
 placements. At **both-cognitive** the live side is there to be interrogated, so more budget resolves
 more: the residual falls to zero at unbounded budget. This is what **budget-limited** means: enough
@@ -775,7 +785,7 @@ one-inert, no effort can, because the thing that would answer the probe is not t
 
 ![Live probing resolves the hardest cases only where a live side remains to probe.](../figures/fig_instance_budget.png)
 
-*Figure 13 (setting 1). The hardest look-alike individuals, for the strong agent: what fraction gets
+*Figure 12 (setting 1). The hardest look-alike individuals, for the strong agent: what fraction gets
 resolved as the live-system probe budget is swept from none through bounded to unbounded, at two spectrum
 placements. Budget (the x-axis) and placement (the two lines) are crossed, so the curves isolate their
 interaction. At **both-cognitive** a live side can be interrogated and the residual is budget-limited:
@@ -802,7 +812,7 @@ paper and can be told apart only by questioning the live system, which the study
 *experiment-only* cases) reported alongside precision, the share of what the agent commits that is
 right.
 
-The result (Figure 14, left panel) is clean, and because precision stays at 1.00 across the whole grid it
+The result (Figure 13, left panel) is clean, and because precision stays at 1.00 across the whole grid it
 is a real gradient, not an artefact of guessing. Seeing more helps, but only up to a point: given no
 ability to ask, the agent settles none of the hardest cases when it sees only an identifier, and rises to
 just half of them (0.50) even when it can see the entire static record. Static evidence, however
@@ -812,7 +822,7 @@ for. The jump is at **discovery**: the moment the agent may ask the open questio
 every level of visibility goes straight to a full close (1.00). The decisive reach is not seeing more,
 and not even asking more, but being able to ask the question you did not know in advance to ask.
 
-The same access lands differently depending on the agent's power (Figure 14, right panel). Handed
+The same access lands differently depending on the agent's power (Figure 13, right panel). Handed
 identical access, the strong agent converts it into a perfect close at perfect precision. The mid agent
 uses it but plateaus part-way, around 0.67 to 0.75. The weak agent posts high numbers that are not the
 same achievement: its precision slips (to 0.97–0.98) and it begins committing look-alikes, so its
@@ -828,7 +838,7 @@ carrier and standards-body engagement discussed under scope could help pin down.
 
 ![How far the strong agent settles the hardest cases, as what it can see and what it can ask are varied; and the same across the model ladder.](../figures/fig_reach.png)
 
-*Figure 14 (reach). Left: the strong agent, with liveness held at the top. Each line is one level of
+*Figure 13 (reach). Left: the strong agent, with liveness held at the top. Each line is one level of
 visibility (how much of the record it can see); moving left to right widens what it may ask, from nothing,
 through asking a named attribute, to discovery (asking what exists), to a live experiment. The y-axis is
 the share of the hardest (experiment-only) cases it settles correctly. Seeing more (higher lines at the
@@ -884,7 +894,7 @@ paying the construction cost afresh on every exchange.
 
 ![When constructing the shared reference is worth the cognition it costs.](../figures/fig_construct_cost.png)
 
-*Figure 15 (the economics of constructing a reference). The strong agent's resolved fraction under three
+*Figure 14 (the economics of constructing a reference). The strong agent's resolved fraction under three
 conditions, no shared reference (grey), a reference the two agents construct themselves (orange), and a
 given, already-published reference (blue), across the schema settings, with the reasoning each condition
 spent noted on each bar. In Setting 3, where no standard exists, constructing the reference lifts the two
@@ -1015,6 +1025,153 @@ lift, like consuming one, is gated by cognitive power. What the study still hold
 *raw schema text* (inferring the ontology's structure, not only its explanation layer) and a cold
 start with no instances yet to read; both are natural experiments for real data (§16).
 
+A follow-up widens this from the two measured agents to the full capability ladder. Lifting alone, with
+no reconciliation, across all eleven schema cases and three models (a strong, a mid, and a deliberately
+weak one), every lift came back complete and structurally identical to its fixture, and the false-cognate
+traps were caught at every rung: even the weak model read the tunnel-termination-point as a trail head
+rather than a link end, and, in the relabelled-identity control where the recognisable names are stripped
+away, still told the concept that *originates* a conduit from the one that *terminates* a span, reasoning
+from the relations alone. What capability moved was not correctness but verbosity: the weak model wrote
+about fifteen words of gloss per concept, the strong twenty-two, the mid twenty-six, and, against first
+intuition, the tersest model tracked the (terse) fixture wording most closely. This is a lift-only
+spot-check, one trial per case, but across eleven cases the reading is steady: the structural layers of
+the lift are recovered well at every capability, and the one thing recovered at no capability is the
+pragmatic layer. That is not a shortcoming of the lift, and it is the more important half of the story,
+so it earns its own reading.
+
+The box below is the lift caught in the act, on the relabelled-identity control, where the recognisable
+names are replaced by invented ones so that nothing but the structure is left to reason from. Asked to
+record, per concept, the surface signals it used and the look-alike it ruled out, the strong agent
+reports (its own stated reasoning, with concept ids rendered as their names):
+
+> **The lift in the act (relabelled control, strong agent).**
+>
+> **`flux-span`**, kind *link*; `between` two vertices, `terminated-by` a cap-point; instance
+> `fluxspan-R1-R2`. *"A topology link; ruled out the flux-conduit, which is a service over the wider fabric
+> rather than a single inter-vertex link."* → **a direct link between two vertices.**
+>
+> **`cap-point`**, kind *termination*; `on-vertex`, `terminates` the flux-span; instance `cp-R1-R2`. *"A
+> span termination; ruled out the conduit-cap-point, which originates a conduit rather than terminating a
+> span."* → **the point where a span ends at a vertex.**
+>
+> **`conduit-cap-point`**, kind *termination*; `on-vertex`, `originates` the flux-conduit; instance
+> `ccp-A1 (conduit head)`. *"A conduit-origin termination; ruled out the cap-point, which terminates spans,
+> and the conduit-circuit-endpoint, which is an endpoint belonging to a conduit."* → **the head from which
+> a conduit originates.**
+>
+> **`flux-conduit`**, kind *service*; `from` the conduit-cap-point, `over` the fabric; instance
+> `conduit-a1a3-grd2`. *"A network service; ruled out the flux-span, a single link rather than an end-to-end
+> service."* → **a service that originates at the conduit head and is carried across the fabric.**
+>
+> *The two look-alike terminations are told apart by a single relation: the cap-point **terminates** a
+> span, the conduit-cap-point **originates** a conduit. The reading of the conduit then leans on the head
+> that originates it, so a lift is relational, not concept-by-concept in isolation. Nothing here is
+> recognition: the names are invented, and the readings are built from kinds, relations, and instances
+> alone. The evidence is the agent's own stated reasoning, shown as such.*
+
+Two things in the box are worth drawing out. The reading is genuinely structural, not a memory of a known
+standard, which is what the relabelling was built to test: with `span` and `conduit` and `cap-point`
+carrying no public meaning, the only thing separating the two terminations is that one `terminates` and
+the other `originates`, and that is exactly the distinction the agent names. And the lift is relational:
+to read the conduit the agent leans on the head that originates it, and to read the span it leans on the
+termination that anchors it, so the flow of a lift runs along the model's own relations rather than
+concept by concept. This is the schematic layer being recovered by reasoning, and it is the counterpart,
+for the lift, of the negotiation and the decisive experiment shown earlier for reconciliation.
+
+### 13.9 Pragmatics across the lifecycle: what the lift holds, and what only a live operation can
+
+The result just seen, that an agent lifting from the bare schema recovers the structure but never the
+pragmatic layer, is easy to read as a limitation and is not one. It points instead to a distinction
+inside the semantic model that is worth drawing precisely, because it is the distinction a modelling
+tradition centred on the schema most easily misses: pragmatics are not a harder part of the ontology,
+they are a different kind of thing.
+
+The cleanest way to tell a lifted model's parts apart is not by what each contains but by how a consumer
+obtains it, and doing so separates the ontology's schematic and concrete layers (§2) and sets the
+pragmatics clearly apart from both. The **schematic layer** is the concepts, their kinds, and their
+relations, the TBox: a standing structure that changes only when the model is re-lifted. The **concrete
+layer** is the instances that populate it now, the ABox: dynamic, but obtained by **observation**, a
+determinate re-reading of the live source that even a non-cognitive consumer can perform. The
+**pragmatics** are neither a schema axiom nor a recorded fact. They are the interpretation over both:
+whether a state matters, whether a degraded offer is acceptable, whose authority governs a contested
+field, what a correct translation must preserve. They are obtained not by lookup but by **judgement**,
+inferred from the schema and the instances and the current context, defeasible, and context-relative. So
+the pragmatic layer is not the dynamic cousin of the ABox. An alarm's current state is *read*; whether it
+warrants action here and now is *judged*. The ABox is observed; pragmatics are resolved.
+
+That distinction fixes exactly what a lift can hold. It holds the schematic layer in full, because that
+is structure, and structure is what the agent-lift recovers from the surface at every capability, even
+with the names stripped. It holds the concrete layer as a **snapshot**, which goes stale, but staleness
+is cheap: anyone can refresh it by re-observing the source. The pragmatic layer it can only **describe**.
+An owner that knows its context can write down the rule and its dependency, "the concern score is
+recomputed from the current context, and is lower during a maintenance window," but it cannot freeze the
+resolved value, because that value is a judgement against a context not fixed at lift time. A stranger
+lifting from the bare surface cannot even describe it, because the rule is not in the structure, which is
+precisely what the eleven cases show: the pragmatic nuance absent at every rung, and rightly so, since to
+invent it would be to fabricate it. The lift, then, holds the schematic layer fully, the concrete layer
+as a refreshable snapshot, and the pragmatic layer only as a standing description of a situated thing.
+
+This is not an artefact of our JSON encoding; a standard ontology has the same limit. The content of a
+lifted concept maps cleanly to OWL:
+
+| lifted-model field | OWL / RDF |
+|---|---|
+| concept | `owl:Class` |
+| label | `rdfs:label` |
+| synonyms | `skos:altLabel` |
+| kind | a class annotation |
+| gloss | `skos:definition` |
+| example | `skos:example` |
+| ref | `skos:closeMatch` to a reference entry |
+| relations | typed object properties |
+| instances | `owl:NamedIndividual`, typed to the concept |
+
+Every structural field has a home. But the pragmatic content lands only as inert annotation text. The
+observability concern score becomes a class carrying a definition string:
+
+```turtle
+:concern-score a owl:Class ;
+  rdfs:label "concern-score" ;
+  skos:definition "a dynamic concern score, recomputed from the current
+                   context, lower during a maintenance window" ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :annotates ;
+                    owl:someValuesFrom :anomaly ] .
+:concern-78 a :concern-score .
+```
+
+A description-logic reasoner can act on the class and on the individual `concern-78`, but not on
+"recomputed from the current context": there is no TBox axiom and no ABox assertion for a defeasible,
+context-relative judgement. OWL holds the schema, the data, and a description of the pragmatics; the
+pragmatic judgement itself has no native representation in it. The limit belongs to the pragmatic layer,
+not to the format: any static artefact, our JSON, an OWL graph, or a YANG module, can carry a description
+of a pragmatic rule but not its resolution.
+
+If no lift can hold the resolved pragmatic layer, then something must supply it, and that something is the
+**live operation** over the model. Reconciliation is the operation this study measures, but the
+mechanisms are general, and each one appears in more than one setting. There are four. An operation can
+**pull in** a pragmatic fact the lift never carried, by interrogating a live peer: the open question
+"what facts do you have?" is the study's decisive lever, and it is asked in reconciliation, in intent (of
+the operator's catalogue), and in observability (of the resource). It can **refresh** a dynamic pragmatic
+value, by re-observing the current context and re-resolving against it: the concern is low because the
+maintenance window is open *now*, a reading the observability significance and the intent lifecycle both
+make. It can **create certainty** where the lift and the dialogue leave a candidate uncertain, by the
+decisive virtual experiment: provision the candidate in virtual space, operate it, and read back whether
+the invariants a correct translation must preserve still hold, which is the same mechanism as intent's
+satisfaction check and a correlation test in observability. And it can **resolve** the pragmatic verdict
+itself, the significance, the acceptability, the authority call, by judgement against the current context,
+which is the capability-gated frontier of Thesis 5 and the decisive operation of settings 4, 2, and 3 in
+turn. These are operations over any lifted model, not tricks of reconciliation; reconciliation is only
+where we have instrumented them most fully.
+
+The whole picture, then, is this. The lift is powerful and, as the eleven cases show, robustly performable
+by an agent for the layers that are structural, at every capability. But the pragmatic layer is not
+something a lift, however careful, or an ontology, however standard, ever holds resolved. It is pulled in,
+refreshed, made certain, and resolved by a live cognitive operation reading the current context. That is
+why performing the reconciliation live is not an overhead to be optimised away but the very mechanism by
+which meaning that no artefact can hold is supplied on demand; it is why the pragmatic layer is the
+frontier the descriptor methods never reach; and it is the half of the semantic model that a
+schema-centred tradition most easily overlooks, because it does not live in the schema at all.
+
 ## 14. The maps
 
 The four readings above are the evidence; the two tables below are the index to it. The first locates
@@ -1047,7 +1204,14 @@ This is the map for locating any finding on the process: the *here* of "cognitio
 | **Pragmatic resolution** | left untouched (deferred) | movable **policy**; authority ≠ information | **authority** attribution; reference pins meaning, not authority | **verdict** carries operative meaning; capability-gated |
 | **Composition / correlation** | — | — | — | robust with the dependency map (all models) |
 | **Lifecycle recurrence** | — | four-hop loop (self-heal, refer, restore) | — | — |
-| **Scaling** | linear vs quadratic (N = 12) | — | — | — |
+| **Scaling** | linear vs quadratic in the number of systems | — | — | — |
+
+Two rows carry more than their per-setting cells show. The **Lift** is not only the lever but is itself
+agent-performable, and robustly so: an agent lifts each side from its schema surface alone, recovering the
+ontology at every capability and even with the names stripped (§13.8). And **Pragmatic resolution** is the
+one operation obtained by judgement rather than lookup: a lift can describe a pragmatic rule but never
+resolve it, so the resolution is pulled in, refreshed, and settled by the live operation and is never held
+by any static model (§13.9).
 
 ## 15. The surprises
 
@@ -1114,7 +1278,9 @@ agents resolve fully where a live side can be interrogated while the weakest age
 resolves. And the **lift** itself is measured as an agent act, not only assumed: an agent producing each
 side's explanation from its schema surface reconciles as the authored lift does (§13.8), identically
 for the capable agent through a reference, so the results do not rest on the lifted models being
-authored in advance. What stays fixed on this axis, and is natural real-data work, is the lift from
+authored in advance; a spot-check across eleven cases and the full capability ladder finds the lift's
+structural correctness holding at every rung, with capability moving verbosity rather than accuracy. What
+stays fixed on this axis, and is natural real-data work, is the lift from
 *raw schema text* (inferring the ontology's structure, not only its explanation layer) and a **cold
 start** with no instances yet populated to read.
 
@@ -1122,7 +1288,7 @@ start** with no instances yet populated to read.
 claim built on one case per setting is that the case was, unknowingly, chosen to work. To test that, two
 further cases were built for every setting (deliberately different in domain, vocabulary and traps) and
 the same agents were run on them under the same harness, so that three independent cases now stand behind
-each setting. The findings reappear on the new cases (Figure 16). In **configuration**, the strong agent
+each setting. The findings reappear on the new cases (Figure 15). In **configuration**, the strong agent
 again reconciles two new pairs of standard models on its own, and the thin shared reference again mainly
 serves to prevent the weaker agents' errors. In the **cross-domain** setting, the mirror returns on two
 new pairs of private, no-standard models: without a shared reference the strong agent under-commits
@@ -1137,7 +1303,7 @@ for real network data: the same hand built the new cases too, so they test robus
 
 ![Each setting's signature result, reproduced on two new independently-built cases.](../figures/fig_breadth.png)
 
-*Figure 16 (breadth). One panel per setting. Each shows the setting's signature result on the two new
+*Figure 15 (breadth). One panel per setting. Each shows the setting's signature result on the two new
 cases built for it, using the real agents scored against the validated answer key. Setting 1: the weaker
 agent's precision (share of committed matches that are correct) recovers to a clean close once the shared
 reference is added. Setting 3: the strong agent's resolved fraction (share of true matches found) is low without a
@@ -1154,7 +1320,9 @@ the real-data grounding that only carrier and standards-body collaboration can s
 
 Two systems that can reason do not need a standard agreed in advance to work together; they can lift
 their data into portable, self-describing semantic models and reconcile those models ad hoc, for the
-occasion. Across four settings (configuration, intent, cross-domain, and observability) that is what
+occasion. The lift that produces those models is itself an act of cognition an agent can perform,
+recovering the ontology from a bare schema surface at every capability, even with the names stripped.
+Across four settings (configuration, intent, cross-domain, and observability) that is what
 happens: at the fully-cognitive end the reconciliation completes autonomously in every case, negotiations
 and significance verdicts included, with no standard and no human. Cognition is what completes it;
 descriptor methods carry it most of the way, then stop, and the placement of cognition governs how much
@@ -1165,6 +1333,8 @@ making the work grow linearly instead of quadratically) but its reach ends at in
 provides the authority to decide (whose value governs, whether a trade-off is acceptable), and it must
 carry meaning rather than a bare pointer to help at all. And the
 pragmatic layer (what a reconciled thing is for, whether it matters, who decides) is the frontier the
-descriptor methods never reach: decisive for meaning, carried by cognition or by cognition pre-placed
-as a policy, and realised only by an agent capable enough to carry it. That pragmatic layer, and the
-question of how capable an agent must be to work in it, are where the next work lies.
+descriptor methods never reach, and the one layer no static model holds: obtained by judgement rather
+than lookup, it is pulled in, refreshed, and resolved by a live cognitive operation against the current
+context, carried by that cognition or by cognition pre-placed as a policy, and realised only by an agent
+capable enough to carry it. That pragmatic layer, and the question of how capable an agent must be to
+work in it, are where the next work lies.

@@ -66,6 +66,29 @@ class SemanticModel:
             concepts=concepts,
         )
 
+    def to_dict(self, note: str | None = None) -> dict:
+        """Serialise back to the benchmark's lifted-model JSON shape (same field order as the
+        fixtures), so an agent-produced lift can be written out and diffed concept-for-concept
+        against the fixture it stands in for. Round-trips with from_json."""
+        d: dict = {"system": self.system, "dialect": self.dialect, "modules": list(self.modules)}
+        if note is not None:
+            d["note"] = note
+        d["concepts"] = [
+            {
+                "id": c.id,
+                "label": c.label,
+                "synonyms": list(c.synonyms),
+                "kind": c.kind,
+                "gloss": c.gloss,
+                "example": c.example,
+                "ref": c.ref,
+                "relations": [dict(r) for r in c.relations],
+                "instances": list(c.instances),
+            }
+            for c in self.concepts
+        ]
+        return d
+
 
 @dataclass
 class Gold:

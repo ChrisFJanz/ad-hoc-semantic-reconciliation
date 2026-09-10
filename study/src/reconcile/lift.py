@@ -39,6 +39,28 @@ class _LiftResult(BaseModel):
     concepts: list[_Lifted]
 
 
+class _LiftedTraced(BaseModel):
+    id: str
+    evidence: str
+    gloss: str
+    example: str
+
+
+class _LiftResultTraced(BaseModel):
+    concepts: list[_LiftedTraced]
+
+
+# Appended to LIFT_SYSTEM only when trace=True: asks the agent to make its reasoning visible per
+# concept, so a "lift in the act" can be shown. The evidence is captured for display only; it is not
+# fed back into reconciliation, so the measured study is unaffected.
+TRACE_EXTRA = (
+    " In addition, for EACH concept give a one-line EVIDENCE note: name the specific surface signals you "
+    "used to read it (its kind, which of its relations, which instances) and any look-alike concept in the "
+    "same model you ruled out, so your reading can be followed step by step. Put it in the 'evidence' field. "
+    "Return one {id, evidence, gloss, example} for every concept id given."
+)
+
+
 LIFT_SYSTEM = (
     "You are given ONE side of a network or service management data model: a set of concepts as they "
     "sit in a schema, each with its label, any synonyms, a shallow kind, structural relations to other "
@@ -65,7 +87,7 @@ def _surface_line(c) -> dict:
     }
 
 
-def lift_model(sm: SemanticModel, llm_model: str, client=None) -> tuple[SemanticModel, dict]:
+def lift_model(sm: SemanticModel, llm_model: str, client=None, trace: bool = False) -> tuple[SemanticModel, dict]:
     """Agent-perform the lift on one side. Returns (agent-lifted SemanticModel, effort).
 
     The returned model copies every fixture field except gloss and example, which are replaced by the
@@ -84,13 +106,14 @@ def lift_model(sm: SemanticModel, llm_model: str, client=None) -> tuple[Semantic
     t0 = time.time()
     completion = client.chat.completions.parse(
         model=llm_model,
-        messages=[{"role": "system", "content": LIFT_SYSTEM},
+        messages=[{"role": "system", "content": LIFT_SYSTEM + (TRACE_EXTRA if trace else "")},
                   {"role": "user", "content": user}],
-        response_format=_LiftResult,
+        response_format=(_LiftResultTraced if trace else _LiftResult),
     )
     elapsed = time.time() - t0
     parsed = completion.choices[0].message.parsed
     produced = {p.id: (p.gloss, p.example) for p in parsed.concepts}
+    evidence = {p.id: getattr(p, "evidence", "") for p in parsed.concepts} if trace else {}
 
     lifted_concepts = []
     covered = 0
@@ -115,6 +138,8 @@ def lift_model(sm: SemanticModel, llm_model: str, client=None) -> tuple[Semantic
         "concepts": n,
         "model": llm_model,
     }
+    if trace:
+        effort["trace"] = evidence
     return lifted, effort
 
 
