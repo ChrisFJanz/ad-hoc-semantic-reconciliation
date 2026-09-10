@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import os
 import sys
 from pathlib import Path
@@ -63,6 +64,28 @@ def _make_stack(stack_kind, use_ref, model, max_rounds):
     if stack_kind == "single":
         return OpenAIAgentStack(use_reference=use_ref, model=model)
     return TwoAgentStack(use_reference=use_ref, model=model, max_rounds=max_rounds)
+
+
+def _dump_lifted(sm, dump_dir: Path, case_name: str, side: str, model: str, trial: int,
+                 evidence: dict | None = None) -> Path:
+    """Write one agent-produced lifted model to JSON in the fixture's own shape, so it can be
+    diffed concept-for-concept against benchmark/cases/<case>/<side>*.json. When `evidence` is given
+    (--trace), each concept also carries the agent's one-line stated reasoning, for a 'lift in the act'."""
+    dump_dir.mkdir(parents=True, exist_ok=True)
+    note = (f"Agent-produced lift: the gloss and example of each concept were written by {model} from "
+            f"that side's schema surface alone (label, synonyms, kind, relations, and instances); the "
+            f"reference binding (ref) and every other field are carried from the source unchanged. This "
+            f"is the {side} side of case {case_name}, trial {trial}. Compare concept-for-concept against "
+            f"the fixture at benchmark/cases/{case_name}/{side}*.json.")
+    d = sm.to_dict(note=note)
+    if evidence:
+        for c in d["concepts"]:
+            ev = evidence.get(c["id"])
+            if ev:
+                c["evidence"] = ev
+    path = dump_dir / f"{case_name}__{side}__{model}__t{trial}.json"
+    path.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
+    return path
 
 
 def _mean_fidelity(agent_a, fixture_a, agent_b, fixture_b) -> float:
@@ -101,14 +124,34 @@ def main() -> int:
                     help="reconciliation architecture for BOTH arms (default two-agent, the honest "
                          "both-cognitive; single is a cheaper smoke that only varies the lift source)")
     ap.add_argument("--cases", default="",
-                    help="comma-separated case names instead of the four core schema cases")
+                    help="comma-separated case names instead of the four core schema cases, or 'all' to "
+                         "run every schema-matching case under benchmark/cases/ (cases not shaped for the "
+                         "lift study, e.g. intent_*/scaling_*, are skipped)")
     ap.add_argument("--out", default=str(ROOT / "results" / "lift_study.csv"))
+    ap.add_argument("--dump-lifted-dir", default=str(ROOT / "results" / "agent_lifted_models"),
+                    help="write each agent-produced lifted model to this directory as JSON, in the "
+                         "fixture's own shape, for concept-for-concept comparison against the fixtures; "
+                         "pass an empty string to disable")
+    ap.add_argument("--lift-only", action="store_true",
+                    help="just perform and write each agent lift (no reconciliation, no CSV): the "
+                         "cheapest way to inspect the agent-produced models. Ignores CSV resume state.")
+    ap.add_argument("--trace", action="store_true",
+                    help="with --lift-only, also record the agent's one-line stated EVIDENCE per concept "
+                         "(the surface signals it used and the look-alike it ruled out) into each dumped "
+                         "model, so the lift can be shown 'in the act'. Display only; not fed to reconciliation.")
     args = ap.parse_args()
 
     ref_values = {"0": (False,), "1": (True,), "both": (False, True)}[args.ref]
-    cases = (CASES if not args.cases
-             else [(c.strip(), SETTING_OF.get(c.strip(), c.strip()))
-                   for c in args.cases.split(",") if c.strip()])
+    if not args.cases:
+        cases = CASES
+    elif args.cases.strip().lower() == "all":
+        cdir = ROOT / "benchmark" / "cases"
+        cases = [(p.name, SETTING_OF.get(p.name, p.name))
+                 for p in sorted(cdir.iterdir())
+                 if p.is_dir() and (p / "gold.json").exists()]
+    else:
+        cases = [(c.strip(), SETTING_OF.get(c.strip(), c.strip()))
+                 for c in args.cases.split(",") if c.strip()]
 
     load_dotenv()
     if not os.environ.get("OPENAI_API_KEY"):
@@ -116,6 +159,36 @@ def main() -> int:
         return 2
 
     models = [m.strip() for m in args.model.split(",") if m.strip()]
+
+    if args.lift_only:
+        dd = Path(args.dump_lifted_dir or (ROOT / "results" / "agent_lifted_models"))
+        made = 0
+        for case_name, setting in cases:
+            try:
+                case = Case.load(ROOT / "benchmark" / "cases" / case_name)
+            except Exception as e:  # noqa: BLE001 - skip cases not shaped for the lift study
+                print(f"  - skip {case_name}: not a schema-matching case ({e})", file=sys.stderr)
+                continue
+            for model in models:
+                for t in range(args.trials):
+                    try:
+                        la, ea = lift_model(case.model_a, model, trace=args.trace)
+                        lb, eb = lift_model(case.model_b, model, trace=args.trace)
+                    except Exception as e:  # noqa: BLE001
+                        print(f"  ! lift failed {case_name}/{model}/t{t}: {e}", file=sys.stderr)
+                        continue
+                    pa = _dump_lifted(la, dd, case_name, "model_a", model, t, ea.get("trace"))
+                    pb = _dump_lifted(lb, dd, case_name, "model_b", model, t, eb.get("trace"))
+                    cov = round(mean([ea.get("lift_coverage", 0), eb.get("lift_coverage", 0)]), 3)
+                    fid = _mean_fidelity(la, case.model_a, lb, case.model_b)
+                    made += 2
+                    print(f"  {case_name:22} {model:12} t{t}  cov={cov} fid={fid}  "
+                          f"-> {pa.name}, {pb.name}", file=sys.stderr)
+        print(f"\nwrote {made} agent-lifted model file(s) to {dd.name}/.")
+        print("Each is the agent's lift in the fixture's own shape; diff it against the matching "
+              "benchmark/cases/<case>/<side>*.json to read the produced gloss/example against the fixture.")
+        return 0
+
     out = Path(args.out)
     out.parent.mkdir(exist_ok=True)
     seen = set()
@@ -131,7 +204,11 @@ def main() -> int:
 
     n = 0
     for case_name, setting in cases:
-        case = Case.load(ROOT / "benchmark" / "cases" / case_name)
+        try:
+            case = Case.load(ROOT / "benchmark" / "cases" / case_name)
+        except Exception as e:  # noqa: BLE001 - skip cases not shaped for the lift study
+            print(f"  - skip {case_name}: not a schema-matching case ({e})", file=sys.stderr)
+            continue
         for model in models:
             for t in range(args.trials):
                 # the lift is reference-independent: compute it once per (case, model, trial) if any
@@ -155,6 +232,11 @@ def main() -> int:
                             "gloss_fidelity": _mean_fidelity(lifted_a, case.model_a,
                                                              lifted_b, case.model_b),
                         }
+                        if args.dump_lifted_dir:
+                            dd = Path(args.dump_lifted_dir)
+                            pa = _dump_lifted(lifted_a, dd, case_name, "model_a", model, t)
+                            pb = _dump_lifted(lifted_b, dd, case_name, "model_b", model, t)
+                            print(f"    dumped agent lift -> {pa.name}, {pb.name}", file=sys.stderr)
                     except Exception as e:  # noqa: BLE001
                         print(f"  ! lift failed {case_name}/{model}/t{t}: {e}", file=sys.stderr)
                         lifted_a = lifted_b = None
@@ -186,6 +268,11 @@ def main() -> int:
                               file=sys.stderr)
     fh.close()
     print(f"\nwrote {out.name} — {n} new row(s).")
+    if args.dump_lifted_dir:
+        print(f"agent-produced lifted models written to {Path(args.dump_lifted_dir).name}/ "
+              f"(one JSON per case/side/model/trial, in the fixture's shape). Diff any against its "
+              f"fixture, e.g.:  diff <(python -m json.tool benchmark/cases/config_big_hard/model_b_teas.json) "
+              f"<(python -m json.tool {Path(args.dump_lifted_dir).name}/config_big_hard__model_b__<model>__t0.json)")
     print("Compare, per case/model/ref: does the agent-lift arm reach the same precision and resolved "
           "fraction as the fixture arm? Invariance (delta approx 0) shows the lift is agent-performable "
           "and reconciliation does not depend on who performed it.")
