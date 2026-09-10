@@ -132,9 +132,16 @@ are unchanged; the reports carry the results in place.
   limit. A live operation supplies them through four general mechanisms: pulling a pragmatic fact *in* by
   interrogating a live peer, *refreshing* it against the current context, *creating certainty* by a
   decisive virtual experiment, and *resolving* the verdict itself by judgement, the last being the
-  capability-gated frontier. The point is carried through the rest of the report: §14's second map gains a
-  note tying its **Lift** and **Pragmatic-resolution** rows to §13.8 and §13.9, and the one-paragraph
-  close (§17) now states it.
+  capability-gated frontier. The static artefacts a system carries turn out to be *frozen outputs* of
+  these mechanisms (a published reference is a frozen pull-in, a snapshot a frozen refresh, a pre-placed
+  policy a frozen resolve), each valid only until the context it assumed drifts; and the mechanisms are
+  gated by two things at once, liveness (which recedes across the cognition spectrum, so the mechanisms
+  fall away in order as sides go inert) and capability (which bites hardest on resolution). This is why
+  the framework does not merely extend beyond reconciliation but predicts the other settings' signatures,
+  the observability verdict being capability-gated while its correlation, a structural test, holds across
+  the ladder. The point is carried through the rest of the report: §14's second map gains a note tying its
+  **Lift** and **Pragmatic-resolution** rows to §13.8 and §13.9, and the one-paragraph close (§17) now
+  states it.
 - **The lift, shown and performed — extended §13.8.** Three things land in the lift section. A *concrete
   lifted model* is now printed in full (§2 shows one complete concept as JSON, with a note that the shape
   is encoding-agnostic), so "what exactly is in a lifted model?" has a definite answer. A *lift-in-the-act*
