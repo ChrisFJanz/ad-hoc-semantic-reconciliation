@@ -533,10 +533,11 @@ unsure of; negotiating alone they defer the hardest correspondences rather than 
 behaviour, not a failure. And it completes autonomously on the two operations that look least
 automatable: a two-sided negotiation (setting 2, decision accuracy 1.0 with both sides live) and the
 significance verdict, deciding, for each anomaly, whether to act, watch, or suppress (setting 4,
-accuracy 1.0 with the pragmatics on). One qualification on the first (§13.7): a control that puts an
-*actual* second reasoning agent in the provider's place changes the outcome almost nothing, so the
-"two-sided negotiation" is better read as one-sided refinement against a checkable oracle — the
-customer's judgement is the cognition the result turns on. The fully-cognitive end is, across all four settings, the
+accuracy 1.0 with the pragmatics on). One scope qualification on the first (§13.7): where the provider's
+side is a fixed catalogue of offers, a control that puts an *actual* second reasoning agent in its place
+changes the outcome almost nothing, so the exchange is, there, one-sided refinement against a checkable
+oracle; give the provider its own deliverability to judge and the second agent diverges substantially,
+and the negotiation is genuinely two-sided. The fully-cognitive end is, across all four settings, the
 automatable end. That is the headline, and everything else in this synthesis is a
 qualification of it: how the automation degrades as cognition recedes, what a thin reference buys
 back, and where an agent too weak for the task cuts the whole thing off.
@@ -803,6 +804,15 @@ cost is a graded rise in the weak agent's confident, spurious assertion — the 
 now shown to grow with divergence rather than to open a hole in the guard. The threshold the field
 ablation redirected us to look for is, within a full sweep here, not reached for a capable agent at all;
 locating one, if it exists, is now a question for more divergent domains, not for this one.
+
+![The lexicon-divergence sweep: precision holds for the capable agent, while the weak model's confident errors rise.](../figures/fig_divergence.png)
+
+*The lexicon-divergence sweep (reference on, both-inert, four trials per cell). Left: precision across
+the divergence axis, per model — flat at 1.00 for the strong agent, and no model takes a planted
+cross-lexicon false cognate at any level, so the guard never fails; the mid and weak agents vary in a
+narrow high band (spurious over-proposal, not trap-taking). Right: the one quantity divergence moves is
+the weak model's confident-error count, which roughly triples across the sweep while the stronger two
+stay at zero.*
 
 The reference's two roles run in opposite directions along the spectrum: its **effort** benefit peaks
 with strong, live cognition (§13.1), while its **correctness** benefit concentrates where cognition
@@ -1073,17 +1083,39 @@ cognition is already strong and absent where the agent is most alone — distinc
 and more sharply in reach. (An independent graph oracle is used here; a full operational emulator or
 digital twin, which would extend the experiment's reach into the inert placements, remains ahead.)
 
-A matching, and deflating, result concerns the **negotiation** itself. The intent setting is framed as a
-two-sided negotiation, but how much of the outcome the second party's *reasoning* actually carries can be
-measured directly, by replacing the deterministic best-achievable oracle with an **actual** second
-reasoning agent and watching what moves. Almost nothing does: the live provider agent reproduces the
-oracle's offers (0.89 to 1.00 across the ladder) and its accept-or-refer outcomes more closely still
-(0.96 to 1.00), with the oracle control at 1.00. The provider behaves as a solved optimisation rather
-than a party whose reasoning shifts the result. On this evidence the "two-sided negotiation" language is
-**not earned** in the intent setting: the exchange is better read as one-sided **refinement** against a
-checkable oracle, with the customer's pragmatic accept-or-refer judgement (§13.4) the cognition the
-outcome actually turns on. It is an honest null, and it sharpens the account rather than weakening it —
-what looked like two agents bargaining is one agent refining against a well-specified target.
+A matching pair of results locates where the **negotiation** is, and is not, two-sided. The intent
+setting is framed as a two-sided negotiation, and how much of the outcome the second party's *reasoning*
+carries can be measured directly, by replacing the deterministic best-achievable oracle with an actual
+second reasoning agent and watching what moves. In the setting as first built, almost nothing does: the
+live provider agent reproduces the oracle's offers (0.89 to 1.00 across the ladder) and its
+accept-or-refer outcomes more closely still (0.96 to 1.00). But that is a property of how the provider's
+side was posed, not a general truth. There the provider chooses from a fixed catalogue of concrete
+offers, so "the best-achievable offer" is a solved optimisation with nothing left to reason about, and a
+reasoning agent in that seat simply recomputes it. The honest scope of the null is therefore narrow: the
+two-sided language is unearned *where the provider reduces to selecting from a fixed menu*.
+
+Give the provider something to reason about and the second agent begins to matter. A real provider must
+also judge whether it can *deliver* a realisation against its own network state, and may decline or
+counter-propose. Adding a live capacity state — each realisation runs on a bearer path, and a path can be
+saturated, so an attractive realisation may be undeliverable now — turns the provider's task from a menu
+pick into a feasibility judgement. Now a reasoning provider **diverges** from the catalogue oracle
+exactly where deliverability binds: its divergence is ~0 while every path is clear (the earlier regime
+reproduced) and rises to 0.56 and then 1.0 as paths saturate, because it must counter-propose a
+deliverable alternative or decline. The naive catalogue oracle, ignoring capacity, offers a service it
+cannot deliver in **52%** of those cells; every reasoning provider, across the whole ladder, offers
+**none**. So the negotiation is genuinely two-sided wherever the provider must weigh its own
+deliverability — and, unlike the sharply capability-gated pragmatic verdict, this particular reasoning is
+robust: even the weak model avoids undeliverable offers, its only slippage a little optimisation error.
+The "two-sided negotiation" language is thus not retired but **scoped**: unearned over a fixed catalogue,
+earned once deliverability is live.
+
+![A deliverability-reasoning provider diverges from the catalogue oracle where capacity binds, and never offers an undeliverable service.](../figures/fig_deliverability.png)
+
+*A deliverability-reasoning provider vs the catalogue oracle (intent negotiation). Left: the provider's
+divergence from the catalogue oracle by scenario, per model — near zero while paths are clear (the
+fixed-catalogue regime, where a second agent changes nothing) and rising as paths saturate and the
+provider must counter-propose or decline. Right: the catalogue oracle offers an undeliverable service in
+0.52 of cells; every reasoning provider, across the ladder, offers none.*
 
 ### 13.8 The lift, performed by an agent
 

@@ -43,8 +43,8 @@ the negotiated decisions collapse to a residual that must be referred to a perso
 pre-placed policy the customer carries *recovers* the part of that residual it was authorised to
 decide, closing autonomously what a mute customer would have to hand off.** That is the programme's
 central insight (cognition is what completes a reconciliation), now measured on this setting's
-negotiation (a two-sided framing that, as §5 records, the evidence only partly bears out), and
-sharpened by a second finding: a thin published **reference** can supply
+negotiation (a two-sided framing that, as §5 records, is earned where the provider must weigh its own
+deliverability and unearned where its side is a fixed catalogue), and sharpened by a second finding: a thin published **reference** can supply
 an inert agent the *facts* it needs to check satisfaction, but it cannot supply the *authority* to
 decide; where the missing ingredient is judgement rather than information, no reference substitutes,
 and only cognition closes the gap. Around these, the study shows a clean **capability gradient**
@@ -53,7 +53,7 @@ burns an order of magnitude more reasoning to do less) and it follows one servic
 **four-hop lifecycle**, bought and degraded and rerouted and stretched past what the network can
 give and finally restored, as a worked illustration of the concept in motion.
 
-Two review-response experiments (§5) then test the setting's own framing. Putting an actual second
+Two further experiments (§5) then test the setting's own framing. Putting an actual second
 reasoning agent where the study had used a deterministic provider oracle changes the negotiation
 almost nothing: it reproduces the oracle's best-achievable offers (0.89–1.00 across the model ladder)
 and its accept/reject outcomes (0.96–1.00). That is an honest null, and it qualifies this report's
@@ -111,12 +111,13 @@ realisation: the bounds pull against each other, or the catalogue simply lacks a
 them all. Then N computes the **best-achievable** offer (the realisation that gives up only the
 least-important bounds) and O must **decide** whether to accept the degraded offer or reject it. This
 is a genuine two-sided negotiation, and (the point the setting is built to test) in the
-fully-cognitive case it closes with no human in the loop. (One qualification, established after the
-fact and reported in §5: a control that puts an actual second reasoning agent in the provider's place
-changes the outcome almost nothing — the provider behaves as a solved optimisation rather than a party
-whose reasoning shifts the result — so on that evidence the two-sided framing is only partly earned,
-and the exchange is better read as one-sided refinement against a checkable oracle, with the
-customer's judgement the cognition the outcome turns on.)
+fully-cognitive case it closes with no human in the loop. (One qualification, reported in §5: whether the
+negotiation is genuinely two-sided depends on what the provider has to reason about. Where the provider
+only selects from a fixed catalogue of concrete offers, a control that puts an actual second reasoning
+agent in its place changes the outcome almost nothing — the provider behaves as a solved optimisation;
+give it its own deliverability to judge and the second agent diverges substantially, and the exchange is
+genuinely two-sided. The framing is thus scoped to where the provider has something of its own to weigh,
+not softened away.)
 
 **The decision turns on pragmatics, which a portable policy carries.** Whether a degraded offer is
 acceptable is not a property of the network; it is a property of the *customer*: which bounds are
@@ -445,20 +446,22 @@ reconciliation; a thin reference reaches the information gap and no further; and
 end completes autonomously, the pre-placed policy carrying the customer's authority to exactly where a
 person would otherwise have to stand.
 
-## 5. The review-response experiments (14 September 2026)
+## 5. Further experiments
 
-Two further experiments were run to answer specific points from Brad's review of this setting. The
-first goes at the load-bearing word in this report's own title and framing, *negotiation*: it puts an
-actual second reasoning agent where the study had used a deterministic provider oracle, and asks
-whether that changes anything. The second addresses the review's "conservatism, not competence"
-concern by isolating a skill the study had not separated out: not recognising that more information is
-needed, but requesting *exactly* the right information. Both are small, single-case studies in the same
-illustration-first spirit as the rest of the report, and both are reported here with the same exact
+Three further experiments test the setting's own framing. The first goes at the load-bearing word in
+this report's own title and framing, *negotiation*: it puts an actual second reasoning agent where the
+study had used a deterministic provider oracle, and asks whether that changes anything. The second
+addresses the "conservatism, not competence" reading of the weak model's apparent safety, by isolating
+a skill the study had not separated out: not recognising that more information is needed, but
+requesting *exactly* the right information. The third returns to the negotiation with the provider given
+something real to reason about — whether it can actually *deliver* an offer against its own network
+state — to locate where the two-sided framing is earned. All are small, single-case studies in the same
+illustration-first spirit as the rest of the report, and all are reported here with the same exact
 numbers as the underlying runs.
 
-### 5.1 A real second agent in the negotiation: an honest null (review point 8)
+### 5.1 A real second agent in the negotiation: an honest null
 
-The review's sharpest point about this setting concerned its language: the report describes the
+The sharpest question about this setting concerns its language: the report describes the
 exchange as a two-sided **negotiation**, yet the provider side is a deterministic oracle, not a second
 reasoning agent. To test whether the framing is earned, the `best-achievable` oracle was replaced with
 an actual reasoning **provider agent** — given an intent's bounds, its candidate realisations with
@@ -484,15 +487,17 @@ agent computes reliably, and the deterministic oracle is therefore a faithful st
 agent rather than a simplification that hides a live party's reasoning. On this evidence the
 "two-sided negotiation" language is not earned in this setting: the provider behaves as a solved
 optimisation, not as a second party whose reasoning shifts the result. As noted in the summary and in
-§1, the exchange is better read as one-sided **refinement** against a checkable oracle, with the
-customer's judgement the only cognition the outcome turns on. The null is specific to this well-posed
-framing; a negotiation in which the provider held hidden incentives, weighed its own cost, or could
-propose outside its advertised catalogue could well make a second agent matter, and that is the
-natural place to look if the two-sided language is to be retained rather than softened.
+§1, the exchange is here better read as one-sided **refinement** against a checkable oracle, with the
+customer's judgement the only cognition the outcome turns on. But the null is specific to this well-posed
+framing: a negotiation in which the provider must weigh its own deliverability, holds hidden incentives,
+or could propose outside its advertised catalogue could well make a second agent matter. §5.3 takes the
+first of these — a provider that must judge what it can deliver — and finds that it does, so the
+two-sided language is not retired but **scoped** to where the provider has something of its own to reason
+about.
 
-### 5.2 Targeted requests: recognising a shortfall is easy, targeting it is capability-gated (review points 12/16)
+### 5.2 Targeted requests: recognising a shortfall is easy, targeting it is capability-gated
 
-The review pressed the "conservatism, not competence" reading of the weak model's apparent safety.
+The "conservatism, not competence" reading of the weak model's apparent safety invites a direct test.
 This experiment isolates the skill at issue. A candidate correspondence is left under-determined: a
 matching label appears on both sides, and only one further attribute, available on request, settles
 whether the pair is a true correspondence or a false cognate. The question is whether the agent both
@@ -511,12 +516,54 @@ it is not perfectly minimal (it asks for only the disambiguating attribute on 0.
 attribute only 0.56 of the time, never asks for it alone, asks for the most (1.94 attributes on
 average), and ends at request accuracy 0.50 — no better than guessing.
 
-This is the review's point made measurable in this setting. The affordance to ask is worth only as
+This makes the point measurable in this setting. The affordance to ask is worth only as
 much as the judgement to target it: for the weak model the request buys nothing over surface guessing,
 because it asks for the wrong things or indiscriminately. The weak model's apparent safety is
 inability, not judgement — it acts, but without the discrimination to act correctly — which is the
 same boundary the negotiation and lifecycle results trace, now shown on the specific act of asking for
 the one attribute that would resolve an ambiguity.
+
+### 5.3 A provider with its own deliverability to weigh: where the negotiation is two-sided
+
+§5.1 found the second agent changed nothing, and pinned the reason: the provider's task was a solved
+optimisation over a fixed catalogue, with nothing to reason about. This experiment gives the provider
+something of its own to reason about — whether it can actually **deliver** an offer — and finds the
+second agent then matters. Each realisation is placed on a bearer **path**, and a live capacity state
+can mark a path **saturated**, so an attractive realisation may be undeliverable now. The provider must
+offer the best-achievable realisation *on an available path*, or **decline** when nothing is
+deliverable. Three capacity scenarios per intent set the regime: `clear` (no path saturated, so the
+deliverable-best equals the catalogue-best — the §5.1 regime), `constrained` (the attractive
+realisation's path is saturated, forcing a counter-proposal or a changed outcome), and `outage` (every
+path saturated, forcing a decline). A reasoning provider across the ladder is compared against two
+deterministic controls: a **catalogue oracle** that picks the best-achievable ignoring capacity (the
+§5.1 provider), and a **deliverability oracle** that picks the best deliverable option or declines (the
+gold). Three intents × three scenarios × three policies × three trials.
+
+The result reverses §5.1's null exactly where deliverability starts to bind. In the `clear` scenario the
+reasoning provider tracks the catalogue oracle (divergence from it ~0.00 for the capable models) — the
+§5.1 result reproduced, because with everything deliverable there is again nothing to reason about. Once
+a path saturates, the provider **diverges**: its divergence from the catalogue oracle rises to **0.56**
+in `constrained` and **1.00** in `outage`, because it must counter-propose a deliverable alternative or
+decline rather than name a realisation it cannot deliver. The cost of *not* reasoning is large and
+concrete: the catalogue oracle offers a service it cannot deliver in **0.52** of cells, while every
+reasoning provider, across the whole ladder, offers **none** (deliverable 1.00, sol / mini / nano). And
+this particular reasoning is, unlike the pragmatic verdict of §3, largely **robust** to capability: the
+strong and mid providers match the deliverability gold exactly (offer 1.00, decision 1.00), and even the
+weak provider never offers an undeliverable service, its only slippage a little optimisation error
+(offer-match 0.91, and some spurious divergence, 0.22, in the `clear` regime).
+
+![A deliverability-reasoning provider diverges from the catalogue oracle where capacity binds, and never offers an undeliverable service.](../figures/fig_deliverability.png)
+
+*Figure 5.3. Left: the reasoning provider's divergence from the catalogue oracle by scenario, per model —
+near zero while paths are clear (the §5.1 fixed-catalogue regime) and rising as paths saturate and the
+provider must counter-propose or decline. Right: the catalogue oracle offers an undeliverable service in
+0.52 of cells; every reasoning provider, across the ladder, offers none.*
+
+So the two-sided-negotiation language is **scoped**, not retired. Where the provider's side is a fixed
+menu it is unearned, and §5.1's null stands; where the provider must judge its own deliverability the
+second agent diverges substantially from a capacity-blind oracle, and the negotiation is genuinely
+two-sided. The honest next steps for widening it further are the other cases §5.1 named — a provider
+with hidden incentives or one that may propose outside its advertised catalogue.
 
 ## 6. Threats to validity
 
