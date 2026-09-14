@@ -42,8 +42,9 @@ completes autonomously, including the negotiation, with no human in the loop. As
 the negotiated decisions collapse to a residual that must be referred to a person, and a small
 pre-placed policy the customer carries *recovers* the part of that residual it was authorised to
 decide, closing autonomously what a mute customer would have to hand off.** That is the programme's
-central insight (cognition is what completes a reconciliation), now measured on a genuinely
-two-sided negotiation, and sharpened by a second finding: a thin published **reference** can supply
+central insight (cognition is what completes a reconciliation), now measured on this setting's
+negotiation (a two-sided framing that, as §5 records, the evidence only partly bears out), and
+sharpened by a second finding: a thin published **reference** can supply
 an inert agent the *facts* it needs to check satisfaction, but it cannot supply the *authority* to
 decide; where the missing ingredient is judgement rather than information, no reference substitutes,
 and only cognition closes the gap. Around these, the study shows a clean **capability gradient**
@@ -51,6 +52,19 @@ and only cognition closes the gap. Around these, the study shows a clean **capab
 burns an order of magnitude more reasoning to do less) and it follows one service through a
 **four-hop lifecycle**, bought and degraded and rerouted and stretched past what the network can
 give and finally restored, as a worked illustration of the concept in motion.
+
+Two review-response experiments (§5) then test the setting's own framing. Putting an actual second
+reasoning agent where the study had used a deterministic provider oracle changes the negotiation
+almost nothing: it reproduces the oracle's best-achievable offers (0.89–1.00 across the model ladder)
+and its accept/reject outcomes (0.96–1.00). That is an honest null, and it qualifies this report's
+central word: the "two-sided negotiation" language is not earned here, because the provider behaves as
+a solved optimisation rather than a party whose reasoning shifts the result, and the exchange is
+better read as one-sided **refinement** against a checkable oracle. A second experiment sharpens the
+capability gradient on the act of asking: recognising that more information is needed is easy for
+every model (ask rate ≈ 0.89–1.00), but issuing a *targeted* request for exactly the disambiguating
+attribute is capability-gated — the strong model asks for the right attribute and resolves every case
+(1.00) while the weak model cannot target it and lands at the guessing floor (0.50), so the weak
+model's apparent caution is inability rather than judgement.
 
 The setting is grounded in the IRTF NMRG Internet-Draft *Dynamic Network-as-a-Service Life-Cycle
 Automation Using End-to-End Agent Negotiation* (draft-janz-nmrg-naas-agentic-negotiation; Janz,
@@ -97,7 +111,12 @@ realisation: the bounds pull against each other, or the catalogue simply lacks a
 them all. Then N computes the **best-achievable** offer (the realisation that gives up only the
 least-important bounds) and O must **decide** whether to accept the degraded offer or reject it. This
 is a genuine two-sided negotiation, and (the point the setting is built to test) in the
-fully-cognitive case it closes with no human in the loop.
+fully-cognitive case it closes with no human in the loop. (One qualification, established after the
+fact and reported in §5: a control that puts an actual second reasoning agent in the provider's place
+changes the outcome almost nothing — the provider behaves as a solved optimisation rather than a party
+whose reasoning shifts the result — so on that evidence the two-sided framing is only partly earned,
+and the exchange is better read as one-sided refinement against a checkable oracle, with the
+customer's judgement the cognition the outcome turns on.)
 
 **The decision turns on pragmatics, which a portable policy carries.** Whether a degraded offer is
 acceptable is not a property of the network; it is a property of the *customer*: which bounds are
@@ -426,7 +445,80 @@ reconciliation; a thin reference reaches the information gap and no further; and
 end completes autonomously, the pre-placed policy carrying the customer's authority to exactly where a
 person would otherwise have to stand.
 
-## 5. Threats to validity
+## 5. The review-response experiments (14 September 2026)
+
+Two further experiments were run to answer specific points from Brad's review of this setting. The
+first goes at the load-bearing word in this report's own title and framing, *negotiation*: it puts an
+actual second reasoning agent where the study had used a deterministic provider oracle, and asks
+whether that changes anything. The second addresses the review's "conservatism, not competence"
+concern by isolating a skill the study had not separated out: not recognising that more information is
+needed, but requesting *exactly* the right information. Both are small, single-case studies in the same
+illustration-first spirit as the rest of the report, and both are reported here with the same exact
+numbers as the underlying runs.
+
+### 5.1 A real second agent in the negotiation: an honest null (review point 8)
+
+The review's sharpest point about this setting concerned its language: the report describes the
+exchange as a two-sided **negotiation**, yet the provider side is a deterministic oracle, not a second
+reasoning agent. To test whether the framing is earned, the `best-achievable` oracle was replaced with
+an actual reasoning **provider agent** — given an intent's bounds, its candidate realisations with
+their true delivered attributes, and the policy's priority order, it chooses which realisation to
+offer — while the consumer's accept/reject decision was held deterministic, so that any change in
+outcome is attributable solely to making the provider a second agent. This was run over three
+negotiation intents, three policies, and the three-model ladder, three trials each, alongside a
+deterministic oracle control.
+
+The second agent changes almost nothing. The reasoning provider reproduces the oracle's
+best-achievable offers closely (offer-match 0.89 for sol, 1.00 for mini, 0.96 for nano) and reproduces
+the negotiation *outcomes* more closely still (decision-match 1.00 for sol, 1.00 for mini, 0.96 for
+nano); the oracle control sits at 1.00 / 1.00, confirming the harness. The one divergence is
+instructive rather than troubling: where the strong model matched the oracle's offer only 0.89 of the
+time, its accept/reject decision still matched the gold every time (1.00), because the realisation it
+named instead was **decision-equivalent** — a tie the oracle happened to break by cost, broken
+differently but to the same end. The second agent introduces variation in which realisation is offered
+but not in what is ultimately accepted.
+
+What this changes is the claim, not the mechanism. The provider's role here is a well-posed
+optimisation — offer the best-achievable realisation under the priority order — that even the weak
+agent computes reliably, and the deterministic oracle is therefore a faithful stand-in for a provider
+agent rather than a simplification that hides a live party's reasoning. On this evidence the
+"two-sided negotiation" language is not earned in this setting: the provider behaves as a solved
+optimisation, not as a second party whose reasoning shifts the result. As noted in the summary and in
+§1, the exchange is better read as one-sided **refinement** against a checkable oracle, with the
+customer's judgement the only cognition the outcome turns on. The null is specific to this well-posed
+framing; a negotiation in which the provider held hidden incentives, weighed its own cost, or could
+propose outside its advertised catalogue could well make a second agent matter, and that is the
+natural place to look if the two-sided language is to be retained rather than softened.
+
+### 5.2 Targeted requests: recognising a shortfall is easy, targeting it is capability-gated (review points 12/16)
+
+The review pressed the "conservatism, not competence" reading of the weak model's apparent safety.
+This experiment isolates the skill at issue. A candidate correspondence is left under-determined: a
+matching label appears on both sides, and only one further attribute, available on request, settles
+whether the pair is a true correspondence or a false cognate. The question is whether the agent both
+recognises the shortfall and issues a **targeted** request for exactly the disambiguating attribute,
+as distinct from guessing and from the ask-for-everything reflex. The case is six under-specified
+pairs — each false pair resolvable only by its disambiguating attribute, each true pair carrying an
+incidental difference that could mislead an over-rejecter — run over the three-model ladder, three
+trials, against a surface-only control that fixes the guessing ceiling at 0.50.
+
+Recognition is not the hard part. Every model asks rather than guesses (ask rate roughly 0.89–1.00
+across the ladder). Knowing *what* to ask for is where capability bites. The strong model asks for the
+disambiguating attribute every time (hit 1.00) and resolves every item (request accuracy 1.00), though
+it is not perfectly minimal (it asks for only the disambiguating attribute on 0.61 of items, averaging
+1.39 attributes). The mid model usually asks for the right attribute (hit 0.89) and mostly resolves
+(0.94), less economically (targeted 0.22, 1.67 attributes). The weak model hits the disambiguating
+attribute only 0.56 of the time, never asks for it alone, asks for the most (1.94 attributes on
+average), and ends at request accuracy 0.50 — no better than guessing.
+
+This is the review's point made measurable in this setting. The affordance to ask is worth only as
+much as the judgement to target it: for the weak model the request buys nothing over surface guessing,
+because it asks for the wrong things or indiscriminately. The weak model's apparent safety is
+inability, not judgement — it acts, but without the discrimination to act correctly — which is the
+same boundary the negotiation and lifecycle results trace, now shown on the specific act of asking for
+the one attribute that would resolve an ambiguity.
+
+## 6. Threats to validity
 
 The case is seeded rather than sampled (constructed to exercise each mechanism and prove each trap,
 not drawn from a population) so the results establish that the mechanisms work and how, not how often
@@ -462,7 +554,7 @@ negotiation and policy are a faithful but simplified rendering of the NMRG draft
 scarcity-driven pricing, wallets, and multi-party settlement are represented only as far as the
 reconciliation question requires, and their fuller dynamics are out of this study's scope.
 
-## 6. Reproducibility
+## 7. Reproducibility
 
 The case builder, the validating gold deriver, the agent stack, the four-phase runner, and the
 figure scripts are in the repository, alongside the seeded case and the recorded per-model results and

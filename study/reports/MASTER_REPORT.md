@@ -533,7 +533,10 @@ unsure of; negotiating alone they defer the hardest correspondences rather than 
 behaviour, not a failure. And it completes autonomously on the two operations that look least
 automatable: a two-sided negotiation (setting 2, decision accuracy 1.0 with both sides live) and the
 significance verdict, deciding, for each anomaly, whether to act, watch, or suppress (setting 4,
-accuracy 1.0 with the pragmatics on). The fully-cognitive end is, across all four settings, the
+accuracy 1.0 with the pragmatics on). One qualification on the first (§13.7): a control that puts an
+*actual* second reasoning agent in the provider's place changes the outcome almost nothing, so the
+"two-sided negotiation" is better read as one-sided refinement against a checkable oracle — the
+customer's judgement is the cognition the result turns on. The fully-cognitive end is, across all four settings, the
 automatable end. That is the headline, and everything else in this synthesis is a
 qualification of it: how the automation degrades as cognition recedes, what a thin reference buys
 back, and where an agent too weak for the task cuts the whole thing off.
@@ -541,6 +544,16 @@ back, and where an agent too weak for the task cuts the whole thing off.
 And the lift the whole thing runs on is itself agent-performable: an agent asked to lift a side from
 its schema surface produces a model that reconciles as the authored one does: identically, for the
 capable agent binding through a reference, across all four settings (§13.8).
+
+Nor is the reconciliation confined to the case where its inputs arrive ready-made. The harder half — not
+reconciling two models that already share a reference, but **producing and aligning the inputs
+themselves** — is largely within reach of the same cognition: aligning two independently authored
+lexicons, onboarding a genuinely new system by reuse, deriving the dependency map from raw inventory,
+and deriving cross-domain authority from an external artefact are each tractable, each capability-gated,
+and each reliably rescued by an external reference or artefact where a weaker agent falls short (§13.10).
+And the whole pattern is not an artefact of one model lineage: the sharp findings replicate across three
+model families and two capability tiers — and, in one instance, a claim that looked like a structural law
+turned out to be a single family's disposition, which only the cross-family check revealed (§16).
 
 ## 12. The findings, as six theses, and mapped to where they act
 
@@ -619,13 +632,16 @@ capable agent, but a bare identifier with no description is worse than nothing (
 shallow class tag can actively mislead the weak agent it was meant to help (setting 1's field-by-field
 result). A reference is a safety rail carrying *meaning*, not a pointer and not a payload.
 
-## 13. The findings in depth: four readings across the settings
+## 13. The findings in depth: readings across the settings
 
 The six theses state *what* was found. This section shows the evidence behind them, drawn from the
-setting reports' own figures and numbers, and reads that evidence along four cross-cutting axes: the
+setting reports' own figures and numbers. It reads that evidence first along four cross-cutting axes: the
 **cognitive load** an operation costs, the **model power** the gradient demands, what the **reference**
-buys, and what changes with **position on the cognition spectrum**. Each axis cuts across all four settings, and
-together they are the detail the one-line theses compress.
+buys, and what changes with **position on the cognition spectrum**. It then follows the mechanisms into
+their particulars — reach, the economics of the reference, the negotiation and the decisive experiment,
+the lift, the pragmatic layer across a lifecycle, and what it takes to produce the inputs the whole thing
+runs on. Each reading cuts across all four settings, and together they are the detail the one-line theses
+compress.
 
 ### 13.1 Cognitive load: what each operation costs, and who pays
 
@@ -711,6 +727,26 @@ lexicon pins the ontology for the middle of the ladder, not the bottom.
 *Figure 9 (setting 4). Survival of the alarm↔anomaly cognate at the inert placements, without and with
 the reference. sol never takes it; the reference drives mini to zero; nano barely moves.*
 
+The gradient has a second reading, in the currency that governs whether a result is safe to act on
+unsupervised: **the confidence a wrong answer is asserted with.** Scoring every proposal by the agent's
+own per-correspondence confidence, across all the cases and rungs, gives a clean confidence-sensitive
+picture. The rate of *confident errors* — wrong merges asserted at or above a high threshold (τ = 0.8) —
+rises about elevenfold down the ladder, from 0.004 at the strong agent through 0.031 at the mid to 0.046
+at the weak one, and rises again as cognition recedes (the weak agent goes from 0.015 at both-cognitive
+to 0.075 at one-inert). Calibration degrades in step: the Brier score worsens monotonically, 0.009 →
+0.049 → 0.067. So the dangerous failure is not spread evenly; it concentrates at the weak end and the
+inert placements, exactly where the reference and verification are meant to matter most. And crucially,
+**confidence is a real but weak guard.** Every agent is somewhat less sure when wrong than when right,
+but only somewhat: the confidence on *wrong* merges sits at 0.73–0.85 everywhere, well above any
+threshold a consumer could use to filter them, and only about 0.12–0.21 below the confidence on right
+ones. A downstream system cannot separate right merges from wrong ones by the confidence number alone —
+the agents assert their mistakes almost as surely as their correct answers. This is the quantitative
+form of the same failure the qualitative results keep meeting (the confident false cognate, the
+verifier's over-pass), and it is the argument for an explicit **abstain path** — a scored
+"insufficient evidence" outcome, reported apart from honest deferral — rather than a confidence cut, as
+the discipline a weak or inert-facing reconciliation needs. The harness now carries both the
+confidence-sensitive metrics and that abstain path.
+
 ### 13.3 The reference: what it buys, by component and by placement
 
 Not every thin reference is equal, and the difference is measurable. Ablating the reference's
@@ -729,6 +765,44 @@ evidence for the very cognate it should block.
 *Figure 10 (setting 1). Surviving false cognates by reference content, per model. The strong agent is
 immune (no bar); for the weak agent the lexical field helps most and the shallow class tag actively
 hurts: the tallest bar, above the id-only floor.*
+
+There is a sharper way to see *what part of a shared reference is doing the work*, and it separates two
+jobs the reference had been doing at once. On the benchmark's shared reference both sides bind to the
+**same** entry, so a planted false cognate is pre-empted by shared identity alone: every model, strong
+to weak, reaches precision 1.00 and the traps do not survive. Re-represent the same two models with two
+**independently authored lexicons** — the same concepts and the same true correspondences, but no
+reference id shared across sides — and that mechanical pre-emption evaporates. The agent must first
+*align* the two lexicons by meaning, and only a capable agent does: the strong agent holds precision
+1.00 with zero confident errors, doing the harder task as cleanly as it used the shared one, while the
+weaker agents fall to about 0.88–0.89 precision *with the reference still present*, mis-aligning and
+committing a wrong correspondence. So a shared reference was supplying two things — meaning, and a
+mechanical guard against false cognates by shared identity — and the second is exactly what independence
+removes, turning it back into a capability-gated cognitive act.
+
+That raises the obvious question of how *thin* such a reference can be before it stops protecting, and
+the answer relocates the axis. A full factorial ablation of the reference's descriptive fields, run on
+the independent-lexicon case, shows the capable agent's precision is **independent of the reference's
+descriptive text altogether**: it holds at 1.00 from the full reference down to a label-less, id-only
+entry and even to no reference at all, while those fields buy only a little **recall** (1.00 with them
+present, easing to 0.94 at id-only and 0.90 with none). Field-richness, then, is *not* the reference-
+quality axis one might fear — a reference can be stripped almost to the bone without a capable agent
+losing its discrimination. What governs whether independence defeats the guard is not how thin the
+reference is but how far the two vocabularies have **diverged** — the gap the agent must cross to align
+them — which is the axis a divergence sweep is built to trace.
+
+Sweeping exactly that axis — progressively independently lexicalising the two sides, from one fully
+shared reference through to two fully independent lexicons, with everything else fixed — the result is,
+for a capable agent, a robustness one: its precision holds at **1.00 across the whole sweep**, with the
+reference and without it, and it takes no planted false cognate at any level. Nor does any model take a
+planted cross-lexicon cognate at any point on the sweep: the guard holds throughout, and the mid and weak
+agents' residual precision gap is spurious over-proposal, not trap-taking. What divergence *does* move is
+confined to the weak end and shows up in the confidence signature rather than in the guard: the weak
+agent's confident-error count roughly triples across the sweep even as its trap-taking stays at zero. So
+lexicon divergence, at least on this case, is not an axis that defeats a capable agent's alignment; its
+cost is a graded rise in the weak agent's confident, spurious assertion — the pathology §13.2 measured,
+now shown to grow with divergence rather than to open a hole in the guard. The threshold the field
+ablation redirected us to look for is, within a full sweep here, not reached for a capable agent at all;
+locating one, if it exists, is now a question for more divergent domains, not for this one.
 
 The reference's two roles run in opposite directions along the spectrum: its **effort** benefit peaks
 with strong, live cognition (§13.1), while its **correctness** benefit concentrates where cognition
@@ -829,6 +903,25 @@ same achievement: its precision slips (to 0.97–0.98) and it begins committing 
 apparent resolution is partly indiscriminate binding rather than genuine settlement; read its resolved fraction
 without its precision beside it and you would misjudge it, which is the caution the whole study keeps
 returning to. Power sets the ceiling that reach can reach.
+
+Two further probes sharpen the *what it can ask* axis by restoring the capability dimension the reach
+study held fixed, and both land the same way. The first asks whether an agent that has noticed a record
+underdetermines a match can issue a **targeted request** for exactly the attribute that would settle it —
+the deliberate form of the discovery move above. Recognising the shortfall is easy for everyone: every
+agent asks rather than guesses, against a surface control pinned at the 0.50 guessing floor. Targeting it
+is not. The strong agent asks for the one disambiguating attribute and resolves every item (request
+accuracy 1.00); the mid agent usually finds it (0.89 of the time, resolving 0.94); the weak agent asks
+but cannot aim, requesting the wrong or a superfluous field and landing back at the guessing floor
+(0.50). Knowing a question is needed is not the same as knowing which question to ask. The second probe
+concerns the **decision to escalate**: when the cheap evidence a match needs is withheld, will the agent
+spend a probe — run the decisive experiment — to recover it? Denied the key, the strong agent roughly
+triples its probing and recovers essentially all the lost ground (recall 0.97); the weak agent barely
+escalates, probing about as much with the key gone as with it present, and its recall collapses by a
+third, to 0.46. And the escalation is reach-gated as well as capability-gated: a probe budget lifts the
+strong agent from 0.64 to a perfect close where a side is live to be interrogated, but buys almost
+nothing where the side has gone inert and there is nothing to ask. Both probes carry the caution the
+surprises below make general — the weak agent's apparent restraint is not judgement but an inability to
+aim or to escalate, conservatism rather than competence.
 
 The lesson is as much a design one as a scientific one. How far ad hoc reconciliation carries is not
 fixed by the agents alone; it is set jointly by how capable they are and by how *interrogable* the thing
@@ -967,6 +1060,30 @@ settles the candidates the agents can pose but cannot, by itself, surface the on
 first make visible. **Construction surfaces the candidates; the experiment settles them; a shared
 reference amortises both.** That is the completion the fully-cognitive case promises, shown rather than
 argued.
+
+Measured apart, the decisive experiment and the agent's own record-reading verification prove to be
+genuinely different authorities, and the difference is one of *reach*. Where an independent, gold-free
+graph oracle can act, it is faithful — perfect where both sides are live; the agent's verifier, judging
+the same proposals, agrees with it about 64% of the time, and every disagreement is the agent
+**over-passing** a byte-clean wrong pair the experiment refutes (every split goes the oracle's way). But
+the oracle's authority is bought with liveness, and its reach recedes exactly as it is most needed: its
+coverage falls from 11 of fourteen proposals to 3 to 0 as the sides go inert, while the proposals the
+agent must adjudicate alone rise 3 → 11 → 14. So the decisive experiment is the better authority where
+cognition is already strong and absent where the agent is most alone — distinct from negotiation in kind,
+and more sharply in reach. (An independent graph oracle is used here; a full operational emulator or
+digital twin, which would extend the experiment's reach into the inert placements, remains ahead.)
+
+A matching, and deflating, result concerns the **negotiation** itself. The intent setting is framed as a
+two-sided negotiation, but how much of the outcome the second party's *reasoning* actually carries can be
+measured directly, by replacing the deterministic best-achievable oracle with an **actual** second
+reasoning agent and watching what moves. Almost nothing does: the live provider agent reproduces the
+oracle's offers (0.89 to 1.00 across the ladder) and its accept-or-refer outcomes more closely still
+(0.96 to 1.00), with the oracle control at 1.00. The provider behaves as a solved optimisation rather
+than a party whose reasoning shifts the result. On this evidence the "two-sided negotiation" language is
+**not earned** in the intent setting: the exchange is better read as one-sided **refinement** against a
+checkable oracle, with the customer's pragmatic accept-or-refer judgement (§13.4) the cognition the
+outcome actually turns on. It is an honest null, and it sharpens the account rather than weakening it —
+what looked like two agents bargaining is one agent refining against a well-specified target.
 
 ### 13.8 The lift, performed by an agent
 
@@ -1182,6 +1299,24 @@ two gates are why the observability verdict is settled only by a capable agent w
 while correlation, a structural test, holds across the whole ladder. The framework does not merely extend
 to the operations beyond reconciliation; it predicts their signatures.
 
+Put individually under test, the three operations bear the prediction out, each with its own regime.
+**Pragmatic resolution** — the significance verdict — delivers a large gain for capable agents and almost
+none for the weak one: +0.33 and +0.58 verdict accuracy for the strong and mid agents, +0.03 for the
+weak. The operation is real and the context genuinely changes the right action, but only an agent strong
+enough to carry the pragmatics collects the benefit. **Attribute pinning** — fixing a shared field's
+operative meaning, a committed rate against a line rate — runs the opposite way, as a weak-model
+*compensator*: it buys the strong agent essentially nothing (it already drew the distinction) and the
+weak agent about +0.19, standing in for a discrimination it could not make itself. And **correlation** —
+grouping reconciled parts into wholes, several symptoms into one incident — is the structural input the
+framework predicts is robust: unconditionally needed (with it off, the two weaker agents resolve none of
+the multi-symptom structure) and, once on, holding across the whole ladder. Two further results show
+correlation is a genuine, portable operation rather than an observability artefact: it returns the same
+partition-exact result in the configuration setting, so it *generalises* beyond the setting it was found
+in; and it survives a **self-derived** dependency map — every agent derives the map perfectly from raw
+inventory, a bundle indirection and a name lure included, so correlation on the derived map matches the
+given-map baseline. The structural pragmatic does not depend on a hand-fed input any more than the
+descriptive reference did.
+
 The whole picture, then, is this. The lift is powerful and, as the eleven cases show, robustly performable
 by an agent for the layers that are structural, at every capability. But the pragmatic layer is not
 something a lift, however careful, or an ontology, however standard, ever holds resolved. It is pulled in,
@@ -1190,6 +1325,41 @@ why performing the reconciliation live is not an overhead to be optimised away b
 which meaning that no artefact can hold is supplied on demand; it is why the pragmatic layer is the
 frontier the descriptor methods never reach; and it is the half of the semantic model that a
 schema-centred tradition most easily overlooks, because it does not live in the schema at all.
+
+### 13.10 Producing the inputs: alignment, reuse, and derivation
+
+A reconciliation needs inputs — two lifted models, and often a shared reference or a settled authority
+to bind through — and a fair challenge is whether the study has shown only reconciliation *given* those
+inputs while the genuinely hard part is producing them. Put under test, the inputs prove more often
+*producible* than assumed, under the same capability caveat that governs everything else.
+
+Aligning two **independently authored lexicons** — no reference id shared across sides, the harder half
+of the schema bind — is tractable for a capable agent: it holds precision 1.00 by aligning the two
+vocabularies on their meaning, where a shared reference would have supplied the alignment for free
+(§13.3). The hard half is doable; it is doable by cognition, and it is capability-gated.
+
+**Reuse** turns the scaling argument from a structural count into a measured economy. Onboarding a
+genuinely new system against an established shared reference is linear where pairwise integration is
+quadratic, and the effort bears it out: reuse is 2.0 to 2.7× cheaper in reasoning tokens *and* holds
+recall where the pairwise route lets it slip — cheaper and more accurate at once. Thesis 6's scaling
+claim is now exercised on real effort, not only counted on the interoperability graph.
+
+And the two structured inputs a reconciliation leans on turn out to be **derivable** rather than
+necessarily hand-authored. The observability **dependency map** the correlation operation runs on can be
+derived by an agent from raw inventory through a multi-hop join — resolving a bundle indirection and
+refusing a name lure — and correlation on the derived map matches the given-map baseline (§13.9).
+Cross-domain **authority**, whose realm owns a contested field, can be derived from an external artefact
+such as an interconnect agreement: structure-only attribution is sharply capability-gated (a correct
+attribution 1.00 of the time for the strong agent, 0.47 and 0.40 for the mid and weak, the weak agent
+taking a transport lure), but the artefact lifts every agent to a full, correct attribution while the
+agent still defers on the field the artefact leaves genuinely co-owned. And when two authority sources
+*contradict* each other, every agent along the ladder **surfaces** the conflict rather than silently
+choosing a side — the failure one might fear does not occur when the disagreement is visible.
+
+The line these results draw is sharper than "reconciliation works given its inputs": producing the
+inputs is itself often achievable, an external artefact or reference is the reliable route to it, and the
+residual risk is the capability-gated confident error the rest of this section has traced — which is why
+an abstain path and a floor on reference quality matter as much as the reconciliation they protect.
 
 ## 14. The maps
 
@@ -1234,7 +1404,7 @@ by any static model (§13.9).
 
 ## 15. The surprises
 
-Four results ran against the naive expectation, and they are worth stating as findings rather than
+Five results ran against the naive expectation, and they are worth stating as findings rather than
 smoothing away.
 
 **A strong agent scoring *lower* is often a strong agent behaving *better*.** Blind at both-inert, the
@@ -1263,6 +1433,14 @@ significance from the same pragmatic information and both are decisive, but one 
 one is a structural input, and that distinction, not the label "pragmatic," predicts whether a weak
 agent can do it.
 
+**A "capability-independent" law turned out to be one model family's habit.** The verifier's apparent
+ceiling — a pass rate near 0.71 that did not move with capability — looked like a structural property
+of record-only verification. Replicating across three model families showed it was not: each family
+verifies with its own disposition (one permissive, the others less so), and capability does not
+explain the spread (§16). The cross-framing hardness a separate grader finds, by contrast, *is*
+family-independent. The lesson is a general one: a single family can make a disposition look like a
+law, and only replication across families tells the two apart.
+
 ## 16. Scope, threats, and what remains
 
 The claims here are **existential and mechanistic** (*this is how ad hoc reconciliation works, and
@@ -1275,7 +1453,10 @@ reading at the end of this section reports that the findings hold across them. T
 capability range; a six-model sweep at both-cognitive shows how two-agent negotiation shapes the
 gradient: bilateral ratification holding precision and suppressing false cognates across the ladder,
 resolution lower and non-monotonic (§13.2). Golds are derived
-from the models and validated, which removes drift but leaves the modelling choices (including
+from the models and validated (internally consistent, and for the flagship case independently
+corroborated by a separate grader that rejects the same trap and cross-framing pairs across two model
+families — see the cross-family reading later in this section), which removes drift but leaves the
+modelling choices (including
 setting 4's verdict thresholds, stated openly) as authored rather than found. Public standards may
 have been seen in training, which could flatter the no-reference conditions; a **relabelled-identity
 control** isolates this directly: strip the TAPI/TEAS identity from the flagship case and reasoning
@@ -1283,6 +1464,30 @@ alone reaches a resolved fraction of 0.67 where the recognisable case reaches 1.
 reference restores 1.00 either way, so recall of a known standard accounts for part of the recognisable
 close but the reasoning is real and a reference substitutes for the recall. The effect relied on
 throughout is the *difference* a treatment makes under identical inputs.
+
+**A single model family is itself a threat, and replicating across families both confirmed the findings
+and corrected one.** Every result above uses one lineage, the gpt-5.x ladder, so the sharpest external
+question is whether a finding is a property of ad hoc reconciliation or of that family. Re-running the
+sharp experiments against two other families and tiers — an open-weights Qwen-2.5-7B served locally, and
+DeepSeek at the strong tier, reached through the same OpenAI-compatible client with a JSON-mode
+compatibility shim and at no cost beyond a few dollars of API — answered both ways. Most findings
+transferred: contradictory authority sources are surfaced by every model of every family, and the
+external-artefact remedy rescues every family and tier (Qwen 0.47 → 0.93, DeepSeek 0.40 → 1.00, matching
+the gpt-5.x mid and weak rungs lifting to a full close). But one apparent law did not hold, and its
+failure is the most valuable thing the replication produced. The record-reading verifier's pass rate near
+0.71 had looked **capability-independent** — identical across the whole gpt-5.x ladder, seemingly a
+ceiling set by what the records make visible. Across families it is not a ceiling at all: the three
+families verify with three dispositions — gpt-5.x permissive (over-passing byte-clean wrong pairs four
+times of four), DeepSeek intermediate (2.7), Qwen conservative (zero) — giving accuracies 0.71, 0.76,
+0.84, and capability does not order them, since a strong different-family model and a weak one *both*
+over-pass less than the entire gpt-5.x ladder. What read as a structural law was one family's
+disposition; only replication tells the two apart. Separately, an **independent grader** drawn from a
+second family, asked to re-judge the derived gold, rejects the same trap and cross-framing pairs the
+first does — so the gold's negatives are trustworthy across families and its harder merges are the same
+identifiable pairs under any capable judge — while a grader too weak for the task cannot perform the role
+at all, the capability-gating story reappearing in the grader's own seat. The honest bound is that this
+establishes cross-family *transfer*, not a full cross-family ladder: the breadth spans open mid-tier
+models plus one strong non-OpenAI model, not strong-tier breadth across many lineages.
 
 Two operations bear noting on how they are measured. Setting 3's schema-binding headline brackets the
 reference-construction step, isolating the worth of that step; the full **construct-then-bind**
@@ -1331,6 +1536,16 @@ out which offers satisfy the wish, high for the strong and mid agents and lower 
 4: precision stays at 1.0 (the look-alike is never taken) while resolved fraction sits at 0.75 (the one-to-many
 decomposition is the residual). The point of the figure is not any single bar but that all four signatures
 recur on cases built to differ.*
+
+One further case pushes past controlled variation toward the kind of mess real data brings. A
+deliberately **structurally messier vendor model** was built — the same service reconciled against a
+vendor dialect that buries the correspondences under proprietary containers and augmentations and plants
+a leafref false cognate — and run under the same harness. Surface matching collapses on it, losing
+two-thirds of the correspondences (recall 0.33 against 0.5 on the tidy cases); cognition absorbs the
+mess, the agents recovering to 0.89–1.00 at precision 1.00, resolving the configuration-versus-state
+distinction the vendor structure obscures, and never taking the leafref cognate. It is one reduced case,
+not a production module, but it is the first evidence the approach survives structural messiness and not
+only vocabulary variation — the direction real vendor data would push hardest.
 
 What remains is therefore genuinely external: larger and more varied cases drawn from real networks, and
 the real-data grounding that only carrier and standards-body collaboration can supply.

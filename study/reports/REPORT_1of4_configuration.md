@@ -87,6 +87,23 @@ cannot give, holding the resolved fraction at one. So the reference's value in *
 cognition, while its value in *correctness* concentrates where cognition, and therefore
 verification, is weakest: the two halves of a single substitution.
 
+A sixth block of experiments, added in response to a 14 September review (§5), bites into the harder
+half the primary experiments assume away: not reconciling inputs already lifted and bound, but
+producing and aligning them. Independent-lexicon alignment, two separately authored vocabularies with
+no shared ids, is tractable but capability-gated: the strong agent holds precision 1.00 and takes no
+false cognate, while the weaker agents commit a cross-lexicon cognate confidently in about two trials
+of three even with a reference present. Stripping the reference back to an opaque id, or removing it
+altogether, leaves the strong agent's precision untouched, so its descriptive fields buy recall rather
+than the false-cognate guard; the thin-reference threshold is not reached by thinning them, and the
+real axis is lexicon divergence. Real vendor structural messiness collapses surface matching to 0.33
+recall but is absorbed by cognition, which recovers to 0.89–1.00 recall at precision 1.00; the
+dependency map correlation needs is derivable from raw inventory rather than hand-fed, and correlation
+on the self-derived map matches the given-map baseline; the correlation operation itself generalises
+out of the observability setting into this one, partition-exact 1.00 for the capable models; and
+onboarding a genuinely new system by reference-mediated reuse is linear where pairwise alignment is
+quadratic, 2.0–2.7× cheaper in real tokens and more accurate, because reuse preserves the recall
+pairwise scatters.
+
 ---
 
 ## 1. Background and hypotheses
@@ -139,7 +156,7 @@ Underlying all four is provenance, the base the semantic model sits over. This r
 primary experiments (§3.1–3.5) work the first two components: the **schema-term** level;
 two companion studies carry the same framework to the **instance-level** component and to
 verification taken as its own object, summarized in §3.6. The **pragmatic** component is
-held fixed; §5 makes the scope precise.
+held fixed; §6 makes the scope precise.
 
 Against that divergence we study a thin **shared reference**: an identity-only
 anchor per concept: a stable id, a preferred label and synonyms, a shallow class,
@@ -147,7 +164,7 @@ a disambiguating definition, and one canonical example. Each side binds its term
 to the reference. It is deliberately small and is not a model of the domain. This is
 the **lexical** reference, one of a possible family (instance, unit, value-set,
 structural, pragmatic, and other variants); it is the variant we exercise here (see
-scope, §5).
+scope, §6).
 
 The placement of cognition relative to the systems being reconciled is a variable
 we call the **cognition spectrum**: both systems live and interrogable
@@ -265,7 +282,7 @@ hands it more surface to misfire on (its instances, in particular, turn toxic, o
 evidence of identity), so the lift is unambiguously the lever, unambiguously safe for a strong
 agent, and a double-edged one for a weak agent. That pattern (the richer content that raises
 reach also raises exposure for the weakest cognition) recurs throughout the study. (Reported
-in full in the pre-lift baseline note; see §6.)
+in full in the pre-lift baseline note; see §7.)
 
 A structural fact about the spectrum organises the results that follow. In the
 fully-cognitive case, resolution of any reconciliation question is total *in
@@ -713,10 +730,15 @@ actively *hurts*: the single worst condition in the study, because a class surfa
 `quality` versus `class` reads to a weak agent as evidence for the very cognate it was meant
 to block. The publishing lesson: a reference is a safety rail for weaker cognition, not a
 semantic payload; author the lexical field and a definition or example first, and be wary of
-shallow class tags, which can mislead exactly the consumers who most need help. (The ablation
+shallow class tags, which can mislead exactly the consumers who most need help. A companion ablation
+run on the *independent-lexicon* case (§5.2) sharpens the anatomy further: there the strong agent's
+precision is flat across every field subset, from the full reference down to an opaque id and even to
+no reference at all, so on that case the descriptive fields carry recall rather than the false-cognate
+guard, and the guard, once the lexicons are independent, is a cognitive act the strong agent performs
+without them. (The ablation
 also carries a methodological caution: the anchor must be an *opaque* identifier, because a
 human-readable id already names the concept and silently defeats the test. Reported in full in
-the reference-anatomy note; see §6.)
+the reference-anatomy note; see §7.)
 
 **Two practical implications.** First, the reference is most valuable exactly where
 the motivating problem is sharpest: pre-empting the silent, precision-eroding errors
@@ -729,7 +751,234 @@ effect.
 
 ---
 
-## 5. Threats to validity
+## 5. The review-response experiments (14 September 2026)
+
+The experiments of §3 reconcile inputs that are already lifted and, where a reference is present,
+already bound to it; they measure what cognition does *given* those inputs. A review by Brad Peters
+put the sharpest pressure on the other side of that line: the study convincingly shows
+reconciliation once a shared reference and the authored inputs are in place, and the harder half is
+**producing and aligning those inputs** in the first place. The six experiments below bite into that
+harder half within this setting, rather than only reframing the scope. They are dated 14 September
+2026 and each is written up in full separately; the essentials, with exact numbers, follow. Where a
+write-up reports **recall**, it is the same measure as this report's resolved fraction (§2.3): the
+share of the true correspondences the stack finds and commits to, with the rest referred onward.
+
+### 5.1 Independent-lexicon alignment is tractable, but capability-gated
+
+This is the deepest of the review points (point 1): the primary experiments have both sides bind to
+*one* shared reference, whereas the harder task is aligning two **independently developed** lexicons.
+We built `config_evpn_indeplex`, the carrier-Ethernet-VPN case re-represented with two independently
+authored vocabularies (a MEF vocabulary and an IETF/EVPN vocabulary, with no shared ids), the gold
+carried over unchanged from the shared-reference `config_evpn`, and ran it against that
+shared-reference original as a direct contrast, over three checkpoints, three placements, with and
+without the reference, three trials each.
+
+The mechanical controls fix the floor. The reference-blind label matcher reaches precision 0.667 and
+recall 0.5 on both cases. The reference-aware reconciler resolves the shared case perfectly
+(1.00 / 1.00) but the independent case **not at all** (0.00 / 0.00): with no shared ids there is
+nothing for it to match, so independent-lexicon alignment is invisible to the mechanical shortcut and
+only cognition can perform it.
+
+The agents split by capability. On the shared reference every model reaches precision 1.00, the
+reference pre-empting the planted false cognates (a *segment*/Ethernet-Segment and a
+MAC-learning/MAC-mobility trap) and lifting the weaker models from 0.889 without it to 1.00. On the
+independent lexicons that protection holds only for the capable agent: the strong model aligns the two
+vocabularies by their meaning and keeps precision **1.00 with zero confident errors**, while the mid
+and weak models fall to **0.89 and 0.88** precision *with the reference present*, taking a
+cross-lexicon false cognate and asserting it confidently in about two trials of three (the weak
+model's calibration gap near zero, almost as sure when wrong as when right). Recall stays near 1.0 for
+the weaker models throughout.
+
+What this changes: the report no longer only reframes the harder half, it tests it. A shared reference
+was doing two jobs at once, supplying meaning *and* pre-empting false cognates by shared identity;
+when the lexicons are independent the second job becomes a **cognitive** act rather than a mechanical
+one, and it is capability-gated exactly where confident false-cognate errors are most dangerous.
+
+### 5.2 The reference's descriptive fields buy recall, not the false-cognate guard
+
+Review points 14 and 17 ask where a thin or degraded reference stops helping, and whether "definition
+helps most" is the right anatomy. We ran the full 2⁴ factorial field ablation (lexical, class,
+definition, example) on the independent-lexicon case of §5.1, at the two inert placements, for the
+strong and weak checkpoints, expecting to trace where stripping the descriptive fields breaks the
+strong model's cross-lexicon alignment.
+
+| reference content | strong (sol) precision / recall | weak (nano) precision / recall |
+|---|---|---|
+| full (lexical + class + definition + example) | **1.00** / 1.00 | 0.88 / 0.92 |
+| definition + example only | 1.00 / 1.00 | 0.91 / 0.98 |
+| id-only (all descriptive fields stripped) | **1.00** / 0.94 | 0.89 / 0.98 |
+| no reference at all | **1.00** / 0.90 | 0.89 / 1.00 |
+
+The expected break did not occur. The strong model holds precision at 1.00 across everything, from the
+full reference down to an id-only anchor and even to no reference at all; what the descriptive fields
+buy it is a little **recall** (1.00 with the fields present, easing to 0.94 at id-only and 0.90 with no
+reference), not the discrimination. The weak model sits at ~0.88–0.91 precision regardless of which
+fields are present, and the planted false cognates survive **0 times in every cell** for both models,
+so the weak model's residual precision gap is spurious over-proposals, not the traps, and is
+insensitive to reference detail.
+
+What this changes: the thin-reference threshold is **not reached by thinning the descriptive fields**.
+The reference can be stripped almost to nothing without the strong model losing precision, which
+sharpens the anatomy story of §4: on independent lexicons the descriptive fields drive recall, not the
+false-cognate guard. The axis that would locate a real break is lexicon **divergence**, not reference
+thinness.
+
+### 5.3 Cognition absorbs real vendor structural messiness
+
+The tidy cases give both sides clean labels and usable glosses; review point 15 asks whether a
+structurally messy real vendor model defeats the approach. We built `config_vendor_messy`, pairing a
+clean IETF-style L3VPN service model with a deliberately messy vendor device model carrying every real
+difficulty: deep nested path labels, sparse or empty glosses, a config/state split (the
+route-distinguisher appears as both a config leaf and an operational-state leaf, two vendor concepts
+for one standard concept), cross-module augments, a leafref-indirection false cognate, and native gaps
+both ways (9 standard and 11 vendor concepts, 9 correspondences including one config/state 2:1).
+
+| stack | precision | recall |
+|---|---|---|
+| label-matcher (surface) | 1.00 | **0.33** |
+| reference-reconciler (shared binding) | 1.00 | 1.00 |
+| agent — strong, both-cognitive, with reference | 1.00 | **1.00** |
+| agent — strong, no reference | 1.00 | 0.89 |
+| agent — mid, both-cognitive, with reference | 1.00 | 1.00 |
+| agent — weak, all conditions | 1.00 | 0.89 |
+
+Surface matching collapses to 0.33 recall (against 0.5 on the tidy config cases): the deep paths and
+sparse glosses give almost nothing to key on. Cognition recovers almost all of it and never at the
+cost of precision, lifting recall to **0.89–1.00** while holding precision at **1.00 for every model
+at every placement, with and without the reference** (surviving false cognates 0 throughout). The
+agents resolve the config/state 2:1, mapping both vendor route-distinguisher leaves to the one standard
+concept, and not one model of any tier takes the leafref false cognate. The reference's value
+concentrates on the single hardest correspondence: without it the strong and mid models plateau at 8/9
+(0.889), and with it they reach 9/9; even the weak model recovers 8/9 at precision 1.00.
+
+What this changes: the messiness costs cognition recall, not precision, and the last correspondence it
+hides is exactly where the shared reference earns its place. The one thing a practitioner would most
+fear about real deployments, that vendor models are too messy to align, does not hold; the mess is
+largely absorbed.
+
+### 5.4 The dependency map is derivable, and correlation survives the derived map
+
+Review point 12 observes that the correlation results assume a hand-fed resource-dependency map. We
+built `derive_deps_config` and asked the agent to derive that map from raw inventory (optical lines
+lighting router ports, IP links on ports or LAG bundles, services running over IP links), a multi-hop
+join with a LAG-bundle indirection and a name lure (`otu5b` resembles `otu5` but lights an unused
+port), then tested whether correlation still works on the agent's own map.
+
+Every checkpoint derived the entire map correctly on every trial (precision 1.00, recall 1.00, exact
+3/3), resolving the LAG-bundle indirection and rejecting the name lure. Correlating on that self-derived
+map then matched the given-map baseline: for the strong and mid models both arms are identical at a
+perfect 1.00, and for the weak model the two arms differ (0.78 given, 0.89 derived) only because of the
+weak model's own correlation variance, not any map error, since its derived map was itself flawless.
+
+What this changes: the clean correlation finding does not depend on a curated input. The agent builds
+the map from inventory, indirection and lure included, and correlation on the derived map is
+indistinguishable from correlation on the hand-fed one.
+
+### 5.5 The correlation operation generalises into this setting
+
+Review point 6 flags three operations, composition & correlation among them, as not yet in the drafts.
+Correlation was shown unconditionally needed within the observability setting; the open question was
+whether it is a real operation or an artefact of that one case. We ported the same correlation agent
+and oracle into this configuration/transport domain, over the entities this setting already models but
+never correlates (an OTN line underlies an IP link underlies an L3VPN/EVPN service), as
+`correlation_config` (three scenarios), with the pragmatics on (semantics plus the dependency map)
+against off (the legacy page-everything pipeline).
+
+| model | ON — partition-exact / cause-accuracy | OFF |
+|---|---|---|
+| strong (sol) | **1.00 / 1.00** | 0.00 / 0.00 |
+| mid (mini) | **1.00 / 1.00** | 0.00 / 0.00 |
+| weak (nano) | **0.78 / 0.78** | 0.00 / 0.00 |
+
+The operation transfers cleanly. The strong and mid checkpoints partition the configuration-domain
+incidents perfectly, identical to their observability performance, and name the right root cause every
+time; the off baseline scores zero exact partitions by construction, because these scenarios all
+contain genuine multi-symptom incidents a page-everything policy can never group. The weak model drops
+to 0.78 (7 of 9 scenario-trials exactly right) on the more demanding scenarios, but still beats the off
+baseline's 0.00 by a wide margin: a capability effect on top of a clean generalisation, not a failure
+of it.
+
+What this changes: correlation is a real, portable operation, unconditionally needed in this setting
+too, not an observability artefact, and the finding rests on cross-setting evidence rather than a single
+case.
+
+### 5.6 Reuse onboarding is linear, cheaper, and more accurate (H4/T6, made empirical)
+
+The scaling result of §3.4 is a construction count: it verifies that binding N systems once composes
+the right pairwise correspondences and grows as N against N(N−1)/2. Review point 5 asks for the missing
+half, the real cost of **onboarding a genuinely new system**. We ran it: four systems over one domain,
+each bound to a shared nine-entry reference, onboarded one at a time two ways, across three models and
+three trials. **Reuse** onboards each new system with one referenced agent pass and derives its
+correspondences to every earlier system through the shared binding (N−1 passes, linear); **pairwise**
+reconciles each new system directly against every earlier one with no reference (N(N−1)/2 passes,
+quadratic). At N = 4 that is 3 passes against 6.
+
+| model | reuse tokens (mean) | pairwise tokens (mean) | ratio |
+|---|---|---|---|
+| strong (sol) | 6,505 | 13,576 | 2.1× |
+| mid (mini) | 8,572 | 17,157 | 2.0× |
+| weak (nano) | 11,045 | 30,225 | **2.7×** |
+
+Real effort tracks the linear/quadratic gap and widens at the weak end: the strong and mid models pay
+almost exactly the pass ratio (2×), while the weak model pays 2.7×, because each unreferenced pairwise
+reconciliation costs it extra deliberation. Reuse is also the more accurate arm. It holds precision and
+recall at 1.00 on 8 of 9 trials (strong 1.00 / 1.00, mid 1.00 / 1.00, weak 1.00 / 0.94); pairwise keeps
+precision at 1.00 but its recall sags and scatters (strong 0.91, mid 0.99, weak 0.88), because it
+reconciles each pair from scratch with nothing to catch a miss, whereas reuse derives every pair through
+one correct onboarding binding and preserves recall by construction. The single failure mode is that
+reuse concentrates the risk in that one binding (one weak-model trial faltered at 0.833 and propagated),
+but that worst trial still beat pairwise's worst (0.685).
+
+What this changes: T6 is now empirical and stronger than the structural claim. A shared reference does
+not merely change the *count* of passes from quadratic to linear; on a real onboarding it cuts token
+effort by 2.0–2.7× and raises correctness at the same time.
+
+### 5.7 The lexicon-divergence sweep: no break for a capable agent
+
+§5.2 ruled out reference-thinness as the axis that would make a reference "too thin to trust" and
+redirected to **lexicon divergence** — how far the two sides' vocabularies have diverged — as the axis
+that would, if anything, defeat the alignment. This experiment sweeps exactly that axis. Holding the two
+models, the gold, and the placement fixed, it varies only how many of the eight correspondence pairs are
+lexicalised independently rather than through a shared reference entry, from a fully shared reference
+(divergence 0, equivalent to `config_evpn`) through to two fully independent lexicons (divergence 1,
+equivalent to `config_evpn_indeplex`) in five steps, with the two planted cross-lexicon false cognates
+crossing into the independent regime at known points. Each level is run across the ladder at
+`both_inert`, four trials, with a no-reference floor at the endpoints.
+
+The result, for a capable agent, is a robustness one. The strong model holds precision at **1.00 at
+every divergence level**, with the reference and without it, and takes no planted false cognate anywhere
+on the sweep — its alignment does not degrade as the lexicons diverge. Nor does any model take a planted
+cross-lexicon cognate at any level: surviving false cognates are **zero throughout**, for all three
+rungs, so the guard itself never fails. The mid model's precision holds in a narrow band (0.92–0.97
+across the sweep) and the weak model's declines only gently (0.94 at divergence 0 to 0.89 at divergence
+1), and — as §5.2 already found on the endpoint case — that residual gap is **spurious over-proposal, not
+the planted traps**.
+
+| divergence (independent pairs) | 0.00 | 0.25 | 0.50 | 0.75 | 1.00 |
+|---|---|---|---|---|---|
+| strong — precision | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| mid — precision | 0.97 | 0.97 | 0.94 | 0.92 | 0.97 |
+| weak — precision | 0.94 | 0.89 | 0.92 | 0.92 | 0.89 |
+| any model — surviving false cognates | 0 | 0 | 0 | 0 | 0 |
+| weak — confident errors (mean per run) | 0.25 | 0.50 | 0.50 | 0.50 | 0.75 |
+
+The one thing divergence *does* move is confined to the weak end and shows up in the confidence
+signature rather than in the guard: the weak model's confident-error count roughly triples across the
+sweep, from 0.25 to 0.75 per run, even as its trap-taking stays at zero. So the cost of lexicon
+divergence, on this case, is not a broken false-cognate guard but a graded rise in the weak model's
+confident, spurious assertion — the same pathology the confidence metrics record elsewhere, now shown to
+grow with divergence.
+
+What this changes: the reference-quality threshold §5.2 sent us to look for on the divergence axis is,
+within a full sweep on this case, **not reached for a capable agent** — its alignment is robust from a
+shared reference all the way to two independent lexicons. The residual risk is the weak model's confident
+over-proposal, which divergence amplifies. Locating a hard break, if one exists, is now a question for
+more divergent domains (different granularity, coverage gaps, denser cross-lexicon cognates) rather than
+for this pair; that, and a second domain, are the honest next steps.
+
+---
+
+## 6. Threats to validity
 
 The primary case, though seeded to be hard, is a single pair of models of one
 network; the effect sizes are specific to it, and the sample is four trials per
@@ -769,7 +1018,10 @@ property of the one case; it shows up again on cases built to be different. This
 does not remove the deeper limitation (the same author built all three, so they
 test robustness to *variation*, not to *real network data*) but it closes the
 "you only showed it once" gap as far as in-house work can. The two new cases, their
-answer keys, and the recorded runs are in the repository alongside the original.
+answer keys, and the recorded runs are in the repository alongside the original, and the
+review-response experiments of §5 add four more cases in this setting
+(`config_evpn_indeplex`, `correlation_config`, `derive_deps_config`, and `config_vendor_messy`),
+widening the case base further.
 
 A note on scope, in terms of the components of §1. This study reconciles at the
 **schema-term** level: it exercises the **lexical** and **ontological/structural**
@@ -798,7 +1050,7 @@ variant and settings where meaning turns on context (observability, where the sa
 measurement is a page, a benign event, or a matter to watch), which remains for the settings
 to follow.
 
-## 6. Reproducibility
+## 7. Reproducibility
 
 The harness is standard-library Python for everything except the language-model
 stack, which uses the OpenAI API. The controls and the whole pipeline run with no
