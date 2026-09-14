@@ -123,10 +123,15 @@ cognition, and makes the agent-performed lift **replicable from the command line
 are unchanged; the reports carry the results in place.
 
 - **Pragmatics across the lifecycle — new master-report §13.9.** The report now separates the three
-  layers of a lifted model by *how each is obtained*. The ontology's schematic layer (the **TBox**) and
-  its instances (the **ABox**) are both *observed*: a determinate lookup any consumer, even a
-  non-cognitive one, can do. The **pragmatics** (whether a state matters, whether an offer is acceptable,
+  layers of a lifted model by *how each is obtained from it*. The ontology's schematic layer (the
+  **TBox**) and its instances (the **ABox**) are both *observed in the lifted model*: a determinate
+  lookup any consumer, even a non-cognitive one, can do. Each is the frozen output of the cognitive lift
+  that made it explicit, not a picture the source data model hands over ready-made; the cognition is
+  front-loaded, not absent. The **pragmatics** (whether a state matters, whether an offer is acceptable,
   who decides) are *judged*, from schema, instances and context, and are defeasible and context-relative.
+  The asymmetry is the point: TBox and ABox need cognition once, at lift time, and then freeze cleanly
+  and read as lookup forever; pragmatics cannot be frozen cleanly and must be re-judged against the live
+  context at each use.
   A static model, ours or an OWL export, holds the TBox in full and the ABox as a refreshable snapshot,
   but can only *describe* pragmatics, never carry them resolved; the section shows the OWL mapping and its
   limit. A live operation supplies them through four general mechanisms: pulling a pragmatic fact *in* by
