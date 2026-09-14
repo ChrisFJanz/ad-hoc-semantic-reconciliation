@@ -35,6 +35,8 @@ from pack import classify, SETTING                                           # n
 
 COLS = ["case", "setting", "stack", "model", "placement", "uses_reference",
         "precision", "resolved_fraction", "f1", "surviving_false_cognates", "residual",
+        "conf_correct_mean", "conf_wrong_mean", "calibration_gap", "brier",
+        "confident_errors", "confident_error_rate",
         "scaling", "total_tokens", "reasoning_tokens", "latency_s"]
 
 # The scoring code emits the metric under the internal key ``recall``; the published

@@ -108,6 +108,25 @@ def _reference_note(placement: str) -> str:
     )
 
 
+def _independent_reference_note(placement: str) -> str:
+    """The reference note when the two sides carry INDEPENDENTLY authored lexicons
+    (reference.kind == 'independent'). There is no shared id to key on; the agent must
+    align the two lexicons by meaning -- the harder problem the drafts identify."""
+    return (
+        "\n\nEach side is bound to its OWN lexicon, and the two lexicons were authored "
+        "independently: they use different entry ids and often different terms for the "
+        "same concept. A concept's 'ref' names an entry in ITS side's lexicon only. Do "
+        "NOT expect ids to match across sides, and do NOT correspond two concepts merely "
+        "because their labels look alike. Instead ALIGN the two lexicons: read the entries' "
+        "definitions and examples, decide which entry on side A denotes the same thing as "
+        "which entry on side B, and correspond the concepts bound to a matched pair of "
+        "entries. Beware cross-lexicon false cognates -- an entry whose term resembles a "
+        "different-meaning entry in the other lexicon (for example a broadcast-domain "
+        "'segment' versus an Ethernet Segment). Leave a concept in the residual when its "
+        "meaning has no counterpart in the other lexicon."
+    )
+
+
 def _concept_line(c, *, inert: bool, include_ref: bool, concept_fields=None) -> dict:
     # concept_fields (the pre-lift baseline): when set, serialise each concept from an
     # explicit content mask instead of the inert/live default. The always-present base is
@@ -280,7 +299,10 @@ class OpenAIAgentStack(ReasoningStack):
         client = self._get_client()
         system = SYSTEM + _placement_note(placement)
         if self.uses_reference:
-            note = _reference_note(placement)
+            if reference is not None and getattr(reference, "kind", "") == "independent":
+                note = _independent_reference_note(placement)
+            else:
+                note = _reference_note(placement)
             if self.ref_fields is not None:
                 # keep the note honest under ablation: it must not promise fields the
                 # mask has removed
@@ -315,11 +337,14 @@ class OpenAIAgentStack(ReasoningStack):
     def to_reconciliation(self, result, a, b, effort, placement) -> Reconciliation:
         a_ids, b_ids = a.by_id, b.by_id
         proposed: list[frozenset] = []
+        confidence: dict = {}
         matched_a: set[str] = set()
         matched_b: set[str] = set()
         for c in result.correspondences:
             if c.a_id in a_ids and c.b_id in b_ids:  # drop any hallucinated ids
-                proposed.append(frozenset((c.a_id, c.b_id)))
+                pair = frozenset((c.a_id, c.b_id))
+                proposed.append(pair)
+                confidence[pair] = float(getattr(c, "confidence", 0.0) or 0.0)
                 matched_a.add(c.a_id)
                 matched_b.add(c.b_id)
         residual_a = [c.id for c in a.concepts if c.id not in matched_a]
@@ -330,7 +355,7 @@ class OpenAIAgentStack(ReasoningStack):
         return Reconciliation(
             stack=self.name, uses_reference=self.uses_reference, placement=placement,
             proposed=proposed, residual_a=residual_a, residual_b=residual_b,
-            work=work, effort=effort,
+            work=work, effort=effort, confidence=confidence,
         )
 
     def reconcile(self, a, b, reference: Reference | None = None,
@@ -404,5 +429,6 @@ class OpenAIAgentStack(ReasoningStack):
             residual_a=[c.id for c in a.concepts if c.id not in matched_a],
             residual_b=[c.id for c in b.concepts if c.id not in matched_b],
             work=dict(pre.work), effort={**pre.effort, **veffort},
+            confidence={p: pre.confidence.get(p, 0.0) for p in kept},
         )
         return pre, post
