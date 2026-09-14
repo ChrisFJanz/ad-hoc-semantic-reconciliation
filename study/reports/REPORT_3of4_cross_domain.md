@@ -46,7 +46,10 @@ thin: **any one** descriptive field (a shared label, a class, a one-line definit
 canonical example) is enough to unlock the strong agent's commitment, while a bare shared
 identifier with no description is worthless, and even harmful. And a separate axis (**whose
 realm owns each shared field**) shows the reference reaching *meaning* but not *authority*: it
-settles what a field is, not who governs it.
+settles what a field is, not who governs it. That authority is not, however, something the
+setting must hand-author: a later experiment shows it is **derivable from an external artefact**
+(an interconnect agreement), and that when two sources contradict each other on ownership the
+agents **surface the conflict** rather than silently choose a side (§6).
 
 Read carefully, none of this qualifies the programme's thesis that fully-cognitive agents can
 close a reconciliation. What it measures is one early stage of that process, and the worth of the
@@ -67,6 +70,16 @@ same close for a fraction of the cognition, so building one is redundant; and fo
 construction is capability-gated and its cost explodes for a worse close. In short, build the reference
 where there is none to bind through and the agent can build a good one; otherwise use the one that
 exists.
+
+Two review-response experiments (§6), added after external review, test the standard-free setting
+where it is thinnest: the authority axis. The first shows cross-domain authority need not be
+hand-authored at all. Structure-only attribution is steeply capability-gated (the strong agent
+1.0, the mid and weak agents 0.47 and 0.40, the weak one taking the transport lure), but an
+external interconnect artefact rescues **every** model to 1.0, and the agent correctly defers on
+the one genuinely co-owned field. The second shows that when two sources contradict each other on
+who owns a field, every model, the weak one included, **surfaces the conflict** rather than
+silently picking a side: the failure a reviewer might fear does not occur when the disagreement is
+visible.
 
 The setting is grounded in the demonstration *Non-standard cross-domain provisioning* and in the
 programme's wider account of ad-hoc, agent-constructed references.
@@ -303,6 +316,13 @@ authority is legitimately shared or negotiated rather than cleanly owned), not a
 pragmatic questions do not have a single right answer, and saying so is part of measuring them
 honestly.
 
+A note on provenance, since it bears on all three points. The realm ownership scored against here is
+hand-authored in the setting's gold, but that is a convenience of measurement, not a load-bearing
+assumption. A review-response experiment (§6) shows the same authority is **derivable from an
+external interconnect artefact**, lifting even the weaker agents to a correct attribution, and that
+when two sources disagree on an owner the agents **surface the contradiction** rather than silently
+choose one.
+
 ## 5. Discussion
 
 **What is new against the first setting.** The first setting established that cognitive agents can
@@ -338,7 +358,63 @@ supply; and the fully-cognitive close, standard or no standard, proceeds by buil
 shared ground the parties lack, a step that is itself an act of cognition, and, this setting shows,
 a thin one for an agent strong enough to take it.
 
-## 6. Threats to validity
+## 6. The review-response experiments (14 September 2026)
+
+Two experiments were added after external review, both bearing on a single review point: the worry
+that cross-domain authority (whose realm governs each shared field, §4) is simply hand-authored into
+the setting, an assumption doing quiet work beneath the pragmatic result. They test the two halves
+of that worry in turn: whether the authority can instead be *derived* from an artefact the two
+operators would already hold, and whether, when the sources that would derive it disagree, an agent
+quietly picks a side. Both run on the same cross-domain case as the rest of the report, over the
+programme's three-point ladder.
+
+### 6.1 Authority is derivable from an external artefact, not hand-authored
+
+The first experiment answers the review point directly. It withholds the authored ownership and
+gives the agent an external interconnect-agreement artefact instead (SLA clauses stating who owns,
+realises, and measures each seam field), asking it to **derive** the authority against a
+structure-only baseline. Two fields are diagnostic: the committed rate (owned by the IP realm,
+though transport carries it, so the lure is to hand it to transport) and the demarcation (genuinely
+co-owned, so the agent must defer rather than invent an owner).
+
+Structure-only, the attribution is steeply capability-gated, exactly as §4 found. The strong agent
+infers every field correctly (1.00), keeping the committed rate with the IP realm and deferring on
+the demarcation; the mid and weak agents reach only 0.47 and 0.40, the weak agent taking the
+transport lure on the committed rate and neither weaker agent deferring on the co-owned field. The
+external artefact then closes the whole gap: with the interconnect agreement in hand, the mid and
+weak agents jump to **1.00**, the transport lure falls to zero, and every model correctly returns
+"shared" for the demarcation.
+
+This changes the report's position on the pragmatic axis. The authored authority gold of §4 is a
+convenience of measurement, not a standing assumption of the setting: cross-domain authority is
+derivable from the kind of artefact two interworking operators would already possess, and the
+artefact, as with the reference elsewhere in the programme, is worth most exactly where capability
+is weakest.
+
+### 6.2 When two sources conflict, the agent surfaces it rather than choosing silently
+
+The second experiment presses the honest-failure question the first one raises: if authority is read
+off an external source, what happens when two sources contradict each other on who owns a field? It
+supplies two documents (the interconnect agreement and a transport runbook) that disagree on the
+committed-rate owner, the runbook reinforcing the same transport lure a weak agent already tends to
+follow, so silently siding with transport is the natural failure. The correct behaviour is to report
+a conflict, not an owner.
+
+Every model does. Across the whole ladder the committed-rate conflict is flagged in every trial
+(1.00), no model silently defaults to transport (0.00), none confuses the genuine source conflict
+with the co-owned demarcation (still correctly reported as "shared"), and none over-calls conflict
+on the four single-sourced fields (no false conflicts). The weak agent that *did* take the transport
+lure under a single implicit source in §6.1 surfaces the contradiction once a second source makes it
+explicit.
+
+This is the reassuring counterpart to the first experiment: where the disagreement is visible in the
+evidence, the failure a reviewer might fear (an agent quietly inventing an owner when its inputs
+disagree) does not occur. The caveat is honest. The contradiction here is explicit, two clauses
+plainly asserting opposite owners, so the result says agents catch an *obvious* conflict; a latent
+conflict, where two sources disagree only by implication, is the sharper follow-on and is where a
+capability gradient, absent here, would be expected to appear.
+
+## 7. Threats to validity
 
 The case is seeded rather than sampled (built to exercise the mechanism and prove the trap, not drawn
 from a population), so it establishes how the standard-free binding behaves and why, not how often.
@@ -385,7 +461,7 @@ to commit one pair at the floor (where the fixture defers, resolving 0.20), and 
 visible in the lift as well as in the bind. The full cross-setting table is in the master report
 (§13.8).
 
-## 7. Reproducibility
+## 8. Reproducibility
 
 The bespoke cross-domain case (two lifted models, the constructed reference, the derived gold), the
 single-pass binding harness and its reference-blind and reference controls, the factorial reference

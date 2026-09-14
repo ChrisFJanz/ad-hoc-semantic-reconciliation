@@ -28,8 +28,9 @@ and the cognition spectrum), distils each setting to its essentials, and then ga
 they can be read as one result: what works and how far, the **six theses** the settings establish, the
 evidence behind them along four cross-cutting axes (cognitive load, the reference, placement and
 failure, and the pragmatic layer), two tables mapping every finding to its placement and to the process
-stage it acts on, the surprises, and the scope. The slide deck carries the same synthesis for readers
-who prefer slides.
+stage it acts on, the surprises, the scope, and a **review-response layer** (§17) that folds a
+seventeen-experiment programme — answering an external review point by point — into the synthesis. The
+slide deck carries the same synthesis for readers who prefer slides.
 
 ![The lift — a data model becomes a portable, self-describing semantic model.](figures/fig_master_lift.png)
 
@@ -116,6 +117,49 @@ goes inert a single agent reconstructs it. The
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
+## What's new (2026-09-14)
+
+This revision answers an external review (Brad Peters) at the experimental end: a **seventeen-experiment
+programme** that turns each review point into a runnable experiment, biting into the harder half the
+review named — *producing and aligning the inputs*, not only reconciling given ones. The central
+findings are unchanged and deepened; a new **master-report §17** reads the programme as one result and
+maps every review point to its experiment, and each setting report gains a **review-response section**
+(report 1/4 §5, report 2/4 §5, report 3/4 §6, report 4/4 §5).
+
+- **The harder half, tested.** Independent-lexicon alignment is tractable for a capable agent
+  (precision 1.00) but capability-gated — weaker models take cross-lexicon false cognates *confidently*;
+  the dependency map and cross-domain authority are each shown *derivable* (from inventory, and from an
+  external artefact), and reuse onboarding a new system is linear, 2.0–2.7× cheaper *and* more accurate.
+  The reference's descriptive fields turn out **not** to be the precision driver — the real axis is
+  lexicon divergence.
+- **Cross-family replication that corrected a claim.** Replicated across three model families and two
+  tiers (gpt-5.x, DeepSeek, Qwen-2.5-7B) through a JSON-mode compatibility shim: the verifier's apparent
+  "capability-independent ceiling" was a gpt-5.x-family habit, while the grader's cross-framing hardness
+  is family-independent. Replication told a disposition from a law.
+- **Confidence made a first-class metric.** A confident-error rate, calibration gap and Brier are now
+  scored and reported apart from honest deferrals; the confident wrong correspondence — the dangerous
+  failure — is real, concentrated at the weak end, and confidence alone cannot filter it. An explicit
+  abstain path is the remedy.
+- **Robustness and honest nulls.** Cognition absorbs real vendor structural messiness (surface matching
+  collapses to recall 0.33; agents recover to 0.89–1.00 at precision 1.00); contradictory authority
+  sources are surfaced, not silently resolved; and a real second reasoning agent in the intent
+  negotiation changes almost nothing — an honest null that softens the "two-sided negotiation" language.
+- **New code and cases.** New harness: `src/reconcile/compat.py` (a JSON-mode structured-output shim so
+  any OpenAI-compatible provider can drive the harness) and confidence-sensitive metrics. New drivers
+  under `pipeline/` (onboarding, verify_divergence, operation_necessity, escalation_analysis,
+  correlation_generalization, deps_derivation, authority_derivation and authority_conflict,
+  targeted_request, two_agent_intent, independent_grader, and a local/DeepSeek setup checker). New cases
+  `config_evpn_indeplex`, `correlation_config`, `derive_deps_config`, `config_vendor_messy`, an
+  `authority_source` artefact under `config_cross_domain`, and `underspecified_pairs`, with their
+  builders and gold derivations. Results land under `results/` and the leaderboard.
+- **The lexicon-divergence sweep.** Following up the field-ablation result, a sweep that progressively
+  independently lexicalises the two sides — from a fully shared reference to two independent lexicons —
+  finds **no break for a capable agent**: precision holds at 1.00 across the whole sweep, no model takes
+  a planted cross-lexicon cognate at any level, and what divergence moves is only the weak model's
+  confident-error rate (it roughly triples). Lexicon divergence, on this case, is not the axis that
+  defeats a capable agent's alignment; a hard break, if one exists, is a question for more divergent
+  domains (report 1/4 §5.7).
+
 ## What's new (2026-09-10)
 
 This revision brings the **pragmatic layer** to the front, shows the **lift itself** as an act of
@@ -145,7 +189,7 @@ are unchanged; the reports carry the results in place.
   the framework does not merely extend beyond reconciliation but predicts the other settings' signatures,
   the observability verdict being capability-gated while its correlation, a structural test, holds across
   the ladder. The point is carried through the rest of the report: §14's second map gains a note tying its
-  **Lift** and **Pragmatic-resolution** rows to §13.8 and §13.9, and the one-paragraph close (§17) now
+  **Lift** and **Pragmatic-resolution** rows to §13.8 and §13.9, and the one-paragraph close (now §18) now
   states it.
 - **The lift, shown and performed — extended §13.8.** Three things land in the lift section. A *concrete
   lifted model* is now printed in full (§2 shows one complete concept as JSON, with a note that the shape
