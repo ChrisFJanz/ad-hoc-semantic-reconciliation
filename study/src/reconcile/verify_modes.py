@@ -105,11 +105,12 @@ def invariant_round_trip(proposals: list[dict], placement: str, model: str,
     }
     system = VERIFY_SYSTEM + VERIFY_NOTE.get(placement, "")
     t0 = time.time()
-    completion = client.chat.completions.parse(
-        model=model,
-        messages=[{"role": "system", "content": system},
-                  {"role": "user", "content": json.dumps(payload, indent=2)}],
-        response_format=_VList,
+    from reconcile.compat import parse_compat
+    completion = parse_compat(
+        client, model,
+        [{"role": "system", "content": system},
+         {"role": "user", "content": json.dumps(payload, indent=2)}],
+        _VList,
     )
     elapsed = time.time() - t0
     result = completion.choices[0].message.parsed

@@ -233,6 +233,7 @@ class TwoAgentStack(ReasoningStack):
         transcript: list[dict] = []
         # proposals seen as directed (proposer_side, frozenset(pair)); accepts / rejects by pair
         proposed_by: dict[frozenset, set] = {}
+        proposed_conf: dict[frozenset, float] = {}   # pair -> best proposer confidence seen
         accepts: set[frozenset] = set()
         rejects: set[frozenset] = set()
         oracle_confirmed: set[frozenset] = set()   # decisive-experiment verdicts
@@ -250,6 +251,8 @@ class TwoAgentStack(ReasoningStack):
                     pair = frozenset((p.their_id, p.my_id)) if p.my_id in b_ids and p.their_id in a_ids else None
                 if pair:
                     proposed_by.setdefault(pair, set()).add(side)
+                    proposed_conf[pair] = max(proposed_conf.get(pair, 0.0),
+                                              float(getattr(p, "confidence", 0.0) or 0.0))
             # ratifications: their_id is the proposer's (other side), my_id is mine (`side`)
             for r in turn.ratifications:
                 if side == "A":
@@ -313,6 +316,10 @@ class TwoAgentStack(ReasoningStack):
                   "bilateral_checks": len(accepts) + len(rejects),
                   "experiments": (self.oracle.calls if self.oracle is not None else 0)},
             effort=total,
+            # a decisive-experiment verdict binds at full confidence; otherwise the best
+            # proposer confidence the dialogue attached to the pair.
+            confidence={pair: (1.0 if pair in oracle_confirmed else proposed_conf.get(pair, 0.5))
+                        for pair in confirmed},
         )
 
     def reconcile(self, a, b, reference: Reference | None = None,

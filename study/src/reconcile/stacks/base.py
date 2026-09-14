@@ -28,6 +28,7 @@ class Reconciliation:
     residual_b: list[str] = field(default_factory=list)
     work: dict = field(default_factory=dict)    # candidates, bilateral_checks, binding_ops
     effort: dict = field(default_factory=dict)  # LM stacks only: tokens, reasoning_tokens, latency_s, model
+    confidence: dict = field(default_factory=dict)  # LM stacks only: {a_id,b_id} pair -> confidence in [0,1]
 
 
 class ReasoningStack(ABC):
