@@ -87,7 +87,7 @@ cannot give, holding the resolved fraction at one. So the reference's value in *
 cognition, while its value in *correctness* concentrates where cognition, and therefore
 verification, is weakest: the two halves of a single substitution.
 
-A sixth block of experiments, added in response to a 14 September review (§5), bites into the harder
+A further block of experiments (§5) bites into the harder
 half the primary experiments assume away: not reconciling inputs already lifted and bound, but
 producing and aligning them. Independent-lexicon alignment, two separately authored vocabularies with
 no shared ids, is tractable but capability-gated: the strong agent holds precision 1.00 and takes no
@@ -751,21 +751,21 @@ effect.
 
 ---
 
-## 5. The review-response experiments (14 September 2026)
+## 5. Further experiments
 
 The experiments of §3 reconcile inputs that are already lifted and, where a reference is present,
-already bound to it; they measure what cognition does *given* those inputs. A review by Brad Peters
-put the sharpest pressure on the other side of that line: the study convincingly shows
+already bound to it; they measure what cognition does *given* those inputs. The harder half of the
+problem lies on the other side of that line: the study convincingly shows
 reconciliation once a shared reference and the authored inputs are in place, and the harder half is
-**producing and aligning those inputs** in the first place. The six experiments below bite into that
-harder half within this setting, rather than only reframing the scope. They are dated 14 September
-2026 and each is written up in full separately; the essentials, with exact numbers, follow. Where a
+**producing and aligning those inputs** in the first place. The experiments below bite into that
+harder half within this setting, rather than only reframing the scope. Each is written up in full
+separately; the essentials, with exact numbers, follow. Where a
 write-up reports **recall**, it is the same measure as this report's resolved fraction (§2.3): the
 share of the true correspondences the stack finds and commits to, with the rest referred onward.
 
 ### 5.1 Independent-lexicon alignment is tractable, but capability-gated
 
-This is the deepest of the review points (point 1): the primary experiments have both sides bind to
+This is the hardest version of the problem: the primary experiments have both sides bind to
 *one* shared reference, whereas the harder task is aligning two **independently developed** lexicons.
 We built `config_evpn_indeplex`, the carrier-Ethernet-VPN case re-represented with two independently
 authored vocabularies (a MEF vocabulary and an IETF/EVPN vocabulary, with no shared ids), the gold
@@ -796,7 +796,7 @@ one, and it is capability-gated exactly where confident false-cognate errors are
 
 ### 5.2 The reference's descriptive fields buy recall, not the false-cognate guard
 
-Review points 14 and 17 ask where a thin or degraded reference stops helping, and whether "definition
+A natural question is where a thin or degraded reference stops helping, and whether "definition
 helps most" is the right anatomy. We ran the full 2⁴ factorial field ablation (lexical, class,
 definition, example) on the independent-lexicon case of §5.1, at the two inert placements, for the
 strong and weak checkpoints, expecting to trace where stripping the descriptive fields breaks the
@@ -825,7 +825,7 @@ thinness.
 
 ### 5.3 Cognition absorbs real vendor structural messiness
 
-The tidy cases give both sides clean labels and usable glosses; review point 15 asks whether a
+The tidy cases give both sides clean labels and usable glosses; a further question is whether a
 structurally messy real vendor model defeats the approach. We built `config_vendor_messy`, pairing a
 clean IETF-style L3VPN service model with a deliberately messy vendor device model carrying every real
 difficulty: deep nested path labels, sparse or empty glosses, a config/state split (the
@@ -858,7 +858,7 @@ largely absorbed.
 
 ### 5.4 The dependency map is derivable, and correlation survives the derived map
 
-Review point 12 observes that the correlation results assume a hand-fed resource-dependency map. We
+One open question is whether the correlation results depend on a hand-fed resource-dependency map. We
 built `derive_deps_config` and asked the agent to derive that map from raw inventory (optical lines
 lighting router ports, IP links on ports or LAG bundles, services running over IP links), a multi-hop
 join with a LAG-bundle indirection and a name lure (`otu5b` resembles `otu5` but lights an unused
@@ -876,8 +876,8 @@ indistinguishable from correlation on the hand-fed one.
 
 ### 5.5 The correlation operation generalises into this setting
 
-Review point 6 flags three operations, composition & correlation among them, as not yet in the drafts.
-Correlation was shown unconditionally needed within the observability setting; the open question was
+Three operations, composition & correlation among them, are not yet in the drafts;
+correlation was shown unconditionally needed within the observability setting; the open question was
 whether it is a real operation or an artefact of that one case. We ported the same correlation agent
 and oracle into this configuration/transport domain, over the entities this setting already models but
 never correlates (an OTN line underlies an IP link underlies an L3VPN/EVPN service), as
@@ -905,8 +905,8 @@ case.
 ### 5.6 Reuse onboarding is linear, cheaper, and more accurate (H4/T6, made empirical)
 
 The scaling result of §3.4 is a construction count: it verifies that binding N systems once composes
-the right pairwise correspondences and grows as N against N(N−1)/2. Review point 5 asks for the missing
-half, the real cost of **onboarding a genuinely new system**. We ran it: four systems over one domain,
+the right pairwise correspondences and grows as N against N(N−1)/2. The missing
+half is the real cost of **onboarding a genuinely new system**. We ran it: four systems over one domain,
 each bound to a shared nine-entry reference, onboarded one at a time two ways, across three models and
 three trials. **Reuse** onboards each new system with one referenced agent pass and derives its
 correspondences to every earlier system through the shared binding (N−1 passes, linear); **pairwise**
@@ -962,6 +962,14 @@ the planted traps**.
 | any model — surviving false cognates | 0 | 0 | 0 | 0 | 0 |
 | weak — confident errors (mean per run) | 0.25 | 0.50 | 0.50 | 0.50 | 0.75 |
 
+![The lexicon-divergence sweep: precision holds for the capable agent while the weak model's confident errors rise.](../figures/fig_divergence.png)
+
+*Figure 5.7. Left: precision across the divergence axis, per model. The strong agent is flat at 1.00,
+and no model takes a planted cross-lexicon false cognate at any level, so the guard itself never fails;
+the mid and weak agents vary in a narrow high band, spurious over-proposal rather than trap-taking.
+Right: the one quantity divergence moves is the weak model's confident-error count, which roughly triples
+across the sweep, while the stronger two stay at zero. Reference on, both-inert, four trials per cell.*
+
 The one thing divergence *does* move is confined to the weak end and shows up in the confidence
 signature rather than in the guard: the weak model's confident-error count roughly triples across the
 sweep, from 0.25 to 0.75 per run, even as its trap-taking stays at zero. So the cost of lexicon
@@ -999,7 +1007,7 @@ node, a topology, and a link paired with their per-layer counterparts), the 1:1 
 adjacent-abstraction, aggregation-style mapping. These are defensible but debatable, and, tellingly,
 they are exactly the correspondences the two-agent negotiation defers without a shared reference and the
 relabelled-identity control leaves unresolved: the machinery rediscovers the very pairs a careful
-reviewer would flag, and a shared reference is what settles them.
+reader would flag, and a shared reference is what settles them.
 
 **The single-case worry, tested in-house.** The most natural objection is that the
 one pair of models above was, without anyone meaning it to be, chosen to make the
@@ -1019,7 +1027,7 @@ does not remove the deeper limitation (the same author built all three, so they
 test robustness to *variation*, not to *real network data*) but it closes the
 "you only showed it once" gap as far as in-house work can. The two new cases, their
 answer keys, and the recorded runs are in the repository alongside the original, and the
-review-response experiments of §5 add four more cases in this setting
+further experiments of §5 add four more cases in this setting
 (`config_evpn_indeplex`, `correlation_config`, `derive_deps_config`, and `config_vendor_messy`),
 widening the case base further.
 

@@ -71,14 +71,14 @@ construction is capability-gated and its cost explodes for a worse close. In sho
 where there is none to bind through and the agent can build a good one; otherwise use the one that
 exists.
 
-Two review-response experiments (§6), added after external review, test the standard-free setting
+Two further experiments (§6) test the standard-free setting
 where it is thinnest: the authority axis. The first shows cross-domain authority need not be
 hand-authored at all. Structure-only attribution is steeply capability-gated (the strong agent
 1.0, the mid and weak agents 0.47 and 0.40, the weak one taking the transport lure), but an
 external interconnect artefact rescues **every** model to 1.0, and the agent correctly defers on
 the one genuinely co-owned field. The second shows that when two sources contradict each other on
 who owns a field, every model, the weak one included, **surfaces the conflict** rather than
-silently picking a side: the failure a reviewer might fear does not occur when the disagreement is
+silently picking a side: the failure one might fear does not occur when the disagreement is
 visible.
 
 The setting is grounded in the demonstration *Non-standard cross-domain provisioning* and in the
@@ -318,7 +318,7 @@ honestly.
 
 A note on provenance, since it bears on all three points. The realm ownership scored against here is
 hand-authored in the setting's gold, but that is a convenience of measurement, not a load-bearing
-assumption. A review-response experiment (§6) shows the same authority is **derivable from an
+assumption. A further experiment (§6) shows the same authority is **derivable from an
 external interconnect artefact**, lifting even the weaker agents to a correct attribution, and that
 when two sources disagree on an owner the agents **surface the contradiction** rather than silently
 choose one.
@@ -358,9 +358,9 @@ supply; and the fully-cognitive close, standard or no standard, proceeds by buil
 shared ground the parties lack, a step that is itself an act of cognition, and, this setting shows,
 a thin one for an agent strong enough to take it.
 
-## 6. The review-response experiments (14 September 2026)
+## 6. Further experiments
 
-Two experiments were added after external review, both bearing on a single review point: the worry
+Two further experiments bear on a single question: the worry
 that cross-domain authority (whose realm governs each shared field, §4) is simply hand-authored into
 the setting, an assumption doing quiet work beneath the pragmatic result. They test the two halves
 of that worry in turn: whether the authority can instead be *derived* from an artefact the two
@@ -370,7 +370,7 @@ programme's three-point ladder.
 
 ### 6.1 Authority is derivable from an external artefact, not hand-authored
 
-The first experiment answers the review point directly. It withholds the authored ownership and
+The first experiment answers this directly. It withholds the authored ownership and
 gives the agent an external interconnect-agreement artefact instead (SLA clauses stating who owns,
 realises, and measures each seam field), asking it to **derive** the authority against a
 structure-only baseline. Two fields are diagnostic: the committed rate (owned by the IP realm,
@@ -408,7 +408,7 @@ lure under a single implicit source in §6.1 surfaces the contradiction once a s
 explicit.
 
 This is the reassuring counterpart to the first experiment: where the disagreement is visible in the
-evidence, the failure a reviewer might fear (an agent quietly inventing an owner when its inputs
+evidence, the failure one might fear (an agent quietly inventing an owner when its inputs
 disagree) does not occur. The caveat is honest. The contradiction here is explicit, two clauses
 plainly asserting opposite owners, so the result says agents catch an *obvious* conflict; a latent
 conflict, where two sources disagree only by implication, is the sharper follow-on and is where a

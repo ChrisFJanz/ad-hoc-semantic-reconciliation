@@ -56,7 +56,7 @@ meaning, and itself bounded by capability. Meaning (what an anomaly *is*, pinned
 and significance (whether it warrants a page and how it correlates, carried by the pragmatics) are
 separable, both necessary, and each gated in its own way.
 
-A later round of review-response experiments (§5) tightens three of these claims by measurement rather
+A later round of further experiments (§5) tightens three of these claims by measurement rather
 than assertion. The decisive experiment that verifies a correspondence proves genuinely distinct from the
 agent's own read-back (they agree on only about 64% of the cases both decide, and every split is the agent
 over-passing what the experiment refutes), but its reach recedes exactly where it is most needed, falling
@@ -255,9 +255,9 @@ where the ON/OFF contrast is cleanest and least contestable. This is exactly the
 calibration the anomaly-semantics work exists to standardise, and the study offers it as a concrete
 artefact to refine, not a settled answer.
 
-## 5. The review-response experiments (14 September 2026)
+## 5. Further experiments
 
-A round of external review pressed on three things this setting had asserted but not measured: whether
+Three claims this setting had asserted but not measured invite a direct test: whether
 the decisive experiment is genuinely a different check from the agent's own read-back, whether the
 three operations the study added but the reference drafts never named each do real work, and whether
 the fallback from cheap evidence to an expensive probe is a behaviour or only a design choice. Each was
@@ -268,7 +268,7 @@ value is gated.
 
 ### 5.1 The decisive experiment is distinct from the read-back, and its reach recedes where it is most needed
 
-The review's deepest question here (point 9) was whether the study's two verifiers, the agent reading
+The deepest question here was whether the study's two verifiers, the agent reading
 the two sides' static records ("assertion" or "negotiation") and the decisive experiment that exercises
 the correspondence on the graph and consults no gold, are two checks or one check grounded twice in the
 answer key. The experiment (E6) put both on the same fourteen `verify_hard` proposals (eight correct,
@@ -296,7 +296,7 @@ side remains future work.
 
 ### 5.2 The three added operations each do real work, in three different regimes
 
-The review also asked (point 6) whether the three operations the study leans on but the reference drafts
+A further question is whether the three operations the study leans on but the reference drafts
 do not name, attribute pinning, pragmatic resolution, and composition and correlation, are genuine theory
 extensions or provisional conveniences. E7 answered by exercising each with an explicit ON/OFF toggle
 across the ladder and reading the correctness delta; the deltas rest on small condition counts and are
@@ -324,8 +324,8 @@ the configuration report.)
 
 ### 5.3 Escalation to the decisive experiment is capability- and reach-gated
 
-Finally, the review asked whether the fallback ordering, from cheap evidence to the more expensive
-decisive experiment, is tested (points 3 and 16). The over-trust form the review first imagined is
+Finally, whether the fallback ordering, from cheap evidence to the more expensive
+decisive experiment, is tested. The over-trust form one might first imagine is
 impossible in this benchmark (the instance gold is derived so a key cannot lie), so E4′ instead asked the
 live question: when the cheap evidence (the key) is withheld, does the agent escalate to the probe, and
 does it help? Both are answerable from the instance runs on disk, which record probe counts and recall per
