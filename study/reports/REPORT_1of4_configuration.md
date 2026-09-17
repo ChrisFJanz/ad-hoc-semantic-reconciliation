@@ -1,17 +1,17 @@
 # 1/4 · Reconciling two standard models of one network: cognition across the spectrum, and what a thin reference adds
 
 > *Programme status: a complete analytical arc through the **first of the programme's four
-> operational settings** (transport-network service provisioning). It establishes the concept,
+> operational scenarios** (transport-network service provisioning). It establishes the concept,
 > characterizes how the **cognition spectrum** governs it, and validates **one thin-reference
 > variant** (the lexical). Across the components of reconciliation it works the lexical,
 > ontological/structural, and instance-level, together with **verification**; only the
-> **pragmatic** component is held fixed: deferred, with the remaining three settings, to the
+> **pragmatic** component is held fixed: deferred, with the remaining three scenarios, to the
 > work that follows.*
 
 ## Summary
 
-*This is the **first of the programme's four settings**, and the one that establishes the concept;
-it is also the setting written most as a foundation, opening with background and hypotheses (§1)
+*This is the **first of the programme's four scenarios**, and the one that establishes the concept;
+it is also the scenario written most as a foundation, opening with background and hypotheses (§1)
 before it turns, like the other three, to a concrete case and its results.* The case is concrete.
 Two independently authored **standard** models of one optical transport network (ONF **TAPI** on
 one side, IETF **TEAS/ACTN** on the other) describe the same nodes, links, and services, each in
@@ -19,8 +19,8 @@ its own vocabulary. A TAPI *connectivity-service* is a TEAS *tunnel*; a TAPI *li
 looks like a TEAS *tunnel-termination-point* but is a different thing: a link end, not a trail head.
 Two language-model agents must reconcile these two models, *ad hoc*, with no third model agreed in
 advance, getting the real correspondences right while refusing the look-alikes. What that takes, and
-what a thin shared reference adds to it, is what this setting measures, and what the other three
-settings build on.
+what a thin shared reference adds to it, is what this scenario measures, and what the other three
+scenarios build on.
 
 When two software systems must exchange information but hold different models, of
 the same domain, or of different domains that must connect, someone has to reconcile
@@ -93,15 +93,15 @@ producing and aligning them. Independent-lexicon alignment, two separately autho
 no shared ids, is tractable but capability-gated: the strong agent holds precision 1.00 and takes no
 false cognate, while the weaker agents commit a cross-lexicon cognate confidently in about two trials
 of three even with a reference present. Stripping the reference back to an opaque id, or removing it
-altogether, leaves the strong agent's precision untouched, so its descriptive fields buy recall rather
+altogether, leaves the strong agent's precision untouched, so its descriptive fields buy resolved fraction rather
 than the false-cognate guard; the thin-reference threshold is not reached by thinning them, and the
 real axis is lexicon divergence. Real vendor structural messiness collapses surface matching to 0.33
-recall but is absorbed by cognition, which recovers to 0.89–1.00 recall at precision 1.00; the
+resolved fraction but is absorbed by cognition, which recovers to 0.89–1.00 resolved fraction at precision 1.00; the
 dependency map correlation needs is derivable from raw inventory rather than hand-fed, and correlation
 on the self-derived map matches the given-map baseline; the correlation operation itself generalises
-out of the observability setting into this one, partition-exact 1.00 for the capable models; and
+out of the observability scenario into this one, partition-exact 1.00 for the capable models; and
 onboarding a genuinely new system by reference-mediated reuse is linear where pairwise alignment is
-quadratic, 2.0–2.7× cheaper in real tokens and more accurate, because reuse preserves the recall
+quadratic, 2.0–2.7× cheaper in real tokens and more accurate, because reuse preserves the resolved fraction
 pairwise scatters.
 
 ---
@@ -296,7 +296,7 @@ candidate service through a proposed correspondence, operate it, read it back, a
 check the invariants, resolving any specific doubt against a determinate outcome.
 Any issue is therefore confirmed, refuted, or, in the one case of a source model its
 own designers left underspecified, *decided* by the authoritative agent. This is a
-claim about what is possible within this setting (operational semantics a virtual
+claim about what is possible within this scenario (operational semantics a virtual
 provisioning-and-readback can adjudicate), not about cost or step count. Both
 resolving mechanisms are functions of live cognition, so as cognition recedes they
 become unavailable: with one side inert the live agent can probe but not interrogate
@@ -637,7 +637,7 @@ conservative: on the flagship no-reference cell it resolved 0.78 at precision 1.
 resolved 1.00 but took one wrong pair (precision 0.90), deferring a little more and keeping precision
 clean. The lift is cheap for the strong agent (a few hundred reasoning tokens a side) and dearer for the
 mid one (several thousand), and its wording overlaps the fixture only weakly (lexical fidelity about
-0.2), yet the reconciliation is unchanged: meaning survives the rephrasing. The full four-setting
+0.2), yet the reconciliation is unchanged: meaning survives the rephrasing. The full four-scenario
 picture, including cross-domain and observability, is in the master report (§13.8); the finding there is
 the same, with the familiar weak-end capability-gating showing up as a single cross-domain false-cognate
 slip at mid capability.
@@ -650,7 +650,7 @@ The first thing the study establishes is the concept itself. Two cognitive agent
 reconcile independently-authored, divergent models correctly and ad hoc, with no
 standard agreed in advance, measured against a validated gold across the whole
 cognition spectrum, not shown once by hand. And the placement of cognition is the
-variable that governs the setting: between two fully-cognitive agents resolution is
+variable that governs the scenario: between two fully-cognitive agents resolution is
 complete in principle (unbounded interrogation and decisive virtual experiment) so
 nothing need be left unresolved; as cognition recedes that power falls away and a
 residual must be referred onward, the shortfall from full cognition's reach (§2.2,
@@ -710,10 +710,10 @@ deployment will often be in.
 There is a subtlety worth stating, because it explains why the reference can be so thin.
 The meaning that reconciliation runs on lives in each side's own **ontology and instances**: that is what defeats a false cognate such as *signal-grade* versus *service-grade*, which
 differ in class, in what they attach to, and in their data despite the shared label. The
-reference carries none of that structure; it is an **identity bridge**, a flat, structure-free
-anchor the two systems point at so that binding to the same entry means denoting the same
-thing. Its power is coordination, not content: it can be thin precisely because it is
-parasitic on the two grounded ontologies it connects, and giving it an ontology of its own
+reference carries none of that structure itself; it is a **common-ground anchor** the two systems
+point at, so that binding to the same entry means denoting the same thing. Its power is coordination,
+and it can be thin precisely because it carries no meaning of its own — it works only by tying into
+the two grounded ontologies it connects — while giving it an ontology of its own
 would turn it back into the universal standard the approach exists to avoid. Its descriptive
 fields are best read as compressed *proxies* for the grounding a full ontology supplies (a
 canonical example is a single instance, a definition a compressed gloss, a shallow class one
@@ -733,7 +733,7 @@ semantic payload; author the lexical field and a definition or example first, an
 shallow class tags, which can mislead exactly the consumers who most need help. A companion ablation
 run on the *independent-lexicon* case (§5.2) sharpens the anatomy further: there the strong agent's
 precision is flat across every field subset, from the full reference down to an opaque id and even to
-no reference at all, so on that case the descriptive fields carry recall rather than the false-cognate
+no reference at all, so on that case the descriptive fields carry resolved fraction rather than the false-cognate
 guard, and the guard, once the lexicons are independent, is a cognitive act the strong agent performs
 without them. (The ablation
 also carries a methodological caution: the anchor must be an *opaque* identifier, because a
@@ -758,10 +758,10 @@ already bound to it; they measure what cognition does *given* those inputs. The 
 problem lies on the other side of that line: the study convincingly shows
 reconciliation once a shared reference and the authored inputs are in place, and the harder half is
 **producing and aligning those inputs** in the first place. The experiments below bite into that
-harder half within this setting, rather than only reframing the scope. Each is written up in full
-separately; the essentials, with exact numbers, follow. Where a
-write-up reports **recall**, it is the same measure as this report's resolved fraction (§2.3): the
-share of the true correspondences the stack finds and commits to, with the rest referred onward.
+harder half within this scenario, rather than only reframing the scope. Each is written up in full
+separately; the essentials, with exact numbers, follow. This report's **resolved fraction** (§2.3) is the
+share of the true correspondences the stack finds and commits to, with the rest referred onward —
+the same quantity other write-ups may report under a different name.
 
 ### 5.1 Independent-lexicon alignment is tractable, but capability-gated
 
@@ -774,7 +774,7 @@ shared-reference original as a direct contrast, over three checkpoints, three pl
 without the reference, three trials each.
 
 The mechanical controls fix the floor. The reference-blind label matcher reaches precision 0.667 and
-recall 0.5 on both cases. The reference-aware reconciler resolves the shared case perfectly
+resolved fraction 0.5 on both cases. The reference-aware reconciler resolves the shared case perfectly
 (1.00 / 1.00) but the independent case **not at all** (0.00 / 0.00): with no shared ids there is
 nothing for it to match, so independent-lexicon alignment is invisible to the mechanical shortcut and
 only cognition can perform it.
@@ -786,7 +786,7 @@ independent lexicons that protection holds only for the capable agent: the stron
 vocabularies by their meaning and keeps precision **1.00 with zero confident errors**, while the mid
 and weak models fall to **0.89 and 0.88** precision *with the reference present*, taking a
 cross-lexicon false cognate and asserting it confidently in about two trials of three (the weak
-model's calibration gap near zero, almost as sure when wrong as when right). Recall stays near 1.0 for
+model's calibration gap near zero, almost as sure when wrong as when right). The resolved fraction stays near 1.0 for
 the weaker models throughout.
 
 What this changes: the report no longer only reframes the harder half, it tests it. A shared reference
@@ -794,7 +794,7 @@ was doing two jobs at once, supplying meaning *and* pre-empting false cognates b
 when the lexicons are independent the second job becomes a **cognitive** act rather than a mechanical
 one, and it is capability-gated exactly where confident false-cognate errors are most dangerous.
 
-### 5.2 The reference's descriptive fields buy recall, not the false-cognate guard
+### 5.2 The reference's descriptive fields buy resolved fraction, not the false-cognate guard
 
 A natural question is where a thin or degraded reference stops helping, and whether "definition
 helps most" is the right anatomy. We ran the full 2⁴ factorial field ablation (lexical, class,
@@ -802,7 +802,7 @@ definition, example) on the independent-lexicon case of §5.1, at the two inert 
 strong and weak checkpoints, expecting to trace where stripping the descriptive fields breaks the
 strong model's cross-lexicon alignment.
 
-| reference content | strong (sol) precision / recall | weak (nano) precision / recall |
+| reference content | strong (sol) precision / resolved fraction | weak (nano) precision / resolved fraction |
 |---|---|---|
 | full (lexical + class + definition + example) | **1.00** / 1.00 | 0.88 / 0.92 |
 | definition + example only | 1.00 / 1.00 | 0.91 / 0.98 |
@@ -811,7 +811,7 @@ strong model's cross-lexicon alignment.
 
 The expected break did not occur. The strong model holds precision at 1.00 across everything, from the
 full reference down to an id-only anchor and even to no reference at all; what the descriptive fields
-buy it is a little **recall** (1.00 with the fields present, easing to 0.94 at id-only and 0.90 with no
+buy it is a little **resolved fraction** (1.00 with the fields present, easing to 0.94 at id-only and 0.90 with no
 reference), not the discrimination. The weak model sits at ~0.88–0.91 precision regardless of which
 fields are present, and the planted false cognates survive **0 times in every cell** for both models,
 so the weak model's residual precision gap is spurious over-proposals, not the traps, and is
@@ -819,7 +819,7 @@ insensitive to reference detail.
 
 What this changes: the thin-reference threshold is **not reached by thinning the descriptive fields**.
 The reference can be stripped almost to nothing without the strong model losing precision, which
-sharpens the anatomy story of §4: on independent lexicons the descriptive fields drive recall, not the
+sharpens the anatomy story of §4: on independent lexicons the descriptive fields drive resolved fraction, not the
 false-cognate guard. The axis that would locate a real break is lexicon **divergence**, not reference
 thinness.
 
@@ -833,7 +833,7 @@ route-distinguisher appears as both a config leaf and an operational-state leaf,
 for one standard concept), cross-module augments, a leafref-indirection false cognate, and native gaps
 both ways (9 standard and 11 vendor concepts, 9 correspondences including one config/state 2:1).
 
-| stack | precision | recall |
+| stack | precision | resolved fraction |
 |---|---|---|
 | label-matcher (surface) | 1.00 | **0.33** |
 | reference-reconciler (shared binding) | 1.00 | 1.00 |
@@ -842,16 +842,16 @@ both ways (9 standard and 11 vendor concepts, 9 correspondences including one co
 | agent — mid, both-cognitive, with reference | 1.00 | 1.00 |
 | agent — weak, all conditions | 1.00 | 0.89 |
 
-Surface matching collapses to 0.33 recall (against 0.5 on the tidy config cases): the deep paths and
+Surface matching collapses to 0.33 resolved fraction (against 0.5 on the tidy config cases): the deep paths and
 sparse glosses give almost nothing to key on. Cognition recovers almost all of it and never at the
-cost of precision, lifting recall to **0.89–1.00** while holding precision at **1.00 for every model
+cost of precision, lifting the resolved fraction to **0.89–1.00** while holding precision at **1.00 for every model
 at every placement, with and without the reference** (surviving false cognates 0 throughout). The
 agents resolve the config/state 2:1, mapping both vendor route-distinguisher leaves to the one standard
 concept, and not one model of any tier takes the leafref false cognate. The reference's value
 concentrates on the single hardest correspondence: without it the strong and mid models plateau at 8/9
 (0.889), and with it they reach 9/9; even the weak model recovers 8/9 at precision 1.00.
 
-What this changes: the messiness costs cognition recall, not precision, and the last correspondence it
+What this changes: the messiness costs cognition resolved fraction, not precision, and the last correspondence it
 hides is exactly where the shared reference earns its place. The one thing a practitioner would most
 fear about real deployments, that vendor models are too messy to align, does not hold; the mess is
 largely absorbed.
@@ -864,7 +864,7 @@ lighting router ports, IP links on ports or LAG bundles, services running over I
 join with a LAG-bundle indirection and a name lure (`otu5b` resembles `otu5` but lights an unused
 port), then tested whether correlation still works on the agent's own map.
 
-Every checkpoint derived the entire map correctly on every trial (precision 1.00, recall 1.00, exact
+Every checkpoint derived the entire map correctly on every trial (precision 1.00, resolved fraction 1.00, exact
 3/3), resolving the LAG-bundle indirection and rejecting the name lure. Correlating on that self-derived
 map then matched the given-map baseline: for the strong and mid models both arms are identical at a
 perfect 1.00, and for the weak model the two arms differ (0.78 given, 0.89 derived) only because of the
@@ -874,14 +874,14 @@ What this changes: the clean correlation finding does not depend on a curated in
 the map from inventory, indirection and lure included, and correlation on the derived map is
 indistinguishable from correlation on the hand-fed one.
 
-### 5.5 The correlation operation generalises into this setting
+### 5.5 The correlation operation generalises into this scenario
 
 Three operations, composition & correlation among them, are not yet in the drafts;
-correlation was shown unconditionally needed within the observability setting; the open question was
+correlation was shown unconditionally needed within the observability scenario; the open question was
 whether it is a real operation or an artefact of that one case. We ported the same correlation agent
-and oracle into this configuration/transport domain, over the entities this setting already models but
+and oracle into this configuration/transport domain, over the entities this scenario already models but
 never correlates (an OTN line underlies an IP link underlies an L3VPN/EVPN service), as
-`correlation_config` (three scenarios), with the pragmatics on (semantics plus the dependency map)
+`correlation_config` (three cases), with the pragmatics on (semantics plus the dependency map)
 against off (the legacy page-everything pipeline).
 
 | model | ON — partition-exact / cause-accuracy | OFF |
@@ -892,14 +892,14 @@ against off (the legacy page-everything pipeline).
 
 The operation transfers cleanly. The strong and mid checkpoints partition the configuration-domain
 incidents perfectly, identical to their observability performance, and name the right root cause every
-time; the off baseline scores zero exact partitions by construction, because these scenarios all
+time; the off baseline scores zero exact partitions by construction, because these cases all
 contain genuine multi-symptom incidents a page-everything policy can never group. The weak model drops
-to 0.78 (7 of 9 scenario-trials exactly right) on the more demanding scenarios, but still beats the off
+to 0.78 (7 of 9 case-trials exactly right) on the more demanding cases, but still beats the off
 baseline's 0.00 by a wide margin: a capability effect on top of a clean generalisation, not a failure
 of it.
 
-What this changes: correlation is a real, portable operation, unconditionally needed in this setting
-too, not an observability artefact, and the finding rests on cross-setting evidence rather than a single
+What this changes: correlation is a real, portable operation, unconditionally needed in this scenario
+too, not an observability artefact, and the finding rests on cross-scenario evidence rather than a single
 case.
 
 ### 5.6 Reuse onboarding is linear, cheaper, and more accurate (H4/T6, made empirical)
@@ -922,10 +922,10 @@ quadratic). At N = 4 that is 3 passes against 6.
 Real effort tracks the linear/quadratic gap and widens at the weak end: the strong and mid models pay
 almost exactly the pass ratio (2×), while the weak model pays 2.7×, because each unreferenced pairwise
 reconciliation costs it extra deliberation. Reuse is also the more accurate arm. It holds precision and
-recall at 1.00 on 8 of 9 trials (strong 1.00 / 1.00, mid 1.00 / 1.00, weak 1.00 / 0.94); pairwise keeps
-precision at 1.00 but its recall sags and scatters (strong 0.91, mid 0.99, weak 0.88), because it
+resolved fraction at 1.00 on 8 of 9 trials (strong 1.00 / 1.00, mid 1.00 / 1.00, weak 1.00 / 0.94); pairwise keeps
+precision at 1.00 but its resolved fraction sags and scatters (strong 0.91, mid 0.99, weak 0.88), because it
 reconciles each pair from scratch with nothing to catch a miss, whereas reuse derives every pair through
-one correct onboarding binding and preserves recall by construction. The single failure mode is that
+one correct onboarding binding and preserves the resolved fraction by construction. The single failure mode is that
 reuse concentrates the risk in that one binding (one weak-model trial faltered at 0.833 and propagated),
 but that worst trial still beat pairwise's worst (0.685).
 
@@ -1011,12 +1011,12 @@ reader would flag, and a shared reference is what settles them.
 
 **The single-case worry, tested in-house.** The most natural objection is that the
 one pair of models above was, without anyone meaning it to be, chosen to make the
-point work. To probe that, two further cases were built for this setting from
+point work. To probe that, two further cases were built for this scenario from
 scratch: an IP/MPLS layer-3 VPN described once as a network model and once as
 device configuration (`config_l3vpn`), and a carrier-Ethernet VPN described in two
 different service vocabularies (`config_evpn`), different domains, different words,
 different traps, and the same agents were run on them against the same kind of
-validated answer key. The finding of this setting reappears on both: the strong
+validated answer key. The finding of this scenario reappears on both: the strong
 agent reconciles each new case correctly on its own (of the matches it commits, all
 are right, and it finds all the true matches), and the weaker agents commit a wrong
 match here and there until the small shared glossary (the *reference*) pulls them
@@ -1027,7 +1027,7 @@ does not remove the deeper limitation (the same author built all three, so they
 test robustness to *variation*, not to *real network data*) but it closes the
 "you only showed it once" gap as far as in-house work can. The two new cases, their
 answer keys, and the recorded runs are in the repository alongside the original, and the
-further experiments of §5 add four more cases in this setting
+further experiments of §5 add four more cases in this scenario
 (`config_evpn_indeplex`, `correlation_config`, `derive_deps_config`, and `config_vendor_messy`),
 widening the case base further.
 
@@ -1054,8 +1054,8 @@ brought in. Each such component is a natural axis for the work, and each
 pairs with machinery beyond the schema-term core: instance co-reference with the *instance*
 and *invariant* reference variants and evidence-weighted individual matching (now taken up
 in the companion study of §3.6) and pragmatic reconciliation with the *pragmatic* reference
-variant and settings where meaning turns on context (observability, where the same
-measurement is a page, a benign event, or a matter to watch), which remains for the settings
+variant and scenarios where meaning turns on context (observability, where the same
+measurement is a page, a benign event, or a matter to watch), which remains for the scenarios
 to follow.
 
 ## 7. Reproducibility
@@ -1095,7 +1095,7 @@ verification studies (§3.6), are written up in full, with their per-condition t
 and exact commands, as repo-only method notes under `notes/studies/`:
 `notes/studies/lift-baseline.md`, `notes/studies/reference-anatomy.md`,
 `notes/studies/instance-disambiguation.md`, and `notes/studies/verification-modes.md`. They are method
-detail behind this setting's report, not separate reports in the four-setting set.
+detail behind this scenario's report, not separate reports in the four-scenario set.
 
 ---
 

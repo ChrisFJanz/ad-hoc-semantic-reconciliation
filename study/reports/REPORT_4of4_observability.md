@@ -1,10 +1,10 @@
 # 4/4 · Reconciling observability: an alarm is not an anomaly, and what a page and an incident really mean
 
-> *Programme status: the **fourth and last of the programme's four operational settings**
-> (observability). The first three settings reconciled structural models, refined a declarative
+> *Programme status: the **fourth and last of the programme's four operational scenarios**
+> (observability). The first three scenarios reconciled structural models, refined a declarative
 > intent, and bridged two private domains; this one reconciles two **observability** worlds (a
 > legacy fault manager and an IETF NMOP agent) and completes the programme's pragmatics thread.
-> Here the pragmatic component, deferred in the first setting and studied as a movable policy and
+> Here the pragmatic component, deferred in the first scenario and studied as a movable policy and
 > then as authority in the next two, carries the **operative meaning** of what the systems observe:
 > whether an anomaly warrants a page, and how separate symptoms are one incident. It is grounded in
 > the NMOP work (RFC 9940 terminology, the anomaly-semantics annotation set, and the
@@ -23,8 +23,8 @@ lifecycle stage, a season). The two must share an understanding of anomalies wit
 (Throughout, a **page** is an alert raised to an on-call human operator, the thing a false alarm
 wastes and a missed one is measured against.)
 
-The setting runs in two acts, and the study measures both. **Act 1 reconciles the two models**, a
-schema binding, like the earlier settings, but carrying the programme's deepest false cognate: a
+The scenario runs in two acts, and the study measures both. **Act 1 reconciles the two models**, a
+schema binding, like the earlier scenarios, but carrying the programme's deepest false cognate: a
 legacy *alarm* is not an NMOP *anomaly*. RFC 9940 is exact about why: an alarm is *"an undesirable
 State … a State in its own right,"* an anomaly is *"an unusual or unexpected event or pattern that
 deviates from normal expected behaviour,"* a deviation that may be perfectly benign. The intuition
@@ -66,10 +66,10 @@ pragmatic resolution lifts the verdict by +0.33 and +0.58 for the strong and mid
 the weak one, attribute pinning is a weak-model compensator (~0 for the strong model, +0.19 for the weak),
 and correlation is unconditionally needed. And escalation to the decisive experiment when cheap evidence
 is withheld is both capability- and reach-gated: the strong model roughly triples its probing and recovers
-(recall 0.97) where the weak one barely escalates and collapses (0.46), and a probe budget buys almost
+(resolved fraction 0.97) where the weak one barely escalates and collapses (0.46), and a probe budget buys almost
 nothing where no side is live.
 
-## 1. The setting: two observability worlds, and one live anomaly
+## 1. The scenario: two observability worlds, and one live anomaly
 
 Picture the two agents (Figure 1). **Agent F**, the legacy fault manager, emits an *alarm*: one
 object that bundles the event that fired it, the undesirable state it represents, a fixed severity
@@ -79,7 +79,7 @@ event, a fault, an alarm (a *State*), and (concepts legacy has no first-class eq
 anomaly, a symptom, a problem, a cause established by correlation, and an incident, each anomaly
 carrying its anomaly-semantics annotations.
 
-![The observability setting](../figures/fig_obs_scene.png)
+![The observability scenario](../figures/fig_obs_scene.png)
 
 *Figure 1. The overloaded legacy alarm decomposes, one-to-many, into the NMOP ladder. Its correct
 core is the NMOP alarm-State (and a fault); the trap is the anomaly, a deviation, not a state. An
@@ -98,17 +98,17 @@ attributed incident lives in those pragmatic judgements.
 
 ## 2. What is on the bench
 
-The setting runs in two acts, and the study measures each with the machinery it needs.
+The scenario runs in two acts, and the study measures each with the machinery it needs.
 
 **Act 1: reconcile the models.** This is a schema binding, and it reuses the harness of the earlier
-settings unchanged: two lifted models, a constructed reference anchored to the RFC 9940 ladder, and a
+scenarios unchanged: two lifted models, a constructed reference anchored to the RFC 9940 ladder, and a
 gold of correspondences and false cognates, scored across the **cognition spectrum** (both-cognitive,
 one-inert, both-inert) with the reference present or absent. Two things make it harder than a plain
 binding. The gold correspondences include a **one-to-many decomposition** (the legacy alarm maps to
 *both* the NMOP alarm-State and the fault it implies) and the headline false cognate is the
 **ontological** one, alarm↔anomaly, which no structural cue separates. A second, supporting phase
 co-refers *instances*, which legacy alarm and which NMOP anomaly are the same underlying condition
-(by resource and time), reusing the instance machinery; as in the earlier settings it reproduces the
+(by resource and time), reusing the instance machinery; as in the earlier scenarios it reproduces the
 first study's behaviour and is not the headline.
 
 **Act 2: run the anomaly, and let the pragmatics decide.** Two tasks, each measured with the
@@ -125,7 +125,7 @@ legacy console has no dependencies and reports each symptom as its own page.
 suppress* deterministically: a maintenance window suppresses; an expected seasonal shift in its
 season suppresses; otherwise high concern with high confidence acts, moderate concern watches, low
 concern suppresses (with thresholds on the anomaly-semantics 0–100 scales). We state the thresholds
-openly rather than bury them: they are exactly the kind of operational calibration this setting
+openly rather than bury them: they are exactly the kind of operational calibration this scenario
 exists to expose, and a concrete artefact for discussion rather than a hidden assumption. The
 correlation gold is derived from the resource-dependency graph and time-proximity, with the probable
 cause the root symptom (lowest layer, earliest). The derivation refuses to write an inconsistent gold
@@ -156,7 +156,7 @@ The **strong** agent never conflates them: surviving cognates zero, with or with
 at every placement. It knows the ontology intrinsically. The **mid** agent takes the cognate once a
 side goes inert and no reference is present (precision falls to about 0.69), and the RFC 9940-anchored
 reference **rescues it completely**: the cognate vanishes and precision returns to 1.0. This is the
-reference doing exactly the job the setting was built to test: pinning, by definition and canonical
+reference doing exactly the job the scenario was built to test: pinning, by definition and canonical
 example, the categorical distinction a mid agent otherwise collapses. The **weak** agent takes the
 cognate with or without the reference; its survival barely moves when the reference is added. Handed
 the standard that separates a state from a deviation, nano cannot use it to hold the two apart.
@@ -166,7 +166,7 @@ reference-rescuable, then beyond rescue. (All three agents bind the easy corresp
 precision; where they fall short of a full close is the **one-to-many decomposition**: even the
 strong agent tends to map the legacy alarm to the NMOP alarm-State but miss the fault constituent, so
 the resolved fraction sits near 0.75 with the RFC-anchored reference in play (without it the two agents
-defer more of the decomposition, to about 0.25, as in the other settings). Decomposing an overloaded
+defer more of the decomposition, to about 0.25, as in the other scenarios). Decomposing an overloaded
 concept into its several parts is the honest hard edge of Act 1.)
 
 ### 3.2 Act 2, the verdict: the pragmatics collapse the false-page storm, for agents that can carry them
@@ -194,11 +194,11 @@ are inert.
 
 ### 3.3 Act 2, the correlation: the dependency map turns a storm into an incident, for everyone
 
-Correlation behaves differently, and the contrast is the subtle heart of the setting (Figure 3,
+Correlation behaves differently, and the contrast is the subtle heart of the scenario (Figure 3,
 right). Given the resource-dependency map (that wavelength λ1 underlies the IP link) **every** model,
 the weak one included, folds the optical BER symptom and the IP loss it causes into a single incident,
 rooted correctly at the optical cause: all three reach a perfect incident partition with pragmatics
-ON. Without the dependency map, all three fail: the mid and weak agents fragment every scenario into
+ON. Without the dependency map, all three fail: the mid and weak agents fragment every case into
 a storm of separate pages, and even the strong agent, which half-infers the correlation from the
 symptom labels alone, does not get it right. One correlated incident with the pragmatics; an alarm
 storm without.
@@ -219,8 +219,8 @@ task exposes the gap most starkly.
 
 ## 4. Discussion
 
-**The programme's arc, completed.** Across four settings the pragmatic component has moved from the
-wings to the centre. In the first setting it was deferred, and schema structure and a lexical reference
+**The programme's arc, completed.** Across four scenarios the pragmatic component has moved from the
+wings to the centre. In the first scenario it was deferred, and schema structure and a lexical reference
 did the work. In the second (intent) it entered as a **movable policy**: the consumer's priorities and
 affordability deciding whether a degraded offer is accepted. In the third (cross-domain) it was
 **authority** (whose realm owns a shared field) and the reference was shown to reach meaning but not
@@ -229,7 +229,7 @@ page, and how symptoms are one incident. The claim the programme has built towar
 the frontier the descriptor methods never reach) is strongest here, because here the descriptor level
 (what an anomaly *is*) is settled and the entire operational question is pragmatic.
 
-**Meaning and significance are separable, and both are needed.** The setting cleanly divides two things
+**Meaning and significance are separable, and both are needed.** The scenario cleanly divides two things
 that a single "meaning" would blur. What an anomaly *is* (a deviation, not a state) is a matter of
 ontology, and the RFC 9940 reference pins it (for agents able to use it). Whether an anomaly *matters*
 (act, watch, or suppress) and how it *composes* (one incident or many) is a matter of pragmatics, and
@@ -239,7 +239,7 @@ and uncorrelated storms. The observability reconciliation needs both, and they a
 means.
 
 **The pragmatic frontier has a capability floor.** The programme's thesis is that cognition completes a
-reconciliation; this setting adds a boundary condition that the earlier ones only hinted at. The value
+reconciliation; this scenario adds a boundary condition that the earlier ones only hinted at. The value
 of the pragmatics (like the value of the reference on the ontological cognate) is realised only by an
 agent capable enough to use them. Below that floor the weak agent cannot hold the ontology even with the
 reference, and cannot produce the verdict even with the annotations. What it *can* still do is apply a
@@ -257,7 +257,7 @@ artefact to refine, not a settled answer.
 
 ## 5. Further experiments
 
-Three claims this setting had asserted but not measured invite a direct test: whether
+Three claims this scenario had asserted but not measured invite a direct test: whether
 the decisive experiment is genuinely a different check from the agent's own read-back, whether the
 three operations the study added but the reference drafts never named each do real work, and whether
 the fallback from cheap evidence to an expensive probe is a behaviour or only a design choice. Each was
@@ -308,8 +308,8 @@ mid models, +0.33 and +0.58 accuracy, because the context genuinely changes the 
 operation captures it; but at the weak model the gain nearly vanishes to +0.03, its off-baseline already
 near chance and the pragmatics it is handed unexploitable. It is genuine and capability-gated on the
 consuming side, the same floor §3.2 found. **Attribute pinning** is the mirror image: essentially zero for
-the strong model (−0.05 recall, precision held at 1.0), it climbs monotonically as capability falls, to
-+0.19 recall at the weak model. It is a weak-model compensator, earning its place precisely where cognition
+the strong model (−0.05 resolved fraction, precision held at 1.0), it climbs monotonically as capability falls, to
++0.19 resolved fraction at the weak model. It is a weak-model compensator, earning its place precisely where cognition
 is weakest, the role the study assigns the reference. **Composition and correlation** is unconditional:
 turn it off and the two weaker models score 0.0 exact partition, unable to group multi-symptom evidence
 into incidents at all, while turning it on brings every model to a perfect partition (the strong model
@@ -328,18 +328,18 @@ Finally, whether the fallback ordering, from cheap evidence to the more expensiv
 decisive experiment, is tested. The over-trust form one might first imagine is
 impossible in this benchmark (the instance gold is derived so a key cannot lie), so E4′ instead asked the
 live question: when the cheap evidence (the key) is withheld, does the agent escalate to the probe, and
-does it help? Both are answerable from the instance runs on disk, which record probe counts and recall per
+does it help? Both are answerable from the instance runs on disk, which record probe counts and resolved fraction per
 condition.
 
 Escalation is real but capability-gated. With a live side to probe, withholding the key drives the strong
-model to nearly triple its probing (×2.7) and it recovers essentially all the lost recall, to 0.97; the
+model to nearly triple its probing (×2.7) and it recovers essentially all the lost resolved fraction, to 0.97; the
 mid model escalates less (×1.7) and recovers partially; the weak model barely escalates at all (×1.1),
-probing about as much with the key gone as present, and its recall collapses by a third to 0.46. Knowing
+probing about as much with the key gone as present, and its resolved fraction collapses by a third to 0.46. Knowing
 *when* to escalate is itself a skill, not a reflex. And the payoff is reach-gated: where a side is live a
-probe budget lifts the strong model from 0.64 to a perfect 1.0 recall, but where the experiment has no
-reach (`one_inert`) the same budget buys almost nothing, three probes spent for zero recall gain.
+probe budget lifts the strong model from 0.64 to a perfect 1.0 resolved fraction, but where the experiment has no
+reach (`one_inert`) the same budget buys almost nothing, three probes spent for zero resolved-fraction gain.
 
-This is the setting's clearest support for "conservatism, not competence": the weak model's apparent safety
+This is the scenario's clearest support for "conservatism, not competence": the weak model's apparent safety
 is a refusal to escalate rather than a considered restraint. It converts the fallback ordering from an
 asserted design choice into a measured account of when it fires, what it costs, and where it stops helping,
 the instance-level echo of the reach limit E6 finds for the verifier.
@@ -352,7 +352,7 @@ how often.
 
 To check that the one case above was not, unintentionally, built in a way that makes the point come out
 right, the same reconciliation was constructed from scratch in two further trouble domains: IP/routing
-faults (`obs_routing`) and compute/server faults (`obs_compute`). The signature finding of this setting
+faults (`obs_routing`) and compute/server faults (`obs_compute`). The signature finding of this scenario
 is that a deep look-alike must be told apart: a legacy *alarm* (a declared bad state) is not the same
 kind of thing as an *anomaly* (a statistical deviation that may be perfectly benign), even though both
 read as "something looks off"; and, harder still, one overloaded legacy alarm actually corresponds to
@@ -374,7 +374,7 @@ product. Trials are few, so single-cell numbers carry noise; the reported patter
 across the model ladder and the ON/OFF toggle. The instance-level alarm/anomaly co-reference is
 measured, and reproduces the first study's mechanism (capable agents resolve fully where a live side
 can be interrogated and fall to a structural floor once inert, while the weakest agent only partially
-resolves) as a supporting result rather than the setting's headline. And the correlation model is a
+resolves) as a supporting result rather than the scenario's headline. And the correlation model is a
 resource-dependency-and-time abstraction of the incident-yang correlation, not its full machinery.
 
 Finally, the lift here is agent-performable as well as assumed: re-running with each side's explanation
@@ -385,7 +385,7 @@ strong agent) at unchanged precision, with no cognate taken (master §13.8).
 ## 7. Reproducibility
 
 The seeded observability case (both lifted models, the RFC 9940-anchored reference, the annotated
-anomalies, the pragmatic contexts, and the cross-layer correlation scenarios), the verdict and
+anomalies, the pragmatic contexts, and the cross-layer correlation cases), the verdict and
 correlation oracles, the derive-and-validate step, the four-phase runner, and the figure scripts are in
 the repository, with the recorded per-model results. The build, the gold derivation, and the offline
 tests run with no API and no network; the runs are a single launch-and-leave command, segmented by phase

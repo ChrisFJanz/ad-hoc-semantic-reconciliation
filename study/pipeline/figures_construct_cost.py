@@ -24,9 +24,9 @@ ROOT = Path(__file__).resolve().parent.parent
 FIG = ROOT / "figures"
 BLUE, ORANGE, GREY = "#2a78d6", "#eb6834", "#b8c2cc"
 NAVY, SURFACE, INK, FAINT = "#14314f", "#fbfaf8", "#1a1a1a", "#6a655e"
-SETTINGS = [("config_big_hard", "Setting 1\nconfiguration\n(a standard exists)"),
-            ("config_cross_domain", "Setting 3\ncross-domain\n(no standard)"),
-            ("config_observability", "Setting 4\nobservability\n(RFC anchor)")]
+SETTINGS = [("config_big_hard", "Scenario 1\nconfiguration\n(a standard exists)"),
+            ("config_cross_domain", "Scenario 3\ncross-domain\n(no standard)"),
+            ("config_observability", "Scenario 4\nobservability\n(RFC anchor)")]
 
 
 def _mean(rs, k):
@@ -76,7 +76,7 @@ def main():
                         bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.85))
     ax.set_title("The strong agent (two agents negotiating): resolved fraction by condition,\n"
                  "with the cognition spent — construction is load-bearing only where no standard exists\n"
-                 "(Setting 3, 0.20 to 0.80); elsewhere a given reference matches it far more cheaply",
+                 "(Scenario 3, 0.20 to 0.80); elsewhere a given reference matches it far more cheaply",
                  fontsize=10.5, color=NAVY)
     ax.set_ylabel("resolved fraction  (share of true matches found)", fontsize=9.5)
     ax.set_xticks(x); ax.set_xticklabels([s[1] for s in SETTINGS], fontsize=9)

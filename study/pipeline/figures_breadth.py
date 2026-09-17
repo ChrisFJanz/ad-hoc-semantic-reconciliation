@@ -28,7 +28,7 @@ def main():
     a1.bar(x - w/2, sol1_noref, w, color=GREY, label="no shared reference")
     a1.bar(x + w/2, sol1_ref, w, color=BLUE, label="with the reference")
     a1.axhline(1.0, color=NAVY, ls=":", lw=1)
-    a1.set_title("Setting 1 - configuration\n"
+    a1.set_title("Scenario 1 - configuration\n"
                  "two agents reconcile the new standard-model pairs at perfect precision; where they\n"
                  "defer without shared ground, the reference completes the close (strong agent shown)",
                  fontsize=9.5)
@@ -42,7 +42,7 @@ def main():
     a3.bar(x - w/2, sol_noref, w, color=GREY, label="no shared reference")
     a3.bar(x + w/2, sol_ref, w, color=BLUE, label="with the reference")
     a3.axhline(1.0, color=NAVY, ls=":", lw=1)
-    a3.set_title("Setting 3 - cross-domain (no standard between the two sides)\n"
+    a3.set_title("Scenario 3 - cross-domain (no standard between the two sides)\n"
                  "without a shared reference the STRONG agent under-commits (refuses to guess the seam):\n"
                  "perfect precision but low resolved fraction; the constructed reference completes the close",
                  fontsize=9.5)
@@ -58,7 +58,7 @@ def main():
     a2.bar(xx, mini, w3, color=ORANGE, label="mini (mid)")
     a2.bar(xx + w3, nano, w3, color=AQUA, label="nano (weak)")
     a2.axhline(1.0, color=NAVY, ls=":", lw=1)
-    a2.set_title("Setting 2 - intent (customer wishes vs operator catalogue)\n"
+    a2.set_title("Scenario 2 - intent (customer wishes vs operator catalogue)\n"
                  "working out which options meet the wish: strong and mid are perfect and get every\n"
                  "'only-a-live-check-settles-it' case; the weak agent lags (0.83; 2 of 4 live-check cases)",
                  fontsize=9.5)
@@ -72,7 +72,7 @@ def main():
     a4.bar(xx - w/2, prec, w, color=BLUE, label="precision (look-alike avoided)")
     a4.bar(xx + w/2, rec, w, color=GREY, label="resolved fraction (decomposition half-done)")
     a4.axhline(1.0, color=NAVY, ls=":", lw=1)
-    a4.set_title("Setting 4 - observability (an alarm is not an anomaly)\n"
+    a4.set_title("Scenario 4 - observability (an alarm is not an anomaly)\n"
                  "across every agent and both fault domains the deep look-alike is avoided (precision 1.0,\n"
                  "zero traps taken); the one-to-many decomposition is the cognition-demanding residual",
                  fontsize=9.5)
@@ -84,7 +84,7 @@ def main():
         ax.set_facecolor(SURFACE)
         for s in ("top", "right"):
             ax.spines[s].set_visible(False)
-    fig.suptitle("Breadth: each setting's signature result, reproduced on two new independently-built cases",
+    fig.suptitle("Breadth: each scenario's signature result, reproduced on two new independently-built cases",
                  fontsize=12.5, fontweight="bold", y=1.005)
     fig.tight_layout()
     fig.savefig(FIG / "fig_breadth.png", dpi=150, facecolor=SURFACE, bbox_inches="tight")

@@ -72,9 +72,10 @@ def fig_lift():
     # Part 1: ontology (incl lexicon), schematic + concrete
     box(ax, 6.25, 3.7, 6.15, 2.85, "#eef4fc", "#9fc0e8", lw=1.2)
     ax.text(6.45, 6.28, "ontology  (including lexicon)", ha="left", fontsize=9.6, weight="bold", color=INK)
-    ax.text(6.45, 5.92, "schematic - concepts, kinds, relations, lexicon", ha="left", fontsize=7.6,
+    ax.text(6.45, 5.92, "schematic - concepts, kinds, relations", ha="left", fontsize=7.6,
             color="#4a6580", style="italic")
-    nodes = {"service": (7.9, 5.35), "port": (9.9, 5.5), "link": (11.6, 5.0)}
+    chip(ax, 11.91, 5.92, 0.82, 0.32, "TBox", BLUE, BLUE, fs=7.8, weight="bold", tc="white")
+    nodes = {"service": (7.9, 5.35), "port": (9.9, 5.5), "link": (11.6, 5.2)}
     for a, b in [("service", "port"), ("port", "link"), ("service", "link")]:
         (x1, y1), (x2, y2) = nodes[a], nodes[b]
         ax.plot([x1, x2], [y1, y2], color="#b9cbe0", lw=1.1, zorder=1)
@@ -82,6 +83,7 @@ def fig_lift():
         chip(ax, nx, ny, 1.15, 0.5, t, "#eaf1fb", BLUE, fs=8.2)
     ax.text(6.45, 4.55, "concrete - the individuals that populate them", ha="left", fontsize=7.6,
             color="#4a6580", style="italic")
+    chip(ax, 11.91, 4.55, 0.82, 0.32, "ABox", BLUE, BLUE, fs=7.8, weight="bold", tc="white")
     for (nx, ny) in nodes.values():
         ax.scatter([nx - 0.28, nx, nx + 0.28], [4.15, 4.15, 4.15], s=16, color="#7fa8d6", zorder=2)
 
@@ -265,9 +267,9 @@ def fig_observability():
 # --- Figure E: cognitive load is capability-signed (cross-setting synthesis) ------------------
 def fig_effort():
     fig, ax = plt.subplots(figsize=(8.6, 4.9))
-    settings = ["intent\n(setting 2)", "observability\n(setting 4)"]
-    data = {"intent\n(setting 2)": {"sol": 150, "mini": 860, "nano": 5400},
-            "observability\n(setting 4)": {"sol": 60, "mini": 520, "nano": 1200}}
+    settings = ["intent\n(scenario 2)", "observability\n(scenario 4)"]
+    data = {"intent\n(scenario 2)": {"sol": 150, "mini": 860, "nano": 5400},
+            "observability\n(scenario 4)": {"sol": 60, "mini": 520, "nano": 1200}}
     models = ["sol", "mini", "nano"]
     colM = {"sol": BLUE, "mini": ORANGE, "nano": AQUA}
     labM = {"sol": "sol (strong)", "mini": "mini (mid)", "nano": "nano (weak)"}
@@ -281,7 +283,7 @@ def fig_effort():
     ax.set_yscale("log"); ax.set_ylim(35, 16000)
     ax.set_xticks(list(x)); ax.set_xticklabels(settings, fontsize=9.5)
     ax.set_ylabel("reasoning tokens to decide\n(mean, log scale)", fontsize=9)
-    ax.set_title("Cognitive load rises as capability falls: across settings the weak agent spends "
+    ax.set_title("Cognitive load rises as capability falls: across scenarios the weak agent spends "
                  "~20–35×\nthe strong agent's effort - to reach lower accuracy, not higher",
                  fontsize=10.3)
     # ratio brackets

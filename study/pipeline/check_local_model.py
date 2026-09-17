@@ -101,8 +101,8 @@ def main() -> int:
     except Exception as e:  # noqa: BLE001
         print(f"[2/2] structured output  FAIL: {e}", file=sys.stderr)
         print("  Neither strict json_schema nor the json-mode fallback produced valid structured "
-              "output on this endpoint/model. Try a model with stronger JSON adherence, or "
-              "report the error.", file=sys.stderr)
+              "output on this endpoint/model. Try a model with stronger JSON adherence, or tell "
+              "Claude the error.", file=sys.stderr)
         return 1
 
     if parsed is None:

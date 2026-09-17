@@ -247,24 +247,48 @@ def fig_scaling():
     _save(fig, "fig_scaling.png")
 
 
-# two-agent both-cognitive values (from results/two_agent_full.csv, config_big_hard) that REPLACE
-# the single-agent both-cognitive cells, so the both-cognitive point in every figure is the real
-# two-agent negotiation. one-inert / both-inert stay single-agent (a lone reconstructing agent).
-_TWO_AGENT_BOTHCOG = {
-    ("gpt-5.6-sol", "False"): dict(recall=0.625, precision=1.000, reasoning_tokens=3094),
-    ("gpt-5.6-sol", "True"):  dict(recall=1.000, precision=1.000, reasoning_tokens=1139),
-    ("gpt-5-mini", "False"):  dict(recall=0.791, precision=0.950, reasoning_tokens=16288),
-    ("gpt-5-mini", "True"):   dict(recall=0.875, precision=0.913, reasoning_tokens=11712),
-    ("gpt-5-nano", "False"):  dict(recall=0.333, precision=0.800, reasoning_tokens=84096),
-    ("gpt-5-nano", "True"):   dict(recall=0.583, precision=1.000, reasoning_tokens=109504),
-}
+# The both-cognitive cells are REPLACED by the real two-agent negotiation, so that the
+# both-cognitive point in every figure is the two-agent result; one-inert / both-inert stay
+# single-agent (a lone reconstructing agent). Read from results/two_agent_full.csv at figure
+# time rather than hardcoded, so the figures cannot drift from the data after a re-run.
+def _two_agent_bothcog(case):
+    path = ROOT / "results" / "two_agent_full.csv"
+    if not path.exists():
+        return {}
+    rows = [r for r in csv.DictReader(open(path)) if r.get("case") == case]
+
+    def num(x):
+        try:
+            return float(x)
+        except (TypeError, ValueError):
+            return None
+
+    def mean(rs, *keys):
+        for k in keys:                      # published column is resolved_fraction;
+            xs = [num(r[k]) for r in rs     # older files emit it as recall
+                  if k in r and num(r[k]) is not None]
+            if xs:
+                return sum(xs) / len(xs)
+        return None
+
+    out = {}
+    for m in {r["model"] for r in rows}:
+        for ref in ("False", "True"):
+            rs = [r for r in rows if r["model"] == m and r["uses_reference"] == ref]
+            if rs:
+                out[(m, ref)] = dict(
+                    recall=mean(rs, "resolved_fraction", "recall"),
+                    precision=mean(rs, "precision"),
+                    reasoning_tokens=mean(rs, "reasoning_tokens"),
+                )
+    return out
 
 
-def _override_both_cognitive(agg):
-    for (m, ref), vals in _TWO_AGENT_BOTHCOG.items():
+def _override_both_cognitive(agg, case):
+    for (m, ref), vals in _two_agent_bothcog(case).items():
         cell = agg.get((m, "both_cognitive", ref))
         if cell is not None:
-            cell.update(vals)
+            cell.update({k: v for k, v in vals.items() if v is not None})
     return agg
 
 
@@ -282,7 +306,7 @@ def main() -> int:
         print(f"no results at {csv_path}")
         return 1
     models, placements, agg = _load(csv_path)
-    agg = _override_both_cognitive(agg)
+    agg = _override_both_cognitive(agg, args.case)
     strong = models[0]
     fig_effort(models, placements, agg, strong)
     fig_gradient(models, placements, agg)

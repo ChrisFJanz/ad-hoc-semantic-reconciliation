@@ -11,7 +11,7 @@ reconciliation over a case is in the [study README](../README.md).
 
 ## What is in it
 
-Cases spanning the four operational settings of the study and several sub-studies. The headline cases:
+Ten cases today, spanning the four operational settings of the study and several sub-studies:
 
 - **Setting 1 · configuration** — `config_tapi_teas`, `config_big_hard` (two standard models of one
   network), with sub-studies `instance_hard` (instance co-reference), `verify_hard` (verification), and
@@ -22,18 +22,8 @@ Cases spanning the four operational settings of the study and several sub-studie
 - **Setting 4 · observability** — `config_observability` (alarm↔anomaly, RFC 9940) and `obs_instance`
   (alarm instance co-reference).
 
-The study's **further experiments** (see the *Further experiments* sections of the setting reports) add
-several more. As schema cases: `config_evpn` and its independent-lexicon re-representation `config_evpn_indeplex` (the
-same two models and gold, re-authored with two independent lexicons so no id is shared across sides —
-the harder alignment the drafts name), and `config_vendor_messy` (a structurally messier vendor model).
-Setting 3's `config_cross_domain` also carries an external `authority_source` artefact (and a conflicting
-variant) from which authority is derived. Several experiments introduce their own case shapes, documented
-with their drivers rather than as standard families: `correlation_config` (dependency scenarios with a
-derived correlation gold), `derive_deps_config` (a raw inventory from which the dependency map is
-derived), and `underspecified_pairs` (items an agent must resolve by a targeted request).
-
-`manifest.json` is the machine-readable index of the standard families (case, family, setting, files,
-and counts), regenerated from the cases by the tool below.
+`manifest.json` is the machine-readable index (case, family, setting, files, and counts), regenerated
+from the cases by the tool below.
 
 ## Case families
 

@@ -88,7 +88,7 @@ def fig_scene():
     ax.text(8.75, 8.0 - 4 * 0.92, "the correct core\nof an alarm", fontsize=8.0, color=AQUA, va="center")
     ax.text(6.9, 0.35, "Agent G — IETF NMOP (RFC 9940 term ladder)", ha="center", fontsize=10,
             weight="bold", color="#14314f")
-    ax.set_title("The observability setting — a legacy alarm decomposes into the NMOP ladder; "
+    ax.set_title("The observability scenario — a legacy alarm decomposes into the NMOP ladder; "
                  "the ontological trap is that an alarm (a State) is not an anomaly (a deviation)",
                  fontsize=11, y=1.0)
     save(fig, "fig_obs_scene.png")
@@ -114,7 +114,7 @@ def fig_ontology():
             ax.text(xi, yv + 0.03, f"{yv:.2f}", ha="center", va="bottom", fontsize=7.8, color="#555")
     ax.set_xticks(list(x)); ax.set_xticklabels([LAB[M] for M in MODELS])
     ax.set_ylabel("alarm↔anomaly cognate survival\n(mean, inert placements)")
-    ax.set_ylim(0, 1.28)
+    ax.set_ylim(0, 1.08)
     ax.set_title("The ontological cognate, three rungs: sol never takes it; the reference rescues\n"
                  "mini (bar → 0); nano takes it with or without the reference (beyond rescue)",
                  fontsize=10.5)

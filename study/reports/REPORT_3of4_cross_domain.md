@@ -1,10 +1,10 @@
 # 3/4 · Reconciling across a domain boundary with no public standard: what a strong agent will not guess, and what a thin reference is worth
 
-> *Programme status: the **third of the programme's four operational settings**
-> (cross-domain, standard-free reconciliation). The first setting reconciled two **public
+> *Programme status: the **third of the programme's four operational scenarios**
+> (cross-domain, standard-free reconciliation). The first scenario reconciled two **public
 > standard** models of one network; this one reconciles two **home-grown, private** models of
 > **adjacent domains** that meet at a single seam, with no public standard beneath either side.
-> It exercises the same schema-binding muscles as the first setting, and is written to make plain
+> It exercises the same schema-binding muscles as the first scenario, and is written to make plain
 > **what changes in execution when the standard is removed**, with the measured results as
 > confirmation of a mechanism, not as the whole point. Consistent with the programme's stage, the
 > report isolates and explains one stage of the reconciliation; the instance-level and the full
@@ -22,10 +22,10 @@ underlay. Everything a customer's order needs to survive that boundary (the comm
 latency bound, the protection, the identity of the hand-off) has to be reconciled there, with
 no shared vocabulary and no standard to appeal to.
 
-This setting is the deliberate complement to the first. There, two *different* models faced each
+This scenario is the deliberate complement to the first. There, two *different* models faced each
 other too, but both were public standards (TAPI and TEAS) the agents already knew, so cognition
 could lean on recognition to bridge them. Here that crutch is gone: both models are bespoke and
-recognisable to no one in advance. The first setting's muscles are the same (lift, bind, a thin
+recognisable to no one in advance. The first scenario's muscles are the same (lift, bind, a thin
 reference, the cognition spectrum), but with the standard removed, the *execution* diverges, and
 that divergence is the report's subject.
 
@@ -47,7 +47,7 @@ canonical example) is enough to unlock the strong agent's commitment, while a ba
 identifier with no description is worthless, and even harmful. And a separate axis (**whose
 realm owns each shared field**) shows the reference reaching *meaning* but not *authority*: it
 settles what a field is, not who governs it. That authority is not, however, something the
-setting must hand-author: a later experiment shows it is **derivable from an external artefact**
+scenario must hand-author: a later experiment shows it is **derivable from an external artefact**
 (an interconnect agreement), and that when two sources contradict each other on ownership the
 agents **surface the conflict** rather than silently choose a side (§6).
 
@@ -61,17 +61,17 @@ and then binding through it, with none pre-given), the protocol bears this out: 
 from a no-reference resolved fraction of 0.20 to a constructed-reference **0.80**, and to **0.90** when
 the agents also run a decisive virtual experiment on the candidates, approaching the reference-given
 1.00, at perfect precision and with no false cognate. Constructing the ground is the work, and a capable
-agent does it. A separate cost study across the schema settings (master report
+agent does it. A separate cost study across the schema scenarios (master report
 §13.6) puts a price on that work and locates where it is worth paying: constructing the reference is
 load-bearing precisely here, where no standard exists and the agent is capable, and it is cheap for such
 an agent (a few hundred extra reasoning tokens over binding with no reference); where a standard already
-exists (the configuration and observability settings), binding through the given reference reaches the
+exists (the configuration and observability scenarios), binding through the given reference reaches the
 same close for a fraction of the cognition, so building one is redundant; and for a weak agent,
 construction is capability-gated and its cost explodes for a worse close. In short, build the reference
 where there is none to bind through and the agent can build a good one; otherwise use the one that
 exists.
 
-Two further experiments (§6) test the standard-free setting
+Two further experiments (§6) test the standard-free scenario
 where it is thinnest: the authority axis. The first shows cross-domain authority need not be
 hand-authored at all. Structure-only attribution is steeply capability-gated (the strong agent
 1.0, the mid and weak agents 0.47 and 0.40, the weak one taking the transport lure), but an
@@ -81,10 +81,10 @@ who owns a field, every model, the weak one included, **surfaces the conflict** 
 silently picking a side: the failure one might fear does not occur when the disagreement is
 visible.
 
-The setting is grounded in the demonstration *Non-standard cross-domain provisioning* and in the
+The scenario is grounded in the demonstration *Non-standard cross-domain provisioning* and in the
 programme's wider account of ad-hoc, agent-constructed references.
 
-## 1. The setting: two home-grown models, and the one seam between them
+## 1. The scenario: two home-grown models, and the one seam between them
 
 Picture the two agents and the single place their worlds meet (Figure 1).
 
@@ -96,7 +96,7 @@ to the customer site, riding an *underlay*, carrying a *VLAN*, with a *rate*, a 
 *protection* requirement, and a *grade*. The two were built independently; the labels line up
 where the domains happen to share a word and diverge everywhere else.
 
-![The cross-domain setting](../figures/fig_crossdomain_seam.png)
+![The cross-domain scenario](../figures/fig_crossdomain_seam.png)
 
 *Figure 1. Two home-grown models, no public standard. Five things must be reconciled where a
 Cascade service rides a Meridian circuit; "grade" looks like a sixth but is a trap; and each side
@@ -116,7 +116,7 @@ the **protection** is against a *transport path failure*, a fibre cut, not again
 And one thing must *not* bind. Both models carry a concept called **grade**, but Meridian's
 grade is a transport protection class (a platinum circuit is dual-path protected) and Cascade's
 grade is an IP class of service (gold traffic gets a low-latency queue). Same word, unrelated
-meanings. Corresponding them would silently mis-provision the service. This is the setting's
+meanings. Corresponding them would silently mis-provision the service. This is the scenario's
 false cognate, and because there is no standard to consult and the two concepts share no
 structure either, it is nastier than any in-domain trap.
 
@@ -131,7 +131,7 @@ through; they *bind* their concepts to it; they *pin* the ambiguous requirements
 the specific endpoints; and they *verify* by a worked provisioning. Cognition is spent across all
 of these stages. This study does not run that process end to end, and it makes no claim about
 whether the process closes; that two fully-cognitive agents can close a reconciliation is the
-programme's thesis, established across the earlier settings and not re-litigated here. What this
+programme's thesis, established across the earlier scenarios and not re-litigated here. What this
 study isolates is a single, early stage: the **schema-level binding**, given two already-lifted
 models, deciding which concept on one side corresponds to which concept on the other.
 
@@ -147,11 +147,11 @@ process, to further machine cognition where the agents are live to continue, or 
 are not.
 
 Two variables shape the pass. The first is the **cognition spectrum**, exactly as in the first
-two settings. At **both-cognitive**, both sides disclose their lift in full: each concept's
+two scenarios. At **both-cognitive**, both sides disclose their lift in full: each concept's
 gloss and canonical example are present. At **one-inert**, one side is a mute snapshot that
 exposes only its structure and instances, so its meaning must be reconstructed. At
 **both-inert**, neither side discloses, and the binding rests on structure alone. The second
-variable is the **shared reference**: present or absent. Because the reference in this setting is
+variable is the **shared reference**: present or absent. Because the reference in this scenario is
 not adopted from a standard but *constructed by the two agents themselves* (categories proposed,
 each fixed by a canonical example both can instantiate, and agreed), the reference-absent
 condition is best read not as "the reference was withheld" but as "the reference has not been
@@ -165,14 +165,14 @@ themselves construct. They interrogate each other in full and then defer the pai
 of (honest deferral, not error), leaving the worth of that ground in the residual, precisely where the
 reference-construction step recovers it.
 
-**Scope, and a blurry line.** The setting's reconciliation touches several components: lexical,
+**Scope, and a blurry line.** The scenario's reconciliation touches several components: lexical,
 schema, instance-level co-reference, and pragmatic. This study measures the **schema binding**,
 and the line to the others is genuinely blurry at the seam: co-referring the specific demarcation
 (which physical hand-off is which logical attachment) is instance-level work; pinning a
 requirement (a *committed* rate, not a *line* rate) shades into attribute semantics; the "grade"
 trap is as much lexical as schema. We measure the schema binding and say so. The **instance-level
-co-reference we bracket**: it is the entity-resolution-by-probing of the first setting's instance
-study, it behaves the same way here (the intent setting's endpoint phase, which reused that
+co-reference we bracket**: it is the entity-resolution-by-probing of the first scenario's instance
+study, it behaves the same way here (the intent scenario's endpoint phase, which reused that
 machinery, confirmed as much), and re-running it would largely replicate a known result. The
 **pragmatic component** (whose realm owns each shared field) we take up separately (§4).
 
@@ -224,7 +224,7 @@ lifts sol's binding to a full close, and lifts nano's precision toward 1.0 while
 pre-empting the trap; it does double duty, supplying the strong agent the ground it needs to
 commit and the weak agent the discipline it needs to be right.
 
-This is the setting's central result, and it is where this case departs from the first setting.
+This is the scenario's central result, and it is where this case departs from the first scenario.
 There, the two sides spoke *different* models, but both were **public standards the agents
 already knew**: TAPI on one side, TEAS on the other, two distinct standards, each recognisable on
 sight. Strong cognition could lean on that public knowledge to bridge them, and bind without an
@@ -275,7 +275,7 @@ the weak agent cannot be fully rescued by one.
 
 ### 3.3 Effort: the standard-free bridge is dear for the weak agent
 
-The now-familiar effort gradient is, if anything, steeper here than in the earlier settings.
+The now-familiar effort gradient is, if anything, steeper here than in the earlier scenarios.
 Reaching its bindings, the strong agent spent a few hundred reasoning tokens; the weak agent spent
 several thousand (roughly an order of magnitude more) and, without the reference, spent them to
 land at a precision of one-half. Capability buys economy as well as correctness: the standard-free
@@ -300,13 +300,13 @@ owns (its committed rate, its class of service), simply because transport carrie
 mid model shows this strongly and also under-recognises "shared," rarely naming the demarcation as
 co-owned.
 
-Second, and echoing the intent setting exactly, **the reference reaches meaning but not
+Second, and echoing the intent scenario exactly, **the reference reaches meaning but not
 authority.** The same reference that unlocked the binding does not cleanly help the authority call;
 for the strong agent it slightly *hurt*, its service-oriented phrasing nudging attribution toward
 the IP realm. A reference can pin what a field *is* (that a rate is a committed payload, that
 protection is against a path failure), but not *whose* it is to govern. Where the missing thing is
 information, the thin reference supplies it; where the missing thing is authority, it does not, and
-only cognition settles it. That the same boundary appears in two different settings (intent and
+only cognition settles it. That the same boundary appears in two different scenarios (intent and
 cross-domain) is itself worth noting: it is a property of what a reference is, not of one case.
 
 Third, an honest limit of the measurement: one field, the **committed rate**, is genuinely
@@ -317,7 +317,7 @@ pragmatic questions do not have a single right answer, and saying so is part of 
 honestly.
 
 A note on provenance, since it bears on all three points. The realm ownership scored against here is
-hand-authored in the setting's gold, but that is a convenience of measurement, not a load-bearing
+hand-authored in the scenario's gold, but that is a convenience of measurement, not a load-bearing
 assumption. A further experiment (§6) shows the same authority is **derivable from an
 external interconnect artefact**, lifting even the weaker agents to a correct attribution, and that
 when two sources disagree on an owner the agents **surface the contradiction** rather than silently
@@ -325,16 +325,16 @@ choose one.
 
 ## 5. Discussion
 
-**What is new against the first setting.** The first setting established that cognitive agents can
+**What is new against the first scenario.** The first scenario established that cognitive agents can
 reconcile two structural models *ad hoc*, and that a thin reference can substitute for cognition on
 that task, but there both models were public standards the agents recognised. Removing the
 standard changes the *execution* in the way this study set out to find. The reference-blind binding,
 which had a comfortable floor when a standard underwrote the vocabulary, loses that floor entirely:
 the strong agent will not guess across two private vocabularies and defers instead, and the weak
-agent guesses wrongly. The thin reference, which in the first setting mostly *improved* an already
+agent guesses wrongly. The thin reference, which in the first scenario mostly *improved* an already
 workable binding, here becomes what makes the binding possible at all, and the ablation shows the
 ground it must supply is minimal but non-zero and must carry *meaning*: a bare shared pointer will
-not do. The pragmatic component, held fixed in the first two settings, we measured here and found to
+not do. The pragmatic component, held fixed in the first two scenarios, we measured here and found to
 sit *outside* the reference's reach.
 
 **The thesis, refined not weakened.** It would be easy to read the strong agent's low
@@ -346,23 +346,23 @@ stages (more agent cognition, or a person) to close. The reference-present condi
 already constructed) closes them. So the finding is not a limit of cognition; it is a measurement
 of how much the one bracketed step is worth, and to whom the unclosed remainder falls when it is
 skipped. The programme's claim that fully-cognitive agents close a reconciliation is untouched;
-what this setting adds is that, with no public standard, *constructing the shared ground* is the
+what this scenario adds is that, with no public standard, *constructing the shared ground* is the
 pivotal act of the close, and that even a very thin ground suffices for a capable agent.
 
-**Where this leaves the programme.** Three of four settings are complete. Between them they have
+**Where this leaves the programme.** Three of four scenarios are complete. Between them they have
 worked the lexical, schema, and instance components, verification, the pragmatic component (across
-two settings now), and the extension of reconciliation across a service's life. The through-line
+two scenarios now), and the extension of reconciliation across a service's life. The through-line
 holds and has sharpened at each turn: it is cognition that completes a reconciliation; a thin
 reference reaches the information a reconciliation needs and stops at the authority it does not
 supply; and the fully-cognitive close, standard or no standard, proceeds by building whatever
-shared ground the parties lack, a step that is itself an act of cognition, and, this setting shows,
+shared ground the parties lack, a step that is itself an act of cognition, and, this scenario shows,
 a thin one for an agent strong enough to take it.
 
 ## 6. Further experiments
 
 Two further experiments bear on a single question: the worry
 that cross-domain authority (whose realm governs each shared field, §4) is simply hand-authored into
-the setting, an assumption doing quiet work beneath the pragmatic result. They test the two halves
+the scenario, an assumption doing quiet work beneath the pragmatic result. They test the two halves
 of that worry in turn: whether the authority can instead be *derived* from an artefact the two
 operators would already hold, and whether, when the sources that would derive it disagree, an agent
 quietly picks a side. Both run on the same cross-domain case as the rest of the report, over the
@@ -386,7 +386,7 @@ weak agents jump to **1.00**, the transport lure falls to zero, and every model 
 "shared" for the demarcation.
 
 This changes the report's position on the pragmatic axis. The authored authority gold of §4 is a
-convenience of measurement, not a standing assumption of the setting: cross-domain authority is
+convenience of measurement, not a standing assumption of the scenario: cross-domain authority is
 derivable from the kind of artefact two interworking operators would already possess, and the
 artefact, as with the reference elsewhere in the programme, is worth most exactly where capability
 is weakest.
@@ -424,7 +424,7 @@ right, two further cross-domain cases were constructed from scratch: a private r
 system meeting a private mobile-core controller at the user-plane transport seam (`config_xdom_ran`),
 and a private data-centre fabric meeting a private overlay controller at the VLAN-to-VNI seam
 (`config_xdom_dc`). Each is a fresh pair of home-grown vocabularies with no shared standard between
-them, the hardest of the four settings. The signature finding here is a *mirror*: given no shared
+them, the hardest of the four scenarios. The signature finding here is a *mirror*: given no shared
 reference, a strong agent *under-commits* (it binds only what it is certain of and refuses to guess
 the rest, so of the matches it commits every one is right but it finds only some of the true matches)
 while a weaker agent *over-commits*, binding freely and taking a look-alike, so it finds more but
@@ -443,12 +443,12 @@ robustness to variation, not yet to real network data, which only carrier collab
 The central measurement is the **single-pass schema binding**, and the reference-absent condition
 brackets the construction step rather than running the full construct-then-bind protocol; the full
 protocol (the two agents constructing the reference themselves and then closing, with no reference
-pre-given) is also run, and it confirms the thesis in this hardest setting: the strong agent lifts
+pre-given) is also run, and it confirms the thesis in this hardest scenario: the strong agent lifts
 from 0.20 to 0.80, and to 0.90 when the agents also run a decisive virtual experiment. The core ladder is three points; the shape of the capability gradient between them is filled in by a
 six-model sweep at both-cognitive (master report §13.2, Figure 8), the cross-domain mirror included. The pragmatic gold is largely clean but includes
 one field (committed rate) whose authority is genuinely contested, reported as such. And the
 instance-level co-reference is bracketed, not measured, on the argued grounds that it reproduces the
-first setting's result; that argument rests on the intent setting's endpoint phase and on the shared
+first scenario's result; that argument rests on the intent scenario's endpoint phase and on the shared
 mechanism, not on a cross-domain instance run.
 
 One further check bears on *who performs the lift* here. These models, like the others, are reconciled
@@ -458,7 +458,7 @@ constructed or given reference on the agent-produced lift, exactly as on the fix
 is where the agent-lift is most exposed: with no reference at all the strong agent's own glosses led it
 to commit one pair at the floor (where the fixture defers, resolving 0.20), and the mid agent took the
 *grade* look-alike its fixture avoided, the same weak-end over-commitment the mirror describes, now
-visible in the lift as well as in the bind. The full cross-setting table is in the master report
+visible in the lift as well as in the bind. The full cross-scenario table is in the master report
 (§13.8).
 
 ## 8. Reproducibility

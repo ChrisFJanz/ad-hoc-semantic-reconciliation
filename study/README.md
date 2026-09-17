@@ -116,6 +116,50 @@ goes inert a single agent reconstructs it. The
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
+## What's new (2026-09-15)
+
+A focused programme drilling into the one question the four-setting study leaves open at its own
+boundary: whether the semantic and pragmatic **inputs** a reconciliation runs on can be *produced*
+from the thin, real interface models a deployment actually meets — careless YANG, or REST whose data
+is present but whose meaning is implicit in the application — without becoming a heavy design-time
+process. Five experiments (E16–E20) settle a position, drawn together in a standalone note:
+
+**[reports/NOTE_producing_the_inputs.md](reports/NOTE_producing_the_inputs.md)** — *Producing the
+inputs: a three-route decision for thin sources.*
+
+The position, in one line: producing the inputs is a **route decision** — lift, governed overlay, or
+live elicitation, selected by whether the source is inert or cognitive — and the **governed overlay is
+the robust, capability-independent route**, with the design-time burden bounded and, on this evidence,
+small. What the experiments establish:
+
+- **The overlay is the robust route (E16).** Over a deliberately thin source, a governed overlay lifts
+  every tier of the capability ladder to a full close (resolved fraction to 1.00, both hard seams
+  recovered, the false cognate blocked); without it the strong model defers rather than guess. Live
+  elicitation is a substitute only within the band that can use it — and on a surface-similar case it is
+  *less* sufficient, so the overlay is the more clearly decisive lever.
+- **You cannot lift what isn't there, and confident invention is a mid-capability hazard (E17).**
+  A cold-start lift recovers well while the surface carries meaning — down to keys and data with names
+  and types stripped — but where the meaning is genuinely absent the strong model defers, the weak model
+  abstains, and the **mid** model confidently invents. The dangerous lifter is the capable-but-uncalibrated
+  middle, so an explicit insufficient-evidence path matters most there.
+- **The minimum viable overlay is a name per seam (E18).** One descriptive field per entry — even just a
+  name — is enough to bind; a one-line gloss earns its place only where a weaker model needs it to block a
+  cognate; and coverage must be complete over the seams but not universal. The authored artefact is a short
+  glossary, not a re-modelling.
+- **The design-time / run-time split is drawable and bounded, and provenance is a distinct layer (E19).**
+  Freeze the schema and the **provenance** — what a thing is, and who to ask; resolve live the instances and
+  the pragmatics — what they currently say, and what a thing is for. Over half the seam's facts freeze,
+  capable agents recover the split reliably, and they separate provenance (the source of record) from
+  pragmatics (governance) cleanly — a distinction the earlier framing had blurred.
+- **It is an architecture, not a YANG quirk (E20).** The same results reproduce on a case built from two
+  independently published REST standards — a product-ordering interface reconciled against a
+  service-ordering one — against a false cognate identical in name *and* enumerated values. The concept
+  surfaces are lifted from the real specifications; only the answer key is authored.
+
+New drivers under `pipeline/` (`inert_vs_cognitive`, `cold_start_lift`, `minimum_overlay`,
+`design_run_split`, with figure scripts), a new REST case `config_rest` built from the two real
+specifications, and results and figures under `results/` and `figures/`.
+
 ## What's new (2026-09-14)
 
 This revision extends the study at the experimental end with a substantial programme of further
