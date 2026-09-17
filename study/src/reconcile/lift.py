@@ -87,12 +87,25 @@ def _surface_line(c) -> dict:
     }
 
 
-def lift_model(sm: SemanticModel, llm_model: str, client=None, trace: bool = False) -> tuple[SemanticModel, dict]:
+# When a shared reference IS supplied to the lift (the reference-in-lift condition of the portability
+# programme's Phase 3), this overrides LIFT_SYSTEM's "you are NOT given a shared reference" clause.
+REF_OVERRIDE = (
+    "\n\nOVERRIDE: A shared reference IS provided ('reference' in the payload) — a set of common-ground "
+    "entries (id, label, class, definition, example). You MAY bind each concept to the entry whose meaning "
+    "fits it and use that common ground to write a precise gloss, DISSOLVING the shared meaning into the "
+    "concept's own gloss (do not merely cite the entry id). Disregard the earlier statement that no shared "
+    "reference is given."
+)
+
+
+def lift_model(sm: SemanticModel, llm_model: str, client=None, trace: bool = False,
+               reference=None) -> tuple[SemanticModel, dict]:
     """Agent-perform the lift on one side. Returns (agent-lifted SemanticModel, effort).
 
     The returned model copies every fixture field except gloss and example, which are replaced by the
     agent's output. A concept the agent fails to return keeps an empty explanation layer (an honest lift
-    miss) and is counted against coverage.
+    miss) and is counted against coverage. If `reference` is given (a Reference), the lifter may use its
+    entries as common ground (reference-in-lift); default None reproduces the original standard-free lift.
     """
     if client is None:
         from openai import OpenAI
@@ -102,11 +115,16 @@ def lift_model(sm: SemanticModel, llm_model: str, client=None, trace: bool = Fal
         "dialect": sm.dialect,
         "concepts": [_surface_line(c) for c in sm.concepts],
     }
+    if reference is not None:
+        payload["reference"] = [{"id": e.id, "label": e.label, "class": e.cls,
+                                 "definition": e.definition, "example": e.example,
+                                 "synonyms": list(e.synonyms)} for e in reference.entries]
     user = json.dumps(payload, indent=1)
+    system = LIFT_SYSTEM + (TRACE_EXTRA if trace else "") + (REF_OVERRIDE if reference is not None else "")
     t0 = time.time()
     completion = client.chat.completions.parse(
         model=llm_model,
-        messages=[{"role": "system", "content": LIFT_SYSTEM + (TRACE_EXTRA if trace else "")},
+        messages=[{"role": "system", "content": system},
                   {"role": "user", "content": user}],
         response_format=(_LiftResultTraced if trace else _LiftResult),
     )

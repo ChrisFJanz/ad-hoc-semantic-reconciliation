@@ -34,7 +34,7 @@ ORDER = ["gpt-5.6-sol", "gpt-5-mini", "gpt-5-nano"]
 LABEL = ["sol (strong)", "mini (mid)", "nano (weak)"]
 COLOR = [NAVY, TEAL, ORANGE]
 SCEN = ["clear", "constrained", "outage"]
-SCEN_LABEL = ["clear\n(E13 regime)", "constrained", "outage"]
+SCEN_LABEL = ["clear", "constrained", "outage"]
 
 
 def _load():
@@ -97,8 +97,8 @@ def main():
     axR.set_ylim(0, 0.62)
     axR.set_xticks(xb); axR.set_xticklabels(bars, fontsize=9)
     _style(axR)
-    axR.annotate("the naive provider offers a service it cannot deliver\nin over half of cells; every reasoning provider offers none",
-                 xy=(0.5, 0.40), xycoords="axes fraction", ha="center", fontsize=8.5,
+    axR.annotate("the naive provider offers a service it\ncannot deliver in over half of cells;\nevery reasoning provider offers none",
+                 xy=(0.62, 0.52), xycoords="axes fraction", ha="center", va="center", fontsize=8.5,
                  color=FAINT, style="italic")
 
     fig.suptitle("A deliverability-reasoning provider vs the catalogue oracle  (intent negotiation)",

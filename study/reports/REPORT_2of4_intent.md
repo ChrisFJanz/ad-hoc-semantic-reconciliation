@@ -1,13 +1,13 @@
 # 2/4 · Reconciling intent with realisation: refinement, negotiation, and a service that renegotiates itself
 
-> *Programme status: the **second of the programme's four operational settings** (intent-based
-> service management). The first setting reconciled two structural models of one network by an
+> *Programme status: the **second of the programme's four operational scenarios** (intent-based
+> service management). The first scenario reconciled two structural models of one network by an
 > **equivalence**; this one reconciles a declarative **intent** against a concrete **realisation**
-> by **refinement**, and so exercises the parts the first setting could not: verification by
+> by **refinement**, and so exercises the parts the first scenario could not: verification by
 > satisfaction, a two-sided **negotiation** when nothing fits exactly, the **pragmatics** of whose
 > authority decides, and a service reconciled repeatedly **across its whole life**. Consistent with
 > the programme's aim at this stage, the report is written to **explain and illustrate the concept
-> in action** and to make plain **what is new against the first setting**, with the measured results
+> in action** and to make plain **what is new against the first scenario**, with the measured results
 > as confirmation rather than as the whole point.*
 
 ## Summary
@@ -21,11 +21,11 @@ latency, an availability, a protection scheme, and a cost. Neither speaks the ot
 neither will adopt the other's model. They must work out, between themselves, which of N's concrete
 services *satisfies* O's declared wish.
 
-That last word is the whole difference from the first setting. There, reconciliation was an
+That last word is the whole difference from the first scenario. There, reconciliation was an
 **equivalence**: this TAPI term *is* that TEAS term. Here it is a **refinement**: "latency below 5
 ms" is not equal to any service N offers; it is a *bound that a service either clears or does not*,
 and many different services may clear it. Once the relation is refinement rather than equivalence,
-four things follow that the first setting never had to confront, and each is a deliberate object of
+four things follow that the first scenario never had to confront, and each is a deliberate object of
 this study: verification must be by **satisfaction** (you check the chosen service against every
 bound, because you cannot check a lossy refinement by handing the wish back); when no service meets
 every bound the agents must **negotiate** a best-achievable offer and someone must **decide** whether
@@ -36,13 +36,13 @@ life**, a loop rather than a single hand-off.
 
 We built a harness in which a live reasoning agent performs this reconciliation against the provider's
 capabilities and the customer's policy, given as deterministic oracles, over a seeded case
-grounded in the first setting's OTN/optical network, and scored every step against a validated gold
+grounded in the first scenario's OTN/optical network, and scored every step against a validated gold
 standard. The headline is a single, sharp result. **When both agents can reason, the reconciliation
 completes autonomously, including the negotiation, with no human in the loop. As cognition recedes,
 the negotiated decisions collapse to a residual that must be referred to a person, and a small
 pre-placed policy the customer carries *recovers* the part of that residual it was authorised to
 decide, closing autonomously what a mute customer would have to hand off.** That is the programme's
-central insight (cognition is what completes a reconciliation), now measured on this setting's
+central insight (cognition is what completes a reconciliation), now measured on this scenario's
 negotiation (a two-sided framing that, as §5 records, is earned where the provider must weigh its own
 deliverability and unearned where its side is a fixed catalogue), and sharpened by a second finding: a thin published **reference** can supply
 an inert agent the *facts* it needs to check satisfaction, but it cannot supply the *authority* to
@@ -53,7 +53,7 @@ burns an order of magnitude more reasoning to do less) and it follows one servic
 **four-hop lifecycle**, bought and degraded and rerouted and stretched past what the network can
 give and finally restored, as a worked illustration of the concept in motion.
 
-Two further experiments (§5) then test the setting's own framing. Putting an actual second
+Two further experiments (§5) then test the scenario's own framing. Putting an actual second
 reasoning agent where the study had used a deterministic provider oracle changes the negotiation
 almost nothing: it reproduces the oracle's best-achievable offers (0.89–1.00 across the model ladder)
 and its accept/reject outcomes (0.96–1.00). That is an honest null, and it qualifies this report's
@@ -66,12 +66,12 @@ attribute is capability-gated — the strong model asks for the right attribute 
 (1.00) while the weak model cannot target it and lands at the guessing floor (0.50), so the weak
 model's apparent caution is inability rather than judgement.
 
-The setting is grounded in the IRTF NMRG Internet-Draft *Dynamic Network-as-a-Service Life-Cycle
+The scenario is grounded in the IRTF NMRG Internet-Draft *Dynamic Network-as-a-Service Life-Cycle
 Automation Using End-to-End Agent Negotiation* (draft-janz-nmrg-naas-agentic-negotiation; Janz,
 Rahimi, and Yu), whose consumer policy-and-wallet agent, agent-to-agent negotiation, and closed-loop
 lifecycle renegotiation this study operationalizes and puts to an empirical test.
 
-## 1. The setting: two agents, and what passes between them
+## 1. The scenario: two agents, and what passes between them
 
 Picture the two agents and the one thing they are trying to do.
 
@@ -100,7 +100,7 @@ service would also have served on bandwidth and availability but **fails** the l
 
 Three consequences of "satisfied by" rather than "equal to" run through everything that follows.
 
-**Verification is by satisfaction, not round-trip.** In the first setting you could check a proposed
+**Verification is by satisfaction, not round-trip.** In the first scenario you could check a proposed
 equivalence by mapping a term across and back and seeing that you returned to where you began. A
 refinement is lossy and one-to-many ("≥ 8 Gbit/s" does not remember that it was met by exactly an
 ODU2), so there is nothing to round-trip. You verify by taking the chosen realisation and testing it,
@@ -110,7 +110,7 @@ bound by bound, against the intent. Verification *is* the satisfaction check.
 realisation: the bounds pull against each other, or the catalogue simply lacks a service that clears
 them all. Then N computes the **best-achievable** offer (the realisation that gives up only the
 least-important bounds) and O must **decide** whether to accept the degraded offer or reject it. This
-is a genuine two-sided negotiation, and (the point the setting is built to test) in the
+is a genuine two-sided negotiation, and (the point the scenario is built to test) in the
 fully-cognitive case it closes with no human in the loop. (One qualification, reported in §5: whether the
 negotiation is genuinely two-sided depends on what the provider has to reason about. Where the provider
 only selects from a fixed catalogue of concrete offers, a control that puts an actual second reasoning
@@ -126,7 +126,7 @@ tightens. This study makes that concrete as a small, portable **movable policy**
 holds: a priority ordering over the bounds, a set of *hard* (must-hold) bounds, an affordability
 floor, and a flow-class rule. The same infeasible intent, decided under two different policies, comes
 out differently, and correctly so. That portable policy turns out to be the pivot of the whole
-setting, for a reason developed in §3.3.
+scenario, for a reason developed in §3.3.
 
 One concrete illustration of the negotiation, before the method. Consider an intent for a 40-Gbit/s
 market-data feed that wants latency ≤ 10 ms, four-nines availability, and protection. N has two
@@ -138,7 +138,7 @@ correct answer is to **reject**: the direct offer's best-achievable degrades ava
 policy holds sacred. Under a **resilience-first** policy the correct answer is to **accept the diverse
 offer**: it holds availability and protection, giving up only latency, which this policy is willing
 to trade. Same intent, same catalogue, opposite decisions, each right for its policy. That is the
-setting in miniature: reconciliation here is not a lookup but a judgement, and the judgement is the
+scenario in miniature: reconciliation here is not a lookup but a judgement, and the judgement is the
 customer's.
 
 ## 2. Method
@@ -148,7 +148,7 @@ customer's.
 Here the reconciling cognition is one live reasoning agent, the consumer's agent O, working against the
 provider's live capabilities and the customer's policy, each supplied as a **deterministic tool** that
 returns a hidden ground truth: the negotiation is between a reasoning agent and those authoritative
-oracles, not between two language models. (This differs from the schema settings, where both sides are
+oracles, not between two language models. (This differs from the schema scenarios, where both sides are
 live reasoning agents; here the provider's feasibility and best-achievable offer are determinate facts,
 so modelling them as an oracle is exact rather than a simplification.) The agent runs a **bounded
 tool-use loop**: the model is given the intents, the catalogue, and the policy in force, and a small
@@ -171,18 +171,18 @@ sequence:
   best-achievable offer and decide accept or reject against the policy in force.
 - **Endpoint co-reference**, a supporting step: decide which of O's delivery points and N's access
   points are the same physical entity. This is instance-level co-reference and reuses the machinery
-  (and the finding) of the first setting's instance study.
+  (and the finding) of the first scenario's instance study.
 - **Assure-up (the lifecycle)**: walk a service through a multi-hop life, classifying fulfilment and
   renegotiating at each turn.
 
 ### 2.2 The cognition spectrum, for intent
 
-The spectrum is the same instrument as in the first setting (both agents live, one inert, both
+The spectrum is the same instrument as in the first scenario (both agents live, one inert, both
 inert), but the negotiation gives it a new place to bite, and the movable policy gives it a
 genuinely new *rung*. The consumer's judgement can be present in two different ways: as a **live**
 reasoner in the moment, or **pre-placed** in the portable policy that decides on the customer's behalf
 without a live customer present. That distinction splits the middle of the spectrum and is, as it
-turns out, exactly where the setting's sharpest result lives. The placements we run are:
+turns out, exactly where the scenario's sharpest result lives. The placements we run are:
 
 - **both-cognitive**: provider live, consumer judgement present; the reconciliation, negotiation
   included, completes autonomously.
@@ -214,7 +214,7 @@ does vary with the policy.
 
 Two of the seven intents are **experiment-only**: their advertised catalogue figures and their true
 operational figures disagree, so a purely static agent gets satisfaction wrong and only a live
-feasibility probe resolves them. They are the intent-setting analog of the first study's
+feasibility probe resolves them. They are the intent-scenario analog of the first study's
 static-twins-need-a-probe, and they are where the spectrum bites in the refine-down phase.
 
 The **reference** is run as two arms plus a no-reference control, exactly as the design proposed. A
@@ -238,7 +238,7 @@ correspondences that exist, the share the agent finds and commits, the rest defe
 rather than guessed). The lifecycle is scored by **hop
 accuracy** (fulfilment status, decision, and migration all correct) across the trajectory. Effort
 is reported as **reasoning tokens** and **negotiation turns**. The models are the same ladder as the
-first setting: a strong model (**sol**, `gpt-5.6-sol`), a mid model (**mini**, `gpt-5-mini`), and a weak one (**nano**, `gpt-5-nano`).
+first scenario: a strong model (**sol**, `gpt-5.6-sol`), a mid model (**mini**, `gpt-5-mini`), and a weak one (**nano**, `gpt-5-nano`).
 
 ## 3. Results
 
@@ -265,7 +265,7 @@ published reference can rescue.
 
 ### 3.2 The negotiation, and the policy-recovery: the central insight, measured
 
-The negotiation is where the setting earns its place, and the result is clean enough to read off a
+The negotiation is where the scenario earns its place, and the result is clean enough to read off a
 single figure (Figure 1). When both agents can reason, both the strong and mid models decide every
 infeasible case correctly (accuracy 1.0): they obtain the right best-achievable offer and accept or
 reject it exactly as the policy dictates, with no human in the loop. Hold the provider live and the
@@ -296,7 +296,7 @@ judgement is present (live, or pre-placed in a movable policy) and falls to the 
 consumer-mute and both-inert, where the correct behaviour is to refer the decision to a person. The
 pre-placed policy is what holds the line where a mute customer cannot.*
 
-On **pragmatic sensitivity**, the check the whole setting rests on: every model, with both sides live,
+On **pragmatic sensitivity**, the check the whole scenario rests on: every model, with both sides live,
 applied each policy's accept/reject correctly (accuracy 1.0 under all three policies). The decisions
 genuinely track the policy: the 40-Gbit/s intent of §1 that a latency-first policy rejects and a
 resilience-first policy accepts is decided each way, correctly, by the same model. The reconciliation
@@ -305,7 +305,7 @@ defines it.
 
 ### 3.3 The reference reaches the information gap, and stops at the authority gap
 
-The reference arms give the setting its second, sharper finding, and it took a targeted look at the
+The reference arms give the scenario its second, sharper finding, and it took a targeted look at the
 inert placements to see it, since with both agents live everything is already at ceiling and the
 reference has no room to show.
 
@@ -326,8 +326,8 @@ cannot tell you whether this customer is willing to live with it. Where the gap 
 reference closes it; where the gap is authority, only cognition (live, or pre-placed as a policy)
 closes it, and the reference stops at the boundary.
 
-This is the programme's central insight seen from a new angle. The first setting showed a thin
-reference *substituting for cognition* on a lexical task; this setting shows the limit of that
+This is the programme's central insight seen from a new angle. The first scenario showed a thin
+reference *substituting for cognition* on a lexical task; this scenario shows the limit of that
 substitution. The reference reaches as far as the information a reconciliation needs and no further;
 the completion of a reconciliation that requires judgement is cognition's alone.
 
@@ -341,11 +341,11 @@ there: the strong and mid agents resolve the twins fully (resolved fraction 1.0)
 only partially resolves even with the live side present (0.67), leaving the ambiguous pairs in the
 residual. Once a side goes inert and the probe is gone, all three collapse to the same 0.6, the twins
 unresolvable. The step is supporting, not the headline, but it confirms that the live-probe mechanism
-and its capability-dependence carry over intact from the first setting.
+and its capability-dependence carry over intact from the first scenario.
 
 ### 3.5 The lifecycle, watched: a service that reconciles itself across its life
 
-The setting's most complete illustration is a single service followed through a four-hop life: the
+The scenario's most complete illustration is a single service followed through a four-hop life: the
 worked set-piece, run and scored like everything else, and reproduced here from the strong model's
 actual transcript, which walked all four hops correctly (Figure 2).
 
@@ -395,31 +395,31 @@ The capability gradient is nowhere clearer than in the cost of the negotiation. 
 decisions, the strong model spent on average about **150 reasoning tokens** over fewer than three
 turns; the mid model about **860**; the weak model about **5,400** (roughly thirty-five times the
 strong model's effort) over more turns, to reach *lower* accuracy. The pattern is the one the first
-setting found and this one confirms on a harder task: capability buys not just correctness but
+scenario found and this one confirms on a harder task: capability buys not just correctness but
 economy; a weak agent does not merely make more mistakes, it spends far more cognition making them.
 
 ## 4. Discussion
 
-**What is new against the first setting.** The first setting established that cognitive agents can
+**What is new against the first scenario.** The first scenario established that cognitive agents can
 reconcile two structural models *ad hoc*, and that a thin lexical reference can substitute for
-cognition on that task. This setting moves from equivalence to **refinement**, and in doing so
+cognition on that task. This scenario moves from equivalence to **refinement**, and in doing so
 exercises everything the first could not. Verification became **satisfaction**: checking a chosen
 realisation against every bound, the mode the first study named and deferred. A genuine two-sided
 **negotiation** appeared (best-achievable offers, accept/reject decisions) and the study showed it
 completing autonomously under full cognition and collapsing to referral as cognition recedes.
 **Pragmatics** moved from a fixed backdrop to a measured axis, carried by a portable **movable
 policy**, and the decisions were shown to track it. And the reconciliation became a **loop across a
-service's life**, not a single hand-off. The one component the first setting held fixed and this one
+service's life**, not a single hand-off. The one component the first scenario held fixed and this one
 puts to work is exactly the pragmatic one; only the schema-structural machinery is now shared ground.
 
 **The central insight, sharpened twice.** The programme's claim is that cognition is what completes a
 reconciliation, and that the fully-cognitive end completes autonomously, with no standard and no
-human. This setting sharpens it in two ways that the first could not reach. First, it shows the claim
+human. This scenario sharpens it in two ways that the first could not reach. First, it shows the claim
 holding on a *negotiation* (the hardest thing to automate, because it needs both sides' live
 participation) and it identifies the **pre-placed policy** as the mechanism that pushes the hand-off
 boundary outward: the customer's cognition, placed in a portable artefact ahead of time, closes
 autonomously what a mute customer would refer. Second, it draws the **limit** of the thin reference
-that was the first setting's protagonist. A reference reaches the *information* a reconciliation
+that was the first scenario's protagonist. A reference reaches the *information* a reconciliation
 needs (it can hand an inert agent the facts to check satisfaction) but it stops at the *authority*
 to decide. Where the missing ingredient is judgement, no reference substitutes; cognition, live or
 pre-placed, is the only thing that closes the gap. Information has a published stand-in; authority
@@ -432,13 +432,13 @@ across all three models on that trajectory). A breach compels a reconciliation; 
 save money does not, and the models default to holding a service that is meeting its bounds. This is
 arguably defensible behaviour, but it marks a real edge: proactive, unforced optimisation is harder
 for these agents than reactive remediation. And the study is, by design, **illustration-first**: one
-seeded case, a modest measured cross-product, a few worked scenarios rather than a large factorial. It
+seeded case, a modest measured cross-product, a few worked cases rather than a large factorial. It
 is built to show the concept in action and to establish the mechanisms cleanly, not to characterise
 their statistics; the numbers here are consistent and repeatable across trials, but the claim they
 support is existential and mechanistic: *this is how it works, and here it is working*, not a
 population estimate.
 
-**Where this leaves the programme.** Two of four settings are now complete. Between them they have
+**Where this leaves the programme.** Two of four scenarios are now complete. Between them they have
 exercised the lexical, ontological/structural, and instance-level components of reconciliation, the
 verification of a reconciliation, and (new here) its pragmatic component and its extension across a
 service's life. The through-line holds and has sharpened: it is cognition that completes a
@@ -448,7 +448,7 @@ person would otherwise have to stand.
 
 ## 5. Further experiments
 
-Three further experiments test the setting's own framing. The first goes at the load-bearing word in
+Three further experiments test the scenario's own framing. The first goes at the load-bearing word in
 this report's own title and framing, *negotiation*: it puts an actual second reasoning agent where the
 study had used a deterministic provider oracle, and asks whether that changes anything. The second
 addresses the "conservatism, not competence" reading of the weak model's apparent safety, by isolating
@@ -461,7 +461,7 @@ numbers as the underlying runs.
 
 ### 5.1 A real second agent in the negotiation: an honest null
 
-The sharpest question about this setting concerns its language: the report describes the
+The sharpest question about this scenario concerns its language: the report describes the
 exchange as a two-sided **negotiation**, yet the provider side is a deterministic oracle, not a second
 reasoning agent. To test whether the framing is earned, the `best-achievable` oracle was replaced with
 an actual reasoning **provider agent** — given an intent's bounds, its candidate realisations with
@@ -485,7 +485,7 @@ What this changes is the claim, not the mechanism. The provider's role here is a
 optimisation — offer the best-achievable realisation under the priority order — that even the weak
 agent computes reliably, and the deterministic oracle is therefore a faithful stand-in for a provider
 agent rather than a simplification that hides a live party's reasoning. On this evidence the
-"two-sided negotiation" language is not earned in this setting: the provider behaves as a solved
+"two-sided negotiation" language is not earned in this scenario: the provider behaves as a solved
 optimisation, not as a second party whose reasoning shifts the result. As noted in the summary and in
 §1, the exchange is here better read as one-sided **refinement** against a checkable oracle, with the
 customer's judgement the only cognition the outcome turns on. But the null is specific to this well-posed
@@ -516,7 +516,7 @@ it is not perfectly minimal (it asks for only the disambiguating attribute on 0.
 attribute only 0.56 of the time, never asks for it alone, asks for the most (1.94 attributes on
 average), and ends at request accuracy 0.50 — no better than guessing.
 
-This makes the point measurable in this setting. The affordance to ask is worth only as
+This makes the point measurable in this scenario. The affordance to ask is worth only as
 much as the judgement to target it: for the weak model the request buys nothing over surface guessing,
 because it asks for the wrong things or indiscriminately. The weak model's apparent safety is
 inability, not judgement — it acts, but without the discrimination to act correctly — which is the
@@ -531,15 +531,15 @@ something of its own to reason about — whether it can actually **deliver** an 
 second agent then matters. Each realisation is placed on a bearer **path**, and a live capacity state
 can mark a path **saturated**, so an attractive realisation may be undeliverable now. The provider must
 offer the best-achievable realisation *on an available path*, or **decline** when nothing is
-deliverable. Three capacity scenarios per intent set the regime: `clear` (no path saturated, so the
+deliverable. Three capacity regimes per intent: `clear` (no path saturated, so the
 deliverable-best equals the catalogue-best — the §5.1 regime), `constrained` (the attractive
 realisation's path is saturated, forcing a counter-proposal or a changed outcome), and `outage` (every
 path saturated, forcing a decline). A reasoning provider across the ladder is compared against two
 deterministic controls: a **catalogue oracle** that picks the best-achievable ignoring capacity (the
 §5.1 provider), and a **deliverability oracle** that picks the best deliverable option or declines (the
-gold). Three intents × three scenarios × three policies × three trials.
+gold). Three intents × three regimes × three policies × three trials.
 
-The result reverses §5.1's null exactly where deliverability starts to bind. In the `clear` scenario the
+The result reverses §5.1's null exactly where deliverability starts to bind. In the `clear` regime the
 reasoning provider tracks the catalogue oracle (divergence from it ~0.00 for the capable models) — the
 §5.1 result reproduced, because with everything deliverable there is again nothing to reason about. Once
 a path saturates, the provider **diverges**: its divergence from the catalogue oracle rises to **0.56**
@@ -554,7 +554,7 @@ weak provider never offers an undeliverable service, its only slippage a little 
 
 ![A deliverability-reasoning provider diverges from the catalogue oracle where capacity binds, and never offers an undeliverable service.](../figures/fig_deliverability.png)
 
-*Figure 5.3. Left: the reasoning provider's divergence from the catalogue oracle by scenario, per model —
+*Figure 5.3. Left: the reasoning provider's divergence from the catalogue oracle by regime, per model —
 near zero while paths are clear (the §5.1 fixed-catalogue regime) and rising as paths saturate and the
 provider must counter-propose or decline. Right: the catalogue oracle offers an undeliverable service in
 0.52 of cells; every reasoning provider, across the ladder, offers none.*
@@ -571,15 +571,15 @@ The case is seeded rather than sampled (constructed to exercise each mechanism a
 not drawn from a population) so the results establish that the mechanisms work and how, not how often
 they would work in the wild.
 
-To guard against the worry that the one scenario above happened to be built in a way that flatters the
-finding, two further intent scenarios were constructed for this setting from scratch: an enterprise
+To guard against the worry that the one case above happened to be built in a way that flatters the
+finding, two further intent cases were constructed for this scenario from scratch: an enterprise
 metro-Ethernet case (`intent_metro`) and a data-centre-interconnect case (`intent_dci`), each with its
-own sites, rates, policies, and traps. Recall what the three operations mean in plain terms:
+own sites, rates, policies, and traps. As a reminder, in plain terms:
 *refinement* is working out which of the operator's concrete catalogue entries actually satisfy the
 customer's stated wish; *negotiation* is deciding, when nothing fully fits, whether to accept a
 near-miss or refer it upward under a stated policy; and the *lifecycle* is running the chosen service
 across its life, hop by hop, and reading whether it is still meeting its target. On the two new cases
-the setting's findings reappear. Refinement completes for the capable agents (the strong and mid
+the scenario's findings reappear. Refinement completes for the capable agents (the strong and mid
 agents get every case right, including all four of the deliberately hard "only a live check settles it"
 cases, where the advertised catalogue entry and the live truth disagree) while the weakest agent lags,
 because it does not reliably perform that live check, which ties back to the reach study's separate
@@ -587,13 +587,13 @@ finding that asking the live system is a capability-gated act. Negotiation (appl
 a fixed set of offers) is done correctly by all three agents including the weakest, on both new cases,
 exactly as in the original. And the multi-hop lifecycle remains the demanding operation that grades
 with capability, strongest to weakest. So the shape of the result is a property of the mechanism, not
-of the one scenario. (The same author built all three, so this tests robustness to variation, not to
+of the one case. (The same author built all three, so this tests robustness to variation, not to
 real network data; the latter needs carrier collaboration.)
 
 The oracle is deterministic and the gold is derived and validated from a
 hidden truth, which removes drift but also means the "difficulty" of the case is authored rather than
-found. The intent setting is run on the three-point core ladder; the six-model sweep that fills in the shape of
-the gradient covers the schema settings, so within intent the gradient is clear but its shape between the
+found. The intent scenario is run on the three-point core ladder; the six-model sweep that fills in the shape of
+the gradient covers the schema scenarios, so within intent the gradient is clear but its shape between the
 points is not resolved. The measured cross-product is deliberately modest, and
 the lifecycle in particular rests on a small number of worked trajectories; the accuracies reported
 are stable across the trials run but are illustrations of behaviour, not tight estimates. Finally, the

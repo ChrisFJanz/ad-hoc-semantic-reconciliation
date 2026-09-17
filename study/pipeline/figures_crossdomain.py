@@ -77,7 +77,7 @@ def fig_seam():
 
     ax.text(5.0, 0.35, "Two home-grown models, no public standard. The worlds overlap only at "
             "the seam; everything else is native to one side.", ha="center", fontsize=9.2, color="#333")
-    ax.set_title("The cross-domain setting — two home-grown models meeting where a Cascade "
+    ax.set_title("The cross-domain scenario — two home-grown models meeting where a Cascade "
                  "service rides a Meridian circuit", fontsize=12, y=1.0)
     save(fig, "fig_crossdomain_seam.png")
 
