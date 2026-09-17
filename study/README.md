@@ -1,13 +1,13 @@
-# The results — a completed four-setting study
+# The results — a completed four-scenario study
 
 *The empirical realisation of the [research programme](../proposal/) in
-[ad hoc semantic reconciliation](../). Four operational settings, built, run against a validated gold
+[ad hoc semantic reconciliation](../). Four operational scenarios, built, run against a validated gold
 standard, and reported, with a master report drawing them into one synthesis.*
 
 > Part of the larger project — the theory and programme that motivate this study are in
 > [`../proposal/`](../proposal/); the interactive demonstrations are in [`../demos/`](../demos/).
 
-The central finding, established across all four settings: **it is cognition that completes a
+The central finding, established across all four scenarios: **it is cognition that completes a
 reconciliation.** Descriptor methods — matching names, then names plus a gloss — carry it to a ceiling
 and stop, historically leaving the rest to a standard or a person. Where both systems can reason, the
 remainder is closed **autonomously**, with no model agreed in advance and no human in the loop, and
@@ -22,10 +22,10 @@ meaning, and itself bounded by the agent's capability.
 
 **[reports/MASTER_REPORT.md](reports/MASTER_REPORT.md)** &nbsp;·&nbsp;
 **[PDF](reports/MASTER_REPORT.pdf)** &nbsp;·&nbsp;
-**[slides (PDF)](reports/MASTER_REPORT_Deck.pdf)** — the synthesis that sits atop the four settings. It
+**[slides (PDF)](reports/MASTER_REPORT_Deck.pdf)** — the synthesis that sits atop the four scenarios. It
 introduces the idea once (the lift, portable semantic models, the family of reconciliation operations,
-and the cognition spectrum), distils each setting to its essentials, and then gathers the findings so
-they can be read as one result: what works and how far, the **six theses** the settings establish, the
+and the cognition spectrum), distils each scenario to its essentials, and then gathers the findings so
+they can be read as one result: what works and how far, the **six theses** the scenarios establish, the
 evidence behind them along a set of cross-cutting readings (cognitive load, model power, the reference,
 placement and failure, reach, the pragmatic layer, and what it takes to **produce the inputs** the whole
 thing runs on), two tables mapping every finding to its placement and to the process stage it acts on,
@@ -35,9 +35,9 @@ the surprises, and the scope. The slide deck carries the same synthesis for read
 
 ![Reconciliation over two lifted models — grounded correspondences bound through a thin reference, a rejected cognate, and what is honestly left unbound (no counterpart, or the residual referred onward).](figures/fig_master_reconcile.png)
 
-## The four settings
+## The four scenarios
 
-Each setting takes the same frame to a new operation. Each has a report (renders inline), a
+Each scenario takes the same frame to a new operation. Each has a report (renders inline), a
 print-ready **PDF**, and an interactive **demo** (opens in your browser; see [`../demos/`](../demos/)
 for download links too).
 
@@ -46,7 +46,7 @@ for download links too).
 [PDF](reports/REPORT_1of4_configuration.pdf) &nbsp;·&nbsp;
 ▶ [demo](https://htmlpreview.github.io/?https://github.com/ChrisFJanz/ad-hoc-semantic-reconciliation/blob/main/demos/configuration.html) —
 two standard models of one network. ONF **TAPI** ↔ IETF **TEAS/ACTN**, seeded with false cognates and
-opaque items. The founding setting: it shows the thin reference **substituting for cognition**, the
+opaque items. The founding scenario: it shows the thin reference **substituting for cognition**, the
 benefit **capability-dependent**, verification catching the traps, and work scaling **linearly** with a
 reference against quadratically without. Its four sub-studies are folded into the report and preserved
 as method notes under `notes/studies/`.
@@ -116,9 +116,23 @@ goes inert a single agent reconstructs it. The
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
+## What's new (2026-09-17)
+
+Mostly a **reframing** of the whole account, together with the **portability** experiments the reframing rests on. The findings are unchanged; what changed is the frame around them, the evidence under one half of it, and the deck.
+
+- **The concept is reoriented around the lift.** The material now flows from the **lift** first — the cognitive act that turns a system's data into a semantic model — developed on its own terms, and only then to **reconciliation**, presented as a *key example* of cognition-based use of a lifted model rather than as the point of the exercise. The object comes before its uses; reconciliation is the flagship one.
+
+- **Portability is now the defining attribute of a "complete" model — and it is measured directly.** A lifted model is *portable* when any sufficiently-reasoning agent can pick it up and use it from the package alone, with no pre-agreed standard, and we treat that as what makes an ad hoc semantic model complete. A block of **new experimental work** assesses it head-on rather than inferring it through a downstream task: comprehensibility across the capability ladder and across model families, what a meaning-poor surface does to it and how a reference used in the lift repairs it, and a judge-independence check. Portability comes out real, capability-banded, a property of the lift, and measured by a judge that does not favour its own family.
+
+- **The deck is a different animal.** It is no longer a slide-by-slide mirror of the master report but a concise **enticer** — its job is to make the reader want to open the report, not to reproduce it.
+
+- **Consistent terminology and a truer title.** The four cases are now **scenarios** throughout (master report, sub-reports, deck), and the master report is retitled ***Portable semantic models and ad hoc reconciliation by cognitive agents***, naming the object first and its flagship use second.
+
+The master report and the four sub-reports are rebuilt to match. The portability drivers, results, and figures live under `pipeline/`, `results/`, and `figures/`.
+
 ## What's new (2026-09-15)
 
-A focused programme drilling into the one question the four-setting study leaves open at its own
+A focused programme drilling into the one question the four-scenario study leaves open at its own
 boundary: whether the semantic and pragmatic **inputs** a reconciliation runs on can be *produced*
 from the thin, real interface models a deployment actually meets — careless YANG, or REST whose data
 is present but whose meaning is implicit in the application — without becoming a heavy design-time
@@ -166,7 +180,7 @@ This revision extends the study at the experimental end with a substantial progr
 experiments, biting into the harder half of the problem — *producing and aligning the inputs*, not only
 reconciling models that already share a reference — and replicating the sharp findings across additional
 model families. The central findings are unchanged and deepened: the new results are woven into the
-master report's synthesis (including a reading on producing the inputs, §13.10), and each setting report
+master report's synthesis (including a reading on producing the inputs, §13.10), and each scenario report
 gains a **Further experiments** section (report 1/4 §5, report 2/4 §5, report 3/4 §6, report 4/4 §5).
 
 - **The harder half, tested.** Independent-lexicon alignment is tractable for a capable agent
@@ -187,7 +201,7 @@ gains a **Further experiments** section (report 1/4 §5, report 2/4 §5, report 
   collapses to recall 0.33; agents recover to 0.89–1.00 at precision 1.00); contradictory authority
   sources are surfaced, not silently resolved; and, where the provider's side reduces to selecting from
   a fixed catalogue, a real second reasoning agent in the intent negotiation changes almost nothing — a
-  null that scopes the "two-sided negotiation" language to settings where the provider must weigh its own
+  null that scopes the "two-sided negotiation" language to scenarios where the provider must weigh its own
   deliverability, rather than retiring it.
 - **The lexicon-divergence sweep.** Following up the field-ablation result, a sweep that progressively
   independently lexicalises the two sides — from a fully shared reference to two independent lexicons —
@@ -232,7 +246,7 @@ are unchanged; the reports carry the results in place.
   policy a frozen resolve), each valid only until the context it assumed drifts; and the mechanisms are
   gated by two things at once, liveness (which recedes across the cognition spectrum, so the mechanisms
   fall away in order as sides go inert) and capability (which bites hardest on resolution). This is why
-  the framework does not merely extend beyond reconciliation but predicts the other settings' signatures,
+  the framework does not merely extend beyond reconciliation but predicts the other scenarios' signatures,
   the observability verdict being capability-gated while its correlation, a structural test, holds across
   the ladder. The point is carried through the rest of the report: §14's second map gains a note tying its
   **Lift** and **Pragmatic-resolution** rows to §13.8 and §13.9, and the one-paragraph close (§17) now
@@ -269,12 +283,12 @@ unchanged and the reports carry the results in place; this note is for readers t
 - **Completion by decisive experiment, shown end to end.** At the fully-cognitive end, when the two agents
   cannot settle a correspondence by discussion, either can provision the candidate in a private virtual copy
   of the network, operate it, and read back whether it holds; the verdict binds or refutes. With this, two
-  agents reach the reference's close on three of the four schema settings with no reference at all, and the
+  agents reach the reference's close on three of the four schema scenarios with no reference at all, and the
   master report now includes verbatim transcripts of the negotiation and of the experiment. (See §13.7.)
 - **The lift, performed by an agent.** The study reconciles lifted models whose explanation layer, each
   concept's gloss and worked example, had been supplied ready-made. An agent is now asked to produce that
   layer itself from a side's bare schema, and reconciliation over the agent's own lift matches the
-  ready-made one: identical for the capable agent binding through a reference, across all four settings. So
+  ready-made one: identical for the capable agent binding through a reference, across all four scenarios. So
   the results do not depend on the lift being authored in advance; what stays open is the lift from raw,
   messy schema and a cold start before any instances exist. (See §13.8.)
 - **A memorisation control.** The flagship TAPI/TEAS case is re-run with the public-standard identities
@@ -290,7 +304,7 @@ closes the in-house gaps the first cut left open, leaving only the genuinely ext
 network data). The reports carry the results in place; this summary is here for readers tracking what
 moved between revisions.
 
-- **Construct-then-bind, end to end (setting 3).** The standard-free setting previously handed the
+- **Construct-then-bind, end to end (scenario 3).** The standard-free scenario previously handed the
   agents the shared reference and scored the binding alone. The agents now **build that reference
   themselves** from the two models and then bind through it, with nothing pre-given. The strong agent
   lifts from a no-reference resolved fraction of **0.20 to 0.80** (0.90 with a decisive experiment), near
@@ -300,11 +314,11 @@ moved between revisions.
   **compresses** the capability gradient: bilateral ratification holds precision high and drives false
   cognates to zero across almost the whole ladder, while resolution is uniformly lower. The discipline a
   lone weak agent would lack is supplied by the negotiation structure itself.
-- **Instance co-reference measured beyond setting 1.** Entity-level co-reference is now measured in
-  settings 2 and 4 as well, reproducing the budget-limited-then-structural pattern: capable agents
+- **Instance co-reference measured beyond scenario 1.** Entity-level co-reference is now measured in
+  scenarios 2 and 4 as well, reproducing the budget-limited-then-structural pattern: capable agents
   resolve fully where a live side can be interrogated, the weakest only partially. (A fix to the
   interrogation path — letting an agent ask which attributes exist rather than guess field names —
-  moved setting 4 from a floor to full resolution.)
+  moved scenario 4 from a floor to full resolution.)
 - **A classical descriptor baseline.** A non-cognitive matcher (labels, glosses, structure) is included
   as an explicit baseline, confirming that descriptor methods carry a reconciliation to a ceiling that
   cognition then passes.
@@ -317,8 +331,8 @@ moved between revisions.
   ladder, the same access lands by capability: the strong agent converts it to a full close, the mid
   plateaus, and the weakest posts high resolved fraction but with slipping precision. (See §13.5 of the master
   report, Figure 14.)
-- **Breadth — every signature reproduced on new cases.** Each of the four settings is now exercised on
-  **three independently-built cases, not one** — two new ones per setting, in different domains, with
+- **Breadth — every signature reproduced on new cases.** Each of the four scenarios is now exercised on
+  **three independently-built cases, not one** — two new ones per scenario, in different domains, with
   different vocabularies and different traps. Every signature reappears: cognition completes the match
   while the reference mainly prevents the weaker agents' errors (configuration); the strong-omit /
   weak-commit mirror, repaired by a thin reference (cross-domain); refinement and negotiation completing
@@ -336,7 +350,7 @@ moved between revisions.
   bind is not a blanket default: build the reference where there is none to bind through and the agent can
   build a good one; otherwise use the one that exists. (See §13.6 of the master report, Figure 15.)
 - **Benchmark packaged.** The cases, harness, and leaderboard are packaged under `benchmark/` for
-  external use — now eighteen cases across the four settings.
+  external use — now eighteen cases across the four scenarios.
 
 What remains is now genuinely external: larger and more varied cases drawn from real networks, and the
 real-data grounding that only carrier and standards-body collaboration can supply. The breadth cases
@@ -348,14 +362,14 @@ which is exactly the gap that external collaboration exists to close.
 ```
 reports/                      the deliverables
     MASTER_REPORT.md              the synthesis — start here
-    REPORT_1of4_configuration.md  setting 1 · configuration (TAPI ↔ TEAS)
-    REPORT_2of4_intent.md         setting 2 · intent (refinement, negotiation, lifecycle)
-    REPORT_3of4_cross_domain.md   setting 3 · cross-domain (standard-free)
-    REPORT_4of4_observability.md  setting 4 · observability (alarm ≠ anomaly)
+    REPORT_1of4_configuration.md  scenario 1 · configuration (TAPI ↔ TEAS)
+    REPORT_2of4_intent.md         scenario 2 · intent (refinement, negotiation, lifecycle)
+    REPORT_3of4_cross_domain.md   scenario 3 · cross-domain (standard-free)
+    REPORT_4of4_observability.md  scenario 4 · observability (alarm ≠ anomaly)
 notes/
-    studies/                  setting-1 method notes (lift baseline, reference anatomy,
+    studies/                  scenario-1 method notes (lift baseline, reference anatomy,
                               instance disambiguation, verification modes)
-    design/                   design notes of record, per setting
+    design/                   design notes of record, per scenario
     archive/                  superseded working notes
     SETUP_OPENAI.md           how to supply the API key (kept out of the repo)
 figures/                      all report figures (regenerated by pipeline/figures*.py)
@@ -398,7 +412,7 @@ python pipeline/observability_study.py --model gpt-5.6-sol,gpt-5-mini,gpt-5-nano
 python pipeline/lift_study.py --lift-only --cases all --model gpt-5.6-sol,gpt-5-mini,gpt-5-nano
 ```
 
-Per-setting run commands are in each report's Reproducibility section, and the method notes under
+Per-scenario run commands are in each report's Reproducibility section, and the method notes under
 `notes/studies/` carry the sub-study commands.
 
 ## Grounding and scope

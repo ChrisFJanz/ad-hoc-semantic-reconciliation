@@ -1,6 +1,6 @@
 # Ad hoc semantic reconciliation between divergent network models
 
-*Using machine cognition — a theory, a research programme, and a completed four-setting study.*
+*Using machine cognition — a theory, a research programme, and a completed four-scenario study.*
 
 Two software systems that must exchange information rarely share a model of the world. The classical
 remedy is a standard agreed in advance. This project investigates the alternative that opens up once
@@ -21,16 +21,16 @@ The work is in two parts. Pick a door:
 references) and Part II sets out the research programme (questions, hypotheses, method, benchmark,
 plan). Both as papers and slide decks, with four interactive demonstrations.
 
-### → [The results](study/) &nbsp;·&nbsp; the completed four-setting study
+### → [The results](study/) &nbsp;·&nbsp; the completed four-scenario study
 
-`study/` — the empirical realisation of the programme across four operational settings (configuration,
+`study/` — the empirical realisation of the programme across four operational scenarios (configuration,
 intent, cross-domain, observability), each built, run against a validated gold standard, and reported,
 with a **master report** (and a companion slide deck) drawing them into one synthesis — plus the harness, benchmark, and per-run
 data behind them.
 
 ### → [The demonstrations](demos/) &nbsp;·&nbsp; four interactive HTML studies
 
-`demos/` — self-contained, interactive walk-throughs of the four settings (configuration, intent,
+`demos/` — self-contained, interactive walk-throughs of the four scenarios (configuration, intent,
 cross-domain, observability), referenced by both the proposal and the results. They run live once
 GitHub Pages is enabled (see each door's README for the links).
 
