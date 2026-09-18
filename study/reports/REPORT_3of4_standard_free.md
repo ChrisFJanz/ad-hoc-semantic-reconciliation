@@ -1,7 +1,7 @@
 # 3/4 · Reconciling across a domain boundary with no public standard: what a strong agent will not guess, and what a thin reference is worth
 
 > *Programme status: the **third of the programme's four operational scenarios**
-> (cross-domain, standard-free reconciliation). The first scenario reconciled two **public
+> (standard-free reconciliation across adjacent domains). The first scenario reconciled two **public
 > standard** models of one network; this one reconciles two **home-grown, private** models of
 > **adjacent domains** that meet at a single seam, with no public standard beneath either side.
 > It exercises the same schema-binding muscles as the first scenario, and is written to make plain
@@ -96,7 +96,7 @@ to the customer site, riding an *underlay*, carrying a *VLAN*, with a *rate*, a 
 *protection* requirement, and a *grade*. The two were built independently; the labels line up
 where the domains happen to share a word and diverge everywhere else.
 
-![The cross-domain scenario](../figures/fig_crossdomain_seam.png)
+![The standard-free scenario](../figures/fig_crossdomain_seam.png)
 
 *Figure 1. Two home-grown models, no public standard. Five things must be reconciled where a
 Cascade service rides a Meridian circuit; "grade" looks like a sixth but is a trap; and each side
@@ -187,7 +187,7 @@ reasoning effort. The model ladder is the programme's: a strong model (**sol**, 
 ### 3.1 Without the shared ground, the strong agent defers and the weak one errs
 
 With the reference present, the binding closes cleanly; the strong agent reaches a
-resolved fraction of 1.0 at both-cognitive with perfect precision (the mid agent 0.70), and the
+resolved fraction of 1.0 at both-cognitive with perfect precision (the mid agent 0.70, committing only what it is sure of and deferring the rest at clean precision), and the
 deterministic reference reconciler confirms the case is fully resolvable in principle. The finding is what
 happens with the reference *absent* (the construction step bracketed out), and it is not the
 shape one might expect (Figure 2).
@@ -307,7 +307,7 @@ the IP realm. A reference can pin what a field *is* (that a rate is a committed 
 protection is against a path failure), but not *whose* it is to govern. Where the missing thing is
 information, the thin reference supplies it; where the missing thing is authority, it does not, and
 only cognition settles it. That the same boundary appears in two different scenarios (intent and
-cross-domain) is itself worth noting: it is a property of what a reference is, not of one case.
+standard-free) is itself worth noting: it is a property of what a reference is, not of one case.
 
 Third, an honest limit of the measurement: one field, the **committed rate**, is genuinely
 *contested*. The transport model says it "guarantees" the rate; the IP model says it "commits" it;
@@ -365,7 +365,7 @@ that cross-domain authority (whose realm governs each shared field, §4) is simp
 the scenario, an assumption doing quiet work beneath the pragmatic result. They test the two halves
 of that worry in turn: whether the authority can instead be *derived* from an artefact the two
 operators would already hold, and whether, when the sources that would derive it disagree, an agent
-quietly picks a side. Both run on the same cross-domain case as the rest of the report, over the
+quietly picks a side. Both run on the same standard-free case as the rest of the report, over the
 programme's three-point ladder.
 
 ### 6.1 Authority is derivable from an external artefact, not hand-authored
@@ -420,7 +420,7 @@ The case is seeded rather than sampled (built to exercise the mechanism and prov
 from a population), so it establishes how the standard-free binding behaves and why, not how often.
 
 To check that the one case above was not, unintentionally, built in a way that makes the point come out
-right, two further cross-domain cases were constructed from scratch: a private radio-access management
+right, two further standard-free cases were constructed from scratch: a private radio-access management
 system meeting a private mobile-core controller at the user-plane transport seam (`config_xdom_ran`),
 and a private data-centre fabric meeting a private overlay controller at the VLAN-to-VNI seam
 (`config_xdom_dc`). Each is a fresh pair of home-grown vocabularies with no shared standard between
@@ -445,11 +445,11 @@ brackets the construction step rather than running the full construct-then-bind 
 protocol (the two agents constructing the reference themselves and then closing, with no reference
 pre-given) is also run, and it confirms the thesis in this hardest scenario: the strong agent lifts
 from 0.20 to 0.80, and to 0.90 when the agents also run a decisive virtual experiment. The core ladder is three points; the shape of the capability gradient between them is filled in by a
-six-model sweep at both-cognitive (master report §13.2, Figure 8), the cross-domain mirror included. The pragmatic gold is largely clean but includes
+six-model sweep at both-cognitive (master report §13.2, Figure 8), the standard-free mirror included. The pragmatic gold is largely clean but includes
 one field (committed rate) whose authority is genuinely contested, reported as such. And the
 instance-level co-reference is bracketed, not measured, on the argued grounds that it reproduces the
 first scenario's result; that argument rests on the intent scenario's endpoint phase and on the shared
-mechanism, not on a cross-domain instance run.
+mechanism, not on a standard-free instance run.
 
 One further check bears on *who performs the lift* here. These models, like the others, are reconciled
 over a materialised lift; re-running with the lift produced by an agent from each side's schema surface
@@ -463,7 +463,7 @@ visible in the lift as well as in the bind. The full cross-scenario table is in 
 
 ## 8. Reproducibility
 
-The bespoke cross-domain case (two lifted models, the constructed reference, the derived gold), the
+The bespoke standard-free case (two lifted models, the constructed reference, the derived gold), the
 single-pass binding harness and its reference-blind and reference controls, the factorial reference
 ablation, and the pragmatics stack and its gold are in the repository, with the recorded per-model
 results. The build and the offline checks run with no API and no network; the runs are launch-and-

@@ -222,7 +222,7 @@ task exposes the gap most starkly.
 **The programme's arc, completed.** Across four scenarios the pragmatic component has moved from the
 wings to the centre. In the first scenario it was deferred, and schema structure and a lexical reference
 did the work. In the second (intent) it entered as a **movable policy**: the consumer's priorities and
-affordability deciding whether a degraded offer is accepted. In the third (cross-domain) it was
+affordability deciding whether a degraded offer is accepted. In the third (standard-free) it was
 **authority** (whose realm owns a shared field) and the reference was shown to reach meaning but not
 authority. Here, in observability, it carries the **operative meaning**: whether an anomaly warrants a
 page, and how symptoms are one incident. The claim the programme has built toward (that pragmatics are

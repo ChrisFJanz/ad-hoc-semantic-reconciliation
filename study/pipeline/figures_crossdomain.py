@@ -77,7 +77,7 @@ def fig_seam():
 
     ax.text(5.0, 0.35, "Two home-grown models, no public standard. The worlds overlap only at "
             "the seam; everything else is native to one side.", ha="center", fontsize=9.2, color="#333")
-    ax.set_title("The cross-domain scenario — two home-grown models meeting where a Cascade "
+    ax.set_title("The standard-free scenario — two home-grown models meeting where a Cascade "
                  "service rides a Meridian circuit", fontsize=12, y=1.0)
     save(fig, "fig_crossdomain_seam.png")
 
@@ -131,7 +131,7 @@ def fig_mirror():
     ax.set_ylim(0, 1.22)
     ax.legend(frameon=True, framealpha=0.95, edgecolor="none", facecolor=SURFACE, fontsize=9,
               loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.0))
-    ax.set_title("Cross-domain at both-cognitive (two agents): the mirror.\n"
+    ax.set_title("Standard-free at both-cognitive (two agents): the mirror.\n"
                  "Without the constructed reference the strong agent under-commits (0.20 resolved, precision\n"
                  "1.00 — omission) while the weak agent commits some wrong (precision 0.67); the reference\n"
                  "carries the strong agent to a full close and restores the weak agent's precision.",

@@ -340,7 +340,7 @@ interrogating an authoritative fibre-id, and the capability gradient shows in *h
 there: the strong and mid agents resolve the twins fully (resolved fraction 1.0), while the weak agent
 only partially resolves even with the live side present (0.67), leaving the ambiguous pairs in the
 residual. Once a side goes inert and the probe is gone, all three collapse to the same 0.6, the twins
-unresolvable. The step is supporting, not the headline, but it confirms that the live-probe mechanism
+unresolvable from static records alone — deferred to a live probe at unchanged precision, not mis-merged. The step is supporting, not the headline, but it confirms that the live-probe mechanism
 and its capability-dependence carry over intact from the first scenario.
 
 ### 3.5 The lifecycle, watched: a service that reconciles itself across its life

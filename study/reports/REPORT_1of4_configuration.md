@@ -372,7 +372,7 @@ For the capable agent, the reference speeds the close and, where a single agent 
 inert side, collapses its deliberation. At the inert placements the strong model's reasoning tokens
 fall from 1559 and 844 without the reference to 261 and 354 with it: a one- to two-order-of-magnitude
 reduction. At both-cognitive the two agents negotiate: without the reference they spend more (about
-3,100 reasoning tokens across the exchange) and reach a resolved fraction of 0.63 at perfect precision;
+3,100 reasoning tokens across the exchange) and reach a resolved fraction of 0.63 at perfect precision — the two agents deferring the pairs they cannot ground without the reference, not mis-committing them;
 with the reference they reach a full close for about 1,140. With the reference the strong agent reaches
 precision 1.00 and resolved fraction 1.00 at every placement (Fig. 1, Table 1). Given the anchor the
 capable agent barely has to deliberate, and it does not err.
@@ -395,7 +395,7 @@ negotiation cost and carries them to a full close.*
 
 *Table 1. The strong agent (gpt-5.6-sol) on the primary case. The both-cognitive rows are the two-agent
 negotiation, with reasoning summed across the exchange (2 trials); the inert rows are a single agent
-reconstructing the mute side (n = 4).*
+reconstructing the mute side (n = 4). Resolved fractions below one at both-cognitive are correspondences the negotiation deferred at full precision, not errors.*
 
 ### 3.2 The benefit is capability-dependent, and not monotonic in placement (H2, H3)
 
@@ -638,7 +638,7 @@ resolved 1.00 but took one wrong pair (precision 0.90), deferring a little more 
 clean. The lift is cheap for the strong agent (a few hundred reasoning tokens a side) and dearer for the
 mid one (several thousand), and its wording overlaps the fixture only weakly (lexical fidelity about
 0.2), yet the reconciliation is unchanged: meaning survives the rephrasing. The full four-scenario
-picture, including cross-domain and observability, is in the master report (§13.8); the finding there is
+picture, including standard-free and observability, is in the master report (§13.8); the finding there is
 the same, with the familiar weak-end capability-gating showing up as a single cross-domain false-cognate
 slip at mid capability.
 

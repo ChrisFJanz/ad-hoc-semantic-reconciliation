@@ -42,7 +42,7 @@ def main():
     a3.bar(x - w/2, sol_noref, w, color=GREY, label="no shared reference")
     a3.bar(x + w/2, sol_ref, w, color=BLUE, label="with the reference")
     a3.axhline(1.0, color=NAVY, ls=":", lw=1)
-    a3.set_title("Scenario 3 - cross-domain (no standard between the two sides)\n"
+    a3.set_title("Scenario 3 - standard-free (no standard between the two sides)\n"
                  "without a shared reference the STRONG agent under-commits (refuses to guess the seam):\n"
                  "perfect precision but low resolved fraction; the constructed reference completes the close",
                  fontsize=9.5)

@@ -12,7 +12,7 @@ DOCS = ["README.md",
         "reports/MASTER_REPORT.md",
         "reports/REPORT_1of4_configuration.md",
         "reports/REPORT_2of4_intent.md",
-        "reports/REPORT_3of4_cross_domain.md",
+        "reports/REPORT_3of4_standard_free.md",
         "reports/REPORT_4of4_observability.md"]
 
 CSS = """
