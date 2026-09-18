@@ -25,7 +25,7 @@ FIG = ROOT / "figures"
 BLUE, ORANGE, GREY = "#2a78d6", "#eb6834", "#b8c2cc"
 NAVY, SURFACE, INK, FAINT = "#14314f", "#fbfaf8", "#1a1a1a", "#6a655e"
 SETTINGS = [("config_big_hard", "Scenario 1\nconfiguration\n(a standard exists)"),
-            ("config_cross_domain", "Scenario 3\ncross-domain\n(no standard)"),
+            ("config_cross_domain", "Scenario 3\nstandard-free\n(no standard)"),
             ("config_observability", "Scenario 4\nobservability\n(RFC anchor)")]
 
 

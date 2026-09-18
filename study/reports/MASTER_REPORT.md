@@ -18,7 +18,7 @@
 > two models, which only cognition bridges; and any shortfall in either lift's portability, which adds
 > burden by leaving meaning for the other side to reconstruct. It maps the space of divergences, then
 > measures reconciliation in **four operational scenarios** of network and service management
-> (configuration, intent, cross-domain provisioning, observability), scoring every outcome against a
+> (configuration, intent, standard-free provisioning, observability), scoring every outcome against a
 > validated gold standard while varying the live cognition on the two sides from both, through one, to
 > neither. The through-line the scenarios establish is one thesis: **cognition is what closes a
 > reconciliation**. It bridges the divergence that matching on names and descriptions alone cannot. A thin
@@ -342,7 +342,7 @@ sufficed. The reference did its real work at lift time.
 The same assessment run over three further scenarios — carrier-Ethernet service, fault/observability,
 and L3VPN — returns bare meaning_score 0.98 and anchored 1.00 in every one, with confabulation near
 zero, matching the original three. "Solid lifts are portable" rests on six cases spanning
-configuration, cross-domain, and observability, not on a single worked case.
+configuration, standard-free, and observability, not on a single worked case.
 
 > **Portability is not an artefact of one model family — it tracks reasoning, not lineage.**
 
@@ -698,7 +698,7 @@ start looking like a deliberate traverse of the space (Table 2):
 |---|---|---|---|
 | **1 · Configuration** (TAPI ↔ TEAS) | identity (equivalence) | schematic | shared reference substitutes for cognition; instance co-reference |
 | **2 · Intent** (intent ↔ realisation) | relation (refinement / satisfaction) | pragmatic + provenance | pre-placed movable policy; the limit at authority |
-| **3 · Cross-domain** (Meridian ↔ Cascade) | relation (underlay) | schematic + provenance | **constructed** reference (no standard); authority attribution |
+| **3 · Standard-free** (Meridian ↔ Cascade) | relation (underlay) | schematic + provenance | **constructed** reference (no standard); authority attribution |
 | **4 · Observability** (alarm ↔ anomaly) | relation (ontological; one-to-many) | instance + pragmatic + cross-layer | reference pins meaning; pragmatics carry significance; dependency map composes |
 
 *Table 2. The four scenarios placed on the landscape's two axes — identity↔relation, and the layer(s)
@@ -726,7 +726,7 @@ by construction, the place the work stops and hands to a person.
 
 The rest of Part 2 works down from this map. It first names the **operations** a reconciliation is built
 from (the bridging steps, made concrete), then takes each scenario in turn as a measured sample of the
-space — configuration and the identity corner, intent and the pragmatic layer, cross-domain and the
+space — configuration and the identity corner, intent and the pragmatic layer, standard-free and the
 constructed reference, observability and significance — and closes with the conclusions: what works, how
 far, and exactly where the automation hands off.
 
@@ -963,9 +963,9 @@ an inert side would otherwise supply, but not for the authority to decide. A pre
 able to carry a party's authority to where a person or live cognitive system would otherwise have to
 stand.
 
-## 17. Scenario 3, Cross-domain: reconciling with no public standard
+## 17. Scenario 3, Standard-free: reconciling with no public standard
 
-*Full report: [3/4 · Cross-domain](REPORT_3of4_cross_domain.md).*
+*Full report: [3/4 · Standard-free](REPORT_3of4_standard_free.md).*
 
 *In the landscape of §11: a **relation** (underlay) at the **schematic** layer with no standard beneath it — the constructed-reference corner, where building the shared ground is the work — reaching into **provenance** (whose realm governs a shared field).*
 
@@ -984,7 +984,7 @@ pinned (a *committed* rate not a line rate, a latency *bound*, protection agains
 And one look-alike is refused: both models carry a **grade**, but Meridian's is a transport protection
 class and Cascade's an IP class of service. Same word, unrelated meanings, and no standard to consult.
 
-![Cross-domain, instantiated.](../figures/fig_master_crossdomain.png)
+![Standard-free, instantiated.](../figures/fig_master_crossdomain.png)
 
 *Figure 3. One order across the Meridian/Cascade seam. Five bindings to make (two renamings and
 three pins) and one false cognate, "grade", to reject, across two private vocabularies with nothing
@@ -1137,7 +1137,7 @@ One feature of Figure 6 looks paradoxical and is worth reading carefully. The st
 ### 19.2 Model power: the shape of the capability gradient
 
 Capability does not turn a single dial; it changes the *kind* of failure. The cleanest place to watch
-this is **scenario 3, the cross-domain bind** (Figure 7): Meridian, a transport OSS, and Cascade, an
+this is **scenario 3, the standard-free bind** (Figure 7): Meridian, a transport OSS, and Cascade, an
 IP/VPN controller, are two independently authored private models with **no public standard between
 them**, so no ready-made reference exists; the agents must construct the shared ground themselves.
 Run that bind with the reference withheld and capability alone decides the outcome. The strong agent
@@ -1368,7 +1368,7 @@ needs to.
 
 ### 19.6 The economics of the reference: when constructing it is worth the cognition cost
 
-The reference weighed here is the **dyadic shared common ground** two models bind *through* to be reconciled (§5's second role) — not the meaning-supply reference a single lift may absorb. The cross-domain scenario (§17) showed that where no standard exists, the two reconciling agents can jointly *build* the thin
+The reference weighed here is the **dyadic shared common ground** two models bind *through* to be reconciled (§5's second role) — not the meaning-supply reference a single lift may absorb. The standard-free scenario (§17) showed that where no standard exists, the two reconciling agents can jointly *build* the thin
 shared reference themselves and then bind through it, lifting a stalled reconciliation to a near-complete
 close. Building a reference is, however, itself an act of cognition, and that cognition is not free. So a
 sharper question follows, and it is the one an operator would actually ask: is it worth building a
@@ -1384,7 +1384,7 @@ commits, the completeness of the close; and *reasoning tokens* are the model's h
 direct measure of how hard it worked.
 
 The answer is a rule, not a blanket habit, and it has three parts (Figure 15). **Constructing the
-reference is load-bearing only where no standard exists and the agent is capable.** In the cross-domain scenario (two
+reference is load-bearing only where no standard exists and the agent is capable.** In the standard-free scenario (two
 private models, no shared standard) the two agents with no shared reference reach only a fifth of the
 true matches (resolved fraction 0.20, because they honestly refuse to guess a seam they cannot be sure
 of) and constructing the reference themselves carries them to 0.80, and to 0.90 when they also run a
@@ -1529,23 +1529,23 @@ to bind through — and a fair challenge is whether the study has shown only rec
 inputs while the hard part is producing them. Put under test, the inputs prove more often
 *producible* than assumed, under the same capability caveat that governs everything else.
 
-Start with the most basic input, the lift itself. Every scenario above ran over authored fixture lifts, and §7 showed an agent can produce an equally faithful lift from the schema surface alone — which leaves open whether the reconciliation results lean on that authoring. They do not. Reconciling over the agent-produced lift, under the same conditions, lands in the same regime as over the fixture, and for the capable agent binding through a reference — the mainline condition the study leans on — it is identical across all four scenarios (Table 3). The divergences that do appear are the study's own capability-gating, not a new failure: at mid capability the agent-lifted cross-domain case slips the same false cognate the strong agent and the fixture avoid, while on the configuration cases the agent's own glosses make the mid agent a little more conservative, holding precision at 1.00. The agent's glosses overlap the fixture's only weakly in wording (a lexical fidelity of 0.13 to 0.23), yet reconciliation stays in the same regime: the lift need not reproduce the authored phrasing to carry the same meaning. So the most fundamental input is producible too, and, like consuming a lift, producing one is gated by cognitive power — a few hundred reasoning tokens for the strong agent, several thousand for the mid. (The lift here is from the curated schema surface; the lift from raw schema text and a cold start with no instances remain for real-data work, §23.)
+Start with the most basic input, the lift itself. Every scenario above ran over authored fixture lifts, and §7 showed an agent can produce an equally faithful lift from the schema surface alone — which leaves open whether the reconciliation results lean on that authoring. They do not. Reconciling over the agent-produced lift, under the same conditions, lands in the same regime as over the fixture, and for the capable agent binding through a reference — the mainline condition the study leans on — it is identical across all four scenarios (Table 3). The divergences that do appear are the study's own capability-gating, not a new failure: at mid capability the agent-lifted standard-free case slips the same false cognate the strong agent and the fixture avoid, while on the configuration cases the agent's own glosses make the mid agent a little more conservative, holding precision at 1.00. The agent's glosses overlap the fixture's only weakly in wording (a lexical fidelity of 0.13 to 0.23), yet reconciliation stays in the same regime: the lift need not reproduce the authored phrasing to carry the same meaning. So the most fundamental input is producible too, and, like consuming a lift, producing one is gated by cognitive power — a few hundred reasoning tokens for the strong agent, several thousand for the mid. (The lift here is from the curated schema surface; the lift from raw schema text and a cold start with no instances remain for real-data work, §23.)
 
 | scenario | model | no-ref: fixture | no-ref: agent-lift | ref: fixture | ref: agent-lift |
 |---|---|---|---|---|---|
 | configuration (flagship) | strong | 0.56 (1.00) | 0.56 (1.00) | 1.00 (1.00) | 1.00 (1.00) |
 | configuration (hard) | strong | 0.83 (1.00) | 0.75 (1.00) | 1.00 (1.00) | 1.00 (1.00) |
-| cross-domain | strong | 0.20 (1.00) | 0.00 (0.00) | 1.00 (1.00) | 1.00 (1.00) |
+| standard-free | strong | 0.20 (1.00) | 0.00 (0.00) | 1.00 (1.00) | 1.00 (1.00) |
 | observability | strong | 0.25 (1.00) | 0.50 (1.00) | 0.75 (1.00) | 0.75 (1.00) |
 | configuration (flagship) | mid | 1.00 (0.90) | 0.78 (1.00) | 1.00 (1.00) | 0.78 (1.00) |
 | configuration (hard) | mid | 1.00 (0.92) | 0.86 (1.00) | 0.92 (1.00) | 0.92 (0.92) |
-| cross-domain | mid | 1.00 (1.00) | 0.80 (0.80)† | 0.80 (1.00) | 1.00 (0.83)† |
+| standard-free | mid | 1.00 (1.00) | 0.80 (0.80)† | 0.80 (1.00) | 1.00 (0.83)† |
 | observability | mid | 0.50 (1.00) | 0.75 (1.00) | 0.75 (1.00) | 0.75 (1.00) |
 
 *Table 3. Resolved fraction (precision in parentheses), fixture lift versus agent-produced lift, at
 both-cognitive, with and without the shared reference, on the strong and mid agents. Coverage 1.00 throughout: the agent
 glossed every concept. †the agent-lift committed one false cognate the fixture avoided (surviving false
-cognate = 1); false cognates were zero in every other cell.*
+cognate = 1); false cognates were zero in every other cell. The no-reference columns are the deliberately hard, construction-bracketed condition; their sub-one values are that hard case rather than the method failing — the reference columns are the mainline result.*
 
 Aligning two **independently authored lexicons** — no reference id shared across sides, the harder half
 of the schema bind — is tractable for a capable agent: it holds precision 1.00 by aligning the two
@@ -1912,7 +1912,7 @@ further cases were built for every scenario (deliberately different in domain, v
 the same agents were run on them under the same harness, so that three independent cases now stand behind
 each scenario. The findings reappear on the new cases (Figure 17). In **configuration**, the strong agent
 again reconciles two new pairs of standard models on its own, and the thin shared reference again mainly
-serves to prevent the weaker agents' errors. In the **cross-domain** scenario, the mirror returns on two
+serves to prevent the weaker agents' errors. In the **standard-free** scenario, the mirror returns on two
 new pairs of private, no-standard models: without a shared reference the strong agent under-commits
 (perfect precision on what it binds, but low resolved fraction because it refuses to guess the seam), and the
 constructed reference completes the close. In **intent**, working out which offers meet a customer's wish
@@ -1961,7 +1961,7 @@ the ontology from a bare schema surface at every capability, even with the names
 making two such models work together across a seam — is not the point of the exercise but its flagship
 use: an operation with its own objective, bridging the genuine divergence between two adequate models,
 with any shortfall in either lift's portability adding burden on top rather than being what the operation
-*is*. Across four scenarios (configuration, intent, cross-domain, and observability) that is what
+*is*. Across four scenarios (configuration, intent, standard-free, and observability) that is what
 happens: at the fully-cognitive end the reconciliation completes autonomously in every case, negotiations
 and significance verdicts included, with no bridging standard and no human. Cognition is what completes it;
 descriptor methods carry it most of the way, then stop, and the placement of cognition governs how much

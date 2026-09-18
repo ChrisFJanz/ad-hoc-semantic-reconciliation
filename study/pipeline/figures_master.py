@@ -203,7 +203,7 @@ def fig_crossdomain():
             ha="center", fontsize=8.4, color=ORANGE, weight="bold")
     ax.text(6.0, 0.45, "the seam - five bindings to make, one look-alike ('grade') to reject",
             ha="center", fontsize=8.2, color="#5a564f", style="italic")
-    ax.set_title("Cross-domain, instantiated - one order across the Meridian/Cascade seam, "
+    ax.set_title("Standard-free, instantiated - one order across the Meridian/Cascade seam, "
                  "with no standard to appeal to", fontsize=10.8, y=1.02)
     save(fig, "fig_master_crossdomain.png")
 
