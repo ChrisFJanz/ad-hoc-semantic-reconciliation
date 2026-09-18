@@ -24,7 +24,7 @@ plan). Both as papers and slide decks, with four interactive demonstrations.
 ### → [The results](study/) &nbsp;·&nbsp; the completed four-scenario study
 
 `study/` — the empirical realisation of the programme across four operational scenarios (configuration,
-intent, cross-domain, observability), each built, run against a validated gold standard, and reported,
+intent, standard-free, observability), each built, run against a validated gold standard, and reported,
 with a **master report** (and a companion slide deck) drawing them into one synthesis — plus the harness, benchmark, and per-run
 data behind them.
 

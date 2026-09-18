@@ -6,7 +6,7 @@ A two-part research proposal with companion materials. It examines how networked
 for themselves need information structured as **meaning**, not merely form — and how two such systems
 can reconcile their divergent models *ad hoc*, with no standard agreed in advance.
 
-> The empirical realisation of this programme — four settings built, run, and reported — is in
+> The empirical realisation of this programme — four scenarios built, run, and reported — is in
 > [`../study/`](../study/). The interactive demonstrations are in [`../demos/`](../demos/).
 
 ## Papers
@@ -31,7 +31,7 @@ which is the faithful, printable version. The slide decks are PDF only.)*
 
 ## Interactive demonstrations
 
-Four self-contained HTML studies, one per operational setting. Clicking an `.html` in the repo shows
+Four self-contained HTML studies, one per operational scenario. Clicking an `.html` in the repo shows
 its source — GitHub never renders HTML inline — so to see one run, use **view in browser** (opens it
 rendered via htmlpreview, no setup) or **download** it and open the file locally. The source files are
 in [`../demos/`](../demos/).

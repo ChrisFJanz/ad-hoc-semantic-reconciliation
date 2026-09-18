@@ -1,6 +1,6 @@
 # Interactive demonstrations
 
-Four self-contained, interactive HTML studies — one per operational setting — that ground the
+Four self-contained, interactive HTML studies — one per operational scenario — that ground the
 [proposal](../proposal/) and the [study](../study/). Each runs entirely in the browser, with no build
 step or dependencies.
 
@@ -11,7 +11,7 @@ running page — GitHub never renders HTML inline. Two ways to actually see a de
 - **Download** — save the file, then open it in any browser; because each demo is self-contained, it
   runs offline.
 
-| Setting | Demo | | |
+| Scenario | Demo | | |
 |---|---|---|---|
 | 1 · Configuration | two peer models of one transport network (TAPI ↔ IETF TEAS) | [▶ view](https://htmlpreview.github.io/?https://github.com/ChrisFJanz/ad-hoc-semantic-reconciliation/blob/main/demos/configuration.html) | [⤓ download](https://raw.githubusercontent.com/ChrisFJanz/ad-hoc-semantic-reconciliation/main/demos/configuration.html) |
 | 2 · Intent | a quantitative intent refined to a realisation (TM Forum ↔ IETF L1CSM) | [▶ view](https://htmlpreview.github.io/?https://github.com/ChrisFJanz/ad-hoc-semantic-reconciliation/blob/main/demos/intent.html) | [⤓ download](https://raw.githubusercontent.com/ChrisFJanz/ad-hoc-semantic-reconciliation/main/demos/intent.html) |
