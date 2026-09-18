@@ -60,8 +60,8 @@ check; a **negotiation** appears; the pragmatic operation enters as a portable *
 policy**; and the exchange **recurs across a service's life**. Grounded in the IRTF NMRG draft
 *draft-janz-nmrg-naas-agentic-negotiation*.
 
-**3/4 · [Cross-domain](reports/REPORT_3of4_cross_domain.md)** &nbsp;·&nbsp;
-[PDF](reports/REPORT_3of4_cross_domain.pdf) &nbsp;·&nbsp;
+**3/4 · [Standard-free](reports/REPORT_3of4_standard_free.md)** &nbsp;·&nbsp;
+[PDF](reports/REPORT_3of4_standard_free.pdf) &nbsp;·&nbsp;
 ▶ [demo](https://htmlpreview.github.io/?https://github.com/ChrisFJanz/ad-hoc-semantic-reconciliation/blob/main/demos/cross_domain.html) —
 reconciling with no public standard. Two **home-grown, private** models meet at one seam. The central
 result is a **mirror**: without the constructed reference the strong agent **under-commits** (defers at
@@ -335,13 +335,13 @@ moved between revisions.
   **three independently-built cases, not one** — two new ones per scenario, in different domains, with
   different vocabularies and different traps. Every signature reappears: cognition completes the match
   while the reference mainly prevents the weaker agents' errors (configuration); the strong-omit /
-  weak-commit mirror, repaired by a thin reference (cross-domain); refinement and negotiation completing
+  weak-commit mirror, repaired by a thin reference (standard-free); refinement and negotiation completing
   while the multi-hop lifecycle grades with capability (intent); and the alarm-is-not-an-anomaly
   look-alike reliably told apart (observability). This closes the "you only showed it on one case"
   worry as far as in-house work can. (See §16 of the master report, Figure 16.)
 - **The economics of the reference — when constructing it is worth the cognition.** Building the shared
   reference is itself an act of cognition, so we measured its cost against what it buys. The rule: it is
-  load-bearing only where **no standard exists and the agent is capable** (cross-domain, strong agent:
+  load-bearing only where **no standard exists and the agent is capable** (standard-free, strong agent:
   resolved fraction 0.20 → 0.80, and 0.90 with a decisive experiment, for a little extra spend); where a
   reference already exists (configuration,
   observability) the **given** reference reaches the same close for a fraction of the cognition, so
@@ -364,7 +364,7 @@ reports/                      the deliverables
     MASTER_REPORT.md              the synthesis — start here
     REPORT_1of4_configuration.md  scenario 1 · configuration (TAPI ↔ TEAS)
     REPORT_2of4_intent.md         scenario 2 · intent (refinement, negotiation, lifecycle)
-    REPORT_3of4_cross_domain.md   scenario 3 · cross-domain (standard-free)
+    REPORT_3of4_standard_free.md  scenario 3 · standard-free (no standard)
     REPORT_4of4_observability.md  scenario 4 · observability (alarm ≠ anomaly)
 notes/
     studies/                  scenario-1 method notes (lift baseline, reference anatomy,
