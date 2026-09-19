@@ -991,6 +991,60 @@ three pins) and one false cognate, "grade", to reject, across two private vocabu
 public beneath them. A constructed reference supplies the shared ground; a single descriptive field
 in it is enough to unlock a capable agent.*
 
+It is worth seeing the shared ground the two agents actually build, because its exact contents are the
+argument. The reference below is what they construct for this one exchange — not adopted from any
+standard, one entry per shared seam category, each fixed by a canonical example both sides can
+instantiate:
+
+```json
+{
+  "id": "ref.crossdomain.adhoc.v1",
+  "kind": "lexical",
+  "reference_type": "ad_hoc_by_example",
+  "note": "Constructed between just these two agents for just this exchange, not adopted from any
+           standard. One entry per shared seam category the exchange needs, each fixed by a canonical
+           example. It deliberately does NOT cover either side's native concepts (grade, bearer, vlan,
+           service), which is how it pre-empts the cross-domain 'grade' false cognate.",
+  "entries": [
+    {"id": "transport-underlay", "label": "transport underlay",
+     "synonyms": ["underlay circuit", "carrier circuit"], "class": "seam",
+     "definition": "The transport circuit that carries an IP service as its underlay — the one object
+                    both domains share, owned by transport and consumed by IP.",
+     "example": "Meridian circuit CIR-7 is the underlay of Cascade service SVC-42"},
+    {"id": "demarcation", "label": "demarcation point",
+     "synonyms": ["hand-off", "attachment"], "class": "endpoint",
+     "definition": "The single point where the transport circuit hands off to, and the IP service
+                    attaches at, the customer site — one demarcation seen from both sides.",
+     "example": "the NY demarcation: hand-off ho-NY-CIR7 is the same point as attachment att-NY-SVC42"},
+    {"id": "service-rate", "label": "committed service rate",
+     "synonyms": ["committed rate", "CIR"], "class": "requirement",
+     "definition": "The committed client payload rate the service guarantees — NOT the bearer line
+                    rate. Pinned to committed payload to prevent the line-rate / committed-rate confusion.",
+     "example": "5 Gbit/s committed (not the 100 Gbit/s bearer line rate)"},
+    {"id": "latency-bound", "label": "latency bound",
+     "synonyms": ["delay bound", "latency tier"], "class": "requirement",
+     "definition": "The one-way latency the service must not exceed, however each side expresses it — a
+                    number of milliseconds on the transport side, a named tier on the IP side. Pinned to
+                    a bound, not a measured metric.",
+     "example": "<= 8 ms one-way is the same requirement as latency tier T2"},
+    {"id": "protection-requirement", "label": "path protection",
+     "synonyms": ["resilience", "protection"], "class": "requirement",
+     "definition": "Protection of the service against a failure of the transport PATH (a fiber cut or
+                    bearer loss) — pinned to a path/underlay failure, distinct from an IP scheduling class.",
+     "example": "survive a single fiber cut on CIR-7's primary path by switching to the diverse path"}
+  ]
+}
+```
+
+Two things about this listing carry the scenario. First, every entry is *thin*: an identity plus a
+label, a shallow class, a one-line definition, and a single canonical example — no relationship axioms,
+no cardinalities, no attribute schema. It is a lexicon, not a model of either domain. Second, what the
+reference **omits** is as deliberate as what it carries. There is no `grade` entry, because `grade` is
+each side's *native* concept, not shared ground; with nothing for the two grades to bind *to*, the
+false cognate is pre-empted at the reference itself, before any agent reasons about it. This is the
+whole reference the resolved-fraction climb below (0.20 → 0.80 → 0.90) is built on, and the field
+ablation pulls apart entry by entry.
+
 **Operations under test.** A single, early **schema-binding** pass (deliberately isolated from the
 rest of the process) measured across the spectrum with and without the reference the two agents
 would themselves **construct**; plus a **reference-field ablation** and the **pragmatic** operation of
