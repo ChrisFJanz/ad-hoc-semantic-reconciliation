@@ -116,6 +116,18 @@ goes inert a single agent reconstructs it. The
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
+## What's new (2026-09-20)
+
+A small **alignment pass** on the master report, following the Round-4 review of the companion NMRG Internet-Draft (`draft-janz-nmrg-adhoc-semantic-reconciliation`). The report was already the senior, fuller document, so the round mostly caught the draft up to it rather than the reverse; the counterpart changes here are local wording, not structure or findings.
+
+- **The central question is phrased more honestly.** It now asks whether pre-agreement is "still required *or useful*" once the systems can reason, not merely whether it is "required" — the softer framing the draft settled on.
+
+- **Two phrasings the draft review flagged as unclear are fixed in the same spot here.** A cognition-spectrum sentence reads "a gap cognition *gets* stuck on," and the intent scenario's reproduction result now reads "accuracy over the full multi-step service lifecycle falls with agent capability," in place of the terser "the multi-hop lifecycle grades with capability."
+
+- **What did not change, and why.** The report's substantive theses, the divergence map (§11), the two roles of a reference (§5, stated as the monadic/dyadic distinction), and the authority/governance residue (§2, §20–24) were already present — often more completely than in the draft — and were left as they stand.
+
+The master report PDF is rebuilt to match.
+
 ## What's new (2026-09-17)
 
 Mostly a **reframing** of the whole account, together with the **portability** experiments the reframing rests on. The findings are unchanged; what changed is the frame around them, the evidence under one half of it, and the deck.
