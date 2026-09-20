@@ -45,7 +45,7 @@ because the world it models keeps moving.
 So it is worth asking a question that, until recently, would have sounded absurd: **do two sufficiently
 capable systems need a data model agreed in advance at all — or can they produce a suitable one
 themselves, for the occasion?** The question is not whether models stop mattering. It is whether the
-*pre-agreement* — the part that is slow and expensive — is still required if the systems on each
+*pre-agreement* — the part that is slow and expensive — is still required or useful once the systems on each
 side can **reason**.
 
 This has to be asked with both feet on the floor. The installed base is enormous and mostly inert:
@@ -815,7 +815,7 @@ fully-cognitive agents have exchanged everything they can and run every decisive
 never an *unbridgeable* correspondence: it is a concept with no counterpart (correctly
 returned as unmatched), a fact not yet realised in the running network (an absence in the world, not in
 meaning), or one of the two irreducible residues — a question of *authority* rather than of fact, or a
-genuine underdetermination no fact can settle (§2, §5). None of these is a gap cognition is
+genuine underdetermination no fact can settle (§2, §5). None of these is a gap cognition gets
 stuck on, and the first two a human reasoner would leave exactly where a machine does. What varies from
 one agent to the next is therefore not the *kind* of cognition but its power and reach, which is
 precisely what the capability gradient (§19.2) and the probe-reach study (§19.5) measure.
@@ -1976,8 +1976,8 @@ serves to prevent the weaker agents' errors. In the **standard-free** scenario, 
 new pairs of private, no-standard models: without a shared reference the strong agent under-commits
 (perfect precision on what it binds, but low resolved fraction because it refuses to guess the seam), and the
 constructed reference completes the close. In **intent**, working out which offers meet a customer's wish
-and deciding accept-or-refer under a policy again complete for capable agents, while the multi-hop
-service lifecycle again grades with capability. In **observability**, the deep alarm-versus-anomaly
+and deciding accept-or-refer under a policy again complete for capable agents, while accuracy over the
+full multi-step service lifecycle again falls with agent capability. In **observability**, the deep alarm-versus-anomaly
 look-alike is again reliably avoided across two new fault domains. This moves each result from "here it
 is on one case" to "here it is again on cases built to be different". It does not, and cannot, stand in
 for real network data: the same hand built the new cases too, so they test robustness to *variation*, not
