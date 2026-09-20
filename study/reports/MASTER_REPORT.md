@@ -184,8 +184,8 @@ as readily as OWL/RDF, which is also how a deterministic pipeline that compiles 
 YANG) to an ontology carries them. The meaning-bearing content our JSON concepts also carry — the
 pragmatics and provenance, and the glosses and examples that make even the ontology readable by a
 stranger — is what such a compiler cannot supply, because a formal schema does not contain it; and, as
-§8 shows, even a full ontology format holds the pragmatic layer only as inert annotation, not as
-something a reasoner can act on.
+§8 shows, even a full ontology format holds the pragmatic layer only as a description to be resolved by a
+cognitive reader, not as something a deductive reasoner can act on.
 
 One framing connects this work to a fast-growing body of practice. The ontology and the individuals
 that populate it are, together, a **knowledge graph**: the ontology is its schema (the typed concepts
@@ -502,8 +502,9 @@ precisely what the eleven cases show: the pragmatic nuance absent at every rung,
 invent it would be to fabricate it. The lift, then, holds the schematic layer fully, the concrete layer
 as a refreshable snapshot, and the pragmatic layer only as a standing description of a situated thing.
 
-This is not an artefact of our JSON encoding; a standard ontology has the same limit. The **structural** fields of a
-lifted concept map cleanly to OWL:
+This is not an artefact of our JSON encoding. OWL and RDF can carry the full semantic model as well as our
+JSON does; the two are alternative serializations of the same content. The **structural** fields of a
+lifted concept map natively to OWL:
 
 | lifted-model field | OWL / RDF |
 |---|---|
@@ -519,8 +520,9 @@ lifted concept map cleanly to OWL:
 
 *Table 1. A lifted concept's **structural** fields, mapped to OWL/RDF.*
 
-**Pragmatics and provenance have no such home**: OWL can record them only as inert annotation text. The
-observability concern score, a pragmatic, becomes a class carrying a definition string:
+**Pragmatics and provenance ride as annotation** in OWL, exactly as they do in our JSON, and provenance
+has a dedicated vocabulary, PROV-O. The observability concern score, a pragmatic, becomes a class carrying
+a definition string:
 
 ```turtle
 :concern-score a owl:Class ;
@@ -532,12 +534,16 @@ observability concern score, a pragmatic, becomes a class carrying a definition 
 :concern-78 a :concern-score .
 ```
 
-A description-logic reasoner can act on the class and on the individual `concern-78`, but not on
-"recomputed from the current context": there is no TBox axiom and no ABox assertion for a defeasible,
-context-relative judgement. OWL holds the schema, the data, and a description of the pragmatics; the
-pragmatic judgement itself has no native representation in it. The limit belongs to the pragmatic layer,
-not to the format: any static artefact, our JSON, an OWL graph, or a YANG module, can carry a description
-of a pragmatic rule but not its resolution.
+What matters for the pragmatic layer is not the serialization but how the model is consumed. A
+description-logic reasoner over either form can act on the class and on the individual `concern-78`, but
+can only treat "recomputed from the current context" as inert text, since deduction cannot resolve a
+defeasible, context-relative judgement: there is no TBox axiom and no ABox assertion for it. A cognitive
+reader of either form resolves that same rule, reading it against the live context. Both serializations
+hold only a *description* of the pragmatics; the *resolution* is not in the artefact at all. The limit
+belongs to the pragmatic layer, not to the format: any static artefact, our JSON, an OWL graph, or a YANG
+module, carries a description of a pragmatic rule but never its resolution. And because pragmatics is the
+content's context of use, resolving it is nothing other than resolving context of use, which only a reader
+that reasons about context can do.
 
 If no lift can hold the resolved pragmatic layer, then something must supply the resolution, and that something is a
 **live operation** over the model — reconciliation, in this study, but the mechanisms are general. There
