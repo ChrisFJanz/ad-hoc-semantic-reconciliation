@@ -118,13 +118,13 @@ from full cognition's reach, and it grows as cognition recedes.
 
 ## What's new (2026-09-20)
 
-A small **alignment pass** on the master report, following the Round-4 review of the companion NMRG Internet-Draft (`draft-janz-nmrg-adhoc-semantic-reconciliation`). The report was already the senior, fuller document, so the round mostly caught the draft up to it rather than the reverse; the counterpart changes here are local wording, not structure or findings.
+A small **wording pass** on the master report, sharpening three phrasings. The findings, theses, and structure are unchanged; only the prose is tightened.
 
-- **The central question is phrased more honestly.** It now asks whether pre-agreement is "still required *or useful*" once the systems can reason, not merely whether it is "required" — the softer framing the draft settled on.
+- **The central question is phrased more honestly.** It now asks whether pre-agreement is "still required *or useful*" once the systems can reason, not merely whether it is "required" — the softer framing better captures what is actually at stake.
 
-- **Two phrasings the draft review flagged as unclear are fixed in the same spot here.** A cognition-spectrum sentence reads "a gap cognition *gets* stuck on," and the intent scenario's reproduction result now reads "accuracy over the full multi-step service lifecycle falls with agent capability," in place of the terser "the multi-hop lifecycle grades with capability."
+- **A cognition-spectrum sentence reads more naturally** — "a gap cognition *gets* stuck on."
 
-- **What did not change, and why.** The report's substantive theses, the divergence map (§11), the two roles of a reference (§5, stated as the monadic/dyadic distinction), and the authority/governance residue (§2, §20–24) were already present — often more completely than in the draft — and were left as they stand.
+- **The intent scenario's reproduction result is stated more clearly** — "accuracy over the full multi-step service lifecycle falls with agent capability," in place of the terser "the multi-hop lifecycle grades with capability."
 
 The master report PDF is rebuilt to match.
 
