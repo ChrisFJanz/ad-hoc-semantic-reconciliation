@@ -116,6 +116,42 @@ goes inert a single agent reconstructs it. The
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
+## What's new (2026-09-22)
+
+A **conceptual sharpening** of the master report, and a new experimental direction, drawn from a
+working exchange on how the lift actually works. The findings, theses, and results are unchanged; what
+is added is a clearer account of *how the lift produces meaning* and *what would prove it on real
+systems*. A companion synopsis of related work is added under `reports/`.
+
+- **The lift and its placement, made precise (§4).** Two axes now organise where cognition sits:
+  **access** (situated, able to consult the running system, or un-situated, holding only the artefact)
+  and **product** (an internal understanding, or an externalised, self-standing model). The lift is the
+  situated-and-externalising corner; a new figure, the **quadrangle**
+  (`figures/fig_master_quadrangle.png`), places it against the three others. The section states the
+  placement as a **hand-off** — cognition situated once, as the lift, so that an un-situated consumer
+  needs only the artefact — and reframes the hard limit of a static artefact as, most often, a
+  **missing-lift gap** (a fact present in the system that a situated lift reaches) rather than a true
+  frontier. What a concept needs then partitions in three: what is implicit but present (grounded
+  generation), what is present but elsewhere (situated access), and what is neither (the residue).
+
+- **The lift generates, within a bound (§3).** Producing a semantic model is not transcription: the
+  lift writes glosses where the surface gave none, makes implicit meaning explicit, infers untyped
+  relations, and articulates tacit pragmatics. The bound is **grounded generation against
+  confabulation** — content synthesised from structure, instances and state and checkable against them,
+  not a sense invented for a bare name.
+
+- **The decisive next experiment (§23).** The most consequential open step, and one only an operator
+  can take, is a **situated lift on a live system**: attach cognition to a controller or datastore, have
+  it perform the lift in place with real access to state, instances and pragmatics, and measure
+  portability against the un-lifted baseline. The section gives a concrete protocol — how to attach
+  cognition, how it pursues the lift, how portability is measured, a situatedness dial from emulator to
+  self-lift — and names the prize: only a situated study can measure the true **residue**. A
+  prioritized recommendations list now heads the future work.
+
+- **A companion synopsis** of an independent YANG-description-quality study is added at
+  `reports/companion_yang_description_synopsis.md` (with PDF). It is referenced as the **un-lifted
+  baseline** against which the lift's value is the distance travelled up the quadrangle's diagonal.
+
 ## What's new (2026-09-20)
 
 A small **wording pass** on the master report, sharpening three phrasings. The findings, theses, and structure are unchanged; only the prose is tightened.
