@@ -187,6 +187,18 @@ stranger — is what such a compiler cannot supply, because a formal schema does
 §8 shows, even a full ontology format holds the pragmatic layer only as a description to be resolved by a
 cognitive reader, not as something a deductive reasoner can act on.
 
+Producing these fields is not transcription; the lift **generates**. It writes a gloss where the surface
+gave none, states in the open what a bare schema left implicit (a field `och_grade` valued 1, 2, 3
+becomes an explicit account of what the grade is and what governs it), infers relations never explicitly
+typed, and articulates the pragmatics a live side would otherwise hold only tacitly. That the produced
+glosses share little wording with any authored source yet carry the same meaning — §19.8 measures a
+lexical fidelity of 0.13 to 0.23 — is the signature of generation rather than copying. The licence to
+generate is bounded, and the bound is the difference between **grounded** generation and
+**confabulation**: a gloss synthesised from structure, instances and live state, and checkable against
+them, against a sense invented for a bare name with nothing under it, the failure §6 shows a
+name-without-meaning invites. The lift may produce what it can ground; past that it must read the fact
+from the system, or leave it to the residue.
+
 One framing connects this work to a fast-growing body of practice. The ontology and the individuals
 that populate it are, together, a **knowledge graph**: the ontology is its schema (the typed concepts
 and the relations permitted among them) and the instances are its assertions. This is why the
@@ -233,6 +245,44 @@ when a strong agent reads a rich surface, thinning as the source goes inert, the
 meaning-poor, or the agent goes weak. Where the recovery falls short, the shortfall must be supplied
 from somewhere. Ideally that somewhere is the **reference** — and wherever a reference cannot supply it
 and a human must, the automation of the lift is to that extent incomplete.
+
+### The two axes of cognition, and the placement hand-off
+
+Two variables sit underneath this section, and separating them makes the placement of cognition
+precise. The first is **access**: whether the cognition is *situated*, able to consult the running
+system, its instances, its live state and the modeller's intent, or *un-situated*, holding only the
+published artefact. The second is **product**: whether the cognition forms an *internal* understanding
+for its own use, or *externalises* a self-standing artefact for others to consume. The lift is the
+situated-and-externalising corner; the remaining three corners are equally real, and laying them out on
+these two axes (the quadrangle, below) locates the lift against them.
+
+![The quadrangle: cognition placed by access and by product.](../figures/fig_master_quadrangle.png)
+
+*The quadrangle. Access (can the cognition consult the system, or only the artefact) against product
+(does it keep its understanding internal, or externalise a self-standing model). The **lift** is the
+situated-and-externalising corner. **Un-lifted consumption** is the un-situated, internal corner: a
+reader that has only the artefact and understands it for its own use — and, run over a model that was
+never lifted, a direct measure of that artefact's portability without the lift. The other two corners
+isolate each half: a situated cognition that does not externalise is an agent simply **operating its own
+system**, understanding in context but leaving nothing portable behind; an un-situated cognition that
+does externalise is **re-documentation from the text**, which can tidy and normalise but stays capped by
+what the text already holds.*
+
+The diagonal is the point. At one corner an un-situated cognition reads a static artefact and
+understands it for its own use; at the opposite corner a situated cognition writes the meaning down so
+that such a reader succeeds. What the lift adds along that diagonal is two things at once: **access**, the
+situated reach into the system, and **grounded generation**, the writing-down of what it finds (§3). A
+companion synopsis in this repository frames the un-situated corner directly — an agent binding published
+YANG descriptions to a thin reference, with no lift — and it is useful precisely as the *un-lifted
+baseline* against which the lift's value is the distance travelled up the diagonal.
+
+This reframes §4's limit as a cleaner claim. The place a static artefact defeats an un-situated reader,
+the fact its text never records, is most often not a true frontier but a **missing-lift gap**: the fact
+is present in the system, and a situated lift reaches it. The genuine residue is smaller, and is exactly
+what §2 set aside — the authority to set a contested value, and any underdetermination no fact settles,
+recorded nowhere and reachable by no lift. So what a concept needs partitions in three: what is
+**implicit but present**, made explicit by grounded generation; what is **present but elsewhere in the
+system**, supplied by situated access; and what is **neither**, the residue, referred to a person.
 
 ## 5. The reference: how critical it is, and where it comes from
 
@@ -2007,6 +2057,77 @@ only vocabulary variation — the direction real vendor data would push hardest.
 
 What remains is therefore external: larger and more varied cases drawn from real networks, and
 the real-data grounding that only carrier and standards-body collaboration can supply.
+
+### The decisive next experiment: a situated lift on a live operator system
+
+Everything measured above is either the un-lifted baseline or a lift from an authored or schema-surface
+fixture. The one region the study has not reached is the one the framework says matters most: the
+**situated lift** — cognition attached to a live system, performing the lift with real access to state,
+instances and pragmatics. It is worth saying plainly why this, and not more inert operator data. An
+inert export fixes cognition at the un-situated corner of the quadrangle (§4); a study over it, however
+large, refines the baseline and re-measures the same terse-source wall. It cannot separate a missing-lift
+gap from genuine irreducibility, because past the surface everything looks like one wall. Only a situated
+lift pushes the boundary to its true limit, and what remains unresolved after a maximally-situated lift
+is the real residue — the authority-and-underdetermination remainder that bounds automation, defined
+throughout this report but never yet measured. This is the experiment only an operator can run, and the
+one that would turn the account from demonstrated-in-fixtures to demonstrated-on-a-live-system.
+
+**Attaching cognition to an operating system.** The target is a live management plane with a
+machine-readable operational view: an ONF TAPI controller, an IETF-YANG datastore reached over NETCONF or
+RESTCONF under NMDA, a gNMI-served state stream, or a controller such as ONOS or OpenDaylight. Begin below
+production, and climb: an emulated network (an OTN/ODU topology, or any lab fabric) behind a real
+controller, then a read-only mirror of a non-production controller, then, with an operator's consent, a
+read-only view of production. The cognition is a capable agent equipped with read-only tools over that
+plane — datastore GETs on the running and operational datastores, topology and inventory reads, a context
+export (for TAPI, get-context), a telemetry subscription, and a bounded budget of read-only queries it may
+issue to settle a question — plus its own prior over modelling conventions, and optionally a thin
+reference. Safety is a first-class constraint, not an afterthought: read-only credentials, rate limits, an
+audit of every call, and no path to a write. Situatedness is a dial, and the experiment should sweep it:
+(i) the frozen export alone, the un-lifted baseline; (ii) plus structural and relational reads; (iii) plus
+instances read from the live datastore; (iv) plus live state, context export and bounded probes; (v)
+self-lift, where the system's own agent authors its meaning.
+
+**How the cognition pursues the lift.** For a chosen slice of the model, the agent proceeds concept by
+concept: enumerate the concepts from the schema surface (containers, lists, leaves, their kinds, relations
+and keys); for each, read its structure and relations, and read real instances from the operational
+datastore; where the authored gloss is thin or absent, generate a grounded gloss from structure, instances
+and prior, and check it against them; read the pragmatics — what the thing is for, and whose authority
+governs it — from the context export, from governance or configuration, or, where only a human holds it,
+by asking; record provenance, marking each fact's method (live read, context export, human confirmation)
+and firmness; and propose a reference binding. A verifier pass then strikes any generation the material
+does not support, and every fact the agent can neither ground nor read is flagged as a residue candidate
+for an authority to settle. The output is a lifted model in the concept schema of §3 — ontology and
+lexicon, instances, pragmatics, provenance — one entry per concept.
+
+**How portability is measured.** Portability is judged exactly as in §6, but now on a lift produced in
+situ: hand the lifted model, and only the lifted model, to an independent consumer cognition that has no
+access to the system, and measure the **meaning score** (the fraction of concepts a stranger explains
+faithfully) and the **confabulation rate**. The headline number is the **value of the lift**:
+portability(lifted) minus portability(un-lifted), on the same concepts, where the un-lifted baseline is a
+reader binding the same published descriptions with no lift. The companion synopsis in this repository is
+exactly that baseline, and its cases are a natural starting corpus. Crossing the situatedness dial with
+the measure is the core result: as access climbs the ladder, portability should rise and the unresolved
+set should shrink toward the residue, so that what remains after rung (iv), and the still-smaller
+remainder after (v), is the first measurement of the irreducible residue.
+
+**What a confirmation would mean.** If cognition attached to a real, or realistically emulated, operator
+system performs the lift, and the result delivers portability to an independent consumer, the approach is
+demonstrated end to end on a live model rather than on fixtures, and the residue is measured for the first
+time. That is the result the whole line points to.
+
+**Recommendations, in priority.**
+
+1. The operator experiment above: a situated lift on a live or lab-emulated system, measured for
+   portability, sweeping the situatedness dial and reporting the residue.
+2. The **source-ablation** of the lift as the measurement instrument for it: lift from surface labels
+   only, then add structure, instances, live state, and pragmatics and authority, scoring portability and
+   confabulation at each rung — the producer-side complement to the un-lifted baseline's name-only against
+   definition-based contrast.
+3. The **value of the lift** as a single reported number, portability(lifted) minus portability(un-lifted),
+   with the companion synopsis as the baseline.
+4. The **effort-against-surface curve** (reasoning tokens to lift a fixed concept as the surface degrades
+   from intensional to boilerplate to raw schema), and the two starting surfaces still open — the
+   **raw-schema lift** and the **cold start** with no instances.
 
 ## 24. In one paragraph
 
