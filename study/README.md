@@ -140,13 +140,16 @@ systems*. A companion synopsis of related work is added under `reports/`.
   confabulation** — content synthesised from structure, instances and state and checkable against them,
   not a sense invented for a bare name.
 
-- **The decisive next experiment (§23).** The most consequential open step, and one only an operator
+- **The decisive next experiments (§23).** The most consequential open step, and one only an operator
   can take, is a **situated lift on a live system**: attach cognition to a controller or datastore, have
   it perform the lift in place with real access to state, instances and pragmatics, and measure
   portability against the un-lifted baseline. The section gives a concrete protocol — how to attach
   cognition, how it pursues the lift, how portability is measured, a situatedness dial from emulator to
-  self-lift — and names the prize: only a situated study can measure the true **residue**. A
-  prioritized recommendations list now heads the future work.
+  self-lift — and names the prize: only a situated study can measure the true **residue**. It also names
+  the **observability case, run with NMOP**, as the readiest host: significance verdicts that carry only
+  when the pragmatics are present make it where a situated lift matters most, and the NMOP anomaly work
+  and its hackathons already supply the data, the term ladder, and the venue. A prioritized
+  recommendations list heads the future work.
 
 - **A companion synopsis** of an independent YANG-description-quality study is added at
   `reports/companion_yang_description_synopsis.md` (with PDF). It is referenced as the **un-lifted
