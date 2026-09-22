@@ -284,6 +284,18 @@ recorded nowhere and reachable by no lift. So what a concept needs partitions in
 **implicit but present**, made explicit by grounded generation; what is **present but elsewhere in the
 system**, supplied by situated access; and what is **neither**, the residue, referred to a person.
 
+The quadrangle and the cognition spectrum are complementary, and it is worth saying how they meet. The
+spectrum grades one of the quadrangle's two axes, *access*: where the quadrangle asks a yes-or-no
+question, situated or holding only the artefact, the spectrum makes it a dial and splits it per
+participant. The lift-cognition spectrum above runs down the externalised row, from self-lift (situated)
+to an agent reading an inert surface (un-situated); the reconciliation spectrum of §13 (both-cognitive,
+one-inert, both-inert) is that same access axis applied to the *counterpart* rather than to oneself. What
+the spectrum has no axis for is the quadrangle's other dimension, *product* — externalise a self-standing
+model, or keep the understanding internal — and that is exactly the distinction that separates the lift
+from mere comprehension. So the two do not collapse: the quadrangle names which cognitive act is being
+performed and whether it leaves anything portable behind; the spectrum grades how far that act reaches as
+cognition recedes, along the access axis they share.
+
 ## 5. The reference: how critical it is, and where it comes from
 
 A reference, introduced in §2, helps supply the meaning a lift cannot recover on its own. What it

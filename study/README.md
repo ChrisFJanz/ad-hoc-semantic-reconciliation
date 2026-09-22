@@ -152,6 +152,13 @@ systems*. A companion synopsis of related work is added under `reports/`.
   `reports/companion_yang_description_synopsis.md` (with PDF). It is referenced as the **un-lifted
   baseline** against which the lift's value is the distance travelled up the quadrangle's diagonal.
 
+- **The quadrangle related to the cognition spectrum (§4).** A short passage now ties the two devices
+  rather than leaving them side by side: the spectrum grades the quadrangle's *access* axis (as a
+  per-party dial, from self-lift or both-cognitive through to inert), while the quadrangle's *product*
+  axis — externalise a self-standing model, or keep the understanding internal — is the distinction the
+  spectrum lacks and the one that names the lift. They stay distinct: the quadrangle names which
+  cognitive act; the spectrum grades how far it reaches.
+
 ## What's new (2026-09-20)
 
 A small **wording pass** on the master report, sharpening three phrasings. The findings, theses, and structure are unchanged; only the prose is tightened.
