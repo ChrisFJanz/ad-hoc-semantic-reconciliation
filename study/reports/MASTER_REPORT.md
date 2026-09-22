@@ -2070,7 +2070,7 @@ only vocabulary variation — the direction real vendor data would push hardest.
 What remains is therefore external: larger and more varied cases drawn from real networks, and
 the real-data grounding that only carrier and standards-body collaboration can supply.
 
-### The decisive next experiment: a situated lift on a live operator system
+### The decisive next experiments: situated lifts on a live operator system
 
 Everything measured above is either the un-lifted baseline or a lift from an authored or schema-surface
 fixture. The one region the study has not reached is the one the framework says matters most: the
@@ -2127,10 +2127,26 @@ system performs the lift, and the result delivers portability to an independent 
 demonstrated end to end on a live model rather than on fixtures, and the residue is measured for the first
 time. That is the result the whole line points to.
 
+**A concrete first target: the observability case, run with NMOP.** The general experiment needs a host,
+and the observability scenario is the readiest one, and the one where a situated lift matters most. Its
+result is the reason: significance verdicts carry (verdict accuracy 1.00 and 0.83) only when the
+pragmatics are present, and collapse (0.17 and 0.08) when they are stripped, and the context that decides
+whether a rising measurement is an alarm, a benign maintenance effect, or a low-confidence reading lives
+in the running system rather than in any static model. It is also where the collaboration is already
+moving: the IETF NMOP work on network anomaly detection and its semantics (RFC 9940;
+draft-ietf-nmop-network-anomaly-architecture) is assembling exactly the operational data, the term ladder,
+and, through its hackathons, the venue such a run would need. A focused experiment would attach cognition
+to an operator's alarm-and-anomaly system in that setting, lift its alarm model in situ with the live
+context that fixes significance, bind it to the shared anomaly-semantics reference, and measure both
+portability and the pragmatic verdict against the un-lifted baseline. The barrier to entry is low because
+the data, the framing, and the hackathon vehicle are already there; what it adds is the first situated
+test of the pragmatic layer on real observability data.
+
 **Recommendations, in priority.**
 
 1. The operator experiment above: a situated lift on a live or lab-emulated system, measured for
-   portability, sweeping the situatedness dial and reporting the residue.
+   portability, sweeping the situatedness dial and reporting the residue — with the observability case,
+   run with NMOP, as the readiest host.
 2. The **source-ablation** of the lift as the measurement instrument for it: lift from surface labels
    only, then add structure, instances, live state, and pragmatics and authority, scoring portability and
    confabulation at each rung — the producer-side complement to the un-lifted baseline's name-only against
