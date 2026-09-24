@@ -116,6 +116,57 @@ goes inert a single agent reconstructs it. The
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
 
+## What's new (2026-09-24)
+
+A **review pass** over the master report and the deck, responding to detailed feedback. The findings,
+theses, and results are unchanged; the changes tighten a few headline claims, add transparency, and bring
+the deck up to date with the recent conceptual work (2026-09-22).
+
+- **Portability scoped to the system, not to domain knowledge (Thesis P2, and throughout).** The claim no
+  longer says portability is independent of *domain knowledge*; it now reads **family-independent and
+  capability-banded — it does not require prior knowledge of the particular system or schema, and tracks
+  the reader's capability, not its model lineage.** The "reasoning, not knowledge" framing is reworded to
+  separate *no prior knowledge of this system* from the general conceptual competence a capable reader
+  still brings. Applied consistently across the definition (§2), §6, Thesis P2, the conclusions, and the
+  final summary.
+
+- **The four comprehensibility verdicts are now a table (§6),** with the *invented* verdict tightened
+  (accepting a planted false cognate) and tied explicitly to the confabulation rate.
+
+- **Provenance of the benchmark inputs is tabulated** (`reports/NOTE_producing_the_inputs.md`): for each
+  artefact, whether it is authored, agent-derived, or deterministically derived; its source; whether it is
+  an experimental input or scoring gold; and its real-world counterpart — making the boundary between
+  controlled evidence and real-data validation explicit.
+
+- **Self-description scoped, with a standards implication (§8).** Where a system exposes none of its
+  system-specific meaning, pragmatics, authority and provenance, autonomous reconciliation cannot be
+  *guaranteed* — the gap must be met from another authoritative artefact, a live interface, or a person.
+  The positive step is to standardise **how a system describes itself and answers questions** — exposing a
+  portable **knowledge object** (concepts, relationships, context and pragmatics, assembled at runtime,
+  carrying provenance, confidence, and a licence to defer) — rather than a universal domain model.
+
+- **Reference wording aligned with the evidence.** A bare identity *pointer* carries no usable meaning; the
+  reference works through its **descriptive content** (consistent with Thesis R6). Thesis P3 now states
+  that a reference used in the lift **recovers much of the loss** (not "repairs it"), and that portability
+  is a **capability-banded** property of the lift.
+
+- **The JSON-to-RDF/OWL claim narrowed (§3).** The structural JSON **maps** to OWL/RDF *given an explicit
+  schema or JSON-LD context* that supplies the literal-vs-identifier-vs-class distinctions plain JSON does
+  not carry by itself.
+
+- **Instance information's three roles made explicit** (`benchmark/schema.md`): concept-level `instances`
+  as grounding evidence, translation/verification proposals in the round-trip and invariant checks, and
+  individual co-reference records — related but distinct, and only the first is the `instances` field.
+
+- **The worked concept labelled** as a composite of the complete lifted semantic model (carrying
+  per-concept pragmatics and provenance for illustration), not a literal case-file record.
+
+- **Deck brought up to date and rebuilt (now 15 slides).** Two slides were added from the 2026-09-22 work:
+  **the lift *generates*, grounded not confabulated** (after the lift), and **the decisive next step — a
+  situated lift on a live operator system** (before the close, featuring the observability case run with
+  NMOP). The access × product **quadrangle** was kept in the report rather than the deck, where a
+  persuasive one-idea-per-slide flow is the priority.
+
 ## What's new (2026-09-22)
 
 A **conceptual sharpening** of the master report, and a new experimental direction, drawn from a

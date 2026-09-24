@@ -68,8 +68,8 @@ produces.
 The concept at the centre of the programme is **portability**, and it is worth defining before
 anything else, because everything downstream is either its production, its measurement, or its use.
 
-> **A lifted model is *portable* when any agent of sufficient reasoning power, but without prior domain
-> knowledge of the system, can make arbitrary use of it without seeking clarification that does not lie
+> **A lifted model is *portable* when any agent of sufficient reasoning power, but without prior knowledge of the
+> particular system or schema, can make arbitrary use of it without seeking clarification that does not lie
 > within the package. The package is what the model features directly, together with any reference it
 > resolvably points to; live parts (current values, present state) may need refreshing.**
 
@@ -83,10 +83,12 @@ and use it; that is true or false about A on its own, before any second system e
 carries a model. This matters because it locates the primary object. The two-system dance of *reconciliation* is a
 downstream operation; portability is what each side brings to it.
 
-"Reasoning, not knowledge" is what keeps the definition from collapsing into circularity. A
+**No prior knowledge of *this* system** is what keeps the definition from collapsing into circularity. A
 sufficiently-reasoning agent *derives* the model's meaning from the package; it does not check the
-model against pre-held concepts of *this* system, because it holds none. The bar is a reasoning
-*threshold*, universal above it, not a store of insider familiarity. This is what *ad hoc* means — an
+model against pre-held concepts of *this* system or schema, because it holds none. It still brings the
+general conceptual competence a capable reader has — the domain notions it already holds, and its ability
+to interpret the concepts the package supplies — but not prior familiarity with the particular system
+being lifted. The bar is a reasoning *threshold*, universal above it, not a store of insider familiarity. This is what *ad hoc* means — an
 understanding built to purpose, for the case at hand — restated as a property: no pre-shared standard is
 required, only a competent reader.
 
@@ -158,7 +160,9 @@ anomaly for its significance, all over the same lifted substrate. Get the lift r
 operations over portable semantic models.
 
 To make this concrete, here is one of a lifted model's concepts, the TAPI connectivity-service from the
-flagship configuration case (a model is the list of such concepts under a short header):
+flagship configuration case (a model is the list of such concepts under a short header). It is shown as a
+composite of the complete lifted semantic model — carrying, for illustration, the per-concept pragmatics
+and provenance that the running benchmark record holds more separately — not as a literal case-file entry:
 
 ```json
 { "id": "t.cs", "label": "connectivity-service", "kind": "service",
@@ -179,9 +183,10 @@ The fields carry the lexicon (label, synonyms), the ontology (kind, relations), 
 how firmly), the explanation supports (gloss, example), and the binding to a shared reference (ref). A
 live side volunteers the meaning-bearing fields — gloss, example, and pragmatics; an inert side exposes
 only the structural ones, and its provenance and authority must be supplied from outside. The **structural** content
-is independent of its serialisation: the lexicon, ontology, and instances shown here as JSON emit just
-as readily as OWL/RDF, which is also how a deterministic pipeline that compiles a formal schema (such as
-YANG) to an ontology carries them. The meaning-bearing content our JSON concepts also carry — the
+is independent of its serialisation: the lexicon, ontology, and instances shown here as JSON map just
+as readily to OWL/RDF, provided an explicit schema or JSON-LD context supplies the distinctions — literal
+versus identifier, class, typed relation — that plain JSON does not carry by itself; that mapping is also how
+a deterministic pipeline that compiles a formal schema (such as YANG) to an ontology carries them. The meaning-bearing content our JSON concepts also carry — the
 pragmatics and provenance, and the glosses and examples that make even the ontology readable by a
 stranger — is what such a compiler cannot supply, because a formal schema does not contain it; and, as
 §8 shows, even a full ontology format holds the pragmatic layer only as a description to be resolved by a
@@ -304,7 +309,7 @@ model's local terms to ground a competent reader already holds, useful to *any* 
 second model. It is deliberately "thin": a flat set of entries, each an identity anchor plus a
 few descriptive fields (a label and synonyms, a shallow class, a one-line definition, a canonical
 example). It has no ontology of its own — giving it one would turn it back into the universal standard the
-approach exists to avoid — and it carries no meaning by itself: it works only by tying a model's terms to common ground the reader already understands, borrowing that meaning rather than restating it. That is exactly why it can be thin. Two independent things about it then matter, and conflating them invites confusion: *how critical*
+approach exists to avoid — and a bare identity *pointer* carries no usable meaning by itself: the reference works through its descriptive content, tying a model's terms to common ground the reader already holds rather than restating the domain in full. That is exactly why it can be thin. Two independent things about it then matter, and conflating them invites confusion: *how critical*
 it is, and *where it comes from*. The figures this section cites are results established by the
 measurements that follow — portability in §6, the reconciliation cases in Part 2 — pointed forward as
 they arise.
@@ -370,11 +375,16 @@ it and holds no insider knowledge of the system. The consumer explains each prob
 words; it is explicitly permitted to answer that it *cannot determine* the meaning from what it was
 given, because an honest abstention is a desired response, not a forced guess. A fixed strong **judge**,
 one model held constant across the study, grades each explanation by *meaning, not wording* against an
-authored answer key. It returns one of four verdicts: **faithful** (captures the true meaning),
-**partial** (right direction, hedged), **abstained** (the consumer declared it could not be determined
-from the package, a virtue when the meaning is absent), or **invented** (asserts a meaning the key does
-not support, for instance by taking a planted cognate — the confabulation hazard the measure exists to
-catch). From the
+authored answer key. It returns one of four verdicts:
+
+| Verdict | What it means |
+|---|---|
+| **faithful** | captures the true meaning |
+| **partial** | right direction, but hedged |
+| **abstained** | the consumer declared the meaning could not be determined from the package — a virtue when the meaning is genuinely absent, not a failure |
+| **invented** (confabulated) | the consumer states a meaning the authored answer key marks incorrect; the common example is accepting a planted false cognate. This is the failure the **confabulation_rate** counts. |
+
+From the
 per-concept verdicts we report three fractions: **meaning_score** (fraction faithful — the
 comprehensibility measure), **abstention_rate** (honest deferral), and **confabulation_rate** (the
 hazard). The consumer runs across a **reasoning ladder** — a strong (`gpt-5.6-sol`, **sol**), a mid (`gpt-5-mini`, **mini**), and a
@@ -420,8 +430,8 @@ package. The band is set by that reasoning, not by family — a *strong* consume
 comprehends a lift as well as the home strong one, while a *weak* consumer is unreliable whatever its
 lineage — exactly what the operational definition predicts, and the honest floor beneath the claim.
 
-> **Portability is a property of the lift: a meaning-poor surface breaks it, and a reference used in
-> the lift repairs it.**
+> **Portability is a capability-banded property of the lift: a meaning-poor surface breaks it, and a reference used in
+> the lift recovers much of the loss.**
 
 Holding the lifter fixed (so any change is the surface, not the lifter), we lift from progressively
 poorer surfaces and re-assess. Against a solid-lift baseline of 0.94, stripping the meaning-bearing
@@ -649,6 +659,26 @@ which meaning that no artefact can hold is supplied on demand; it is why the pra
 frontier the descriptor methods never reach; and it is the half of the semantic model that a
 schema-centred tradition most easily overlooks, because it does not live in the schema at all.
 
+**When a system exposes none of this.** The lift can recover the structural layers from a rich enough
+surface, accessible documentation or external artefacts can stand in for some of the rest, and instances
+and live probes can ground uncertain readings; but none of these guarantees recovery of the
+system-specific pragmatics, authority and provenance that are neither in the schema nor exposed anywhere
+else. The honest limit is therefore a scoped one: where a system exposes none of its system-specific
+meaning, pragmatics, authority and provenance, autonomous reconciliation cannot be *guaranteed* — the
+missing content must be derived from another authoritative artefact, elicited from a live interface, or
+supplied by a person.
+
+**What that asks of standards.** This points away from standardising one universal domain model and
+toward standardising how a system *describes itself and answers questions*: how it exports its structural
+surface, how it explains its local concepts, how its current facts can be discovered, how authority and
+provenance are declared, and how a consumer can ask open questions when it does not know the local schema
+in advance. The object such an interface exposes is less a data payload than a portable *knowledge
+object* — values and structure carried together with the concepts, relationships, context and pragmatic
+qualifications an agent needs to use them — assembled at runtime rather than fixed at design time, and
+carrying its own provenance, confidence, and the licence to defer when the evidence is insufficient. That
+complements the programme's move away from pre-agreed schemas: it standardises how a system explains
+itself, not the model it must use inside.
+
 ## 9. When is a portable model hard to reuse? The bridge to reconciliation
 
 If a single lift can be made portable, the sharpest test of the idea is what happens when *two* portable
@@ -827,7 +857,7 @@ bound through a thin reference that anchors the shared common ground; a look-ali
 surface word is **rejected** as a false cognate on its kind, attachment, and instances; a concept
 with no counterpart in the other model is **correctly returned as unmatched**, a resolved
 outcome, not a gap; and a correspondence the evidence cannot *yet* confirm is left in the **residual**,
-referred onward. The reference carries no meaning of its own; it works only by tying into the two grounded models it
+referred onward. A bare identity pointer carries no meaning of its own; the reference works through its descriptive content and by tying into the two grounded models it
 connects.*
 
 Two features of Figure 2 recur in every scenario. The first is the **false cognate**: two concepts
@@ -1805,13 +1835,13 @@ tiers at the ceiling on routine material and softening on the hardest (middle to
 0.73–0.89), across six independent cases. The lift
 bakes portability in, and the model stands on its own.
 
-**Thesis P2. Portability tracks reasoning power, not lineage or domain knowledge: it is family-independent and capability-banded, with an honest floor.**
+**Thesis P2. Portability is family-independent and capability-banded, with an honest floor: it does not require prior knowledge of the particular system or schema, and tracks the reader's capability, not its model lineage.**
 A strong reasoner from another family (DeepSeek) comprehends a lift as well as the home strong model (0.98 against
 1.00), so portability is not an artefact of one model family; an open weak model (Qwen-2.5-7B) drops to
 0.56 and confabulates. What sets the band is reasoning above a threshold, not who trained the reader or
-what it already knew — the operational definition of portability made visible.
+whether it had seen this system before — the operational definition of portability made visible.
 
-**Thesis P3. Portability is a property of the lift: a meaning-poor surface breaks it, a reference used in the lift repairs it, and a bare name is a trap.**
+**Thesis P3. Portability is a capability-banded property of the lift: a meaning-poor surface breaks it, a reference used in the lift recovers much of the loss, and a bare name is a trap.**
 Against a solid-lift baseline of 0.94, a lift from a meaning-poor surface falls to 0.64–0.74; giving the
 lifter a reference restores it to 0.79–0.85 at every level of degradation, baking the repair in at
 production. And the damage is not monotonic in how thin the surface is: a surface that keeps names but
@@ -2164,8 +2194,8 @@ of cognition, into a self-describing form that any sufficiently-reasoning agent 
 the package alone, with no standard agreed in advance. Portability is real and directly measured — a
 careful lift is comprehensible to strong, middle, and even weak reasoners, across six cases and across
 model families, by a judge-independent measure — and it is a property of the lift: a meaning-poor surface
-breaks it and a reference used in the lift repairs it, while reasoning power, not lineage or prior
-knowledge, sets who can read it. The lift itself is an act of cognition an agent can perform, recovering
+breaks it and a reference used in the lift recovers much of the loss, while reasoning power, not lineage or prior
+familiarity with the system, sets who can read it. The lift itself is an act of cognition an agent can perform, recovering
 the ontology from a bare schema surface at every capability, even with the names stripped. **Reconciliation** —
 making two such models work together across a seam — is not the point of the exercise but its flagship
 use: an operation with its own objective, bridging the genuine divergence between two adequate models,

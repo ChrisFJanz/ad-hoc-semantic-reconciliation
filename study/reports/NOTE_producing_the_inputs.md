@@ -246,6 +246,26 @@ open candidate to supply it live. Where none of these holds — both sides inert
 category neither present, buildable, nor elicitable, living only in a person's head — one is at the true
 limit, and honest deferral to a person is the correct output, not a failure of the approach.
 
+## Provenance of the inputs
+
+For a controlled benchmark the chain begins with authored inputs; the table below makes explicit, for each
+kind of artefact, how it is produced, what it derives from, whether it serves as an experimental input or
+as scoring gold, and what its counterpart would be in a real deployment. This is a transparency aid, not a
+change to the method; the per-file detail lives in the harness worklog.
+
+| Artefact | How produced | Derived from | Role | Real-world counterpart |
+|---|---|---|---|---|
+| Concept surfaces (`model_a`/`model_b`: labels, kinds, relations) | authored fixtures; in E20, lifted by an agent from real published specs | the case design; for E20, the TAPI/TEAS specifications | experimental input | a system's own lifted semantic model |
+| Self-explanation fields (gloss, example, synonyms) | agent-derived (lifted) or authored | the source surface | experimental input | the system's exported self-description |
+| `instances[]` | authored fixtures | the case design | experimental input (grounding evidence) | live data read from the system |
+| Reference (`reference.json`) | authored, or constructed by agents where the shared category is latent | the shared category across the two models | experimental input | a published lexicon/registry, or one built at runtime |
+| Dependency map | deterministically derived | the models' declared relations | experimental input | computed from the live topology |
+| Authority / ownership | agent-derived | agreements and policies | experimental input | the operator's authority and ownership records |
+| Context, policies, intents, pragmatics | authored fixtures | the case design | experimental input | live operational context |
+| False-cognate traps | authored | the case design | experimental input (silent-error traps) | naturally occurring look-alikes |
+| Gold (`gold.json`: correspondences, residual, invariants) | authored | the case design | scoring gold | an expert-adjudicated ground truth |
+| Comprehensibility answer key | authored | the case design | scoring gold | expert judgement |
+
 ## Honest limits
 
 The cases are authored, and although E20's concept surfaces are lifted from real published specifications,

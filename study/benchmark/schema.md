@@ -28,6 +28,18 @@ disambiguate it.
 stack consumes it; a reference-blind stack must ignore it and infer
 correspondences from labels, synonyms, kinds, and glosses alone.
 
+Instance-related information plays three distinct roles in the study, carried by
+different structures; a reader should not assume a concept's `instances[]` list
+flows through all three. First, the `concepts[].instances[]` here are **grounding
+evidence**: concrete realisations the lifting and reconciliation agents read to
+expose naming conventions and structural usage, especially where a label could
+mislead. Second, the **translation and verification proposals** exercised in the
+round-trip and invariant checks are separate constructs, generated during those
+checks rather than drawn from this list. Third, **individual co-reference records**
+— deciding which individual on one side is which on the other — are maintained as a
+changing correspondence map of their own. The three are related but not the same
+field, and only the first is the `instances[]` defined above.
+
 ## `reference.json` — the thin shared reference
 
 An identity-only anchor per concept: `id`, preferred `label`, `synonyms`, a
