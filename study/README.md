@@ -22,7 +22,8 @@ meaning, and itself bounded by the agent's capability.
 
 **[reports/MASTER_REPORT.md](reports/MASTER_REPORT.md)** &nbsp;·&nbsp;
 **[PDF](reports/MASTER_REPORT.pdf)** &nbsp;·&nbsp;
-**[slides (PDF)](reports/MASTER_REPORT_Deck.pdf)** — the synthesis that sits atop the four scenarios. It
+**[slides (PDF)](reports/MASTER_REPORT_Deck.pdf)** &nbsp;·&nbsp;
+**[slides (PPTX)](reports/MASTER_REPORT_Deck.pptx)** — the synthesis that sits atop the four scenarios. It
 introduces the idea once (the lift, portable semantic models, the family of reconciliation operations,
 and the cognition spectrum), distils each scenario to its essentials, and then gathers the findings so
 they can be read as one result: what works and how far, the **six theses** the scenarios establish, the
@@ -34,6 +35,17 @@ the surprises, and the scope. The slide deck carries the same synthesis for read
 ![The lift — a data model becomes a portable, self-describing semantic model.](figures/fig_master_lift.png)
 
 ![Reconciliation over two lifted models — grounded correspondences bound through a thin reference, a rejected cognate, and what is honestly left unbound (no counterpart, or the residual referred onward).](figures/fig_master_reconcile.png)
+
+## The Internet-Draft (IETF NMRG)
+
+**[HTML](id/draft-janz-nmrg-adhoc-semantic-reconciliation.html)** &nbsp;·&nbsp;
+**[PDF](id/draft-janz-nmrg-adhoc-semantic-reconciliation.pdf)** &nbsp;·&nbsp;
+**[TXT](id/draft-janz-nmrg-adhoc-semantic-reconciliation.txt)** &nbsp;·&nbsp;
+**[XML](id/draft-janz-nmrg-adhoc-semantic-reconciliation.xml)** — *draft-janz-nmrg-adhoc-semantic-reconciliation*,
+the Internet-Draft that condenses this work for the IETF Network Management Research Group (NMRG): the lift and
+portable semantic models, the family of reconciliation operations, the taxonomy of where models diverge
+(including the **one-to-zero** true gap), the placement of cognition, and what a next step on a live operator
+system would involve. The **XML** is the xml2rfc source; the HTML, PDF, and TXT are its renderings.
 
 ## The four scenarios
 
@@ -115,6 +127,43 @@ goes inert a single agent reconstructs it. The
 *surviving false cognates*, and the *residual* — and, for the agent, cognitive effort (reasoning
 tokens, latency). A resolved fraction below one is deferral, not error: the residual is the shortfall
 from full cognition's reach, and it grows as cognition recedes.
+
+## What's new (2026-09-27)
+
+A second **review pass** over the master report, the addition of the **IETF Internet-Draft** to this
+repository, and an editable **PPTX** of the deck. The findings, theses, and results are unchanged; the
+report changes add one missing case to the account of divergence and tighten naming, framing, and two
+captions.
+
+- **The "true gap" (one-to-zero) divergence is now named (§11, §12, §13).** Alongside one-to-one and the
+  one-to-many granularity case, the map now treats a concept that is present in one model and simply
+  **absent** from the other — two models cutting the world at different joints, as when one side reasons in
+  **services** and the other only in the **resources** a service is realised over. Its treatment splits on
+  whether the exchange needs the absent concept: left uncovered where it does not, and otherwise
+  **bridged** either by *deriving* the concept from what the deficient side holds or by *extending the
+  shared reference* both sides bind through — not by editing either native schema. The Figure 2 caption and
+  the §13 finding are aligned to this.
+
+- **§9 retitled and its seam example sharpened.** "From one portable model to two: the bridge to
+  reconciliation." Its first example now names the seam plainly as a **BSS → OSS** one: a service intent a
+  business support system commits, set against the technical realisation an operations support system
+  delivers.
+
+- **The two cognition spectra named consistently.** The production-side **lift-cognition spectrum** (§4)
+  and the **reconciliation spectrum** (§13) are now qualified on every naming mention, so the shared
+  *access* axis they grade is not mistaken for a single construct.
+
+- **Two captions corrected.** Figure 15 is retagged *when constructing a reference is worth it*, and its
+  lead clause now describes all three reference conditions (none / constructed / given) rather than only
+  the constructed one; and the verification passage's stacked "gold-free graph oracle" is unstacked to *an
+  independent graph oracle (one that needs no gold key)*.
+
+- **The IETF Internet-Draft is included** (`id/`), in **XML** (xml2rfc source), **PDF**, **TXT**, and
+  **HTML**. It condenses the study for the NMRG and carries the same one-to-zero addition; its access ×
+  product **quadrangle** figure was rebuilt to carry the full axis and shift-arrow labelling.
+
+- **The deck is now also provided as an editable PPTX** (`reports/MASTER_REPORT_Deck.pptx`) alongside the
+  PDF, with the closing slide refined.
 
 ## What's new (2026-09-24)
 
