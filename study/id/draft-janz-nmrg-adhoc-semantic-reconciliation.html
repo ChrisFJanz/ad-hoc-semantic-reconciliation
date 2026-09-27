@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="en" class="Internet-Draft">
+<head>
+<meta charset="utf-8">
+<meta content="Common,Latin" name="scripts">
+<meta content="initial-scale=1.0" name="viewport">
+<title>Portable Semantic Models and Ad Hoc Reconciliation by Cognitive Agents in Network Management</title>
+<meta content="Christopher Janz" name="author">
+<meta content="Brad Peters" name="author">
+<meta content="
+       Interoperation between network-management systems has traditionally
+      required a data model agreed in advance. Where that is insufficient, a
+      richer shared information model or ontology is agreed instead. Both demand
+      broad prior agreement, negotiated and maintained by people. This document
+      examines what becomes possible once the systems on each side can reason.
+      Each side can lift its own data into a complete semantic model. Two such
+      models can then reconcile ad hoc, for the occasion, with no model agreed
+      beforehand. 
+       The document develops the semantic model and the two operations upon it:
+      the lift that produces one model, and the reconciliation that bridges two.
+      It gives careful treatment to pragmatics, the layer a schema is least able
+      to hold and so the part most easily left out of view, yet often the one
+      that carries key operative meaning. It considers the form and utility of thin
+      references, separately assessing the two distinct roles they may play. It then
+      reports an empirical study across four
+      network-management scenarios, run over independently constructed cases and
+      several cognitive-agent families. The study measures the portability of a
+      lifted model, the extent to which cognition can reconcile divergent models
+      without support of a pre-agreed standard, where a reference is load-bearing
+      and what it usefully comprises. It closes with
+      conclusions for how information should be prepared for cognitive systems,
+      and for how the community's standardization effort might evolve. 
+       This is a research document intended to inform discussion in the IRTF
+      Network Management Research Group. It reflects the authors' ideas, thoughts
+      and experimental findings and does not represent IETF or IRTF consensus. 
+    " name="description">
+<meta content="xml2rfc 3.34.1" name="generator">
+<meta content="semantic model" name="keyword">
+<meta content="ontology" name="keyword">
+<meta content="reconciliation" name="keyword">
+<meta content="reference lexicon" name="keyword">
+<meta content="knowledge graph" name="keyword">
+<meta content="cognitive agent" name="keyword">
+<meta content="pragmatics" name="keyword">
+<meta content="portability" name="keyword">
+<meta content="draft-janz-nmrg-adhoc-semantic-reconciliation-00" name="ietf.draft">
+<!-- Generator version information:
+  xml2rfc 3.34.1
+    Python 3.11.15
+    ConfigArgParse 1.7.7
+    google-i18n-address 3.1.1
+    intervaltree 3.2.1
+    Jinja2 3.1.6
+    lxml 6.1.0
+    natsort 8.4.0
+    platformdirs 4.9.6
+    pycountry 26.2.16
+    pypdf 3.17.4
+    PyYAML 6.0.3
+    requests 2.33.1
+    wcwidth 0.9.1
+    weasyprint 70.0
+-->
+<link href="draft.xml" rel="alternate" type="application/rfc+xml">
+<link href="#copyright" rel="license">
+<style type="text/css">/*
+
+  NOTE: Changes at the bottom of this file overrides some earlier settings.
+
+  Once the style has stabilized and has been adopted as an official RFC style,
+  this can be consolidated so that style settings occur only in one place, but
+  for now the contents of this file consists first of the initial CSS work as
+  provided to the RFC Formatter (xml2rfc) work, followed by itemized and
+  commented changes found necessary during the development of the v3
+  formatters.
+
+*/
+
+/* fonts */
+@import url('https://static.ietf.org/fonts/noto-sans/import.css'); /* Sans-serif */
+@import url('https://static.ietf.org/fonts/noto-serif/import.css'); /* Serif (print) */
+@import url('https://static.ietf.org/fonts/roboto-mono/import.css'); /* Monospace */
+
+:root {
+  --font-sans: 'Noto Sans', Arial, Helvetica, sans-serif;
+  --font-serif: 'Noto Serif', 'Times', 'Times New Roman', serif;
+  --font-mono: 'Roboto Mono', Courier, 'Courier New', monospace;
+}
+
+@viewport {
+  zoom: 1.0;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+/* general and mobile first */
+html {
+}
+body {
+  max-width: 90%;
+  margin: 1.5em auto;
+  color: #222;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-wrap: break-word;
+}
+.ears {
+  display: none;
+}
+
+/* headings */
+#title, h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+  line-height: 1.3;
+}
+#title {
+  clear: both;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 0.5em 0;
+  padding: 1em 0 0.5em;
+}
+.author {
+  padding-bottom: 4px;
+}
+h1 {
+  font-size: 26px;
+  margin: 1em 0;
+}
+h2 {
+  font-size: 22px;
+  margin-top: -20px;  /* provide offset for in-page anchors */
+  padding-top: 33px;
+}
+h3 {
+  font-size: 18px;
+  margin-top: -36px;  /* provide offset for in-page anchors */
+  padding-top: 42px;
+}
+h4 {
+  font-size: 16px;
+  margin-top: -36px;  /* provide offset for in-page anchors */
+  padding-top: 42px;
+}
+h5, h6 {
+  font-size: 14px;
+}
+#n-copyright-notice {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+/* general structure */
+p {
+  padding: 0;
+  margin: 0 0 1em 0;
+  text-align: left;
+}
+div, span {
+  position: relative;
+}
+div {
+  margin: 0;
+}
+.alignRight.art-text {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 1em 1em 0;
+  margin-bottom: 1.5em;
+}
+.alignRight.art-text pre {
+  padding: 0;
+}
+.alignRight {
+  margin: 1em 0;
+}
+.alignRight > *:first-child {
+  border: none;
+  margin: 0;
+  float: right;
+  clear: both;
+}
+.alignRight > *:nth-child(2) {
+  clear: both;
+  display: block;
+  border: none;
+}
+svg {
+  display: block;
+}
+@media print {
+  svg {
+    max-height: 850px;
+    max-width: 660px;
+  }
+}
+svg[font-family~="serif" i], svg [font-family~="serif" i] {
+  font-family: var(--font-serif);
+}
+svg[font-family~="sans-serif" i], svg [font-family~="sans-serif" i] {
+  font-family: var(--font-sans);
+}
+svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
+  font-family: var(--font-mono);
+}
+.alignCenter.art-text {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 1em 1em 0;
+  margin-bottom: 1.5em;
+}
+.alignCenter.art-text pre {
+  padding: 0;
+}
+.alignCenter {
+  margin: 1em 0;
+}
+.alignCenter > *:first-child {
+  display: table;
+  border: none;
+  margin: 0 auto;
+}
+
+/* lists */
+ol, ul {
+  padding: 0;
+  margin: 0 0 1em 2em;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-left: 1em;
+}
+li {
+  margin: 0 0 0.25em 0;
+}
+.ulCompact li {
+  margin: 0;
+}
+ul.empty, .ulEmpty {
+  list-style-type: none;
+}
+ul.empty li, .ulEmpty li {
+  margin-top: 0.5em;
+}
+ul.ulBare, li.ulBare {
+  margin-left: 0em !important;
+}
+ul.compact, .ulCompact,
+ol.compact, .olCompact {
+  line-height: 100%;
+  margin: 0 0 0 2em;
+}
+
+/* definition lists */
+dl {
+}
+dl > dt {
+  float: left;
+  margin-right: 1em;
+}
+/* 
+dl.nohang > dt {
+  float: none;
+}
+*/
+dl > dd {
+  margin-bottom: .8em;
+  min-height: 1.3em;
+}
+dl.compact > dd, .dlCompact > dd {
+  margin-bottom: 0em;
+}
+dl > dd > dl {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+/* links */
+a {
+  text-decoration: none;
+}
+a[href] {
+  color: #22e; /* Arlen: WCAG 2019 */
+}
+a[href]:hover {
+  background-color: #f2f2f2;
+}
+figcaption a[href],
+a[href].selfRef {
+  color: #222;
+}
+/* XXX probably not this:
+a.selfRef:hover {
+  background-color: transparent;
+  cursor: default;
+} */
+
+/* Figures */
+tt, code, pre {
+  background-color: #f9f9f9;
+  font-family: var(--font-mono);
+}
+pre {
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+figure blockquote {
+  margin: 0.8em 0.4em 0.4em;
+}
+figcaption {
+  font-style: italic;
+  margin: 0 0 1em 0;
+}
+@media screen {
+  pre {
+    overflow-x: auto;
+    max-width: 100%;
+    max-width: calc(100% - 22px);
+  }
+}
+
+/* aside, blockquote */
+aside, blockquote {
+  margin-left: 0;
+  padding: 1.2em 2em;
+}
+blockquote {
+  background-color: #f9f9f9;
+  color: #111; /* Arlen: WCAG 2019 */
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 1em 0;
+}
+blockquote > *:last-child {
+  margin-bottom: 0;
+}
+cite {
+  display: block;
+  text-align: right;
+  font-style: italic;
+}
+.xref {
+  overflow-wrap: normal;
+}
+
+/* tables */
+table {
+  width: 100%;
+  margin: 0 0 1em;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5em 0.75em;
+}
+th {
+  text-align: left;
+  background-color: #e9e9e9;
+}
+tr:nth-child(2n+1) > td {
+  background-color: #f5f5f5;
+}
+table caption {
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+table p {
+  /* XXX to avoid bottom margin on table row signifiers. If paragraphs should
+     be allowed within tables more generally, it would be far better to select on a class. */
+  margin: 0;
+}
+sub,
+sup {
+ white-space: nowrap;
+}
+
+/* pilcrow */
+a.pilcrow {
+  color: #666; /* Arlen: AHDJ 2019 */
+  text-decoration: none;
+  visibility: hidden;
+  user-select: none;
+  -ms-user-select: none;
+  -o-user-select:none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+@media screen {
+  aside:hover > a.pilcrow,
+  p:hover > a.pilcrow,
+  blockquote:hover > a.pilcrow,
+  div:hover > a.pilcrow,
+  li:hover > a.pilcrow,
+  pre:hover > a.pilcrow {
+    visibility: visible;
+  }
+  a.pilcrow:hover {
+    background-color: transparent;
+  }
+}
+
+/* misc */
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.bcp14 {
+  font-variant: small-caps;
+}
+
+.role {
+  font-variant: all-small-caps;
+}
+
+/* info block */
+#identifiers {
+  margin: 0;
+  font-size: 0.9em;
+}
+#identifiers dt {
+  width: 3em;
+  clear: left;
+}
+#identifiers dd {
+  float: left;
+  margin-bottom: 0;
+}
+/* Fix PDF info block run off issue */
+@media print {
+  #identifiers dd {
+    max-width: 100%;
+  }
+}
+#identifiers .authors .author {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+#identifiers .authors .org {
+  font-style: italic;
+}
+
+/* The prepared/rendered info at the very bottom of the page */
+.docInfo {
+  color: #666; /* Arlen: WCAG 2019 */
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 2em;
+}
+.docInfo .prepared {
+  float: left;
+}
+.docInfo .prepared {
+  float: right;
+}
+
+/* table of contents */
+#toc  {
+  padding: 0.75em 0 2em 0;
+  margin-bottom: 1em;
+}
+nav.toc ul {
+  margin: 0 0.5em 0 0;
+  padding: 0;
+  list-style: none;
+}
+nav.toc li {
+  line-height: 1.3em;
+  margin: 0.75em 0;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+/* references */
+.references dt {
+  text-align: right;
+  font-weight: bold;
+  min-width: 7em;
+}
+.references dd {
+  margin-left: 8em;
+  overflow: auto;
+}
+
+.refInstance {
+  margin-bottom: 1.25em;
+}
+
+.refSubseries {
+  margin-bottom: 1.25em;
+}
+
+.references .ascii {
+  margin-bottom: 0.25em;
+}
+
+/* index */
+.index ul {
+  margin: 0 0 0 1em;
+  padding: 0;
+  list-style: none;
+}
+.index ul ul {
+  margin: 0;
+}
+.index li {
+  margin: 0;
+  text-indent: -2em;
+  padding-left: 2em;
+  padding-bottom: 5px;
+}
+.indexIndex {
+  margin: 0.5em 0 1em;
+}
+.index a {
+  font-weight: 700;
+}
+/* make the index two-column on all but the smallest screens */
+@media (min-width: 600px) {
+  .index ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+  }
+  .index ul ul {
+    -moz-column-count: 1;
+    -moz-column-gap: 0;
+  }
+}
+
+/* authors */
+address.vcard {
+  font-style: normal;
+  margin: 1em 0;
+}
+
+address.vcard .nameRole {
+  font-weight: 700;
+  margin-left: 0;
+}
+address.vcard .label {
+  font-family: var(--font-sans);
+  margin: 0.5em 0;
+}
+address.vcard .type {
+  display: none;
+}
+.alternative-contact {
+  margin: 1.5em 0 1em;
+}
+hr.addr {
+  border-top: 1px dashed;
+  margin: 0;
+  color: #ddd;
+  max-width: calc(100% - 16px);
+}
+
+/* temporary notes */
+.rfcEditorRemove::before {
+  position: absolute;
+  top: 0.2em;
+  right: 0.2em;
+  padding: 0.2em;
+  content: "The RFC Editor will remove this note";
+  color: #9e2a00; /* Arlen: WCAG 2019 */
+  background-color: #ffd; /* Arlen: WCAG 2019 */
+}
+.rfcEditorRemove {
+  position: relative;
+  padding-top: 1.8em;
+  background-color: #ffd; /* Arlen: WCAG 2019 */
+  border-radius: 3px;
+}
+.cref {
+  background-color: #ffd; /* Arlen: WCAG 2019 */
+  padding: 2px 4px;
+}
+.crefSource {
+  font-style: italic;
+}
+/* alternative layout for smaller screens */
+@media screen and (max-width: 1023px) {
+  body {
+    padding-top: 2em;
+  }
+  #title {
+    padding: 1em 0;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: -18px;  /* provide offset for in-page anchors */
+    padding-top: 38px;
+  }
+  #identifiers dd {
+    max-width: 60%;
+  }
+  #toc {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    border-bottom: 1px solid #ccc;
+  }
+  #toc h2 {
+    margin: -1px 0 0 0;
+    padding: 4px 0 4px 6px;
+    padding-right: 1em;
+    min-width: 190px;
+    font-size: 1.1em;
+    text-align: right;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  #toc h2::before { /* css hamburger */
+    float: right;
+    position: relative;
+    width: 1em;
+    height: 1px;
+    left: -164px;
+    margin: 6px 0 0 0;
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+    content: "";
+  }
+  #toc nav {
+    display: none;
+    padding: 0.5em 1em 1em;
+    overflow: auto;
+    height: calc(100vh - 48px);
+    border-left: 1px solid #ddd;
+  }
+}
+
+/* alternative layout for wide screens */
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 724px;
+    margin: 42px auto;
+    padding-left: 1.5em;
+    padding-right: 29em;
+  }
+  #toc {
+    position: fixed;
+    top: 42px;
+    right: 42px;
+    width: 25%;
+    margin: 0;
+    padding: 0 1em;
+    z-index: 1;
+  }
+  #toc h2 {
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.25em 1em 1em 0;
+  }
+  #toc nav {
+    display: block;
+    height: calc(90vh - 84px);
+    bottom: 0;
+    padding: 0.5em 0 0;
+    overflow: auto;
+  }
+  img { /* future proofing */
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* pagination */
+@media print {
+  body {
+    width: 100%;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  #n-copyright-notice {
+    border-bottom: none;
+  }
+  #toc, #n-introduction {
+    page-break-before: always;
+  }
+  #toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  figure, pre {
+    page-break-inside: avoid;
+  }
+  figure {
+    overflow: scroll;
+  }
+  .breakable pre {
+    break-inside: auto;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  h2+*, h3+*, h4+*, h5+*, h6+* {
+    page-break-before: avoid;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 10pt;
+  }
+  table {
+    border: 1px solid #ddd;
+  }
+  td {
+    border-top: 1px solid #ddd;
+  }
+}
+
+/* This is commented out here, as the string-set: doesn't
+   pass W3C validation currently */
+/*
+.ears thead .left {
+  string-set: ears-top-left content();
+}
+
+.ears thead .center {
+  string-set: ears-top-center content();
+}
+
+.ears thead .right {
+  string-set: ears-top-right content();
+}
+
+.ears tfoot .left {
+  string-set: ears-bottom-left content();
+}
+
+.ears tfoot .center {
+  string-set: ears-bottom-center content();
+}
+
+.ears tfoot .right {
+  string-set: ears-bottom-right content();
+}
+*/
+
+@page :first {
+  padding-top: 0;
+  @top-left {
+    content: normal;
+    border: none;
+  }
+  @top-center {
+    content: normal;
+    border: none;
+  }
+  @top-right {
+    content: normal;
+    border: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin-bottom: 45mm;
+  padding-top: 20px;
+  /* The following is commented out here, but set appropriately by in code, as
+     the content depends on the document */
+  /*
+  @top-left {
+    content: 'Internet-Draft';
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @top-left {
+    content: string(ears-top-left);
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @top-center {
+    content: string(ears-top-center);
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @top-right {
+    content: string(ears-top-right);
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @bottom-left {
+    content: string(ears-bottom-left);
+    vertical-align: top;
+    border-top: solid 1px #ccc;
+  }
+  @bottom-center {
+    content: string(ears-bottom-center);
+    vertical-align: top;
+    border-top: solid 1px #ccc;
+  }
+  @bottom-right {
+      content: '[Page ' counter(page) ']';
+      vertical-align: top;
+      border-top: solid 1px #ccc;
+  }
+  */
+
+}
+
+/* Changes introduced to fix issues found during implementation */
+/* Make sure links are clickable even if overlapped by following H* */
+a {
+  z-index: 2;
+}
+/* Separate body from document info even without intervening H1 */
+section {
+  clear: both;
+}
+
+
+/* Top align author divs, to avoid names without organization dropping level with org names */
+.author {
+  vertical-align: top;
+}
+
+/* Leave room in document info to show Internet-Draft on one line */
+#identifiers dt {
+  width: 8em;
+}
+
+/* Don't waste quite as much whitespace between label and value in doc info */
+#identifiers dd {
+  margin-left: 1em;
+}
+
+/* Give floating toc a background color (needed when it's a div inside section */
+#toc {
+  background-color: white;
+}
+
+/* Make the collapsed ToC header render white on gray also when it's a link */
+@media screen and (max-width: 1023px) {
+  #toc h2 a,
+  #toc h2 a:link,
+  #toc h2 a:focus,
+  #toc h2 a:hover,
+  #toc a.toplink,
+  #toc a.toplink:hover {
+    color: white;
+    background-color: #444;
+    text-decoration: none;
+  }
+}
+
+/* Give the bottom of the ToC some whitespace */
+@media screen and (min-width: 1024px) {
+  #toc {
+    padding: 0 0 1em 1em;
+  }
+}
+
+/* Style section numbers with more space between number and title */
+.section-number {
+  padding-right: 0.5em;
+}
+
+/* prevent monospace from becoming overly large */
+tt, code, pre {
+  font-size: 95%;
+}
+
+/* Fix the height/width aspect for ascii art*/
+.sourcecode pre,
+.art-text pre {
+  line-height: 1.12;
+}
+
+
+/* Add styling for a link in the ToC that points to the top of the document */
+a.toplink {
+  float: right;
+  margin-right: 0.5em;
+}
+
+/* Fix the dl styling to match the RFC 7992 attributes */
+dl > dt,
+dl.dlParallel > dt {
+  float: left;
+  margin-right: 1em;
+}
+dl.dlNewline > dt {
+  float: none;
+}
+
+/* Provide styling for table cell text alignment */
+table td.text-left,
+table th.text-left {
+  text-align: left;
+}
+table td.text-center,
+table th.text-center {
+  text-align: center;
+}
+table td.text-right,
+table th.text-right {
+  text-align: right;
+}
+
+/* Make the alternative author contact information look less like just another
+   author, and group it closer with the primary author contact information */
+.alternative-contact {
+  margin: 0.5em 0 0.25em 0;
+}
+address .non-ascii {
+  margin: 0 0 0 2em;
+}
+
+/* With it being possible to set tables with alignment
+  left, center, and right, { width: 100%; } does not make sense */
+table {
+  width: auto;
+}
+
+/* Avoid reference text that sits in a block with very wide left margin,
+   because of a long floating dt label.*/
+.references dd {
+  overflow: visible;
+}
+
+/* Control caption placement */
+caption {
+  caption-side: bottom;
+}
+
+/* Limit the width of the author address vcard, so names in right-to-left
+   script don't end up on the other side of the page. */
+
+address.vcard {
+  max-width: 30em;
+  margin-right: auto;
+}
+
+/* For address alignment dependent on LTR or RTL scripts */
+address div.left {
+  text-align: left;
+}
+address div.right {
+  text-align: right;
+}
+
+/* Provide table alignment support.  We can't use the alignX classes above
+   since they do unwanted things with caption and other styling. */
+table.right {
+ margin-left: auto;
+ margin-right: 0;
+}
+table.center {
+ margin-left: auto;
+ margin-right: auto;
+}
+table.left {
+ margin-left: 0;
+ margin-right: auto;
+}
+
+/* Give the table caption label the same styling as the figcaption */
+caption a[href] {
+  color: #222;
+}
+
+@media print {
+  .toplink {
+    display: none;
+  }
+
+  /* avoid overwriting the top border line with the ToC header */
+  #toc {
+    padding-top: 1px;
+  }
+
+  /* Avoid page breaks inside dl and author address entries */
+  .vcard {
+    page-break-inside: avoid;
+  }
+
+}
+/* Tweak the bcp14 keyword presentation */
+.bcp14 {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+/* Tweak the invisible space above H* in order not to overlay links in text above */
+ h2 {
+  margin-top: -18px;  /* provide offset for in-page anchors */
+  padding-top: 31px;
+ }
+ h3 {
+  margin-top: -18px;  /* provide offset for in-page anchors */
+  padding-top: 24px;
+ }
+ h4 {
+  margin-top: -18px;  /* provide offset for in-page anchors */
+  padding-top: 24px;
+ }
+/* Float artwork pilcrow to the right */
+@media screen {
+  .artwork a.pilcrow {
+    display: block;
+    line-height: 0.7;
+    margin-top: 0.15em;
+  }
+}
+/* Make pilcrows on dd visible */
+@media screen {
+  dd:hover > a.pilcrow {
+    visibility: visible;
+  }
+}
+/* Make the placement of figcaption match that of a table's caption
+   by removing the figure's added bottom margin */
+.alignLeft.art-text,
+.alignCenter.art-text,
+.alignRight.art-text {
+   margin-bottom: 0;
+}
+.alignLeft,
+.alignCenter,
+.alignRight {
+  margin: 1em 0 0 0;
+}
+/* In print, the pilcrow won't show on hover, so prevent it from taking up space,
+   possibly even requiring a new line */
+@media print {
+  a.pilcrow {
+    display: none;
+  }
+}
+/* Styling for the external metadata */
+div#external-metadata {
+  background-color: #eee;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  display: none;
+}
+div#internal-metadata {
+  padding: 0.5em;                       /* to match the external-metadata padding */
+}
+/* Styling for title RFC Number */
+h1#rfcnum {
+  clear: both;
+  margin: 0 0 -1em;
+  padding: 1em 0 0 0;
+}
+/* Make .olPercent look the same as <ol><li> */
+dl.olPercent > dd {
+  margin-bottom: 0.25em;
+  min-height: initial;
+}
+/* Give aside some styling to set it apart */
+aside {
+  border-left: 1px solid #ddd;
+  margin: 1em 0 1em 2em;
+  padding: 0.2em 2em;
+}
+aside > dl,
+aside > ol,
+aside > ul,
+aside > table,
+aside > p {
+  margin-bottom: 0.5em;
+}
+/* Additional page break settings */
+@media print {
+  figcaption, table caption {
+    page-break-before: avoid;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+}
+/* Font size adjustments for print */
+@media print {
+  body  { font-size: 10pt;      line-height: normal; max-width: 96%; }
+  h1    { font-size: 1.72em;    padding-top: 1.5em; } /* 1*1.2*1.2*1.2 */
+  h2    { font-size: 1.44em;    padding-top: 1.5em; } /* 1*1.2*1.2 */
+  h3    { font-size: 1.2em;     padding-top: 1.5em; } /* 1*1.2 */
+  h4    { font-size: 1em;       padding-top: 1.5em; }
+  h5, h6 { font-size: 1em;      margin: initial; padding: 0.5em 0 0.3em; }
+}
+/* Sourcecode margin in print, when there's no pilcrow */
+@media print {
+  .artwork,
+  .artwork > pre,
+  .sourcecode {
+    margin-bottom: 1em;
+  }
+}
+/* Avoid narrow tables forcing too narrow table captions, which may render badly */
+table {
+  min-width: 20em;
+}
+/* ol type a */
+ol.type-a { list-style-type: lower-alpha; }
+ol.type-A { list-style-type: upper-alpha; }
+ol.type-i { list-style-type: lower-roman; }
+ol.type-I { list-style-type: upper-roman; }
+/* Apply the print table and row borders in general, on request from the RPC,
+and increase the contrast between border and odd row background slightly */
+table {
+  border: 1px solid #ddd;
+}
+td {
+  border-top: 1px solid #ddd;
+}
+tr {
+  break-inside: avoid;
+}
+tr:nth-child(2n+1) > td {
+  background-color: #f8f8f8;
+}
+/* Use style rules to govern display of the TOC. */
+@media screen and (max-width: 1023px) {
+  #toc nav { display: none; }
+  #toc.active nav { display: block; }
+}
+/* Add support for keepWithNext */
+.keepWithNext {
+  break-after: avoid-page;
+  break-after: avoid-page;
+}
+/* Add support for keepWithPrevious */
+.keepWithPrevious {
+  break-before: avoid-page;
+}
+/* Change the approach to avoiding breaks inside artwork etc. */
+figure, pre, table, .artwork, .sourcecode  {
+  break-before: auto;
+  break-after: auto;
+}
+/* Avoid breaks between <dt> and <dd> */
+dl {
+  break-before: auto;
+  break-inside: auto;
+}
+dt {
+  break-before: auto;
+  break-after: avoid-page;
+}
+dd {
+  break-before: avoid-page;
+  break-after: auto;
+  orphans: 3;
+  widows: 3
+}
+span.break, dd.break {
+  margin-bottom: 0;
+  min-height: 0;
+  break-before: auto;
+  break-inside: auto;
+  break-after: auto;
+}
+/* Undo break-before ToC */
+@media print {
+  #toc {
+    break-before: auto;
+  }
+}
+/* Text in compact lists should not get extra bottom margin space,
+   since that would makes the list not compact */
+ul.compact p, .ulCompact p,
+ol.compact p, .olCompact p {
+ margin: 0;
+}
+/* But the list as a whole needs the extra space at the end */
+section ul.compact,
+section .ulCompact,
+section ol.compact,
+section .olCompact {
+  margin-bottom: 1em;                    /* same as p not within ul.compact etc. */
+}
+/* The tt and code background above interferes with for instance table cell
+   backgrounds.  Changed to something a bit more selective. */
+tt, code {
+  background-color: transparent;
+}
+p tt, p code, li tt, li code, dt tt, dt code {
+  background-color: #f8f8f8;
+}
+/* Tweak the pre margin -- 0px doesn't come out well */
+pre {
+   margin-top: 0.5px;
+}
+/* Tweak the compact list text */
+ul.compact, .ulCompact,
+ol.compact, .olCompact,
+dl.compact, .dlCompact {
+  line-height: normal;
+}
+/* Don't add top margin for nested lists */
+li > ul, li > ol, li > dl,
+dd > ul, dd > ol, dd > dl,
+dl > dd > dl {
+  margin-top: initial;
+}
+/* Elements that should not be rendered on the same line as a <dt> */
+/* This should match the element list in writer.text.TextWriter.render_dl() */
+dd > div.artwork:first-child,
+dd > aside:first-child,
+dd > blockquote:first-child,
+dd > figure:first-child,
+dd > ol:first-child,
+dd > div.sourcecode:first-child,
+dd > table:first-child,
+dd > ul:first-child {
+  clear: left;
+}
+/* fix for weird browser behaviour when <dd/> is empty */
+dt+dd:empty::before{
+  content: "\00a0";
+}
+/* Make paragraph spacing inside <li> smaller than in body text, to fit better within the list */
+li > p {
+  margin-bottom: 0.5em
+}
+/* Don't let p margin spill out from inside list items */
+li > p:last-of-type:only-child {
+  margin-bottom: 0;
+}
+</style>
+<link href="rfc-local.css" rel="stylesheet" type="text/css">
+<script type="application/javascript">async function addMetadata(){try{const e=document.styleSheets[0].cssRules;for(let t=0;t<e.length;t++)if(/#identifiers/.exec(e[t].selectorText)){const a=e[t].cssText.replace("#identifiers","#external-updates");document.styleSheets[0].insertRule(a,document.styleSheets[0].cssRules.length)}}catch(e){console.log(e)}const e=document.getElementById("external-metadata");if(e)try{var t,a="",o=function(e){const t=document.getElementsByTagName("meta");for(let a=0;a<t.length;a++)if(t[a].getAttribute("name")===e)return t[a].getAttribute("content");return""}("rfc.number");if(o){t="https://www.rfc-editor.org/rfc/rfc"+o+".json";try{const e=await fetch(t);a=await e.json()}catch(e){t=document.URL.indexOf("html")>=0?document.URL.replace(/html$/,"json"):document.URL+".json";const o=await fetch(t);a=await o.json()}}if(!a)return;e.style.display="block";const s="",d="https://datatracker.ietf.org/doc",n="https://datatracker.ietf.org/ipr/search",c="https://www.rfc-editor.org/info",l=a.doc_id.toLowerCase(),i=a.doc_id.slice(0,3).toLowerCase(),f=a.doc_id.slice(3).replace(/^0+/,""),u={status:"Status",obsoletes:"Obsoletes",obsoleted_by:"Obsoleted By",updates:"Updates",updated_by:"Updated By",see_also:"See Also",errata_url:"Errata"};let h="<dl style='overflow:hidden' id='external-updates'>";["status","obsoletes","obsoleted_by","updates","updated_by","see_also","errata_url"].forEach(e=>{if("status"==e){a[e]=a[e].toLowerCase();var t=a[e].split(" "),o=t.length,w="",p=1;for(let e=0;e<o;e++)p<o?w=w+r(t[e])+" ":w+=r(t[e]),p++;a[e]=w}else if("obsoletes"==e||"obsoleted_by"==e||"updates"==e||"updated_by"==e){var g,m="",b=1;g=a[e].length;for(let t=0;t<g;t++)a[e][t]&&(a[e][t]=String(a[e][t]).toLowerCase(),m=b<g?m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>, ":m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>",b++);a[e]=m}else if("see_also"==e){var y,L="",C=1;y=a[e].length;for(let t=0;t<y;t++)if(a[e][t]){a[e][t]=String(a[e][t]);var _=a[e][t].slice(0,3),v=a[e][t].slice(3).replace(/^0+/,"");L=C<y?"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>, ":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>, ":"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>",C++}a[e]=L}else if("errata_url"==e){var R="";R=a[e]?R+"<a href='"+a[e]+"'>Errata exist</a> | <a href='"+d+"/"+l+"'>Datatracker</a>| <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>":"<a href='"+d+"/"+l+"'>Datatracker</a> | <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>",a[e]=R}""!=a[e]?"Errata"==u[e]?h+=`<dt>More info:</dt><dd>${a[e]}</dd>`:h+=`<dt>${u[e]}:</dt><dd>${a[e]}</dd>`:"Errata"==u[e]&&(h+=`<dt>More info:</dt><dd>${a[e]}</dd>`)}),h+="</dl>",e.innerHTML=h}catch(e){console.log(e)}else console.log("Could not locate metadata <div> element");function r(e){return e.charAt(0).toUpperCase()+e.slice(1)}}window.removeEventListener("load",addMetadata),window.addEventListener("load",addMetadata);</script>
+</head>
+<body class="xml2rfc">
+<table class="ears">
+<thead><tr>
+<td class="left">Internet-Draft</td>
+<td class="center">Ad Hoc Semantic Reconciliation</td>
+<td class="right">September 2026</td>
+</tr></thead>
+<tfoot><tr>
+<td class="left">Janz &amp; Peters</td>
+<td class="center">Expires 30 March 2027</td>
+<td class="right">[Page]</td>
+</tr></tfoot>
+</table>
+<div id="external-metadata" class="document-information"></div>
+<div id="internal-metadata" class="document-information">
+<dl id="identifiers">
+<dt class="label-workgroup">Workgroup:</dt>
+<dd class="workgroup">Network Management Research Group</dd>
+<dt class="label-internet-draft">Internet-Draft:</dt>
+<dd class="internet-draft">draft-janz-nmrg-adhoc-semantic-reconciliation-00</dd>
+<dt class="label-published">Published:</dt>
+<dd class="published">
+<time datetime="2026-09-26" class="published">26 September 2026</time>
+    </dd>
+<dt class="label-intended-status">Intended Status:</dt>
+<dd class="intended-status">Informational</dd>
+<dt class="label-expires">Expires:</dt>
+<dd class="expires"><time datetime="2027-03-30">30 March 2027</time></dd>
+<dt class="label-authors">Authors:</dt>
+<dd class="authors">
+<div class="author">
+      <div class="author-name">C. Janz</div>
+<div class="org">Huawei</div>
+</div>
+<div class="author">
+      <div class="author-name">B. Peters</div>
+<div class="org">NBN</div>
+</div>
+</dd>
+</dl>
+</div>
+<h1 id="title">Portable Semantic Models and Ad Hoc Reconciliation by Cognitive Agents in Network Management</h1>
+<section id="section-abstract">
+      <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
+<p id="section-abstract-1">Interoperation between network-management systems has traditionally
+      required a data model agreed in advance. Where that is insufficient, a
+      richer shared information model or ontology is agreed instead. Both demand
+      broad prior agreement, negotiated and maintained by people. This document
+      examines what becomes possible once the systems on each side can reason.
+      Each side can lift its own data into a complete semantic model. Two such
+      models can then reconcile ad hoc, for the occasion, with no model agreed
+      beforehand.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-2">The document develops the semantic model and the two operations upon it:
+      the lift that produces one model, and the reconciliation that bridges two.
+      It gives careful treatment to pragmatics, the layer a schema is least able
+      to hold and so the part most easily left out of view, yet often the one
+      that carries key operative meaning. It considers the form and utility of thin
+      references, separately assessing the two distinct roles they may play. It then
+      reports an empirical study across four
+      network-management scenarios, run over independently constructed cases and
+      several cognitive-agent families. The study measures the portability of a
+      lifted model, the extent to which cognition can reconcile divergent models
+      without support of a pre-agreed standard, where a reference is load-bearing
+      and what it usefully comprises. It closes with
+      conclusions for how information should be prepared for cognitive systems,
+      and for how the community's standardization effort might evolve.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+<p id="section-abstract-3">This is a research document intended to inform discussion in the IRTF
+      Network Management Research Group. It reflects the authors' ideas, thoughts
+      and experimental findings and does not represent IETF or IRTF consensus.<a href="#section-abstract-3" class="pilcrow">¶</a></p>
+</section>
+<div id="status-of-memo">
+<section id="section-boilerplate.1">
+        <h2 id="name-status-of-this-memo">
+<a href="#name-status-of-this-memo" class="section-name selfRef">Status of This Memo</a>
+        </h2>
+<p id="section-boilerplate.1-1">
+        This Internet-Draft is submitted in full conformance with the
+        provisions of BCP 78 and BCP 79.<a href="#section-boilerplate.1-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-2">
+        Internet-Drafts are working documents of the Internet Engineering Task
+        Force (IETF). Note that other groups may also distribute working
+        documents as Internet-Drafts. The list of current Internet-Drafts is
+        at <span><a href="https://datatracker.ietf.org/drafts/current/">https://datatracker.ietf.org/drafts/current/</a></span>.<a href="#section-boilerplate.1-2" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-3">
+        Internet-Drafts are draft documents valid for a maximum of six months
+        and may be updated, replaced, or obsoleted by other documents at any
+        time. It is inappropriate to use Internet-Drafts as reference
+        material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-4">
+        This Internet-Draft will expire on 30 March 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="copyright">
+<section id="section-boilerplate.2">
+        <h2 id="name-copyright-notice">
+<a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
+        </h2>
+<p id="section-boilerplate.2-1">
+            Copyright (c) 2026 IETF Trust and the persons identified as the
+            document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.2-2">
+            This document is subject to BCP 78 and the IETF Trust's Legal
+            Provisions Relating to IETF Documents
+            (<span><a href="https://trustee.ietf.org/license-info">https://trustee.ietf.org/license-info</a></span>) in effect on the date of
+            publication of this document. Please review these documents
+            carefully, as they describe your rights and restrictions with
+            respect to this document.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="toc">
+<section id="section-toc.1">
+        <a href="#" onclick="scroll(0,0)" class="toplink">▲</a><h2 id="name-table-of-contents">
+<a href="#name-table-of-contents" class="section-name selfRef">Table of Contents</a>
+        </h2>
+<nav class="toc"><ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-terminology-and-conventions" class="internal xref">Terminology and Conventions</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-the-central-object-the-sema" class="internal xref">The Central Object: the Semantic Model</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-grounding-the-theory-of-sig" class="internal xref">Grounding: the theory of signs</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-one-object-two-operations" class="internal xref">One object, two operations</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-producing-the-model-the-lif" class="internal xref">Producing the Model: the Lift, and Portability</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-the-semantic-model-in-a-sta" class="internal xref">The Semantic Model in a Standard Ontology Language</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-portability" class="internal xref">Portability</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-placement-of-cognition-the-" class="internal xref">Placement of Cognition: the Lift and the Un-lifted Baseline</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-pragmatics-nature-handling-" class="internal xref">Pragmatics: Nature, Handling, and Why It Carries the Meaning</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-reconciliation-bridging-two" class="internal xref">Reconciliation: Bridging Two Models by Cognition</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-ontological-correspondence-" class="internal xref">Ontological correspondence, instance matching, and pragmatics</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.1">
+                    <p id="section-toc.1-1.6.2.1.2.1.1"><a href="#section-6.1.1" class="auto internal xref">6.1.1</a>.  <a href="#name-disciplined-binding" class="internal xref">Disciplined binding</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-verification-confirming-a-c" class="internal xref">Verification: confirming a correspondence</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
+                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-building-the-shared-ground-" class="internal xref">Building the shared ground when none exists</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.4">
+                <p id="section-toc.1-1.6.2.4.1"><a href="#section-6.4" class="auto internal xref">6.4</a>.  <a href="#name-how-far-reconciliation-reac" class="internal xref">How far reconciliation reaches: the cognition spectrum</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-the-reference-and-its-two-d" class="internal xref">The Reference, and Its Two Distinct Roles</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-evidence-from-four-scenario" class="internal xref">Evidence from Four Scenarios</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1">
+                <p id="section-toc.1-1.8.2.1.1"><a href="#section-8.1" class="auto internal xref">8.1</a>.  <a href="#name-the-four-scenarios" class="internal xref">The four scenarios</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.2">
+                <p id="section-toc.1-1.8.2.2.1"><a href="#section-8.2" class="auto internal xref">8.2</a>.  <a href="#name-cases-agents-and-metrics" class="internal xref">Cases, agents, and metrics</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.3">
+                <p id="section-toc.1-1.8.2.3.1"><a href="#section-8.3" class="auto internal xref">8.3</a>.  <a href="#name-reproduction-and-invariance" class="internal xref">Reproduction and invariance</a></p>
+</li>
+            </ul>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-what-holds-and-its-limits" class="internal xref">What Holds, and Its Limits</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-implications-for-network-ma" class="internal xref">Implications for Network Management and Standardization</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
+            <p id="section-toc.1-1.11.1"><a href="#section-11" class="auto internal xref">11</a>. <a href="#name-related-work" class="internal xref">Related Work</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#section-12" class="auto internal xref">12</a>. <a href="#name-open-questions-and-next-ste" class="internal xref">Open Questions and Next Steps</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
+            <p id="section-toc.1-1.13.1"><a href="#section-13" class="auto internal xref">13</a>. <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.14">
+            <p id="section-toc.1-1.14.1"><a href="#section-14" class="auto internal xref">14</a>. <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.15">
+            <p id="section-toc.1-1.15.1"><a href="#section-15" class="auto internal xref">15</a>. <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.16">
+            <p id="section-toc.1-1.16.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+</li>
+        </ul>
+</nav>
+</section>
+</div>
+<div id="intro">
+<section id="section-1">
+      <h2 id="name-introduction">
+<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
+      </h2>
+<p id="section-1-1">Network management is acquiring participants that reason. Autonomous
+      systems will consume management information, act on it, and exchange it with
+      one another. They will bring machine cognition to a plane whose reasoning and
+      design have, until now, lain with human engineers. The information those
+      systems are handed was shaped for particular programs and the junctions
+      between them, not for stand-alone comprehension.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Two software systems that must exchange information rarely share a model
+      of the world. The classical remedy is a data model agreed in advance. Where
+      that falls short, a richer shared information model or ontology is agreed.
+      Both require broad prior agreement on a common model, negotiated and
+      maintained by people. Both are slow and costly to reach. This document takes
+      up the alternative that opens once the systems on each side can reason for
+      themselves. They can reconcile their divergent models <em>ad hoc</em>, for the
+      occasion, machine to machine, with nothing settled beforehand.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">The central question is therefore not how to write a better shared data
+      model. It is whether any advance agreement is still required or useful once
+      the participants can reason, and, where it may be, in what form. This
+      document argues, and supports with measurement, that a great deal of what
+      was formerly pre-agreed can instead be produced and reconciled on demand by
+      cognition. What remains worth agreeing is thinner, and more broadly useful,
+      than a full shared model.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">The account rests on one object and two operations, kept carefully
+      distinct throughout:<a href="#section-1-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1-5.1">the <strong>semantic model</strong>: the complete, meaning-bearing
+        representation a system's data is lifted into, so that a machine can
+        comprehend it without a human supplying what a schematic form leaves out;<a href="#section-1-5.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-1-5.2">the <strong>lift</strong>: the cognitive act that produces one
+        semantic model from a system's data; and<a href="#section-1-5.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-1-5.3">
+          <strong>reconciliation</strong>: the cognitive operation that bridges
+        two independently produced semantic models, so that the systems behind
+        them can interoperate.<a href="#section-1-5.3" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-1-6">The semantic model is the output of the lift and the input to
+      reconciliation. The two operations are easily bundled together, yet they are
+      distinct. Completing a single model is needed even for one system in
+      isolation, simply as the price of feeding a cognitive consumer. Reconciling
+      two is needed only when two systems must meet. This document treats them
+      separately, then relates them.<a href="#section-1-6" class="pilcrow">¶</a></p>
+<p id="section-1-7">The contributions are four. First, a self-contained account of the
+      semantic model, the lift, and reconciliation for a network-management
+      audience (<a href="#object" class="auto internal xref">Section 3</a>, <a href="#lift" class="auto internal xref">Section 4</a>,
+      <a href="#recon" class="auto internal xref">Section 6</a>). Second, a focused treatment of
+      <strong>pragmatics</strong>, the layer that most often carries the operative
+      meaning and is least often discussed (<a href="#pragmatics" class="auto internal xref">Section 5</a>). Third, a
+      clear separation of the two distinct roles of a thin shared
+      <strong>reference</strong> (<a href="#reference" class="auto internal xref">Section 7</a>). Fourth, an empirical
+      study across four network-management scenarios that measures portability,
+      reconciliation without a pre-agreed standard, and where a reference is
+      load-bearing (<a href="#evidence" class="auto internal xref">Section 8</a>). The document closes with the
+      conclusions the evidence supports (<a href="#conclusions" class="auto internal xref">Section 9</a>) and their
+      implications for standardization (<a href="#implications" class="auto internal xref">Section 10</a>).<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8">This document stands on its own. Three earlier Internet-Drafts by one of
+      the authors explored these ideas at an earlier and less mature stage
+      (<a href="#related" class="auto internal xref">Section 11</a>). They are cited as related work and are not
+      assumed here.<a href="#section-1-8" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="terms">
+<section id="section-2">
+      <h2 id="name-terminology-and-conventions">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-terminology-and-conventions" class="section-name selfRef">Terminology and Conventions</a>
+      </h2>
+<p id="section-2-1">This is an Informational research document. It defines no protocol and
+      uses no normative keywords. The following terms are used with the specific
+      meanings given here.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-2-2">
+        <dt id="section-2-2.1">Data model</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.2">A syntactic and structural artifact, for example a YANG module or a
+        JSON schema, that fixes a form. It carries meaning only implicitly,
+        through the structures it prescribes.<a href="#section-2-2.2" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.3">Ontology</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.4">An explicit account of what a domain admits as entities, attributes,
+        and relationships. It concerns what exists and how things relate, not how
+        any schema expresses it.<a href="#section-2-2.4" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.5">Lexicon</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.6">The set of terms by which an ontology's entities, attributes, and
+        relationships are named. A lexicon is a feature of an ontology, not a
+        separate layer beneath it.<a href="#section-2-2.6" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.7">Knowledge graph</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.8">The ontology together with the individuals that populate it: the
+        typed concepts and permitted relations (the schema, or TBox) and the
+        asserted instances (the data, or ABox). A lifted semantic model contains
+        a knowledge graph, and adds pragmatics and provenance.<a href="#section-2-2.8" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.9">Pragmatics</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.10">How the content is to be used: what a thing is <em>for</em>, whose
+        judgment governs it, whether a figure is a request or a measurement,
+        whether a state is intended or actual, and what a signal
+        means in a given operating context. Pragmatics is the part a schema is
+        least able to hold. It is treated at length in
+        <a href="#pragmatics" class="auto internal xref">Section 5</a>.<a href="#section-2-2.10" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.11">Provenance</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.12">The base recording who asserted a given fact, by what method, and how
+        firmly. It runs across all of the above.<a href="#section-2-2.12" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.13">Semantic model</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.14">What a representation needs in order to be <em>complete</em>, in the
+        specific sense that a cognitive system can comprehend it and act on it
+        without a human supplying meaning the form leaves out. Concretely: an
+        ontology, including its lexicon, together with pragmatics, carried over a
+        base of provenance.<a href="#section-2-2.14" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.15">Lift</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.16">The cognitive act of producing a semantic model from a system's data,
+        making explicit the meaning a data model carries only implicitly.<a href="#section-2-2.16" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.17">Portability</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.18">The property of a soundly produced semantic model whereby any
+        sufficiently capable cognitive agent can pick it up and use it, from the
+        package alone, with no pre-agreed standard. Portability is a property of
+        the model, not of any particular downstream task.<a href="#section-2-2.18" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.19">Reconciliation</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.20">The operation of establishing, meaning element by meaning element, how
+        two independently produced semantic models correspond, closing the semantic
+        gaps between them, so that the systems that use them natively can
+        interoperate.<a href="#section-2-2.20" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.21">Reference</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.22">A thin, shared, consultable nomenclature (names, disambiguating
+        definitions, and examples) to which a lift or a reconciliation can tie
+        terms and meanings. It is not an ontology or a data schema. Its
+        two distinct roles are the subject of <a href="#reference" class="auto internal xref">Section 7</a>.<a href="#section-2-2.22" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.23">False cognate</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.24">Two terms that share a label but denote unrelated things. A disciplined
+        reconciliation must refuse such a pairing rather than bind it.<a href="#section-2-2.24" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.25">Cognitive agent</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.26">An autonomous software entity built around a language model together
+        with controlled stores of knowledge, able to reason about what it is given
+        and to communicate in natural language.<a href="#section-2-2.26" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.27">Comprehension score</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.28">The measure of portability used in <a href="#lift" class="auto internal xref">Section 4</a>: the share of a
+        lifted model's concepts that an independent agent, given only the model
+        package, explains faithfully. Each explanation is graded by meaning, against
+        an authored answer key, as faithful, partial, an honest abstention (the
+        meaning cannot be determined from the package), or invented (a meaning the
+        key does not support). The comprehension score is the fraction judged
+        faithful.<a href="#section-2-2.28" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.29">Resolved fraction; precision</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.30">Two measures of a reconciliation, used throughout
+        <a href="#evidence" class="auto internal xref">Section 8</a>. The <em>resolved fraction</em> is the share of
+        the true correspondences that an agent finds and commits.
+        <em>Precision</em> is the share of what it commits that is correct.<a href="#section-2-2.30" class="pilcrow">¶</a>
+</dd>
+      <dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="object">
+<section id="section-3">
+      <h2 id="name-the-central-object-the-sema">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-the-central-object-the-sema" class="section-name selfRef">The Central Object: the Semantic Model</a>
+      </h2>
+<p id="section-3-1">Everything turns on the model a system's data is lifted into. A data
+      model gives form and some of the denotation. What it defers to
+      specification, to convention, and to the engineer's own knowledge are gaps to
+      fill. The semantic model supplies that remainder. It
+      is <strong>semantic</strong>: it carries meaning, not merely structure. It
+      is <strong>ad hoc</strong>: built for the case at hand, with no standard model
+      agreed in advance. And it is <strong>complete</strong>: it carries, as far as
+      possible, the two layers a bare schema generally does not.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">Those two layers are pragmatics and provenance, and they lie over and above
+      the ontology and its lexicon. The ontology and lexicon fix what the content is
+      about and how its terms are named. Pragmatics governs how the content is to
+      be used. It is the part a schema is least able to hold, and, as
+      <a href="#pragmatics" class="auto internal xref">Section 5</a> shows, often the one that carries important
+      operative meaning. Provenance records who asserted each fact, by what method,
+      and how
+      firmly.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<div id="signs">
+<section id="section-3.1">
+        <h3 id="name-grounding-the-theory-of-sig">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-grounding-the-theory-of-sig" class="section-name selfRef">Grounding: the theory of signs</a>
+        </h3>
+<p id="section-3.1-1">This structure is not invented for the occasion. It follows the
+        long-established study of signs <span>[<a href="#Morris" class="cite xref">Morris</a>]</span>, which
+        distinguishes three aspects of any representation. <em>Syntax</em> is its
+        form, the rules by which it is well constructed. <em>Semantics</em> is what
+        its parts denote. <em>Pragmatics</em> is its interpretative context: how it is
+        used. The correspondence
+        to the vocabulary here is direct. Syntax is form, which the semantic model
+        sets aside, since the same meaning may be written in many forms. Semantics,
+        what the parts denote, is carried by the ontology and its lexicon. And
+        pragmatics keeps its name. Data models are strong on syntax and carry some
+        semantics. What they say very little about, in a form a machine can act on,
+        is pragmatics. Pragmatics is a large part of what a human engineer silently
+        supplies when reading a model.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">As an aside, the same three parts arrive from a different starting
+        point. Placed on the data-to-wisdom ladder <span>[<a href="#Ackoff" class="cite xref">Ackoff</a>]</span>, data
+        are values carried by a data model. Information is data placed in relation
+        and given reference, which fixing an ontology and its lexicon provides.
+        Knowledge is information organized to support inference and action, reached
+        by adding pragmatics. The semantic model, ontology and lexicon plus
+        pragmatics, is therefore <em>knowledge</em> in these terms. Wisdom, the top
+        of the ladder, is not a further document at all. It is cognition itself,
+        the faculty that consumes and generates knowledge. On this reading a data
+        model delivers data, the lift carries data up through information to
+        knowledge, and the cognitive system supplies the wisdom that acts on it.
+        The two framings align.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="two-ops">
+<section id="section-3.2">
+        <h3 id="name-one-object-two-operations">
+<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-one-object-two-operations" class="section-name selfRef">One object, two operations</a>
+        </h3>
+<p id="section-3.2-1">Two operations must be separated at the outset, because they are easily
+        bundled and are in fact distinct operations around the same objects. Completing a
+        representation, producing a semantic model at all so a machine can
+        comprehend it, is one thing. It is needed even for a single cognitive
+        system in isolation. Reconciling two such models, making them mutually
+        comprehensible, is another. It is needed only when two systems must meet.
+        <a href="#fig-object" class="auto internal xref">Figure 1</a> shows the relationship. The lift produces one
+        semantic model from a system's data. Reconciliation consumes two, and,
+        where the systems must then exchange native data, yields data-model
+        translators as artifacts of the single reconciled result.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<span id="name-the-semantic-model-and-its-"></span><div id="fig-object">
+<figure id="figure-1">
+          <div id="section-3.2-2.1">
+            <div class="alignLeft art-svg artwork" id="section-3.2-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 560 250" width="560" height="250">
+                <rect x="8.0" y="44.0" width="96.0" height="48.0" fill="#e9edf0" stroke="#9aa4ac" stroke-width="1.4" rx="6"></rect>
+                <text x="56.0" y="64.5" font-family="sans-serif" font-size="11" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">System A</text>
+                <text x="56.0" y="79.5" font-family="sans-serif" font-size="11" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">data model</text>
+                <rect x="8.0" y="152.0" width="96.0" height="48.0" fill="#e9edf0" stroke="#9aa4ac" stroke-width="1.4" rx="6"></rect>
+                <text x="56.0" y="172.5" font-family="sans-serif" font-size="11" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">System B</text>
+                <text x="56.0" y="187.5" font-family="sans-serif" font-size="11" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">data model</text>
+                <rect x="150.0" y="36.0" width="158.0" height="60.0" fill="#ffffff" stroke="#14314f" stroke-width="1.4" rx="6"></rect>
+                <text x="229.0" y="55.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="bold" font-style="normal">Semantic model A</text>
+                <text x="229.0" y="70.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">ontology + lexicon,</text>
+                <text x="229.0" y="85.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">pragmatics, provenance</text>
+                <rect x="150.0" y="148.0" width="158.0" height="60.0" fill="#ffffff" stroke="#14314f" stroke-width="1.4" rx="6"></rect>
+                <text x="229.0" y="167.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="bold" font-style="normal">Semantic model B</text>
+                <text x="229.0" y="182.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">ontology + lexicon,</text>
+                <text x="229.0" y="197.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">pragmatics, provenance</text>
+                <rect x="398.0" y="84.0" width="156.0" height="74.0" fill="#ffffff" stroke="#1b8f6a" stroke-width="1.4" rx="6"></rect>
+                <text x="476.0" y="102.5" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">Correspondence</text>
+                <text x="476.0" y="117.5" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">(aligned meaning);</text>
+                <text x="476.0" y="132.5" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">data-model</text>
+                <text x="476.0" y="147.5" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">translators generated</text>
+                <line x1="104.0" y1="68.0" x2="148.0" y2="68.0" stroke="#3a6ea5" stroke-width="1.6"></line>
+                <line x1="148.0" y1="68.0" x2="141.4" y2="64.4" stroke="#3a6ea5" stroke-width="1.6"></line>
+                <line x1="148.0" y1="68.0" x2="141.4" y2="71.6" stroke="#3a6ea5" stroke-width="1.6"></line>
+                <text x="126.0" y="60.0" font-family="sans-serif" font-size="11" fill="#3a6ea5" text-anchor="middle" font-weight="bold" font-style="italic">lift</text>
+                <line x1="104.0" y1="176.0" x2="148.0" y2="176.0" stroke="#3a6ea5" stroke-width="1.6"></line>
+                <line x1="148.0" y1="176.0" x2="141.4" y2="172.4" stroke="#3a6ea5" stroke-width="1.6"></line>
+                <line x1="148.0" y1="176.0" x2="141.4" y2="179.6" stroke="#3a6ea5" stroke-width="1.6"></line>
+                <text x="126.0" y="168.0" font-family="sans-serif" font-size="11" fill="#3a6ea5" text-anchor="middle" font-weight="bold" font-style="italic">lift</text>
+                <line x1="310.0" y1="82.0" x2="394.0" y2="112.0" stroke="#1b8f6a" stroke-width="1.6"></line>
+                <line x1="394.0" y1="112.0" x2="389.0" y2="106.4" stroke="#1b8f6a" stroke-width="1.6"></line>
+                <line x1="394.0" y1="112.0" x2="386.6" y2="113.2" stroke="#1b8f6a" stroke-width="1.6"></line>
+                <line x1="310.0" y1="180.0" x2="394.0" y2="140.0" stroke="#1b8f6a" stroke-width="1.6"></line>
+                <line x1="394.0" y1="140.0" x2="386.5" y2="139.6" stroke="#1b8f6a" stroke-width="1.6"></line>
+                <line x1="394.0" y1="140.0" x2="389.6" y2="146.1" stroke="#1b8f6a" stroke-width="1.6"></line>
+                <text x="338.0" y="132.0" font-family="sans-serif" font-size="11" fill="#1b8f6a" text-anchor="middle" font-weight="bold" font-style="italic">reconciliation</text>
+              </svg><a href="#section-3.2-2.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-the-semantic-model-and-its-" class="selfRef">The semantic model and its two operations: the lift produces one; reconciliation bridges two.</a>
+          </figcaption></figure>
+</div>
+<p id="section-3.2-3">The remainder of the document follows this division. First producing the
+        model (<a href="#lift" class="auto internal xref">Section 4</a> and <a href="#pragmatics" class="auto internal xref">Section 5</a>), then
+        reconciling two of them (<a href="#recon" class="auto internal xref">Section 6</a>), then the reference that
+        assists both (<a href="#reference" class="auto internal xref">Section 7</a>).<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="lift">
+<section id="section-4">
+      <h2 id="name-producing-the-model-the-lif">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-producing-the-model-the-lif" class="section-name selfRef">Producing the Model: the Lift, and Portability</a>
+      </h2>
+<p id="section-4-1">The lift turns a system's data into a complete semantic model. It is the
+      first thing asked of machine cognition, and it is a cognitive act in its own
+      right, not a schema transformation. It has a bar to clear. A lift is
+      <strong>adequate</strong> when a sufficiently capable cognitive agent can
+      pick the resulting model up and apply it to any end, from the package alone.
+      A model that clears that bar is <strong>portable</strong>.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">A semantic model is a set of lifted concepts, each carried under a short
+      header. It helps to see a single such concept in full before measuring what a
+      reader can do with the whole model. The concept below is drawn from the
+      configuration scenario, an ONF
+      Transport API connectivity-service, and it shows the parts a lift makes
+      explicit:<a href="#section-4-2" class="pilcrow">¶</a></p>
+<span id="name-one-lifted-concept-the-onto"></span><div id="fig-lifted-concept">
+<figure id="figure-2">
+        <div class="lang-json sourcecode" id="section-4-3.1">
+<pre>
+{ "id": "t.cs",
+  "label": "connectivity-service",
+  "synonyms": ["service"],
+  "kind": "service",
+  "gloss": "an end-to-end connectivity service across the network",
+  "example": "the A1-A3 ODU2 service",
+  "relations": [ {"rel": "uses",        "target": "t.sip"},
+                 {"rel": "realized-by", "target": "t.cep"},
+                 {"rel": "over",        "target": "t.topo"} ],
+  "instances": ["cs-a1a3-odu2 (ODU2, A1 to A3)"],
+  "ref": "connection-service",
+
+  "pragmatics": {
+    "use": "the billable, SLA-bearing unit of connectivity",
+    "authority": "owned by the service layer; the transport side
+                  may not redefine its grade" },
+
+  "provenance": {
+    "asserted-by": "the ONF TAPI controller",
+    "method": "context export",
+    "firmness": "authoritative" } }
+</pre>
+</div>
+<figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
+<a href="#name-one-lifted-concept-the-onto" class="selfRef">One lifted concept: the ontology and lexicon, instances, pragmatics and provenance.</a>
+        </figcaption></figure>
+</div>
+<p id="section-4-4">Read top to bottom, the concept separates cleanly into the layers of
+      <a href="#object" class="auto internal xref">Section 3</a>. The label and synonyms are the lexicon. The kind,
+      relations, and instances are the ontology, and they are exactly the typed
+      schema (the TBox) and the populated data (the ABox) that make up the knowledge
+      graph a lifted model contains. The gloss, example, and ref are supports for a
+      reader rather than model content: the canonical example illustrates the concept
+      for a person and is not one of the instances that populate the ABox. The last two
+      blocks are the ones bare schema normally do not hold. The
+      <strong>pragmatics</strong> record what the concept is for and whose judgment
+      governs it, so that a consumer knows the service is the billable unit and that
+      the transport side may not redefine its grade. The
+      <strong>provenance</strong> records who asserted the concept, by what method,
+      and how firmly.<a href="#section-4-4" class="pilcrow">¶</a></p>
+<div id="owl">
+<section id="section-4.1">
+        <h3 id="name-the-semantic-model-in-a-sta">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-the-semantic-model-in-a-sta" class="section-name selfRef">The Semantic Model in a Standard Ontology Language</a>
+        </h3>
+<p id="section-4.1-1">OWL and RDF can carry the full semantic model.
+        The structural layers map natively, as <a href="#tab-owl" class="auto internal xref">Table 1</a> shows;
+        pragmatics rides as annotation, and provenance has a dedicated vocabulary,
+        PROV-O <span>[<a href="#W3C.PROV-O" class="cite xref">W3C.PROV-O</a>]</span>. Our JSON holds no representational
+        advantage; the two are alternative serializations of the same content.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<span id="name-a-lifted-concepts-structura"></span><div id="tab-owl">
+<table class="center" id="table-1">
+          <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-a-lifted-concepts-structura" class="selfRef">A lifted concept's structural fields, mapped to OWL and RDF.</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Lifted-concept field</th>
+              <th class="text-left" rowspan="1" colspan="1">OWL / RDF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">concept</td>
+              <td class="text-left" rowspan="1" colspan="1">owl:Class</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">label</td>
+              <td class="text-left" rowspan="1" colspan="1">rdfs:label</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">synonyms</td>
+              <td class="text-left" rowspan="1" colspan="1">skos:altLabel</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">kind</td>
+              <td class="text-left" rowspan="1" colspan="1">a class annotation</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">gloss / example</td>
+              <td class="text-left" rowspan="1" colspan="1">skos:definition / skos:example</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">ref</td>
+              <td class="text-left" rowspan="1" colspan="1">skos:closeMatch to a reference entry</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">relations</td>
+              <td class="text-left" rowspan="1" colspan="1">typed object properties</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">instances</td>
+              <td class="text-left" rowspan="1" colspan="1">owl:NamedIndividual, typed to the concept</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+<p id="section-4.1-3">What determines whether the pragmatic layer is usable is not the
+        serialization but how the model is consumed. A formal, deductive reasoner
+        over either form can act on classes and individuals, yet it can only treat a
+        pragmatic rule such as "recomputed from the current context, lower during a
+        maintenance window" as inert annotation, since deduction cannot resolve a
+        defeasible, context-relative judgment. A cognitive reader of either form
+        resolves that same rule, reading it against the live operating context. The
+        two serializations are interchangeable here; the mode of consumption is
+        not.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.1-4">The deeper point is that pragmatics is the content's context of use.
+        Handling it is therefore nothing other than resolving context of use, which
+        only a reader that reasons about context can do. What makes the pragmatic
+        layer tractable is the kind of reader, not the serialization: a model
+        consumed by cognition rather than by deduction. The semantic model is thus
+        expressible in the community's existing knowledge-graph standards
+        <span>[<a href="#W3C.OWL2" class="cite xref">W3C.OWL2</a>]</span> <span>[<a href="#W3C.RDF11" class="cite xref">W3C.RDF11</a>]</span>
+          <span>[<a href="#W3C.SKOS" class="cite xref">W3C.SKOS</a>]</span>, and what the approach adds is the reader that
+        resolves its pragmatics.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="portability">
+<section id="section-4.2">
+        <h3 id="name-portability">
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-portability" class="section-name selfRef">Portability</a>
+        </h3>
+<p id="section-4.2-1">Portability is worth isolating because it can be assessed directly. The
+      test hands a lifted model to
+      an independent consumer agent, one that never saw the source system and holds
+      no inside knowledge of it. The agent explains each concept in its own words,
+      from the package alone, and may answer that a concept cannot be determined
+      from what it was given, since an honest abstention is a valid response and not
+      a forced guess. A separate, fixed judge then grades each explanation by meaning
+      rather than wording, against an authored answer key, marking it faithful,
+      partial, an honest abstention, or invented (a meaning the key does not
+      support). The score reported is the fraction judged faithful. The whole
+      assessment is run with a strong, a middling, and a weak consumer, so the
+      result is read across a capability ladder rather than at a single point.
+      <a href="#fig-portability" class="auto internal xref">Figure 3</a> reports the result on the hardest material
+      used in the study: concepts drawn from two unrelated domains, with no shared
+      vocabulary to lean on.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<span id="name-comprehension-of-a-well-lif"></span><div id="fig-portability">
+<figure id="figure-3">
+          <div id="section-4.2-2.1">
+            <div class="alignLeft art-svg artwork" id="section-4.2-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 560 240" width="560" height="240">
+                <text x="94.0" y="26.0" font-family="sans-serif" font-size="10" fill="#9aa4ac" text-anchor="start" font-weight="normal" font-style="normal">comprehension (meaning score) on the hardest material</text>
+                <text x="106.0" y="64.0" font-family="sans-serif" font-size="12" fill="#1f2a30" text-anchor="end" font-weight="normal" font-style="normal">strong</text>
+                <rect x="118.0" y="44.0" width="382.0" height="32.0" fill="#e9edf0" stroke="none" stroke-width="1" rx="2"></rect>
+                <rect x="118.0" y="44.0" width="382.0" height="32.0" fill="#3a6ea5" stroke="none" stroke-width="1" rx="2"></rect>
+                <text x="508.0" y="64.0" font-family="sans-serif" font-size="12" fill="#14314f" text-anchor="start" font-weight="bold" font-style="normal">1.00</text>
+                <text x="106.0" y="116.0" font-family="sans-serif" font-size="12" fill="#1f2a30" text-anchor="end" font-weight="normal" font-style="normal">middle</text>
+                <rect x="118.0" y="96.0" width="382.0" height="32.0" fill="#e9edf0" stroke="none" stroke-width="1" rx="2"></rect>
+                <rect x="118.0" y="96.0" width="332.3" height="32.0" fill="#3a6ea5" stroke="none" stroke-width="1" rx="2"></rect>
+                <text x="458.3" y="116.0" font-family="sans-serif" font-size="12" fill="#14314f" text-anchor="start" font-weight="bold" font-style="normal">0.87</text>
+                <text x="106.0" y="168.0" font-family="sans-serif" font-size="12" fill="#1f2a30" text-anchor="end" font-weight="normal" font-style="normal">weak</text>
+                <rect x="118.0" y="148.0" width="382.0" height="32.0" fill="#e9edf0" stroke="none" stroke-width="1" rx="2"></rect>
+                <rect x="118.0" y="148.0" width="278.9" height="32.0" fill="#3a6ea5" stroke="none" stroke-width="1" rx="2"></rect>
+                <text x="404.9" y="168.0" font-family="sans-serif" font-size="12" fill="#14314f" text-anchor="start" font-weight="bold" font-style="normal">0.73</text>
+                <line x1="118.0" y1="202.0" x2="500.0" y2="202.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="94.0" y="222.0" font-family="sans-serif" font-size="10" fill="#9aa4ac" text-anchor="start" font-weight="normal" font-style="normal">1.00 on routine material; holds across independent agent families.</text>
+              </svg><a href="#section-4.2-2.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
+<a href="#name-comprehension-of-a-well-lif" class="selfRef">Comprehension of a well-lifted model, from the package alone, by agents of decreasing capability.</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.2-3">Three findings hold, and the numbers are worth stating. First, portability
+      is real. A well-lifted model is understood cold. On routine material
+      comprehension sits at the ceiling for every agent, strong, middling, and
+      weak alike (a comprehension score of 1.00 across the capability ladder).
+      Second, it degrades gracefully rather than abruptly as the reading agent's
+      capability recedes. On the hardest cross-domain material the score is 1.00
+      for the strong reader, 0.87 for the middling one, and 0.73 for the weak one:
+      a soft gradient, not a cliff. Portability is therefore nearly, though not
+      entirely, consuming agent capability-independent. Third, it is a property of
+      the agentic model capability, not the agentic model lineage. A capable reader
+      from a different agent family
+      reads a lift about as well as one from the family that produced it (a
+      comprehension score of 0.98, against 0.98 for the home strong tier), and it
+      beats the home weak tier. The comprehension judge does not favor its own
+      family: freezing the answers and grading them with two independent judges
+      returns the same score to three figures (0.900 against 0.900).<a href="#section-4.2-3" class="pilcrow">¶</a></p>
+<p id="section-4.2-4">The one honest floor is that a sufficiently weak agent can confabulate,
+      reporting an understanding it does not have. A weak open model scored 0.56
+      cold, and its per-trial results were bimodal, either nailing a case or
+      missing it entirely. Portability is thus a claim about capable readers, and,
+      as much, about the attributes of a soundly lifted semantic model. The two
+      go together: the property lives in the model, and a capable reader is what
+      reads it out.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
+<p id="section-4.2-5">Portability is also a property of the lift, not only of the reader. What the
+      lift works from is the source <em>surface</em>: the raw material a system
+      exposes, its labels, its kinds and structural relations, and its instance
+      data, before any meaning is made explicit. A <em>meaning-poor</em> surface is
+      one whose labels and structure carry little recoverable sense, for instance
+      opaque identifiers, or names stripped of the definitions that would say what
+      they denote. Such a surface can break portability. Holding the lifting agent
+      fixed and lifting from progressively poorer surfaces, comprehension falls from
+      a solid-lift baseline of 0.94 to between 0.64 and 0.74 when the meaning-bearing
+      surface is stripped away. One finding here is sharp. A surface that keeps a
+      concept's name but strips its meaning is no safer than an anonymous one,
+      because a bare name invites the lifter to confabulate a sense for it. A
+      reference consulted during the lift repairs most of that loss, restoring the
+      score to between 0.79 and 0.85. This is the first of the reference's two roles. It
+      supplies denotation the source data leaves too thin to lift well. The role is
+      developed, alongside the second, in <a href="#reference" class="auto internal xref">Section 7</a>.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="placement">
+<section id="section-4.3">
+        <h3 id="name-placement-of-cognition-the-">
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-placement-of-cognition-the-" class="section-name selfRef">Placement of Cognition: the Lift and the Un-lifted Baseline</a>
+        </h3>
+<p id="section-4.3-1">Two variables underlie the lift and locate it against the alternatives.
+      The first is access: whether the cognition is situated, able to consult the
+      running system, its instances and live state, or un-situated, holding only
+      the published artifact. The second is product: whether the cognition keeps
+      its understanding internal, for its own use, or externalises a self-standing
+      model for others to consume. The lift is the situated and externalising case.
+      <a href="#fig-quadrangle" class="auto internal xref">Figure 4</a> places it against the three others.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<span id="name-cognition-placed-by-access-"></span><div id="fig-quadrangle">
+<figure id="figure-4">
+          <div id="section-4.3-2.1">
+            <div class="alignLeft art-svg artwork" id="section-4.3-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 560 338" width="560" height="338">
+                <rect x="130.0" y="50.0" width="205.0" height="100.0" fill="#eef0f2" stroke="#c9cfd4" stroke-width="1"></rect>
+                <rect x="335.0" y="50.0" width="205.0" height="100.0" fill="#dfe7ee" stroke="#14314f" stroke-width="1.3"></rect>
+                <rect x="130.0" y="150.0" width="205.0" height="100.0" fill="#f6ecd9" stroke="#c25a2b" stroke-width="1.3"></rect>
+                <rect x="335.0" y="150.0" width="205.0" height="100.0" fill="#eef0f2" stroke="#c9cfd4" stroke-width="1"></rect>
+                <line x1="335.0" y1="50.0" x2="335.0" y2="250.0" stroke="#9aa4ac" stroke-width="1"></line>
+                <line x1="130.0" y1="150.0" x2="540.0" y2="150.0" stroke="#9aa4ac" stroke-width="1"></line>
+                <text x="232.5" y="78.0" font-family="sans-serif" font-size="12" fill="#9aa4ac" text-anchor="middle" font-weight="bold" font-style="normal">Re-documenting from text</text>
+                <text x="232.5" y="97.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">tidier model,</text>
+                <text x="232.5" y="110.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">still capped by the text</text>
+                <text x="437.5" y="78.0" font-family="sans-serif" font-size="12" fill="#14314f" text-anchor="middle" font-weight="bold" font-style="normal">THE LIFT</text>
+                <text x="437.5" y="97.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">situated cognition writes</text>
+                <text x="437.5" y="110.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">a self-standing model</text>
+                <text x="232.5" y="208.0" font-family="sans-serif" font-size="12" fill="#c25a2b" text-anchor="middle" font-weight="bold" font-style="normal">Un-lifted consumption</text>
+                <text x="232.5" y="227.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">the binder: reads the artefact,</text>
+                <text x="232.5" y="240.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">understands for its own use</text>
+                <text x="437.5" y="208.0" font-family="sans-serif" font-size="12" fill="#9aa4ac" text-anchor="middle" font-weight="bold" font-style="normal">Operating own system</text>
+                <text x="437.5" y="227.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">understands in context;</text>
+                <text x="437.5" y="240.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">no portable artefact</text>
+                <line x1="250.0" y1="180.0" x2="372.0" y2="116.0" stroke="#1f2a30" stroke-width="1.6" stroke-dasharray="5,3"></line>
+                <line x1="372.0" y1="116.0" x2="363.0" y2="115.8" stroke="#1f2a30" stroke-width="1.6"></line>
+                <line x1="372.0" y1="116.0" x2="367.0" y2="123.5" stroke="#1f2a30" stroke-width="1.6"></line>
+                <text x="305.0" y="137.0" font-family="sans-serif" font-size="9" fill="#5b6772" text-anchor="middle" font-weight="normal" font-style="italic" transform="rotate(-27.7 305.0 137.0)">situatedness + grounded generation</text>
+                <text x="24.0" y="150.0" font-family="sans-serif" font-size="12" fill="#1f2a30" text-anchor="middle" font-weight="bold" font-style="normal" transform="rotate(-90.0 24.0 150.0)">product</text>
+                <text x="72.0" y="36.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">externalised</text>
+                <text x="72.0" y="48.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">artefact</text>
+                <text x="72.0" y="274.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">internal</text>
+                <text x="72.0" y="286.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">understanding</text>
+                <text x="335.0" y="314.0" font-family="sans-serif" font-size="12" fill="#1f2a30" text-anchor="middle" font-weight="bold" font-style="normal">access</text>
+                <text x="232.5" y="274.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">un-situated</text>
+                <text x="232.5" y="286.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">(artefact only)</text>
+                <text x="437.5" y="274.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">situated</text>
+                <text x="437.5" y="286.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">(consults the system)</text>
+              </svg><a href="#section-4.3-2.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
+<a href="#name-cognition-placed-by-access-" class="selfRef">Cognition placed by access and by product.</a>
+          </figcaption></figure>
+</div>
+<p id="section-4.3-3">The contrast that matters is the diagonal. Un-lifted consumption, the
+      un-situated reader that has only the artifact, measures that artifact's
+      portability without the lift; run over a model that was never lifted, it is
+      the un-lifted baseline, and a companion synopsis of related work records
+      exactly this case, an agent binding published descriptions to a thin
+      reference with no lift. The lift is the opposite corner, where a situated
+      cognition writes the meaning down so that such a reader succeeds. What it
+      adds along the diagonal is access, the reach into the system, and grounded
+      generation, the writing-down of what it finds. The remaining corners isolate
+      each half: a situated cognition that does not externalise is an agent
+      operating its own system, understanding in context but leaving nothing
+      portable; an un-situated cognition that does externalise is re-documentation
+      from the text, which tidies but stays capped by what the text holds.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">This sharpens the limit of the lift. The place a static artifact defeats
+      an un-situated reader, the fact its text never records, is most often not a
+      true frontier but a gap the lift would close, since the fact is present in
+      the system and a situated lift reaches it. What a concept needs then divides
+      in three: what is implicit but present, made explicit by grounded generation;
+      what is present but elsewhere in the system, supplied by situated access; and
+      what is neither, the residue of authority and underdetermination, referred to
+      a person.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.3-5">The quadrangle and the cognition spectrum (<a href="#spectrum" class="auto internal xref">Section 6.4</a>) are
+      complementary. The spectrum grades one of the quadrangle's axes, access:
+      where the quadrangle asks whether a cognition is situated or holds only the
+      artifact, the spectrum makes that a dial and splits it per party, from both
+      live through one inert to both inert. It has no axis for the quadrangle's
+      other dimension, product, which is whether the act externalises a
+      self-standing model or keeps its understanding internal, and that is the
+      distinction that separates the lift from mere comprehension. So the two do
+      not collapse into one: the quadrangle names which act is being performed, and
+      the spectrum grades how far that act reaches as cognition recedes. When
+      access is applied to reconciliation, the access that matters is to the other
+      system, which is what the spectrum's placements grade.<a href="#section-4.3-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="pragmatics">
+<section id="section-5">
+      <h2 id="name-pragmatics-nature-handling-">
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-pragmatics-nature-handling-" class="section-name selfRef">Pragmatics: Nature, Handling, and Why It Carries the Meaning</a>
+      </h2>
+<p id="section-5-1">Of the parts of a semantic model, pragmatics is the one least talked
+      about. That is probably because it does not freeze cleanly into a schema the
+      way the others do. As it seldom features in schema, it tends to fall out of
+      view and out of consideration. It is, nonetheless, important in operations,
+      and worth setting out plainly. Completing information for a cognitive
+      consumer is, in large measure, capturing the pragmatics a data model leaves
+      out.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">Where semantics fixes what a term denotes, pragmatics fixes how the
+      denoted thing is to be used. A semantic model records, as first-class content
+      and over and above the ontology and lexicon, matters such as these:<a href="#section-5-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5-3.1">whether a figure is a request to be met or a
+        measurement to be reported, an intent versus an observation;<a href="#section-5-3.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-3.2">whose judgment governs a contested field: which side of a boundary
+        owns a route, a grade, or a policy;<a href="#section-5-3.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-3.3">the operative state a value describes: whether it is what was
+        intended or what is operationally the case;<a href="#section-5-3.3" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-3.4">the conditions under which a signal changes meaning: an alarm during a
+        maintenance window, or a reading when a detector's confidence is low.<a href="#section-5-3.4" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-5-4">Two things about pragmatics emerged clearly from the study. The first is
+      that pragmatics must itself be lifted. It does not survive in the data model,
+      and it is precisely the part a human engineer supplies from outside the
+      artifact. A lift that captures ontology and lexicon but omits pragmatics
+      produces a model that looks complete and is not, and the omission surfaces
+      only when the model is used to decide something. The second is that
+      pragmatics is often a highly <em>load-bearing</em> layer. In a range of
+      operational tasks the meaning of a signal is carried more by its pragmatics
+      than by its structure or its denotation.<a href="#section-5-4" class="pilcrow">¶</a></p>
+<p id="section-5-5">Observability is the sharpest case, in the sense of demonstrating both the
+      importance of pragmatics and how it must be handled. The same rising
+      measurement is a matter to act on during normal operation, benign inside a
+      maintenance window, and a matter merely to watch when the detector's
+      confidence is low (<a href="#fig-pragmatics" class="auto internal xref">Figure 5</a>). None of that is in the
+      value or its type. It is entirely in the pragmatics. The dangerous confusion
+      in this domain is itself a pragmatic one. An <em>alarm</em>, a declared
+      undesirable state, is not an <em>anomaly</em>, a deviation that may mean
+      nothing. Treating them as the same term is a category error that a purely
+      semantic reading does not catch <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>. The study bears
+      this out with numbers. When the pragmatic content was carried, the strong and
+      middling agents returned the correct significance verdict (accuracy 1.00 and
+      0.83) and the false-page storm disappeared. When it was withheld, the same
+      agents paged nearly everything (accuracy 0.17 and 0.08). The verdict was not
+      recoverable from structure alone.<a href="#section-5-5" class="pilcrow">¶</a></p>
+<span id="name-pragmatics-fixes-the-meanin"></span><div id="fig-pragmatics">
+<figure id="figure-5">
+        <div id="section-5-6.1">
+          <div class="alignLeft art-svg artwork" id="section-5-6.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 560 232" width="560" height="232">
+              <rect x="8.0" y="94.0" width="120.0" height="52.0" fill="#e9edf0" stroke="#9aa4ac" stroke-width="1.4" rx="6"></rect>
+              <text x="68.0" y="116.5" font-family="sans-serif" font-size="11" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">a rising</text>
+              <text x="68.0" y="131.5" font-family="sans-serif" font-size="11" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">measurement</text>
+              <rect x="250.0" y="34.0" width="182.0" height="40.0" fill="#ffffff" stroke="#9aa4ac" stroke-width="1.4" rx="6"></rect>
+              <text x="341.0" y="58.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">normal operation</text>
+              <rect x="452.0" y="34.0" width="100.0" height="40.0" fill="#ffffff" stroke="#c25a2b" stroke-width="1.4" rx="6"></rect>
+              <text x="502.0" y="58.0" font-family="sans-serif" font-size="10" fill="#c25a2b" text-anchor="middle" font-weight="normal" font-style="normal">act now (page)</text>
+              <line x1="130.0" y1="120.0" x2="248.0" y2="54.0" stroke="#c25a2b" stroke-width="1.3"></line>
+              <line x1="248.0" y1="54.0" x2="240.5" y2="54.1" stroke="#c25a2b" stroke-width="1.3"></line>
+              <line x1="248.0" y1="54.0" x2="244.0" y2="60.4" stroke="#c25a2b" stroke-width="1.3"></line>
+              <line x1="434.0" y1="54.0" x2="450.0" y2="54.0" stroke="#c25a2b" stroke-width="1.3"></line>
+              <line x1="450.0" y1="54.0" x2="443.4" y2="50.4" stroke="#c25a2b" stroke-width="1.3"></line>
+              <line x1="450.0" y1="54.0" x2="443.4" y2="57.6" stroke="#c25a2b" stroke-width="1.3"></line>
+              <rect x="250.0" y="106.0" width="182.0" height="40.0" fill="#ffffff" stroke="#9aa4ac" stroke-width="1.4" rx="6"></rect>
+              <text x="341.0" y="130.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">in a maintenance window</text>
+              <rect x="452.0" y="106.0" width="100.0" height="40.0" fill="#ffffff" stroke="#1b8f6a" stroke-width="1.4" rx="6"></rect>
+              <text x="502.0" y="130.0" font-family="sans-serif" font-size="10" fill="#1b8f6a" text-anchor="middle" font-weight="normal" font-style="normal">benign (suppress)</text>
+              <line x1="130.0" y1="120.0" x2="248.0" y2="126.0" stroke="#1b8f6a" stroke-width="1.3"></line>
+              <line x1="248.0" y1="126.0" x2="241.6" y2="122.1" stroke="#1b8f6a" stroke-width="1.3"></line>
+              <line x1="248.0" y1="126.0" x2="241.2" y2="129.3" stroke="#1b8f6a" stroke-width="1.3"></line>
+              <line x1="434.0" y1="126.0" x2="450.0" y2="126.0" stroke="#1b8f6a" stroke-width="1.3"></line>
+              <line x1="450.0" y1="126.0" x2="443.4" y2="122.4" stroke="#1b8f6a" stroke-width="1.3"></line>
+              <line x1="450.0" y1="126.0" x2="443.4" y2="129.6" stroke="#1b8f6a" stroke-width="1.3"></line>
+              <rect x="250.0" y="178.0" width="182.0" height="40.0" fill="#ffffff" stroke="#9aa4ac" stroke-width="1.4" rx="6"></rect>
+              <text x="341.0" y="202.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">detector confidence low</text>
+              <rect x="452.0" y="178.0" width="100.0" height="40.0" fill="#ffffff" stroke="#3a6ea5" stroke-width="1.4" rx="6"></rect>
+              <text x="502.0" y="202.0" font-family="sans-serif" font-size="10" fill="#3a6ea5" text-anchor="middle" font-weight="normal" font-style="normal">watch</text>
+              <line x1="130.0" y1="120.0" x2="248.0" y2="198.0" stroke="#3a6ea5" stroke-width="1.3"></line>
+              <line x1="248.0" y1="198.0" x2="244.5" y2="191.4" stroke="#3a6ea5" stroke-width="1.3"></line>
+              <line x1="248.0" y1="198.0" x2="240.5" y2="197.4" stroke="#3a6ea5" stroke-width="1.3"></line>
+              <line x1="434.0" y1="198.0" x2="450.0" y2="198.0" stroke="#3a6ea5" stroke-width="1.3"></line>
+              <line x1="450.0" y1="198.0" x2="443.4" y2="194.4" stroke="#3a6ea5" stroke-width="1.3"></line>
+              <line x1="450.0" y1="198.0" x2="443.4" y2="201.6" stroke="#3a6ea5" stroke-width="1.3"></line>
+            </svg><a href="#section-5-6.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
+<a href="#name-pragmatics-fixes-the-meanin" class="selfRef">Pragmatics fixes the meaning: one signal, three operating contexts, three verdicts.</a>
+        </figcaption></figure>
+</div>
+<p id="section-5-7">Intent shows the same layer deciding a different kind of question. A
+      declarative expectation, such as a lower bound on capacity, an upper bound on
+      latency, or an availability target, is satisfied by a concrete realization
+      rather than equal to it. Which realisations satisfy it, and how conflicts
+      among expectations are traded off, is pragmatic content, not structural. In
+      the study the pragmatic judgment carried the negotiation. A provider
+      returned a best-achievable offer, and the consumer's own declared priorities
+      accepted a degraded value, with no human in the loop (decision accuracy 1.00
+      for the strong and middling agents).<a href="#section-5-7" class="pilcrow">¶</a></p>
+<p id="section-5-8">One further finding sharpens where the payoff sits. Pragmatic content is
+      not uniformly easy to apply. Handed the identical annotations, the weak agent
+      barely moved on the significance verdict (accuracy 0.53 with the content, 0.50
+      without it). Where the pragmatic content enters as a structural input,
+      however, even a weak agent applies it: given a resource-dependency map, every
+      agent folded a spray of cross-layer symptoms into a single correctly rooted
+      incident, and without that map every agent failed. Judgment is
+      capability-gated; a structural input is not.<a href="#section-5-8" class="pilcrow">¶</a></p>
+<p id="section-5-9">Because pragmatics is content, it also diverges between two models and must
+      be reconciled like any other layer. Indeed it is one of the principal axes of
+      divergence in <a href="#recon" class="auto internal xref">Section 6</a>. The practical consequence is a design
+      instruction. A lift that omits pragmatics is not merely incomplete but
+      silently so, and the layer that most needs deliberate capture is the one a
+      data model is least equipped to hold.<a href="#section-5-9" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="recon">
+<section id="section-6">
+      <h2 id="name-reconciliation-bridging-two">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-reconciliation-bridging-two" class="section-name selfRef">Reconciliation: Bridging Two Models by Cognition</a>
+      </h2>
+<p id="section-6-1">A semantic model is an object, and reconciliation is a flagship use of it.
+      Reconciliation aligns two independently built models, so that the systems that use them
+      natively can interoperate. It is a distinct operation with its own objective,
+      bridging the genuine divergence between two adequate models. It is not about
+      patching bad lifts. Two sound models still diverge, and bridging that
+      divergence is the task.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">To see the shape of that task, recall what a lifted model contains. It
+      contains a knowledge graph: a schema of typed concepts and permitted
+      relations (the TBox), and the individuals that populate them (the ABox). Over
+      that graph sit the pragmatics and the provenance. Reconciliation must bridge
+      the divergence between two such models wherever it arises: in the ontology,
+      among the instances, and in the pragmatics. These differ in kind, and a
+      treatment that runs them together will miss half the work.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<div id="two-levels">
+<section id="section-6.1">
+        <h3 id="name-ontological-correspondence-">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-ontological-correspondence-" class="section-name selfRef">Ontological correspondence, instance matching, and pragmatics</a>
+        </h3>
+<p id="section-6.1-1"><strong>Ontological correspondence</strong> establishes how the
+        two schemas correspond, concept to concept and relation to relation. Two
+        models diverge here on <strong>lexicon</strong> (the same concept under
+        different names, or different concepts under one name) and on
+        <strong>structure and span</strong> (what each treats as an entity, and how
+        finely). One side may bundle into a single concept what the other separates
+        into several. A single legacy alarm, for example, corresponds
+        one-to-many to a separated alarm-state and the fault it implies. Ontological
+        correspondence is a type-level judgment, and where the relation is a
+        refinement rather than an identity it must be confirmed against the specific
+        relation that holds: a bound is <em>satisfied</em>, not equalled; an
+        underlay is <em>ridden</em>, not renamed.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<p id="section-6.1-2">A third kind of divergence is span itself: a concept one
+        model carries and the other simply lacks, with no counterpart
+        at any cardinality. This one-to-zero case differs from a
+        bundled or refined correspondence, where the content is
+        present on both sides and only carved differently; here it is
+        present on one side and absent on the other, because the two
+        models cut the world at different joints. One side reasons in
+        services while the other holds only the resources a service is
+        realized over. Whether the gap matters depends on the
+        exchange. Where the absent concept is not needed, the honest
+        outcome is to leave it uncovered: a capable agent returns it
+        unmatched rather than inventing a partner. Where it is needed,
+        two disciplined routes supply it. The first is to derive it,
+        since the gap is usually a seam between related things: the
+        deficient side can often synthesize the missing concept from
+        what it does hold, as a service is recovered as a binding over
+        the resources that realize it. The second, where derivation is
+        unavailable, is to extend the shared ground rather than either
+        native model, adding one entry to the ad hoc reference both
+        sides bind through; that keeps the addition disposable,
+        whereas writing the concept into a system's own schema is the
+        heavier re-documentation this document sets aside. The
+        constructed-reference case of <a href="#build-ref" class="auto internal xref">Section 6.3</a>, an
+        IP service meeting a transport circuit, is exactly such a seam
+        and shows the second route in use.<a href="#section-6.1-2" class="pilcrow">¶</a></p>
+<p id="section-6.1-3"><strong>Instance matching</strong>, also called entity resolution or
+        co-reference, aligns the individuals once the concepts correspond: which
+        live circuit on one side is which on the other. This is a
+        knowledge-graph-level judgment over keys,
+        attributes, and topology. Most pairs are settled from the models alone.
+        Some are genuine look-alikes, structurally identical on paper, that no
+        static description can separate. Those are settled only by acting on the
+        live system, a point <a href="#verify" class="auto internal xref">Section 6.2</a> takes up.<a href="#section-6.1-3" class="pilcrow">¶</a></p>
+<p id="section-6.1-4">Pragmatics diverges too, and it reduces to neither of these.
+        It is not the ABox. An instance's current state is <em>observed</em>;
+        whether that state warrants action here and now is <em>judged</em>. So
+        pragmatic divergence is settled not by matching but by resolution: by live
+        elicitation of a party's judgment, or by a pre-placed movable policy that
+        carries that judgment to where it is needed. As cognition recedes,
+        pragmatics is the hardest layer to recover, precisely because it is resolved
+        against a live context rather than stored in the graph.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
+<div id="discipline">
+<section id="section-6.1.1">
+          <h4 id="name-disciplined-binding">
+<a href="#section-6.1.1" class="section-number selfRef">6.1.1. </a><a href="#name-disciplined-binding" class="section-name selfRef">Disciplined binding</a>
+          </h4>
+<p id="section-6.1.1-1">The first thing capable cognition does, with no shared
+          reference at all, is bind what clearly corresponds and refuse what merely
+          looks alike. The discipline is the point. A planted false cognate is
+          refused, not bound. Consider a transport <em>grade</em> that is a
+          protection class, set against an IP <em>grade</em> that is a class of
+          service: the same word, unrelated meanings. A capable agent declines the
+          pairing on non-lexical evidence, the concepts' kinds, attachments, and
+          instances, which a matcher keying on the shared label cannot do. A capable
+          agent left without a reference commits little, but what it commits is
+          correct. It defers rather than guesses. This is the honest behavior, and
+          it is what makes the resolved fraction and precision separate measures,
+          both worth reporting.<a href="#section-6.1.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="verify">
+<section id="section-6.2">
+        <h3 id="name-verification-confirming-a-c">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-verification-confirming-a-c" class="section-name selfRef">Verification: confirming a correspondence</a>
+        </h3>
+<p id="section-6.2-1">Reconciliation does not stop at proposing correspondences. It confirms
+        them, as a step of its own, and keeps only what it can confirm. There are
+        three ways to confirm, and the study exercised all three. How much of this
+        verification is available depends on where the cognition sits. The three
+        ways below describe it at full reach, with both reconciling systems live and
+        able to reason. As cognition recedes from one side or both, less of it can
+        be brought to bear, which <a href="#spectrum" class="auto internal xref">Section 6.4</a> develops as the
+        cognition spectrum.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+<p id="section-6.2-2">The first is <strong>question and answer between live agents</strong>.
+        Each side is the authority on its own model, so whatever is ambiguous the
+        other can ask about and get an authoritative answer. In one recorded run,
+        two agents reconciling a cross-domain seam asked and answered one question
+        per concept before either proposed a single binding.<a href="#section-6.2-2" class="pilcrow">¶</a></p>
+<p id="section-6.2-3">The second is the <strong>decisive virtual experiment</strong>. Because
+        reconciliation operates on the models rather than the live network, an agent
+        can provision a candidate correspondence in virtual space, operate it, and
+        read back whether the invariants a correct translation must preserve still
+        hold. The question is then settled by operation, not by argument. In a
+        recorded configuration run, one candidate was provisioned and confirmed as
+        an identity, while another was provisioned and refuted, both sides then
+        marking those concepts as having no counterpart.<a href="#section-6.2-3" class="pilcrow">¶</a></p>
+<p id="section-6.2-4">The third is <strong>round-trip and invariant checking</strong> for an
+        identity correspondence, and a <strong>satisfaction check</strong> for a
+        refinement, where a value cannot be round-tripped because the relation is
+        lossy. Verification is what drives precision toward 1.00 across the
+        spectrum: it rejects the false cognates that slipped into a proposal, and it
+        defers the correct-but-unconfirmable pairings rather than asserting them.<a href="#section-6.2-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="build-ref">
+<section id="section-6.3">
+        <h3 id="name-building-the-shared-ground-">
+<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-building-the-shared-ground-" class="section-name selfRef">Building the shared ground when none exists</a>
+        </h3>
+<p id="section-6.3-1">Where the two models share no reference and none is supplied, the agents
+        can construct a thin shared reference themselves and bind through it. This
+        is the hardest case: two private systems with no public standard between
+        them. Concretely, one such case set a home-grown transport system against a
+        home-grown IP/VPN system, whose worlds touch at a single seam where an IP
+        service rides a transport circuit as its underlay. Making one order across
+        that seam requires binding the circuit to the underlay, binding the
+        transport hand-off to the IP attachment, and pinning three requirements so
+        they cannot be misread: a committed payload rate that is not the bearer line
+        rate, a latency bound that is not a measured value, and protection against a
+        path failure rather than an IP scheduling class. It also requires refusing
+        one look-alike, the transport and IP <em>grade</em>.<a href="#section-6.3-1" class="pilcrow">¶</a></p>
+<p id="section-6.3-2">A reference for this case is deliberately small. It carries one entry per
+        shared seam category, each fixed by a canonical example both sides can
+        instantiate. It does not cover either side's native concepts, and that
+        omission is deliberate: with no <em>grade</em> entry to bind to, the
+        cross-domain grade false cognate is pre-empted at the reference itself. The
+        listing below shows the container and two of its five entries.<a href="#section-6.3-2" class="pilcrow">¶</a></p>
+<span id="name-an-ad-hoc-reference-constru"></span><div id="fig-lexicon">
+<figure id="figure-6">
+          <div class="lang-json sourcecode" id="section-6.3-3.1">
+<pre>
+{
+  "id": "ref.crossdomain.adhoc.v1",
+  "kind": "lexical",
+  "reference_type": "ad_hoc_by_example",
+  "note": "Constructed between these two agents for this exchange,
+    not adopted from any standard. One entry per shared seam
+    category, each fixed by a canonical example. It does NOT cover
+    either side's native concepts (grade, bearer, vlan, service);
+    that omission pre-empts the cross-domain 'grade' false cognate.",
+  "entries": [
+    { "id": "transport-underlay",
+      "label": "transport underlay",
+      "synonyms": ["underlay circuit", "carrier circuit"],
+      "class": "seam",
+      "definition": "The transport circuit that carries an IP
+        service as its underlay: the one object both domains
+        share, owned by transport and consumed by IP.",
+      "example": "circuit CIR-7 is the underlay of service SVC-42" },
+    { "id": "service-rate",
+      "label": "committed service rate",
+      "synonyms": ["committed rate", "CIR"],
+      "class": "requirement",
+      "definition": "The committed client payload rate the service
+                     guarantees, NOT the bearer line rate.",
+      "example": "5 Gbit/s committed (not the bearer line rate)" }
+    // + 3 more: demarcation, latency-bound, protection-requirement
+  ]
+}
+</pre>
+</div>
+<figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
+<a href="#name-an-ad-hoc-reference-constru" class="selfRef">An ad hoc reference constructed for one cross-domain seam (container and two of five entries).</a>
+          </figcaption></figure>
+</div>
+<p id="section-6.3-4">Each entry is thin: a stable identifier, a preferred label and synonyms,
+        a shallow class, a disambiguating definition, and one canonical example. It
+        carries no relationship axioms, no cardinalities, and no attribute schemas.
+        It is a lexicon, not a model of the domain.
+        <a href="#fig-construct" class="auto internal xref">Figure 7</a> reports what such a self-built reference buys
+        for the strong agent on this case. Left alone with no shared reference, the
+        resolved fraction is 0.20: the agent refuses to guess the seam and so
+        commits little, at full precision. Constructing the thin reference and
+        binding through it lifts the resolved fraction to 0.80. A single decisive
+        virtual experiment on the remaining candidates closes most of the rest,
+        reaching 0.90, against a reference-given ceiling of 1.00. Precision stays at
+        1.00 throughout, and no false cognate is taken. The climb is in what the
+        agents surface, not a trade against correctness.<a href="#section-6.3-4" class="pilcrow">¶</a></p>
+<span id="name-two-private-models-no-share"></span><div id="fig-construct">
+<figure id="figure-7">
+          <div id="section-6.3-5.1">
+            <div class="alignLeft art-svg artwork" id="section-6.3-5.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 560 290" width="560" height="290">
+                <line x1="59.0" y1="232.0" x2="59.0" y2="62.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <line x1="55.0" y1="232.0" x2="59.0" y2="232.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="49.0" y="236.0" font-family="sans-serif" font-size="9" fill="#9aa4ac" text-anchor="end" font-weight="normal" font-style="normal">0.0</text>
+                <line x1="55.0" y1="147.0" x2="59.0" y2="147.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="49.0" y="151.0" font-family="sans-serif" font-size="9" fill="#9aa4ac" text-anchor="end" font-weight="normal" font-style="normal">0.5</text>
+                <line x1="55.0" y1="62.0" x2="59.0" y2="62.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="49.0" y="66.0" font-family="sans-serif" font-size="9" fill="#9aa4ac" text-anchor="end" font-weight="normal" font-style="normal">1.0</text>
+                <line x1="59.0" y1="232.0" x2="501.0" y2="232.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="49.0" y="50.0" font-family="sans-serif" font-size="10" fill="#9aa4ac" text-anchor="start" font-weight="normal" font-style="normal">resolved fraction (precision stays 1.00)</text>
+                <rect x="81.0" y="198.0" width="100.0" height="34.0" fill="#c25a2b" stroke="none" stroke-width="1" rx="2"></rect>
+                <text x="131.0" y="189.0" font-family="sans-serif" font-size="13" fill="#14314f" text-anchor="middle" font-weight="bold" font-style="normal">0.20</text>
+                <text x="131.0" y="248.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">no shared</text>
+                <text x="131.0" y="261.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">reference</text>
+                <rect x="241.0" y="96.0" width="100.0" height="136.0" fill="#1b8f6a" stroke="none" stroke-width="1" rx="2"></rect>
+                <text x="291.0" y="87.0" font-family="sans-serif" font-size="13" fill="#14314f" text-anchor="middle" font-weight="bold" font-style="normal">0.80</text>
+                <text x="291.0" y="248.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">agents build</text>
+                <text x="291.0" y="261.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">one</text>
+                <rect x="401.0" y="79.0" width="100.0" height="153.0" fill="#1b8f6a" stroke="none" stroke-width="1" rx="2"></rect>
+                <text x="451.0" y="70.0" font-family="sans-serif" font-size="13" fill="#14314f" text-anchor="middle" font-weight="bold" font-style="normal">0.90</text>
+                <text x="451.0" y="248.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">+ one virtual</text>
+                <text x="451.0" y="261.0" font-family="sans-serif" font-size="10" fill="#1f2a30" text-anchor="middle" font-weight="normal" font-style="normal">verification</text>
+              </svg><a href="#section-6.3-5.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-7" class="selfRef">Figure 7</a>:
+<a href="#name-two-private-models-no-share" class="selfRef">Two private models, no shared reference: the agents construct one and bind through it (strong agent; resolved fraction, precision 1.00 throughout).</a>
+          </figcaption></figure>
+</div>
+<p id="section-6.3-6">A resolved fraction below 1.00 here is deferral, not failure. It is what
+        a thin, self-built reference has not yet surfaced, and what the
+        reconciliation's own verification then closes. The reading that matters is
+        that the agents need no standard handed to them. Where one is absent, a
+        capable agent can build the ground the reconciliation stands on. The full
+        role of the reference, and its economics, are taken up in
+        <a href="#reference" class="auto internal xref">Section 7</a>.<a href="#section-6.3-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="spectrum">
+<section id="section-6.4">
+        <h3 id="name-how-far-reconciliation-reac">
+<a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-how-far-reconciliation-reac" class="section-name selfRef">How far reconciliation reaches: the cognition spectrum</a>
+        </h3>
+<p id="section-6.4-1">How far a reconciliation can proceed on its own depends on where the
+        machine cognition sits relative to the two systems. This is the master
+        variable, and it governs what a reconciliation achieves, what it costs, and
+        what it can verify. It runs along a spectrum
+        (<a href="#fig-spectrum" class="auto internal xref">Figure 8</a>): both sides cognitive, one side inert, or
+        cognition applied only in overlay to two inert systems.<a href="#section-6.4-1" class="pilcrow">¶</a></p>
+<span id="name-the-cognition-spectrum-wher"></span><div id="fig-spectrum">
+<figure id="figure-8">
+          <div id="section-6.4-2.1">
+            <div class="alignLeft art-svg artwork" id="section-6.4-2.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 560 236" width="560" height="236">
+                <text x="280.0" y="20.0" font-family="sans-serif" font-size="10" fill="#9aa4ac" text-anchor="middle" font-weight="normal" font-style="italic">cognition recedes</text>
+                <line x1="150.0" y1="30.0" x2="412.0" y2="30.0" stroke="#9aa4ac" stroke-width="1.3"></line>
+                <line x1="412.0" y1="30.0" x2="405.4" y2="26.4" stroke="#9aa4ac" stroke-width="1.3"></line>
+                <line x1="412.0" y1="30.0" x2="405.4" y2="33.6" stroke="#9aa4ac" stroke-width="1.3"></line>
+                <rect x="6.0" y="44.0" width="176.0" height="176.0" fill="#ffffff" stroke="#1b8f6a" stroke-width="1.4" rx="6"></rect>
+                <rect x="6.0" y="44.0" width="176.0" height="26.0" fill="#1b8f6a" stroke="none" stroke-width="1" rx="6"></rect>
+                <rect x="6.0" y="58.0" width="176.0" height="12.0" fill="#1b8f6a" stroke="none" stroke-width="1"></rect>
+                <text x="94.0" y="62.0" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" font-style="normal">Both cognitive</text>
+                <text x="18.0" y="90.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">verify: mutual Q&amp;A +</text>
+                <text x="18.0" y="104.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">joint virtual experiments</text>
+                <line x1="18.0" y1="144.0" x2="170.0" y2="144.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="18.0" y="166.0" font-family="sans-serif" font-size="9" fill="#1b8f6a" text-anchor="start" font-weight="bold" font-style="normal">reconciliation ALWAYS</text>
+                <text x="18.0" y="180.0" font-family="sans-serif" font-size="9" fill="#1b8f6a" text-anchor="start" font-weight="bold" font-style="normal">completes (autonomous,</text>
+                <text x="18.0" y="194.0" font-family="sans-serif" font-size="9" fill="#1b8f6a" text-anchor="start" font-weight="bold" font-style="normal">verified)</text>
+                <rect x="192.0" y="44.0" width="176.0" height="176.0" fill="#ffffff" stroke="#c8922e" stroke-width="1.4" rx="6"></rect>
+                <rect x="192.0" y="44.0" width="176.0" height="26.0" fill="#c8922e" stroke="none" stroke-width="1" rx="6"></rect>
+                <rect x="192.0" y="58.0" width="176.0" height="12.0" fill="#c8922e" stroke="none" stroke-width="1"></rect>
+                <text x="280.0" y="62.0" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" font-style="normal">One side inert</text>
+                <text x="204.0" y="90.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">verify: live agent runs</text>
+                <text x="204.0" y="104.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">solo virtual experiments;</text>
+                <text x="204.0" y="118.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">reference supplies facts</text>
+                <line x1="204.0" y1="144.0" x2="356.0" y2="144.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="204.0" y="166.0" font-family="sans-serif" font-size="9" fill="#c8922e" text-anchor="start" font-weight="bold" font-style="normal">mostly completes;</text>
+                <text x="204.0" y="180.0" font-family="sans-serif" font-size="9" fill="#c8922e" text-anchor="start" font-weight="bold" font-style="normal">more is deferred</text>
+                <rect x="378.0" y="44.0" width="176.0" height="176.0" fill="#ffffff" stroke="#c25a2b" stroke-width="1.4" rx="6"></rect>
+                <rect x="378.0" y="44.0" width="176.0" height="26.0" fill="#c25a2b" stroke="none" stroke-width="1" rx="6"></rect>
+                <rect x="378.0" y="58.0" width="176.0" height="12.0" fill="#c25a2b" stroke="none" stroke-width="1"></rect>
+                <text x="466.0" y="62.0" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" font-style="normal">Cognition in overlay</text>
+                <text x="390.0" y="90.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">verify: propose</text>
+                <text x="390.0" y="104.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">candidates for an</text>
+                <text x="390.0" y="118.0" font-family="sans-serif" font-size="9" fill="#1f2a30" text-anchor="start" font-weight="normal" font-style="normal">external check</text>
+                <line x1="390.0" y1="144.0" x2="542.0" y2="144.0" stroke="#c9cfd4" stroke-width="1"></line>
+                <text x="390.0" y="166.0" font-family="sans-serif" font-size="9" fill="#c25a2b" text-anchor="start" font-weight="bold" font-style="normal">no full autonomy;</text>
+                <text x="390.0" y="180.0" font-family="sans-serif" font-size="9" fill="#c25a2b" text-anchor="start" font-weight="bold" font-style="normal">external adjudication</text>
+              </svg><a href="#section-6.4-2.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-8" class="selfRef">Figure 8</a>:
+<a href="#name-the-cognition-spectrum-wher" class="selfRef">The cognition spectrum: where cognition sits governs what a reconciliation can verify and how far it completes.</a>
+          </figcaption></figure>
+</div>
+<p id="section-6.4-3">At the fully cognitive end, both sides can reason, and here a strong
+        claim holds for sufficiently capable agents.
+        <strong>Reconciliation always completes.</strong> This is an in-principle
+        fact, and in the study it was also verified. It holds for two
+        reasons, both of them functions of live cognition on each side. First, the
+        agents can exchange unbounded further information: each is the live
+        authority on its own model, so whatever is ambiguous the other can ask about
+        and get an authoritative answer. Second, the agents can run decisive virtual
+        experiments, since reconciliation operates on the models rather than the
+        live network. Any question is therefore confirmed, refuted, or
+        authoritatively decided. Across the four scenarios the study found no
+        semantic gap that two sufficiently capable agents
+        could not close, including on the two operations that look least
+        automatable: a two-sided intent negotiation, and the significance verdict in
+        observability. What remains after everything has been exchanged and every
+        experiment run is never an unbridgeable correspondence. It is a concept with
+        no counterpart (correctly returned as unmatched), a fact not yet realized in
+        the running network (an absence in the world, not in meaning), or one of the
+        two irreducible residues discussed in <a href="#conclusions" class="auto internal xref">Section 9</a>. None of
+        these is a gap cognition gets stuck on.<a href="#section-6.4-3" class="pilcrow">¶</a></p>
+<p id="section-6.4-4">As cognition recedes from one side, reconciliation degrades honestly
+        rather than breaking. With one side inert, the live agent can probe the
+        static description but cannot interrogate a peer or co-design an experiment.
+        It reconstructs the inert side's meaning from structure and instances, and a
+        thin reference buys back the facts the inert side cannot supply. Pragmatics
+        is the hardest layer to recover here, because it was resolved against a live
+        context that is now gone. The effect is measurable and its direction depends
+        on capability. For a strong agent a reference is an effort substitute: given
+        the anchor, its hidden deliberation on one schema-binding task collapsed by
+        a factor of about 3.7 with both sides live, about 6 with one side inert, and
+        about 2.4 with both inert. For a weak agent facing an inert side the same
+        reference can add effort rather than save it.<a href="#section-6.4-4" class="pilcrow">¶</a></p>
+<p id="section-6.4-5">At the far end, cognition sits only in overlay to two inert systems. It
+        can reconstruct both from structure and data, but it can only
+        <em>propose</em> correspondences for external adjudication. Full autonomy is
+        not reached. That boundary is real, and it is stated as such in
+        <a href="#conclusions" class="auto internal xref">Section 9</a>. The through-line across the spectrum is one
+        claim, made concrete on measured curves: it is cognition that completes a
+        reconciliation, and where cognition is present in full, the reconciliation
+        completes.<a href="#section-6.4-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="reference">
+<section id="section-7">
+      <h2 id="name-the-reference-and-its-two-d">
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-the-reference-and-its-two-d" class="section-name selfRef">The Reference, and Its Two Distinct Roles</a>
+      </h2>
+<p id="section-7-1">A shared reference recurs throughout the account, and it earns its place in
+      two separate ways that are easily conflated. Stating them apart is the point
+      of this section.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-2">In its first role, a reference <strong>supports the lift</strong>.
+      Consulted while a model is being produced, it supplies denotation the source
+      surface is too thin to carry, so that a meaning-poor data model can still be
+      lifted into a comprehensible one. This is the repair measured in
+      <a href="#lift" class="auto internal xref">Section 4</a>, where a reference used in the lift pulled comprehension
+      on a stripped surface back from the 0.64 to 0.74 range up to the 0.79 to 0.85
+      range. This role serves comprehension generally.<a href="#section-7-2" class="pilcrow">¶</a></p>
+<p id="section-7-3">In its second role, a reference <strong>supports reconciliation</strong>.
+      It is the shared common ground two models bind through. Because each side
+      binds its terms to the reference, genuine correspondences arrive as
+      near-identity rather than as candidates to be argued, and false cognates are
+      pre-empted, since two terms that merely share a label bind to different
+      entries. The residual work is confined to what the reference does not cover.
+      This role serves an operation between two parties.<a href="#section-7-3" class="pilcrow">¶</a></p>
+<p id="section-7-4">These are genuinely separate roles. A careful lift can make a model comprehensible with no
+      reference at all, so the first role may fall away entirely, while the
+      operations that later use the model can still benefit from the second. The
+      practical conclusion is therefore to make the reference, or a pointer to it,
+      part of the model package regardless. It is thin, and may prove useful to
+      downstream operations.<a href="#section-7-4" class="pilcrow">¶</a></p>
+<p id="section-7-5">Its needed nature follows from both roles and is deliberately minimal, as
+      <a href="#fig-lexicon" class="auto internal xref">Figure 6</a> showed. We find a sound reference to comprise a
+      lexicon with thin supports. For each
+      entry it carries a stable identifier, a preferred name and synonyms, a shallow
+      class, a disambiguating definition, and a single canonical example. That
+      example is explanatory, an aid to a reader, not an instance; the reference holds
+      no ABox of its own. It carries
+      no relationship axioms, cardinalities, or attribute schemas. It is not a model
+      of the domain, and it is emphatically not a universal ontology all parties
+      must accept. In practice it is most often derived from an existing model or
+      standard, and, as <a href="#build-ref" class="auto internal xref">Section 6.3</a> showed, where none exists capable
+      agents can build one. One caution the study makes precise: what binds
+      correctly is the reference's <em>description</em>, never a bare shared
+      pointer. A shared identifier with no description behind it is worse than no
+      reference at all, because an agent binds by an opaque token and binds wrongly.<a href="#section-7-5" class="pilcrow">¶</a></p>
+<p id="section-7-6">The usefulness of a reference is also <strong>graded</strong>. It is load-bearing only
+      where there is no standard to lean on and the agent is capable enough to
+      exploit it. Where a public standard already supplies the common ground, a
+      further reference adds little. Where the agent is too weak to reason over the
+      reference, it cannot rescue the outcome. This shows cleanly on the
+      observability ontological cognate: the RFC 9940-anchored reference rescued the
+      middling agent completely, driving the surviving cognate from full survival to
+      none, while the weak agent conflated the terms with or without it, and the
+      strong agent never needed it. Between those limits the reference does real
+      work, and it does so cheaply.<a href="#section-7-6" class="pilcrow">¶</a></p>
+<p id="section-7-7">That cheapness has a structural source. Because each system binds to a
+      shared reference rather than to every other system pairwise, the operational
+      step count associated with reconciliation grows with the number of systems
+      rather than with the number of pairs. N systems that each bind once to a shared
+      reference replace on the order of N(N-1)/2 pairwise translators, and the study
+      verified this linear-versus-quadratic scaling by construction to twelve
+      systems. Supplying an apt reference also reduced the cognitive effort a
+      reconciliation spent, measured in reasoning tokens, by a large factor on the
+      harder scenarios, because the agents argued far less.<a href="#section-7-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="evidence">
+<section id="section-8">
+      <h2 id="name-evidence-from-four-scenario">
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-evidence-from-four-scenario" class="section-name selfRef">Evidence from Four Scenarios</a>
+      </h2>
+<p id="section-8-1">The claims above rest on a study run across four network-management
+      scenarios. The scenarios were chosen so that together they span a range of
+      operation classes and the principal ways two models diverge. Each was built,
+      run against a validated gold standard, and reproduced on independently
+      constructed cases. The method is summarised here only as far as is needed to
+      read the results.<a href="#section-8-1" class="pilcrow">¶</a></p>
+<div id="scenarios">
+<section id="section-8.1">
+        <h3 id="name-the-four-scenarios">
+<a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-the-four-scenarios" class="section-name selfRef">The four scenarios</a>
+        </h3>
+<span class="break"></span><dl class="dlNewline" id="section-8.1-1">
+          <dt id="section-8.1-1.1">Configuration</dt>
+          <dd style="margin-left: 1.5em" id="section-8.1-1.2">Aligning two standard-governed models of one network, for instance an
+          ONF Transport API view and an IETF traffic-engineering topology
+          <span>[<a href="#RFC8345" class="cite xref">RFC8345</a>]</span> <span>[<a href="#RFC8795" class="cite xref">RFC8795</a>]</span>. Both sides carry public
+          standards the agents already know, so cognition can lean on recognition.
+          This exercises lexical and structural divergence with a standard present.
+          For the strong agent it yields a perfect, verified reconciliation, with
+          precision and resolved fraction of 1.00.<a href="#section-8.1-1.2" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-8.1-1.3">Intent</dt>
+          <dd style="margin-left: 1.5em" id="section-8.1-1.4">Negotiating a declarative, quantitative intent into a concrete
+          realization, and carrying operational state back up as fulfillment. The
+          mapping is a refinement: an expectation is satisfied by a realization, not
+          equal to it. The case turns on pragmatic judgment and two-sided
+          negotiation, which completed autonomously at the cognitive end (decision
+          accuracy 1.00 for the strong and middling agents).<a href="#section-8.1-1.4" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-8.1-1.5">Standard-free</dt>
+          <dd style="margin-left: 1.5em" id="section-8.1-1.6">Provisioning across two home-grown, private models of adjacent domains
+          that meet at a single seam, with no public standard beneath either side.
+          A transport system and an IP/VPN system whose worlds touch where a service
+          rides a circuit. This is the hardest case, and the one in which the agents
+          must build the shared ground themselves (<a href="#build-ref" class="auto internal xref">Section 6.3</a>).<a href="#section-8.1-1.6" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-8.1-1.7">Observability</dt>
+          <dd style="margin-left: 1.5em" id="section-8.1-1.8">Reconciling two ways of describing what is wrong with a network. An
+          incumbent fault model that bundles alarm, state, severity, and cause,
+          against a newer model that separates anomaly, symptom, fault, problem, and
+          incident <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>
+            <span>[<a href="#I-D.ietf-nmop-network-anomaly-architecture" class="cite xref">I-D.ietf-nmop-network-anomaly-architecture</a>]</span>. This is the
+          scenario in which pragmatics carries most of the meaning
+          (<a href="#pragmatics" class="auto internal xref">Section 5</a>).<a href="#section-8.1-1.8" class="pilcrow">¶</a>
+</dd>
+        <dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="method">
+<section id="section-8.2">
+        <h3 id="name-cases-agents-and-metrics">
+<a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-cases-agents-and-metrics" class="section-name selfRef">Cases, agents, and metrics</a>
+        </h3>
+<p id="section-8.2-1">Each scenario was run on three independently built cases: three different
+        pairs of semantic models to reconcile, deliberately varied in domain,
+        vocabulary, and planted traps, so that a finding resting on one case could be
+        tested against two more. The agents spanned three independent
+        cognitive-agent families and two capability tiers, so that a result could be
+        checked against the possibility that it was an artifact of one model lineage.
+        Outcomes were scored against a validated gold standard for each case. The two
+        headline measures are the resolved fraction and precision defined in
+        <a href="#terms" class="auto internal xref">Section 2</a>. Cognitive effort was measured in reasoning tokens.<a href="#section-8.2-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="repro">
+<section id="section-8.3">
+        <h3 id="name-reproduction-and-invariance">
+<a href="#section-8.3" class="section-number selfRef">8.3. </a><a href="#name-reproduction-and-invariance" class="section-name selfRef">Reproduction and invariance</a>
+        </h3>
+<p id="section-8.3-1">Each scenario's signature result reproduced on its independently built
+        cases and held across the agent families and capability tiers.
+        <a href="#tab-repro" class="auto internal xref">Table 2</a> summarises this, scenario by scenario.<a href="#section-8.3-1" class="pilcrow">¶</a></p>
+<span id="name-the-signature-of-each-scena"></span><div id="tab-repro">
+<table class="center" id="table-2">
+          <caption>
+<a href="#table-2" class="selfRef">Table 2</a>:
+<a href="#name-the-signature-of-each-scena" class="selfRef">The signature of each scenario, reproduced across independently built cases and agent families.</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Scenario</th>
+              <th class="text-left" rowspan="1" colspan="1">Signature result</th>
+              <th class="text-left" rowspan="1" colspan="1">Reproduces across</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Configuration</td>
+              <td class="text-left" rowspan="1" colspan="1">Capable agents reconcile two standard models on their own (precision and resolved fraction 1.00 for the strong agent); a thin reference mainly prevents the weaker agents' errors.</td>
+              <td class="text-left" rowspan="1" colspan="1">3 cases; families; tiers</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Intent</td>
+              <td class="text-left" rowspan="1" colspan="1">Refinement and two-sided negotiation complete autonomously at the cognitive end (decision accuracy 1.00); accuracy over the full multi-step lifecycle falls with agent capability (1.00, 0.88, 0.62).</td>
+              <td class="text-left" rowspan="1" colspan="1">3 cases; families; tiers</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Standard-free</td>
+              <td class="text-left" rowspan="1" colspan="1">Without a shared reference the strong agent under-commits at full precision (0.20); a constructed reference completes the close (0.80, then 0.90 with a decisive experiment).</td>
+              <td class="text-left" rowspan="1" colspan="1">3 cases; families; tiers</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Observability</td>
+              <td class="text-left" rowspan="1" colspan="1">The alarm-versus-anomaly false cognate is refused, and the significance verdict is correct once pragmatics is carried: verdict accuracy for the strong and middling agents is 1.00 and 0.83 with it, 0.17 and 0.08 without.</td>
+              <td class="text-left" rowspan="1" colspan="1">3 cases; families; tiers</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+<p id="section-8.3-3">Two invariances are worth stating on their own. Every headline result
+        reproduced across the independently built cases, different model pairs
+        returning the same finding, so the results are not a property of one
+        hand-built example. And the headline results held whichever agent family did
+        the reconciling, so they are not an artifact of one vendor's reasoner.<a href="#section-8.3-3" class="pilcrow">¶</a></p>
+<p id="section-8.3-4">One caution belongs beside the headline numbers, because it bears on
+        acting on a result unsupervised. The dangerous failure is a confident wrong
+        answer, and it concentrates at the weak end and the inert placements. The
+        rate of confident errors rose about elevenfold down the capability ladder,
+        from 0.004 for the strong agent to 0.046 for the weak one, and calibration
+        worsened in step. An agent's own confidence is a weak guard: confidence on
+        wrong bindings sat in the 0.73 to 0.85 range, only a little below confidence
+        on correct ones. A downstream system cannot separate right from wrong by the
+        confidence number alone. The discipline a weak or inert-facing reconciliation
+        needs is an explicit abstain path, a scored declaration of insufficient
+        evidence reported apart from honest deferral, rather than a confidence
+        cutoff.<a href="#section-8.3-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
+<div id="conclusions">
+<section id="section-9">
+      <h2 id="name-what-holds-and-its-limits">
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-what-holds-and-its-limits" class="section-name selfRef">What Holds, and Its Limits</a>
+      </h2>
+<p id="section-9-1">Three conclusions about the concept are supported by the evidence.<a href="#section-9-1" class="pilcrow">¶</a></p>
+<p id="section-9-2"><strong>Semantic-model portability is real, and it is measurably
+      verifiable.</strong> A capable cognitive agent understands and uses a soundly
+      produced semantic model from the package alone. This can be checked directly,
+      across a capability ladder and across independent agent families, rather than
+      inferred from a downstream task. Portability is a property of the model, and,
+      as much, of the reader's cognitive capability.<a href="#section-9-2" class="pilcrow">¶</a></p>
+<p id="section-9-3"><strong>Capable cognition reconciles divergent semantic models on its own,
+      with discipline.</strong> Where the systems reason well enough, two divergent
+      models are reconciled through the agents' own questioning and virtual
+      verification, with no standard supplied. True correspondences are committed and
+      false cognates refused. At the fully cognitive end this is not merely frequent
+      but complete: reconciliation always completes, an in-principle assertion that
+      the study verified.<a href="#section-9-3" class="pilcrow">¶</a></p>
+<p id="section-9-4"><strong>Portability and reconciliation are graded, not
+      all-or-nothing.</strong> Both track the cognition available, degrading
+      gracefully as it recedes rather than collapsing. A thin reference can then
+      partly compensate, rescuing a cognitively weak consumer and making a
+      reconciliation cheaper, though only within the bounds
+      <a href="#reference" class="auto internal xref">Section 7</a> describes.<a href="#section-9-4" class="pilcrow">¶</a></p>
+<p id="section-9-5">The limits are equally real and are stated plainly. Two residues do not
+      yield to cognition, because they are not questions of fact. One is
+      <strong>authority</strong>. When two sides genuinely conflict over whose value
+      governs a contested field, a reference can supply information but never
+      authority, and the decision stays with a human or an owning party. The study
+      drew this line sharply in the intent scenario: publishing an invariant floor
+      lifted a blind agent's satisfaction check from 0.29 to 0.71, but at both sides
+      inert no reference could move a negotiation whose missing ingredient was the
+      customer's own judgment. The other residue is genuine
+      <strong>underdetermination</strong>. Where no fact settles a correspondence, an
+      honest agent defers rather than invents one. A reconciliation that reaches
+      these residues and defers is behaving correctly, not failing.<a href="#section-9-5" class="pilcrow">¶</a></p>
+<p id="section-9-6">And there is the <strong>autonomy boundary</strong> of
+      <a href="#spectrum" class="auto internal xref">Section 6.4</a>. Full, unsupervised reconciliation is available at
+      the fully cognitive end. It is not available where machine cognition is
+      employed only in overlay to two inert systems, which can only propose
+      correspondences for external adjudication. Between those ends the automation
+      degrades predictably, and a thin reference buys back part of what receding
+      cognition gives up.<a href="#section-9-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="implications">
+<section id="section-10">
+      <h2 id="name-implications-for-network-ma">
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-implications-for-network-ma" class="section-name selfRef">Implications for Network Management and Standardization</a>
+      </h2>
+<p id="section-10-1">If much of what was formerly pre-agreed can be produced and reconciled on
+      demand by cognition, the question for the community is not whether to abandon
+      standard models but whether such models should be evolved, and whether it
+      might be helpful to introduce other standardized artifact types. The evidence
+      points to an evolution rather than a rupture.<a href="#section-10-1" class="pilcrow">¶</a></p>
+<p id="section-10-2">What may be most useful to agree in advance may narrow and simplify. As models can
+      increasingly be produced and reconciled ad hoc, for the task at hand, the
+      heaviest fully-specified schemas may give way to lighter, more broadly usable
+      artifacts. Thin shared references, carrying names, definitions, and examples
+      derived from existing models, are the anchor to which independently built
+      systems bind. Such references are cheaper to agree and cheaper to maintain.
+      They are also precisely the kind of
+      interoperable anchor to which emerging knowledge-graph and AI-modeling
+      efforts in the community could bind. The community's knowledge-graph work for
+      network operations <span>[<a href="#I-D.mackey-nmop-kg-for-netops" class="cite xref">I-D.mackey-nmop-kg-for-netops</a>]</span> meets this
+      approach squarely, since a lifted semantic model contains a knowledge graph a
+      machine can consume, and a thin shared reference is exactly the kind of
+      anchor such graphs can bind to.<a href="#section-10-2" class="pilcrow">¶</a></p>
+<p id="section-10-3">What still needs agreeing is narrower than a full shared model, and it is of
+      two kinds. The first is the thin references themselves: the small shared anchors
+      reconciliation binds through, worth agreeing precisely because they are cheap
+      and broadly reusable. The second is the authority boundaries the study keeps
+      reaching (<a href="#conclusions" class="auto internal xref">Section 9</a>): the contested fields where two systems
+      hold conflicting values and no reasoning can decide whose governs, because the
+      question is one of authority, not of fact. This second kind is not a modeling
+      problem, and better cognition will not dissolve it. Agreeing who governs what is
+      a matter of governance, and it is exactly where standardization remains
+      indispensable, even as ad hoc reconciliation takes over much of the rest.<a href="#section-10-3" class="pilcrow">¶</a></p>
+<p id="section-10-4">A further implication follows from where the model now comes from. A
+      semantic model is produced by a system's own cognition, the lift, and
+      its form is flexible: what matters is not a fixed schema but that the model
+      carries the elements this document describes, its ontology and lexicon, its
+      pragmatics and its provenance, and explains itself well enough for a capable
+      agent to pick it up. The burden that once fell on a shared model therefore
+      shifts onto a system's ability to describe and interrogate itself. Where a
+      system exposes enough of its structure, its local concepts, its current facts,
+      and its authority and provenance, a consumer's cognition can lift and reconcile
+      against it ad hoc. Where a system exposes none of that, and the meaning is
+      neither in its schema nor available elsewhere, autonomous reconciliation cannot
+      be guaranteed, and the missing content must be drawn from another authoritative
+      artifact, elicited from a live interface, or supplied by a person.<a href="#section-10-4" class="pilcrow">¶</a></p>
+<p id="section-10-5">This points to a second candidate for standardization, alongside the thin
+      references: not a universal domain model, but a system's self-description and
+      interrogation. What is worth agreeing is how a system exports its structural
+      surface, explains its local concepts, makes its current facts discoverable,
+      declares its authority and provenance, and answers open questions from a
+      consumer that does not know its schema in advance. One architectural pattern
+      that realises this is an interface that declares the concepts and relationships
+      a system supports and assembles the requested knowledge at runtime, rather than
+      fixing all exchanged content at design time, carrying its own provenance and
+      confidence and able to defer where the evidence is insufficient. The point is
+      the capability, not any one serialization or interface: agree how a system
+      explains itself, not the model it uses inside.<a href="#section-10-5" class="pilcrow">¶</a></p>
+<p id="section-10-6">None of this displaces the installed base. Ad hoc production and
+      reconciliation coexist with legacy standards and legacy systems, machine to
+      machine, for the task at hand, while the standardization effort is redirected
+      toward the anchors and the authority boundaries that actually need agreeing.
+      The direction is an evolution of where the community spends its modeling
+      effort, not a repudiation of the value that pre-agreement has delivered.<a href="#section-10-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="related">
+<section id="section-11">
+      <h2 id="name-related-work">
+<a href="#section-11" class="section-number selfRef">11. </a><a href="#name-related-work" class="section-name selfRef">Related Work</a>
+      </h2>
+<p id="section-11-1">Two earlier Internet-Drafts introduced, at an earlier and less mature stage,
+      ideas this document develops and tests. The first, by one of the present
+      authors, took up agent-to-agent reconciliation of the ontologies implicit in
+      data models <span>[<a href="#I-D.janz-nmrg-ontology-reconciliation" class="cite xref">I-D.janz-nmrg-ontology-reconciliation</a>]</span>. The second,
+      by both present authors, introduced thin shared reference lexicons as the
+      anchor for such reconciliation
+      <span>[<a href="#I-D.janz-nmrg-reference-lexicons" class="cite xref">I-D.janz-nmrg-reference-lexicons</a>]</span>. A third draft, again by one
+      of the present authors, treats the consumer-provider relationship in
+      Network-as-a-Service as a continuous agentic negotiation
+      <span>[<a href="#I-D.janz-nmrg-naas-agentic-negotiation" class="cite xref">I-D.janz-nmrg-naas-agentic-negotiation</a>]</span>, the operational
+      setting of the intent scenario here. The present document
+      supersedes the conceptual treatment in those drafts where they differ, and
+      supplies the empirical grounding they lacked.<a href="#section-11-1" class="pilcrow">¶</a></p>
+<p id="section-11-2">The work sits alongside efforts across the network-management community
+      that share its premise, that operational meaning must be held as structured,
+      machine-consumable knowledge and not as form alone. The community's
+      knowledge-graph framework for network operations
+      <span>[<a href="#I-D.mackey-nmop-kg-for-netops" class="cite xref">I-D.mackey-nmop-kg-for-netops</a>]</span> proposes exactly the structured,
+      machine-consumable representation this document lifts data into, and the NMOP
+      work on network fault and anomaly terminology and architecture
+      <span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>
+        <span>[<a href="#I-D.ietf-nmop-network-anomaly-architecture" class="cite xref">I-D.ietf-nmop-network-anomaly-architecture</a>]</span> supplies the
+      vocabulary the observability scenario reconciles against. The network telemetry
+      framework <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> and the standard topology and
+      traffic-engineering models <span>[<a href="#RFC8345" class="cite xref">RFC8345</a>]</span> <span>[<a href="#RFC8795" class="cite xref">RFC8795</a>]</span>
+      supply further common ground the study draws on. The semantic model, the lift,
+      and the thin shared reference developed here are complementary to all of these.
+      A reference is exactly the interoperable anchor to which such knowledge graphs
+      and modeling interfaces could bind. The theoretical grounding is the classical
+      study of signs <span>[<a href="#Morris" class="cite xref">Morris</a>]</span>, with the data-to-wisdom lineage
+      <span>[<a href="#Ackoff" class="cite xref">Ackoff</a>]</span> as an alternative framing that arrives at the same
+      structure.<a href="#section-11-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="next">
+<section id="section-12">
+      <h2 id="name-open-questions-and-next-ste">
+<a href="#section-12" class="section-number selfRef">12. </a><a href="#name-open-questions-and-next-ste" class="section-name selfRef">Open Questions and Next Steps</a>
+      </h2>
+<p id="section-12-1">One important next step is to move the study from purpose-built cases
+      to larger, real, operator-sourced datasets, spanning the same scenarios at
+      production scale and with the messiness of real data. Real models diverge in
+      ways a designed case cannot fully anticipate. The measures reported here,
+      portability, resolved fraction and precision, the reference's graded value, and
+      the cost in reasoning effort, should be re-established on operator data before
+      they are relied upon.<a href="#section-12-1" class="pilcrow">¶</a></p>
+<p id="section-12-2">A further step is more consequential, and only an operator can take it: to
+      attach cognition to a live operating system and have it perform the lift in
+      place, with real access to state, instances and pragmatics, rather than over a
+      frozen export. This matters more than more inert data. An inert dataset, however
+      large, fixes cognition at the un-situated corner of
+      <a href="#fig-quadrangle" class="auto internal xref">Figure 4</a>: it refines the baseline and re-measures the
+      same surface bound, and it cannot separate a fact the lift could recover from
+      the system from one that is genuinely absent, because past the surface
+      everything looks like one wall. A situated lift makes that separation, and what
+      remains unresolved after a maximally situated lift is the true residue, the
+      authority and underdetermination remainder that bounds automation and that this
+      work defines but does not yet measure.<a href="#section-12-2" class="pilcrow">¶</a></p>
+<p id="section-12-3">What the experiment involves can be stated concretely. The target is a live
+      management plane with a machine-readable operational view: an ONF TAPI
+      controller, an IETF-YANG datastore reached over NETCONF or RESTCONF under NMDA,
+      a gNMI-served state stream, or a controller such as ONOS or OpenDaylight. The
+      cognition is a capable agent given read-only tools over that plane, datastore
+      reads on the running and operational datastores, topology and inventory reads,
+      a context export where the interface offers one, a telemetry subscription, and
+      a bounded budget of read-only queries it may issue to settle a question,
+      together with its prior over modeling conventions and, optionally, a thin
+      reference. Safety is a first-class constraint: read-only credentials, rate
+      limits, an audit of every call, and no path to a write. Situatedness is a dial
+      the experiment should sweep, from the frozen export alone (the un-lifted
+      baseline), through structural and relational reads, to instances read from the
+      live datastore, to live state, context export and bounded probes, and finally
+      to a self-lift in which the system's own agent authors its meaning.<a href="#section-12-3" class="pilcrow">¶</a></p>
+<p id="section-12-4">For a chosen slice of the model the agent proceeds concept by concept: it
+      enumerates the concepts from the schema surface; reads each concept's structure,
+      relations and real instances; where the source gloss is thin or absent,
+      generates a grounded gloss from structure, instances and prior and checks it
+      against them; reads the pragmatics, what the thing is for and whose authority
+      governs it, from a context export, from governance or configuration, or, where
+      only a human holds it, by asking; records provenance, marking each fact's method
+      and firmness; and proposes a reference binding. A verifier pass strikes any
+      generation the material does not support, and every fact the agent can neither
+      ground nor read is flagged as a residue candidate for an authority to settle.
+      Portability is then judged exactly as in <a href="#portability" class="auto internal xref">Section 4.2</a>, but on a
+      model lifted in situ: the lifted model, and only the lifted model, is handed to
+      an independent consumer, and the headline number is the value of the lift, the
+      portability of the lifted model minus the portability of the un-lifted baseline
+      on the same concepts. Crossing the situatedness dial with this measure is the
+      core result: as access climbs, portability should rise and the unresolved set
+      should shrink toward the residue, so that what remains at the top of the dial is
+      the first measurement of the irreducible remainder.<a href="#section-12-4" class="pilcrow">¶</a></p>
+<p id="section-12-5">Two scenario cases carry the experiment. The first is a configuration seam:
+      a standard-governed model, an ONF TAPI or IETF-YANG view, lifted in situ from a
+      live controller. It is the readiest clean case, where public standards are
+      present, the surface is rich, and portability is the headline a situated lift
+      can establish with least friction. The second is the observability case, and it
+      is the sharper of the two, because the pragmatic layer is decisive there. In the
+      study, the significance verdict, whether a rising measurement is an alarm, a
+      benign maintenance effect, or a low-confidence reading, is recovered only when
+      the pragmatics are present (verdict accuracy 1.00 and 0.83) and collapses when
+      they are stripped (0.17 and 0.08), and the context that fixes significance lives
+      in the running system rather than in any static model. A focused run would
+      attach cognition to an operator's alarm-and-anomaly system, lift its alarm model
+      in situ with the live context, bind it to the shared anomaly-semantics
+      reference, and measure both portability and the pragmatic verdict against the
+      un-lifted baseline. The NMOP work on network anomaly detection and its semantics
+      (<span>[<a href="#RFC9940" class="cite xref">RFC9940</a>]</span>
+        <span>[<a href="#I-D.ietf-nmop-network-anomaly-architecture" class="cite xref">I-D.ietf-nmop-network-anomaly-architecture</a>]</span>) is already
+      assembling the operational data, the term ladder, and, through its hackathons,
+      the venue such a run would need, and the knowledge-graph representation the data
+      can be held in (<span>[<a href="#I-D.mackey-nmop-kg-for-netops" class="cite xref">I-D.mackey-nmop-kg-for-netops</a>]</span>) is the form a
+      lifted model naturally takes. The barrier to entry is low, because those inputs
+      and that venue already exist.<a href="#section-12-5" class="pilcrow">¶</a></p>
+<p id="section-12-6">The authors invite operators and NMRG and NMOP participants to contribute
+      real model pairs and datasets, to attempt situated lifts in these settings, and
+      to help define a shared benchmark over them.<a href="#section-12-6" class="pilcrow">¶</a></p>
+<p id="section-12-7">Beyond scale, several questions the study opens remain. There is lifting
+      from raw schema text rather than a curated surface, and from a cold start with
+      no instances to read. There is the maintenance of a lifted model and of a
+      shared reference over time. And there is the shape of a published reference
+      ecosystem, and how references derived by different parties from the same
+      standard relate.<a href="#section-12-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="security">
+<section id="section-13">
+      <h2 id="name-security-considerations">
+<a href="#section-13" class="section-number selfRef">13. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<p id="section-13-1">This document describes a direction and reports experimental findings. It
+      defines no protocol and introduces no new wire format. Nonetheless, several
+      considerations follow from the direction. A semantic model and any accompanying
+      reference become inputs a cognitive agent acts on, and so are targets for
+      manipulation. A poisoned reference, or a lifted model with falsified pragmatics
+      or provenance, could steer a reconciliation to an incorrect but confident
+      result. The provenance layer of a semantic model, who asserted a fact, by what
+      method, and how firmly, is therefore security-relevant and should be
+      integrity-protected, and references should be authenticated to their derivation
+      source. The autonomy boundary of <a href="#conclusions" class="auto internal xref">Section 9</a> is also a safety
+      boundary. Decisions of authority, and correspondences an honest agent defers,
+      must not be silently resolved by an agent acting beyond its competence. This
+      concern is sharpened by a measured finding: agents assert wrong bindings at
+      nearly the confidence of correct ones, so a downstream gate cannot rely on a
+      confidence score alone. Reconciliation outcomes intended to drive operational
+      change should carry the confidence and provenance on which they rest, together
+      with an explicit declaration where evidence was insufficient, so that a
+      supervising system or operator can gate action accordingly.<a href="#section-13-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="iana">
+<section id="section-14">
+      <h2 id="name-iana-considerations">
+<a href="#section-14" class="section-number selfRef">14. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+      </h2>
+<p id="section-14-1">This document has no IANA actions.<a href="#section-14-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<section id="section-15">
+      <h2 id="name-informative-references">
+<a href="#section-15" class="section-number selfRef">15. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+      </h2>
+<dl class="references">
+<dt id="Ackoff">[Ackoff]</dt>
+      <dd>
+<span class="refAuthor">Ackoff, R.L.</span>, <span class="refTitle">"From Data to Wisdom"</span>, <span class="refContent">Journal of Applied Systems Analysis, vol. 16</span>, <time datetime="1989" class="refDate">1989</time>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-nmop-network-anomaly-architecture">[I-D.ietf-nmop-network-anomaly-architecture]</dt>
+      <dd>
+<span class="refAuthor">IETF NMOP Working Group</span>, <span class="refTitle">"A Framework for a Network Anomaly Detection Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-nmop-network-anomaly-architecture</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-anomaly-architecture">https://datatracker.ietf.org/doc/html/draft-ietf-nmop-network-anomaly-architecture</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.janz-nmrg-naas-agentic-negotiation">[I-D.janz-nmrg-naas-agentic-negotiation]</dt>
+      <dd>
+<span class="refAuthor">Janz, C.</span>, <span class="refAuthor">Rahimi, H.</span>, and <span class="refAuthor">H. Yu</span>, <span class="refTitle">"Dynamic Network-as-a-Service Life-Cycle Automation Using End-to-End Agent Negotiation"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-janz-nmrg-naas-agentic-negotiation-00</span>, <time datetime="2026-06" class="refDate">June 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-janz-nmrg-naas-agentic-negotiation-00">https://datatracker.ietf.org/doc/html/draft-janz-nmrg-naas-agentic-negotiation-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.janz-nmrg-ontology-reconciliation">[I-D.janz-nmrg-ontology-reconciliation]</dt>
+      <dd>
+<span class="refAuthor">Janz, C.</span>, <span class="refAuthor">Yu, H.</span>, <span class="refAuthor">Rahimi, H.</span>, <span class="refAuthor">Davis, N.</span>, and <span class="refAuthor">D. Lopez</span>, <span class="refTitle">"Automated Agent-to-Agent Ontology Reconciliation for Cognitive Network Management Systems"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-janz-nmrg-ontology-reconciliation-01</span>, <time datetime="2026-07" class="refDate">July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-janz-nmrg-ontology-reconciliation-01">https://datatracker.ietf.org/doc/html/draft-janz-nmrg-ontology-reconciliation-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.janz-nmrg-reference-lexicons">[I-D.janz-nmrg-reference-lexicons]</dt>
+      <dd>
+<span class="refAuthor">Janz, C.</span> and <span class="refAuthor">B. Peters</span>, <span class="refTitle">"Shared Reference Lexicons for Agent-to-Agent Model Reconciliation in Network Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-janz-nmrg-reference-lexicons-00</span>, <time datetime="2026-07" class="refDate">July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-janz-nmrg-reference-lexicons-00">https://datatracker.ietf.org/doc/html/draft-janz-nmrg-reference-lexicons-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.mackey-nmop-kg-for-netops">[I-D.mackey-nmop-kg-for-netops]</dt>
+      <dd>
+<span class="refAuthor">Mackey, M.</span>, <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Keller, H.</span>, <span class="refAuthor">Voyer, D.</span>, <span class="refAuthor">Lucente, P.</span>, and <span class="refAuthor">I. Dominguez Martinez-Casanueva</span>, <span class="refTitle">"Knowledge Graph Framework for Network Operations"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-mackey-nmop-kg-for-netops-04</span>, <time datetime="2026-04" class="refDate">April 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-mackey-nmop-kg-for-netops-04">https://datatracker.ietf.org/doc/html/draft-mackey-nmop-kg-for-netops-04</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="Morris">[Morris]</dt>
+      <dd>
+<span class="refAuthor">Morris, C.W.</span>, <span class="refTitle">"Foundations of the Theory of Signs"</span>, <span class="refContent">University of Chicago Press</span>, <time datetime="1938" class="refDate">1938</time>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8345">[RFC8345]</dt>
+      <dd>
+<span class="refAuthor">Clemm, A.</span> and <span class="refAuthor">J. Medved</span>, <span class="refTitle">"A YANG Data Model for Network Topologies"</span>, <span class="seriesInfo">RFC 8345</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8345">https://www.rfc-editor.org/info/rfc8345</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8795">[RFC8795]</dt>
+      <dd>
+<span class="refAuthor">Liu, X.</span> and <span class="refAuthor">I. Bryskin</span>, <span class="refTitle">"YANG Data Model for Traffic Engineering (TE) Topologies"</span>, <span class="seriesInfo">RFC 8795</span>, <time datetime="2020-08" class="refDate">August 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8795">https://www.rfc-editor.org/info/rfc8795</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9232">[RFC9232]</dt>
+      <dd>
+<span class="refAuthor">Song, H.</span>, <span class="refTitle">"Network Telemetry Framework"</span>, <span class="seriesInfo">RFC 9232</span>, <time datetime="2022-05" class="refDate">May 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9232">https://www.rfc-editor.org/info/rfc9232</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9940">[RFC9940]</dt>
+      <dd>
+<span class="refAuthor">IETF</span>, <span class="refTitle">"Some Key Terms for Network Fault and Problem Management"</span>, <span class="seriesInfo">RFC 9940</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9940">https://www.rfc-editor.org/info/rfc9940</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="W3C.OWL2">[W3C.OWL2]</dt>
+      <dd>
+<span class="refAuthor">W3C</span>, <span class="refTitle">"OWL 2 Web Ontology Language Document Overview (Second Edition)"</span>, <span class="refContent">W3C Recommendation</span>, <time datetime="2012-12" class="refDate">December 2012</time>, <span>&lt;<a href="https://www.w3.org/TR/owl2-overview/">https://www.w3.org/TR/owl2-overview/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="W3C.PROV-O">[W3C.PROV-O]</dt>
+      <dd>
+<span class="refAuthor">W3C</span>, <span class="refTitle">"PROV-O: The PROV Ontology"</span>, <span class="refContent">W3C Recommendation</span>, <time datetime="2013-04" class="refDate">April 2013</time>, <span>&lt;<a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="W3C.RDF11">[W3C.RDF11]</dt>
+      <dd>
+<span class="refAuthor">W3C</span>, <span class="refTitle">"RDF 1.1 Concepts and Abstract Syntax"</span>, <span class="refContent">W3C Recommendation</span>, <time datetime="2014-02" class="refDate">February 2014</time>, <span>&lt;<a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="W3C.SKOS">[W3C.SKOS]</dt>
+    <dd>
+<span class="refAuthor">W3C</span>, <span class="refTitle">"SKOS Simple Knowledge Organization System Reference"</span>, <span class="refContent">W3C Recommendation</span>, <time datetime="2009-08" class="refDate">August 2009</time>, <span>&lt;<a href="https://www.w3.org/TR/skos-reference/">https://www.w3.org/TR/skos-reference/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+<div id="authors-addresses">
+<section id="appendix-A">
+      <h2 id="name-authors-addresses">
+<a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
+      </h2>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Christopher Janz</span></div>
+<div dir="auto" class="left"><span class="org">Huawei</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:christopher.janz@huawei.com" class="email">christopher.janz@huawei.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Brad Peters</span></div>
+<div dir="auto" class="left"><span class="org">NBN</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:bradpeters@nbnco.com.au" class="email">bradpeters@nbnco.com.au</a>
+</div>
+</address>
+</section>
+</div>
+<script>const toc = document.getElementById("toc");
+toc.querySelector("h2").addEventListener("click", e => {
+  toc.classList.toggle("active");
+});
+toc.querySelector("nav").addEventListener("click", e => {
+  toc.classList.remove("active");
+});
+</script>
+</body>
+</html>

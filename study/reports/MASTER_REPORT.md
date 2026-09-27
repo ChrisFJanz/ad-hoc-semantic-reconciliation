@@ -136,7 +136,8 @@ governs it, in what context it holds). Third, **provenance**: who asserted each 
 and how firmly. The lift itself is a **cognitive act**, helped along by a few **supports** that are
 aids to that cognition rather than parts of the model: definitions, worked examples, a canonical
 example, and an optional link to a shared reference. Who performs that cognitive act — and what
-happens to the lift as the available cognition shifts — is a spectrum in its own right, taken up in §4.
+happens to the lift as the available cognition shifts — is a spectrum in its own right, the
+**lift-cognition spectrum**, taken up in §4.
 
 ![The lift — a data model becomes a portable, self-describing semantic model.](../figures/fig_master_lift.png)
 
@@ -217,7 +218,7 @@ and, as the findings will show, exactly the facets a thin reference cannot suppl
 
 Calling the lift a cognitive act forces the question of *whose* cognition performs it, and what
 happens to the lift as that cognition thins. This is a spectrum on the **production** side — the
-**lift-cognition spectrum**, distinct from the cognition spectrum that governs reconciliation in Part 2 —
+**lift-cognition spectrum**, distinct from the **reconciliation spectrum** that governs Part 2 —
 and it decides both how the lift is done and how far it reaches.
 
 At the richest end, the source system is itself live and cognitive and **lifts itself**. It authors
@@ -289,16 +290,16 @@ recorded nowhere and reachable by no lift. So what a concept needs partitions in
 **implicit but present**, made explicit by grounded generation; what is **present but elsewhere in the
 system**, supplied by situated access; and what is **neither**, the residue, referred to a person.
 
-The quadrangle and the cognition spectrum are complementary, and it is worth saying how they meet. The
+The quadrangle and the two spectra are complementary, and it is worth saying how they meet. A
 spectrum grades one of the quadrangle's two axes, *access*: where the quadrangle asks a yes-or-no
-question, situated or holding only the artefact, the spectrum makes it a dial and splits it per
-participant. The lift-cognition spectrum above runs down the externalised row, from self-lift (situated)
-to an agent reading an inert surface (un-situated); the reconciliation spectrum of §13 (both-cognitive,
+question, situated or holding only the artefact, a spectrum makes it a dial and splits it per
+participant. The **lift-cognition spectrum** above runs down the externalised row, from self-lift (situated)
+to an agent reading an inert surface (un-situated); the **reconciliation spectrum** of §13 (both-cognitive,
 one-inert, both-inert) is that same access axis applied to the *counterpart* rather than to oneself. What
-the spectrum has no axis for is the quadrangle's other dimension, *product* — externalise a self-standing
+neither spectrum has an axis for is the quadrangle's other dimension, *product* — externalise a self-standing
 model, or keep the understanding internal — and that is exactly the distinction that separates the lift
 from mere comprehension. So the two do not collapse: the quadrangle names which cognitive act is being
-performed and whether it leaves anything portable behind; the spectrum grades how far that act reaches as
+performed and whether it leaves anything portable behind; a spectrum grades how far that act reaches as
 cognition recedes, along the access axis they share.
 
 ## 5. The reference: how critical it is, and where it comes from
@@ -679,11 +680,12 @@ carrying its own provenance, confidence, and the licence to defer when the evide
 complements the programme's move away from pre-agreed schemas: it standardises how a system explains
 itself, not the model it must use inside.
 
-## 9. When is a portable model hard to reuse? The bridge to reconciliation
+## 9. From one portable model to two: the bridge to reconciliation
 
 If a single lift can be made portable, the sharpest test of the idea is what happens when *two* portable
-models must be made to work together across a seam — the same product modelled commercially on one side
-and technically on the other, a circuit that underlies a service, an alarm that is not quite an anomaly.
+models must be made to work together across a seam — a service intent a business support system (BSS)
+commits, set against the technical realisation an operations support system (OSS) delivers; a circuit
+that underlies a service; an alarm that is not quite an anomaly.
 That is **reconciliation**, a flagship use of a portable model, and the subject of Part 2.
 
 It belongs in the same document rather than a separate theory for a reason Part 2 makes precise:
@@ -789,6 +791,8 @@ within it, calls for its own way of bridging, and this is the axis that turns th
 
 Cutting across both axes is the **cardinality** of a correspondence — whether one concept maps to one, or to *many*. A **granularity** (one-to-many) mismatch, where one side bundles what the other separates, is bridged by a three-step path: **decompose** the coarse concept into its constituents, **co-refer** each constituent to its counterpart, then **compose** the parts back along a structural dependency map. Scenario 4 is the worked case — a legacy alarm decomposes one-to-many into the NMOP alarm-State *and* the fault it implies, and separately reconciled symptoms compose into one incident along the dependency map.
 
+One reading of cardinality runs the other way, to **zero**. A concept can map to one counterpart, to many — or to **none at all**: present in one model and simply absent from the other, because the two cut the world at different joints. This **one-to-zero** case is distinct from a granularity mismatch, where the content is present on both sides and only carved differently; here it is present on one side and missing from the other, as when one system reasons in **services** and the other holds only the **resources** a service is realised over. The map already meets this seam once — Scenario 3's constructed underlay is exactly a service meeting the transport circuit that carries it — but it is worth naming as a divergence in its own right, because its treatment splits on one question: *does the exchange need the absent concept?* Where it does not, the gap is benign and the honest move is to leave it uncovered, returning it unmatched rather than inventing a partner (the "no counterpart" outcome of Figure 2 and §13). Where it does, the gap must be **bridged**, and there are two disciplined ways. The first is to **derive** the missing concept: because the gap is a seam between related things, the deficient side can often synthesise it from what it does hold — a service recovered as a binding over the resources that realise it — the same move by which the study already derives a dependency map from raw inventory and an authority from an interconnect artefact (§19.8), rather than taking either as hand-authored. The second, where derivation is unavailable, is to **extend the shared ground** — adding one entry to the *reference* both sides bind through, not writing the concept into either native schema, which would be the heavyweight re-documentation Part 1 sets aside. Naming the one-to-zero case this way tightens §13's finding rather than loosening it: even a concept absent on one side is not an *unbridgeable* correspondence — it is either out of scope and correctly left unmatched, or in scope and closed by derivation or a reference extension.
+
 The payoff of drawing it this way is that the study's four scenarios stop looking like four topics and
 start looking like a deliberate traverse of the space (Table 2):
 
@@ -855,7 +859,7 @@ aligning the individuals, confirming the result (Figure 2) — is not one act bu
 *Figure 2. Reconciliation over two lifted models. Correspondences are drawn on grounded evidence and
 bound through a thin reference that anchors the shared common ground; a look-alike that shares only a
 surface word is **rejected** as a false cognate on its kind, attachment, and instances; a concept
-with no counterpart in the other model is **correctly returned as unmatched**, a resolved
+with no counterpart in the other model is, **when the exchange does not need it**, correctly returned as unmatched — a resolved
 outcome, not a gap; and a correspondence the evidence cannot *yet* confirm is left in the **residual**,
 referred onward. A bare identity pointer carries no meaning of its own; the reference works through its descriptive content and by tying into the two grounded models it
 connects.*
@@ -871,10 +875,10 @@ rather than guessing: to further machine cognition where the agents are live to 
 person where they are not. How large the residual is, and what drives it, is one of the programme's
 central measurements.
 
-## 13. The cognition spectrum, and the two faces of the residual
+## 13. The reconciliation cognition spectrum, and the two faces of the residual
 
-The master control across all four scenarios is where the cognition sits: the **cognition
-spectrum**. It runs from both sides live and interrogable, through one side inert, to both inert:
+The master control across all four scenarios is where the cognition sits: the **reconciliation
+cognition spectrum**. It runs from both sides live and interrogable, through one side inert, to both inert:
 
 - **both-cognitive**: each side is a live reasoner, the authority on its own model, able to
   explain itself and answer questions;
@@ -904,7 +908,7 @@ onward at any capability.
 This is worth stating as a finding in its own right. Across the four scenarios we found no semantic gap
 that a sufficiently capable, sufficiently reaching cognition could not close. What remains once two
 fully-cognitive agents have exchanged everything they can and run every decisive virtual experiment is
-never an *unbridgeable* correspondence: it is a concept with no counterpart (correctly
+never an *unbridgeable* correspondence: it is a concept with no counterpart **that the exchange does not need** (correctly
 returned as unmatched), a fact not yet realised in the running network (an absence in the world, not in
 meaning), or one of the two irreducible residues — a question of *authority* rather than of fact, or a
 genuine underdetermination no fact can settle (§2, §5). None of these is a gap cognition gets
@@ -918,7 +922,7 @@ plus a gloss) and there such methods have historically stopped, the remainder le
 standard or to human judgement. What the spectrum shows is that the remainder need not wait for
 either: where both systems can reason, the reconciliation completes autonomously, and only as
 cognition recedes does closing the gap fall back to a reference or a person. **It is cognition that
-completes a reconciliation**, and the cognition spectrum is the measure of how far the automation
+completes a reconciliation**, and the reconciliation spectrum is the measure of how far the automation
 reaches before it must hand off.
 
 ## 14. The instrument
@@ -1249,7 +1253,7 @@ does not; and the pragmatic layer is the frontier, decisive for meaning and gate
 
 The four scenarios above are the evidence, case by case; this section reads *across* them. It takes the
 cutting axes the scenarios share — the **cognitive load** an operation costs, the **model power** the
-gradient demands, what the **reference** buys, and what changes with **position on the cognition
+gradient demands, what the **reference** buys, and what changes with **position on the reconciliation
 spectrum** — and then follows the mechanisms into their particulars: reach, the economics of the
 reference, the negotiation and the decisive experiment, and what it takes to produce the inputs a
 reconciliation runs on. Each reading cuts across all four scenarios; together they are the detail that the
@@ -1282,7 +1286,7 @@ to a burden at the weak, inert corner.
 
 ![Deliberation collapses with the reference, for the strong agent.](../figures/fig_effort_substitution.png)
 
-*Figure 6 (scenario 1). The bars show the **reasoning tokens** (a strong agent's hidden deliberation) spent binding two standard schemas (configuration), with and without a shared reference, at each point on the cognition spectrum — both sides live (a two-agent negotiation), one side inert, then both inert (a single reconstructing agent). Given the anchor, deliberation collapses severalfold — about 3.7× at both-cognitive, 6× at one-inert, and 2.4× at both-inert: the reference doing the reasoning's work.*
+*Figure 6 (scenario 1). The bars show the **reasoning tokens** (a strong agent's hidden deliberation) spent binding two standard schemas (configuration), with and without a shared reference, at each point on the reconciliation cognition spectrum — both sides live (a two-agent negotiation), one side inert, then both inert (a single reconstructing agent). Given the anchor, deliberation collapses severalfold — about 3.7× at both-cognitive, 6× at one-inert, and 2.4× at both-inert: the reference doing the reasoning's work.*
 
 One feature of Figure 6 looks paradoxical and is worth reading carefully. The strong agent spends *more* reasoning at both-cognitive (2,345 tokens without the reference) than at both-inert (844), the count falling monotonically as sides go inert. This is not because reconciling live sides is intrinsically harder — the placements are not like-for-like. The both-cognitive point is a two-agent negotiation (two agents, several rounds each of interrogating, proposing, and ratifying; the count is their total deliberation), reaching a complete, verified close. The both-inert point is a single agent making one reconstructive pass that can only *propose* candidates for external adjudication (§13). So the tokens measure how much deliberation a placement can *productively spend* — greatest where cognition is fully live and can be used — not the difficulty of a task held fixed across the spectrum; the cheaper inert end comes with a weaker close, not a free saving. This does not contradict Figure 5, which varies a different thing: Figure 5 holds the task fixed and varies **capability** — a weaker agent burns far more reasoning to reach the *same*, lower-accuracy decision, so there more tokens mark inefficiency; Figure 6 holds capability fixed and varies **placement**, where more tokens mark a placement that can spend deliberation productively and reach a fuller close. Reasoning tokens are not a fixed good or bad — whether more means worse (a weak agent grinding) or better (a live placement doing more) depends on what is held fixed.
 
@@ -1417,12 +1421,12 @@ with strong, live cognition (§19.1), while its **correctness** benefit concentr
 (and so verification) is weakest, disciplining the committing agent exactly where it would otherwise
 err. And independent of any per-reconciliation effect, a shared reference changes how the work **scales** with the number of systems: reconciled pairwise, every system must be aligned with every other (N(N−1)/2 operations, growing as N²); bound instead to one shared reference, each system is reconciled once against the anchor and any two then interoperate *through* it (N operations, linear). This is verified by construction to N = 12 (§15), and §19.8 puts it on real effort rather than a graph count.
 
-### 19.4 Position on the cognition spectrum: what degrades, and how
+### 19.4 Position on the reconciliation spectrum: what degrades, and how
 
-Position on the cognition spectrum is the master variable, and moving along it degrades a reconciliation
+Position on the reconciliation spectrum is the master variable, and moving along it degrades a reconciliation
 in a specific, measured way. This is sharpest in **scenario 2**, the intent scenario, where a consumer and a provider negotiate an
 intent to a workable deal, and the crux is a pragmatic judgement: whether a degraded counter-offer is
-acceptable to the customer. Across the cognition spectrum (Figure 12) that decision closes autonomously
+acceptable to the customer. Across the reconciliation spectrum (Figure 12) that decision closes autonomously
 while the customer's judgement is present (live at both-cognitive, or **pre-placed as a portable
 policy**) and falls to the floor at the mute and both-inert placements, where the correct behaviour is
 to refer the decision to a person. The pre-placed policy is the mechanism that holds the line where a mute customer
@@ -1431,7 +1435,7 @@ description must hand off.
 
 ![The negotiation across the spectrum; a pre-placed policy holds the line.](../figures/fig_intent_negotiation.png)
 
-*Figure 12 (scenario 2). This traces the **decision accuracy** of the customer side deciding whether to accept or refer a negotiated offer, across the cognition spectrum. It holds high while the customer's judgement is present (live, or pre-placed in a movable policy) and collapses to referral at consumer-mute and both-inert, where the correct behaviour is to hand the decision to a person.*
+*Figure 12 (scenario 2). This traces the **decision accuracy** of the customer side deciding whether to accept or refer a negotiated offer, across the reconciliation cognition spectrum. It holds high while the customer's judgement is present (live, or pre-placed in a movable policy) and collapses to referral at consumer-mute and both-inert, where the correct behaviour is to hand the decision to a person.*
 
 The same logic reaches down to the **instance** level in **scenario 1**. Instance co-reference is
 deciding which individual on one side is the same as which on the other. Most pairs are settled from the
@@ -1565,7 +1569,7 @@ paying the construction cost afresh on every exchange.
 
 ![When constructing the shared reference is worth the cognition it costs.](../figures/fig_construct_cost.png)
 
-*Figure 15 (the economics of constructing a reference). The bars give the strong agent's **resolved fraction** when the two live agents construct a shared reference and bind through it, under three conditions — no shared reference (grey), a reference the agents construct themselves (orange), and a given, already-published reference (blue) — across the schema scenarios, with the reasoning each condition spent noted on each bar. In scenario 3, where no standard exists, constructing the reference lifts the two agents from 0.20 to 0.80 (0.90 with a decisive experiment on the candidates) and is the realistic path; in scenarios 1 and 4 a given reference reaches the same close for a fraction of the cognition, so constructing one is redundant. Construction is capability-gated: a weak agent pays far more to build a worse reference, as the six-model ladder's non-convergence at the weak end shows.*
+*Figure 15 (when constructing a reference is worth it). The bars give the strong agent's **resolved fraction** under three reference conditions — no shared reference (grey), one the agents construct themselves (orange), and a given, already-published reference (blue) — across the schema scenarios, with the reasoning each condition spent noted on each bar. In scenario 3, where no standard exists, constructing the reference lifts the two agents from 0.20 to 0.80 (0.90 with a decisive experiment on the candidates) and is the realistic path; in scenarios 1 and 4 a given reference reaches the same close for a fraction of the cognition, so constructing one is redundant. Construction is capability-gated: a weak agent pays far more to build a worse reference, as the six-model ladder's non-convergence at the weak end shows.*
 
 ### 19.7 The negotiation in the act, and the decisive experiment
 
@@ -1633,8 +1637,8 @@ reference amortises both.** That is the completion the fully-cognitive case prom
 argued.
 
 Measured apart, the decisive experiment and the agent's own record-reading verification prove to be
-genuinely different authorities, and the difference is one of *reach*. Where an independent, gold-free
-graph oracle can act, it is faithful — perfect where both sides are live; the agent's verifier, judging
+genuinely different authorities, and the difference is one of *reach*. Where an independent graph oracle
+(one that needs no gold key) can act, it is faithful — perfect where both sides are live; the agent's verifier, judging
 the same proposals, agrees with it about 64% of the time, and every disagreement is the agent
 **over-passing** a byte-clean wrong pair the experiment refutes (every split goes the oracle's way). But
 the oracle's authority is bought with liveness, and its reach recedes exactly as it is most needed: its
@@ -1786,7 +1790,7 @@ reconcile independently authored, divergent models correctly and with no bridgin
 advance: completing an equivalence between two standard models (scenario 1), refining and negotiating an
 intent against a catalogue (scenario 2), binding across a private domain boundary once they have built the
 shared ground (scenario 3), and reading an observability world for what its signals mean (scenario 4),
-measured against a validated gold across the cognition spectrum, not shown once by hand.
+measured against a validated gold across the reconciliation spectrum, not shown once by hand.
 
 The same exploration says, more sharply, **where the reconciliation needs no help**. At the
 fully-cognitive end of the spectrum it completes **autonomously**: no bridging standard agreed in
