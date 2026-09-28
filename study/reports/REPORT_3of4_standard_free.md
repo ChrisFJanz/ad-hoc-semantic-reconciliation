@@ -254,6 +254,8 @@ the same for the strong agent whichever single factor is present.
 | a shared **definition** only | 1.00 | 1.00 | 0.00 |
 | a shared **example** only | 1.00 | 1.00 | 0.00 |
 
+*Table 1. Reference-content ablation for the strong agent at the inert placement: resolved fraction, precision, and surviving false cognates as each descriptive factor is provided alone.*
+
 Two things stand out. First, **a bare shared identifier is worse than nothing**: given opaque
 tokens to match on and no description to say what they mean, the strong agent binds by the token
 and binds wrongly; precision falls to 0.50, below the no-reference floor. The reference does not

@@ -809,6 +809,8 @@ strong model's cross-lexicon alignment.
 | id-only (all descriptive fields stripped) | **1.00** / 0.94 | 0.89 / 0.98 |
 | no reference at all | **1.00** / 0.90 | 0.89 / 1.00 |
 
+*Table 4. Field ablation on the independent-lexicon case (§5.1) at the inert placements: precision and resolved fraction for the strong (sol) and weak (nano) agents as the reference's descriptive fields are stripped.*
+
 The expected break did not occur. The strong model holds precision at 1.00 across everything, from the
 full reference down to an id-only anchor and even to no reference at all; what the descriptive fields
 buy it is a little **resolved fraction** (1.00 with the fields present, easing to 0.94 at id-only and 0.90 with no
@@ -841,6 +843,8 @@ both ways (9 standard and 11 vendor concepts, 9 correspondences including one co
 | agent — strong, no reference | 1.00 | 0.89 |
 | agent — mid, both-cognitive, with reference | 1.00 | 1.00 |
 | agent — weak, all conditions | 1.00 | 0.89 |
+
+*Table 5. Precision and resolved fraction by reconciliation stack on the harder standards case — deep nested paths, sparse glosses, a config/state split, cross-module augments, and native gaps both ways.*
 
 Surface matching collapses to 0.33 resolved fraction (against 0.5 on the tidy config cases): the deep paths and
 sparse glosses give almost nothing to key on. Cognition recovers almost all of it and never at the
@@ -890,6 +894,8 @@ against off (the legacy page-everything pipeline).
 | mid (mini) | **1.00 / 1.00** | 0.00 / 0.00 |
 | weak (nano) | **0.78 / 0.78** | 0.00 / 0.00 |
 
+*Table 6. Cross-layer correlation carried into the configuration/transport domain, per model: partition-exactness and cause-accuracy with the dependency map on, against the page-everything pipeline with it off.*
+
 The operation transfers cleanly. The strong and mid checkpoints partition the configuration-domain
 incidents perfectly, identical to their observability performance, and name the right root cause every
 time; the off baseline scores zero exact partitions by construction, because these cases all
@@ -918,6 +924,8 @@ quadratic). At N = 4 that is 3 passes against 6.
 | strong (sol) | 6,505 | 13,576 | 2.1× |
 | mid (mini) | 8,572 | 17,157 | 2.0× |
 | weak (nano) | 11,045 | 30,225 | **2.7×** |
+
+*Table 7. Onboarding cost, per model: mean tokens for reuse (linear — one referenced pass per new system) versus pairwise (quadratic — every earlier pair), and their ratio, at N = 4.*
 
 Real effort tracks the linear/quadratic gap and widens at the weak end: the strong and mid models pay
 almost exactly the pass ratio (2×), while the weak model pays 2.7×, because each unreferenced pairwise
@@ -962,9 +970,11 @@ the planted traps**.
 | any model — surviving false cognates | 0 | 0 | 0 | 0 | 0 |
 | weak — confident errors (mean per run) | 0.25 | 0.50 | 0.50 | 0.50 | 0.75 |
 
+*Table 8. The lexicon-divergence sweep: precision per model, surviving false cognates, and the weak agent's confident-error count across independent-pair divergence from 0.00 to 1.00 (the data behind Figure 7).*
+
 ![The lexicon-divergence sweep: precision holds for the capable agent while the weak model's confident errors rise.](../figures/fig_divergence.png)
 
-*Figure 5.7. Left: precision across the divergence axis, per model. The strong agent is flat at 1.00,
+*Figure 7. Left: precision across the divergence axis, per model. The strong agent is flat at 1.00,
 and no model takes a planted cross-lexicon false cognate at any level, so the guard itself never fails;
 the mid and weak agents vary in a narrow high band, spurious over-proposal rather than trap-taking.
 Right: the one quantity divergence moves is the weak model's confident-error count, which roughly triples
