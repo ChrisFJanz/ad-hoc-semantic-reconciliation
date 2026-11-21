@@ -1,0 +1,414 @@
+{
+ "condition": "one_inert",
+ "trial": 0,
+ "events": [
+  {
+   "kind": "rename",
+   "side": "b",
+   "components": [
+    "X2:p0"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yvr-er-02/et-0/0/0"
+    ],
+    "b": [
+     "b.tp-1891978b"
+    ]
+   },
+   "new_handle": "b.tp-3ed778a7"
+  },
+  {
+   "kind": "rekey_distinct",
+   "side": "a",
+   "components": [
+    "C0:p2",
+    "C0:p0"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yyz-cr-06/et-0/0/2",
+     "a.yyz-cr-06/et-0/0/0"
+    ],
+    "b": [
+     "b.tp-5bbff6ef",
+     "b.tp-6b80277f"
+    ]
+   }
+  },
+  {
+   "kind": "rekey_lookalike",
+   "side": "b",
+   "components": [
+    "C1:p6",
+    "C1:p7"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yxe-cr-03/et-0/0/6",
+     "a.yxe-cr-03/et-0/0/7"
+    ],
+    "b": [
+     "b.tp-2bfd876a",
+     "b.tp-a0597199"
+    ]
+   }
+  },
+  {
+   "kind": "decommission",
+   "side": null,
+   "components": [
+    "C1:p1"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yxe-cr-03/et-0/0/1"
+    ],
+    "b": [
+     "b.tp-76dde144"
+    ]
+   }
+  },
+  {
+   "kind": "readdress",
+   "side": null,
+   "components": [
+    "X2:p1"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yvr-er-02/et-0/0/1"
+    ],
+    "b": [
+     "b.tp-68370de9"
+    ]
+   }
+  },
+  {
+   "kind": "move_address",
+   "side": null,
+   "components": [
+    "G0b:p7",
+    "G0b:p8"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yow-ar-05/et-0/0/7",
+     "a.yow-ar-05/et-1/0/0"
+    ],
+    "b": [
+     "b.tp-19da12cb",
+     "b.tp-b28b8755"
+    ]
+   }
+  },
+  {
+   "kind": "cable_swap",
+   "side": null,
+   "components": [
+    "G0b:p3",
+    "G0b:p4"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yow-ar-05/et-0/0/3",
+     "a.yow-ar-05/et-0/0/4"
+    ],
+    "b": [
+     "b.tp-e489acd1",
+     "b.tp-3bb14dcf"
+    ]
+   }
+  }
+ ],
+ "final_bindings": [
+  [
+   "a.yyz-cr-06",
+   "b.node-891be86f"
+  ],
+  [
+   "a.yyz-cr-06/ae6",
+   "b.tp-f4bae4dc"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/2",
+   "b.tp-6b80277f"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/1",
+   "b.tp-d54a4f47"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/0",
+   "b.tp-5bbff6ef"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/3",
+   "b.tp-59ebe37d"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/4",
+   "b.tp-5a4d1e42"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/5",
+   "b.tp-7ce4df47"
+  ],
+  [
+   "a.yxe-cr-03",
+   "b.node-d57f7b85"
+  ],
+  [
+   "a.yxe-cr-03/ae4",
+   "b.tp-86c6aec7"
+  ],
+  [
+   "a.yxe-cr-03/ae8",
+   "b.tp-0f6c5a44"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/0",
+   "b.tp-d252c51c"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/2",
+   "b.tp-bef584d3"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/3",
+   "b.tp-100c2374"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/5",
+   "b.tp-6d4406be"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/6",
+   "b.tp-2bfd876a"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/7",
+   "b.tp-a0597199"
+  ],
+  [
+   "a.ywg-cr-00",
+   "b.node-9b928c01"
+  ],
+  [
+   "a.ywg-cr-00/ae3",
+   "b.tp-c2fe3242"
+  ],
+  [
+   "a.ywg-cr-00/et-0/0/0",
+   "b.tp-c4779d73"
+  ],
+  [
+   "a.ywg-cr-00/et-0/0/1",
+   "b.tp-b27a3a3f"
+  ],
+  [
+   "a.ywg-cr-00/et-0/0/2",
+   "b.tp-b3e678d5"
+  ],
+  [
+   "a.yhz-ar-01",
+   "b.node-183b0ab0"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/0",
+   "b.tp-eb7865a1"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/1",
+   "b.tp-a25e9c52"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/2",
+   "b.tp-16c09dd5"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/3",
+   "b.tp-72e772ac"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/4",
+   "b.tp-a63e5804"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/5",
+   "b.tp-8c9a4121"
+  ],
+  [
+   "a.yow-ar-05",
+   "b.node-353f75fc"
+  ],
+  [
+   "a.yow-ar-05/ae2",
+   "b.tp-d40769e8"
+  ],
+  [
+   "a.yow-ar-05/ae5",
+   "b.tp-cb59b347"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/0",
+   "b.tp-881b0151"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/1",
+   "b.tp-2519f04a"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/3",
+   "b.tp-e489acd1"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/4",
+   "b.tp-3bb14dcf"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/6",
+   "b.tp-6b1cfb03"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/7",
+   "b.tp-19da12cb"
+  ],
+  [
+   "a.yow-ar-05/et-1/0/0",
+   "b.tp-b28b8755"
+  ],
+  [
+   "a.yow-ar-05/et-1/0/1",
+   "b.tp-2418fe41"
+  ],
+  [
+   "a.yul-er-04",
+   "b.node-b2bbe90c"
+  ],
+  [
+   "a.yul-er-04/et-0/0/0",
+   "b.tp-32e15a14"
+  ],
+  [
+   "a.yul-er-04/et-0/0/1",
+   "b.tp-e0ab2661"
+  ],
+  [
+   "a.yul-er-07",
+   "b.node-0d30dd9a"
+  ],
+  [
+   "a.yul-er-07/et-0/0/0",
+   "b.tp-724e0671"
+  ],
+  [
+   "a.yul-er-07/et-0/0/1",
+   "b.tp-d4c9f43e"
+  ],
+  [
+   "a.yvr-er-02",
+   "b.node-b6c47796"
+  ],
+  [
+   "a.yvr-er-02/et-0/0/0",
+   "b.tp-3ed778a7"
+  ],
+  [
+   "a.yvr-er-02/et-0/0/1",
+   "b.tp-68370de9"
+  ]
+ ],
+ "left_open": [
+  "a.yxe-cr-03/et-0/0/6",
+  "a.yxe-cr-03/et-0/0/7"
+ ],
+ "transcript": [
+  {
+   "from": "A",
+   "handle_changes": [
+    {
+     "side": "A",
+     "old_handle": "a.yyz-cr-06/et-0/0/0",
+     "new_handle": "a.yyz-cr-06/et-0/0/2",
+     "reason": "A authoritatively exchanged the two handles; the component formerly denoted by et-0/0/0 is now denoted by et-0/0/2."
+    },
+    {
+     "side": "A",
+     "old_handle": "a.yyz-cr-06/et-0/0/2",
+     "new_handle": "a.yyz-cr-06/et-0/0/0",
+     "reason": "A authoritatively exchanged the two handles; the component formerly denoted by et-0/0/2 is now denoted by et-0/0/0."
+    },
+    {
+     "side": "B",
+     "old_handle": "b.tp-1891978b",
+     "new_handle": "b.tp-3ed778a7",
+     "reason": "B replaced the handle while retaining the same node membership, address, and link endpoint for the port."
+    }
+   ],
+   "removed": [
+    "a.yxe-cr-03/et-0/0/1",
+    "b.tp-76dde144",
+    "b.link-dc842b34"
+   ],
+   "cannot_tell": [
+    "a.yxe-cr-03/et-0/0/6",
+    "a.yxe-cr-03/et-0/0/7"
+   ],
+   "notes": "The YXE et-0/0/6 and et-0/0/7 bindings are unresolved: B's link endpoints exchanged between their bound B handles, while the corresponding A handles are declared look-alikes, so the records cannot distinguish a B-handle exchange from changed topology. Address changes/exchanges and the authoritative cable exchange on YOW et-0/0/3 and et-0/0/4 do not change bindings."
+  }
+ ],
+ "effort": {
+  "total_tokens": 9867,
+  "reasoning_tokens": 1829,
+  "latency_s": 22.24,
+  "turns": 1,
+  "observations": 0
+ },
+ "score": {
+  "per_event": [
+   {
+    "kind": "rename",
+    "side": "b",
+    "outcome": "right"
+   },
+   {
+    "kind": "rekey_distinct",
+    "side": "a",
+    "outcome": "right"
+   },
+   {
+    "kind": "rekey_lookalike",
+    "side": "b",
+    "outcome": "left_open"
+   },
+   {
+    "kind": "decommission",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "readdress",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "move_address",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "cable_swap",
+    "side": null,
+    "outcome": "right"
+   }
+  ],
+  "bindings_expected": 49,
+  "bindings_right": 47,
+  "bindings_left_open": 2,
+  "bindings_wrong": 0,
+  "rows_with_a_dead_handle": 0
+ },
+ "network": "small",
+ "model": "gpt-5.6-sol"
+}

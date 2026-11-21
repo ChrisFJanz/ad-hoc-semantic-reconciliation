@@ -1,0 +1,4 @@
+network,condition,run,bindings_expected,bindings_right,bindings_left_open,bindings_wrong,rows_with_a_dead_handle,observations,turns,total_tokens,latency_s,rename,rekey_distinct,rekey_lookalike,decommission,readdress,move_address,cable_swap
+small,one_inert,1,49,47,2,0,0,0,1,9867,22.2,right,right,left_open,right,right,right,right
+small,one_inert,2,49,49,0,0,0,0,1,10684,24.4,right,right,right,right,right,right,right
+small,one_inert,3,49,47,2,0,0,0,1,8744,15.7,right,right,left_open,right,right,right,right

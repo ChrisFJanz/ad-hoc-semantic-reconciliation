@@ -1,0 +1,1156 @@
+[
+ {
+  "network": "small",
+  "individuals": 50,
+  "seed": 7,
+  "rows": [
+   {
+    "kind": "rename",
+    "stale": null,
+    "voids": true,
+    "what": "a handle is renamed",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 33,
+      "wrong_repairs": 0,
+      "values_compared": 4840
+     },
+     "relations": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 1440
+     },
+     "observation": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 40,
+      "wrong_repairs": 0,
+      "observations": 1960,
+      "observations_to_repair": 40
+     },
+     "relations+observation": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 40,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 40,
+      "relations_compared": 1440
+     }
+    }
+   },
+   {
+    "kind": "rekey_distinct",
+    "stale": null,
+    "voids": true,
+    "what": "two handles re-keyed, ports with addresses",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 80,
+      "found": 0,
+      "missed": 80,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "values_compared": 4840
+     },
+     "relations": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 80,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 1440
+     },
+     "observation": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "observations": 2000,
+      "observations_to_repair": 103
+     },
+     "relations+observation": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "observations": 160,
+      "observations_to_repair": 103,
+      "relations_compared": 1440
+     }
+    }
+   },
+   {
+    "kind": "rekey_lookalike",
+    "stale": null,
+    "voids": true,
+    "what": "two handles re-keyed, look-alike ports",
+    "instances": 12,
+    "own_record_changed": 12,
+    "by_mechanism": {
+     "on_use": {
+      "void": 24,
+      "found": 0,
+      "missed": 24,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 24,
+      "found": 0,
+      "missed": 24,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 1452
+     },
+     "relations": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 24,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 432
+     },
+     "observation": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 24,
+      "wrong_repairs": 0,
+      "observations": 600,
+      "observations_to_repair": 32
+     },
+     "relations+observation": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 24,
+      "wrong_repairs": 0,
+      "observations": 48,
+      "observations_to_repair": 32,
+      "relations_compared": 432
+     }
+    }
+   },
+   {
+    "kind": "decommission",
+    "stale": null,
+    "voids": true,
+    "what": "a port is decommissioned",
+    "instances": 24,
+    "own_record_changed": 24,
+    "by_mechanism": {
+     "on_use": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 2832
+     },
+     "relations": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 816
+     },
+     "observation": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 1176,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 24,
+      "found": 24,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 816
+     }
+    }
+   },
+   {
+    "kind": "readdress",
+    "stale": null,
+    "voids": false,
+    "what": "an address is changed",
+    "instances": 24,
+    "own_record_changed": 24,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 2904
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 864
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 1200,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 864
+     }
+    }
+   },
+   {
+    "kind": "readdress",
+    "stale": "b",
+    "voids": false,
+    "what": "an address is changed, B's record not refreshed",
+    "instances": 24,
+    "own_record_changed": 24,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 2904
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 864
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 1200,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 864
+     }
+    }
+   },
+   {
+    "kind": "move_address",
+    "stale": null,
+    "voids": false,
+    "what": "two ports exchange addresses",
+    "instances": 33,
+    "own_record_changed": 33,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 3993
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 1188
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 1650,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 1188
+     }
+    }
+   },
+   {
+    "kind": "move_address",
+    "stale": "b",
+    "voids": false,
+    "what": "two ports exchange addresses, B's record not refreshed",
+    "instances": 33,
+    "own_record_changed": 33,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 66,
+      "repaired": 0,
+      "wrong_repairs": 66,
+      "values_compared": 3993
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 1188
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 1650,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 1188
+     }
+    }
+   },
+   {
+    "kind": "cable_swap",
+    "stale": null,
+    "voids": false,
+    "what": "two cables exchanged on look-alike ports",
+    "instances": 6,
+    "own_record_changed": 6,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 726
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 216
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 300,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 216
+     }
+    }
+   },
+   {
+    "kind": "cable_swap",
+    "stale": "b",
+    "voids": false,
+    "what": "two cables exchanged, B's record not refreshed",
+    "instances": 6,
+    "own_record_changed": 6,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 726
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 24,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 216
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 300,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 24,
+      "observations_to_repair": 0,
+      "relations_compared": 216
+     }
+    }
+   }
+  ]
+ },
+ {
+  "network": "medium",
+  "individuals": 150,
+  "seed": 7,
+  "rows": [
+   {
+    "kind": "rename",
+    "stale": null,
+    "voids": true,
+    "what": "a handle is renamed",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 32,
+      "wrong_repairs": 0,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 40,
+      "wrong_repairs": 0,
+      "observations": 5960,
+      "observations_to_repair": 40
+     },
+     "relations+observation": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 40,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 40,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "rekey_distinct",
+    "stale": null,
+    "voids": true,
+    "what": "two handles re-keyed, ports with addresses",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 80,
+      "found": 0,
+      "missed": 80,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 80,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "observations": 6000,
+      "observations_to_repair": 95
+     },
+     "relations+observation": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "observations": 160,
+      "observations_to_repair": 95,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "rekey_lookalike",
+    "stale": null,
+    "voids": true,
+    "what": "two handles re-keyed, look-alike ports",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 80,
+      "found": 0,
+      "missed": 80,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 80,
+      "found": 0,
+      "missed": 80,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 80,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "observations": 6000,
+      "observations_to_repair": 104
+     },
+     "relations+observation": {
+      "void": 80,
+      "found": 80,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 80,
+      "wrong_repairs": 0,
+      "observations": 160,
+      "observations_to_repair": 104,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "decommission",
+    "stale": null,
+    "voids": true,
+    "what": "a port is decommissioned",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 14440
+     },
+     "relations": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4560
+     },
+     "observation": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 5960,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 40,
+      "found": 40,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 4560
+     }
+    }
+   },
+   {
+    "kind": "readdress",
+    "stale": null,
+    "voids": false,
+    "what": "an address is changed",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 6000,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "readdress",
+    "stale": "b",
+    "voids": false,
+    "what": "an address is changed, B's record not refreshed",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 6000,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "move_address",
+    "stale": null,
+    "voids": false,
+    "what": "two ports exchange addresses",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 6000,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "move_address",
+    "stale": "b",
+    "voids": false,
+    "what": "two ports exchange addresses, B's record not refreshed",
+    "instances": 40,
+    "own_record_changed": 40,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 80,
+      "repaired": 0,
+      "wrong_repairs": 80,
+      "values_compared": 14560
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 4640
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 6000,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 4640
+     }
+    }
+   },
+   {
+    "kind": "cable_swap",
+    "stale": null,
+    "voids": false,
+    "what": "two cables exchanged on look-alike ports",
+    "instances": 22,
+    "own_record_changed": 22,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 8008
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 2552
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 3300,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 0,
+      "observations_to_repair": 0,
+      "relations_compared": 2552
+     }
+    }
+   },
+   {
+    "kind": "cable_swap",
+    "stale": "b",
+    "voids": false,
+    "what": "two cables exchanged, B's record not refreshed",
+    "instances": 22,
+    "own_record_changed": 22,
+    "by_mechanism": {
+     "on_use": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0
+     },
+     "identifiers": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "values_compared": 8008
+     },
+     "relations": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 88,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "relations_compared": 2552
+     },
+     "observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 3300,
+      "observations_to_repair": 0
+     },
+     "relations+observation": {
+      "void": 0,
+      "found": 0,
+      "missed": 0,
+      "false_alarms": 0,
+      "repaired": 0,
+      "wrong_repairs": 0,
+      "observations": 88,
+      "observations_to_repair": 0,
+      "relations_compared": 2552
+     }
+    }
+   }
+  ]
+ }
+]

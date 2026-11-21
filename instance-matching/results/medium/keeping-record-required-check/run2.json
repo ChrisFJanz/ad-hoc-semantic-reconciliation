@@ -1,0 +1,1180 @@
+{
+ "condition": "record_check",
+ "trial": 1,
+ "events": [
+  {
+   "kind": "rename",
+   "side": "a",
+   "components": [
+    "G2b:p9"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yul-ar-04/et-1/0/1"
+    ],
+    "b": [
+     "b.tp-46226a08"
+    ]
+   },
+   "new_handle": "a.yul-ar-04/et-1/0/1-r443"
+  },
+  {
+   "kind": "rekey_distinct",
+   "side": "b",
+   "components": [
+    "C0:p11",
+    "C0:p15"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yqb-cr-07/et-1/0/3",
+     "a.yqb-cr-07/et-1/0/7"
+    ],
+    "b": [
+     "b.tp-af4bad0b",
+     "b.tp-6547c535"
+    ]
+   }
+  },
+  {
+   "kind": "rekey_lookalike",
+   "side": "a",
+   "components": [
+    "G1a:p0",
+    "G1a:p1"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yyc-ar-13/et-0/0/0",
+     "a.yyc-ar-13/et-0/0/1"
+    ],
+    "b": [
+     "b.tp-6f0fc1e3",
+     "b.tp-015ca880"
+    ]
+   }
+  },
+  {
+   "kind": "decommission",
+   "side": null,
+   "components": [
+    "C3:p5"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yqb-cr-14/et-0/0/5"
+    ],
+    "b": [
+     "b.tp-77169572"
+    ]
+   }
+  },
+  {
+   "kind": "readdress",
+   "side": null,
+   "components": [
+    "G2a:p7"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yeg-ar-06/et-0/0/7"
+    ],
+    "b": [
+     "b.tp-166a138a"
+    ]
+   }
+  },
+  {
+   "kind": "move_address",
+   "side": null,
+   "components": [
+    "G2b:p3",
+    "G2b:p4"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yul-ar-04/et-0/0/3",
+     "a.yul-ar-04/et-0/0/4"
+    ],
+    "b": [
+     "b.tp-9e9381f9",
+     "b.tp-73ae9b38"
+    ]
+   }
+  },
+  {
+   "kind": "cable_swap",
+   "side": null,
+   "components": [
+    "C1:p0",
+    "C1:p3"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yhz-cr-08/et-0/0/0",
+     "a.yhz-cr-08/et-0/0/3"
+    ],
+    "b": [
+     "b.tp-dbc83434",
+     "b.tp-123cee98"
+    ]
+   }
+  }
+ ],
+ "final_bindings": [
+  [
+   "a.yqb-cr-07",
+   "b.node-19f8c573"
+  ],
+  [
+   "a.yqb-cr-07/ae4",
+   "b.tp-817cdc42"
+  ],
+  [
+   "a.yqb-cr-07/ae7",
+   "b.tp-26e8cb85"
+  ],
+  [
+   "a.yqb-cr-07/et-0/0/1",
+   "b.tp-10ff6ac4"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/2",
+   "b.tp-c3a9d712"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/4",
+   "b.tp-3c13c4d1"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/5",
+   "b.tp-7a0f8e2d"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/6",
+   "b.tp-e4c7a291"
+  ],
+  [
+   "a.yqb-cr-07/et-0/0/2",
+   "b.tp-c1f3d7a3"
+  ],
+  [
+   "a.yqb-cr-07/et-0/0/5",
+   "b.tp-054b8383"
+  ],
+  [
+   "a.yqb-cr-07/et-0/0/6",
+   "b.tp-2d8c73e6"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/0",
+   "b.tp-1aca9b4c"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/1",
+   "b.tp-ca229ad8"
+  ],
+  [
+   "a.yhz-cr-08",
+   "b.node-e955bee5"
+  ],
+  [
+   "a.yhz-cr-08/ae4",
+   "b.tp-182056df"
+  ],
+  [
+   "a.yhz-cr-08/ae9",
+   "b.tp-337ad96f"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/1",
+   "b.tp-5ef78e17"
+  ],
+  [
+   "a.yhz-cr-08/et-1/0/2",
+   "b.tp-2fe5d398"
+  ],
+  [
+   "a.yhz-cr-08/et-1/0/3",
+   "b.tp-723cc2f3"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/2",
+   "b.tp-0f1e44d2"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/5",
+   "b.tp-5d74b0c8"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/6",
+   "b.tp-bc61b7d1"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/7",
+   "b.tp-e7a21bd5"
+  ],
+  [
+   "a.yhz-cr-08/et-1/0/0",
+   "b.tp-d773459b"
+  ],
+  [
+   "a.yyz-cr-18",
+   "b.node-48555212"
+  ],
+  [
+   "a.yyz-cr-18/ae12",
+   "b.tp-d3ba4557"
+  ],
+  [
+   "a.yyz-cr-18/ae2",
+   "b.tp-28b735f4"
+  ],
+  [
+   "a.yyz-cr-18/ae8",
+   "b.tp-c6ee14b1"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/0",
+   "b.tp-4f9f24c4"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/1",
+   "b.tp-a81d81a4"
+  ],
+  [
+   "a.yyz-cr-18/et-1/0/5",
+   "b.tp-87da760f"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/3",
+   "b.tp-3f7c5eaa"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/4",
+   "b.tp-39a6a9f1"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/6",
+   "b.tp-937d200e"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/7",
+   "b.tp-d663803f"
+  ],
+  [
+   "a.yyz-cr-18/et-1/0/1",
+   "b.tp-2068cad6"
+  ],
+  [
+   "a.yqb-cr-14/ae4",
+   "b.tp-b8020545"
+  ],
+  [
+   "a.yqb-cr-14/et-0/0/0",
+   "b.tp-5de62a8a"
+  ],
+  [
+   "a.yqb-cr-14/et-0/0/1",
+   "b.tp-a3b6d183"
+  ],
+  [
+   "a.yqb-cr-14/et-0/0/2",
+   "b.tp-fed02a3f"
+  ],
+  [
+   "a.yqb-cr-14/et-0/0/3",
+   "b.tp-678bedc9"
+  ],
+  [
+   "a.ywg-ar-15",
+   "b.node-e267ee3c"
+  ],
+  [
+   "a.ywg-ar-15/ae3",
+   "b.tp-c5f5a861"
+  ],
+  [
+   "a.ywg-ar-15/ae9",
+   "b.tp-a174557c"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/0",
+   "b.tp-6c9d7352"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/1",
+   "b.tp-4063fc60"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/2",
+   "b.tp-2a489b0c"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/4",
+   "b.tp-d37b5b34"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/5",
+   "b.tp-efa34fc8"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/6",
+   "b.tp-2f3252bd"
+  ],
+  [
+   "a.ywg-ar-15/et-0/0/7",
+   "b.tp-9defe48c"
+  ],
+  [
+   "a.ywg-ar-15/et-1/0/0",
+   "b.tp-0ebf1200"
+  ],
+  [
+   "a.ywg-ar-00",
+   "b.node-bcd7eeb5"
+  ],
+  [
+   "a.ywg-ar-00/et-0/0/0",
+   "b.tp-938e8e7d"
+  ],
+  [
+   "a.ywg-ar-00/et-0/0/1",
+   "b.tp-e72b314d"
+  ],
+  [
+   "a.ywg-ar-00/et-0/0/2",
+   "b.tp-5b0a33aa"
+  ],
+  [
+   "a.ywg-ar-00/et-0/0/3",
+   "b.tp-b707eb03"
+  ],
+  [
+   "a.ywg-ar-00/et-0/0/4",
+   "b.tp-5fab0df4"
+  ],
+  [
+   "a.ywg-ar-00/et-0/0/5",
+   "b.tp-afbc10fb"
+  ],
+  [
+   "a.yyc-ar-13",
+   "b.node-70336995"
+  ],
+  [
+   "a.yyc-ar-13/ae2",
+   "b.tp-cb0dc9cf"
+  ],
+  [
+   "a.yyc-ar-13/et-0/0/3",
+   "b.tp-a08e5203"
+  ],
+  [
+   "a.yyc-ar-13/et-0/0/4",
+   "b.tp-b0ed3745"
+  ],
+  [
+   "a.yyc-ar-13/et-0/0/5",
+   "b.tp-5607f97f"
+  ],
+  [
+   "a.yyc-ar-13/et-0/0/6",
+   "b.tp-4c9295dd"
+  ],
+  [
+   "a.yvr-ar-11",
+   "b.node-8b45dde1"
+  ],
+  [
+   "a.yvr-ar-11/et-0/0/0",
+   "b.tp-d759af28"
+  ],
+  [
+   "a.yvr-ar-11/et-0/0/1",
+   "b.tp-5aafb184"
+  ],
+  [
+   "a.yvr-ar-11/et-0/0/2",
+   "b.tp-7670ac83"
+  ],
+  [
+   "a.yvr-ar-11/et-0/0/3",
+   "b.tp-c41e508d"
+  ],
+  [
+   "a.yvr-ar-11/et-0/0/4",
+   "b.tp-9eb6d0d3"
+  ],
+  [
+   "a.yeg-ar-06",
+   "b.node-f6af83f5"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/0",
+   "b.tp-d6af3929"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/1",
+   "b.tp-3a92311d"
+  ],
+  [
+   "a.yeg-ar-06/et-1/0/2",
+   "b.tp-930f9d4e"
+  ],
+  [
+   "a.yeg-ar-06/et-1/0/3",
+   "b.tp-4e15c3b2"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/2",
+   "b.tp-0dad598f"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/3",
+   "b.tp-ff4922c6"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/4",
+   "b.tp-61e4fa18"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/5",
+   "b.tp-ee11eda0"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/6",
+   "b.tp-5be6b19d"
+  ],
+  [
+   "a.yeg-ar-06/et-1/0/0",
+   "b.tp-bc38f82b"
+  ],
+  [
+   "a.yeg-ar-06/et-1/0/1",
+   "b.tp-b20341a0"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/0",
+   "b.tp-c6f25bc4"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/1",
+   "b.tp-84fc41dd"
+  ],
+  [
+   "a.yul-ar-04/et-1/0/2",
+   "b.tp-92bb256a"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/2",
+   "b.tp-495c5284"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/5",
+   "b.tp-add894a6"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/6",
+   "b.tp-86c62197"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/7",
+   "b.tp-4e221bcb"
+  ],
+  [
+   "a.yul-ar-04/et-1/0/0",
+   "b.tp-ea7925ac"
+  ],
+  [
+   "a.yul-er-10",
+   "b.node-605d651f"
+  ],
+  [
+   "a.yul-er-10/et-0/0/0",
+   "b.tp-daba30e1"
+  ],
+  [
+   "a.yul-er-10/et-0/0/1",
+   "b.tp-4fa05362"
+  ],
+  [
+   "a.yxe-er-05",
+   "b.node-7de10377"
+  ],
+  [
+   "a.yeg-er-12",
+   "b.node-cde74eaf"
+  ],
+  [
+   "a.yeg-er-12/et-0/0/0",
+   "b.tp-e887e610"
+  ],
+  [
+   "a.yeg-er-12/et-0/0/1",
+   "b.tp-ce0949ac"
+  ],
+  [
+   "a.yvr-er-17",
+   "b.node-73050623"
+  ],
+  [
+   "a.yvr-er-17/ae2",
+   "b.tp-f9ce6522"
+  ],
+  [
+   "a.yvr-er-17/et-0/0/0",
+   "b.tp-e8abb3b4"
+  ],
+  [
+   "a.yvr-er-17/et-0/0/1",
+   "b.tp-047ae90f"
+  ],
+  [
+   "a.yvr-er-17/et-0/0/3",
+   "b.tp-d28249b0"
+  ],
+  [
+   "a.yxe-er-05/et-0/0/0",
+   "b.tp-d908f04c"
+  ],
+  [
+   "a.yxe-er-05/et-0/0/1",
+   "b.tp-b351bafd"
+  ],
+  [
+   "a.yyz-er-02",
+   "b.node-6396c019"
+  ],
+  [
+   "a.yyz-er-02/et-0/0/0",
+   "b.tp-1d02317d"
+  ],
+  [
+   "a.yyz-er-02/et-0/0/1",
+   "b.tp-ea32f876"
+  ],
+  [
+   "a.yyz-er-02/et-0/0/2",
+   "b.tp-7ea483df"
+  ],
+  [
+   "a.yyz-er-02/et-0/0/3",
+   "b.tp-5ec94338"
+  ],
+  [
+   "a.yxe-er-19",
+   "b.node-87e16012"
+  ],
+  [
+   "a.yxe-er-19/et-0/0/0",
+   "b.tp-117a7fb9"
+  ],
+  [
+   "a.yxe-er-19/et-0/0/1",
+   "b.tp-05a6962e"
+  ],
+  [
+   "a.yul-er-09",
+   "b.node-69f1c6ef"
+  ],
+  [
+   "a.yul-er-09/et-0/0/0",
+   "b.tp-88a5e946"
+  ],
+  [
+   "a.yul-er-09/et-0/0/1",
+   "b.tp-a0bfba3f"
+  ],
+  [
+   "a.yul-er-09/et-0/0/2",
+   "b.tp-cfc4ec5b"
+  ],
+  [
+   "a.yeg-er-01",
+   "b.node-0e94b6cb"
+  ],
+  [
+   "a.yeg-er-01/et-0/0/0",
+   "b.tp-dc842b34"
+  ],
+  [
+   "a.yeg-er-01/et-0/0/1",
+   "b.tp-5fdb0b45"
+  ],
+  [
+   "a.ywg-er-16",
+   "b.node-717f3507"
+  ],
+  [
+   "a.ywg-er-16/et-0/0/0",
+   "b.tp-0a2481aa"
+  ],
+  [
+   "a.ywg-er-16/et-0/0/1",
+   "b.tp-70054b50"
+  ],
+  [
+   "a.yqb-er-21",
+   "b.node-4ac6850a"
+  ],
+  [
+   "a.yqb-er-21/et-0/0/0",
+   "b.tp-795d58af"
+  ],
+  [
+   "a.yhz-er-03",
+   "b.node-93049346"
+  ],
+  [
+   "a.yhz-er-03/et-0/0/0",
+   "b.tp-6db21975"
+  ],
+  [
+   "a.yhz-er-03/et-0/0/1",
+   "b.tp-749b0c70"
+  ],
+  [
+   "a.yhz-er-20",
+   "b.node-75c94ec2"
+  ],
+  [
+   "a.yhz-er-20/et-0/0/0",
+   "b.tp-ce015c53"
+  ],
+  [
+   "a.yhz-er-20/et-0/0/1",
+   "b.tp-9d33f163"
+  ],
+  [
+   "a.yul-ar-04/et-1/0/1-r443",
+   "b.tp-46226a08"
+  ],
+  [
+   "a.yqb-er-21/et-0/0/1",
+   "b.tp-30ae4178"
+  ],
+  [
+   "a.yeg-ar-06/et-0/0/7",
+   "b.tp-166a138a"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/0",
+   "b.tp-dbc83434"
+  ],
+  [
+   "a.yhz-cr-08/et-0/0/3",
+   "b.tp-123cee98"
+  ],
+  [
+   "a.yqb-cr-07/et-0/0/0",
+   "b.tp-b55f8e58"
+  ],
+  [
+   "a.yqb-cr-07/et-0/0/3",
+   "b.tp-e3e12334"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/3",
+   "b.tp-9e9381f9"
+  ],
+  [
+   "a.yul-ar-04/et-0/0/4",
+   "b.tp-73ae9b38"
+  ],
+  [
+   "a.yyz-cr-18/et-0/0/5",
+   "b.tp-9f648f02"
+  ],
+  [
+   "a.yyz-cr-18/et-1/0/2",
+   "b.tp-12e5712c"
+  ],
+  [
+   "a.yyz-cr-18/et-1/0/3",
+   "b.tp-7c77feb2"
+  ],
+  [
+   "a.yyc-ar-13/et-0/0/0",
+   "b.tp-015ca880"
+  ],
+  [
+   "a.yyc-ar-13/et-0/0/1",
+   "b.tp-6f0fc1e3"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/3",
+   "b.tp-6547c535"
+  ],
+  [
+   "a.yqb-cr-07/et-1/0/7",
+   "b.tp-af4bad0b"
+  ],
+  [
+   "a.yqb-cr-14",
+   "b.node-1ac151fe"
+  ],
+  [
+   "a.yul-ar-04",
+   "b.node-d826d38c"
+  ]
+ ],
+ "left_open": [],
+ "transcript": [
+  {
+   "from": "A",
+   "say": "My record shows a.yul-ar-04/et-1/0/1 was re-keyed as a.yul-ar-04/et-1/0/1-r443 with identical facts. The port a.yqb-cr-14/et-0/0/5 is gone and its former LLDP peer a.yyz-cr-18/et-0/0/5 now has no neighbour, so I am marking the former port removed. I am observing every surviving binding touched by changed facts; exchanged-looking groups may require candidate follow-up after results.",
+   "my_handle_changes": [
+    {
+     "old_handle": "a.yul-ar-04/et-1/0/1",
+     "new_handle": "a.yul-ar-04/et-1/0/1-r443",
+     "reason": "The old handle disappeared and the new handle has identical type, attributes, and relations; the peer relation was updated to the new handle."
+    }
+   ],
+   "my_removed": [
+    "a.yqb-cr-14/et-0/0/5"
+   ],
+   "observations": [
+    {
+     "my_handle": "a.yul-ar-04/et-1/0/1-r443",
+     "their_handle": "b.tp-46226a08"
+    },
+    {
+     "my_handle": "a.yqb-er-21/et-0/0/1",
+     "their_handle": "b.tp-30ae4178"
+    },
+    {
+     "my_handle": "a.yeg-ar-06/et-0/0/7",
+     "their_handle": "b.tp-166a138a"
+    },
+    {
+     "my_handle": "a.yhz-cr-08/et-0/0/0",
+     "their_handle": "b.tp-dbc83434"
+    },
+    {
+     "my_handle": "a.yhz-cr-08/et-0/0/3",
+     "their_handle": "b.tp-123cee98"
+    },
+    {
+     "my_handle": "a.yqb-cr-07/et-0/0/0",
+     "their_handle": "b.tp-b55f8e58"
+    },
+    {
+     "my_handle": "a.yqb-cr-07/et-0/0/3",
+     "their_handle": "b.tp-e3e12334"
+    },
+    {
+     "my_handle": "a.yul-ar-04/et-0/0/3",
+     "their_handle": "b.tp-9e9381f9"
+    },
+    {
+     "my_handle": "a.yul-ar-04/et-0/0/4",
+     "their_handle": "b.tp-73ae9b38"
+    },
+    {
+     "my_handle": "a.yyc-ar-13/et-0/0/0",
+     "their_handle": "b.tp-6f0fc1e3"
+    },
+    {
+     "my_handle": "a.yyc-ar-13/et-0/0/1",
+     "their_handle": "b.tp-015ca880"
+    },
+    {
+     "my_handle": "a.yyz-cr-18/et-0/0/5",
+     "their_handle": "b.tp-9f648f02"
+    },
+    {
+     "my_handle": "a.yyz-cr-18/et-1/0/2",
+     "their_handle": "b.tp-12e5712c"
+    },
+    {
+     "my_handle": "a.yyz-cr-18/et-1/0/3",
+     "their_handle": "b.tp-7c77feb2"
+    }
+   ],
+   "cannot_tell": [],
+   "done": false,
+   "observation_results": [
+    {
+     "A_handle": "a.yul-ar-04/et-1/0/1-r443",
+     "B_handle": "b.tp-46226a08",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yqb-er-21/et-0/0/1",
+     "B_handle": "b.tp-30ae4178",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yeg-ar-06/et-0/0/7",
+     "B_handle": "b.tp-166a138a",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yhz-cr-08/et-0/0/0",
+     "B_handle": "b.tp-dbc83434",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yhz-cr-08/et-0/0/3",
+     "B_handle": "b.tp-123cee98",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yqb-cr-07/et-0/0/0",
+     "B_handle": "b.tp-b55f8e58",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yqb-cr-07/et-0/0/3",
+     "B_handle": "b.tp-e3e12334",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yul-ar-04/et-0/0/3",
+     "B_handle": "b.tp-9e9381f9",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yul-ar-04/et-0/0/4",
+     "B_handle": "b.tp-73ae9b38",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yyc-ar-13/et-0/0/0",
+     "B_handle": "b.tp-6f0fc1e3",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yyc-ar-13/et-0/0/1",
+     "B_handle": "b.tp-015ca880",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yyz-cr-18/et-0/0/5",
+     "B_handle": "b.tp-9f648f02",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yyz-cr-18/et-1/0/2",
+     "B_handle": "b.tp-12e5712c",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yyz-cr-18/et-1/0/3",
+     "B_handle": "b.tp-7c77feb2",
+     "result": "same data: one component"
+    }
+   ],
+   "closed_by_observation": [
+    {
+     "settled": [
+      "a.yul-ar-04/et-1/0/1-r443",
+      "b.tp-46226a08"
+     ]
+    },
+    {
+     "settled": [
+      "a.yqb-er-21/et-0/0/1",
+      "b.tp-30ae4178"
+     ]
+    },
+    {
+     "settled": [
+      "a.yeg-ar-06/et-0/0/7",
+      "b.tp-166a138a"
+     ]
+    },
+    {
+     "settled": [
+      "a.yhz-cr-08/et-0/0/0",
+      "b.tp-dbc83434"
+     ]
+    },
+    {
+     "settled": [
+      "a.yhz-cr-08/et-0/0/3",
+      "b.tp-123cee98"
+     ]
+    },
+    {
+     "settled": [
+      "a.yqb-cr-07/et-0/0/0",
+      "b.tp-b55f8e58"
+     ]
+    },
+    {
+     "settled": [
+      "a.yqb-cr-07/et-0/0/3",
+      "b.tp-e3e12334"
+     ]
+    },
+    {
+     "settled": [
+      "a.yul-ar-04/et-0/0/3",
+      "b.tp-9e9381f9"
+     ]
+    },
+    {
+     "settled": [
+      "a.yul-ar-04/et-0/0/4",
+      "b.tp-73ae9b38"
+     ]
+    },
+    {
+     "settled": [
+      "a.yyz-cr-18/et-0/0/5",
+      "b.tp-9f648f02"
+     ]
+    },
+    {
+     "settled": [
+      "a.yyz-cr-18/et-1/0/2",
+      "b.tp-12e5712c"
+     ]
+    },
+    {
+     "settled": [
+      "a.yyz-cr-18/et-1/0/3",
+      "b.tp-7c77feb2"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "B",
+   "say": "The two yyc-ar-13 original pairs were void and my handles are lookalikes, so I am testing the crossed candidates. My changed relations and exchanged-looking facts also touched b.tp-af4bad0b and b.tp-6547c535, so their existing bindings require live observation. My vanished b.tp-77169572 corresponds to your removed unbound port; its incident link b.link-7e5444cd is also gone.",
+   "my_handle_changes": [],
+   "my_removed": [
+    "b.tp-77169572",
+    "b.link-7e5444cd"
+   ],
+   "observations": [
+    {
+     "my_handle": "b.tp-015ca880",
+     "their_handle": "a.yyc-ar-13/et-0/0/0"
+    },
+    {
+     "my_handle": "b.tp-6f0fc1e3",
+     "their_handle": "a.yyc-ar-13/et-0/0/1"
+    },
+    {
+     "my_handle": "b.tp-af4bad0b",
+     "their_handle": "a.yqb-cr-07/et-1/0/3"
+    },
+    {
+     "my_handle": "b.tp-6547c535",
+     "their_handle": "a.yqb-cr-07/et-1/0/7"
+    }
+   ],
+   "cannot_tell": [],
+   "done": false,
+   "observation_results": [
+    {
+     "A_handle": "a.yyc-ar-13/et-0/0/0",
+     "B_handle": "b.tp-015ca880",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yyc-ar-13/et-0/0/1",
+     "B_handle": "b.tp-6f0fc1e3",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yqb-cr-07/et-1/0/3",
+     "B_handle": "b.tp-af4bad0b",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yqb-cr-07/et-1/0/7",
+     "B_handle": "b.tp-6547c535",
+     "result": "different data: two components"
+    }
+   ],
+   "closed_by_observation": [
+    {
+     "settled": [
+      "a.yyc-ar-13/et-0/0/0",
+      "b.tp-015ca880"
+     ]
+    },
+    {
+     "provisional": [
+      "a.yyc-ar-13/et-0/0/1",
+      "b.tp-6f0fc1e3"
+     ]
+    },
+    {
+     "settled": [
+      "a.yyc-ar-13/et-0/0/1",
+      "b.tp-6f0fc1e3"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "A",
+   "say": "The yyc-ar-13 crossed observations settled both repaired bindings. I am now testing the crossed candidates for the two void yqb-cr-07 port bindings. I am also observing the device bindings for a.yqb-cr-14 and a.yul-ar-04 because relations involving those devices were touched by the removed and re-keyed ports.",
+   "my_handle_changes": [],
+   "my_removed": [],
+   "observations": [
+    {
+     "my_handle": "a.yqb-cr-07/et-1/0/3",
+     "their_handle": "b.tp-6547c535"
+    },
+    {
+     "my_handle": "a.yqb-cr-07/et-1/0/7",
+     "their_handle": "b.tp-af4bad0b"
+    },
+    {
+     "my_handle": "a.yqb-cr-14",
+     "their_handle": "b.node-1ac151fe"
+    },
+    {
+     "my_handle": "a.yul-ar-04",
+     "their_handle": "b.node-d826d38c"
+    }
+   ],
+   "cannot_tell": [],
+   "done": false,
+   "observation_results": [
+    {
+     "A_handle": "a.yqb-cr-07/et-1/0/3",
+     "B_handle": "b.tp-6547c535",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yqb-cr-07/et-1/0/7",
+     "B_handle": "b.tp-af4bad0b",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yqb-cr-14",
+     "B_handle": "b.node-1ac151fe",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yul-ar-04",
+     "B_handle": "b.node-d826d38c",
+     "result": "same data: one component"
+    }
+   ],
+   "was_reminded_of": [
+    "a.yqb-cr-14",
+    "a.yul-ar-04"
+   ],
+   "closed_by_observation": [
+    {
+     "settled": [
+      "a.yqb-cr-07/et-1/0/3",
+      "b.tp-6547c535"
+     ]
+    },
+    {
+     "provisional": [
+      "a.yqb-cr-07/et-1/0/7",
+      "b.tp-af4bad0b"
+     ]
+    },
+    {
+     "settled": [
+      "a.yqb-cr-07/et-1/0/7",
+      "b.tp-af4bad0b"
+     ]
+    },
+    {
+     "settled": [
+      "a.yqb-cr-14",
+      "b.node-1ac151fe"
+     ]
+    },
+    {
+     "settled": [
+      "a.yul-ar-04",
+      "b.node-d826d38c"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "B",
+   "say": "All bindings touched by my record changes have now been settled by live observation, and the vanished unbound port and link were removed. I have nothing further to test or report.",
+   "my_handle_changes": [],
+   "my_removed": [],
+   "observations": [],
+   "cannot_tell": [],
+   "done": true
+  },
+  {
+   "from": "A",
+   "say": "All bindings affected by my record changes are now settled by live observation. The re-keyed and removed handles were reported, and no binding remains open.",
+   "my_handle_changes": [],
+   "my_removed": [],
+   "observations": [],
+   "cannot_tell": [],
+   "done": true
+  },
+  {
+   "from": "B",
+   "say": "All affected bindings are settled; no further action is needed.",
+   "my_handle_changes": [],
+   "my_removed": [],
+   "observations": [],
+   "cannot_tell": [],
+   "done": true
+  }
+ ],
+ "effort": {
+  "total_tokens": 76590,
+  "reasoning_tokens": 1198,
+  "latency_s": 66.67,
+  "turns": 6,
+  "observations": 22
+ },
+ "score": {
+  "per_event": [
+   {
+    "kind": "rename",
+    "side": "a",
+    "outcome": "right"
+   },
+   {
+    "kind": "rekey_distinct",
+    "side": "b",
+    "outcome": "right"
+   },
+   {
+    "kind": "rekey_lookalike",
+    "side": "a",
+    "outcome": "right"
+   },
+   {
+    "kind": "decommission",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "readdress",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "move_address",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "cable_swap",
+    "side": null,
+    "outcome": "right"
+   }
+  ],
+  "bindings_expected": 149,
+  "bindings_right": 149,
+  "bindings_left_open": 0,
+  "bindings_wrong": 0,
+  "rows_with_a_dead_handle": 0
+ },
+ "network": "medium",
+ "model": "gpt-5.6-sol"
+}

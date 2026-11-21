@@ -2,6 +2,17 @@
 
 *Using machine cognition — a theory, a research programme, and a completed four-scenario study.*
 
+## What's new (2026-11-21)
+
+**Keeping the bindings, added to the [instance matching](instance-matching/) case study.** Once two agents refer
+to the same components, the network and the two systems go on changing: handles are renamed and re-keyed, ports
+are decommissioned, addresses and cables move. Agents whose systems give them a change log kept every binding right
+with no check against the network. Agents working from their own records alone ended with wrong bindings in three
+runs of six; with one rule added, that a binding touched by a record change is observed and that the observation
+closes it, every binding ended right in all six runs. The folder now also holds the study report "Making and
+keeping instance bindings", Part 4 of the video series, a step-through page for the keeping, the code and the 24
+recorded runs. Its note is at version 1.2.
+
 ## What's new (2026-11-20)
 
 **A new case study: [instance matching](instance-matching/).** Two agents each hold their own model of one

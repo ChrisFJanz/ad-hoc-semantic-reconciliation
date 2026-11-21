@@ -1,0 +1,4 @@
+network,condition,run,bindings_expected,bindings_right,bindings_left_open,bindings_wrong,rows_with_a_dead_handle,observations,turns,total_tokens,latency_s,rename,rekey_distinct,rekey_lookalike,decommission,readdress,move_address,cable_swap
+medium,log,1,149,149,0,0,0,0,4,41515,16.4,right,right,right,right,right,right,right
+medium,log,2,149,149,0,0,0,0,2,21160,10.1,right,right,right,right,right,right,right
+medium,log,3,149,149,0,0,0,0,2,20001,9.1,right,right,right,right,right,right,right

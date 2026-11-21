@@ -1,0 +1,165 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keeping the bindings: one network, two agents</title>
+<style>
+:root{--navy:#1F3864;--red:#C00000;--a:#2E6FBF;--b:#C8741A;--ok:#2E8B57;--pend:#D9A300;--bad:#C00000;
+--bg:#F4F6FA;--card:#fff;--line:#D5DBE6;--ink:#1c2433;--mute:#6b7689}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font:14px/1.4 Calibri,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);display:flex;flex-direction:column}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;padding:10px 18px 12px;display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:center;border-bottom:3px solid var(--red)}
+header h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.2px}
+header h1 span{font-weight:400;opacity:.75;font-size:13px;margin-left:10px}
+.ctl{display:flex;gap:8px;align-items:center}
+.ctl button{font:inherit;font-weight:700;background:#fff;color:var(--navy);border:0;border-radius:5px;padding:6px 14px;cursor:pointer}
+.ctl button:disabled{opacity:.35;cursor:default}
+.ctl .n{min-width:74px;text-align:center;font-variant-numeric:tabular-nums;opacity:.9}
+.tabs{display:flex;gap:8px;grid-column:1/3;align-items:center;margin:2px 0 0}
+.tabs button{font:inherit;border:2px solid #44598a;border-radius:16px;padding:3px 14px;font-size:13px;font-weight:700;color:#a9b6d3;background:#17294d;cursor:pointer}
+.tabs button.on{border-color:#F2B134;background:#2a2410;color:#fff}
+.tabs em{font-style:normal;color:#c9d3ea;font-size:13px;margin-left:6px}
+#stitle{font-size:19px;font-weight:700;grid-column:1/3;margin-top:2px}
+#snote{grid-column:1/3;font-size:14.5px;opacity:.95;max-width:1500px;min-height:42px}
+.tally{display:flex;gap:16px;font-size:13px;grid-column:1/3;opacity:.95}
+.tally b{font-size:15px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(290px,.95fr) minmax(440px,1.35fr) minmax(320px,1.1fr);gap:12px;padding:12px}
+.pane{background:var(--card);border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;min-height:0;transition:box-shadow .25s,border-color .25s}
+.pane.focus{border-color:var(--red);box-shadow:0 0 0 2px rgba(192,0,0,.18)}
+.pane h2{margin:0;padding:8px 12px;font-size:14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;align-items:baseline;color:var(--navy)}
+.pane h2 small{font-weight:400;color:var(--mute);font-size:12px;text-align:right}
+.scroll{overflow:auto;padding:8px;min-height:0;flex:1}
+.ev{border:1px solid var(--line);border-left:5px solid #B9C2D3;border-radius:6px;padding:6px 9px;margin-bottom:7px;background:#FBFCFE;transition:all .25s}
+.ev.voids{border-left-color:var(--bad)}.ev.keeps{border-left-color:var(--ok)}
+.ev.hidden{display:none}
+.ev.on{box-shadow:0 0 0 3px rgba(192,0,0,.25);background:#fff}
+.ev .t{font-weight:700;font-size:13.5px;display:flex;justify-content:space-between;gap:8px}
+.ev .t small{font-weight:700;font-size:12px;white-space:nowrap}
+.ev.voids .t small{color:var(--bad)}.ev.keeps .t small{color:var(--ok)}
+.ev p{margin:3px 0 4px;font-size:12.5px;color:#39445a}
+.ev .h{font:11.5px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#445}
+.ev .sees{margin-top:5px;padding-top:5px;border-top:1px dashed var(--line);font-size:12.5px;display:none}
+.showsees .ev .sees{display:block}
+.A{color:var(--a)}.B{color:var(--b)}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th{position:sticky;top:-8px;background:#E8ECF4;color:var(--navy);text-align:left;padding:5px 7px;font-size:12px;z-index:1}
+td{padding:4px 7px;border-bottom:1px solid #E6EAF2;vertical-align:middle}
+td.hd{font:11.5px ui-monospace,Menlo,Consolas,monospace}
+td.n{color:var(--mute);text-align:center;width:28px}
+.st{display:inline-block;border-radius:4px;padding:1px 7px;font-weight:700;font-size:12px;border:1.5px solid}
+.st.valid{border-color:var(--ok);background:#DDF2E6;color:#14532d}
+.st.void{border-color:var(--bad);background:#FBE3E3;color:#7a0000}
+.st.dead{border-color:#8a93a3;background:#EEF0F4;color:#4a5263}
+.mk{font-size:12px;color:var(--ok);font-weight:700;white-space:nowrap}
+.mk.prov{color:#8a6a00}
+tr.chg td{animation:fl 1.6s ease-out}
+tr.evrow td{background:#FFF9E6}
+@keyframes fl{0%{background:#FFE08A}100%{background:transparent}}
+tr.evrow.chg td{animation:fl2 1.6s ease-out}
+@keyframes fl2{0%{background:#FFD25A}100%{background:#FFF9E6}}
+#rest{color:var(--mute);font-size:12.5px;padding:8px 7px}
+#outcome{display:none;margin:0 0 8px;padding:8px 10px;border-radius:6px;font-weight:700;font-size:14px}
+#outcome.bad{display:block;background:#FBE3E3;color:#7a0000;border:1.5px solid var(--bad)}
+#outcome.good{display:block;background:#DDF2E6;color:#14532d;border:1.5px solid var(--ok)}
+.msg{display:grid;grid-template-columns:30px 1fr;gap:8px;margin-bottom:9px;align-items:start}
+.av{width:26px;height:26px;border-radius:50%;color:#fff;font-weight:700;display:grid;place-items:center;font-size:13px}
+.av.A{background:var(--a)}.av.B{background:var(--b)}
+.msg .tx{background:#F3F5F9;border-radius:6px;padding:6px 9px;font-size:12.5px;overflow-wrap:anywhere}
+.msg.new .tx{box-shadow:0 0 0 2px rgba(192,0,0,.25);background:#fff}
+.act{margin-top:3px;font:11.5px/1.45 ui-monospace,Menlo,Consolas,monospace;padding-left:14px;text-indent:-14px}
+.act.same{color:#14532d}.act.diff{color:#7a0000}.act.rewrite,.act.remove{color:var(--navy)}.act.prov{color:#8a6a00}.act.remind{color:var(--mute)}
+.act.closed{color:#14532d;font-weight:700}
+.empty{color:var(--mute);font-style:italic;padding:6px}
+@media (max-width:1000px){main{grid-template-columns:1fr}.pane{min-height:320px}}
+</style></head><body>
+<header>
+  <h1>One network, two agents: keeping the bindings<span id="meta"></span></h1>
+  <div class="ctl"><button id="prev">◀ Back</button><span class="n" id="count"></span><button id="next">Next ▶</button></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="stitle"></div><div id="snote"></div>
+  <div class="tally">
+    <span><span class="dot" style="background:var(--ok)"></span>bindings valid in truth <b id="nv"></b></span>
+    <span><span class="dot" style="background:var(--bad)"></span>void or dangling <b id="nx"></b></span>
+    <span>observations so far <b id="no">0</b></span>
+  </div>
+</header>
+<main>
+  <section class="pane" id="pe"><h2>What changed <small>the agents do not see this list</small></h2><div class="scroll" id="evs"></div></section>
+  <section class="pane" id="pt"><h2>The bindings <small>A's handle and B's handle for one component</small></h2><div class="scroll" id="tw">
+    <div id="outcome"></div>
+    <table><thead><tr><th title="the change that touches this binding">#</th><th class="A">A's handle</th><th class="B">B's handle</th><th>in truth</th><th>settled</th></tr></thead><tbody id="tb"></tbody></table>
+    <div id="rest"></div></div></section>
+  <section class="pane" id="pc"><h2>What the agents say and do <small id="tturn"></small></h2><div class="scroll" id="talk"></div></section>
+</main>
+<script>
+const D=/*DATA*/;
+const $=q=>document.querySelector(q), E=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const sh=h=>h.slice(2);
+$('#meta').textContent=`recorded runs · ${D.meta.network} network · ${D.meta.bindings} bindings`+(D.meta.model?` · ${D.meta.model}`:'');
+let cond='record', idx=0;
+const steps=()=>D.common.concat(D.conds[cond].steps);
+// tabs
+const tabs=$('#tabs');
+for(const c of ['record','check']){const b=E('button',null,esc(D.conds[c].label));b.dataset.c=c;
+  b.onclick=()=>{if(cond===c)return;cond=c;if(idx>=D.common.length)idx=D.common.length-1;prevKeys=null;render()};tabs.append(b)}
+tabs.append(E('em',null,'the same changes, handled two ways: the first nine steps are common to both'));
+// events
+const evs=$('#evs');
+D.events.forEach(ev=>{const c=E('div','ev '+(ev.voids?'voids':'keeps'));c.dataset.n=ev.n;
+  c.append(E('div','t',`<span>${ev.n+1}. ${esc(ev.title)}${ev.side?` <span class="${ev.side}">on ${ev.side}</span>`:''}</span><small>${esc(ev.effect)}</small>`));
+  c.append(E('p',null,esc(ev.text)));
+  const hs=[];ev.a.forEach((a,i)=>hs.push(`<span class="A">${esc(sh(a))}</span> &harr; <span class="B">${esc(sh(ev.b[i]))}</span>`));
+  c.append(E('div','h',hs.join('<br>')+(ev.new?`<br>new handle: <span class="${ev.side}">${esc(sh(ev.new))}</span>`:'')));
+  c.append(E('div','sees',`<span class="A"><b>A's record shows:</b></span> ${esc(ev.sees.A)}<br><span class="B"><b>B's record shows:</b></span> ${esc(ev.sees.B)}`));
+  evs.append(c)});
+const LBL={valid:'one component',void:'two components',dead:'a handle is gone'};
+let prevKeys=null;
+function render(){
+  const S=steps(), s=S[idx];
+  $('#count').textContent=`${idx+1} / ${S.length}`;$('#prev').disabled=idx===0;$('#next').disabled=idx===S.length-1;
+  $('#stitle').textContent=s.title;$('#snote').textContent=s.note;
+  tabs.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.c===cond));
+  // events revealed so far
+  const shown=idx===0?-1:Math.min(idx-1,D.events.length-1), on=s.ev==null?[]:[].concat(s.ev);
+  evs.classList.toggle('showsees',idx>=D.common.length-1);
+  evs.querySelectorAll('.ev').forEach(c=>{const n=+c.dataset.n;c.classList.toggle('hidden',n>shown);c.classList.toggle('on',on.includes(n))});
+  if(idx===0&&!evs.querySelector('.empty'))evs.prepend(E('div','empty','Nothing has changed yet.'));
+  const em=evs.querySelector('.empty');if(em)em.style.display=idx===0?'':'none';
+  // table
+  const tb=$('#tb');tb.innerHTML='';const keys=new Set();let first=null;
+  s.table.forEach(r=>{const k=[r.a,r.b,r.state,r.settled?1:0,r.prov?1:0].join('|');keys.add(k);
+    const tr=E('tr');if(prevKeys&&!prevKeys.has(k)){tr.classList.add('chg');first=first||tr}
+    if(on.includes(r.ev))tr.classList.add('evrow');
+    tr.append(E('td','n',r.ev<90?r.ev+1:'·'),E('td','hd A',esc(sh(r.a))),E('td','hd B',esc(sh(r.b))),
+      E('td',null,`<span class="st ${r.state}">${LBL[r.state]}</span>`),
+      E('td',null,r.settled?'<span class="mk">✓ by observation</span>':r.prov?'<span class="mk prov">provisional</span>':''));
+    tb.append(tr)});
+  prevKeys=keys;
+  $('#rest').textContent=`and ${s.rest} other bindings, untouched and valid`;
+  const bad=s.table.filter(r=>r.state!=='valid').length;
+  $('#nv').textContent=s.rest+s.table.length-bad;$('#nx').textContent=bad;
+  const oc=$('#outcome');oc.className='';
+  if(s.end){const c=D.conds[cond];oc.className=c.wrong?'bad':'good';
+    oc.textContent=c.wrong?`Outcome: ${c.right} of ${c.expected} bindings right, ${c.wrong} wrong · ${c.observations} observations`
+                          :`Outcome: all ${c.expected} bindings right · ${c.observations} observations`}
+  // conversation
+  const talk=$('#talk');talk.innerHTML='';let nobs=0,last=null;
+  if(s.turn==null)talk.append(E('div','empty',idx<D.common.length-1?'The agents have not been told anything yet.':'Each agent now compares its own record before and after. Press Next for the first turn.'));
+  else D.conds[cond].turns.slice(0,s.turn+1).forEach((t,i)=>{
+    const m=E('div','msg'+(i===s.turn&&!s.end?' new':''));m.append(E('div','av '+t.from,t.from));
+    const tx=E('div','tx',esc(t.say||'(nothing to say)'));
+    t.acts.forEach(a=>{if(a.k==='same'||a.k==='diff')nobs++;tx.append(E('div','act '+a.k,(a.k==='same'?'✓ ':a.k==='diff'?'✗ ':'· ')+esc(a.text)))});
+    if(t.done)tx.append(E('div','act remind','· declares done'));
+    m.append(tx);talk.append(m);last=m});
+  $('#no').textContent=nobs;
+  $('#tturn').textContent=s.turn==null?'':`${D.conds[cond].label.toLowerCase()} · turn ${s.turn+1} of ${D.conds[cond].turns.length}`;
+  // move the view to what this step changes
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('focus',p.id===s.focus));
+  if(last)last.scrollIntoView({block:'nearest'});
+  const onEl=evs.querySelector('.ev.on');if(onEl)onEl.scrollIntoView({block:'nearest'});
+  if(first)first.scrollIntoView({block:'center'});else if(s.end||idx===0)$('#tw').scrollTop=0;
+}
+$('#prev').onclick=()=>{if(idx>0){idx--;prevKeys=null;render()}};
+$('#next').onclick=()=>{if(idx<steps().length-1){idx++;render()}};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')$('#next').click();if(e.key==='ArrowLeft')$('#prev').click()});
+render();
+</script></body></html>

@@ -1,0 +1,636 @@
+{
+ "condition": "record",
+ "trial": 1,
+ "events": [
+  {
+   "kind": "rename",
+   "side": "a",
+   "components": [
+    "C1:p1"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yxe-cr-03/et-0/0/1"
+    ],
+    "b": [
+     "b.tp-76dde144"
+    ]
+   },
+   "new_handle": "a.yxe-cr-03/et-0/0/1-r864"
+  },
+  {
+   "kind": "rekey_distinct",
+   "side": "b",
+   "components": [
+    "G0a:p0",
+    "G0a:p2"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yhz-ar-01/et-0/0/0",
+     "a.yhz-ar-01/et-0/0/2"
+    ],
+    "b": [
+     "b.tp-eb7865a1",
+     "b.tp-16c09dd5"
+    ]
+   }
+  },
+  {
+   "kind": "rekey_lookalike",
+   "side": "a",
+   "components": [
+    "G0b:p0",
+    "G0b:p1"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yow-ar-05/et-0/0/0",
+     "a.yow-ar-05/et-0/0/1"
+    ],
+    "b": [
+     "b.tp-881b0151",
+     "b.tp-2519f04a"
+    ]
+   }
+  },
+  {
+   "kind": "decommission",
+   "side": null,
+   "components": [
+    "C1:p0"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yxe-cr-03/et-0/0/0"
+    ],
+    "b": [
+     "b.tp-d252c51c"
+    ]
+   }
+  },
+  {
+   "kind": "readdress",
+   "side": null,
+   "components": [
+    "G0a:p4"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yhz-ar-01/et-0/0/4"
+    ],
+    "b": [
+     "b.tp-a63e5804"
+    ]
+   }
+  },
+  {
+   "kind": "move_address",
+   "side": null,
+   "components": [
+    "C0:p2",
+    "C0:p3"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yyz-cr-06/et-0/0/2",
+     "a.yyz-cr-06/et-0/0/3"
+    ],
+    "b": [
+     "b.tp-5bbff6ef",
+     "b.tp-59ebe37d"
+    ]
+   }
+  },
+  {
+   "kind": "cable_swap",
+   "side": null,
+   "components": [
+    "C1:p2",
+    "C1:p3"
+   ],
+   "handles_before": {
+    "a": [
+     "a.yxe-cr-03/et-0/0/2",
+     "a.yxe-cr-03/et-0/0/3"
+    ],
+    "b": [
+     "b.tp-bef584d3",
+     "b.tp-100c2374"
+    ]
+   }
+  }
+ ],
+ "final_bindings": [
+  [
+   "a.yyz-cr-06",
+   "b.node-891be86f"
+  ],
+  [
+   "a.yyz-cr-06/ae6",
+   "b.tp-f4bae4dc"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/0",
+   "b.tp-6b80277f"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/1",
+   "b.tp-d54a4f47"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/2",
+   "b.tp-5bbff6ef"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/3",
+   "b.tp-59ebe37d"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/4",
+   "b.tp-5a4d1e42"
+  ],
+  [
+   "a.yyz-cr-06/et-0/0/5",
+   "b.tp-7ce4df47"
+  ],
+  [
+   "a.yxe-cr-03",
+   "b.node-d57f7b85"
+  ],
+  [
+   "a.yxe-cr-03/ae4",
+   "b.tp-86c6aec7"
+  ],
+  [
+   "a.yxe-cr-03/ae8",
+   "b.tp-0f6c5a44"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/1-r864",
+   "b.tp-76dde144"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/2",
+   "b.tp-bef584d3"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/3",
+   "b.tp-100c2374"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/5",
+   "b.tp-6d4406be"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/6",
+   "b.tp-2bfd876a"
+  ],
+  [
+   "a.yxe-cr-03/et-0/0/7",
+   "b.tp-a0597199"
+  ],
+  [
+   "a.ywg-cr-00",
+   "b.node-9b928c01"
+  ],
+  [
+   "a.ywg-cr-00/ae3",
+   "b.tp-c2fe3242"
+  ],
+  [
+   "a.ywg-cr-00/et-0/0/0",
+   "b.tp-c4779d73"
+  ],
+  [
+   "a.ywg-cr-00/et-0/0/1",
+   "b.tp-b27a3a3f"
+  ],
+  [
+   "a.ywg-cr-00/et-0/0/2",
+   "b.tp-b3e678d5"
+  ],
+  [
+   "a.yhz-ar-01",
+   "b.node-183b0ab0"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/0",
+   "b.tp-16c09dd5"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/1",
+   "b.tp-a25e9c52"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/2",
+   "b.tp-eb7865a1"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/3",
+   "b.tp-72e772ac"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/4",
+   "b.tp-a63e5804"
+  ],
+  [
+   "a.yhz-ar-01/et-0/0/5",
+   "b.tp-8c9a4121"
+  ],
+  [
+   "a.yow-ar-05",
+   "b.node-353f75fc"
+  ],
+  [
+   "a.yow-ar-05/ae2",
+   "b.tp-d40769e8"
+  ],
+  [
+   "a.yow-ar-05/ae5",
+   "b.tp-cb59b347"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/1",
+   "b.tp-881b0151"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/0",
+   "b.tp-2519f04a"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/3",
+   "b.tp-e489acd1"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/4",
+   "b.tp-3bb14dcf"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/6",
+   "b.tp-6b1cfb03"
+  ],
+  [
+   "a.yow-ar-05/et-0/0/7",
+   "b.tp-19da12cb"
+  ],
+  [
+   "a.yow-ar-05/et-1/0/0",
+   "b.tp-b28b8755"
+  ],
+  [
+   "a.yow-ar-05/et-1/0/1",
+   "b.tp-2418fe41"
+  ],
+  [
+   "a.yul-er-04",
+   "b.node-b2bbe90c"
+  ],
+  [
+   "a.yul-er-04/et-0/0/0",
+   "b.tp-32e15a14"
+  ],
+  [
+   "a.yul-er-04/et-0/0/1",
+   "b.tp-e0ab2661"
+  ],
+  [
+   "a.yul-er-07",
+   "b.node-0d30dd9a"
+  ],
+  [
+   "a.yul-er-07/et-0/0/0",
+   "b.tp-724e0671"
+  ],
+  [
+   "a.yul-er-07/et-0/0/1",
+   "b.tp-d4c9f43e"
+  ],
+  [
+   "a.yvr-er-02",
+   "b.node-b6c47796"
+  ],
+  [
+   "a.yvr-er-02/et-0/0/0",
+   "b.tp-1891978b"
+  ],
+  [
+   "a.yvr-er-02/et-0/0/1",
+   "b.tp-68370de9"
+  ]
+ ],
+ "left_open": [],
+ "transcript": [
+  {
+   "from": "A",
+   "say": "My record shows a.yxe-cr-03/et-0/0/1 was rehandled as a.yxe-cr-03/et-0/0/1-r864 with identical distinguishing facts; a.yxe-cr-03/et-0/0/0 is gone with no replacement and is removed. I am observing the changed lookalike port pairs against their existing bindings to distinguish cable moves from handle exchanges. Please report any relevant changes on your side.",
+   "my_handle_changes": [
+    {
+     "old_handle": "a.yxe-cr-03/et-0/0/1",
+     "new_handle": "a.yxe-cr-03/et-0/0/1-r864",
+     "reason": "The old handle disappeared and the sole new handle has the same type, attributes, device, LLDP neighbour, and address."
+    }
+   ],
+   "my_removed": [
+    "a.yxe-cr-03/et-0/0/0"
+   ],
+   "observations": [
+    {
+     "my_handle": "a.yow-ar-05/et-0/0/0",
+     "their_handle": "b.tp-881b0151"
+    },
+    {
+     "my_handle": "a.yow-ar-05/et-0/0/1",
+     "their_handle": "b.tp-2519f04a"
+    },
+    {
+     "my_handle": "a.ywg-cr-00/et-0/0/1",
+     "their_handle": "b.tp-b27a3a3f"
+    },
+    {
+     "my_handle": "a.ywg-cr-00/et-0/0/2",
+     "their_handle": "b.tp-b3e678d5"
+    },
+    {
+     "my_handle": "a.yxe-cr-03/et-0/0/2",
+     "their_handle": "b.tp-bef584d3"
+    },
+    {
+     "my_handle": "a.yxe-cr-03/et-0/0/3",
+     "their_handle": "b.tp-100c2374"
+    },
+    {
+     "my_handle": "a.yxe-cr-03/et-0/0/6",
+     "their_handle": "b.tp-2bfd876a"
+    },
+    {
+     "my_handle": "a.yxe-cr-03/et-0/0/7",
+     "their_handle": "b.tp-a0597199"
+    }
+   ],
+   "cannot_tell": [],
+   "done": false,
+   "observation_results": [
+    {
+     "A_handle": "a.yow-ar-05/et-0/0/0",
+     "B_handle": "b.tp-881b0151",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yow-ar-05/et-0/0/1",
+     "B_handle": "b.tp-2519f04a",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.ywg-cr-00/et-0/0/1",
+     "B_handle": "b.tp-b27a3a3f",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.ywg-cr-00/et-0/0/2",
+     "B_handle": "b.tp-b3e678d5",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yxe-cr-03/et-0/0/2",
+     "B_handle": "b.tp-bef584d3",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yxe-cr-03/et-0/0/3",
+     "B_handle": "b.tp-100c2374",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yxe-cr-03/et-0/0/6",
+     "B_handle": "b.tp-2bfd876a",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yxe-cr-03/et-0/0/7",
+     "B_handle": "b.tp-a0597199",
+     "result": "same data: one component"
+    }
+   ]
+  },
+  {
+   "from": "B",
+   "say": "On my side, b.tp-d252c51c and its link b.link-b351bafd are gone with no replacements; b.tp-d252c51c was the former peer port corresponding to your removed a.yxe-cr-03/et-0/0/0. Live observations confirm the existing bindings for the lookalike pairs b.tp-b27a3a3f/b.tp-b3e678d5 and b.tp-bef584d3/b.tp-100c2374 still hold, so their changed link endpoints are cable moves, not handle exchanges. I need observations to distinguish possible handle exchanges from fact moves for the two other pairs whose addresses (and, for the YHZ pair, cables) exchanged.",
+   "my_handle_changes": [],
+   "my_removed": [
+    "b.tp-d252c51c",
+    "b.link-b351bafd"
+   ],
+   "observations": [
+    {
+     "my_handle": "b.tp-5bbff6ef",
+     "their_handle": "a.yyz-cr-06/et-0/0/2"
+    },
+    {
+     "my_handle": "b.tp-5bbff6ef",
+     "their_handle": "a.yyz-cr-06/et-0/0/3"
+    },
+    {
+     "my_handle": "b.tp-59ebe37d",
+     "their_handle": "a.yyz-cr-06/et-0/0/2"
+    },
+    {
+     "my_handle": "b.tp-59ebe37d",
+     "their_handle": "a.yyz-cr-06/et-0/0/3"
+    },
+    {
+     "my_handle": "b.tp-eb7865a1",
+     "their_handle": "a.yhz-ar-01/et-0/0/0"
+    },
+    {
+     "my_handle": "b.tp-eb7865a1",
+     "their_handle": "a.yhz-ar-01/et-0/0/2"
+    },
+    {
+     "my_handle": "b.tp-16c09dd5",
+     "their_handle": "a.yhz-ar-01/et-0/0/0"
+    },
+    {
+     "my_handle": "b.tp-16c09dd5",
+     "their_handle": "a.yhz-ar-01/et-0/0/2"
+    }
+   ],
+   "cannot_tell": [],
+   "done": false,
+   "observation_results": [
+    {
+     "A_handle": "a.yyz-cr-06/et-0/0/2",
+     "B_handle": "b.tp-5bbff6ef",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yyz-cr-06/et-0/0/3",
+     "B_handle": "b.tp-5bbff6ef",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yyz-cr-06/et-0/0/2",
+     "B_handle": "b.tp-59ebe37d",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yyz-cr-06/et-0/0/3",
+     "B_handle": "b.tp-59ebe37d",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yhz-ar-01/et-0/0/0",
+     "B_handle": "b.tp-eb7865a1",
+     "result": "different data: two components"
+    },
+    {
+     "A_handle": "a.yhz-ar-01/et-0/0/2",
+     "B_handle": "b.tp-eb7865a1",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yhz-ar-01/et-0/0/0",
+     "B_handle": "b.tp-16c09dd5",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yhz-ar-01/et-0/0/2",
+     "B_handle": "b.tp-16c09dd5",
+     "result": "different data: two components"
+    }
+   ]
+  },
+  {
+   "from": "A",
+   "say": "The YYZ observations confirm a.yyz-cr-06/et-0/0/2 and /3 retain their existing bindings; their address changes were fact moves, not handle exchanges. The YHZ observations show your b.tp-eb7865a1 and b.tp-16c09dd5 now correspond respectively to my unchanged /2 and /0; please update your side as warranted by your record. My YOW /0 and /1 both failed against their existing bindings, so I am cross-observing them to determine whether that pair exchanged. Were those two B handles unchanged on your side?",
+   "my_handle_changes": [],
+   "my_removed": [],
+   "observations": [
+    {
+     "my_handle": "a.yow-ar-05/et-0/0/0",
+     "their_handle": "b.tp-2519f04a"
+    },
+    {
+     "my_handle": "a.yow-ar-05/et-0/0/1",
+     "their_handle": "b.tp-881b0151"
+    }
+   ],
+   "cannot_tell": [],
+   "done": false,
+   "observation_results": [
+    {
+     "A_handle": "a.yow-ar-05/et-0/0/0",
+     "B_handle": "b.tp-2519f04a",
+     "result": "same data: one component"
+    },
+    {
+     "A_handle": "a.yow-ar-05/et-0/0/1",
+     "B_handle": "b.tp-881b0151",
+     "result": "same data: one component"
+    }
+   ]
+  },
+  {
+   "from": "B",
+   "say": "The YHZ cross-observations prove an exchange of my two handles: the component formerly denoted b.tp-eb7865a1 is now b.tp-16c09dd5, and the component formerly denoted b.tp-16c09dd5 is now b.tp-eb7865a1. I am updating both directions. The YOW handles b.tp-881b0151 and b.tp-2519f04a were unchanged in my record; your cross-observations therefore show that your YOW /0 and /1 handles exchanged components. The isolated address change on b.tp-a63e5804 is only a fact change, with no evidence of a handle change.",
+   "my_handle_changes": [
+    {
+     "old_handle": "b.tp-eb7865a1",
+     "new_handle": "b.tp-16c09dd5",
+     "reason": "Live observations show the component previously bound through b.tp-eb7865a1 to A's YHZ /0 is now denoted b.tp-16c09dd5."
+    },
+    {
+     "old_handle": "b.tp-16c09dd5",
+     "new_handle": "b.tp-eb7865a1",
+     "reason": "Live observations show the component previously bound through b.tp-16c09dd5 to A's YHZ /2 is now denoted b.tp-eb7865a1."
+    }
+   ],
+   "my_removed": [],
+   "observations": [],
+   "cannot_tell": [],
+   "done": true
+  },
+  {
+   "from": "A",
+   "say": "The YOW cross-observations, together with your confirmation that the B handles were unchanged, prove that my a.yow-ar-05/et-0/0/0 and /1 handles exchanged components. I am updating both directions. All other changed bindings have now been resolved.",
+   "my_handle_changes": [
+    {
+     "old_handle": "a.yow-ar-05/et-0/0/0",
+     "new_handle": "a.yow-ar-05/et-0/0/1",
+     "reason": "The component formerly bound through /0 to b.tp-881b0151 is now observed through /1, while the B handle remained unchanged."
+    },
+    {
+     "old_handle": "a.yow-ar-05/et-0/0/1",
+     "new_handle": "a.yow-ar-05/et-0/0/0",
+     "reason": "The component formerly bound through /1 to b.tp-2519f04a is now observed through /0, while the B handle remained unchanged."
+    }
+   ],
+   "my_removed": [],
+   "observations": [],
+   "cannot_tell": [],
+   "done": true
+  },
+  {
+   "from": "B",
+   "say": "All bindings are now resolved and up to date; I have nothing further to change or ask.",
+   "my_handle_changes": [],
+   "my_removed": [],
+   "observations": [],
+   "cannot_tell": [],
+   "done": true
+  }
+ ],
+ "effort": {
+  "total_tokens": 48000,
+  "reasoning_tokens": 2153,
+  "latency_s": 42.78999999999999,
+  "turns": 6,
+  "observations": 18
+ },
+ "score": {
+  "per_event": [
+   {
+    "kind": "rename",
+    "side": "a",
+    "outcome": "right"
+   },
+   {
+    "kind": "rekey_distinct",
+    "side": "b",
+    "outcome": "right"
+   },
+   {
+    "kind": "rekey_lookalike",
+    "side": "a",
+    "outcome": "right"
+   },
+   {
+    "kind": "decommission",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "readdress",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "move_address",
+    "side": null,
+    "outcome": "right"
+   },
+   {
+    "kind": "cable_swap",
+    "side": null,
+    "outcome": "right"
+   }
+  ],
+  "bindings_expected": 49,
+  "bindings_right": 49,
+  "bindings_left_open": 0,
+  "bindings_wrong": 0,
+  "rows_with_a_dead_handle": 0
+ },
+ "network": "small",
+ "model": "gpt-5.6-sol"
+}

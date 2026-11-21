@@ -12,6 +12,11 @@ network.
 and about five minutes. The method as it stood at the start took twelve conversations, about 580 checks and
 22 minutes for the same result.**
 
+**Keeping the bindings.** After the network and the two systems change, agents whose systems give them a change
+log kept every binding right, with no check against the network. Agents working from their own records alone ended
+with wrong bindings in three runs of six. With one rule added, that a binding touched by a record change is
+observed and that the observation closes it, every binding ended right in all six runs.
+
 This folder holds everything for this case and only this case. It was prompted by an experiment proposed on the
 IETF NMOP mailing list, and it is a study of its own, separate from the four-scenario study in `../study`.
 
@@ -20,8 +25,10 @@ IETF NMOP mailing list, and it is a study of its own, separate from the four-sce
 | If you have | Do this |
 |---|---|
 | Five minutes | Read the summary of `note.pdf` |
-| Twenty-five minutes | Watch `Translation_or_Binding_Part3.mp4`; it stands on its own |
-| A browser | Open `demonstrator.html` and step through a recorded run |
+| Twenty-five minutes | Watch `Translation_or_Binding_Part3.mp4`, on making the bindings; it stands on its own |
+| Ten more minutes | Watch `Translation_or_Binding_Part4.mp4`, on keeping them |
+| An hour | Read `study-report.pdf` |
+| A browser | Open `demonstrator.html` and step through a recorded run of the matching; open `more-demonstrators/keeping-bindings.html` for the keeping |
 | Python | Run the tests and rebuild the tables (below); no API key is needed |
 | Python and an OpenAI API key | Rerun any recorded configuration (below) |
 
@@ -30,9 +37,11 @@ IETF NMOP mailing list, and it is a study of its own, separate from the four-sce
 | Path | What it is |
 |---|---|
 | `note.pdf` | "Which router are we talking about? Instance matching as a binding": the case, what was shown, the refinements to the method, and what they teach |
-| `Translation_or_Binding_Part3.mp4`, `Translation_or_Binding_Part3_transcript.txt` | The narrated video and its transcript |
+| `study-report.pdf` | "Making and keeping instance bindings": the study report, with the set-up, every result, the method as it now stands and the lessons for builders |
+| `Translation_or_Binding_Part3.mp4`, `Translation_or_Binding_Part3_transcript.txt` | Part 3 of the video series, on making the bindings, and its transcript |
+| `Translation_or_Binding_Part4.mp4`, `Translation_or_Binding_Part4_transcript.txt` | Part 4, on keeping the bindings, and its transcript |
 | `demonstrator.html` | A step-through of a recorded run: the network, each agent's graph and the conversation. It opens in any browser and needs no server and no key |
-| `more-demonstrators/` | The same step-through for three other recorded runs: the small network with live observation, the 22-router network with addresses withheld, and the 96-router network |
+| `more-demonstrators/` | The same step-through for three other recorded runs: the small network with live observation, the 22-router network with addresses withheld, and the 96-router network. Also `keeping-bindings.html`: one batch of changes stepped through twice, with agents that work from their records alone and with the rule |
 | `cases/` | The three networks (8, 22 and 96 routers) and the same-name variant, each as two independently populated graphs with the ground truth used for scoring; and `config_ipnet`, the two models with their correspondences |
 | `harness/` | The code for this case, with its tests |
 | `results/` | Every recorded run: a summary per configuration and the full transcript of each run |
@@ -47,10 +56,14 @@ IETF NMOP mailing list, and it is a study of its own, separate from the four-sce
 | `single_reasoner.py` | The same sequence with one or both sides inert: one reasoner over the records, with a verification pass |
 | `network_check.py` | The stand-in that answers a check: an experiment on a digital twin, or a live observation |
 | `carry.py`, `term_translator.py` | The translators for individuals and for values, and the carry check |
+| `keeping.py` | Keeping bindings, with no model call: the changes (renaming, re-keying, decommissioning, address and cable changes) and the mechanisms that find a void binding (noticed on use, identifiers compared again, relations compared, observation) |
+| `keeping_agents.py` | Keeping bindings with agents: announcement from a change log, work from the records alone, the rule that a touched binding is observed and that the observation closes it, and one side inert |
 
 `run_matching.py` runs one configuration; `record_runs.py` is the queue of recorded configurations; `tables.py`
 rebuilds the note's tables from `results/`; `build_demonstrator.py` builds a demonstrator page from any recorded
-run; `build_case.py` generates a network of any size.
+run; `build_case.py` generates a network of any size. For keeping bindings, `run_keeping.py` tries each mechanism
+on each kind of change with no model call, `run_keeping_agents.py` runs the agents and prints the table of the
+recorded runs, and `build_keeping_demonstrator.py` builds the keeping page.
 
 The code is built on the study harness in `../study` and uses it in place: the case format, the scoring and
 the base stacks. Nothing in `../study` was changed.
@@ -63,7 +76,9 @@ turn each agent took, every question, proposal and ratification, and every check
 **Check the figures, with no key.** From this folder:
 
     python harness/tables.py                     # rebuilds Tables 1 and 3 of the note from results/
-    python -m pytest -q harness/tests            # 17 tests: the whole protocol, run with scripted agents
+    python harness/run_keeping.py                # keeping: what each mechanism finds, for each kind of change
+    python harness/run_keeping_agents.py --tables   # keeping: the table of the 24 recorded runs with agents
+    python -m pytest -q harness/tests            # 35 tests: both protocols, run with scripted agents
 
 The tests include agents that guess a look-alike wrongly, forget an individual, or cross two matches, and show
 the protocol catching each. The identity anchor and the look-alike detection are deterministic, so the 38,
@@ -75,10 +90,11 @@ the protocol catching each. The identity anchor and the look-alike detection are
     python harness/record_runs.py --only small                   # every small-network configuration
     python harness/record_runs.py --set inert                    # the inert placements
     python harness/record_runs.py --set two-agents --only large  # the 96-router network
+    python harness/run_keeping_agents.py --size small            # keeping: four conditions, three runs each
 
 Runs are resumable. With gpt-5.6-sol a run costs 0.1 to 0.2 million tokens on the small network, 0.2 to 0.6
 million on the medium one, and 1.1 to 2.8 million on the large one, where a run with addresses withheld takes
-about 22 minutes. Start small.
+about 22 minutes. A keeping run costs 0.01 to 0.08 million tokens. Start small.
 
 **Try your own network.** `python harness/build_case.py --size small` regenerates a case; other sizes and seeds
 give new networks in the same format.
@@ -93,6 +109,17 @@ give new networks in the same format.
 | `both-inert`, `one-inert` | One reasoner over two static records, or with one live side |
 | `withheld-both-inert`, `withheld-one-inert` | The same, with addresses withheld |
 
+Keeping bindings, on the small and medium networks:
+
+| Configuration | What it is |
+|---|---|
+| `keeping-change-log` | Two agents; each has its own system's change log |
+| `keeping-record-only` | Two agents; each can only compare its own record before and after |
+| `keeping-record-required-check` | As the previous one, with the rule: a binding touched by a record change is observed, and the observation closes it |
+| `keeping-one-inert` | One agent, with the other side publishing its record before and after |
+
+`results/keeping-without-agents/coverage.json` holds what each mechanism finds with no model call.
+
 Each was run three times. `results/earlier-protocol/` holds, with full transcripts, the two earlier
 configurations that the note cites for comparison: the 96-router network with every match conversed and checked,
 and the 22-router network with no check required. `results/model-step/` holds the conversation in which the two
@@ -106,5 +133,5 @@ agents reconciled their models, the experiments they ran, and the resulting tran
 - **The agents are a language model.** A rerun will not reproduce a transcript word for word. The recorded
   results are three runs per configuration with one model, so they show that the method works and what it
   costs here; they do not measure a failure rate.
-- **Making bindings, not keeping them.** How a binding already made is found to have gone out of date was not
-  examined.
+- **One change of each kind per run.** The runs on keeping bindings apply changes that do not touch each other.
+  Changes that interact were not studied.

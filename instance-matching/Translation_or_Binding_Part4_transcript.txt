@@ -1,0 +1,179 @@
+Translation or Binding, Part 4: Keeping the bindings
+Transcript of the narration.
+
+
+FROM PART THREE
+
+Part three ended with two agents that refer to the same components. Each has its own model of one
+network and its own names. Between them they hold a set of bindings.
+
+A binding is a pair of handles, one from each agent, with a claim: these two denote one component.
+One router. One port.
+
+On the map, this is the cell at the bottom right. Individuals that live in the world are bound one
+by one, and kept current. Part three was about the first half of that sentence. This part is about
+the second.
+
+
+THE QUESTION
+
+A binding is valid while both handles still denote the same component. When they no longer do, the
+binding is void.
+
+Networks change, and so do the systems that describe them. So the question for this part is simple.
+When a binding becomes void, how do the agents find out? And how do they put it right?
+
+
+TWO KINDS OF CHANGE
+
+Two different things can happen, and they must be kept apart.
+
+First, a handle can come to denote another component. A system renames a handle. A system re-keys
+its handles, so that two of them exchange the components they denote. Or a component is
+decommissioned, and its handles denote nothing. All of these void bindings.
+
+Second, the facts recorded about a component can change, while its handle still denotes it. An
+address is changed. Two ports exchange their addresses. Two cables are exchanged. None of these
+voids a binding. The port is still the port it was.
+
+
+THE SILENT ONE
+
+Some of these changes announce themselves. A renamed handle no longer resolves. The next time the
+binding is used, it fails, and everyone knows.
+
+A re-keying does not. Both handles still resolve. Both still answer. An instruction sent through the
+binding arrives, and acts on the wrong component.
+
+This is not an exotic case. An interface index, the identifier in the question that opened part
+three, is a handle of this kind. A system can assign its indexes again.
+
+
+WHAT NEEDS NO REASONING
+
+Start with what can be done without any reasoning at all. There are four mechanisms.
+
+A handle that no longer resolves is noticed on use. The identifiers can be compared again, as in the
+first step of the matching. The relations that each side records can be carried across the bindings
+and compared. And every binding can be put to an observation: data that the network has recorded is
+read through both handles, and compared.
+
+On the network of one hundred and fifty bindings, each mechanism was tried on each kind of change. A
+renaming and a decommissioning are found by all of them. A re-keying of ports that carry addresses
+is found by comparing identifiers.
+
+A re-keying of look-alike ports is not. Those ports carry no address. Comparing identifiers finds
+none of the eighty void bindings. Comparing relations finds that something is wrong there, and
+cannot say which binding. Observation finds exactly the void ones, and finds where each handle now
+belongs.
+
+
+A STALE RECORD
+
+There is a trap in comparing identifiers again. It assumes that both records are current.
+
+Suppose two ports exchange their addresses, and one side has not yet refreshed its record. The
+comparison now pairs each port with the other one's counterpart. It reports two valid bindings as
+void. It proposes a repair for each. And each repair is wrong.
+
+In the trial, this happened every time: eighty valid bindings reported, eighty wrong repairs
+proposed. An observation, on the same cases, raised no alarm, because it reads the network and not
+the record.
+
+
+ANNOUNCEMENT
+
+The other way to keep bindings current is announcement. The side where a change happens tells the
+other side.
+
+This is exact when that side knows what changed. And it knows, when its own system tells it: a
+change log, stating what was renamed, what was re-keyed, and what was done to the network.
+
+With a change log on each side, two agents were given a batch of seven changes, which left six
+bindings void. In all six recorded runs, every binding ended right. It took two to four turns, and
+no observation at all.
+
+
+WHAT A RECORD CANNOT SAY
+
+Without a change log, a side can still compare its own record before and after. That tells it that
+something changed. It does not always tell it what.
+
+Take two ports of one bundle. In one case, the system re-keys their two handles. In the other,
+somebody exchanges their two cables. In the record, the two cases are identical: two handles now
+show each other's connections.
+
+The first case voids two bindings. The second voids none. From its record alone, the side cannot
+know which one happened.
+
+
+RECORDS ONLY
+
+Here is a recorded run, with two agents that have only their records. The seven changes happen. Six
+bindings are void.
+
+The agents do well with most of it. They find the renaming. They put the bindings with changed
+addresses to an observation, and clear them. They find the re-keying of the ports that carry
+addresses.
+
+Then there are agent B's two look-alike ports. B's record shows their connections exchanged. B does
+not put them to an observation. Agent A's record shows nothing there, so A does not look. Both
+declare done. Two bindings are wrong, and neither agent knows.
+
+Across six runs, this happened in three.
+
+
+THE RULE
+
+The remedy is one rule, and it has two parts.
+
+A change in a record is evidence, and not a verdict. So any binding whose handle a change touches is
+put to an observation, and must be found to be one component, before its agent may finish.
+
+And the observation itself closes the binding. When a pair of handles is observed to be one
+component, that pair becomes the binding, whichever side's handles moved. No agent has to work out
+who re-keyed what.
+
+Here is the same run, with the rule. B's two bindings are observed: two components, each. The agents
+observe the crossed pairs: one component, each. The bindings are set, and settled.
+
+
+THE RESULT
+
+With the rule, every binding ended right in all six runs.
+
+The cost was about twenty-one observations per run. And it was the same on the network of fifty
+bindings as on the network of one hundred and fifty. The work follows the size of the change, and
+not the size of the network.
+
+
+AN INERT SIDE
+
+Now take away the agent on one side. System B only publishes its record.
+
+The one agent that remains made no wrong repair, in any run. But where B's record was ambiguous, it
+could only say so, and leave the binding open. In four runs of six, one or two bindings stayed open.
+
+Nothing can be read through the handles of an inert side. So nothing can close them. A binding left
+open is known, and can be withheld from use. That is far better than a wrong one. But it stays open.
+
+
+KEEPING, IN ORDER
+
+So the method for keeping bindings has an order, as the method for making them did.
+
+Announce what the system reports. Where there is no report, treat a change in a record as evidence.
+Check every binding that a change touches, and let the check close it. Leave open what cannot be
+settled. And between changes, sweep by comparing identifiers and relations, but only with records
+known to be current.
+
+
+BACK TO THE MAP
+
+Part three asked which router we are talking about. This part asked whether we are still talking
+about it.
+
+The answer has the same shape both times. What the records determine needs no check. What they
+cannot determine goes to the network. And the agents can know, in advance, which is which.
+
+A binding is made once. Keeping it is what makes it safe to use.

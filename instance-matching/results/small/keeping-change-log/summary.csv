@@ -1,0 +1,4 @@
+network,condition,run,bindings_expected,bindings_right,bindings_left_open,bindings_wrong,rows_with_a_dead_handle,observations,turns,total_tokens,latency_s,rename,rekey_distinct,rekey_lookalike,decommission,readdress,move_address,cable_swap
+small,log,1,49,49,0,0,0,0,2,12242,11.6,right,right,right,right,right,right,right
+small,log,2,49,49,0,0,0,0,4,27145,19.4,right,right,right,right,right,right,right
+small,log,3,49,49,0,0,0,0,2,12009,11.3,right,right,right,right,right,right,right
