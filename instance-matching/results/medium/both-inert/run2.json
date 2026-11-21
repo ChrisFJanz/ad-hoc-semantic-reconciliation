@@ -1,0 +1,388 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_medium",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 1,
+    "submitted": true,
+    "proposed": 122,
+    "precision": 1.0,
+    "recall": 0.813,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 120,
+    "residual_experiment_only": 0,
+    "residual_native": 64,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 53663,
+    "reasoning_tokens": 909,
+    "latency_s": 24.44,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 122,
+      "open_a": 28,
+      "open_b": 92,
+      "lookalikes_a": 28,
+      "lookalikes_b": 24
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.yqb-cr-07/et-0/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/6",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/3",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/1",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/2",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/5",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/3",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/2",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-1/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/1",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/7",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/1",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/3",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/2",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/2",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/1",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.ywg-ar-15/et-1/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/7",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/1",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/0",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/3",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/6",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/7",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/1",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/2",
+            "reason": "Member of a recorded look-alike group; the static records do not distinguish its correspondence and no network check is available."
+          },
+          {
+            "id": "b.tp-e7a21bd5",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-dbc83434",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-d773459b",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-123cee98",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-0f1e44d2",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-5ef78e17",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-937d200e",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-7c77feb2",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-12e5712c",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-a81d81a4",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-d663803f",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-4f9f24c4",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-047ae90f",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-e8abb3b4",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-6f0fc1e3",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-015ca880",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-fed02a3f",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-678bedc9",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-10ff6ac4",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-054b8383",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-c1f3d7a3",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-b55f8e58",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-e3e12334",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-2d8c73e6",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-2a489b0c",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-4063fc60",
+            "reason": "Member of a recorded B look-alike group, and its possible A counterpart is also unresolved; no network check is available."
+          },
+          {
+            "id": "b.tp-9defe48c",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.tp-0ebf1200",
+            "reason": "Its possible A counterpart belongs to an unresolved look-alike group; a unique match would require a network check."
+          },
+          {
+            "id": "b.link-008e5901",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-76e02b18",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-81cd8332",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-dd43da11",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-56df57ae",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-df84fbb5",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-d6d01cfc",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          },
+          {
+            "id": "b.link-e3121429",
+            "reason": "Member of a recorded B look-alike group; order is not evidence and no network check is available."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-abbdcbf5",
+          "b.link-471b7887",
+          "b.link-5b44279b",
+          "b.link-7df8ea6d",
+          "b.link-57366802",
+          "b.link-a0bc6774",
+          "b.link-ceb56e00",
+          "b.link-f4986a8d",
+          "b.link-efc82c46",
+          "b.link-0e686a07",
+          "b.link-5d8a3191",
+          "b.link-0156be09",
+          "b.link-8d18018e",
+          "b.link-b5b95b58",
+          "b.link-fe867d38",
+          "b.link-f9cf9522",
+          "b.link-16217285",
+          "b.link-3b310467",
+          "b.link-66ac273c",
+          "b.link-6c84f475",
+          "b.link-ade40325",
+          "b.link-919b7bc1",
+          "b.link-24d86818",
+          "b.link-44bd8827",
+          "b.link-fbbc6fc0",
+          "b.link-c9b3345c",
+          "b.link-816f5653",
+          "b.link-0414622e",
+          "b.link-f9299b07",
+          "b.link-3af2aa33",
+          "b.link-1761be62",
+          "b.link-4f8f57ea",
+          "b.link-c8bdceda",
+          "b.link-8c9c41e4",
+          "b.link-8d2a0c9c",
+          "b.link-1004178b",
+          "b.link-999fca3b",
+          "b.link-62a17da1",
+          "b.link-df41dd1e",
+          "b.link-8fd188f7",
+          "b.link-09d70270",
+          "b.link-995b950f",
+          "b.link-733be49f",
+          "b.link-15528831",
+          "b.link-c7f85069",
+          "b.link-3d71cf67",
+          "b.link-ee7770b4",
+          "b.link-7e5444cd",
+          "b.link-d7319301",
+          "b.link-baa8d9b0",
+          "b.link-b00c1b19",
+          "b.link-86e327ec",
+          "b.link-faed77df",
+          "b.link-b87b9e2d",
+          "b.link-3f49ad96",
+          "b.link-b6f2ec53"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 122,
+      "by_topology": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 28,
+      "left_open_lookalikes": 28,
+      "open_a_lookalikes": 28,
+      "device_questions": 0
+    }
+  ]
+}

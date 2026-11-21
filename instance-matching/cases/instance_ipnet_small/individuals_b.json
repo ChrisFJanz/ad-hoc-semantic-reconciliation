@@ -1,0 +1,1264 @@
+{
+ "system": "Agent B",
+ "dialect": "topology view (RFC 8345 with L2 and L3 augmentations), own identifiers",
+ "individuals": [
+  {
+   "id": "b.node-0d30dd9a",
+   "type": "network-device",
+   "name": "node-0d30dd9a",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.7"
+   },
+   "rels": [],
+   "_truth": "X1"
+  },
+  {
+   "id": "b.tp-d4c9f43e",
+   "type": "physical-port",
+   "name": "tp-d4c9f43e",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.24"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-0d30dd9a"
+    }
+   ],
+   "_truth": "X1:p1"
+  },
+  {
+   "id": "b.tp-724e0671",
+   "type": "physical-port",
+   "name": "tp-724e0671",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.22"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-0d30dd9a"
+    }
+   ],
+   "_truth": "X1:p0"
+  },
+  {
+   "id": "b.node-b6c47796",
+   "type": "network-device",
+   "name": "node-b6c47796",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.8"
+   },
+   "rels": [],
+   "_truth": "X2"
+  },
+  {
+   "id": "b.tp-68370de9",
+   "type": "physical-port",
+   "name": "tp-68370de9",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.28"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-b6c47796"
+    }
+   ],
+   "_truth": "X2:p1"
+  },
+  {
+   "id": "b.tp-1891978b",
+   "type": "physical-port",
+   "name": "tp-1891978b",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.26"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-b6c47796"
+    }
+   ],
+   "_truth": "X2:p0"
+  },
+  {
+   "id": "b.node-d57f7b85",
+   "type": "network-device",
+   "name": "node-d57f7b85",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.2"
+   },
+   "rels": [],
+   "_truth": "C1"
+  },
+  {
+   "id": "b.tp-bef584d3",
+   "type": "physical-port",
+   "name": "tp-bef584d3",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p2"
+  },
+  {
+   "id": "b.tp-86c6aec7",
+   "type": "link-bundle",
+   "name": "tp-86c6aec7",
+   "key": null,
+   "attrs": {
+    "lag": true,
+    "ip-address": "10.0.0.6"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-100c2374"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-bef584d3"
+    }
+   ],
+   "_truth": "C1:ae4"
+  },
+  {
+   "id": "b.tp-6d4406be",
+   "type": "physical-port",
+   "name": "tp-6d4406be",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.9"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p5"
+  },
+  {
+   "id": "b.tp-a0597199",
+   "type": "physical-port",
+   "name": "tp-a0597199",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p7"
+  },
+  {
+   "id": "b.tp-100c2374",
+   "type": "physical-port",
+   "name": "tp-100c2374",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p3"
+  },
+  {
+   "id": "b.tp-2bfd876a",
+   "type": "physical-port",
+   "name": "tp-2bfd876a",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p6"
+  },
+  {
+   "id": "b.tp-0f6c5a44",
+   "type": "link-bundle",
+   "name": "tp-0f6c5a44",
+   "key": null,
+   "attrs": {
+    "lag": true,
+    "ip-address": "10.0.0.13"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-2bfd876a"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-a0597199"
+    }
+   ],
+   "_truth": "C1:ae8"
+  },
+  {
+   "id": "b.tp-76dde144",
+   "type": "physical-port",
+   "name": "tp-76dde144",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.3"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p1"
+  },
+  {
+   "id": "b.tp-d252c51c",
+   "type": "physical-port",
+   "name": "tp-d252c51c",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.1"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-d57f7b85"
+    }
+   ],
+   "_truth": "C1:p0"
+  },
+  {
+   "id": "b.node-183b0ab0",
+   "type": "network-device",
+   "name": "node-183b0ab0",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.4"
+   },
+   "rels": [],
+   "_truth": "G0a"
+  },
+  {
+   "id": "b.tp-16c09dd5",
+   "type": "physical-port",
+   "name": "tp-16c09dd5",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.16"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-183b0ab0"
+    }
+   ],
+   "_truth": "G0a:p2"
+  },
+  {
+   "id": "b.tp-a63e5804",
+   "type": "physical-port",
+   "name": "tp-a63e5804",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.23"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-183b0ab0"
+    }
+   ],
+   "_truth": "G0a:p4"
+  },
+  {
+   "id": "b.tp-eb7865a1",
+   "type": "physical-port",
+   "name": "tp-eb7865a1",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.8"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-183b0ab0"
+    }
+   ],
+   "_truth": "G0a:p0"
+  },
+  {
+   "id": "b.tp-72e772ac",
+   "type": "physical-port",
+   "name": "tp-72e772ac",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.19"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-183b0ab0"
+    }
+   ],
+   "_truth": "G0a:p3"
+  },
+  {
+   "id": "b.tp-a25e9c52",
+   "type": "physical-port",
+   "name": "tp-a25e9c52",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.10"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-183b0ab0"
+    }
+   ],
+   "_truth": "G0a:p1"
+  },
+  {
+   "id": "b.tp-8c9a4121",
+   "type": "physical-port",
+   "name": "tp-8c9a4121",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.27"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-183b0ab0"
+    }
+   ],
+   "_truth": "G0a:p5"
+  },
+  {
+   "id": "b.node-b2bbe90c",
+   "type": "network-device",
+   "name": "node-b2bbe90c",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.6"
+   },
+   "rels": [],
+   "_truth": "X0"
+  },
+  {
+   "id": "b.tp-e0ab2661",
+   "type": "physical-port",
+   "name": "tp-e0ab2661",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.20"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-b2bbe90c"
+    }
+   ],
+   "_truth": "X0:p1"
+  },
+  {
+   "id": "b.tp-32e15a14",
+   "type": "physical-port",
+   "name": "tp-32e15a14",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.18"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-b2bbe90c"
+    }
+   ],
+   "_truth": "X0:p0"
+  },
+  {
+   "id": "b.node-353f75fc",
+   "type": "network-device",
+   "name": "node-353f75fc",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.5"
+   },
+   "rels": [],
+   "_truth": "G0b"
+  },
+  {
+   "id": "b.tp-19da12cb",
+   "type": "physical-port",
+   "name": "tp-19da12cb",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.21"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p7"
+  },
+  {
+   "id": "b.tp-b28b8755",
+   "type": "physical-port",
+   "name": "tp-b28b8755",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.25"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p8"
+  },
+  {
+   "id": "b.tp-cb59b347",
+   "type": "link-bundle",
+   "name": "tp-cb59b347",
+   "key": null,
+   "attrs": {
+    "lag": true,
+    "ip-address": "10.0.0.14"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-3bb14dcf"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-e489acd1"
+    }
+   ],
+   "_truth": "G0b:ae5"
+  },
+  {
+   "id": "b.tp-e489acd1",
+   "type": "physical-port",
+   "name": "tp-e489acd1",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p3"
+  },
+  {
+   "id": "b.tp-2418fe41",
+   "type": "physical-port",
+   "name": "tp-2418fe41",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.29"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p9"
+  },
+  {
+   "id": "b.tp-3bb14dcf",
+   "type": "physical-port",
+   "name": "tp-3bb14dcf",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p4"
+  },
+  {
+   "id": "b.tp-881b0151",
+   "type": "physical-port",
+   "name": "tp-881b0151",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p0"
+  },
+  {
+   "id": "b.tp-6b1cfb03",
+   "type": "physical-port",
+   "name": "tp-6b1cfb03",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.17"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p6"
+  },
+  {
+   "id": "b.tp-2519f04a",
+   "type": "physical-port",
+   "name": "tp-2519f04a",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    }
+   ],
+   "_truth": "G0b:p1"
+  },
+  {
+   "id": "b.tp-d40769e8",
+   "type": "link-bundle",
+   "name": "tp-d40769e8",
+   "key": null,
+   "attrs": {
+    "lag": true,
+    "ip-address": "10.0.0.12"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-353f75fc"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-2519f04a"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-881b0151"
+    }
+   ],
+   "_truth": "G0b:ae2"
+  },
+  {
+   "id": "b.node-891be86f",
+   "type": "network-device",
+   "name": "node-891be86f",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.1"
+   },
+   "rels": [],
+   "_truth": "C0"
+  },
+  {
+   "id": "b.tp-5bbff6ef",
+   "type": "physical-port",
+   "name": "tp-5bbff6ef",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.4"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    }
+   ],
+   "_truth": "C0:p2"
+  },
+  {
+   "id": "b.tp-59ebe37d",
+   "type": "physical-port",
+   "name": "tp-59ebe37d",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.11"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    }
+   ],
+   "_truth": "C0:p3"
+  },
+  {
+   "id": "b.tp-5a4d1e42",
+   "type": "physical-port",
+   "name": "tp-5a4d1e42",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    }
+   ],
+   "_truth": "C0:p4"
+  },
+  {
+   "id": "b.tp-7ce4df47",
+   "type": "physical-port",
+   "name": "tp-7ce4df47",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    }
+   ],
+   "_truth": "C0:p5"
+  },
+  {
+   "id": "b.tp-d54a4f47",
+   "type": "physical-port",
+   "name": "tp-d54a4f47",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.2"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    }
+   ],
+   "_truth": "C0:p1"
+  },
+  {
+   "id": "b.tp-f4bae4dc",
+   "type": "link-bundle",
+   "name": "tp-f4bae4dc",
+   "key": null,
+   "attrs": {
+    "lag": true,
+    "ip-address": "10.0.0.15"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-5a4d1e42"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-7ce4df47"
+    }
+   ],
+   "_truth": "C0:ae6"
+  },
+  {
+   "id": "b.tp-6b80277f",
+   "type": "physical-port",
+   "name": "tp-6b80277f",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.0"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-891be86f"
+    }
+   ],
+   "_truth": "C0:p0"
+  },
+  {
+   "id": "b.node-9b928c01",
+   "type": "network-device",
+   "name": "node-9b928c01",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.3"
+   },
+   "rels": [],
+   "_truth": "C2"
+  },
+  {
+   "id": "b.tp-b3e678d5",
+   "type": "physical-port",
+   "name": "tp-b3e678d5",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-9b928c01"
+    }
+   ],
+   "_truth": "C2:p2"
+  },
+  {
+   "id": "b.tp-c2fe3242",
+   "type": "link-bundle",
+   "name": "tp-c2fe3242",
+   "key": null,
+   "attrs": {
+    "lag": true,
+    "ip-address": "10.0.0.7"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-9b928c01"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-b27a3a3f"
+    },
+    {
+     "rel": "member-link-tp",
+     "target": "b.tp-b3e678d5"
+    }
+   ],
+   "_truth": "C2:ae3"
+  },
+  {
+   "id": "b.tp-c4779d73",
+   "type": "physical-port",
+   "name": "tp-c4779d73",
+   "key": null,
+   "attrs": {
+    "lag": false,
+    "ip-address": "10.0.0.5"
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-9b928c01"
+    }
+   ],
+   "_truth": "C2:p0"
+  },
+  {
+   "id": "b.tp-b27a3a3f",
+   "type": "physical-port",
+   "name": "tp-b27a3a3f",
+   "key": null,
+   "attrs": {
+    "lag": false
+   },
+   "rels": [
+    {
+     "rel": "in-node",
+     "target": "b.node-9b928c01"
+    }
+   ],
+   "_truth": "C2:p1"
+  },
+  {
+   "id": "b.link-b351bafd",
+   "type": "link",
+   "name": "link-b351bafd",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-6b80277f"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-d252c51c"
+    }
+   ],
+   "_truth": "wire:C0:p0~C1:p0"
+  },
+  {
+   "id": "b.link-117a7fb9",
+   "type": "link",
+   "name": "link-117a7fb9",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-3bb14dcf"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-7ce4df47"
+    }
+   ],
+   "_truth": "wire:C0:p5~G0b:p4"
+  },
+  {
+   "id": "b.link-05a6962e",
+   "type": "link",
+   "name": "link-05a6962e",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 200000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-cb59b347"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-f4bae4dc"
+    }
+   ],
+   "_truth": "baglink:C0:ae6~G0b:ae5"
+  },
+  {
+   "id": "b.link-5de62a8a",
+   "type": "link",
+   "name": "link-5de62a8a",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-b3e678d5"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-100c2374"
+    }
+   ],
+   "_truth": "wire:C1:p3~C2:p2"
+  },
+  {
+   "id": "b.link-a3b6d183",
+   "type": "link",
+   "name": "link-a3b6d183",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 200000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-c2fe3242"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-86c6aec7"
+    }
+   ],
+   "_truth": "baglink:C1:ae4~C2:ae3"
+  },
+  {
+   "id": "b.link-678bedc9",
+   "type": "link",
+   "name": "link-678bedc9",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-2bfd876a"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-881b0151"
+    }
+   ],
+   "_truth": "wire:C1:p6~G0b:p0"
+  },
+  {
+   "id": "b.link-b8020545",
+   "type": "link",
+   "name": "link-b8020545",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 200000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-0f6c5a44"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-d40769e8"
+    }
+   ],
+   "_truth": "baglink:C1:ae8~G0b:ae2"
+  },
+  {
+   "id": "b.link-8b45dde1",
+   "type": "link",
+   "name": "link-8b45dde1",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 10000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-8c9a4121"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-1891978b"
+    }
+   ],
+   "_truth": "wire:G0a:p5~X2:p0"
+  },
+  {
+   "id": "b.link-5aafb184",
+   "type": "link",
+   "name": "link-5aafb184",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-2519f04a"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-a0597199"
+    }
+   ],
+   "_truth": "wire:C1:p7~G0b:p1"
+  },
+  {
+   "id": "b.link-c41e508d",
+   "type": "link",
+   "name": "link-c41e508d",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-6d4406be"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-eb7865a1"
+    }
+   ],
+   "_truth": "wire:C1:p5~G0a:p0"
+  },
+  {
+   "id": "b.link-bcd7eeb5",
+   "type": "link",
+   "name": "link-bcd7eeb5",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-6b1cfb03"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-16c09dd5"
+    }
+   ],
+   "_truth": "wire:G0a:p2~G0b:p6"
+  },
+  {
+   "id": "b.link-e72b314d",
+   "type": "link",
+   "name": "link-e72b314d",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 10000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-a63e5804"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-724e0671"
+    }
+   ],
+   "_truth": "wire:G0a:p4~X1:p0"
+  },
+  {
+   "id": "b.link-b707eb03",
+   "type": "link",
+   "name": "link-b707eb03",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-5bbff6ef"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-c4779d73"
+    }
+   ],
+   "_truth": "wire:C0:p2~C2:p0"
+  },
+  {
+   "id": "b.link-afbc10fb",
+   "type": "link",
+   "name": "link-afbc10fb",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 10000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-e0ab2661"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-19da12cb"
+    }
+   ],
+   "_truth": "wire:G0b:p7~X0:p1"
+  },
+  {
+   "id": "b.link-1d02317d",
+   "type": "link",
+   "name": "link-1d02317d",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-b27a3a3f"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-bef584d3"
+    }
+   ],
+   "_truth": "wire:C1:p2~C2:p1"
+  },
+  {
+   "id": "b.link-7ea483df",
+   "type": "link",
+   "name": "link-7ea483df",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 10000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-b28b8755"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-d4c9f43e"
+    }
+   ],
+   "_truth": "wire:G0b:p8~X1:p1"
+  },
+  {
+   "id": "b.link-75c94ec2",
+   "type": "link",
+   "name": "link-75c94ec2",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 10000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-72e772ac"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-32e15a14"
+    }
+   ],
+   "_truth": "wire:G0a:p3~X0:p0"
+  },
+  {
+   "id": "b.link-9d33f163",
+   "type": "link",
+   "name": "link-9d33f163",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 10000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-68370de9"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-2418fe41"
+    }
+   ],
+   "_truth": "wire:G0b:p9~X2:p1"
+  },
+  {
+   "id": "b.link-dc842b34",
+   "type": "link",
+   "name": "link-dc842b34",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-76dde144"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-d54a4f47"
+    }
+   ],
+   "_truth": "wire:C0:p1~C1:p1"
+  },
+  {
+   "id": "b.link-93049346",
+   "type": "link",
+   "name": "link-93049346",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-a25e9c52"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-59ebe37d"
+    }
+   ],
+   "_truth": "wire:C0:p3~G0a:p1"
+  },
+  {
+   "id": "b.link-749b0c70",
+   "type": "link",
+   "name": "link-749b0c70",
+   "key": null,
+   "attrs": {
+    "rate-kbps": 100000000
+   },
+   "rels": [
+    {
+     "rel": "source-tp",
+     "target": "b.tp-5a4d1e42"
+    },
+    {
+     "rel": "dest-tp",
+     "target": "b.tp-e489acd1"
+    }
+   ],
+   "_truth": "wire:C0:p4~G0b:p3"
+  }
+ ]
+}

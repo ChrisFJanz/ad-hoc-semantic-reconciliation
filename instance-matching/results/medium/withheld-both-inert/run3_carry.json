@@ -1,0 +1,1684 @@
+{
+  "instructions": 128,
+  "carried": 79,
+  "same_component": 79,
+  "wrong_component": 0,
+  "round_trip_ok": 79,
+  "rows": [
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-00/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-e72b314d"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0b:p1",
+      "responded_component": "G0b:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-00/et-0/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-b707eb03"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0b:p3",
+      "responded_component": "G0b:p3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-00/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-938e8e7d"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0b:p0",
+      "responded_component": "G0b:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-00/et-0/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-afbc10fb"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0b:p5",
+      "responded_component": "G0b:p5",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-00/et-0/0/4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-5fab0df4"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0b:p4",
+      "responded_component": "G0b:p4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-00/et-0/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-5b0a33aa"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0b:p2",
+      "responded_component": "G0b:p2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-er-01/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-dc842b34"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X5:p0",
+      "responded_component": "X5:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-er-01/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-5fdb0b45"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X5:p1",
+      "responded_component": "X5:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-er-02/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-er-02/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-er-02/et-0/0/3"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-er-02/et-0/0/2"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-er-03/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-6db21975"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X8:p0",
+      "responded_component": "X8:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-er-03/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-749b0c70"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X8:p1",
+      "responded_component": "X8:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/6"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-86c62197"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p6",
+      "responded_component": "G2b:p6",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/5"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-495c5284"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p2",
+      "responded_component": "G2b:p2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-c6f25bc4"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p0",
+      "responded_component": "G2b:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-1/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-92bb256a"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p10",
+      "responded_component": "G2b:p10",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/7"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-4e221bcb"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p7",
+      "responded_component": "G2b:p7",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-84fc41dd"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p1",
+      "responded_component": "G2b:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-1/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-46226a08"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p9",
+      "responded_component": "G2b:p9",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-9e9381f9"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p3",
+      "responded_component": "G2b:p3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-0/0/4"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-ar-04/et-1/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-ea7925ac"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2b:p8",
+      "responded_component": "G2b:p8",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yxe-er-05/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-b351bafd"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X1:p1",
+      "responded_component": "X1:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yxe-er-05/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-d908f04c"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X1:p0",
+      "responded_component": "X1:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-3a92311d"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p1",
+      "responded_component": "G2a:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-1/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/7"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/6"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-5be6b19d"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p6",
+      "responded_component": "G2a:p6",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/4"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-ff4922c6"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p3",
+      "responded_component": "G2a:p3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-0dad598f"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p2",
+      "responded_component": "G2a:p2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-1/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-930f9d4e"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p10",
+      "responded_component": "G2a:p10",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-1/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-b20341a0"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p9",
+      "responded_component": "G2a:p9",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-d6af3929"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p0",
+      "responded_component": "G2a:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-1/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-4e15c3b2"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G2a:p11",
+      "responded_component": "G2a:p11",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-ar-06/et-0/0/5"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-7a0f8e2d"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:p13",
+      "responded_component": "C0:p13",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-3c13c4d1"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:p12",
+      "responded_component": "C0:p12",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/ae4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-817cdc42"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:ae4",
+      "responded_component": "C0:ae4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-c3a9d712"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:p10",
+      "responded_component": "C0:p10",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-0/0/6"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/6"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-e4c7a291"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:p14",
+      "responded_component": "C0:p14",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-0/0/3"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/ae7"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-26e8cb85"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:ae7",
+      "responded_component": "C0:ae7",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-af4bad0b"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:p11",
+      "responded_component": "C0:p11",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-0/0/2"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/7"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-6547c535"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C0:p15",
+      "responded_component": "C0:p15",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-0/0/5"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-07/et-1/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/3"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/2"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-1/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-723cc2f3"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C1:p11",
+      "responded_component": "C1:p11",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/5"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/6"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/ae9"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-337ad96f"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C1:ae9",
+      "responded_component": "C1:ae9",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/ae4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-182056df"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C1:ae4",
+      "responded_component": "C1:ae4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-1/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-2fe5d398"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C1:p10",
+      "responded_component": "C1:p10",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-1/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-cr-08/et-0/0/7"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-er-09/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-er-09/et-0/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-cfc4ec5b"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X4:p2",
+      "responded_component": "X4:p2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-er-09/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-er-10/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yul-er-10/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-daba30e1"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X0:p0",
+      "responded_component": "X0:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-ar-11/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-d759af28"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1b:p0",
+      "responded_component": "G1b:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-ar-11/et-0/0/4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-9eb6d0d3"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1b:p4",
+      "responded_component": "G1b:p4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-ar-11/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-5aafb184"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1b:p1",
+      "responded_component": "G1b:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-ar-11/et-0/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-c41e508d"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1b:p3",
+      "responded_component": "G1b:p3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-ar-11/et-0/0/2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-7670ac83"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1b:p2",
+      "responded_component": "G1b:p2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-er-12/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-ce0949ac"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X10:p1",
+      "responded_component": "X10:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yeg-er-12/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-e887e610"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X10:p0",
+      "responded_component": "X10:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/et-0/0/4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-b0ed3745"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1a:p4",
+      "responded_component": "G1a:p4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/ae2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-cb0dc9cf"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1a:ae2",
+      "responded_component": "G1a:ae2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/et-0/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-a08e5203"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1a:p3",
+      "responded_component": "G1a:p3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/et-0/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-5607f97f"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1a:p5",
+      "responded_component": "G1a:p5",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyc-ar-13/et-0/0/6"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-4c9295dd"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G1a:p6",
+      "responded_component": "G1a:p6",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-14/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-14/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-14/et-0/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-77169572"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C3:p5",
+      "responded_component": "C3:p5",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-14/ae4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-b8020545"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C3:ae4",
+      "responded_component": "C3:ae4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-14/et-0/0/3"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-cr-14/et-0/0/2"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-efa34fc8"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0a:p5",
+      "responded_component": "G0a:p5",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/6"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-2f3252bd"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0a:p6",
+      "responded_component": "G0a:p6",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/2"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/ae9"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-a174557c"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0a:ae9",
+      "responded_component": "G0a:ae9",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-1/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/ae3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-c5f5a861"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0a:ae3",
+      "responded_component": "G0a:ae3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/4"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-d37b5b34"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0a:p4",
+      "responded_component": "G0a:p4",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/7"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-ar-15/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-6c9d7352"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "G0a:p0",
+      "responded_component": "G0a:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-er-16/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-70054b50"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X6:p1",
+      "responded_component": "X6:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.ywg-er-16/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-0a2481aa"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X6:p0",
+      "responded_component": "X6:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-er-17/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-er-17/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-er-17/et-0/0/3"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-d28249b0"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X11:p3",
+      "responded_component": "X11:p3",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yvr-er-17/ae2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-f9ce6522"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X11:ae2",
+      "responded_component": "X11:ae2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/ae12"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-d3ba4557"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C2:ae12",
+      "responded_component": "C2:ae12",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/ae2"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-28b735f4"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C2:ae2",
+      "responded_component": "C2:ae2",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/4"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/3"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-9f648f02"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C2:p5",
+      "responded_component": "C2:p5",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/0"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-1/0/3"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/6"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/7"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-1/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-2068cad6"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C2:p9",
+      "responded_component": "C2:p9",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/ae8"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-c6ee14b1"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C2:ae8",
+      "responded_component": "C2:ae8",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-0/0/1"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-1/0/2"
+      },
+      "carried": null,
+      "same_component": false,
+      "round_trip": false,
+      "status": "not carried: no correspondence"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yyz-cr-18/et-1/0/5"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-87da760f"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "C2:p13",
+      "responded_component": "C2:p13",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yxe-er-19/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-117a7fb9"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X3:p0",
+      "responded_component": "X3:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yxe-er-19/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-05a6962e"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X3:p1",
+      "responded_component": "X3:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-er-20/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-9d33f163"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X9:p1",
+      "responded_component": "X9:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yhz-er-20/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-ce015c53"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X9:p0",
+      "responded_component": "X9:p0",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-er-21/et-0/0/1"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-30ae4178"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X7:p1",
+      "responded_component": "X7:p1",
+      "status": "same component"
+    },
+    {
+      "instruction": {
+        "operation": "take-out-of-service",
+        "on": "a.yqb-er-21/et-0/0/0"
+      },
+      "carried": {
+        "operation": "take-out-of-service",
+        "on": "b.tp-795d58af"
+      },
+      "same_component": true,
+      "round_trip": true,
+      "named_component": "X7:p0",
+      "responded_component": "X7:p0",
+      "status": "same component"
+    }
+  ]
+}

@@ -1,0 +1,3212 @@
+{
+ "system": "Agent A",
+ "dialect": "interfaces view (RFC 8343, RFC 8344, LLDP)",
+ "individuals": [
+  {
+   "id": "a.ywg-ar-00",
+   "type": "network-device",
+   "name": "ywg-ar-00",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.6"
+   },
+   "rels": [],
+   "_truth": "G0b"
+  },
+  {
+   "id": "a.ywg-ar-00/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.22"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-00"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-1/0/1"
+    }
+   ],
+   "_truth": "G0b:p1"
+  },
+  {
+   "id": "a.ywg-ar-00/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.87"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-00"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-er-03/et-0/0/1"
+    }
+   ],
+   "_truth": "G0b:p3"
+  },
+  {
+   "id": "a.ywg-ar-00/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.20"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-00"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/3"
+    }
+   ],
+   "_truth": "G0b:p0"
+  },
+  {
+   "id": "a.ywg-ar-00/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.99"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-00"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-er-17/et-0/0/3"
+    }
+   ],
+   "_truth": "G0b:p5"
+  },
+  {
+   "id": "a.ywg-ar-00/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.95"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-00"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-er-12/et-0/0/1"
+    }
+   ],
+   "_truth": "G0b:p4"
+  },
+  {
+   "id": "a.ywg-ar-00/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.25"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-00"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/4"
+    }
+   ],
+   "_truth": "G0b:p2"
+  },
+  {
+   "id": "a.yeg-er-01",
+   "type": "network-device",
+   "name": "yeg-er-01",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.16"
+   },
+   "rels": [],
+   "_truth": "X5"
+  },
+  {
+   "id": "a.yeg-er-01/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.72"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-er-01"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-1/0/1"
+    }
+   ],
+   "_truth": "X5:p0"
+  },
+  {
+   "id": "a.yeg-er-01/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.74"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-er-01"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-1/0/0"
+    }
+   ],
+   "_truth": "X5:p1"
+  },
+  {
+   "id": "a.yyz-er-02",
+   "type": "network-device",
+   "name": "yyz-er-02",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.13"
+   },
+   "rels": [],
+   "_truth": "X2"
+  },
+  {
+   "id": "a.yyz-er-02/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.56"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-er-02"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/5"
+    }
+   ],
+   "_truth": "X2:p1"
+  },
+  {
+   "id": "a.yyz-er-02/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.54"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-er-02"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/4"
+    }
+   ],
+   "_truth": "X2:p0"
+  },
+  {
+   "id": "a.yyz-er-02/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.60"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-er-02"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/5"
+    }
+   ],
+   "_truth": "X2:p3"
+  },
+  {
+   "id": "a.yyz-er-02/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.58"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-er-02"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/4"
+    }
+   ],
+   "_truth": "X2:p2"
+  },
+  {
+   "id": "a.yhz-er-03",
+   "type": "network-device",
+   "name": "yhz-er-03",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.19"
+   },
+   "rels": [],
+   "_truth": "X8"
+  },
+  {
+   "id": "a.yhz-er-03/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.84"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-er-03"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/5"
+    }
+   ],
+   "_truth": "X8:p0"
+  },
+  {
+   "id": "a.yhz-er-03/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.86"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-er-03"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-00/et-0/0/3"
+    }
+   ],
+   "_truth": "X8:p1"
+  },
+  {
+   "id": "a.yul-ar-04",
+   "type": "network-device",
+   "name": "yul-ar-04",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.10"
+   },
+   "rels": [],
+   "_truth": "G2b"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.65"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yxe-er-19/et-0/0/1"
+    }
+   ],
+   "_truth": "G2b:p6"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.61"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-er-02/et-0/0/3"
+    }
+   ],
+   "_truth": "G2b:p5"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.45"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/2"
+    }
+   ],
+   "_truth": "G2b:p2"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.40"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/7"
+    }
+   ],
+   "_truth": "G2b:p0"
+  },
+  {
+   "id": "a.yul-ar-04/et-1/0/2",
+   "type": "physical-port",
+   "name": "et-1/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.91"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-er-20/et-0/0/1"
+    }
+   ],
+   "_truth": "G2b:p10"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/7",
+   "type": "physical-port",
+   "name": "et-0/0/7",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.71"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-er-09/et-0/0/2"
+    }
+   ],
+   "_truth": "G2b:p7"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.42"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-1/0/3"
+    }
+   ],
+   "_truth": "G2b:p1"
+  },
+  {
+   "id": "a.yul-ar-04/et-1/0/1",
+   "type": "physical-port",
+   "name": "et-1/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.83"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-er-21/et-0/0/1"
+    }
+   ],
+   "_truth": "G2b:p9"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.49"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-er-10/et-0/0/1"
+    }
+   ],
+   "_truth": "G2b:p3"
+  },
+  {
+   "id": "a.yul-ar-04/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.59"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-er-02/et-0/0/2"
+    }
+   ],
+   "_truth": "G2b:p4"
+  },
+  {
+   "id": "a.yul-ar-04/et-1/0/0",
+   "type": "physical-port",
+   "name": "et-1/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.75"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-ar-04"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-er-01/et-0/0/1"
+    }
+   ],
+   "_truth": "G2b:p8"
+  },
+  {
+   "id": "a.yxe-er-05",
+   "type": "network-device",
+   "name": "yxe-er-05",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.12"
+   },
+   "rels": [],
+   "_truth": "X1"
+  },
+  {
+   "id": "a.yxe-er-05/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.52"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yxe-er-05"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-ar-11/et-0/0/3"
+    }
+   ],
+   "_truth": "X1:p1"
+  },
+  {
+   "id": "a.yxe-er-05/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.50"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yxe-er-05"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyc-ar-13/et-0/0/5"
+    }
+   ],
+   "_truth": "X1:p0"
+  },
+  {
+   "id": "a.yeg-ar-06",
+   "type": "network-device",
+   "name": "yeg-ar-06",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.9"
+   },
+   "rels": [],
+   "_truth": "G2a"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.38"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-1/0/2"
+    }
+   ],
+   "_truth": "G2a:p1"
+  },
+  {
+   "id": "a.yeg-ar-06/et-1/0/0",
+   "type": "physical-port",
+   "name": "et-1/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.69"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-er-09/et-0/0/1"
+    }
+   ],
+   "_truth": "G2a:p8"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/7",
+   "type": "physical-port",
+   "name": "et-0/0/7",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.67"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-er-09/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p7"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.63"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yxe-er-19/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p6"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.55"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-er-02/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p4"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.47"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-er-10/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p3"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.44"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/2"
+    }
+   ],
+   "_truth": "G2a:p2"
+  },
+  {
+   "id": "a.yeg-ar-06/et-1/0/2",
+   "type": "physical-port",
+   "name": "et-1/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.81"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-er-21/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p10"
+  },
+  {
+   "id": "a.yeg-ar-06/et-1/0/1",
+   "type": "physical-port",
+   "name": "et-1/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.73"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-er-01/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p9"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.36"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/6"
+    }
+   ],
+   "_truth": "G2a:p0"
+  },
+  {
+   "id": "a.yeg-ar-06/et-1/0/3",
+   "type": "physical-port",
+   "name": "et-1/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.89"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-er-20/et-0/0/0"
+    }
+   ],
+   "_truth": "G2a:p11"
+  },
+  {
+   "id": "a.yeg-ar-06/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.57"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-ar-06"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-er-02/et-0/0/1"
+    }
+   ],
+   "_truth": "G2a:p5"
+  },
+  {
+   "id": "a.yqb-cr-07",
+   "type": "network-device",
+   "name": "yqb-cr-07",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.1"
+   },
+   "rels": [],
+   "_truth": "C0"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/5",
+   "type": "physical-port",
+   "name": "et-1/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.33"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-ar-11/et-0/0/1"
+    }
+   ],
+   "_truth": "C0:p13"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/4",
+   "type": "physical-port",
+   "name": "et-1/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.29"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyc-ar-13/et-0/0/3"
+    }
+   ],
+   "_truth": "C0:p12"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/1",
+   "type": "physical-port",
+   "name": "et-1/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.6"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-14/et-0/0/1"
+    }
+   ],
+   "_truth": "C0:p9"
+  },
+  {
+   "id": "a.yqb-cr-07/ae4",
+   "type": "link-bundle",
+   "name": "ae4",
+   "key": null,
+   "attrs": {
+    "speed": 400000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.0"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-07/et-0/0/0"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-07/et-0/0/1"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-07/et-0/0/2"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-07/et-0/0/3"
+    }
+   ],
+   "_truth": "C0:ae4"
+  },
+  {
+   "id": "a.yqb-cr-07/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-07/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p0"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/2",
+   "type": "physical-port",
+   "name": "et-1/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.17"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p10"
+  },
+  {
+   "id": "a.yqb-cr-07/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-07/ae7"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/1"
+    }
+   ],
+   "_truth": "C0:p6"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/6",
+   "type": "physical-port",
+   "name": "et-1/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.37"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p14"
+  },
+  {
+   "id": "a.yqb-cr-07/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-07/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/3"
+    }
+   ],
+   "_truth": "C0:p3"
+  },
+  {
+   "id": "a.yqb-cr-07/ae7",
+   "type": "link-bundle",
+   "name": "ae7",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.2"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-07/et-0/0/5"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-07/et-0/0/6"
+    }
+   ],
+   "_truth": "C0:ae7"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/3",
+   "type": "physical-port",
+   "name": "et-1/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.21"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-00/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p11"
+  },
+  {
+   "id": "a.yqb-cr-07/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-07/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/1"
+    }
+   ],
+   "_truth": "C0:p1"
+  },
+  {
+   "id": "a.yqb-cr-07/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-07/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/2"
+    }
+   ],
+   "_truth": "C0:p2"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/7",
+   "type": "physical-port",
+   "name": "et-1/0/7",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.41"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p15"
+  },
+  {
+   "id": "a.yqb-cr-07/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-07/ae7"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p5"
+  },
+  {
+   "id": "a.yqb-cr-07/et-1/0/0",
+   "type": "physical-port",
+   "name": "et-1/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.4"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-07"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-14/et-0/0/0"
+    }
+   ],
+   "_truth": "C0:p8"
+  },
+  {
+   "id": "a.yhz-cr-08",
+   "type": "network-device",
+   "name": "yhz-cr-08",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.2"
+   },
+   "rels": [],
+   "_truth": "C1"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yhz-cr-08/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-0/0/3"
+    }
+   ],
+   "_truth": "C1:p3"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yhz-cr-08/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-0/0/2"
+    }
+   ],
+   "_truth": "C1:p2"
+  },
+  {
+   "id": "a.yhz-cr-08/et-1/0/3",
+   "type": "physical-port",
+   "name": "et-1/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.43"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/1"
+    }
+   ],
+   "_truth": "C1:p11"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.8"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/3"
+    }
+   ],
+   "_truth": "C1:p5"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.10"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/4"
+    }
+   ],
+   "_truth": "C1:p6"
+  },
+  {
+   "id": "a.yhz-cr-08/ae9",
+   "type": "link-bundle",
+   "name": "ae9",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.12"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yhz-cr-08/et-0/0/7"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yhz-cr-08/et-1/0/0"
+    }
+   ],
+   "_truth": "C1:ae9"
+  },
+  {
+   "id": "a.yhz-cr-08/ae4",
+   "type": "link-bundle",
+   "name": "ae4",
+   "key": null,
+   "attrs": {
+    "speed": 400000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.1"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yhz-cr-08/et-0/0/0"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yhz-cr-08/et-0/0/1"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yhz-cr-08/et-0/0/2"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yhz-cr-08/et-0/0/3"
+    }
+   ],
+   "_truth": "C1:ae4"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yhz-cr-08/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-0/0/0"
+    }
+   ],
+   "_truth": "C1:p0"
+  },
+  {
+   "id": "a.yhz-cr-08/et-1/0/2",
+   "type": "physical-port",
+   "name": "et-1/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.39"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/1"
+    }
+   ],
+   "_truth": "C1:p10"
+  },
+  {
+   "id": "a.yhz-cr-08/et-1/0/0",
+   "type": "physical-port",
+   "name": "et-1/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yhz-cr-08/ae9"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-14/et-0/0/3"
+    }
+   ],
+   "_truth": "C1:p8"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yhz-cr-08/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-0/0/1"
+    }
+   ],
+   "_truth": "C1:p1"
+  },
+  {
+   "id": "a.yhz-cr-08/et-0/0/7",
+   "type": "physical-port",
+   "name": "et-0/0/7",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-cr-08"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yhz-cr-08/ae9"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-14/et-0/0/2"
+    }
+   ],
+   "_truth": "C1:p7"
+  },
+  {
+   "id": "a.yul-er-09",
+   "type": "network-device",
+   "name": "yul-er-09",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.15"
+   },
+   "rels": [],
+   "_truth": "X4"
+  },
+  {
+   "id": "a.yul-er-09/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.66"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-er-09"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/7"
+    }
+   ],
+   "_truth": "X4:p0"
+  },
+  {
+   "id": "a.yul-er-09/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.70"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-er-09"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/7"
+    }
+   ],
+   "_truth": "X4:p2"
+  },
+  {
+   "id": "a.yul-er-09/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.68"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-er-09"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-1/0/0"
+    }
+   ],
+   "_truth": "X4:p1"
+  },
+  {
+   "id": "a.yul-er-10",
+   "type": "network-device",
+   "name": "yul-er-10",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.11"
+   },
+   "rels": [],
+   "_truth": "X0"
+  },
+  {
+   "id": "a.yul-er-10/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.48"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-er-10"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/3"
+    }
+   ],
+   "_truth": "X0:p1"
+  },
+  {
+   "id": "a.yul-er-10/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.46"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yul-er-10"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/3"
+    }
+   ],
+   "_truth": "X0:p0"
+  },
+  {
+   "id": "a.yvr-ar-11",
+   "type": "network-device",
+   "name": "yvr-ar-11",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.8"
+   },
+   "rels": [],
+   "_truth": "G1b"
+  },
+  {
+   "id": "a.yvr-ar-11/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.30"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-ar-11"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-1/0/5"
+    }
+   ],
+   "_truth": "G1b:p0"
+  },
+  {
+   "id": "a.yvr-ar-11/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.79"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-ar-11"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-er-16/et-0/0/1"
+    }
+   ],
+   "_truth": "G1b:p4"
+  },
+  {
+   "id": "a.yvr-ar-11/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.32"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-ar-11"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/5"
+    }
+   ],
+   "_truth": "G1b:p1"
+  },
+  {
+   "id": "a.yvr-ar-11/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.53"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-ar-11"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yxe-er-05/et-0/0/1"
+    }
+   ],
+   "_truth": "G1b:p3"
+  },
+  {
+   "id": "a.yvr-ar-11/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.35"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-ar-11"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyc-ar-13/et-0/0/4"
+    }
+   ],
+   "_truth": "G1b:p2"
+  },
+  {
+   "id": "a.yeg-er-12",
+   "type": "network-device",
+   "name": "yeg-er-12",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.21"
+   },
+   "rels": [],
+   "_truth": "X10"
+  },
+  {
+   "id": "a.yeg-er-12/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.94"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-er-12"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-00/et-0/0/4"
+    }
+   ],
+   "_truth": "X10:p1"
+  },
+  {
+   "id": "a.yeg-er-12/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.92"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yeg-er-12"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/6"
+    }
+   ],
+   "_truth": "X10:p0"
+  },
+  {
+   "id": "a.yyc-ar-13",
+   "type": "network-device",
+   "name": "yyc-ar-13",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.7"
+   },
+   "rels": [],
+   "_truth": "G1a"
+  },
+  {
+   "id": "a.yyc-ar-13/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.34"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-ar-11/et-0/0/2"
+    }
+   ],
+   "_truth": "G1a:p4"
+  },
+  {
+   "id": "a.yyc-ar-13/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyc-ar-13/ae2"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-1/0/2"
+    }
+   ],
+   "_truth": "G1a:p0"
+  },
+  {
+   "id": "a.yyc-ar-13/ae2",
+   "type": "link-bundle",
+   "name": "ae2",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.26"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyc-ar-13/et-0/0/0"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyc-ar-13/et-0/0/1"
+    }
+   ],
+   "_truth": "G1a:ae2"
+  },
+  {
+   "id": "a.yyc-ar-13/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.28"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/4"
+    }
+   ],
+   "_truth": "G1a:p3"
+  },
+  {
+   "id": "a.yyc-ar-13/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.51"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yxe-er-05/et-0/0/0"
+    }
+   ],
+   "_truth": "G1a:p5"
+  },
+  {
+   "id": "a.yyc-ar-13/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyc-ar-13/ae2"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-1/0/3"
+    }
+   ],
+   "_truth": "G1a:p1"
+  },
+  {
+   "id": "a.yyc-ar-13/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.77"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyc-ar-13"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-er-16/et-0/0/0"
+    }
+   ],
+   "_truth": "G1a:p6"
+  },
+  {
+   "id": "a.yqb-cr-14",
+   "type": "network-device",
+   "name": "yqb-cr-14",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.4"
+   },
+   "rels": [],
+   "_truth": "C3"
+  },
+  {
+   "id": "a.yqb-cr-14/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.5"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-14"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/0"
+    }
+   ],
+   "_truth": "C3:p0"
+  },
+  {
+   "id": "a.yqb-cr-14/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.7"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-14"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/1"
+    }
+   ],
+   "_truth": "C3:p1"
+  },
+  {
+   "id": "a.yqb-cr-14/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.15"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-14"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/5"
+    }
+   ],
+   "_truth": "C3:p5"
+  },
+  {
+   "id": "a.yqb-cr-14/ae4",
+   "type": "link-bundle",
+   "name": "ae4",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.13"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-14"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-14/et-0/0/2"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yqb-cr-14/et-0/0/3"
+    }
+   ],
+   "_truth": "C3:ae4"
+  },
+  {
+   "id": "a.yqb-cr-14/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-14"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-14/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-1/0/0"
+    }
+   ],
+   "_truth": "C3:p3"
+  },
+  {
+   "id": "a.yqb-cr-14/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-cr-14"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yqb-cr-14/ae4"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/7"
+    }
+   ],
+   "_truth": "C3:p2"
+  },
+  {
+   "id": "a.ywg-ar-15",
+   "type": "network-device",
+   "name": "ywg-ar-15",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.5"
+   },
+   "rels": [],
+   "_truth": "G0a"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.85"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-er-03/et-0/0/0"
+    }
+   ],
+   "_truth": "G0a:p5"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.93"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-er-12/et-0/0/0"
+    }
+   ],
+   "_truth": "G0a:p6"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/2",
+   "type": "physical-port",
+   "name": "et-0/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.ywg-ar-15/ae3"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/7"
+    }
+   ],
+   "_truth": "G0a:p2"
+  },
+  {
+   "id": "a.ywg-ar-15/ae9",
+   "type": "link-bundle",
+   "name": "ae9",
+   "key": null,
+   "attrs": {
+    "speed": 20000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.97"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.ywg-ar-15/et-0/0/7"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.ywg-ar-15/et-1/0/0"
+    }
+   ],
+   "_truth": "G0a:ae9"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.ywg-ar-15/ae3"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyz-cr-18/et-0/0/6"
+    }
+   ],
+   "_truth": "G0a:p1"
+  },
+  {
+   "id": "a.ywg-ar-15/et-1/0/0",
+   "type": "physical-port",
+   "name": "et-1/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.ywg-ar-15/ae9"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-er-17/et-0/0/1"
+    }
+   ],
+   "_truth": "G0a:p8"
+  },
+  {
+   "id": "a.ywg-ar-15/ae3",
+   "type": "link-bundle",
+   "name": "ae3",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.18"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.ywg-ar-15/et-0/0/1"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.ywg-ar-15/et-0/0/2"
+    }
+   ],
+   "_truth": "G0a:ae3"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.24"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-00/et-0/0/2"
+    }
+   ],
+   "_truth": "G0a:p4"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/7",
+   "type": "physical-port",
+   "name": "et-0/0/7",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.ywg-ar-15/ae9"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-er-17/et-0/0/0"
+    }
+   ],
+   "_truth": "G0a:p7"
+  },
+  {
+   "id": "a.ywg-ar-15/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.16"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-ar-15"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-1/0/2"
+    }
+   ],
+   "_truth": "G0a:p0"
+  },
+  {
+   "id": "a.ywg-er-16",
+   "type": "network-device",
+   "name": "ywg-er-16",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.17"
+   },
+   "rels": [],
+   "_truth": "X6"
+  },
+  {
+   "id": "a.ywg-er-16/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.78"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-er-16"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-ar-11/et-0/0/4"
+    }
+   ],
+   "_truth": "X6:p1"
+  },
+  {
+   "id": "a.ywg-er-16/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.76"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.ywg-er-16"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyc-ar-13/et-0/0/6"
+    }
+   ],
+   "_truth": "X6:p0"
+  },
+  {
+   "id": "a.yvr-er-17",
+   "type": "network-device",
+   "name": "yvr-er-17",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.22"
+   },
+   "rels": [],
+   "_truth": "X11"
+  },
+  {
+   "id": "a.yvr-er-17/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-er-17"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yvr-er-17/ae2"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-1/0/0"
+    }
+   ],
+   "_truth": "X11:p1"
+  },
+  {
+   "id": "a.yvr-er-17/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-er-17"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yvr-er-17/ae2"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/7"
+    }
+   ],
+   "_truth": "X11:p0"
+  },
+  {
+   "id": "a.yvr-er-17/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.98"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-er-17"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-00/et-0/0/5"
+    }
+   ],
+   "_truth": "X11:p3"
+  },
+  {
+   "id": "a.yvr-er-17/ae2",
+   "type": "link-bundle",
+   "name": "ae2",
+   "key": null,
+   "attrs": {
+    "speed": 20000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.96"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yvr-er-17"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yvr-er-17/et-0/0/0"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yvr-er-17/et-0/0/1"
+    }
+   ],
+   "_truth": "X11:ae2"
+  },
+  {
+   "id": "a.yyz-cr-18",
+   "type": "network-device",
+   "name": "yyz-cr-18",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.3"
+   },
+   "rels": [],
+   "_truth": "C2"
+  },
+  {
+   "id": "a.yyz-cr-18/ae12",
+   "type": "link-bundle",
+   "name": "ae12",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.27"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyz-cr-18/et-1/0/2"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyz-cr-18/et-1/0/3"
+    }
+   ],
+   "_truth": "C2:ae12"
+  },
+  {
+   "id": "a.yyz-cr-18/ae2",
+   "type": "link-bundle",
+   "name": "ae2",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.3"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyz-cr-18/et-0/0/0"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyz-cr-18/et-0/0/1"
+    }
+   ],
+   "_truth": "C2:ae2"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/4",
+   "type": "physical-port",
+   "name": "et-0/0/4",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.11"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/6"
+    }
+   ],
+   "_truth": "C2:p4"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/3",
+   "type": "physical-port",
+   "name": "et-0/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.9"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yhz-cr-08/et-0/0/5"
+    }
+   ],
+   "_truth": "C2:p3"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/5",
+   "type": "physical-port",
+   "name": "et-0/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.14"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-14/et-0/0/5"
+    }
+   ],
+   "_truth": "C2:p5"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyz-cr-18/ae2"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-0/0/5"
+    }
+   ],
+   "_truth": "C2:p0"
+  },
+  {
+   "id": "a.yyz-cr-18/et-1/0/3",
+   "type": "physical-port",
+   "name": "et-1/0/3",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyz-cr-18/ae12"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyc-ar-13/et-0/0/1"
+    }
+   ],
+   "_truth": "C2:p11"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/6",
+   "type": "physical-port",
+   "name": "et-0/0/6",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyz-cr-18/ae8"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/1"
+    }
+   ],
+   "_truth": "C2:p6"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/7",
+   "type": "physical-port",
+   "name": "et-0/0/7",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyz-cr-18/ae8"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-15/et-0/0/2"
+    }
+   ],
+   "_truth": "C2:p7"
+  },
+  {
+   "id": "a.yyz-cr-18/et-1/0/1",
+   "type": "physical-port",
+   "name": "et-1/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.23"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.ywg-ar-00/et-0/0/1"
+    }
+   ],
+   "_truth": "C2:p9"
+  },
+  {
+   "id": "a.yyz-cr-18/ae8",
+   "type": "link-bundle",
+   "name": "ae8",
+   "key": null,
+   "attrs": {
+    "speed": 200000000000,
+    "if-type": "ieee8023adLag",
+    "ipv4-address": "10.0.0.19"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyz-cr-18/et-0/0/6"
+    },
+    {
+     "rel": "lower-layer-if",
+     "target": "a.yyz-cr-18/et-0/0/7"
+    }
+   ],
+   "_truth": "C2:ae8"
+  },
+  {
+   "id": "a.yyz-cr-18/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyz-cr-18/ae2"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yqb-cr-07/et-0/0/6"
+    }
+   ],
+   "_truth": "C2:p1"
+  },
+  {
+   "id": "a.yyz-cr-18/et-1/0/2",
+   "type": "physical-port",
+   "name": "et-1/0/2",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "higher-layer-if",
+     "target": "a.yyz-cr-18/ae12"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yyc-ar-13/et-0/0/0"
+    }
+   ],
+   "_truth": "C2:p10"
+  },
+  {
+   "id": "a.yyz-cr-18/et-1/0/5",
+   "type": "physical-port",
+   "name": "et-1/0/5",
+   "key": null,
+   "attrs": {
+    "speed": 100000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.31"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yyz-cr-18"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yvr-ar-11/et-0/0/0"
+    }
+   ],
+   "_truth": "C2:p13"
+  },
+  {
+   "id": "a.yxe-er-19",
+   "type": "network-device",
+   "name": "yxe-er-19",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.14"
+   },
+   "rels": [],
+   "_truth": "X3"
+  },
+  {
+   "id": "a.yxe-er-19/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.62"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yxe-er-19"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-0/0/6"
+    }
+   ],
+   "_truth": "X3:p0"
+  },
+  {
+   "id": "a.yxe-er-19/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.64"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yxe-er-19"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-0/0/6"
+    }
+   ],
+   "_truth": "X3:p1"
+  },
+  {
+   "id": "a.yhz-er-20",
+   "type": "network-device",
+   "name": "yhz-er-20",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.20"
+   },
+   "rels": [],
+   "_truth": "X9"
+  },
+  {
+   "id": "a.yhz-er-20/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.90"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-er-20"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-1/0/2"
+    }
+   ],
+   "_truth": "X9:p1"
+  },
+  {
+   "id": "a.yhz-er-20/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.88"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yhz-er-20"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-1/0/3"
+    }
+   ],
+   "_truth": "X9:p0"
+  },
+  {
+   "id": "a.yqb-er-21",
+   "type": "network-device",
+   "name": "yqb-er-21",
+   "key": null,
+   "attrs": {
+    "router-id": "10.255.0.18"
+   },
+   "rels": [],
+   "_truth": "X7"
+  },
+  {
+   "id": "a.yqb-er-21/et-0/0/1",
+   "type": "physical-port",
+   "name": "et-0/0/1",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.82"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-er-21"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yul-ar-04/et-1/0/1"
+    }
+   ],
+   "_truth": "X7:p1"
+  },
+  {
+   "id": "a.yqb-er-21/et-0/0/0",
+   "type": "physical-port",
+   "name": "et-0/0/0",
+   "key": null,
+   "attrs": {
+    "speed": 10000000000,
+    "if-type": "ethernetCsmacd",
+    "ipv4-address": "10.0.0.80"
+   },
+   "rels": [
+    {
+     "rel": "on-device",
+     "target": "a.yqb-er-21"
+    },
+    {
+     "rel": "lldp-neighbour",
+     "target": "a.yeg-ar-06/et-1/0/2"
+    }
+   ],
+   "_truth": "X7:p0"
+  }
+ ]
+}

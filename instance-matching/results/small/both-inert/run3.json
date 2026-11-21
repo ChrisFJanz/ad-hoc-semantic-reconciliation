@@ -1,0 +1,199 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 2,
+    "submitted": true,
+    "proposed": 38,
+    "precision": 1.0,
+    "recall": 0.76,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 45,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 19154,
+    "reasoning_tokens": 911,
+    "latency_s": 16.33,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 38,
+      "open_a": 12,
+      "open_b": 33,
+      "lookalikes_a": 12,
+      "lookalikes_b": 6
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Look-alike with a.ywg-cr-00/et-0/0/2; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Look-alike with a.ywg-cr-00/et-0/0/1; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/7; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/2; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/6; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/3; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/3; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/1; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/4; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/0; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Look-alike with a.yyz-cr-06/et-0/0/5; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Look-alike with a.yyz-cr-06/et-0/0/4; the parallel bundle-member topology does not distinguish them without a network check."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Look-alike with b.tp-100c2374; the corresponding A bundle members are also indistinguishable."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae8 bundle."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Look-alike with b.tp-bef584d3; the corresponding A bundle members are also indistinguishable."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae8 bundle."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae5 bundle."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae5 bundle."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae2 bundle."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae2 bundle."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae6 bundle."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "Its possible A counterparts are a look-alike pair of parallel members of the settled ae6 bundle."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Look-alike with b.tp-b27a3a3f; the corresponding A bundle members are also indistinguishable."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Look-alike with b.tp-b3e678d5; the corresponding A bundle members are also indistinguishable."
+          },
+          {
+            "id": "b.link-5de62a8a",
+            "reason": "Look-alike with b.link-1d02317d; the records cannot distinguish the two parallel physical links, and A has no separate link individual."
+          },
+          {
+            "id": "b.link-1d02317d",
+            "reason": "Look-alike with b.link-5de62a8a; the records cannot distinguish the two parallel physical links, and A has no separate link individual."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 38,
+      "by_topology": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 12,
+      "left_open_lookalikes": 12,
+      "open_a_lookalikes": 12,
+      "device_questions": 0
+    }
+  ]
+}

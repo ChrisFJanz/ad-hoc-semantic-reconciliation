@@ -2,6 +2,17 @@
 
 *Using machine cognition — a theory, a research programme, and a completed four-scenario study.*
 
+## What's new (2026-11-20)
+
+**A new case study: [instance matching](instance-matching/).** Two agents each hold their own model of one
+network and their own names for its routers, ports and bundles. With no identifiers agreed in advance and no
+external service binding one agent's names to the other's, the two agents matched every individual correctly in
+every recorded run: all 658 in a 96-router network. With the method as tightened in this work, that takes two
+conversations, about 140 checks against the network and about five minutes, where the method as it stood at
+the start took twelve conversations, about 580 checks and 22 minutes for the same result. The folder
+`instance-matching/` holds the note, a narrated video, step-through demonstrators, the harness and every
+recorded run. It is a study of its own; nothing in `proposal/`, `study/` or `demos/` was changed.
+
 Two software systems that must exchange information rarely share a model of the world. The classical
 remedy is a standard agreed in advance. This project investigates the alternative that opens up once
 the systems on each side can **reason**: they reconcile their divergent models **ad hoc**, for the
@@ -13,7 +24,7 @@ its schema, instances as its assertions — with pragmatics and provenance layer
 then ontology matching plus entity resolution over that graph, and a thin shared reference is the
 interoperable anchor such graphs can bind to.
 
-The work is in two parts. Pick a door:
+The work is in two parts, with a separate case study. Pick a door:
 
 ### → [The proposal](proposal/) &nbsp;·&nbsp; the theory and the programme
 
@@ -33,6 +44,13 @@ data behind them.
 `demos/` — self-contained, interactive walk-throughs of the four scenarios (configuration, intent,
 cross-domain, observability), referenced by both the proposal and the results. They run live once
 GitHub Pages is enabled (see each door's README for the links).
+
+### → [Instance matching](instance-matching/) &nbsp;·&nbsp; a case study: which router are we talking about?
+
+`instance-matching/` — a separate, self-contained case study that applies the reconciliation method to one
+question: how two agents, each with its own model and its own names for one network, come to refer to the same
+components. A note, a narrated video, step-through demonstrators that open in any browser, the harness with its
+tests, and every recorded run.
 
 ---
 

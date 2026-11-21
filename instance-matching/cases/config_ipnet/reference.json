@@ -1,0 +1,139 @@
+{
+ "id": "ref.ipnet.thin.v1",
+ "kind": "lexical",
+ "note": "Thin lexical reference for the IP network case (an interfaces view against a topology view of one network). Identity-only entries; it records no relationships and names no instance. It has NO entry for identifiers a system issues for itself (tp-id). A port and its name are distinct entries, as are a link bundle and a physical connection, so labels sharing 'interface' or 'link' bind apart.",
+ "entries": [
+  {
+   "id": "network-device",
+   "label": "network device",
+   "synonyms": [
+    "router",
+    "node",
+    "managed system"
+   ],
+   "class": "node",
+   "definition": "One piece of network equipment that forwards traffic and owns ports.",
+   "example": "a core router"
+  },
+  {
+   "id": "physical-port",
+   "label": "physical port",
+   "synonyms": [
+    "physical interface",
+    "physical termination point"
+   ],
+   "class": "termination",
+   "definition": "One physical attachment point on a device, where exactly one cable or fibre ends.",
+   "example": "a 100 gigabit Ethernet port"
+  },
+  {
+   "id": "link-bundle",
+   "label": "link bundle",
+   "synonyms": [
+    "link aggregation group",
+    "aggregated interface",
+    "lag"
+   ],
+   "class": "termination",
+   "definition": "A logical interface on one device made of several of its physical ports acting as one.",
+   "example": "an aggregated Ethernet interface with two member ports"
+  },
+  {
+   "id": "bundle-membership",
+   "label": "bundle membership",
+   "synonyms": [
+    "member of bundle",
+    "lower layer"
+   ],
+   "class": "relation",
+   "definition": "The relation that says a physical port is one of the members of a link bundle on the same device.",
+   "example": "port 1 is a member of bundle 3"
+  },
+  {
+   "id": "physical-connection",
+   "label": "physical connection",
+   "synonyms": [
+    "wire",
+    "cable",
+    "adjacency at the physical layer"
+   ],
+   "class": "adjacency",
+   "definition": "The fact that two physical ports on different devices are joined by one cable or fibre.",
+   "example": "the cable from port 1 of router X to port 2 of router Y"
+  },
+  {
+   "id": "nominal-speed",
+   "label": "nominal speed",
+   "synonyms": [
+    "speed",
+    "rate",
+    "bandwidth"
+   ],
+   "class": "attribute",
+   "definition": "The nominal transmission speed of a port or of the connection it ends, with its unit.",
+   "example": "100 gigabits per second"
+  },
+  {
+   "id": "hardware-address",
+   "label": "hardware address",
+   "synonyms": [
+    "MAC address",
+    "physical address"
+   ],
+   "class": "identifier",
+   "definition": "The hardware address burned into a physical port.",
+   "example": "02:1a:2b:3c:4d:5e"
+  },
+  {
+   "id": "ip-address",
+   "label": "IP address",
+   "synonyms": [
+    "interface address"
+   ],
+   "class": "addressing",
+   "definition": "An IP address configured on a port or bundle.",
+   "example": "10.0.1.130"
+  },
+  {
+   "id": "router-id",
+   "label": "router identifier",
+   "synonyms": [
+    "loopback address",
+    "router ID"
+   ],
+   "class": "identifier",
+   "definition": "The routing identifier of a device.",
+   "example": "10.255.0.7"
+  },
+  {
+   "id": "interface-name",
+   "label": "device-issued interface name",
+   "synonyms": [
+    "interface name"
+   ],
+   "class": "identifier",
+   "definition": "The name that the device itself gives a port or bundle; unique only within that device.",
+   "example": "et-0/0/3"
+  },
+  {
+   "id": "interface-index",
+   "label": "interface index",
+   "synonyms": [
+    "ifIndex"
+   ],
+   "class": "identifier",
+   "definition": "A device-local integer index of an interface; arbitrary and unique only within that device.",
+   "example": "17"
+  },
+  {
+   "id": "topology",
+   "label": "topology",
+   "synonyms": [
+    "network"
+   ],
+   "class": "container",
+   "definition": "A set of devices and connections managed together as one network.",
+   "example": "the backbone network"
+  }
+ ]
+}

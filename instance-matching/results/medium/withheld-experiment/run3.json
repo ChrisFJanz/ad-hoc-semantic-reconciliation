@@ -1,0 +1,4657 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "two-agent",
+  "row": {
+    "case": "instance_ipnet_medium",
+    "model": "gpt-5.6-sol",
+    "placement": "both_cognitive",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 2,
+    "submitted": true,
+    "proposed": 150,
+    "precision": 1.0,
+    "recall": 1.0,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 64,
+    "residual_experiment_only": 0,
+    "residual_native": 64,
+    "confirmed_provision": 48,
+    "refuted_provision": 12,
+    "interrogated": 10,
+    "interrogate_calls": 10,
+    "provision_calls": 60,
+    "turns": 22,
+    "total_tokens": 615588,
+    "reasoning_tokens": 9528,
+    "latency_s": 299.46,
+    "mean_conf_correct": 0.924,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "two-agent"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_cognitive",
+      "stack": "two-agent-instance+op+confirm-lookalikes+staged60+anchors",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ]
+    },
+    {
+      "step": "stage",
+      "stage": 1,
+      "kind": "batch",
+      "devices_a": [
+        "a.ywg-ar-00",
+        "a.yeg-er-12",
+        "a.yhz-er-03",
+        "a.yqb-cr-07",
+        "a.yvr-er-17",
+        "a.ywg-ar-15",
+        "a.yyz-cr-18"
+      ],
+      "devices_b": [
+        "b.node-bcd7eeb5",
+        "b.node-cde74eaf",
+        "b.node-93049346",
+        "b.node-19f8c573",
+        "b.node-73050623",
+        "b.node-e267ee3c",
+        "b.node-48555212"
+      ],
+      "n_a": 54,
+      "n_b": 90
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "b.tp-938e8e7d",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-5fab0df4",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-afbc10fb",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-e72b314d",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-b707eb03",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-5b0a33aa",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-ce0949ac",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-e887e610",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-6db21975",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-749b0c70",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-1aca9b4c",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-af4bad0b",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-10ff6ac4",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-817cdc42",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-054b8383",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-c1f3d7a3",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-e4c7a291",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-26e8cb85",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-b55f8e58",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-e3e12334",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-ca229ad8",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-c3a9d712",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-2d8c73e6",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-6547c535",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-7a0f8e2d",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-3c13c4d1",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-f9ce6522",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-047ae90f",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-d28249b0",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-e8abb3b4",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-efa34fc8",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-a174557c",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-2a489b0c",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-6c9d7352",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-d37b5b34",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-2f3252bd",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-4063fc60",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-9defe48c",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-0ebf1200",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-c5f5a861",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-937d200e",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-7c77feb2",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-12e5712c",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-a81d81a4",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-d663803f",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-d3ba4557",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-3f7c5eaa",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-c6ee14b1",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-28b735f4",
+            "ask": "Provide all attributes and topology, especially owning device, aggregate capacity, and all member ports."
+          },
+          {
+            "their_id": "b.tp-4f9f24c4",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-2068cad6",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-87da760f",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-39a6a9f1",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          },
+          {
+            "their_id": "b.tp-9f648f02",
+            "ask": "Provide all attributes and topology, especially owning device, speed, bundle membership, and LLDP/link endpoint."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-938e8e7d",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-bcd7eeb5 (settled to a.ywg-ar-00). Destination of b.link-0e686a07, 100000000 kbps, from b.tp-af4bad0b on b.node-19f8c573 (a.yqb-cr-07). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-5fab0df4",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-bcd7eeb5 (a.ywg-ar-00). Destination of b.link-86e327ec, 10000000 kbps, from b.tp-ce0949ac on b.node-cde74eaf (a.yeg-er-12). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-afbc10fb",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-bcd7eeb5 (a.ywg-ar-00). Destination of b.link-f9cf9522, 10000000 kbps, from b.tp-d28249b0 on b.node-73050623 (a.yvr-er-17). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-e72b314d",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-bcd7eeb5 (a.ywg-ar-00). Destination of b.link-df41dd1e, 100000000 kbps, from b.tp-2068cad6 on b.node-48555212 (a.yyz-cr-18). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-b707eb03",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-bcd7eeb5 (a.ywg-ar-00). Source of b.link-a0bc6774, 10000000 kbps, to b.tp-749b0c70 on b.node-93049346 (a.yhz-er-03). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-5b0a33aa",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-bcd7eeb5 (a.ywg-ar-00). Destination of b.link-0156be09, 100000000 kbps, from b.tp-d37b5b34 on b.node-e267ee3c (a.ywg-ar-15). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-ce0949ac",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-cde74eaf (a.yeg-er-12). Source of b.link-86e327ec, 10000000 kbps, to b.tp-5fab0df4 on b.node-bcd7eeb5 (a.ywg-ar-00). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-e887e610",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-cde74eaf (a.yeg-er-12). Source of b.link-fe867d38, 10000000 kbps, to b.tp-2f3252bd on b.node-e267ee3c (a.ywg-ar-15). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-6db21975",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-93049346 (a.yhz-er-03). Destination of b.link-09d70270, 10000000 kbps, from b.tp-efa34fc8 on b.node-e267ee3c (a.ywg-ar-15). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-749b0c70",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-93049346 (a.yhz-er-03). Destination of b.link-a0bc6774, 10000000 kbps, from b.tp-b707eb03 on b.node-bcd7eeb5 (a.ywg-ar-00). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-1aca9b4c",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Source of b.link-16217285, 100000000 kbps, to b.tp-5de62a8a on b.node-1ac151fe (a.yqb-cr-14). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-af4bad0b",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Source of b.link-0e686a07, 100000000 kbps, to b.tp-938e8e7d on b.node-bcd7eeb5 (a.ywg-ar-00). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-10ff6ac4",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of bundle b.tp-817cdc42. Source of b.link-81cd8332, 100000000 kbps, to b.tp-5ef78e17 on b.node-e955bee5 (a.yhz-cr-08)."
+          },
+          {
+            "my_id": "b.tp-817cdc42",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Members: b.tp-10ff6ac4, b.tp-b55f8e58, b.tp-c1f3d7a3, b.tp-e3e12334. Source of b.link-471b7887, aggregate 400000000 kbps, to bundle b.tp-182056df on b.node-e955bee5 (a.yhz-cr-08)."
+          },
+          {
+            "my_id": "b.tp-054b8383",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of bundle b.tp-26e8cb85. Source of b.link-1004178b, 100000000 kbps, to b.tp-4f9f24c4 on b.node-48555212 (a.yyz-cr-18)."
+          },
+          {
+            "my_id": "b.tp-c1f3d7a3",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of bundle b.tp-817cdc42. Source of b.link-76e02b18, 100000000 kbps, to b.tp-0f1e44d2 on b.node-e955bee5 (a.yhz-cr-08)."
+          },
+          {
+            "my_id": "b.tp-e4c7a291",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Destination of b.link-b6f2ec53, 100000000 kbps, from b.tp-d6af3929 on b.node-f6af83f5 (a.yeg-ar-06). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-26e8cb85",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Members: b.tp-054b8383 and b.tp-2d8c73e6. Source of b.link-999fca3b, aggregate 200000000 kbps, to bundle b.tp-28b735f4 on b.node-48555212 (a.yyz-cr-18)."
+          },
+          {
+            "my_id": "b.tp-b55f8e58",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of bundle b.tp-817cdc42. Source of b.link-dd43da11, 100000000 kbps, to b.tp-dbc83434 on b.node-e955bee5 (a.yhz-cr-08)."
+          },
+          {
+            "my_id": "b.tp-e3e12334",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of bundle b.tp-817cdc42. Source of b.link-008e5901, 100000000 kbps, to b.tp-123cee98 on b.node-e955bee5 (a.yhz-cr-08)."
+          },
+          {
+            "my_id": "b.tp-ca229ad8",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Destination of b.link-1761be62, 100000000 kbps, from b.tp-a3b6d183 on b.node-1ac151fe (a.yqb-cr-14). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-c3a9d712",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Destination of b.link-abbdcbf5, 100000000 kbps, from b.tp-6c9d7352 on b.node-e267ee3c (a.ywg-ar-15). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-2d8c73e6",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of bundle b.tp-26e8cb85. Destination of b.link-baa8d9b0, 100000000 kbps, from b.tp-a81d81a4 on b.node-48555212 (a.yyz-cr-18)."
+          },
+          {
+            "my_id": "b.tp-6547c535",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Destination of b.link-3d71cf67, 100000000 kbps, from b.tp-c6f25bc4 on b.node-d826d38c (a.yul-ar-04). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-7a0f8e2d",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Destination of b.link-b00c1b19, 100000000 kbps, from b.tp-5aafb184 on b.node-8b45dde1 (a.yvr-ar-11). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-3c13c4d1",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07). Destination of b.link-4f8f57ea, 100000000 kbps, from b.tp-a08e5203 on b.node-70336995 (a.yyc-ar-13). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-f9ce6522",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-73050623 (a.yvr-er-17). Members: b.tp-047ae90f and b.tp-e8abb3b4. Destination of b.link-919b7bc1, aggregate 20000000 kbps, from bundle b.tp-a174557c on b.node-e267ee3c (a.ywg-ar-15)."
+          },
+          {
+            "my_id": "b.tp-047ae90f",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-73050623 (a.yvr-er-17); member of bundle b.tp-f9ce6522. Source of b.link-8d2a0c9c, 10000000 kbps, to b.tp-0ebf1200 on b.node-e267ee3c (a.ywg-ar-15)."
+          },
+          {
+            "my_id": "b.tp-d28249b0",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-73050623 (a.yvr-er-17). Source of b.link-f9cf9522, 10000000 kbps, to b.tp-afbc10fb on b.node-bcd7eeb5 (a.ywg-ar-00). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-e8abb3b4",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-73050623 (a.yvr-er-17); member of bundle b.tp-f9ce6522. Destination of b.link-ade40325, 10000000 kbps, from b.tp-9defe48c on b.node-e267ee3c (a.ywg-ar-15)."
+          },
+          {
+            "my_id": "b.tp-efa34fc8",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15). Source of b.link-09d70270, 10000000 kbps, to b.tp-6db21975 on b.node-93049346 (a.yhz-er-03). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-a174557c",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15). Members: b.tp-0ebf1200 and b.tp-9defe48c. Source of b.link-919b7bc1, aggregate 20000000 kbps, to bundle b.tp-f9ce6522 on b.node-73050623 (a.yvr-er-17)."
+          },
+          {
+            "my_id": "b.tp-2a489b0c",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of bundle b.tp-c5f5a861. Source of b.link-d6d01cfc, 100000000 kbps, to b.tp-d663803f on b.node-48555212 (a.yyz-cr-18)."
+          },
+          {
+            "my_id": "b.tp-6c9d7352",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15). Source of b.link-abbdcbf5, 100000000 kbps, to b.tp-c3a9d712 on b.node-19f8c573 (a.yqb-cr-07). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-d37b5b34",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15). Source of b.link-0156be09, 100000000 kbps, to b.tp-5b0a33aa on b.node-bcd7eeb5 (a.ywg-ar-00). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-2f3252bd",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15). Destination of b.link-fe867d38, 10000000 kbps, from b.tp-e887e610 on b.node-cde74eaf (a.yeg-er-12). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-4063fc60",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of bundle b.tp-c5f5a861. Source of b.link-e3121429, 100000000 kbps, to b.tp-937d200e on b.node-48555212 (a.yyz-cr-18)."
+          },
+          {
+            "my_id": "b.tp-9defe48c",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of bundle b.tp-a174557c. Source of b.link-ade40325, 10000000 kbps, to b.tp-e8abb3b4 on b.node-73050623 (a.yvr-er-17)."
+          },
+          {
+            "my_id": "b.tp-0ebf1200",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of bundle b.tp-a174557c. Destination of b.link-8d2a0c9c, 10000000 kbps, from b.tp-047ae90f on b.node-73050623 (a.yvr-er-17)."
+          },
+          {
+            "my_id": "b.tp-c5f5a861",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15). Members: b.tp-2a489b0c and b.tp-4063fc60. Source of b.link-efc82c46, aggregate 200000000 kbps, to bundle b.tp-c6ee14b1 on b.node-48555212 (a.yyz-cr-18)."
+          },
+          {
+            "my_id": "b.tp-937d200e",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of bundle b.tp-c6ee14b1. Destination of b.link-e3121429, 100000000 kbps, from b.tp-4063fc60 on b.node-e267ee3c (a.ywg-ar-15)."
+          },
+          {
+            "my_id": "b.tp-7c77feb2",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of bundle b.tp-d3ba4557. Destination of b.link-56df57ae, 100000000 kbps, from b.tp-015ca880 on b.node-70336995 (a.yyc-ar-13)."
+          },
+          {
+            "my_id": "b.tp-12e5712c",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of bundle b.tp-d3ba4557. Destination of b.link-df84fbb5, 100000000 kbps, from b.tp-6f0fc1e3 on b.node-70336995 (a.yyc-ar-13)."
+          },
+          {
+            "my_id": "b.tp-a81d81a4",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of bundle b.tp-28b735f4. Source of b.link-baa8d9b0, 100000000 kbps, to b.tp-2d8c73e6 on b.node-19f8c573 (a.yqb-cr-07)."
+          },
+          {
+            "my_id": "b.tp-d663803f",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of bundle b.tp-c6ee14b1. Destination of b.link-d6d01cfc, 100000000 kbps, from b.tp-2a489b0c on b.node-e267ee3c (a.ywg-ar-15)."
+          },
+          {
+            "my_id": "b.tp-d3ba4557",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Members: b.tp-12e5712c and b.tp-7c77feb2. Destination of b.link-0414622e, aggregate 200000000 kbps, from bundle b.tp-cb0dc9cf on b.node-70336995 (a.yyc-ar-13)."
+          },
+          {
+            "my_id": "b.tp-3f7c5eaa",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Destination of b.link-b87b9e2d, 100000000 kbps, from b.tp-5d74b0c8 on b.node-e955bee5 (a.yhz-cr-08). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-c6ee14b1",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Members: b.tp-937d200e and b.tp-d663803f. Destination of b.link-efc82c46, aggregate 200000000 kbps, from bundle b.tp-c5f5a861 on b.node-e267ee3c (a.ywg-ar-15)."
+          },
+          {
+            "my_id": "b.tp-28b735f4",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Members: b.tp-4f9f24c4 and b.tp-a81d81a4. Destination of b.link-999fca3b, aggregate 200000000 kbps, from bundle b.tp-26e8cb85 on b.node-19f8c573 (a.yqb-cr-07)."
+          },
+          {
+            "my_id": "b.tp-4f9f24c4",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of bundle b.tp-28b735f4. Destination of b.link-1004178b, 100000000 kbps, from b.tp-054b8383 on b.node-19f8c573 (a.yqb-cr-07)."
+          },
+          {
+            "my_id": "b.tp-2068cad6",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Source of b.link-df41dd1e, 100000000 kbps, to b.tp-e72b314d on b.node-bcd7eeb5 (a.ywg-ar-00). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-87da760f",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Source of b.link-8c9c41e4, 100000000 kbps, to b.tp-d759af28 on b.node-8b45dde1 (a.yvr-ar-11). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-39a6a9f1",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Destination of b.link-8d18018e, 100000000 kbps, from b.tp-bc61b7d1 on b.node-e955bee5 (a.yhz-cr-08). No bundle membership."
+          },
+          {
+            "my_id": "b.tp-9f648f02",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18). Source of b.link-7e5444cd, 100000000 kbps, to b.tp-77169572 on b.node-1ac151fe (a.yqb-cr-14). No bundle membership."
+          }
+        ],
+        "questions": [
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/0",
+            "ask": "For every advertised port on a.ywg-ar-00, provide all attributes and topology: speed/capacity, bundle membership, link direction, remote endpoint port and owning device, plus hardware address/serial if available."
+          },
+          {
+            "their_id": "a.yeg-er-12/et-0/0/0",
+            "ask": "For both advertised ports on a.yeg-er-12, provide all attributes and topology, including speed, bundle membership, link direction, remote endpoint and owning device, plus hardware address/serial if available."
+          },
+          {
+            "their_id": "a.yhz-er-03/et-0/0/0",
+            "ask": "For both advertised ports on a.yhz-er-03, provide all attributes and topology, including speed, bundle membership, link direction, remote endpoint and owning device, plus hardware address/serial if available."
+          },
+          {
+            "their_id": "a.yqb-cr-07/ae4",
+            "ask": "For every advertised port and bundle on a.yqb-cr-07, provide all attributes and topology: exact bundle members, aggregate/member capacities, link direction, remote endpoint and owning device, plus hardware address/serial if available."
+          },
+          {
+            "their_id": "a.yvr-er-17/ae2",
+            "ask": "For every advertised port and bundle on a.yvr-er-17, provide all attributes and topology: exact bundle members, aggregate/member capacities, link direction, remote endpoint and owning device, plus hardware address/serial if available."
+          },
+          {
+            "their_id": "a.ywg-ar-15/ae9",
+            "ask": "For every advertised port and bundle on a.ywg-ar-15, provide all attributes and topology: exact bundle members, aggregate/member capacities, link direction, remote endpoint and owning device, plus hardware address/serial if available."
+          },
+          {
+            "their_id": "a.yyz-cr-18/ae12",
+            "ask": "For every advertised port and bundle on a.yyz-cr-18, provide all attributes and topology: exact bundle members, aggregate/member capacities, link direction, remote endpoint and owning device, plus hardware address/serial if available."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [
+          "b.link-a0bc6774",
+          "b.link-0e686a07",
+          "b.link-0156be09",
+          "b.link-f9cf9522",
+          "b.link-df41dd1e",
+          "b.link-86e327ec",
+          "b.link-fe867d38",
+          "b.link-09d70270",
+          "b.link-abbdcbf5",
+          "b.link-76e02b18",
+          "b.link-471b7887",
+          "b.link-008e5901",
+          "b.link-16217285",
+          "b.link-dd43da11",
+          "b.link-1761be62",
+          "b.link-4f8f57ea",
+          "b.link-1004178b",
+          "b.link-999fca3b",
+          "b.link-81cd8332",
+          "b.link-3d71cf67",
+          "b.link-baa8d9b0",
+          "b.link-b00c1b19",
+          "b.link-b6f2ec53",
+          "b.link-ade40325",
+          "b.link-919b7bc1",
+          "b.link-8d2a0c9c",
+          "b.link-e3121429",
+          "b.link-efc82c46",
+          "b.link-d6d01cfc",
+          "b.link-8d18018e",
+          "b.link-df84fbb5",
+          "b.link-0414622e",
+          "b.link-8c9c41e4",
+          "b.link-7e5444cd",
+          "b.link-56df57ae",
+          "b.link-b87b9e2d"
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/0",
+        "b_id": "b.tp-10ff6ac4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/1",
+        "b_id": "b.tp-c1f3d7a3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/2",
+        "b_id": "b.tp-b55f8e58"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/3",
+        "b_id": "b.tp-e3e12334"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/5",
+        "b_id": "b.tp-054b8383"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/6",
+        "b_id": "b.tp-2d8c73e6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-1/0/0",
+        "b_id": "b.tp-ca229ad8"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-1/0/1",
+        "b_id": "b.tp-1aca9b4c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yvr-er-17/et-0/0/0",
+        "b_id": "b.tp-e8abb3b4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yvr-er-17/et-0/0/1",
+        "b_id": "b.tp-047ae90f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/1",
+        "b_id": "b.tp-4063fc60"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/2",
+        "b_id": "b.tp-2a489b0c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/7",
+        "b_id": "b.tp-0ebf1200"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-1/0/0",
+        "b_id": "b.tp-9defe48c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/0",
+        "b_id": "b.tp-4f9f24c4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/1",
+        "b_id": "b.tp-a81d81a4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/3",
+        "b_id": "b.tp-39a6a9f1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/4",
+        "b_id": "b.tp-3f7c5eaa"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/6",
+        "b_id": "b.tp-d663803f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/7",
+        "b_id": "b.tp-937d200e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-1/0/2",
+        "b_id": "b.tp-12e5712c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-1/0/3",
+        "b_id": "b.tp-7c77feb2"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/0",
+            "attributes": "All six ports are physical-port, if-type ethernetCsmacd, with no bundle membership and no recorded hardware address or serial. Speeds: et-0/0/0, et-0/0/1, et-0/0/2 = 100000000000 bps; et-0/0/3, et-0/0/4, et-0/0/5 = 10000000000 bps.",
+            "topology": "All are on a.ywg-ar-00. LLDP links are undirected in graph A: et-0/0/0 <-> a.yqb-cr-07/et-1/0/3; et-0/0/1 <-> a.yyz-cr-18/et-1/0/1; et-0/0/2 <-> a.ywg-ar-15/et-0/0/4; et-0/0/3 <-> a.yhz-er-03/et-0/0/1; et-0/0/4 <-> a.yeg-er-12/et-0/0/1; et-0/0/5 <-> a.yvr-er-17/et-0/0/3."
+          },
+          {
+            "my_id": "a.yeg-er-12/et-0/0/0",
+            "attributes": "Both ports are physical-port, speed 10000000000 bps, if-type ethernetCsmacd, with no bundle membership and no recorded hardware address or serial.",
+            "topology": "Both are on a.yeg-er-12. Undirected LLDP: et-0/0/0 <-> a.ywg-ar-15/et-0/0/6; et-0/0/1 <-> a.ywg-ar-00/et-0/0/4."
+          },
+          {
+            "my_id": "a.yhz-er-03/et-0/0/0",
+            "attributes": "Both ports are physical-port, speed 10000000000 bps, if-type ethernetCsmacd, with no bundle membership and no recorded hardware address or serial.",
+            "topology": "Both are on a.yhz-er-03. Undirected LLDP: et-0/0/0 <-> a.ywg-ar-15/et-0/0/5; et-0/0/1 <-> a.ywg-ar-00/et-0/0/3."
+          },
+          {
+            "my_id": "a.yqb-cr-07/ae4",
+            "attributes": "All physical ports are ethernetCsmacd at 100000000000 bps; no hardware addresses or serials are recorded. ae4 is ieee8023adLag, 400000000000 bps, with members et-0/0/0 through et-0/0/3. ae7 is ieee8023adLag, 200000000000 bps, with members et-0/0/5 and et-0/0/6.",
+            "topology": "All are on a.yqb-cr-07; LLDP is undirected. ae4 members: et-0/0/0 <-> a.yhz-cr-08/et-0/0/0; et-0/0/1 <-> a.yhz-cr-08/et-0/0/1; et-0/0/2 <-> a.yhz-cr-08/et-0/0/2; et-0/0/3 <-> a.yhz-cr-08/et-0/0/3. ae7 members: et-0/0/5 <-> a.yyz-cr-18/et-0/0/0; et-0/0/6 <-> a.yyz-cr-18/et-0/0/1. Unbundled: et-1/0/0 <-> a.yqb-cr-14/et-0/0/0; et-1/0/1 <-> a.yqb-cr-14/et-0/0/1; et-1/0/2 <-> a.ywg-ar-15/et-0/0/0; et-1/0/3 <-> a.ywg-ar-00/et-0/0/0; et-1/0/4 <-> a.yyc-ar-13/et-0/0/3; et-1/0/5 <-> a.yvr-ar-11/et-0/0/1; et-1/0/6 <-> a.yeg-ar-06/et-0/0/0; et-1/0/7 <-> a.yul-ar-04/et-0/0/0."
+          },
+          {
+            "my_id": "a.yvr-er-17/ae2",
+            "attributes": "All physical ports are ethernetCsmacd at 10000000000 bps; no hardware addresses or serials are recorded. ae2 is ieee8023adLag at 20000000000 bps with members et-0/0/0 and et-0/0/1. et-0/0/3 is unbundled.",
+            "topology": "All are on a.yvr-er-17. Undirected LLDP: et-0/0/0 <-> a.ywg-ar-15/et-0/0/7; et-0/0/1 <-> a.ywg-ar-15/et-1/0/0; et-0/0/3 <-> a.ywg-ar-00/et-0/0/5."
+          },
+          {
+            "my_id": "a.ywg-ar-15/ae9",
+            "attributes": "No hardware addresses or serials are recorded. ae3 is ieee8023adLag at 200000000000 bps with 100000000000-bps members et-0/0/1 and et-0/0/2. ae9 is ieee8023adLag at 20000000000 bps with 10000000000-bps members et-0/0/7 and et-1/0/0. Other advertised ports are unbundled ethernetCsmacd: et-0/0/0 and et-0/0/4 at 100000000000 bps; et-0/0/5 and et-0/0/6 at 10000000000 bps.",
+            "topology": "All are on a.ywg-ar-15; LLDP is undirected. ae3: et-0/0/1 <-> a.yyz-cr-18/et-0/0/6; et-0/0/2 <-> a.yyz-cr-18/et-0/0/7. ae9: et-0/0/7 <-> a.yvr-er-17/et-0/0/0; et-1/0/0 <-> a.yvr-er-17/et-0/0/1. Unbundled: et-0/0/0 <-> a.yqb-cr-07/et-1/0/2; et-0/0/4 <-> a.ywg-ar-00/et-0/0/2; et-0/0/5 <-> a.yhz-er-03/et-0/0/0; et-0/0/6 <-> a.yeg-er-12/et-0/0/0."
+          },
+          {
+            "my_id": "a.yyz-cr-18/ae12",
+            "attributes": "All physical ports are ethernetCsmacd at 100000000000 bps; no hardware addresses or serials are recorded. ae2, ae8, and ae12 are ieee8023adLag at 200000000000 bps. ae2 members: et-0/0/0, et-0/0/1. ae8 members: et-0/0/6, et-0/0/7. ae12 members: et-1/0/2, et-1/0/3. Other advertised ports are unbundled.",
+            "topology": "All are on a.yyz-cr-18; LLDP is undirected. ae2: et-0/0/0 <-> a.yqb-cr-07/et-0/0/5; et-0/0/1 <-> a.yqb-cr-07/et-0/0/6. ae8: et-0/0/6 <-> a.ywg-ar-15/et-0/0/1; et-0/0/7 <-> a.ywg-ar-15/et-0/0/2. ae12: et-1/0/2 <-> a.yyc-ar-13/et-0/0/0; et-1/0/3 <-> a.yyc-ar-13/et-0/0/1. Unbundled: et-0/0/3 <-> a.yhz-cr-08/et-0/0/5; et-0/0/4 <-> a.yhz-cr-08/et-0/0/6; et-0/0/5 <-> a.yqb-cr-14/et-0/0/5; et-1/0/1 <-> a.ywg-ar-00/et-0/0/1; et-1/0/5 <-> a.yvr-ar-11/et-0/0/0."
+          }
+        ],
+        "questions": [],
+        "proposals": [
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/0",
+            "their_id": "b.tp-938e8e7d",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 100G capacity, and endpoint on a.yqb-cr-07."
+          },
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/1",
+            "their_id": "b.tp-e72b314d",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 100G capacity, and endpoint on a.yyz-cr-18."
+          },
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/2",
+            "their_id": "b.tp-5b0a33aa",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 100G capacity, and endpoint on a.ywg-ar-15."
+          },
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/3",
+            "their_id": "b.tp-b707eb03",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.yhz-er-03."
+          },
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/4",
+            "their_id": "b.tp-5fab0df4",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.yeg-er-12."
+          },
+          {
+            "my_id": "a.ywg-ar-00/et-0/0/5",
+            "their_id": "b.tp-afbc10fb",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.yvr-er-17."
+          },
+          {
+            "my_id": "a.yeg-er-12/et-0/0/0",
+            "their_id": "b.tp-e887e610",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.ywg-ar-15."
+          },
+          {
+            "my_id": "a.yeg-er-12/et-0/0/1",
+            "their_id": "b.tp-ce0949ac",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.ywg-ar-00."
+          },
+          {
+            "my_id": "a.yhz-er-03/et-0/0/0",
+            "their_id": "b.tp-6db21975",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.ywg-ar-15."
+          },
+          {
+            "my_id": "a.yhz-er-03/et-0/0/1",
+            "their_id": "b.tp-749b0c70",
+            "confidence": 0.99,
+            "rationale": "Same settled owner, 10G capacity, and endpoint on a.ywg-ar-00."
+          },
+          {
+            "my_id": "a.yqb-cr-07/ae4",
+            "their_id": "b.tp-817cdc42",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 400G four-member bundle toward a.yhz-cr-08."
+          },
+          {
+            "my_id": "a.yqb-cr-07/ae7",
+            "their_id": "b.tp-26e8cb85",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 200G two-member bundle toward a.yyz-cr-18."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/2",
+            "their_id": "b.tp-c3a9d712",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.ywg-ar-15."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/3",
+            "their_id": "b.tp-af4bad0b",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.ywg-ar-00."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/4",
+            "their_id": "b.tp-3c13c4d1",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yyc-ar-13."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/5",
+            "their_id": "b.tp-7a0f8e2d",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yvr-ar-11."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/6",
+            "their_id": "b.tp-e4c7a291",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yeg-ar-06."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/7",
+            "their_id": "b.tp-6547c535",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yul-ar-04."
+          },
+          {
+            "my_id": "a.yvr-er-17/ae2",
+            "their_id": "b.tp-f9ce6522",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 20G two-member bundle toward a.ywg-ar-15."
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/3",
+            "their_id": "b.tp-d28249b0",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 10G endpoint on a.ywg-ar-00."
+          },
+          {
+            "my_id": "a.ywg-ar-15/ae9",
+            "their_id": "b.tp-a174557c",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 20G bundle toward a.yvr-er-17."
+          },
+          {
+            "my_id": "a.ywg-ar-15/ae3",
+            "their_id": "b.tp-c5f5a861",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 200G bundle toward a.yyz-cr-18."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/0",
+            "their_id": "b.tp-6c9d7352",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yqb-cr-07."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/4",
+            "their_id": "b.tp-d37b5b34",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.ywg-ar-00."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/5",
+            "their_id": "b.tp-efa34fc8",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 10G endpoint on a.yhz-er-03."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/6",
+            "their_id": "b.tp-2f3252bd",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 10G endpoint on a.yeg-er-12."
+          },
+          {
+            "my_id": "a.yyz-cr-18/ae12",
+            "their_id": "b.tp-d3ba4557",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 200G bundle toward a.yyc-ar-13."
+          },
+          {
+            "my_id": "a.yyz-cr-18/ae2",
+            "their_id": "b.tp-28b735f4",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 200G bundle toward a.yqb-cr-07."
+          },
+          {
+            "my_id": "a.yyz-cr-18/ae8",
+            "their_id": "b.tp-c6ee14b1",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 200G bundle toward a.ywg-ar-15."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/5",
+            "their_id": "b.tp-9f648f02",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yqb-cr-14."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/1",
+            "their_id": "b.tp-2068cad6",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.ywg-ar-00."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/5",
+            "their_id": "b.tp-87da760f",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique unbundled 100G endpoint on a.yvr-ar-11."
+          }
+        ],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/0",
+            "their_id": "b.tp-10ff6ac4"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/1",
+            "their_id": "b.tp-c1f3d7a3"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/2",
+            "their_id": "b.tp-b55f8e58"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/3",
+            "their_id": "b.tp-e3e12334"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/5",
+            "their_id": "b.tp-054b8383"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/6",
+            "their_id": "b.tp-2d8c73e6"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/0",
+            "their_id": "b.tp-ca229ad8"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-1/0/1",
+            "their_id": "b.tp-1aca9b4c"
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/0",
+            "their_id": "b.tp-e8abb3b4"
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/1",
+            "their_id": "b.tp-047ae90f"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/1",
+            "their_id": "b.tp-4063fc60"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/2",
+            "their_id": "b.tp-2a489b0c"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/7",
+            "their_id": "b.tp-0ebf1200"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-1/0/0",
+            "their_id": "b.tp-9defe48c"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/0",
+            "their_id": "b.tp-4f9f24c4"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/1",
+            "their_id": "b.tp-a81d81a4"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/3",
+            "their_id": "b.tp-39a6a9f1"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/4",
+            "their_id": "b.tp-3f7c5eaa"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/6",
+            "their_id": "b.tp-d663803f"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/7",
+            "their_id": "b.tp-937d200e"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/2",
+            "their_id": "b.tp-12e5712c"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/3",
+            "their_id": "b.tp-7c77feb2"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/0",
+        "b_id": "b.tp-c1f3d7a3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-1/0/0",
+        "b_id": "b.tp-1aca9b4c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-1/0/1",
+        "b_id": "b.tp-ca229ad8"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/7",
+        "b_id": "b.tp-9defe48c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-1/0/0",
+        "b_id": "b.tp-0ebf1200"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/3",
+        "b_id": "b.tp-3f7c5eaa"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/4",
+        "b_id": "b.tp-39a6a9f1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/6",
+        "b_id": "b.tp-937d200e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/7",
+        "b_id": "b.tp-d663803f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/0",
+            "my_id": "b.tp-938e8e7d",
+            "accept": true,
+            "reason": "Owner, 100G capacity, and remote settled device a.yqb-cr-07 agree."
+          },
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/1",
+            "my_id": "b.tp-e72b314d",
+            "accept": true,
+            "reason": "Owner, 100G capacity, and remote settled device a.yyz-cr-18 agree."
+          },
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/2",
+            "my_id": "b.tp-5b0a33aa",
+            "accept": true,
+            "reason": "Owner, 100G capacity, and remote settled device a.ywg-ar-15 agree."
+          },
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/3",
+            "my_id": "b.tp-b707eb03",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.yhz-er-03 agree."
+          },
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/4",
+            "my_id": "b.tp-5fab0df4",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.yeg-er-12 agree."
+          },
+          {
+            "their_id": "a.ywg-ar-00/et-0/0/5",
+            "my_id": "b.tp-afbc10fb",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.yvr-er-17 agree."
+          },
+          {
+            "their_id": "a.yeg-er-12/et-0/0/0",
+            "my_id": "b.tp-e887e610",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.ywg-ar-15 agree."
+          },
+          {
+            "their_id": "a.yeg-er-12/et-0/0/1",
+            "my_id": "b.tp-ce0949ac",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.ywg-ar-00 agree."
+          },
+          {
+            "their_id": "a.yhz-er-03/et-0/0/0",
+            "my_id": "b.tp-6db21975",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.ywg-ar-15 agree."
+          },
+          {
+            "their_id": "a.yhz-er-03/et-0/0/1",
+            "my_id": "b.tp-749b0c70",
+            "accept": true,
+            "reason": "Owner, 10G capacity, and remote settled device a.ywg-ar-00 agree."
+          },
+          {
+            "their_id": "a.yqb-cr-07/ae4",
+            "my_id": "b.tp-817cdc42",
+            "accept": true,
+            "reason": "Unique 400G four-member bundle on the settled device, connected to a.yhz-cr-08."
+          },
+          {
+            "their_id": "a.yqb-cr-07/ae7",
+            "my_id": "b.tp-26e8cb85",
+            "accept": true,
+            "reason": "Unique 200G two-member bundle on the settled device, connected to a.yyz-cr-18."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-1/0/2",
+            "my_id": "b.tp-c3a9d712",
+            "accept": true,
+            "reason": "Same owner, 100G capacity, unbundled status, and endpoint device a.ywg-ar-15."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-1/0/3",
+            "my_id": "b.tp-af4bad0b",
+            "accept": true,
+            "reason": "Same owner, 100G capacity, unbundled status, and endpoint device a.ywg-ar-00."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-1/0/4",
+            "my_id": "b.tp-3c13c4d1",
+            "accept": true,
+            "reason": "Same owner, 100G capacity, unbundled status, and endpoint device a.yyc-ar-13."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-1/0/5",
+            "my_id": "b.tp-7a0f8e2d",
+            "accept": true,
+            "reason": "Same owner, 100G capacity, unbundled status, and endpoint device a.yvr-ar-11."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-1/0/6",
+            "my_id": "b.tp-e4c7a291",
+            "accept": true,
+            "reason": "Same owner, 100G capacity, unbundled status, and endpoint device a.yeg-ar-06."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-1/0/7",
+            "my_id": "b.tp-6547c535",
+            "accept": true,
+            "reason": "Same owner, 100G capacity, unbundled status, and endpoint device a.yul-ar-04."
+          },
+          {
+            "their_id": "a.yvr-er-17/ae2",
+            "my_id": "b.tp-f9ce6522",
+            "accept": true,
+            "reason": "Unique 20G two-member bundle on the settled device toward a.ywg-ar-15."
+          },
+          {
+            "their_id": "a.yvr-er-17/et-0/0/3",
+            "my_id": "b.tp-d28249b0",
+            "accept": true,
+            "reason": "Same owner, unbundled 10G capacity, and endpoint device a.ywg-ar-00."
+          },
+          {
+            "their_id": "a.ywg-ar-15/ae9",
+            "my_id": "b.tp-a174557c",
+            "accept": true,
+            "reason": "Unique 20G two-member bundle on the settled device toward a.yvr-er-17."
+          },
+          {
+            "their_id": "a.ywg-ar-15/ae3",
+            "my_id": "b.tp-c5f5a861",
+            "accept": true,
+            "reason": "Unique 200G two-member bundle on the settled device toward a.yyz-cr-18."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/0",
+            "my_id": "b.tp-6c9d7352",
+            "accept": true,
+            "reason": "Same owner, unbundled 100G capacity, and endpoint device a.yqb-cr-07."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/4",
+            "my_id": "b.tp-d37b5b34",
+            "accept": true,
+            "reason": "Same owner, unbundled 100G capacity, and endpoint device a.ywg-ar-00."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/5",
+            "my_id": "b.tp-efa34fc8",
+            "accept": true,
+            "reason": "Same owner, unbundled 10G capacity, and endpoint device a.yhz-er-03."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/6",
+            "my_id": "b.tp-2f3252bd",
+            "accept": true,
+            "reason": "Same owner, unbundled 10G capacity, and endpoint device a.yeg-er-12."
+          },
+          {
+            "their_id": "a.yyz-cr-18/ae12",
+            "my_id": "b.tp-d3ba4557",
+            "accept": true,
+            "reason": "Unique 200G two-member bundle toward a.yyc-ar-13."
+          },
+          {
+            "their_id": "a.yyz-cr-18/ae2",
+            "my_id": "b.tp-28b735f4",
+            "accept": true,
+            "reason": "Unique 200G two-member bundle toward a.yqb-cr-07."
+          },
+          {
+            "their_id": "a.yyz-cr-18/ae8",
+            "my_id": "b.tp-c6ee14b1",
+            "accept": true,
+            "reason": "Unique 200G two-member bundle toward a.ywg-ar-15."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-0/0/5",
+            "my_id": "b.tp-9f648f02",
+            "accept": true,
+            "reason": "Same owner, unbundled 100G capacity, and endpoint device a.yqb-cr-14."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-1/0/1",
+            "my_id": "b.tp-2068cad6",
+            "accept": true,
+            "reason": "Same owner, unbundled 100G capacity, and endpoint device a.ywg-ar-00."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-1/0/5",
+            "my_id": "b.tp-87da760f",
+            "accept": true,
+            "reason": "Same owner, unbundled 100G capacity, and endpoint device a.yvr-ar-11."
+          }
+        ],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "b.tp-c1f3d7a3",
+            "their_id": "a.yqb-cr-07/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-1aca9b4c",
+            "their_id": "a.yqb-cr-07/et-1/0/0"
+          },
+          {
+            "my_id": "b.tp-ca229ad8",
+            "their_id": "a.yqb-cr-07/et-1/0/1"
+          },
+          {
+            "my_id": "b.tp-9defe48c",
+            "their_id": "a.ywg-ar-15/et-0/0/7"
+          },
+          {
+            "my_id": "b.tp-0ebf1200",
+            "their_id": "a.ywg-ar-15/et-1/0/0"
+          },
+          {
+            "my_id": "b.tp-3f7c5eaa",
+            "their_id": "a.yyz-cr-18/et-0/0/3"
+          },
+          {
+            "my_id": "b.tp-39a6a9f1",
+            "their_id": "a.yyz-cr-18/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-937d200e",
+            "their_id": "a.yyz-cr-18/et-0/0/6"
+          },
+          {
+            "my_id": "b.tp-d663803f",
+            "their_id": "a.yyz-cr-18/et-0/0/7"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/0",
+        "b_id": "b.tp-b55f8e58"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/1",
+        "b_id": "b.tp-10ff6ac4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/2",
+        "b_id": "b.tp-c1f3d7a3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/0",
+            "their_id": "b.tp-b55f8e58"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/1",
+            "their_id": "b.tp-10ff6ac4"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/2",
+            "their_id": "b.tp-c1f3d7a3"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "stage",
+      "stage": 2,
+      "kind": "batch",
+      "devices_a": [
+        "a.yeg-ar-06",
+        "a.yhz-cr-08",
+        "a.yqb-cr-14",
+        "a.yul-ar-04",
+        "a.yvr-ar-11",
+        "a.yyc-ar-13",
+        "a.yeg-er-01",
+        "a.yhz-er-20",
+        "a.yqb-er-21"
+      ],
+      "devices_b": [
+        "b.node-f6af83f5",
+        "b.node-e955bee5",
+        "b.node-1ac151fe",
+        "b.node-d826d38c",
+        "b.node-8b45dde1",
+        "b.node-70336995",
+        "b.node-0e94b6cb",
+        "b.node-75c94ec2",
+        "b.node-4ac6850a"
+      ],
+      "n_a": 59,
+      "n_b": 105
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "b.tp-b20341a0",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-bc38f82b",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-930f9d4e",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-0dad598f",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-d6af3929",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-4e15c3b2",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-3a92311d",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-5be6b19d",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-61e4fa18",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-ff4922c6",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-166a138a",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-ee11eda0",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-5d74b0c8",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-e7a21bd5",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-182056df",
+            "ask": "All available attributes and topology, including owning device and lower-layer members."
+          },
+          {
+            "their_id": "b.tp-bc61b7d1",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-723cc2f3",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-337ad96f",
+            "ask": "All available attributes and topology, including owning device and lower-layer members."
+          },
+          {
+            "their_id": "b.tp-2fe5d398",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-dbc83434",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-d773459b",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-123cee98",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-0f1e44d2",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-5ef78e17",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-b8020545",
+            "ask": "All available attributes and topology, including owning device and lower-layer members."
+          },
+          {
+            "their_id": "b.tp-fed02a3f",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-678bedc9",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-a3b6d183",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-5de62a8a",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-77169572",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-73ae9b38",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-46226a08",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-86c62197",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-add894a6",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-9e9381f9",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-4e221bcb",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-92bb256a",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-c6f25bc4",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-84fc41dd",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-495c5284",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-ea7925ac",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-5aafb184",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-c41e508d",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-d759af28",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-9eb6d0d3",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-7670ac83",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-5607f97f",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-a08e5203",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-b0ed3745",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-6f0fc1e3",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-4c9295dd",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-015ca880",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-cb0dc9cf",
+            "ask": "All available attributes and topology, including owning device and lower-layer members."
+          },
+          {
+            "their_id": "b.tp-5fdb0b45",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-dc842b34",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-ce015c53",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-9d33f163",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-30ae4178",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          },
+          {
+            "their_id": "b.tp-795d58af",
+            "ask": "All available attributes and topology, including owning device, neighbours, and bundle membership."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-166a138a",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-166a138a",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:91:4b:66:8b:9f"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-bc38f82b",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-bc38f82b",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d7:3e:6a:c4:68"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-5d74b0c8",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-5d74b0c8",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:82:10:24:2a:08"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-bc61b7d1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-bc61b7d1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:38:5e:b0:94:23"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-0f1e44d2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-0f1e44d2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:3d:aa:d8:61:9b"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-123cee98",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-123cee98",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:7c:ce:d4:58:bb"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-5ef78e17",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-5ef78e17",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b0:76:70:eb:94"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-dbc83434",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-dbc83434",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0d:04:c3:6e:d8"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-015ca880",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-015ca880",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:ae:3a:c1:27:72"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "individual_id": "b.tp-6f0fc1e3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-6f0fc1e3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:fa:45:35:a4:14"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-b20341a0",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (settled as a.yeg-ar-06). Source of b.link-b5b95b58, 10,000,000 kbps, to b.tp-dc842b34 on b.node-0e94b6cb (settled as a.yeg-er-01). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-bc38f82b",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-15528831, 10,000,000 kbps, from b.tp-a0bfba3f on b.node-69f1c6ef (a.yul-er-09). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-930f9d4e",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-44bd8827, 10,000,000 kbps, from b.tp-795d58af on b.node-4ac6850a (a.yqb-er-21). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-0dad598f",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-816f5653, 100,000,000 kbps, from b.tp-495c5284 on b.node-d826d38c (a.yul-ar-04). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-d6af3929",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Source of b.link-b6f2ec53, 100,000,000 kbps, to b.tp-e4c7a291 on b.node-19f8c573 (a.yqb-cr-07); that endpoint is settled as a.yqb-cr-07/et-1/0/6. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-4e15c3b2",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Source of b.link-995b950f, 10,000,000 kbps, to b.tp-ce015c53 on b.node-75c94ec2 (a.yhz-er-20). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-3a92311d",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-d7319301, 100,000,000 kbps, from b.tp-2fe5d398 on b.node-e955bee5 (a.yhz-cr-08). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-5be6b19d",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Source of b.link-f9299b07, 10,000,000 kbps, to b.tp-117a7fb9 on b.node-87e16012 (a.yxe-er-19). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-61e4fa18",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-ee7770b4, 10,000,000 kbps, from b.tp-1d02317d on b.node-6396c019 (a.yyz-er-02). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-ff4922c6",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-fbbc6fc0, 10,000,000 kbps, from b.tp-daba30e1 on b.node-605d651f (a.yul-er-10). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-166a138a",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Destination of b.link-66ac273c, 10,000,000 kbps, from b.tp-88a5e946 on b.node-69f1c6ef (a.yul-er-09). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-ee11eda0",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-f6af83f5 (a.yeg-ar-06). Source of b.link-3af2aa33, 10,000,000 kbps, to b.tp-ea32f876 on b.node-6396c019 (a.yyz-er-02). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-5d74b0c8",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Source of b.link-b87b9e2d, 100,000,000 kbps, to b.tp-3f7c5eaa on b.node-48555212 (a.yyz-cr-18); endpoint settled as a.yyz-cr-18/et-0/0/3. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-e7a21bd5",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Source of b.link-5d8a3191, 100,000,000 kbps, to b.tp-fed02a3f on b.node-1ac151fe (a.yqb-cr-14). Member of bundle b.tp-337ad96f."
+          },
+          {
+            "my_id": "b.tp-182056df",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Members: b.tp-0f1e44d2, b.tp-123cee98, b.tp-5ef78e17, b.tp-dbc83434. Destination of b.link-471b7887, 400,000,000 kbps, from b.tp-817cdc42 on b.node-19f8c573; remote bundle is settled as a.yqb-cr-07/ae4."
+          },
+          {
+            "my_id": "b.tp-bc61b7d1",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Source of b.link-8d18018e, 100,000,000 kbps, to b.tp-39a6a9f1 on b.node-48555212 (a.yyz-cr-18); endpoint settled as a.yyz-cr-18/et-0/0/4. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-723cc2f3",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Destination of b.link-6c84f475, 100,000,000 kbps, from b.tp-84fc41dd on b.node-d826d38c (a.yul-ar-04). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-337ad96f",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Members: b.tp-d773459b and b.tp-e7a21bd5. Destination of b.link-7df8ea6d, 200,000,000 kbps, from bundle b.tp-b8020545 on b.node-1ac151fe (a.yqb-cr-14)."
+          },
+          {
+            "my_id": "b.tp-2fe5d398",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Source of b.link-d7319301, 100,000,000 kbps, to b.tp-3a92311d on b.node-f6af83f5 (a.yeg-ar-06). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-dbc83434",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Destination of b.link-dd43da11, 100,000,000 kbps, from b.tp-b55f8e58, settled as a.yqb-cr-07/et-0/0/0. Member of bundle b.tp-182056df."
+          },
+          {
+            "my_id": "b.tp-d773459b",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Destination of b.link-5b44279b, 100,000,000 kbps, from b.tp-678bedc9 on b.node-1ac151fe (a.yqb-cr-14). Member of bundle b.tp-337ad96f."
+          },
+          {
+            "my_id": "b.tp-123cee98",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Destination of b.link-008e5901, 100,000,000 kbps, from b.tp-e3e12334, settled as a.yqb-cr-07/et-0/0/3. Member of bundle b.tp-182056df."
+          },
+          {
+            "my_id": "b.tp-0f1e44d2",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Destination of b.link-76e02b18, 100,000,000 kbps, from b.tp-c1f3d7a3, settled as a.yqb-cr-07/et-0/0/2. Member of bundle b.tp-182056df."
+          },
+          {
+            "my_id": "b.tp-5ef78e17",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08). Destination of b.link-81cd8332, 100,000,000 kbps, from b.tp-10ff6ac4, settled as a.yqb-cr-07/et-0/0/1. Member of bundle b.tp-182056df."
+          },
+          {
+            "my_id": "b.tp-b8020545",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14). Members: b.tp-678bedc9 and b.tp-fed02a3f. Source of b.link-7df8ea6d, 200,000,000 kbps, to bundle b.tp-337ad96f on b.node-e955bee5 (a.yhz-cr-08)."
+          },
+          {
+            "my_id": "b.tp-fed02a3f",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14). Destination of b.link-5d8a3191, 100,000,000 kbps, from b.tp-e7a21bd5 on b.node-e955bee5 (a.yhz-cr-08). Member of bundle b.tp-b8020545."
+          },
+          {
+            "my_id": "b.tp-678bedc9",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14). Source of b.link-5b44279b, 100,000,000 kbps, to b.tp-d773459b on b.node-e955bee5 (a.yhz-cr-08). Member of bundle b.tp-b8020545."
+          },
+          {
+            "my_id": "b.tp-a3b6d183",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14). Source of b.link-1761be62, 100,000,000 kbps, to b.tp-ca229ad8, settled as a.yqb-cr-07/et-1/0/1. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-5de62a8a",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14). Destination of b.link-16217285, 100,000,000 kbps, from b.tp-1aca9b4c, settled as a.yqb-cr-07/et-1/0/0. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-77169572",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14). Destination of b.link-7e5444cd, 100,000,000 kbps, from b.tp-9f648f02, settled as a.yyz-cr-18/et-0/0/5. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-73ae9b38",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Source of b.link-57366802, 10,000,000 kbps, to b.tp-7ea483df on b.node-6396c019 (a.yyz-er-02). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-46226a08",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Destination of b.link-faed77df, 10,000,000 kbps, from b.tp-30ae4178 on b.node-4ac6850a (a.yqb-er-21). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-86c62197",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Source of b.link-62a17da1, 10,000,000 kbps, to b.tp-05a6962e on b.node-87e16012 (a.yxe-er-19). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-add894a6",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Destination of b.link-8fd188f7, 10,000,000 kbps, from b.tp-5ec94338 on b.node-6396c019 (a.yyz-er-02). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-9e9381f9",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Destination of b.link-3b310467, 10,000,000 kbps, from b.tp-4fa05362 on b.node-605d651f (a.yul-er-10). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-4e221bcb",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Destination of b.link-733be49f, 10,000,000 kbps, from b.tp-cfc4ec5b on b.node-69f1c6ef (a.yul-er-09). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-92bb256a",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Destination of b.link-f4986a8d, 10,000,000 kbps, from b.tp-9d33f163 on b.node-75c94ec2 (a.yhz-er-20). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-c6f25bc4",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Source of b.link-3d71cf67, 100,000,000 kbps, to b.tp-6547c535, settled as a.yqb-cr-07/et-1/0/7. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-84fc41dd",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Source of b.link-6c84f475, 100,000,000 kbps, to b.tp-723cc2f3 on b.node-e955bee5 (a.yhz-cr-08). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-495c5284",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Source of b.link-816f5653, 100,000,000 kbps, to b.tp-0dad598f on b.node-f6af83f5 (a.yeg-ar-06). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-ea7925ac",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-d826d38c (a.yul-ar-04). Destination of b.link-c7f85069, 10,000,000 kbps, from b.tp-5fdb0b45 on b.node-0e94b6cb (a.yeg-er-01). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-5aafb184",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-8b45dde1 (a.yvr-ar-11). Source of b.link-b00c1b19, 100,000,000 kbps, to b.tp-7a0f8e2d, settled as a.yqb-cr-07/et-1/0/5. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-c41e508d",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-8b45dde1 (a.yvr-ar-11). Source of b.link-c9b3345c, 10,000,000 kbps, to b.tp-b351bafd on b.node-7de10377 (a.yxe-er-05). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-d759af28",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-8b45dde1 (a.yvr-ar-11). Destination of b.link-8c9c41e4, 100,000,000 kbps, from b.tp-87da760f, settled as a.yyz-cr-18/et-1/0/5. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-9eb6d0d3",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-8b45dde1 (a.yvr-ar-11). Destination of b.link-c8bdceda, 10,000,000 kbps, from b.tp-70054b50 on b.node-717f3507 (a.ywg-er-16). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-7670ac83",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-8b45dde1 (a.yvr-ar-11). Source of b.link-3f49ad96, 100,000,000 kbps, to b.tp-b0ed3745 on b.node-70336995 (a.yyc-ar-13). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-5607f97f",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Destination of b.link-ceb56e00, 10,000,000 kbps, from b.tp-d908f04c on b.node-7de10377 (a.yxe-er-05). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-a08e5203",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Source of b.link-4f8f57ea, 100,000,000 kbps, to b.tp-3c13c4d1, settled as a.yqb-cr-07/et-1/0/4. No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-b0ed3745",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Destination of b.link-3f49ad96, 100,000,000 kbps, from b.tp-7670ac83 on b.node-8b45dde1 (a.yvr-ar-11). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-6f0fc1e3",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Source of b.link-df84fbb5, 100,000,000 kbps, to b.tp-12e5712c, settled as a.yyz-cr-18/et-1/0/2. Member of bundle b.tp-cb0dc9cf."
+          },
+          {
+            "my_id": "b.tp-4c9295dd",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Destination of b.link-24d86818, 10,000,000 kbps, from b.tp-0a2481aa on b.node-717f3507 (a.ywg-er-16). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-015ca880",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Source of b.link-56df57ae, 100,000,000 kbps, to b.tp-7c77feb2, settled as a.yyz-cr-18/et-1/0/3. Member of bundle b.tp-cb0dc9cf."
+          },
+          {
+            "my_id": "b.tp-cb0dc9cf",
+            "attributes": "link-bundle; lag=true",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13). Members: b.tp-015ca880 and b.tp-6f0fc1e3. Source of b.link-0414622e, 200,000,000 kbps, to b.tp-d3ba4557, settled as a.yyz-cr-18/ae12."
+          },
+          {
+            "my_id": "b.tp-5fdb0b45",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-0e94b6cb (a.yeg-er-01). Source of b.link-c7f85069, 10,000,000 kbps, to b.tp-ea7925ac on b.node-d826d38c (a.yul-ar-04). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-dc842b34",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-0e94b6cb (a.yeg-er-01). Destination of b.link-b5b95b58, 10,000,000 kbps, from b.tp-b20341a0 on b.node-f6af83f5 (a.yeg-ar-06). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-ce015c53",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-75c94ec2 (a.yhz-er-20). Destination of b.link-995b950f, 10,000,000 kbps, from b.tp-4e15c3b2 on b.node-f6af83f5 (a.yeg-ar-06). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-9d33f163",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-75c94ec2 (a.yhz-er-20). Source of b.link-f4986a8d, 10,000,000 kbps, to b.tp-92bb256a on b.node-d826d38c (a.yul-ar-04). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-30ae4178",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-4ac6850a (a.yqb-er-21). Source of b.link-faed77df, 10,000,000 kbps, to b.tp-46226a08 on b.node-d826d38c (a.yul-ar-04). No bundle membership recorded."
+          },
+          {
+            "my_id": "b.tp-795d58af",
+            "attributes": "physical-port; lag=false",
+            "topology": "Owned by b.node-4ac6850a (a.yqb-er-21). Source of b.link-44bd8827, 10,000,000 kbps, to b.tp-930f9d4e on b.node-f6af83f5 (a.yeg-ar-06). No bundle membership recorded."
+          }
+        ],
+        "questions": [
+          {
+            "their_id": "a.yhz-cr-08/ae9",
+            "ask": "All available attributes and topology, especially member ports, connected peer bundle/device, and capacity."
+          },
+          {
+            "their_id": "a.yhz-cr-08/ae4",
+            "ask": "All available attributes and topology, especially member ports, connected peer bundle/device, and capacity."
+          },
+          {
+            "their_id": "a.yqb-cr-14/ae4",
+            "ask": "All available attributes and topology, especially member ports, connected peer bundle/device, and capacity."
+          },
+          {
+            "their_id": "a.yyc-ar-13/ae2",
+            "ask": "All available attributes and topology, especially member ports, connected peer bundle/device, and capacity."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/0",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/1",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/2",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/3",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/4",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/5",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/6",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/7",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/0",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/1",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/2",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/3",
+            "ask": "Connected peer endpoint/device, capacity, bundle membership, and all authoritative identifiers."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [
+          {
+            "my_id": "b.tp-166a138a",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-bc38f82b",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-5d74b0c8",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-bc61b7d1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-0f1e44d2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-123cee98",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-5ef78e17",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-dbc83434",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-015ca880",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-6f0fc1e3",
+            "attribute": "hardware-address"
+          }
+        ],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-06/et-0/0/4",
+        "b_id": "b.tp-61e4fa18"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-06/et-0/0/7",
+        "b_id": "b.tp-166a138a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/7",
+        "b_id": "b.tp-e7a21bd5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-cr-14/et-0/0/2",
+        "b_id": "b.tp-fed02a3f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-04/et-0/0/4",
+        "b_id": "b.tp-73ae9b38"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "a.yhz-cr-08/ae9",
+            "attributes": "link-bundle; speed=200000000000; if-type=ieee8023adLag",
+            "topology": "Owned by a.yhz-cr-08. Lower-layer members a.yhz-cr-08/et-0/0/7 and a.yhz-cr-08/et-1/0/0. Those members connect to a.yqb-cr-14/et-0/0/2 and a.yqb-cr-14/et-0/0/3 respectively, forming the 200 Gbps bundled connection to a.yqb-cr-14/ae4."
+          },
+          {
+            "my_id": "a.yhz-cr-08/ae4",
+            "attributes": "link-bundle; speed=400000000000; if-type=ieee8023adLag",
+            "topology": "Owned by a.yhz-cr-08. Lower-layer members et-0/0/0 through et-0/0/3. They connect respectively to a.yqb-cr-07/et-0/0/0 through et-0/0/3, forming the 400 Gbps bundle toward a.yqb-cr-07."
+          },
+          {
+            "my_id": "a.yqb-cr-14/ae4",
+            "attributes": "link-bundle; speed=200000000000; if-type=ieee8023adLag",
+            "topology": "Owned by a.yqb-cr-14. Lower-layer members a.yqb-cr-14/et-0/0/2 and et-0/0/3. They connect to the two members of a.yhz-cr-08/ae9, forming a 200 Gbps bundled connection."
+          },
+          {
+            "my_id": "a.yyc-ar-13/ae2",
+            "attributes": "link-bundle; speed=200000000000; if-type=ieee8023adLag",
+            "topology": "Owned by a.yyc-ar-13. Lower-layer members a.yyc-ar-13/et-0/0/0 and et-0/0/1, connected respectively to a.yyz-cr-18/et-1/0/2 and et-1/0/3."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/0",
+            "attributes": "physical-port; speed=100000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yqb-cr-07/et-1/0/6."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/1",
+            "attributes": "physical-port; speed=100000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yhz-cr-08/et-1/0/2."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/2",
+            "attributes": "physical-port; speed=100000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yul-ar-04/et-0/0/2."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/3",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yul-er-10/et-0/0/0."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/4",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yyz-er-02/et-0/0/0."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/5",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yyz-er-02/et-0/0/1."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/6",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yxe-er-19/et-0/0/0."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/7",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yul-er-09/et-0/0/0."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/0",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yul-er-09/et-0/0/1."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/1",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yeg-er-01/et-0/0/0."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/2",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yqb-er-21/et-0/0/0."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/3",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yeg-ar-06; LLDP neighbour a.yhz-er-20/et-0/0/0."
+          }
+        ],
+        "questions": [],
+        "proposals": [
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/0",
+            "their_id": "b.tp-d6af3929",
+            "confidence": 1.0,
+            "rationale": "Same settled owning device, 100 Gbps capacity, and connection to settled peer endpoint a.yqb-cr-07/et-1/0/6."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/1",
+            "their_id": "b.tp-3a92311d",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps connection between the settled yeg-ar-06 and yhz-cr-08 devices."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/2",
+            "their_id": "b.tp-0dad598f",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps connection between settled yeg-ar-06 and yul-ar-04."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/3",
+            "their_id": "b.tp-ff4922c6",
+            "confidence": 0.99,
+            "rationale": "Same settled owner and unique 10 Gbps adjacency to settled yul-er-10."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/6",
+            "their_id": "b.tp-5be6b19d",
+            "confidence": 0.99,
+            "rationale": "Same settled owner and unique 10 Gbps adjacency to settled yxe-er-19."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/1",
+            "their_id": "b.tp-b20341a0",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to the matching yeg-er-01 endpoint."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/2",
+            "their_id": "b.tp-930f9d4e",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to the matching yqb-er-21 endpoint."
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-1/0/3",
+            "their_id": "b.tp-4e15c3b2",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to the matching yhz-er-20 endpoint."
+          },
+          {
+            "my_id": "a.yhz-cr-08/ae4",
+            "their_id": "b.tp-182056df",
+            "confidence": 1.0,
+            "rationale": "Same settled owner, 400 Gbps bundle, four members, and matching connection toward yqb-cr-07."
+          },
+          {
+            "my_id": "a.yhz-cr-08/ae9",
+            "their_id": "b.tp-337ad96f",
+            "confidence": 1.0,
+            "rationale": "Same settled owner, 200 Gbps bundle, two members, and matching bundle connection to yqb-cr-14."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/0",
+            "their_id": "b.tp-dbc83434",
+            "confidence": 1.0,
+            "rationale": "Member of matching 400 Gbps bundle and connected to settled a.yqb-cr-07/et-0/0/0."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/1",
+            "their_id": "b.tp-5ef78e17",
+            "confidence": 1.0,
+            "rationale": "Member of matching 400 Gbps bundle and connected to settled a.yqb-cr-07/et-0/0/1."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/2",
+            "their_id": "b.tp-0f1e44d2",
+            "confidence": 1.0,
+            "rationale": "Member of matching 400 Gbps bundle and connected to settled a.yqb-cr-07/et-0/0/2."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/3",
+            "their_id": "b.tp-123cee98",
+            "confidence": 1.0,
+            "rationale": "Member of matching 400 Gbps bundle and connected to settled a.yqb-cr-07/et-0/0/3."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/5",
+            "their_id": "b.tp-5d74b0c8",
+            "confidence": 1.0,
+            "rationale": "Same owner and 100 Gbps adjacency to settled a.yyz-cr-18/et-0/0/3."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/6",
+            "their_id": "b.tp-bc61b7d1",
+            "confidence": 1.0,
+            "rationale": "Same owner and 100 Gbps adjacency to settled a.yyz-cr-18/et-0/0/4."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-1/0/2",
+            "their_id": "b.tp-2fe5d398",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps connection to the matched yeg-ar-06 port."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-1/0/3",
+            "their_id": "b.tp-723cc2f3",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps connection to the matched yul-ar-04 port."
+          },
+          {
+            "my_id": "a.yqb-cr-14/ae4",
+            "their_id": "b.tp-b8020545",
+            "confidence": 1.0,
+            "rationale": "Same settled owner, two 100 Gbps members, and 200 Gbps bundled connection to yhz-cr-08/ae9."
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/0",
+            "their_id": "b.tp-5de62a8a",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yqb-cr-07/et-1/0/0."
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/1",
+            "their_id": "b.tp-a3b6d183",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yqb-cr-07/et-1/0/1."
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/5",
+            "their_id": "b.tp-77169572",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yyz-cr-18/et-0/0/5."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/0",
+            "their_id": "b.tp-c6f25bc4",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yqb-cr-07/et-1/0/7."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/1",
+            "their_id": "b.tp-84fc41dd",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps adjacency to yhz-cr-08."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/2",
+            "their_id": "b.tp-495c5284",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps adjacency to yeg-ar-06."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/3",
+            "their_id": "b.tp-9e9381f9",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled yul-er-10."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/6",
+            "their_id": "b.tp-86c62197",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled yxe-er-19."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/7",
+            "their_id": "b.tp-4e221bcb",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled yul-er-09."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-1/0/0",
+            "their_id": "b.tp-ea7925ac",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps adjacency to matching yeg-er-01 port."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-1/0/1",
+            "their_id": "b.tp-46226a08",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps adjacency to matching yqb-er-21 port."
+          },
+          {
+            "my_id": "a.yul-ar-04/et-1/0/2",
+            "their_id": "b.tp-92bb256a",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps adjacency to matching yhz-er-20 port."
+          },
+          {
+            "my_id": "a.yvr-ar-11/et-0/0/0",
+            "their_id": "b.tp-d759af28",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yyz-cr-18/et-1/0/5."
+          },
+          {
+            "my_id": "a.yvr-ar-11/et-0/0/1",
+            "their_id": "b.tp-5aafb184",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yqb-cr-07/et-1/0/5."
+          },
+          {
+            "my_id": "a.yvr-ar-11/et-0/0/2",
+            "their_id": "b.tp-7670ac83",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps connection to yyc-ar-13."
+          },
+          {
+            "my_id": "a.yvr-ar-11/et-0/0/3",
+            "their_id": "b.tp-c41e508d",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled yxe-er-05."
+          },
+          {
+            "my_id": "a.yvr-ar-11/et-0/0/4",
+            "their_id": "b.tp-9eb6d0d3",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled ywg-er-16."
+          },
+          {
+            "my_id": "a.yyc-ar-13/ae2",
+            "their_id": "b.tp-cb0dc9cf",
+            "confidence": 1.0,
+            "rationale": "Same settled owner, 200 Gbps capacity, two members, and bundled connection toward yyz-cr-18."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/0",
+            "their_id": "b.tp-6f0fc1e3",
+            "confidence": 1.0,
+            "rationale": "Member of matching bundle and connected to settled a.yyz-cr-18/et-1/0/2."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/1",
+            "their_id": "b.tp-015ca880",
+            "confidence": 1.0,
+            "rationale": "Member of matching bundle and connected to settled a.yyz-cr-18/et-1/0/3."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/3",
+            "their_id": "b.tp-a08e5203",
+            "confidence": 1.0,
+            "rationale": "Same owner and adjacency to settled a.yqb-cr-07/et-1/0/4."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/4",
+            "their_id": "b.tp-b0ed3745",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 100 Gbps connection to yvr-ar-11."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/5",
+            "their_id": "b.tp-5607f97f",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled yxe-er-05."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/6",
+            "their_id": "b.tp-4c9295dd",
+            "confidence": 0.99,
+            "rationale": "Same owner and unique 10 Gbps adjacency to settled ywg-er-16."
+          },
+          {
+            "my_id": "a.yeg-er-01/et-0/0/0",
+            "their_id": "b.tp-dc842b34",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to yeg-ar-06."
+          },
+          {
+            "my_id": "a.yeg-er-01/et-0/0/1",
+            "their_id": "b.tp-5fdb0b45",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to yul-ar-04."
+          },
+          {
+            "my_id": "a.yhz-er-20/et-0/0/0",
+            "their_id": "b.tp-ce015c53",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to yeg-ar-06."
+          },
+          {
+            "my_id": "a.yhz-er-20/et-0/0/1",
+            "their_id": "b.tp-9d33f163",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to yul-ar-04."
+          },
+          {
+            "my_id": "a.yqb-er-21/et-0/0/0",
+            "their_id": "b.tp-795d58af",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to yeg-ar-06."
+          },
+          {
+            "my_id": "a.yqb-er-21/et-0/0/1",
+            "their_id": "b.tp-30ae4178",
+            "confidence": 1.0,
+            "rationale": "Reciprocal 10 Gbps connection to yul-ar-04."
+          }
+        ],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/4",
+            "their_id": "b.tp-61e4fa18"
+          },
+          {
+            "my_id": "a.yeg-ar-06/et-0/0/7",
+            "their_id": "b.tp-166a138a"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/7",
+            "their_id": "b.tp-e7a21bd5"
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/2",
+            "their_id": "b.tp-fed02a3f"
+          },
+          {
+            "my_id": "a.yul-ar-04/et-0/0/4",
+            "their_id": "b.tp-73ae9b38"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/0",
+        "b_id": "b.tp-dbc83434"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/1",
+        "b_id": "b.tp-5ef78e17"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/2",
+        "b_id": "b.tp-0f1e44d2"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/3",
+        "b_id": "b.tp-123cee98"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/5",
+        "b_id": "b.tp-5d74b0c8"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/6",
+        "b_id": "b.tp-bc61b7d1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-cr-14/et-0/0/0",
+        "b_id": "b.tp-5de62a8a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-cr-14/et-0/0/1",
+        "b_id": "b.tp-a3b6d183"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-13/et-0/0/0",
+        "b_id": "b.tp-6f0fc1e3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-13/et-0/0/1",
+        "b_id": "b.tp-015ca880"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "a.yul-ar-04/et-0/0/5",
+            "ask": "Please provide its capacity, connected peer endpoint/device, bundle membership, and all authoritative identifiers. It is the only unresolved yul-ar-04 catalogue port."
+          }
+        ],
+        "proposals": [
+          {
+            "my_id": "b.tp-bc38f82b",
+            "their_id": "a.yeg-ar-06/et-1/0/0",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and reciprocal 10 Gbps adjacency to a.yul-er-09/et-0/0/1; the other similar yul-er-09-facing port b.tp-166a138a was decisively confirmed as a.yeg-ar-06/et-0/0/7."
+          },
+          {
+            "my_id": "b.tp-ee11eda0",
+            "their_id": "a.yeg-ar-06/et-0/0/5",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and unique 10 Gbps adjacency to a.yyz-er-02/et-0/0/1; b.tp-61e4fa18 was decisively confirmed as the other yyz-er-02-facing port, a.yeg-ar-06/et-0/0/4."
+          },
+          {
+            "my_id": "b.tp-d773459b",
+            "their_id": "a.yhz-cr-08/et-1/0/0",
+            "confidence": 1.0,
+            "rationale": "It is the remaining member of the matched 200 Gbps bundle b.tp-337ad96f/a.yhz-cr-08/ae9. Its peer is b.tp-678bedc9, while the other member b.tp-e7a21bd5 was decisively confirmed as a.yhz-cr-08/et-0/0/7."
+          },
+          {
+            "my_id": "b.tp-678bedc9",
+            "their_id": "a.yqb-cr-14/et-0/0/3",
+            "confidence": 1.0,
+            "rationale": "It is the remaining member of the matched 200 Gbps bundle b.tp-b8020545/a.yqb-cr-14/ae4 and connects to b.tp-d773459b. The other member b.tp-fed02a3f was decisively confirmed as a.yqb-cr-14/et-0/0/2."
+          }
+        ],
+        "ratifications": [
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/0",
+            "my_id": "b.tp-d6af3929",
+            "accept": true,
+            "reason": "Owner, 100 Gbps capacity, and settled yqb-cr-07 endpoint agree."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/1",
+            "my_id": "b.tp-3a92311d",
+            "accept": true,
+            "reason": "Owner and reciprocal 100 Gbps yhz-cr-08 adjacency agree."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/2",
+            "my_id": "b.tp-0dad598f",
+            "accept": true,
+            "reason": "Owner and reciprocal 100 Gbps yul-ar-04 adjacency agree."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/3",
+            "my_id": "b.tp-ff4922c6",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yul-er-10 adjacency agree."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-0/0/6",
+            "my_id": "b.tp-5be6b19d",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yxe-er-19 adjacency agree."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/1",
+            "my_id": "b.tp-b20341a0",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yeg-er-01 agrees."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/2",
+            "my_id": "b.tp-930f9d4e",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yqb-er-21 agrees."
+          },
+          {
+            "their_id": "a.yeg-ar-06/et-1/0/3",
+            "my_id": "b.tp-4e15c3b2",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yhz-er-20 agrees."
+          },
+          {
+            "their_id": "a.yhz-cr-08/ae4",
+            "my_id": "b.tp-182056df",
+            "accept": true,
+            "reason": "Owner, four members, 400 Gbps capacity, and peer bundle all agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/ae9",
+            "my_id": "b.tp-337ad96f",
+            "accept": true,
+            "reason": "Owner, two members, 200 Gbps capacity, and yqb-cr-14 peer bundle agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/0",
+            "my_id": "b.tp-dbc83434",
+            "accept": true,
+            "reason": "Matching ae4 membership and settled peer a.yqb-cr-07/et-0/0/0 agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/1",
+            "my_id": "b.tp-5ef78e17",
+            "accept": true,
+            "reason": "Matching ae4 membership and settled peer a.yqb-cr-07/et-0/0/1 agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/2",
+            "my_id": "b.tp-0f1e44d2",
+            "accept": true,
+            "reason": "Matching ae4 membership and settled peer a.yqb-cr-07/et-0/0/2 agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/3",
+            "my_id": "b.tp-123cee98",
+            "accept": true,
+            "reason": "Matching ae4 membership and settled peer a.yqb-cr-07/et-0/0/3 agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/5",
+            "my_id": "b.tp-5d74b0c8",
+            "accept": true,
+            "reason": "Owner and settled 100 Gbps peer a.yyz-cr-18/et-0/0/3 agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/6",
+            "my_id": "b.tp-bc61b7d1",
+            "accept": true,
+            "reason": "Owner and settled 100 Gbps peer a.yyz-cr-18/et-0/0/4 agree."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-1/0/2",
+            "my_id": "b.tp-2fe5d398",
+            "accept": true,
+            "reason": "Reciprocal 100 Gbps adjacency to the matched yeg-ar-06 port agrees."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-1/0/3",
+            "my_id": "b.tp-723cc2f3",
+            "accept": true,
+            "reason": "Reciprocal 100 Gbps adjacency to the matched yul-ar-04 port agrees."
+          },
+          {
+            "their_id": "a.yqb-cr-14/ae4",
+            "my_id": "b.tp-b8020545",
+            "accept": true,
+            "reason": "Owner, two members, 200 Gbps capacity, and yhz-cr-08 peer bundle agree."
+          },
+          {
+            "their_id": "a.yqb-cr-14/et-0/0/0",
+            "my_id": "b.tp-5de62a8a",
+            "accept": true,
+            "reason": "Owner and settled peer a.yqb-cr-07/et-1/0/0 agree."
+          },
+          {
+            "their_id": "a.yqb-cr-14/et-0/0/1",
+            "my_id": "b.tp-a3b6d183",
+            "accept": true,
+            "reason": "Owner and settled peer a.yqb-cr-07/et-1/0/1 agree."
+          },
+          {
+            "their_id": "a.yqb-cr-14/et-0/0/5",
+            "my_id": "b.tp-77169572",
+            "accept": true,
+            "reason": "Owner and settled peer a.yyz-cr-18/et-0/0/5 agree."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-0/0/0",
+            "my_id": "b.tp-c6f25bc4",
+            "accept": true,
+            "reason": "Owner and settled 100 Gbps peer a.yqb-cr-07/et-1/0/7 agree."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-0/0/1",
+            "my_id": "b.tp-84fc41dd",
+            "accept": true,
+            "reason": "Reciprocal 100 Gbps adjacency to yhz-cr-08 agrees."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-0/0/2",
+            "my_id": "b.tp-495c5284",
+            "accept": true,
+            "reason": "Reciprocal 100 Gbps adjacency to yeg-ar-06 agrees."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-0/0/3",
+            "my_id": "b.tp-9e9381f9",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yul-er-10 adjacency agree."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-0/0/6",
+            "my_id": "b.tp-86c62197",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yxe-er-19 adjacency agree."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-0/0/7",
+            "my_id": "b.tp-4e221bcb",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yul-er-09 adjacency agree."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-1/0/0",
+            "my_id": "b.tp-ea7925ac",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yeg-er-01 agrees."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-1/0/1",
+            "my_id": "b.tp-46226a08",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yqb-er-21 agrees."
+          },
+          {
+            "their_id": "a.yul-ar-04/et-1/0/2",
+            "my_id": "b.tp-92bb256a",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yhz-er-20 agrees."
+          },
+          {
+            "their_id": "a.yvr-ar-11/et-0/0/0",
+            "my_id": "b.tp-d759af28",
+            "accept": true,
+            "reason": "Owner and settled 100 Gbps peer a.yyz-cr-18/et-1/0/5 agree."
+          },
+          {
+            "their_id": "a.yvr-ar-11/et-0/0/1",
+            "my_id": "b.tp-5aafb184",
+            "accept": true,
+            "reason": "Owner and settled 100 Gbps peer a.yqb-cr-07/et-1/0/5 agree."
+          },
+          {
+            "their_id": "a.yvr-ar-11/et-0/0/2",
+            "my_id": "b.tp-7670ac83",
+            "accept": true,
+            "reason": "Reciprocal 100 Gbps adjacency to yyc-ar-13 agrees."
+          },
+          {
+            "their_id": "a.yvr-ar-11/et-0/0/3",
+            "my_id": "b.tp-c41e508d",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yxe-er-05 adjacency agree."
+          },
+          {
+            "their_id": "a.yvr-ar-11/et-0/0/4",
+            "my_id": "b.tp-9eb6d0d3",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps ywg-er-16 adjacency agree."
+          },
+          {
+            "their_id": "a.yyc-ar-13/ae2",
+            "my_id": "b.tp-cb0dc9cf",
+            "accept": true,
+            "reason": "Owner, two members, 200 Gbps capacity, and yyz-cr-18 peer bundle agree."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/0",
+            "my_id": "b.tp-6f0fc1e3",
+            "accept": true,
+            "reason": "Matching ae2 membership and settled peer a.yyz-cr-18/et-1/0/2 agree."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/1",
+            "my_id": "b.tp-015ca880",
+            "accept": true,
+            "reason": "Matching ae2 membership and settled peer a.yyz-cr-18/et-1/0/3 agree."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/3",
+            "my_id": "b.tp-a08e5203",
+            "accept": true,
+            "reason": "Owner and settled peer a.yqb-cr-07/et-1/0/4 agree."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/4",
+            "my_id": "b.tp-b0ed3745",
+            "accept": true,
+            "reason": "Reciprocal 100 Gbps adjacency to yvr-ar-11 agrees."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/5",
+            "my_id": "b.tp-5607f97f",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps yxe-er-05 adjacency agree."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/6",
+            "my_id": "b.tp-4c9295dd",
+            "accept": true,
+            "reason": "Owner and unique 10 Gbps ywg-er-16 adjacency agree."
+          },
+          {
+            "their_id": "a.yeg-er-01/et-0/0/0",
+            "my_id": "b.tp-dc842b34",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yeg-ar-06 agrees."
+          },
+          {
+            "their_id": "a.yeg-er-01/et-0/0/1",
+            "my_id": "b.tp-5fdb0b45",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yul-ar-04 agrees."
+          },
+          {
+            "their_id": "a.yhz-er-20/et-0/0/0",
+            "my_id": "b.tp-ce015c53",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yeg-ar-06 agrees."
+          },
+          {
+            "their_id": "a.yhz-er-20/et-0/0/1",
+            "my_id": "b.tp-9d33f163",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yul-ar-04 agrees."
+          },
+          {
+            "their_id": "a.yqb-er-21/et-0/0/0",
+            "my_id": "b.tp-795d58af",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yeg-ar-06 agrees."
+          },
+          {
+            "their_id": "a.yqb-er-21/et-0/0/1",
+            "my_id": "b.tp-30ae4178",
+            "accept": true,
+            "reason": "Reciprocal 10 Gbps adjacency to yul-ar-04 agrees."
+          }
+        ],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [
+          "b.link-b5b95b58",
+          "b.link-66ac273c",
+          "b.link-44bd8827",
+          "b.link-fbbc6fc0",
+          "b.link-816f5653",
+          "b.link-f9299b07",
+          "b.link-3af2aa33",
+          "b.link-995b950f",
+          "b.link-15528831",
+          "b.link-ee7770b4",
+          "b.link-d7319301",
+          "b.link-b6f2ec53",
+          "b.link-76e02b18",
+          "b.link-471b7887",
+          "b.link-5b44279b",
+          "b.link-7df8ea6d",
+          "b.link-008e5901",
+          "b.link-5d8a3191",
+          "b.link-8d18018e",
+          "b.link-6c84f475",
+          "b.link-dd43da11",
+          "b.link-81cd8332",
+          "b.link-b87b9e2d",
+          "b.link-16217285",
+          "b.link-1761be62",
+          "b.link-7e5444cd",
+          "b.link-57366802",
+          "b.link-f4986a8d",
+          "b.link-3b310467",
+          "b.link-62a17da1",
+          "b.link-8fd188f7",
+          "b.link-733be49f",
+          "b.link-c7f85069",
+          "b.link-3d71cf67",
+          "b.link-faed77df",
+          "b.link-c9b3345c",
+          "b.link-c8bdceda",
+          "b.link-8c9c41e4",
+          "b.link-b00c1b19",
+          "b.link-3f49ad96",
+          "b.link-ceb56e00",
+          "b.link-24d86818",
+          "b.link-df84fbb5",
+          "b.link-0414622e",
+          "b.link-4f8f57ea",
+          "b.link-56df57ae"
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-04/et-0/0/5",
+        "b_id": "b.tp-add894a6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-06/et-0/0/5",
+        "b_id": "b.tp-ee11eda0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-06/et-1/0/0",
+        "b_id": "b.tp-bc38f82b"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-1/0/0",
+        "b_id": "b.tp-d773459b"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-cr-14/et-0/0/3",
+        "b_id": "b.tp-678bedc9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "a.yul-ar-04/et-0/0/5",
+            "attributes": "physical-port; speed=10000000000; if-type=ethernetCsmacd; no bundle membership or additional authoritative identifier recorded",
+            "topology": "Owned by a.yul-ar-04; LLDP neighbour a.yyz-er-02/et-0/0/3."
+          }
+        ],
+        "questions": [],
+        "proposals": [
+          {
+            "my_id": "a.yul-ar-04/et-0/0/5",
+            "their_id": "b.tp-add894a6",
+            "confidence": 1.0,
+            "rationale": "Same settled owner and 10 Gbps adjacency to yyz-er-02. The other otherwise indistinguishable yyz-er-02-facing port, a.yul-ar-04/et-0/0/4, was decisively confirmed as b.tp-73ae9b38, leaving b.tp-add894a6 as this port; decisive experiment requested because the A-side pair is a look-alike group."
+          }
+        ],
+        "ratifications": [
+          {
+            "their_id": "b.tp-bc38f82b",
+            "my_id": "a.yeg-ar-06/et-1/0/0",
+            "accept": true,
+            "reason": "Same settled owner and adjacency to a.yul-er-09/et-0/0/1; the alternative yul-er-09-facing port was decisively confirmed as a.yeg-ar-06/et-0/0/7."
+          },
+          {
+            "their_id": "b.tp-ee11eda0",
+            "my_id": "a.yeg-ar-06/et-0/0/5",
+            "accept": true,
+            "reason": "Same settled owner and adjacency to a.yyz-er-02/et-0/0/1; the alternative yyz-er-02-facing port was decisively confirmed as a.yeg-ar-06/et-0/0/4."
+          },
+          {
+            "their_id": "b.tp-d773459b",
+            "my_id": "a.yhz-cr-08/et-1/0/0",
+            "accept": true,
+            "reason": "It is the remaining 100 Gbps member of the matched ae9 bundle and connects to the corresponding remaining member on yqb-cr-14; the other member was decisively confirmed."
+          },
+          {
+            "their_id": "b.tp-678bedc9",
+            "my_id": "a.yqb-cr-14/et-0/0/3",
+            "accept": true,
+            "reason": "It is the remaining 100 Gbps member of the matched ae4 bundle and connects to the corresponding remaining member on yhz-cr-08; the other member was decisively confirmed."
+          }
+        ],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yul-ar-04/et-0/0/5",
+            "their_id": "b.tp-add894a6"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "stage",
+      "stage": 3,
+      "kind": "batch",
+      "devices_a": [
+        "a.yul-er-09",
+        "a.yul-er-10",
+        "a.yxe-er-19",
+        "a.yyz-er-02",
+        "a.ywg-er-16",
+        "a.yxe-er-05"
+      ],
+      "devices_b": [
+        "b.node-69f1c6ef",
+        "b.node-605d651f",
+        "b.node-87e16012",
+        "b.node-6396c019",
+        "b.node-717f3507",
+        "b.node-7de10377"
+      ],
+      "n_a": 15,
+      "n_b": 30
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 3,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "a.yul-er-09/et-0/0/0",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yul-er-09 <-> b.node-69f1c6ef; LLDP neighbour a.yeg-ar-06/et-0/0/7 <-> b.tp-166a138a."
+          },
+          {
+            "my_id": "a.yul-er-09/et-0/0/2",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yul-er-09 <-> b.node-69f1c6ef; LLDP neighbour a.yul-ar-04/et-0/0/7 <-> b.tp-4e221bcb."
+          },
+          {
+            "my_id": "a.yul-er-09/et-0/0/1",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yul-er-09 <-> b.node-69f1c6ef; LLDP neighbour a.yeg-ar-06/et-1/0/0 <-> b.tp-bc38f82b."
+          },
+          {
+            "my_id": "a.yul-er-10/et-0/0/1",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yul-er-10 <-> b.node-605d651f; LLDP neighbour a.yul-ar-04/et-0/0/3 <-> b.tp-9e9381f9."
+          },
+          {
+            "my_id": "a.yul-er-10/et-0/0/0",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yul-er-10 <-> b.node-605d651f; LLDP neighbour a.yeg-ar-06/et-0/0/3 <-> b.tp-ff4922c6."
+          },
+          {
+            "my_id": "a.yxe-er-19/et-0/0/0",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yxe-er-19 <-> b.node-87e16012; LLDP neighbour a.yeg-ar-06/et-0/0/6 <-> b.tp-5be6b19d."
+          },
+          {
+            "my_id": "a.yxe-er-19/et-0/0/1",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yxe-er-19 <-> b.node-87e16012; LLDP neighbour a.yul-ar-04/et-0/0/6 <-> b.tp-86c62197."
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/1",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yyz-er-02 <-> b.node-6396c019; LLDP neighbour a.yeg-ar-06/et-0/0/5 <-> b.tp-ee11eda0."
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/0",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yyz-er-02 <-> b.node-6396c019; LLDP neighbour a.yeg-ar-06/et-0/0/4 <-> b.tp-61e4fa18."
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/3",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yyz-er-02 <-> b.node-6396c019; LLDP neighbour a.yul-ar-04/et-0/0/5 <-> b.tp-add894a6."
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/2",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yyz-er-02 <-> b.node-6396c019; LLDP neighbour a.yul-ar-04/et-0/0/4 <-> b.tp-73ae9b38."
+          },
+          {
+            "my_id": "a.ywg-er-16/et-0/0/1",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.ywg-er-16 <-> b.node-717f3507; LLDP neighbour a.yvr-ar-11/et-0/0/4 <-> b.tp-9eb6d0d3."
+          },
+          {
+            "my_id": "a.ywg-er-16/et-0/0/0",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.ywg-er-16 <-> b.node-717f3507; LLDP neighbour a.yyc-ar-13/et-0/0/6 <-> b.tp-4c9295dd."
+          },
+          {
+            "my_id": "a.yxe-er-05/et-0/0/1",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yxe-er-05 <-> b.node-7de10377; LLDP neighbour a.yvr-ar-11/et-0/0/3 <-> b.tp-c41e508d."
+          },
+          {
+            "my_id": "a.yxe-er-05/et-0/0/0",
+            "attributes": "speed=10000000000; if-type=ethernetCsmacd",
+            "topology": "On settled device a.yxe-er-05 <-> b.node-7de10377; LLDP neighbour a.yyc-ar-13/et-0/0/5 <-> b.tp-5607f97f."
+          }
+        ],
+        "questions": [
+          {
+            "their_id": "b.tp-cfc4ec5b",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-88a5e946",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-a0bfba3f",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-daba30e1",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-4fa05362",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-05a6962e",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-117a7fb9",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-7ea483df",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-5ec94338",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-1d02317d",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-ea32f876",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-0a2481aa",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-70054b50",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-b351bafd",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          },
+          {
+            "their_id": "b.tp-d908f04c",
+            "ask": "Provide all attributes and topology, especially owning device and connected/LLDP remote endpoint."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 3,
+      "args": {
+        "a_id": "a.yul-er-09/et-0/0/0",
+        "b_id": "b.tp-88a5e946"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 3,
+      "args": {
+        "a_id": "a.yul-er-09/et-0/0/1",
+        "b_id": "b.tp-a0bfba3f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 3,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-cfc4ec5b",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-69f1c6ef <-> a.yul-er-09; connected by b.link-733be49f (10000000 kbps) to settled endpoint b.tp-4e221bcb <-> a.yul-ar-04/et-0/0/7."
+          },
+          {
+            "my_id": "b.tp-88a5e946",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-69f1c6ef <-> a.yul-er-09; connected by b.link-66ac273c (10000000 kbps) to settled endpoint b.tp-166a138a <-> a.yeg-ar-06/et-0/0/7."
+          },
+          {
+            "my_id": "b.tp-a0bfba3f",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-69f1c6ef <-> a.yul-er-09; connected by b.link-15528831 (10000000 kbps) to settled endpoint b.tp-bc38f82b <-> a.yeg-ar-06/et-1/0/0."
+          },
+          {
+            "my_id": "b.tp-daba30e1",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-605d651f <-> a.yul-er-10; connected by b.link-fbbc6fc0 (10000000 kbps) to settled endpoint b.tp-ff4922c6 <-> a.yeg-ar-06/et-0/0/3."
+          },
+          {
+            "my_id": "b.tp-4fa05362",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-605d651f <-> a.yul-er-10; connected by b.link-3b310467 (10000000 kbps) to settled endpoint b.tp-9e9381f9 <-> a.yul-ar-04/et-0/0/3."
+          },
+          {
+            "my_id": "b.tp-05a6962e",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-87e16012 <-> a.yxe-er-19; connected by b.link-62a17da1 (10000000 kbps) to settled endpoint b.tp-86c62197 <-> a.yul-ar-04/et-0/0/6."
+          },
+          {
+            "my_id": "b.tp-117a7fb9",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-87e16012 <-> a.yxe-er-19; connected by b.link-f9299b07 (10000000 kbps) to settled endpoint b.tp-5be6b19d <-> a.yeg-ar-06/et-0/0/6."
+          },
+          {
+            "my_id": "b.tp-7ea483df",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-6396c019 <-> a.yyz-er-02; connected by b.link-57366802 (10000000 kbps) to settled endpoint b.tp-73ae9b38 <-> a.yul-ar-04/et-0/0/4."
+          },
+          {
+            "my_id": "b.tp-5ec94338",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-6396c019 <-> a.yyz-er-02; connected by b.link-8fd188f7 (10000000 kbps) to settled endpoint b.tp-add894a6 <-> a.yul-ar-04/et-0/0/5."
+          },
+          {
+            "my_id": "b.tp-1d02317d",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-6396c019 <-> a.yyz-er-02; connected by b.link-ee7770b4 (10000000 kbps) to settled endpoint b.tp-61e4fa18 <-> a.yeg-ar-06/et-0/0/4."
+          },
+          {
+            "my_id": "b.tp-ea32f876",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-6396c019 <-> a.yyz-er-02; connected by b.link-3af2aa33 (10000000 kbps) to settled endpoint b.tp-ee11eda0 <-> a.yeg-ar-06/et-0/0/5."
+          },
+          {
+            "my_id": "b.tp-0a2481aa",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-717f3507 <-> a.ywg-er-16; connected by b.link-24d86818 (10000000 kbps) to settled endpoint b.tp-4c9295dd <-> a.yyc-ar-13/et-0/0/6."
+          },
+          {
+            "my_id": "b.tp-70054b50",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-717f3507 <-> a.ywg-er-16; connected by b.link-c8bdceda (10000000 kbps) to settled endpoint b.tp-9eb6d0d3 <-> a.yvr-ar-11/et-0/0/4."
+          },
+          {
+            "my_id": "b.tp-b351bafd",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-7de10377 <-> a.yxe-er-05; connected by b.link-c9b3345c (10000000 kbps) to settled endpoint b.tp-c41e508d <-> a.yvr-ar-11/et-0/0/3."
+          },
+          {
+            "my_id": "b.tp-d908f04c",
+            "attributes": "lag=false",
+            "topology": "On settled device b.node-7de10377 <-> a.yxe-er-05; connected by b.link-ceb56e00 (10000000 kbps) to settled endpoint b.tp-5607f97f <-> a.yyc-ar-13/et-0/0/5."
+          }
+        ],
+        "questions": [],
+        "proposals": [
+          {
+            "my_id": "b.tp-cfc4ec5b",
+            "their_id": "a.yul-er-09/et-0/0/2",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yul-ar-04/et-0/0/7; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-88a5e946",
+            "their_id": "a.yul-er-09/et-0/0/0",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yeg-ar-06/et-0/0/7; 10-Gbps capacity agrees. This B port belongs to a declared look-alike group, so it is also submitted for decisive experiment."
+          },
+          {
+            "my_id": "b.tp-a0bfba3f",
+            "their_id": "a.yul-er-09/et-0/0/1",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yeg-ar-06/et-1/0/0; 10-Gbps capacity agrees. This B port belongs to a declared look-alike group, so it is also submitted for decisive experiment."
+          },
+          {
+            "my_id": "b.tp-daba30e1",
+            "their_id": "a.yul-er-10/et-0/0/0",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yeg-ar-06/et-0/0/3; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-4fa05362",
+            "their_id": "a.yul-er-10/et-0/0/1",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yul-ar-04/et-0/0/3; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-05a6962e",
+            "their_id": "a.yxe-er-19/et-0/0/1",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yul-ar-04/et-0/0/6; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-117a7fb9",
+            "their_id": "a.yxe-er-19/et-0/0/0",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yeg-ar-06/et-0/0/6; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-7ea483df",
+            "their_id": "a.yyz-er-02/et-0/0/2",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yul-ar-04/et-0/0/4; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-5ec94338",
+            "their_id": "a.yyz-er-02/et-0/0/3",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yul-ar-04/et-0/0/5; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-1d02317d",
+            "their_id": "a.yyz-er-02/et-0/0/0",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yeg-ar-06/et-0/0/4; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-ea32f876",
+            "their_id": "a.yyz-er-02/et-0/0/1",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yeg-ar-06/et-0/0/5; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-0a2481aa",
+            "their_id": "a.ywg-er-16/et-0/0/0",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yyc-ar-13/et-0/0/6; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-70054b50",
+            "their_id": "a.ywg-er-16/et-0/0/1",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yvr-ar-11/et-0/0/4; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-b351bafd",
+            "their_id": "a.yxe-er-05/et-0/0/1",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yvr-ar-11/et-0/0/3; 10-Gbps capacity agrees."
+          },
+          {
+            "my_id": "b.tp-d908f04c",
+            "their_id": "a.yxe-er-05/et-0/0/0",
+            "confidence": 0.99,
+            "rationale": "Same settled owning device and same settled remote endpoint a.yyc-ar-13/et-0/0/5; 10-Gbps capacity agrees."
+          }
+        ],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "b.tp-88a5e946",
+            "their_id": "a.yul-er-09/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-a0bfba3f",
+            "their_id": "a.yul-er-09/et-0/0/1"
+          }
+        ],
+        "no_counterpart": [
+          "b.link-66ac273c",
+          "b.link-733be49f",
+          "b.link-15528831",
+          "b.link-3b310467",
+          "b.link-fbbc6fc0",
+          "b.link-f9299b07",
+          "b.link-62a17da1",
+          "b.link-57366802",
+          "b.link-3af2aa33",
+          "b.link-8fd188f7",
+          "b.link-ee7770b4",
+          "b.link-24d86818",
+          "b.link-c8bdceda",
+          "b.link-ceb56e00",
+          "b.link-c9b3345c"
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 3,
+      "args": {
+        "a_id": "a.yyz-er-02/et-0/0/2",
+        "b_id": "b.tp-7ea483df"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 3,
+      "args": {
+        "a_id": "a.yyz-er-02/et-0/0/3",
+        "b_id": "b.tp-5ec94338"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 3,
+      "args": {
+        "a_id": "a.yyz-er-02/et-0/0/0",
+        "b_id": "b.tp-1d02317d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 3,
+      "args": {
+        "a_id": "a.yyz-er-02/et-0/0/1",
+        "b_id": "b.tp-ea32f876"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 3,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [
+          {
+            "their_id": "b.tp-cfc4ec5b",
+            "my_id": "a.yul-er-09/et-0/0/2",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-88a5e946",
+            "my_id": "a.yul-er-09/et-0/0/0",
+            "accept": true,
+            "reason": "Decisive virtual experiment confirmed the same component with all invariants preserved."
+          },
+          {
+            "their_id": "b.tp-a0bfba3f",
+            "my_id": "a.yul-er-09/et-0/0/1",
+            "accept": true,
+            "reason": "Decisive virtual experiment confirmed the same component with all invariants preserved."
+          },
+          {
+            "their_id": "b.tp-daba30e1",
+            "my_id": "a.yul-er-10/et-0/0/0",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-4fa05362",
+            "my_id": "a.yul-er-10/et-0/0/1",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-05a6962e",
+            "my_id": "a.yxe-er-19/et-0/0/1",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-117a7fb9",
+            "my_id": "a.yxe-er-19/et-0/0/0",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-7ea483df",
+            "my_id": "a.yyz-er-02/et-0/0/2",
+            "accept": true,
+            "reason": "Owning device and settled remote endpoint a.yul-ar-04/et-0/0/4 agree, as do type and capacity; decisive testing requested because my port is in a declared look-alike group."
+          },
+          {
+            "their_id": "b.tp-5ec94338",
+            "my_id": "a.yyz-er-02/et-0/0/3",
+            "accept": true,
+            "reason": "Owning device and settled remote endpoint a.yul-ar-04/et-0/0/5 agree, as do type and capacity; decisive testing requested because my port is in a declared look-alike group."
+          },
+          {
+            "their_id": "b.tp-1d02317d",
+            "my_id": "a.yyz-er-02/et-0/0/0",
+            "accept": true,
+            "reason": "Owning device and settled remote endpoint a.yeg-ar-06/et-0/0/4 agree, as do type and capacity; decisive testing requested because my port is in a declared look-alike group."
+          },
+          {
+            "their_id": "b.tp-ea32f876",
+            "my_id": "a.yyz-er-02/et-0/0/1",
+            "accept": true,
+            "reason": "Owning device and settled remote endpoint a.yeg-ar-06/et-0/0/5 agree, as do type and capacity; decisive testing requested because my port is in a declared look-alike group."
+          },
+          {
+            "their_id": "b.tp-0a2481aa",
+            "my_id": "a.ywg-er-16/et-0/0/0",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-70054b50",
+            "my_id": "a.ywg-er-16/et-0/0/1",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-b351bafd",
+            "my_id": "a.yxe-er-05/et-0/0/1",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          },
+          {
+            "their_id": "b.tp-d908f04c",
+            "my_id": "a.yxe-er-05/et-0/0/0",
+            "accept": true,
+            "reason": "Owning device, settled remote endpoint, port type, and 10-Gbps capacity agree."
+          }
+        ],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yyz-er-02/et-0/0/2",
+            "their_id": "b.tp-7ea483df"
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/3",
+            "their_id": "b.tp-5ec94338"
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/0",
+            "their_id": "b.tp-1d02317d"
+          },
+          {
+            "my_id": "a.yyz-er-02/et-0/0/1",
+            "their_id": "b.tp-ea32f876"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 3,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 3,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 3,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "staging",
+      "stages": 3,
+      "devices_bound": 22,
+      "batch_size": 60,
+      "anchored": 22,
+      "lookalikes_a": 48,
+      "lookalikes_b": 36
+    }
+  ]
+}

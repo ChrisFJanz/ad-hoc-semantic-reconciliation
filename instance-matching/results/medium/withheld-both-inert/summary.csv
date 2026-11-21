@@ -1,0 +1,4 @@
+stack,case,model,placement,reference_variant,evidence,budget,trial,submitted,proposed,precision,recall,surviving_instance_fc,experiment_only_recall,residual_total,residual_experiment_only,residual_native,confirmed_provision,refuted_provision,interrogated,interrogate_calls,provision_calls,turns,total_tokens,reasoning_tokens,latency_s,mean_conf_correct,mean_conf_incorrect,surviving_traps
+reasoner,instance_ipnet_medium,gpt-5.6-sol,both_inert,none,name+key+attrs+rels,unbounded,0,True,102,1.0,0.68,0,,160,0,64,0,0,0,0,0,1,107083,4838,100.3,1.0,,
+reasoner,instance_ipnet_medium,gpt-5.6-sol,both_inert,none,name+key+attrs+rels,unbounded,1,True,102,1.0,0.68,0,,160,0,64,0,0,0,0,0,1,107783,4008,101.19,1.0,,
+reasoner,instance_ipnet_medium,gpt-5.6-sol,both_inert,none,name+key+attrs+rels,unbounded,2,True,101,1.0,0.673,0,,162,0,64,0,0,0,0,0,3,299407,5288,120.87,1.0,,

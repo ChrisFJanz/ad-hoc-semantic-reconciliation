@@ -1,0 +1,42 @@
+{
+ "operational_case": "configuration",
+ "seed": "hand-authored (IP network: an interfaces view against a topology view of one network; after an exchange on the NMOP list, November 2026)",
+ "false_cognates": [
+  {
+   "a": "a.if",
+   "b": "b.ifname",
+   "why": "interface vs interface-name: both carry 'interface', but one is the port itself and the other is the label the device gives it; a.if's true partner is b.tp, b.ifname's is a.ifname."
+  },
+  {
+   "a": "a.agg",
+   "b": "b.link",
+   "why": "aggregate-interface (link aggregation) vs link: both suggest 'link', but one is a bundle of ports on one device and the other is a connection between two devices; a.agg's true partner is b.lag, b.link's is a.nbr."
+  },
+  {
+   "a": "a.ifindex",
+   "b": "b.tpid",
+   "why": "if-index vs tp-id: both are identifiers of an interface local to one system, but one is a device-local index and the other is an identifier the topology system issues for itself; neither has a counterpart."
+  }
+ ],
+ "opaque": [
+  "b.tpid"
+ ],
+ "invariants": [
+  "device-identity",
+  "port-ownership",
+  "bundle-membership",
+  "physical-connectivity",
+  "speed-with-unit",
+  "address-identity"
+ ],
+ "residual_by_placement": {
+  "both_cognitive": 3,
+  "one_inert": 4,
+  "both_inert": 5
+ },
+ "verification_by_placement": {
+  "both_cognitive": "closed-loop worked exchange, self-certifying",
+  "one_inert": "evidence and round-trip on invariants",
+  "both_inert": "external adjudication or downstream test"
+ }
+}

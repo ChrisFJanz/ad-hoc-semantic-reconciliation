@@ -1,0 +1,1494 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_medium",
+    "model": "gpt-5.6-sol",
+    "placement": "one_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 2,
+    "submitted": true,
+    "proposed": 102,
+    "precision": 1.0,
+    "recall": 0.68,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 160,
+    "residual_experiment_only": 0,
+    "residual_native": 64,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 107681,
+    "reasoning_tokens": 5452,
+    "latency_s": 121.88,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "one_inert",
+      "stack": "sequenced-reasoner+anchors+verify+one_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 22,
+      "open_a": 128,
+      "open_b": 192,
+      "lookalikes_a": 48,
+      "lookalikes_b": 36
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/0",
+            "b_id": "b.tp-6c9d7352",
+            "basis": "Unique physical port on settled device a.ywg-ar-15/b.node-e267ee3c linked to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/2",
+            "b_id": "b.tp-c3a9d712",
+            "basis": "Unique physical port on settled device a.yqb-cr-07/b.node-19f8c573 linked to settled device a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/3",
+            "b_id": "b.tp-b707eb03",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yhz-er-03/b.node-93049346.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-03/et-0/0/1",
+            "b_id": "b.tp-749b0c70",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-05/et-0/0/0",
+            "b_id": "b.tp-d908f04c",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/5",
+            "b_id": "b.tp-5607f97f",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yxe-er-05/b.node-7de10377.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-20/et-0/0/1",
+            "b_id": "b.tp-9d33f163",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-1/0/2",
+            "b_id": "b.tp-92bb256a",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yhz-er-20/b.node-75c94ec2.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/3",
+            "b_id": "b.tp-af4bad0b",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/0",
+            "b_id": "b.tp-938e8e7d",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/4",
+            "b_id": "b.tp-d37b5b34",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/2",
+            "b_id": "b.tp-5b0a33aa",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-1/0/1",
+            "b_id": "b.tp-b20341a0",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-er-01/b.node-0e94b6cb.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-01/et-0/0/0",
+            "b_id": "b.tp-dc842b34",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-12/et-0/0/0",
+            "b_id": "b.tp-e887e610",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/6",
+            "b_id": "b.tp-2f3252bd",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-er-12/b.node-cde74eaf.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-17/et-0/0/3",
+            "b_id": "b.tp-d28249b0",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/5",
+            "b_id": "b.tp-afbc10fb",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yvr-er-17/b.node-73050623.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-10/et-0/0/1",
+            "b_id": "b.tp-4fa05362",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/3",
+            "b_id": "b.tp-9e9381f9",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-er-10/b.node-605d651f.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/1",
+            "b_id": "b.tp-84fc41dd",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yhz-cr-08/b.node-e955bee5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/et-1/0/3",
+            "b_id": "b.tp-723cc2f3",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-er-16/et-0/0/0",
+            "b_id": "b.tp-0a2481aa",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/6",
+            "b_id": "b.tp-4c9295dd",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-er-16/b.node-717f3507.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-er-21/et-0/0/0",
+            "b_id": "b.tp-795d58af",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-1/0/2",
+            "b_id": "b.tp-930f9d4e",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-er-21/b.node-4ac6850a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-10/et-0/0/0",
+            "b_id": "b.tp-daba30e1",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/3",
+            "b_id": "b.tp-ff4922c6",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-er-10/b.node-605d651f.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/3",
+            "b_id": "b.tp-c41e508d",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yxe-er-05/b.node-7de10377.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-05/et-0/0/1",
+            "b_id": "b.tp-b351bafd",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/2",
+            "b_id": "b.tp-495c5284",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/2",
+            "b_id": "b.tp-0dad598f",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/6",
+            "b_id": "b.tp-5be6b19d",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yxe-er-19/b.node-87e16012.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-19/et-0/0/0",
+            "b_id": "b.tp-117a7fb9",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/3",
+            "b_id": "b.tp-a08e5203",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/4",
+            "b_id": "b.tp-3c13c4d1",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-er-16/et-0/0/1",
+            "b_id": "b.tp-70054b50",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/4",
+            "b_id": "b.tp-9eb6d0d3",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-er-16/b.node-717f3507.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/et-1/0/5",
+            "b_id": "b.tp-87da760f",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/0",
+            "b_id": "b.tp-d759af28",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyz-cr-18/b.node-48555212.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/6",
+            "b_id": "b.tp-86c62197",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yxe-er-19/b.node-87e16012.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-19/et-0/0/1",
+            "b_id": "b.tp-05a6962e",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/5",
+            "b_id": "b.tp-efa34fc8",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yhz-er-03/b.node-93049346.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-03/et-0/0/0",
+            "b_id": "b.tp-6db21975",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-1/0/3",
+            "b_id": "b.tp-4e15c3b2",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yhz-er-20/b.node-75c94ec2.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-20/et-0/0/0",
+            "b_id": "b.tp-ce015c53",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-09/et-0/0/2",
+            "b_id": "b.tp-cfc4ec5b",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/7",
+            "b_id": "b.tp-4e221bcb",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-er-09/b.node-69f1c6ef.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-01/et-0/0/1",
+            "b_id": "b.tp-5fdb0b45",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-1/0/0",
+            "b_id": "b.tp-ea7925ac",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-er-01/b.node-0e94b6cb.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/0",
+            "b_id": "b.tp-c6f25bc4",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/7",
+            "b_id": "b.tp-6547c535",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/et-0/0/5",
+            "b_id": "b.tp-9f648f02",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-cr-14/b.node-1ac151fe.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-14/et-0/0/5",
+            "b_id": "b.tp-77169572",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyz-cr-18/b.node-48555212.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/et-1/0/2",
+            "b_id": "b.tp-2fe5d398",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/1",
+            "b_id": "b.tp-3a92311d",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yhz-cr-08/b.node-e955bee5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/1",
+            "b_id": "b.tp-5aafb184",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/5",
+            "b_id": "b.tp-7a0f8e2d",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-12/et-0/0/1",
+            "b_id": "b.tp-ce0949ac",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/4",
+            "b_id": "b.tp-5fab0df4",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-er-12/b.node-cde74eaf.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-er-21/et-0/0/1",
+            "b_id": "b.tp-30ae4178",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-1/0/1",
+            "b_id": "b.tp-46226a08",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-er-21/b.node-4ac6850a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/2",
+            "b_id": "b.tp-7670ac83",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/4",
+            "b_id": "b.tp-b0ed3745",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/0",
+            "b_id": "b.tp-d6af3929",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/6",
+            "b_id": "b.tp-e4c7a291",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/1",
+            "b_id": "b.tp-e72b314d",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.yyz-cr-18/b.node-48555212.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/et-1/0/1",
+            "b_id": "b.tp-2068cad6",
+            "basis": "Unique port on the settled owning device linked to settled neighbour a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/ae4",
+            "b_id": "b.tp-817cdc42",
+            "basis": "Same settled owner and uniquely the four-member bundle connecting to the four-member bundle on a.yhz-cr-08.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/ae7",
+            "b_id": "b.tp-26e8cb85",
+            "basis": "Same settled owner and uniquely the two-member bundle connecting to a.yyz-cr-18.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/ae4",
+            "b_id": "b.tp-182056df",
+            "basis": "Same settled owner and uniquely the four-member bundle connecting to the four-member bundle on a.yqb-cr-07.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/ae9",
+            "b_id": "b.tp-337ad96f",
+            "basis": "Same settled owner and uniquely the two-member bundle connecting to a.yqb-cr-14.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/ae2",
+            "b_id": "b.tp-cb0dc9cf",
+            "basis": "Only bundle on the settled owner; both records give two members and a bundled connection to a.yyz-cr-18.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-14/ae4",
+            "b_id": "b.tp-b8020545",
+            "basis": "Only bundle on the settled owner; both records give two members and a bundled connection to a.yhz-cr-08.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/ae3",
+            "b_id": "b.tp-c5f5a861",
+            "basis": "Same settled owner; uniquely the two-member bundle connecting to a.yyz-cr-18.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/ae9",
+            "b_id": "b.tp-a174557c",
+            "basis": "Same settled owner; uniquely the two-member bundle connecting to a.yvr-er-17.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-17/ae2",
+            "b_id": "b.tp-f9ce6522",
+            "basis": "Only bundle on the settled owner; both records give two members and a bundled connection to a.ywg-ar-15.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/ae2",
+            "b_id": "b.tp-28b735f4",
+            "basis": "Same settled owner; uniquely the two-member bundle connecting to a.yqb-cr-07.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/ae8",
+            "b_id": "b.tp-c6ee14b1",
+            "basis": "Same settled owner; uniquely the two-member bundle connecting to a.ywg-ar-15.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/ae12",
+            "b_id": "b.tp-d3ba4557",
+            "basis": "Same settled owner; uniquely the two-member bundle connecting to a.yyc-ar-13.",
+            "confidence": 1.0
+          }
+        ],
+        "left_open": [
+          {
+            "id": "a.yeg-ar-06/et-0/0/4",
+            "reason": "Look-alike: records distinguish neither parallel link to a.yyz-er-02; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yeg-ar-06/et-0/0/5",
+            "reason": "Look-alike: records distinguish neither parallel link to a.yyz-er-02; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yeg-ar-06/et-0/0/7",
+            "reason": "Look-alike: records distinguish neither parallel link to a.yul-er-09; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yeg-ar-06/et-1/0/0",
+            "reason": "Look-alike: records distinguish neither parallel link to a.yul-er-09; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/0",
+            "reason": "Look-alike among four members of the same bundle and same neighbour; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/1",
+            "reason": "Look-alike among four members of the same bundle and same neighbour; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/2",
+            "reason": "Look-alike among four members of the same bundle and same neighbour; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/3",
+            "reason": "Look-alike among four members of the same bundle and same neighbour; no shared device-reported identifier is available."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/5",
+            "reason": "Look-alike: two parallel links to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/6",
+            "reason": "Look-alike: two parallel links to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/7",
+            "reason": "Look-alike: two members of the same bundle to a.yqb-cr-14."
+          },
+          {
+            "id": "a.yhz-cr-08/et-1/0/0",
+            "reason": "Look-alike: two members of the same bundle to a.yqb-cr-14."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/0",
+            "reason": "Look-alike among four members of the same bundle and same neighbour."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/1",
+            "reason": "Look-alike among four members of the same bundle and same neighbour."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/2",
+            "reason": "Look-alike among four members of the same bundle and same neighbour."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/3",
+            "reason": "Look-alike among four members of the same bundle and same neighbour."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/5",
+            "reason": "Look-alike: two members of the same bundle to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/6",
+            "reason": "Look-alike: two members of the same bundle to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yqb-cr-07/et-1/0/0",
+            "reason": "Look-alike: two parallel links to a.yqb-cr-14."
+          },
+          {
+            "id": "a.yqb-cr-07/et-1/0/1",
+            "reason": "Look-alike: two parallel links to a.yqb-cr-14."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/0",
+            "reason": "Look-alike: two parallel links to a.yqb-cr-07."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/1",
+            "reason": "Look-alike: two parallel links to a.yqb-cr-07."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/2",
+            "reason": "Look-alike: two members of the same bundle to a.yhz-cr-08."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/3",
+            "reason": "Look-alike: two members of the same bundle to a.yhz-cr-08."
+          },
+          {
+            "id": "a.yul-ar-04/et-0/0/4",
+            "reason": "Look-alike: two parallel links to a.yyz-er-02."
+          },
+          {
+            "id": "a.yul-ar-04/et-0/0/5",
+            "reason": "Look-alike: two parallel links to a.yyz-er-02."
+          },
+          {
+            "id": "a.yul-er-09/et-0/0/0",
+            "reason": "Look-alike: two parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yul-er-09/et-0/0/1",
+            "reason": "Look-alike: two parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/0",
+            "reason": "Look-alike: two members of the same bundle to a.ywg-ar-15."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/1",
+            "reason": "Look-alike: two members of the same bundle to a.ywg-ar-15."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/1",
+            "reason": "Look-alike: two members of the same bundle to a.yyz-cr-18."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/2",
+            "reason": "Look-alike: two members of the same bundle to a.yyz-cr-18."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/7",
+            "reason": "Look-alike: two members of the same bundle to a.yvr-er-17."
+          },
+          {
+            "id": "a.ywg-ar-15/et-1/0/0",
+            "reason": "Look-alike: two members of the same bundle to a.yvr-er-17."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/0",
+            "reason": "Look-alike: two members of the same bundle to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/1",
+            "reason": "Look-alike: two members of the same bundle to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/0",
+            "reason": "Look-alike: two members of the same bundle to a.yqb-cr-07."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/1",
+            "reason": "Look-alike: two members of the same bundle to a.yqb-cr-07."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/3",
+            "reason": "Look-alike: two parallel links to a.yhz-cr-08."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/4",
+            "reason": "Look-alike: two parallel links to a.yhz-cr-08."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/6",
+            "reason": "Look-alike: two members of the same bundle to a.ywg-ar-15."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/7",
+            "reason": "Look-alike: two members of the same bundle to a.ywg-ar-15."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/2",
+            "reason": "Look-alike: two members of the same bundle to a.yyc-ar-13."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/3",
+            "reason": "Look-alike: two members of the same bundle to a.yyc-ar-13."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/0",
+            "reason": "Look-alike: two parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/1",
+            "reason": "Look-alike: two parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/2",
+            "reason": "Look-alike: two parallel links to a.yul-ar-04."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/3",
+            "reason": "Look-alike: two parallel links to a.yul-ar-04."
+          },
+          {
+            "id": "b.tp-0f1e44d2",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-123cee98",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-5ef78e17",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-dbc83434",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-10ff6ac4",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-b55f8e58",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-c1f3d7a3",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-e3e12334",
+            "reason": "B endpoint is one of four indistinguishable bundle members between the settled core devices."
+          },
+          {
+            "id": "b.tp-5d74b0c8",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-e955bee5 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-bc61b7d1",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-e955bee5 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-39a6a9f1",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-48555212 and b.node-e955bee5."
+          },
+          {
+            "id": "b.tp-3f7c5eaa",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-48555212 and b.node-e955bee5."
+          },
+          {
+            "id": "b.tp-d773459b",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-e955bee5 and b.node-1ac151fe."
+          },
+          {
+            "id": "b.tp-e7a21bd5",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-e955bee5 and b.node-1ac151fe."
+          },
+          {
+            "id": "b.tp-678bedc9",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-1ac151fe and b.node-e955bee5."
+          },
+          {
+            "id": "b.tp-fed02a3f",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-1ac151fe and b.node-e955bee5."
+          },
+          {
+            "id": "b.tp-054b8383",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-19f8c573 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-2d8c73e6",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-19f8c573 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-4f9f24c4",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-48555212 and b.node-19f8c573."
+          },
+          {
+            "id": "b.tp-a81d81a4",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-48555212 and b.node-19f8c573."
+          },
+          {
+            "id": "b.tp-1aca9b4c",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-19f8c573 and b.node-1ac151fe."
+          },
+          {
+            "id": "b.tp-ca229ad8",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-19f8c573 and b.node-1ac151fe."
+          },
+          {
+            "id": "b.tp-5de62a8a",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-1ac151fe and b.node-19f8c573."
+          },
+          {
+            "id": "b.tp-a3b6d183",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-1ac151fe and b.node-19f8c573."
+          },
+          {
+            "id": "b.tp-73ae9b38",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-d826d38c and b.node-6396c019."
+          },
+          {
+            "id": "b.tp-add894a6",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-d826d38c and b.node-6396c019."
+          },
+          {
+            "id": "b.tp-7ea483df",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-6396c019 and b.node-d826d38c."
+          },
+          {
+            "id": "b.tp-5ec94338",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-6396c019 and b.node-d826d38c."
+          },
+          {
+            "id": "b.tp-88a5e946",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-69f1c6ef and b.node-f6af83f5."
+          },
+          {
+            "id": "b.tp-a0bfba3f",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-69f1c6ef and b.node-f6af83f5."
+          },
+          {
+            "id": "b.tp-166a138a",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-f6af83f5 and b.node-69f1c6ef."
+          },
+          {
+            "id": "b.tp-bc38f82b",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-f6af83f5 and b.node-69f1c6ef."
+          },
+          {
+            "id": "b.tp-047ae90f",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-73050623 and b.node-e267ee3c."
+          },
+          {
+            "id": "b.tp-e8abb3b4",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-73050623 and b.node-e267ee3c."
+          },
+          {
+            "id": "b.tp-0ebf1200",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-e267ee3c and b.node-73050623."
+          },
+          {
+            "id": "b.tp-9defe48c",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-e267ee3c and b.node-73050623."
+          },
+          {
+            "id": "b.tp-2a489b0c",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-e267ee3c and b.node-48555212."
+          },
+          {
+            "id": "b.tp-4063fc60",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-e267ee3c and b.node-48555212."
+          },
+          {
+            "id": "b.tp-937d200e",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-48555212 and b.node-e267ee3c."
+          },
+          {
+            "id": "b.tp-d663803f",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-48555212 and b.node-e267ee3c."
+          },
+          {
+            "id": "b.tp-015ca880",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-70336995 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-6f0fc1e3",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-70336995 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-12e5712c",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-48555212 and b.node-70336995."
+          },
+          {
+            "id": "b.tp-7c77feb2",
+            "reason": "B endpoint is one of two indistinguishable bundle members between b.node-48555212 and b.node-70336995."
+          },
+          {
+            "id": "b.tp-1d02317d",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-6396c019 and b.node-f6af83f5."
+          },
+          {
+            "id": "b.tp-ea32f876",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-6396c019 and b.node-f6af83f5."
+          },
+          {
+            "id": "b.tp-61e4fa18",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-f6af83f5 and b.node-6396c019."
+          },
+          {
+            "id": "b.tp-ee11eda0",
+            "reason": "B endpoint is one of two indistinguishable parallel links between b.node-f6af83f5 and b.node-6396c019."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-abbdcbf5",
+          "b.link-76e02b18",
+          "b.link-471b7887",
+          "b.link-5b44279b",
+          "b.link-7df8ea6d",
+          "b.link-57366802",
+          "b.link-a0bc6774",
+          "b.link-ceb56e00",
+          "b.link-008e5901",
+          "b.link-f4986a8d",
+          "b.link-e3121429",
+          "b.link-efc82c46",
+          "b.link-0e686a07",
+          "b.link-5d8a3191",
+          "b.link-0156be09",
+          "b.link-8d18018e",
+          "b.link-b5b95b58",
+          "b.link-fe867d38",
+          "b.link-f9cf9522",
+          "b.link-16217285",
+          "b.link-3b310467",
+          "b.link-66ac273c",
+          "b.link-6c84f475",
+          "b.link-dd43da11",
+          "b.link-ade40325",
+          "b.link-919b7bc1",
+          "b.link-24d86818",
+          "b.link-44bd8827",
+          "b.link-fbbc6fc0",
+          "b.link-c9b3345c",
+          "b.link-816f5653",
+          "b.link-df84fbb5",
+          "b.link-0414622e",
+          "b.link-f9299b07",
+          "b.link-3af2aa33",
+          "b.link-1761be62",
+          "b.link-4f8f57ea",
+          "b.link-d6d01cfc",
+          "b.link-c8bdceda",
+          "b.link-8c9c41e4",
+          "b.link-8d2a0c9c",
+          "b.link-1004178b",
+          "b.link-999fca3b",
+          "b.link-62a17da1",
+          "b.link-df41dd1e",
+          "b.link-8fd188f7",
+          "b.link-09d70270",
+          "b.link-995b950f",
+          "b.link-733be49f",
+          "b.link-15528831",
+          "b.link-81cd8332",
+          "b.link-c7f85069",
+          "b.link-3d71cf67",
+          "b.link-ee7770b4",
+          "b.link-7e5444cd",
+          "b.link-d7319301",
+          "b.link-baa8d9b0",
+          "b.link-56df57ae",
+          "b.link-b00c1b19",
+          "b.link-86e327ec",
+          "b.link-faed77df",
+          "b.link-b87b9e2d",
+          "b.link-3f49ad96",
+          "b.link-b6f2ec53"
+        ],
+        "device_questions": [],
+        "done": true
+      }
+    },
+    {
+      "step": "verify",
+      "proposed": 80,
+      "verdicts": [
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/0",
+          "b_id": "b.tp-6c9d7352",
+          "verdict": "determined",
+          "reason": "On the settled-corresponding ywg-ar-15 device, this is the unique unbundled port linked to yqb-cr-07; B records b.tp-6c9d7352 linked to b.tp-c3a9d712 on that corresponding neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/2",
+          "b_id": "b.tp-c3a9d712",
+          "verdict": "determined",
+          "reason": "It is the unique unbundled yqb-cr-07 port linked to ywg-ar-15; B records b.tp-c3a9d712 as the far end of b.tp-6c9d7352 on the corresponding device."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/3",
+          "b_id": "b.tp-b707eb03",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to the settled-corresponding yhz-er-03 device."
+        },
+        {
+          "a_id": "a.yhz-er-03/et-0/0/1",
+          "b_id": "b.tp-749b0c70",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to the settled-corresponding ywg-ar-00 device."
+        },
+        {
+          "a_id": "a.yxe-er-05/et-0/0/0",
+          "b_id": "b.tp-d908f04c",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yyc-ar-13."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/5",
+          "b_id": "b.tp-5607f97f",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yxe-er-05."
+        },
+        {
+          "a_id": "a.yhz-er-20/et-0/0/1",
+          "b_id": "b.tp-9d33f163",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-1/0/2",
+          "b_id": "b.tp-92bb256a",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yhz-er-20."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/3",
+          "b_id": "b.tp-af4bad0b",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-00."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/0",
+          "b_id": "b.tp-938e8e7d",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-cr-07."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/4",
+          "b_id": "b.tp-d37b5b34",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-00."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/2",
+          "b_id": "b.tp-5b0a33aa",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-15."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-1/0/1",
+          "b_id": "b.tp-b20341a0",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-er-01."
+        },
+        {
+          "a_id": "a.yeg-er-01/et-0/0/0",
+          "b_id": "b.tp-dc842b34",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06."
+        },
+        {
+          "a_id": "a.yeg-er-12/et-0/0/0",
+          "b_id": "b.tp-e887e610",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-15."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/6",
+          "b_id": "b.tp-2f3252bd",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-er-12."
+        },
+        {
+          "a_id": "a.yvr-er-17/et-0/0/3",
+          "b_id": "b.tp-d28249b0",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both unbundled ports uniquely connect to ywg-ar-00."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/5",
+          "b_id": "b.tp-afbc10fb",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to the unbundled yvr-er-17 port."
+        },
+        {
+          "a_id": "a.yul-er-10/et-0/0/1",
+          "b_id": "b.tp-4fa05362",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/3",
+          "b_id": "b.tp-9e9381f9",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-er-10."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/1",
+          "b_id": "b.tp-84fc41dd",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yhz-cr-08 outside a bundle."
+        },
+        {
+          "a_id": "a.yhz-cr-08/et-1/0/3",
+          "b_id": "b.tp-723cc2f3",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04 outside a bundle."
+        },
+        {
+          "a_id": "a.ywg-er-16/et-0/0/0",
+          "b_id": "b.tp-0a2481aa",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yyc-ar-13."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/6",
+          "b_id": "b.tp-4c9295dd",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-er-16."
+        },
+        {
+          "a_id": "a.yqb-er-21/et-0/0/0",
+          "b_id": "b.tp-795d58af",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-1/0/2",
+          "b_id": "b.tp-930f9d4e",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-er-21."
+        },
+        {
+          "a_id": "a.yul-er-10/et-0/0/0",
+          "b_id": "b.tp-daba30e1",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/3",
+          "b_id": "b.tp-ff4922c6",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-er-10."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/3",
+          "b_id": "b.tp-c41e508d",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yxe-er-05."
+        },
+        {
+          "a_id": "a.yxe-er-05/et-0/0/1",
+          "b_id": "b.tp-b351bafd",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yvr-ar-11."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/2",
+          "b_id": "b.tp-495c5284",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/2",
+          "b_id": "b.tp-0dad598f",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/6",
+          "b_id": "b.tp-5be6b19d",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yxe-er-19."
+        },
+        {
+          "a_id": "a.yxe-er-19/et-0/0/0",
+          "b_id": "b.tp-117a7fb9",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/3",
+          "b_id": "b.tp-a08e5203",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-cr-07 outside a bundle."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/4",
+          "b_id": "b.tp-3c13c4d1",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yyc-ar-13 outside a bundle."
+        },
+        {
+          "a_id": "a.ywg-er-16/et-0/0/1",
+          "b_id": "b.tp-70054b50",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yvr-ar-11."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/4",
+          "b_id": "b.tp-9eb6d0d3",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-er-16."
+        },
+        {
+          "a_id": "a.yyz-cr-18/et-1/0/5",
+          "b_id": "b.tp-87da760f",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both unbundled ports uniquely connect to yvr-ar-11."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/0",
+          "b_id": "b.tp-d759af28",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to the unbundled yyz-cr-18 port."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/6",
+          "b_id": "b.tp-86c62197",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yxe-er-19."
+        },
+        {
+          "a_id": "a.yxe-er-19/et-0/0/1",
+          "b_id": "b.tp-05a6962e",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/5",
+          "b_id": "b.tp-efa34fc8",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yhz-er-03."
+        },
+        {
+          "a_id": "a.yhz-er-03/et-0/0/0",
+          "b_id": "b.tp-6db21975",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-15."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-1/0/3",
+          "b_id": "b.tp-4e15c3b2",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yhz-er-20."
+        },
+        {
+          "a_id": "a.yhz-er-20/et-0/0/0",
+          "b_id": "b.tp-ce015c53",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06."
+        },
+        {
+          "a_id": "a.yul-er-09/et-0/0/2",
+          "b_id": "b.tp-cfc4ec5b",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/7",
+          "b_id": "b.tp-4e221bcb",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-er-09."
+        },
+        {
+          "a_id": "a.yeg-er-01/et-0/0/1",
+          "b_id": "b.tp-5fdb0b45",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-1/0/0",
+          "b_id": "b.tp-ea7925ac",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-er-01."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/0",
+          "b_id": "b.tp-c6f25bc4",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-cr-07 outside a bundle."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/7",
+          "b_id": "b.tp-6547c535",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04 outside a bundle."
+        },
+        {
+          "a_id": "a.yyz-cr-18/et-0/0/5",
+          "b_id": "b.tp-9f648f02",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both unbundled ports uniquely connect to yqb-cr-14."
+        },
+        {
+          "a_id": "a.yqb-cr-14/et-0/0/5",
+          "b_id": "b.tp-77169572",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both unbundled ports uniquely connect to yyz-cr-18."
+        },
+        {
+          "a_id": "a.yhz-cr-08/et-1/0/2",
+          "b_id": "b.tp-2fe5d398",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06 outside a bundle."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/1",
+          "b_id": "b.tp-3a92311d",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yhz-cr-08 outside a bundle."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/1",
+          "b_id": "b.tp-5aafb184",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-cr-07."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/5",
+          "b_id": "b.tp-7a0f8e2d",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yvr-ar-11."
+        },
+        {
+          "a_id": "a.yeg-er-12/et-0/0/1",
+          "b_id": "b.tp-ce0949ac",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-00."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/4",
+          "b_id": "b.tp-5fab0df4",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-er-12."
+        },
+        {
+          "a_id": "a.yqb-er-21/et-0/0/1",
+          "b_id": "b.tp-30ae4178",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yul-ar-04."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-1/0/1",
+          "b_id": "b.tp-46226a08",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-er-21."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/2",
+          "b_id": "b.tp-7670ac83",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yyc-ar-13."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/4",
+          "b_id": "b.tp-b0ed3745",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yvr-ar-11."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/0",
+          "b_id": "b.tp-d6af3929",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yqb-cr-07 outside a bundle."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/6",
+          "b_id": "b.tp-e4c7a291",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yeg-ar-06 outside a bundle."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/1",
+          "b_id": "b.tp-e72b314d",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to yyz-cr-18 outside a bundle."
+        },
+        {
+          "a_id": "a.yyz-cr-18/et-1/0/1",
+          "b_id": "b.tp-2068cad6",
+          "verdict": "determined",
+          "reason": "The owning devices correspond, and both ports uniquely connect to ywg-ar-00 outside a bundle."
+        },
+        {
+          "a_id": "a.yqb-cr-07/ae4",
+          "b_id": "b.tp-817cdc42",
+          "verdict": "determined",
+          "reason": "Both are four-member bundles on corresponding yqb-cr-07 devices, linked to the four-member bundle on yhz-cr-08; this distinguishes them from the other bundle on the owner."
+        },
+        {
+          "a_id": "a.yqb-cr-07/ae7",
+          "b_id": "b.tp-26e8cb85",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yqb-cr-07 devices linked to yyz-cr-18, uniquely distinguishing this bundle."
+        },
+        {
+          "a_id": "a.yhz-cr-08/ae4",
+          "b_id": "b.tp-182056df",
+          "verdict": "determined",
+          "reason": "Both are four-member bundles on corresponding yhz-cr-08 devices linked to the four-member yqb-cr-07 bundle."
+        },
+        {
+          "a_id": "a.yhz-cr-08/ae9",
+          "b_id": "b.tp-337ad96f",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yhz-cr-08 devices linked to yqb-cr-14."
+        },
+        {
+          "a_id": "a.yyc-ar-13/ae2",
+          "b_id": "b.tp-cb0dc9cf",
+          "verdict": "determined",
+          "reason": "Both are the two-member bundle on corresponding yyc-ar-13 devices, with members linked to the yyz-cr-18 two-member bundle."
+        },
+        {
+          "a_id": "a.yqb-cr-14/ae4",
+          "b_id": "b.tp-b8020545",
+          "verdict": "determined",
+          "reason": "Both are the two-member bundle on corresponding yqb-cr-14 devices, linked to the yhz-cr-08 two-member bundle."
+        },
+        {
+          "a_id": "a.ywg-ar-15/ae3",
+          "b_id": "b.tp-c5f5a861",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding ywg-ar-15 devices whose members connect to yyz-cr-18."
+        },
+        {
+          "a_id": "a.ywg-ar-15/ae9",
+          "b_id": "b.tp-a174557c",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding ywg-ar-15 devices whose members connect to yvr-er-17."
+        },
+        {
+          "a_id": "a.yvr-er-17/ae2",
+          "b_id": "b.tp-f9ce6522",
+          "verdict": "determined",
+          "reason": "Both are the two-member bundle on corresponding yvr-er-17 devices, linked to the ywg-ar-15 bundle."
+        },
+        {
+          "a_id": "a.yyz-cr-18/ae2",
+          "b_id": "b.tp-28b735f4",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyz-cr-18 devices whose members connect to yqb-cr-07."
+        },
+        {
+          "a_id": "a.yyz-cr-18/ae8",
+          "b_id": "b.tp-c6ee14b1",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyz-cr-18 devices whose members connect to ywg-ar-15."
+        },
+        {
+          "a_id": "a.yyz-cr-18/ae12",
+          "b_id": "b.tp-d3ba4557",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyz-cr-18 devices whose members connect to yyc-ar-13."
+        }
+      ]
+    },
+    {
+      "step": "sequence",
+      "placement": "one_inert",
+      "by_anchor": 22,
+      "by_topology": 80,
+      "verified": true,
+      "verifier_rejections": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 48,
+      "left_open_lookalikes": 48,
+      "open_a_lookalikes": 48,
+      "device_questions": 0
+    }
+  ]
+}

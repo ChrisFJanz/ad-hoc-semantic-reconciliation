@@ -1,0 +1,408 @@
+Translation or Binding, Part 3: Which router are we talking about?
+Transcript of the narration.
+
+
+TRANSLATION OR BINDING
+
+Two systems have to work together. Each describes the world in its own model. To work together, the
+two models have to be reconciled: a set of correspondences between them.
+
+For each correspondence, there is one useful question. Where is the information that would settle
+it?
+
+Sometimes it is in the two models. Then the correspondence is a translation. It can be settled once,
+in advance, and turned into a translator.
+
+Sometimes it is found only in the systems behind the models. Then the correspondence is a binding.
+It takes a fact, a frame, a decision, or an outcome, that only a system can supply.
+
+
+TWO EXAMPLES
+
+Two examples, in principle.
+
+First: one network, and two different models of it. Both models describe the same space: the same
+devices, the same ports, the same connections. They differ in naming, and in how much detail each
+one spells out. Every correspondence between their terms can be settled from the two models. For the
+terms, this is a translation problem.
+
+Second: a business support system, meeting an operations support system. The business system
+expresses an intent. The operations system speaks service models. An intent is not a service model.
+Which service meets the intent, and with which options, is written in neither model. It is a
+decision, and the operations system makes it. So some of the correspondences here can only be
+bindings.
+
+This video takes the first example, and runs it. Agent A holds an interfaces view of the network.
+Agent B holds a topology view of the same network. Both are built from published YANG models. The
+question is whether the two agents mean the same thing, down to the individual router and port. At
+that level, as we will see, translation is not enough.
+
+
+THE METHOD
+
+The method has five steps.
+
+Lift: each model is lifted into a semantic model, which states explicitly what the model says or
+implies. Anchor: both lifted models are anchored to a thin shared reference. Reconcile: the
+correspondences are settled. Generate: a translator is produced for each system. Carry: instances
+cross, through the translators.
+
+We follow the five steps on the two network models.
+
+
+THE SITUATION
+
+Here is the situation. One network. Two agents, each holding its own model of that network.
+
+Agent A, on the left, has an interfaces view: devices, their interfaces, and the neighbour seen on
+each port. It follows the IETF interface and IP models, RFC 8343 and RFC 8344, with neighbour data from LLDP, the link layer discovery protocol. Agent B, on the
+right, has a topology view: nodes, termination points, and links. It follows the IETF network
+topology model, RFC 8345, with its layer two and layer three extensions, RFC 8944 and RFC 8346.
+
+The two models describe the same things. So at the level of the models, this is a translation case.
+
+
+LIFT
+
+Lift. Agent A's model has eleven concepts: devices, interfaces, aggregate interfaces, the neighbour
+seen on a port. Agent B's model has twelve: nodes, termination points, links.
+
+Each agent lifts its own model. For every concept it states a meaning, and gives an example, looking
+only at its own side.
+
+The lift also states what a value needs in order to be used. Agent A records(v) a speed, in bits per
+second. Agent B records(v) a rate, in kilobits per second. The unit is context, and the lift makes
+it explicit.
+
+
+ANCHOR
+
+Anchor. The two lifted models are anchored to a thin shared reference: a short common vocabulary,
+that both sides can consult. Here it has twelve entries.
+
+An entry is more than a word. It has a label, a class, a definition, an example, and synonyms. Here
+is one in full: physical port. One physical attachment point on a device, where exactly one cable or
+fibre ends. The reference is thin because it stops there. It names no instance, and it records(v) no
+relationships.
+
+Each agent anchors its own concepts to these entries. Agent A's interface, and agent B's termination
+point, both anchor to physical port.
+
+Such a reference can be supplied from outside, standardized or otherwise, or the agents can
+construct it themselves. On these two models, either route settles every correspondence.
+
+
+RECONCILE
+
+Reconcile. The two agents question each other's concepts. Agent B asks about agent A's interface: is
+this one physical port, or can it also be a logical interface? Agent A answers: one physical
+interface, where exactly one cable ends.
+
+Agent A asks whether agent B's node is one managed router, or something more general. Agent B
+answers: a network device, as represented in the topology.
+
+Then a proposal, with its reason. Termination point corresponds to interface, because both denote a
+physical port where a link terminates.
+
+Here is the outcome. Ten correspondences are settled. Device with node. Interface with termination
+point. Speed with rate.
+
+Three look-alikes are refused. An interface is not an interface name. An aggregate interface is not
+a link. And an interface index is not a termination point identifier.
+
+The models also differ in structure. Agent B has link objects. Agent A has none: it sees a neighbour
+on a port. Both mean a physical connection, and they are matched as such.
+
+Three concepts have no counterpart on the other side, and are left unmatched.
+
+
+GENERATE
+
+Generate. From the settled correspondences, a translator is produced for each side. For each pair of
+terms it records(v) how a value is rewritten. An address is carried unchanged. A speed in bits per
+second becomes a rate in kilobits per second.
+
+The translator is settled once, and applied afterwards with no further judgment.
+
+That completes the translation between the models. But the translator carries instances. It does
+not, by itself, match them.
+
+
+INSTANCE TERMS
+
+Each agent has named its own routers and ports. These are individuals that each system names
+independently, for the same real thing. Neither model says which name answers to which.
+
+Two questions place this case on a map. Does a correspondence relate concepts, or individuals? And
+is it settled from the models, or only from the systems?
+
+The correspondences between the two models relate concepts, and all ten were settled from the
+models. That is translation. Nothing in this case needed a standing binding: a judgment made once,
+and then recorded.
+
+The routers and ports are individuals, and they live in the world. What settles a match between them
+is in the systems, and in the network itself. So matching them is a binding. The method calls it
+instance matching.
+
+It is made by an identity anchor, by asking the system that holds the fact, or by a check against
+the network. And one caution applies. A round trip through the translators does not show that the
+right individual was chosen.
+
+The rest of this video shows it done.
+
+
+THE QUESTION
+
+An experiment proposed on an IETF mailing list would have to answer one question, in our scenario.
+Which router are we talking about?
+
+Agent A knows a router by a device name, and a port by an interface name. Agent B knows the same
+router as a node, and the same port as a termination point, each with an identifier of its own. They
+are the same router and the same port, and nothing in either name connects them.
+
+Identifiers such as an interface name, or an interface index, do not help. Each is unique only
+within one device, and each belongs to one agent's model.
+
+So translating the terms does not tell either agent which individual the other one means.
+
+
+WHY NAMES DO NOT HELP
+
+Names do not help. In agent A's graph, each router has its own name, and every router has ports with
+the same interface names. An interface name identifies a port only together with its router.
+
+Agent B's identifiers are opaque. No name on one side appears on the other, so there is nothing to
+match by name.
+
+Names mislead even when both agents use the same model, and only the device names differ. In that
+variant, thirty-four pairs share a name, and are different ports. The agents took none of them. That
+is the point behind the question from the mailing list. The same identifier on both sides need not
+refer to the same component.
+
+And some components look identical in every recorded attribute. Two parallel wires in one bundle,
+between the same two routers, at the same speed. Nothing in either graph tells them apart.
+
+
+ASK AND ANSWER
+
+Now the two agents talk about individuals. Agent A asks agent B to describe one of its nodes: its
+attributes, what it owns, and its neighbours. Agent B answers from its own graph: a router
+identifier, two termination points, their addresses, and where each connects.
+
+Agent B asks the same of agent A. Agent A answers: a router identifier, a bundle with two member
+ports, and the ports they face.
+
+Neither agent sees the other's graph. Evidence crosses only in these answers. This whole exchange is
+one conversation between the two agents, about a given set of individuals. It ends when neither has
+anything left to ask, propose, or test.
+
+
+SETTLED BY AN IDENTITY ANCHOR
+
+Those answers show something useful. Each side holds router identifiers, and IP addresses. The model
+step has already settled that these terms correspond, and that their values are carried unchanged.
+
+So take agent A's port with the address ten, zero, zero, five. One of agent B's termination points
+carries the same address, and no other does. That is a match. Another carries a different address.
+That is not a match.
+
+This is an identity anchor: a value that occurs once on each side identifies one individual.
+Settling it takes only a comparison of values. It takes no conversation, and no judgment.
+
+In the small network, thirty-eight of the fifty individuals are settled in this way: the routers, by
+router identifier, and every port or bundle that carries an address. In a network three times the
+size, one hundred and twenty-two of one hundred and fifty.
+
+
+NARROWED BY TOPOLOGY
+
+Twelve ports are left. They carry no address. They are the member ports of the bundles.
+
+Take two of them, in agent A's graph. Both belong to one bundle, on one router, and that bundle is
+already settled, by its address. On agent B's side, the matching bundle has two member termination
+points.
+
+So topology narrows the choice. Of agent B's thirty-six termination points, only these two can
+answer to agent A's two ports.
+
+But topology cannot choose between them. The two wires run between the same two routers, in the same
+bundle, at the same speed. Swap the two matches, and every recorded fact still fits. These are look-
+alikes.
+
+
+WHERE A WRONG MATCH COMES FROM
+
+In a larger network, in runs where no check was required, something else shows up. One agent
+proposes a match for a pair of look-alike ports without checking it, at full confidence. The other
+agent agrees. Both are wrong.
+
+This is more than a slip. Nothing in the first agent's records(n) favours one assignment over the
+other, so its choice is arbitrary. And the swapped assignment fits everything that the second agent
+holds, so it agrees. Agreement cannot settle what the records(n) leave open.
+
+But the records(n) do show where this can happen. Each agent can work out, from its own graph and
+before any conversation, which of its individuals no recorded fact tells apart.
+
+So the protocol sets one rule. A match that involves a look-alike counts only when it has been
+checked against the network. Every other match stands on the records(n).
+
+In the small network, twelve of the fifty matches need that check. In the network of one hundred and
+fifty individuals, twenty-eight.
+
+
+WHAT A WRONG MATCH COSTS
+
+Here is what a wrong match costs. This is a run in which agreement was allowed to stand, and four
+matches were wrong. Whatever one agent says about one of those ports, the other agent takes to be
+about a different port.
+
+Of one hundred and twenty-eight components that an agent can name, four are understood as the wrong
+component. And the round trip returns the original for all one hundred and twenty-eight.
+
+A round trip cannot see a wrong individual. Only a check against the network itself can.
+
+
+THE VIRTUAL EXPERIMENT
+
+Take the twelve look-alike ports of the small network. Asking each other does not help, because
+neither agent holds a fact that distinguishes them.
+
+So the agents run an experiment. It is a virtual experiment: one done on a digital twin of the
+network. On the twin, a component can be operated without disturbing anything. One candidate match
+is operated: through agent A's handle, and through agent B's. A different component responds on each
+side. These two are not the same port. So it must be the other one.
+
+The agents test the other candidates, and the digital twin confirms the right ones. The far ends
+follow through the links.
+
+All fifty individuals are matched.
+
+
+A LIVE OBSERVATION
+
+Confirming a match does not have to mean operating anything. On a live* network, taking a port out
+of service to find out which port it is would be disruptive. A live* observation avoids that.
+
+It reads the data that the running network has already recorded for the component: its traffic
+counters, say, over the same intervals. It reads them through agent A's handle, and through agent
+B's. If the two readings are the same, both handles lead to one component. If they differ, the two
+are look-alikes.
+
+Nothing is provisioned, nothing is changed, and nothing is taken out of service. With live*
+observations in place of virtual experiments, the agents again match every individual correctly, in
+every run.
+
+So there are two ways to check a match against the network. A virtual experiment, on a digital twin,
+may operate the component. A live* observation, on the running network, only reads what is already
+recorded. And where a device can report an identifier of its own, such as a hardware address, the
+agents can ask it. In the recorded runs, they often did so before proposing a match.
+
+
+WHEN IDENTIFIERS ARE SCARCE
+
+What if the identifiers are scarce? Take the same network of one hundred and fifty individuals, and
+withhold every IP address from both agents.
+
+Now only the twenty-two routers are settled by an identifier. Topology has to do real work. Eighty
+matches are fixed by it: each one relative to the routers, and to what is already settled. Those
+matches stand on the records(n), with no check.
+
+Forty-eight individuals are look-alikes, and each of their matches is checked against the network.
+
+All one hundred and fifty are matched correctly. So the rule holds where it matters: check only what
+the records(n) cannot tell apart.
+
+
+SCALE
+
+A conversation between the two agents is bounded. Each agent must keep in view every individual
+under discussion, and everything said so far. So one conversation cannot hold a large network.
+
+Take a network of ninety-six routers, and six hundred and fifty-eight individuals. The identifiers
+come first. Five hundred and forty-two individuals are settled by identifier, with no conversation
+at all.
+
+That leaves the one hundred and sixteen look-alikes. The agents take them a group of neighbouring
+devices at a time, in conversations of bounded size, and carry what is settled into the next. Here,
+two conversations are enough.
+
+In six runs out of six, all six hundred and fifty-eight are matched correctly: three with virtual
+experiments on the digital twin, and three with live* observations.
+
+Compare the method before it was tightened, when every match went through conversation, and every
+one was checked. That took twelve conversations, about five hundred and eighty checks, and twenty-
+two minutes. Now it takes two conversations, about one hundred and forty checks, and five minutes.
+
+With addresses withheld, only the ninety-six routers are settled by identifier, so far more is left
+for conversation. It takes eleven conversations, and about two hundred and fifty checks. The result
+holds: all six hundred and fifty-eight, in three runs out of three.
+
+So the conversations stay the same size. What grows with the network is their number, and only for
+what the identifiers leave open.
+
+
+CARRY
+
+Carry. Agent B observes a rate on one of its links. The translators carry that observation to agent
+A.
+
+The term is translated: a rate becomes a speed. The unit is converted: kilobits per second become
+bits per second. And the individual is matched: agent B's link becomes the two ports that agent A
+knows at its ends. Agent A's own records(n) say the same.
+
+Every one of the one hundred and eighty-six observations that agent B holds arrives in agreement
+with agent A's own records(n). And every component that one agent can name is the same component for
+the other.
+
+It makes no difference whether what crosses is a report, or an instruction. Either names a
+component, and either arrives correctly only if the individuals are matched.
+
+
+THE SEQUENCE, BY PLACEMENT
+
+The method applies its tools in a fixed sequence. How far it gets depends on where the cognition is.
+Take three placements. Both sides inert: one reasoner, reading two static records(n). One side
+inert. And both sides cognitive: the two agents we have followed.
+
+Some steps need only the records(n), so every placement has them: the identity anchor, topology, and
+the detection of look-alikes.
+
+One more step belongs with them: a second, independent reading of each match. With two agents it
+comes by construction, because a match proposed by one agent is read by the other, against its own
+records(n). A single reasoner has no partner, so it needs a separate verification pass. Without one,
+it can state the right basis for two matches and still cross them. In the recorded runs, that
+happened, and the second reading caught it.
+
+The next two steps need a live* system. Asking the other side takes an agent there. Asking a device
+for an identifier takes a live* side, and it settles a match only when both sides can ask.
+
+And a check against the network, by an experiment on a digital twin or by a live* observation, needs
+a handle on the component from both sides. Only the two agents have it.
+
+The recorded runs show the consequence. In the small network, an inert placement matches thirty-
+eight of fifty: exactly what the identifiers settle. It leaves all twelve look-alikes open, and it
+guesses none of them. With one side live*, the result is the same. The two agents match all fifty.
+In the network of one hundred and fifty, the pattern repeats: one hundred and twenty-two, against
+all one hundred and fifty.
+
+With addresses withheld, the single reasoner still does the topology step correctly: thirty-four of
+fifty, and about one hundred and two of one hundred and fifty, with none wrong. Again, only the two
+agents close the look-alikes.
+
+One condition should be stated. Here, the inert side's record(n) carries no identifier that only a
+device can report, such as a hardware address. If it published them, they would be identity anchors,
+and the first step would settle those matches.
+
+
+BACK TO THE MAP
+
+So the method reaches all the way down. The models translate. The individuals are bound: by identity
+anchor, by topology, and, where the records(n) cannot tell two apart, by a check against the
+network. And both agents know in advance which matches need that check.
+
+What this needs is a way to check: a digital twin, for a virtual experiment, or the live* network,
+for an observation of what it has recorded. What it leaves for other work is whether an agent's data
+is current, and whether its claims can be trusted.
+
+Which router are we talking about? After this, both agents can answer. And they give the same
+answer.

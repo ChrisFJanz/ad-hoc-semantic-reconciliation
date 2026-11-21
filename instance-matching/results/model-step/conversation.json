@@ -1,0 +1,718 @@
+{
+  "case": "config_ipnet",
+  "model": "gpt-5.6-sol",
+  "reference": true,
+  "confirmed": [
+    [
+      "a.device",
+      "b.node"
+    ],
+    [
+      "a.mac",
+      "b.mac"
+    ],
+    [
+      "a.nbr",
+      "b.link"
+    ],
+    [
+      "a.agg",
+      "b.lag"
+    ],
+    [
+      "a.ip",
+      "b.ip"
+    ],
+    [
+      "a.if",
+      "b.tp"
+    ],
+    [
+      "a.ifname",
+      "b.ifname"
+    ],
+    [
+      "a.rid",
+      "b.rid"
+    ],
+    [
+      "a.lower",
+      "b.member"
+    ],
+    [
+      "a.speed",
+      "b.rate"
+    ]
+  ],
+  "residual_a": [
+    "a.ifindex"
+  ],
+  "residual_b": [
+    "b.network",
+    "b.tpid"
+  ],
+  "work": {
+    "candidates": 10,
+    "turns": 6,
+    "bilateral_checks": 10,
+    "experiments": 0
+  },
+  "effort": {
+    "total_tokens": 42017,
+    "reasoning_tokens": 2327,
+    "latency_s": 75.36,
+    "model": "gpt-5.6-sol"
+  },
+  "transcript": [
+    {
+      "from": "A",
+      "answers": [],
+      "questions": [
+        {
+          "their_id": "b.network",
+          "ask": "What does this container denote, and what are its key relations to nodes or links? Give an example."
+        },
+        {
+          "their_id": "b.node",
+          "ask": "Does this denote one managed router/system, or a more general topology node? Give a gloss, example, and key relations."
+        },
+        {
+          "their_id": "b.tp",
+          "ask": "Does this denote a physical Ethernet port where one cable terminates, or a generic/logical termination point? State its scope and identity conditions."
+        },
+        {
+          "their_id": "b.lag",
+          "ask": "Does this denote a logical bundled interface composed of physical member interfaces? Give an example and relations."
+        },
+        {
+          "their_id": "b.member",
+          "ask": "What are the source and target of this relation, and does it specifically express physical interfaces underlying a LAG?"
+        },
+        {
+          "their_id": "b.link",
+          "ask": "Does this represent an actual physical connection, an LLDP-learned adjacency, or a more general logical topology link? Give endpoints and an example."
+        },
+        {
+          "their_id": "b.rate",
+          "ask": "Is this nominal interface bandwidth in bits per second, measured traffic rate, or another rate? What entities can bear it?"
+        },
+        {
+          "their_id": "b.mac",
+          "ask": "Is this specifically the hardware/MAC address of a physical interface? Give its domain and example."
+        },
+        {
+          "their_id": "b.ip",
+          "ask": "Does this denote an IPv4 address configured on an interface, and can its bearer be physical or logical?"
+        },
+        {
+          "their_id": "b.rid",
+          "ask": "Is this the routing identifier assigned to a node/device? Give an example and relations."
+        },
+        {
+          "their_id": "b.ifname",
+          "ask": "Is this the device-assigned interface name whose uniqueness is only node-local? Give an example."
+        },
+        {
+          "their_id": "b.tpid",
+          "ask": "What exactly is a tp-id: a device-local integer such as SNMP ifIndex, a topology-scoped opaque identifier, an interface name, or something else? State uniqueness scope and example."
+        }
+      ],
+      "proposals": [],
+      "ratifications": [],
+      "experiments": [],
+      "no_counterpart": [],
+      "done": false
+    },
+    {
+      "from": "B",
+      "answers": [
+        {
+          "my_id": "b.network",
+          "gloss": "One managed topology: the container comprising the nodes and links managed together.",
+          "example": "net-5fd4f0fa",
+          "relations": "Contains/organizes b.node and b.link objects; b.node is explicitly part-of this network."
+        },
+        {
+          "my_id": "b.node",
+          "gloss": "A network device as represented in the topology; it is not restricted by the model to routers only.",
+          "example": "node-0d30dd9a",
+          "relations": "Part-of b.network; bears b.rid and hosts b.tp and b.lag termination points."
+        },
+        {
+          "my_id": "b.tp",
+          "gloss": "A non-LAG termination point on a node representing one physical port where a link can end. Its identity is the topology TP object/opaque TP identifier, not its interface name, MAC address, or ifIndex.",
+          "example": "tp-d4c9f43e on node-0d30dd9a",
+          "relations": "On b.node; can terminate b.link; can be a target of b.member; bears b.mac, b.ip, and b.ifname."
+        },
+        {
+          "my_id": "b.lag",
+          "gloss": "A logical bundled termination point whose lag flag is true, combining multiple physical termination points on the same node so they act as one.",
+          "example": "tp-9d33f163 on node-0d30dd9a, composed over two physical member TPs",
+          "relations": "On b.node and has-member b.tp through b.member."
+        },
+        {
+          "my_id": "b.member",
+          "gloss": "The membership reference from a LAG termination point to each physical termination point underlying that bundle.",
+          "example": "tp-9d33f163 -> tp-b27a3a3f and tp-b3e678d5",
+          "relations": "Source is b.lag; target is b.tp; specifically expresses physical-port membership in a LAG."
+        },
+        {
+          "my_id": "b.link",
+          "gloss": "An actual physical connection represented as a directed source-to-destination adjacency between termination points on different nodes; it is not merely LLDP remote-system descriptive data.",
+          "example": "link-749b0c70 from tp-5a4d1e42 to tp-e489acd1",
+          "relations": "Has source and destination b.tp endpoints and bears b.rate."
+        },
+        {
+          "my_id": "b.rate",
+          "gloss": "The nominal bandwidth of a link in kilobits per second, not a measured traffic rate.",
+          "example": "100000000 Kbps on link-749b0c70",
+          "relations": "Attribute of b.link, rather than directly of b.tp or b.node."
+        },
+        {
+          "my_id": "b.mac",
+          "gloss": "The hardware/MAC address of a physical, non-LAG termination point.",
+          "example": "02:33:5f:97:3d:aa",
+          "relations": "Identifier of b.tp."
+        },
+        {
+          "my_id": "b.ip",
+          "gloss": "An IP address held at layer 3 by a b.tp; in this model b.tp is the physical, non-LAG termination-point concept.",
+          "example": "10.0.0.24 on tp-d4c9f43e",
+          "relations": "Address on b.tp."
+        },
+        {
+          "my_id": "b.rid",
+          "gloss": "The routing identifier assigned to a topology node/device.",
+          "example": "10.255.0.3",
+          "relations": "Identifier of b.node."
+        },
+        {
+          "my_id": "b.ifname",
+          "gloss": "The interface name supplied by the device for the interface represented by a termination point. It is understood in the context of that device/node rather than as a network-global identifier.",
+          "example": "et-0/0/1; a bundled interface may be named ae3",
+          "relations": "Identifier of b.tp."
+        },
+        {
+          "my_id": "b.tpid",
+          "gloss": "An opaque identifier for a termination-point object, not a device-local integer ifIndex and not the device-assigned interface name. The model does not state a stronger uniqueness scope, but examples function as topology object IDs.",
+          "example": "tp-d4c9f43e",
+          "relations": "Identifier of b.tp; it has no shared-reference binding."
+        }
+      ],
+      "questions": [
+        {
+          "their_id": "a.device",
+          "ask": "Does this denote the managed network device/system itself or any node in a topology? Give its relations and shared reference binding, if any."
+        },
+        {
+          "their_id": "a.if",
+          "ask": "Is this specifically one physical port, or can it also be a logical interface such as a LAG? What identifies it, what can terminate on it, and what is its shared reference binding?"
+        },
+        {
+          "their_id": "a.agg",
+          "ask": "Is this a LAG/link-bundle interface composed of physical interfaces? Give its membership relations and shared reference binding."
+        },
+        {
+          "their_id": "a.lower",
+          "ask": "What are the source and target of this relation? Does it specifically represent physical member interfaces underlying a LAG, or generic interface layering? Give its shared reference binding."
+        },
+        {
+          "their_id": "a.nbr",
+          "ask": "Does this denote LLDP remote-system observations, an actual physical cable/connection, or a topology adjacency inferred from discovery? State its endpoints, example, and shared reference binding."
+        },
+        {
+          "their_id": "a.speed",
+          "ask": "Is this nominal interface speed or physical-link bandwidth, in what units, and which entity bears it? Give its shared reference binding."
+        },
+        {
+          "their_id": "a.mac",
+          "ask": "Is this the hardware address of a physical interface, and can logical interfaces bear it? Give its shared reference binding."
+        },
+        {
+          "their_id": "a.ip",
+          "ask": "Is this an IPv4 address configured on an interface, and may that interface be physical or logical? Give its shared reference binding."
+        },
+        {
+          "their_id": "a.rid",
+          "ask": "What entity bears this routing identifier, and what is its shared reference binding?"
+        },
+        {
+          "their_id": "a.ifname",
+          "ask": "Is this the device-assigned, device-local interface name for both physical and logical interfaces? Give its shared reference binding."
+        },
+        {
+          "their_id": "a.ifindex",
+          "ask": "Is this specifically the device-local SNMP ifIndex integer, or some other interface identifier? State its uniqueness scope and shared reference binding."
+        }
+      ],
+      "proposals": [],
+      "ratifications": [],
+      "experiments": [],
+      "no_counterpart": [],
+      "done": false
+    },
+    {
+      "from": "A",
+      "answers": [
+        {
+          "my_id": "a.device",
+          "gloss": "One managed router/system whose own interfaces and LLDP observations are reported, rather than an arbitrary topology container.",
+          "example": "ywg-cr-00",
+          "relations": "Hosts a.if and a.agg; bears a.rid. Shared reference: network-device."
+        },
+        {
+          "my_id": "a.if",
+          "gloss": "One physical Ethernet interface where exactly one cable ends; it excludes logical LAG interfaces. Its device-assigned name and integer index are only device-local identifiers.",
+          "example": "et-0/0/1 on ywg-cr-00",
+          "relations": "On a.device; may have a.nbr, a.speed, a.mac, a.ip, a.ifname, and a.ifindex; may underlie a.agg through a.lower. Shared reference: physical-port."
+        },
+        {
+          "my_id": "a.agg",
+          "gloss": "A logical LAG/link-bundle interface combining multiple physical interfaces of the same device so they act as one.",
+          "example": "ae3 on ywg-cr-00 over et-0/0/1 and et-0/0/2",
+          "relations": "On a.device; layered over member a.if interfaces through a.lower. Shared reference: link-bundle."
+        },
+        {
+          "my_id": "a.lower",
+          "gloss": "The bundle-membership/layering relation from an aggregate interface to each physical interface underneath it; it is specifically used here for LAG membership.",
+          "example": "ae3 -> et-0/0/1 and et-0/0/2",
+          "relations": "Source is a.agg and target is a.if. Shared reference: bundle-membership."
+        },
+        {
+          "my_id": "a.nbr",
+          "gloss": "An LLDP-learned adjacency describing the far system and far port at the other end of a local physical interface's cable.",
+          "example": "et-0/0/1 on ywg-cr-00 sees et-0/0/2 on yxe-cr-03",
+          "relations": "Learned on local a.if; identifies the neighbouring system and port. Its representation is discovery data, although its bound reference is physical-connection."
+        },
+        {
+          "my_id": "a.speed",
+          "gloss": "The nominal bandwidth of an interface, not measured traffic throughput, expressed in bits per second.",
+          "example": "100000000000 bits/second on et-0/0/1",
+          "relations": "Attribute of a.if. Shared reference: nominal-speed."
+        },
+        {
+          "my_id": "a.mac",
+          "gloss": "The layer-2 hardware/MAC address of a physical interface.",
+          "example": "02:33:5f:97:3d:aa",
+          "relations": "Identifier of a.if; the model does not assign this concept to a.agg. Shared reference: hardware-address."
+        },
+        {
+          "my_id": "a.ip",
+          "gloss": "An IPv4 address configured on an interface; the concept can apply to a logical aggregate interface as illustrated by ae3, as well as to an interface generally.",
+          "example": "10.0.0.7 on ae3",
+          "relations": "Address on an interface. Shared reference: ip-address."
+        },
+        {
+          "my_id": "a.rid",
+          "gloss": "The routing identifier of a managed device.",
+          "example": "10.255.0.3 for ywg-cr-00",
+          "relations": "Identifier of a.device. Shared reference: router-id."
+        },
+        {
+          "my_id": "a.ifname",
+          "gloss": "The interface name assigned by the device, unique only within that device; it covers physical names such as et-0/0/1 and logical aggregate names such as ae3.",
+          "example": "et-0/0/1, or ae3",
+          "relations": "Identifier of an interface in the context of its a.device. Shared reference: interface-name."
+        },
+        {
+          "my_id": "a.ifindex",
+          "gloss": "An arbitrary device-local integer interface index, specifically the SNMP-style ifIndex rather than an opaque topology object ID.",
+          "example": "707 for et-0/0/1 on ywg-cr-00",
+          "relations": "Identifier of an interface, unique only within its a.device. Shared reference: interface-index."
+        }
+      ],
+      "questions": [
+        {
+          "their_id": "b.node",
+          "ask": "What is the exact shared-reference entry bound to b.node, or is it unbound?"
+        },
+        {
+          "their_id": "b.tp",
+          "ask": "What is the exact shared-reference entry bound to b.tp, or is it unbound?"
+        },
+        {
+          "their_id": "b.lag",
+          "ask": "What is the exact shared-reference entry bound to b.lag, or is it unbound?"
+        },
+        {
+          "their_id": "b.member",
+          "ask": "What is the exact shared-reference entry bound to b.member, or is it unbound?"
+        },
+        {
+          "their_id": "b.link",
+          "ask": "What is the exact shared-reference entry bound to b.link, or is it unbound?"
+        },
+        {
+          "their_id": "b.rate",
+          "ask": "What is the exact shared-reference entry bound to b.rate, or is it unbound?"
+        },
+        {
+          "their_id": "b.mac",
+          "ask": "What is the exact shared-reference entry bound to b.mac, or is it unbound?"
+        },
+        {
+          "their_id": "b.ip",
+          "ask": "What is the exact shared-reference entry bound to b.ip, or is it unbound?"
+        },
+        {
+          "their_id": "b.rid",
+          "ask": "What is the exact shared-reference entry bound to b.rid, or is it unbound?"
+        },
+        {
+          "their_id": "b.ifname",
+          "ask": "What is the exact shared-reference entry bound to b.ifname, or is it unbound?"
+        }
+      ],
+      "proposals": [],
+      "ratifications": [],
+      "experiments": [],
+      "no_counterpart": [
+        "a.ifindex"
+      ],
+      "done": false
+    },
+    {
+      "from": "B",
+      "answers": [
+        {
+          "my_id": "b.node",
+          "gloss": "A network device as represented as a node in the managed topology. Exact shared-reference entry: network-device.",
+          "example": "node-0d30dd9a",
+          "relations": "Part of b.network; hosts termination points and bears b.rid."
+        },
+        {
+          "my_id": "b.tp",
+          "gloss": "A non-LAG physical termination point representing one physical port. Exact shared-reference entry: physical-port.",
+          "example": "tp-d4c9f43e on node-0d30dd9a",
+          "relations": "On b.node; terminates b.link; may be a member of b.lag and bear MAC, IP, and interface-name data."
+        },
+        {
+          "my_id": "b.lag",
+          "gloss": "A logical bundled termination point combining physical member termination points. Exact shared-reference entry: link-bundle.",
+          "example": "tp-9d33f163 over two physical member TPs",
+          "relations": "On b.node; has b.tp members through b.member."
+        },
+        {
+          "my_id": "b.member",
+          "gloss": "The relation from a LAG termination point to each physical termination point belonging to it. Exact shared-reference entry: bundle-membership.",
+          "example": "tp-9d33f163 -> tp-b27a3a3f",
+          "relations": "From b.lag to b.tp."
+        },
+        {
+          "my_id": "b.link",
+          "gloss": "A represented physical connection between termination points on different nodes. Exact shared-reference entry: physical-connection.",
+          "example": "link-749b0c70 from tp-5a4d1e42 to tp-e489acd1",
+          "relations": "Has source and destination b.tp endpoints and bears b.rate."
+        },
+        {
+          "my_id": "b.rate",
+          "gloss": "Nominal link bandwidth in kilobits per second. Exact shared-reference entry: nominal-speed.",
+          "example": "100000000 Kbps on link-749b0c70",
+          "relations": "Attribute of b.link."
+        },
+        {
+          "my_id": "b.mac",
+          "gloss": "The hardware/MAC address of a physical termination point. Exact shared-reference entry: hardware-address.",
+          "example": "02:33:5f:97:3d:aa",
+          "relations": "Identifier of b.tp."
+        },
+        {
+          "my_id": "b.ip",
+          "gloss": "An IP address held by a termination point at layer 3. Exact shared-reference entry: ip-address.",
+          "example": "10.0.0.24 on tp-d4c9f43e",
+          "relations": "Address on b.tp."
+        },
+        {
+          "my_id": "b.rid",
+          "gloss": "The routing identifier of a topology node/device. Exact shared-reference entry: router-id.",
+          "example": "10.255.0.3",
+          "relations": "Identifier of b.node."
+        },
+        {
+          "my_id": "b.ifname",
+          "gloss": "The device-assigned name of the interface represented by a termination point. Exact shared-reference entry: interface-name.",
+          "example": "et-0/0/1 or ae3",
+          "relations": "Identifier of a termination point/interface in its node context."
+        }
+      ],
+      "questions": [],
+      "proposals": [
+        {
+          "my_id": "b.node",
+          "their_id": "a.device",
+          "confidence": 1.0,
+          "rationale": "Both are bound to the same shared reference, network-device."
+        },
+        {
+          "my_id": "b.tp",
+          "their_id": "a.if",
+          "confidence": 1.0,
+          "rationale": "Both are bound to physical-port and denote a non-LAG physical interface where a cable/link terminates."
+        },
+        {
+          "my_id": "b.lag",
+          "their_id": "a.agg",
+          "confidence": 1.0,
+          "rationale": "Both are bound to link-bundle and denote a logical LAG composed of physical interfaces."
+        },
+        {
+          "my_id": "b.member",
+          "their_id": "a.lower",
+          "confidence": 1.0,
+          "rationale": "Both are bound to bundle-membership and relate a LAG to each underlying physical interface."
+        },
+        {
+          "my_id": "b.link",
+          "their_id": "a.nbr",
+          "confidence": 1.0,
+          "rationale": "Both are bound to physical-connection. Although A represents it as LLDP-learned remote-system data and B as a topology link, the identical shared reference settles the correspondence."
+        },
+        {
+          "my_id": "b.rate",
+          "their_id": "a.speed",
+          "confidence": 1.0,
+          "rationale": "Both are bound to nominal-speed and denote nominal bandwidth rather than measured traffic rate; their units and immediate modeled bearer differ."
+        },
+        {
+          "my_id": "b.mac",
+          "their_id": "a.mac",
+          "confidence": 1.0,
+          "rationale": "Both are bound to hardware-address and identify a physical interface."
+        },
+        {
+          "my_id": "b.ip",
+          "their_id": "a.ip",
+          "confidence": 1.0,
+          "rationale": "Both are bound to ip-address. A explicitly permits aggregate bearers while B attaches it to b.tp, but the common reference settles the concept correspondence."
+        },
+        {
+          "my_id": "b.rid",
+          "their_id": "a.rid",
+          "confidence": 1.0,
+          "rationale": "Both are bound to router-id and identify the managed node/device for routing."
+        },
+        {
+          "my_id": "b.ifname",
+          "their_id": "a.ifname",
+          "confidence": 1.0,
+          "rationale": "Both are bound to interface-name and denote the device-assigned, device-contextual interface name."
+        }
+      ],
+      "ratifications": [],
+      "experiments": [],
+      "no_counterpart": [
+        "b.network",
+        "b.tpid"
+      ],
+      "done": true
+    },
+    {
+      "from": "A",
+      "answers": [],
+      "questions": [],
+      "proposals": [
+        {
+          "my_id": "a.device",
+          "their_id": "b.node",
+          "confidence": 1.0,
+          "rationale": "Both are bound to the shared reference network-device and denote the managed network device represented as a node."
+        },
+        {
+          "my_id": "a.if",
+          "their_id": "b.tp",
+          "confidence": 1.0,
+          "rationale": "Both are bound to physical-port and denote a non-LAG physical interface where a cable or physical link terminates."
+        },
+        {
+          "my_id": "a.agg",
+          "their_id": "b.lag",
+          "confidence": 1.0,
+          "rationale": "Both are bound to link-bundle and denote a logical aggregate/LAG composed of physical member interfaces."
+        },
+        {
+          "my_id": "a.lower",
+          "their_id": "b.member",
+          "confidence": 1.0,
+          "rationale": "Both are bound to bundle-membership and relate a LAG to its underlying physical member interfaces."
+        },
+        {
+          "my_id": "a.nbr",
+          "their_id": "b.link",
+          "confidence": 1.0,
+          "rationale": "Both are bound to physical-connection, which settles correspondence despite A encoding LLDP-learned far-end data and B encoding a topology link."
+        },
+        {
+          "my_id": "a.speed",
+          "their_id": "b.rate",
+          "confidence": 1.0,
+          "rationale": "Both are bound to nominal-speed and denote nominal bandwidth rather than measured traffic rate; units and immediate modeled bearer differ."
+        },
+        {
+          "my_id": "a.mac",
+          "their_id": "b.mac",
+          "confidence": 1.0,
+          "rationale": "Both are bound to hardware-address and denote the MAC address of a physical interface."
+        },
+        {
+          "my_id": "a.ip",
+          "their_id": "b.ip",
+          "confidence": 1.0,
+          "rationale": "Both are bound to ip-address. Their modeled bearer coverage differs, but the common shared reference settles correspondence."
+        },
+        {
+          "my_id": "a.rid",
+          "their_id": "b.rid",
+          "confidence": 1.0,
+          "rationale": "Both are bound to router-id and denote the routing identifier of a managed device/node."
+        },
+        {
+          "my_id": "a.ifname",
+          "their_id": "b.ifname",
+          "confidence": 1.0,
+          "rationale": "Both are bound to interface-name and denote a device-assigned interface name interpreted in device/node context."
+        }
+      ],
+      "ratifications": [
+        {
+          "their_id": "b.node",
+          "my_id": "a.device",
+          "accept": true,
+          "reason": "The concepts share reference network-device and denote the same managed device/node."
+        },
+        {
+          "their_id": "b.tp",
+          "my_id": "a.if",
+          "accept": true,
+          "reason": "The concepts share reference physical-port and both exclude LAG interfaces."
+        },
+        {
+          "their_id": "b.lag",
+          "my_id": "a.agg",
+          "accept": true,
+          "reason": "The concepts share reference link-bundle and denote the same logical bundled interface."
+        },
+        {
+          "their_id": "b.member",
+          "my_id": "a.lower",
+          "accept": true,
+          "reason": "The concepts share reference bundle-membership and have matching LAG-to-physical-port direction."
+        },
+        {
+          "their_id": "b.link",
+          "my_id": "a.nbr",
+          "accept": true,
+          "reason": "The shared reference physical-connection settles the correspondence despite representational differences."
+        },
+        {
+          "their_id": "b.rate",
+          "my_id": "a.speed",
+          "accept": true,
+          "reason": "The shared reference nominal-speed settles the correspondence; both denote nominal bandwidth."
+        },
+        {
+          "their_id": "b.mac",
+          "my_id": "a.mac",
+          "accept": true,
+          "reason": "The concepts share reference hardware-address and identify physical interfaces."
+        },
+        {
+          "their_id": "b.ip",
+          "my_id": "a.ip",
+          "accept": true,
+          "reason": "The shared reference ip-address settles correspondence despite differences in modeled bearer coverage."
+        },
+        {
+          "their_id": "b.rid",
+          "my_id": "a.rid",
+          "accept": true,
+          "reason": "The concepts share reference router-id and have the same meaning."
+        },
+        {
+          "their_id": "b.ifname",
+          "my_id": "a.ifname",
+          "accept": true,
+          "reason": "The concepts share reference interface-name and denote the same device-contextual name."
+        }
+      ],
+      "experiments": [],
+      "no_counterpart": [
+        "a.ifindex"
+      ],
+      "done": true
+    },
+    {
+      "from": "B",
+      "answers": [],
+      "questions": [],
+      "proposals": [],
+      "ratifications": [
+        {
+          "their_id": "a.device",
+          "my_id": "b.node",
+          "accept": true,
+          "reason": "Both concepts are bound to network-device and denote the same managed network device represented in the topology."
+        },
+        {
+          "their_id": "a.if",
+          "my_id": "b.tp",
+          "accept": true,
+          "reason": "Both are bound to physical-port and denote a non-LAG physical interface or termination point where a physical connection ends."
+        },
+        {
+          "their_id": "a.agg",
+          "my_id": "b.lag",
+          "accept": true,
+          "reason": "Both are bound to link-bundle and denote a logical LAG composed of physical member interfaces."
+        },
+        {
+          "their_id": "a.lower",
+          "my_id": "b.member",
+          "accept": true,
+          "reason": "Both are bound to bundle-membership and express the relation from a LAG to its underlying physical interfaces."
+        },
+        {
+          "their_id": "a.nbr",
+          "my_id": "b.link",
+          "accept": true,
+          "reason": "Both are bound to physical-connection, which settles correspondence despite their different representations of the connection."
+        },
+        {
+          "their_id": "a.speed",
+          "my_id": "b.rate",
+          "accept": true,
+          "reason": "Both are bound to nominal-speed and denote nominal bandwidth rather than measured traffic throughput."
+        },
+        {
+          "their_id": "a.mac",
+          "my_id": "b.mac",
+          "accept": true,
+          "reason": "Both are bound to hardware-address and denote the MAC address of a physical interface."
+        },
+        {
+          "their_id": "a.ip",
+          "my_id": "b.ip",
+          "accept": true,
+          "reason": "Both are bound to ip-address; the shared reference settles correspondence despite differing modeled bearer coverage."
+        },
+        {
+          "their_id": "a.rid",
+          "my_id": "b.rid",
+          "accept": true,
+          "reason": "Both are bound to router-id and denote the routing identifier of the managed device or node."
+        },
+        {
+          "their_id": "a.ifname",
+          "my_id": "b.ifname",
+          "accept": true,
+          "reason": "Both are bound to interface-name and denote the device-assigned interface name interpreted in device context."
+        }
+      ],
+      "experiments": [],
+      "no_counterpart": [
+        "b.network",
+        "b.tpid"
+      ],
+      "done": true
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+ "system": "Agent A",
+ "dialect": "IETF interfaces, IP and LLDP (RFC 8343, RFC 8344, IEEE 802.1AB)",
+ "modules": [
+  "ietf-interfaces",
+  "ietf-ip",
+  "ieee802-dot1ab-lldp",
+  "ietf-routing"
+ ],
+ "note": "Lifted semantic model, interfaces side. Each concept carries its lexical label, synonyms, a shallow kind, a gloss, a canonical example, the reference entry the agent bound it to (ref), plus structural relations (edges to other concept ids in this model) and concrete instances. A live side volunteers its gloss/example; an inert side exposes only label, kind, relations, and instances. ref of null marks an item with no public meaning.",
+ "concepts": [
+  {
+   "id": "a.device",
+   "label": "device",
+   "synonyms": [
+    "managed system",
+    "local-system-data"
+   ],
+   "kind": "node",
+   "gloss": "one managed router: the system whose own interfaces and LLDP data are reported",
+   "example": "ywg-cr-00",
+   "ref": "network-device",
+   "relations": [],
+   "instances": [
+    "ywg-cr-00",
+    "yxe-cr-03",
+    "yow-ar-05"
+   ]
+  },
+  {
+   "id": "a.if",
+   "label": "interface",
+   "synonyms": [
+    "ethernetCsmacd interface"
+   ],
+   "kind": "termination",
+   "gloss": "a physical Ethernet interface of a device, where exactly one cable ends; the device names it, so the name is unique only within that device",
+   "example": "et-0/0/1 on ywg-cr-00",
+   "ref": "physical-port",
+   "relations": [
+    {
+     "rel": "on-device",
+     "target": "a.device"
+    }
+   ],
+   "instances": [
+    "et-0/0/1 @ywg-cr-00",
+    "et-0/0/1 @yxe-cr-03",
+    "et-0/0/2 @ywg-cr-00"
+   ]
+  },
+  {
+   "id": "a.agg",
+   "label": "aggregate-interface",
+   "synonyms": [
+    "ieee8023adLag interface",
+    "ae"
+   ],
+   "kind": "termination",
+   "gloss": "a logical interface that combines several physical interfaces of the same device so that they act as one",
+   "example": "ae3 on ywg-cr-00, over et-0/0/1 and et-0/0/2",
+   "ref": "link-bundle",
+   "relations": [
+    {
+     "rel": "on-device",
+     "target": "a.device"
+    },
+    {
+     "rel": "layered-over",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "ae3 @ywg-cr-00",
+    "ae8 @yxe-cr-03"
+   ]
+  },
+  {
+   "id": "a.lower",
+   "label": "lower-layer-if",
+   "synonyms": [
+    "higher-layer-if"
+   ],
+   "kind": "relation",
+   "gloss": "the layering reference that says which physical interfaces sit underneath an aggregate interface",
+   "example": "ae3 has lower layers et-0/0/1 and et-0/0/2",
+   "ref": "bundle-membership",
+   "relations": [
+    {
+     "rel": "from",
+     "target": "a.agg"
+    },
+    {
+     "rel": "to",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "ae3 -> et-0/0/1, et-0/0/2"
+   ]
+  },
+  {
+   "id": "a.nbr",
+   "label": "remote-systems-data",
+   "synonyms": [
+    "lldp neighbour"
+   ],
+   "kind": "adjacency",
+   "gloss": "what a physical interface has learned by LLDP about the far end of its cable: the neighbouring system and the neighbouring port",
+   "example": "et-0/0/1 on ywg-cr-00 sees port et-0/0/2 of yxe-cr-03",
+   "ref": "physical-connection",
+   "relations": [
+    {
+     "rel": "learned-on",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "et-0/0/1 @ywg-cr-00 sees yxe-cr-03 / et-0/0/2"
+   ]
+  },
+  {
+   "id": "a.speed",
+   "label": "speed",
+   "synonyms": [],
+   "kind": "attribute",
+   "gloss": "the nominal bandwidth of an interface, in bits per second",
+   "example": "100000000000 on et-0/0/1",
+   "ref": "nominal-speed",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "100000000000 bits/second",
+    "10000000000 bits/second",
+    "200000000000 bits/second"
+   ]
+  },
+  {
+   "id": "a.mac",
+   "label": "phys-address",
+   "synonyms": [],
+   "kind": "identifier",
+   "gloss": "the address of a physical interface at the layer below the network layer: its hardware (MAC) address",
+   "example": "02:33:5f:97:3d:aa",
+   "ref": "hardware-address",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "02:33:5f:97:3d:aa",
+    "02:c9:11:f5:7c:ce"
+   ]
+  },
+  {
+   "id": "a.ip",
+   "label": "ipv4 address",
+   "synonyms": [
+    "ip"
+   ],
+   "kind": "addressing",
+   "gloss": "an IPv4 address configured on an interface",
+   "example": "10.0.0.7 on ae3",
+   "ref": "ip-address",
+   "relations": [
+    {
+     "rel": "on",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "10.0.0.7",
+    "10.0.0.24"
+   ]
+  },
+  {
+   "id": "a.rid",
+   "label": "router-id",
+   "synonyms": [],
+   "kind": "identifier",
+   "gloss": "the routing identifier of a device",
+   "example": "10.255.0.3 for ywg-cr-00",
+   "ref": "router-id",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "a.device"
+    }
+   ],
+   "instances": [
+    "10.255.0.3",
+    "10.255.0.7"
+   ]
+  },
+  {
+   "id": "a.ifname",
+   "label": "name",
+   "synonyms": [
+    "interface name"
+   ],
+   "kind": "identifier",
+   "gloss": "the name the device itself gives an interface; unique only within that device, so the same name recurs on other devices",
+   "example": "et-0/0/1",
+   "ref": "interface-name",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "et-0/0/1",
+    "et-0/0/2",
+    "ae3"
+   ]
+  },
+  {
+   "id": "a.ifindex",
+   "label": "if-index",
+   "synonyms": [],
+   "kind": "identifier",
+   "gloss": "a device-local integer index of an interface; arbitrary, and unique only within that device",
+   "example": "707 for et-0/0/1 on ywg-cr-00",
+   "ref": "interface-index",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "a.if"
+    }
+   ],
+   "instances": [
+    "707",
+    "550",
+    "17"
+   ]
+  }
+ ]
+}

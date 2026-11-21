@@ -1,0 +1,552 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 2,
+    "submitted": true,
+    "proposed": 34,
+    "precision": 1.0,
+    "recall": 0.68,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 53,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 39030,
+    "reasoning_tokens": 2603,
+    "latency_s": 60.15,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+verify+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 8,
+      "open_a": 42,
+      "open_b": 63,
+      "lookalikes_a": 16,
+      "lookalikes_b": 6
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [
+          {
+            "a_id": "a.ywg-cr-00/ae3",
+            "b_id": "b.tp-c2fe3242",
+            "basis": "Unique bundle on the settled YWG device; both records identify its two member ports as the parallel links toward the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-cr-00/et-0/0/0",
+            "b_id": "b.tp-c4779d73",
+            "basis": "Unique non-bundled 100G port on settled YWG connected to settled YYZ.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/5",
+            "b_id": "b.tp-8c9a4121",
+            "basis": "Port on settled YHZ connected at 10G to settled YVR; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/0",
+            "b_id": "b.tp-eb7865a1",
+            "basis": "Port on settled YHZ connected at 100G to settled YXE; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/3",
+            "b_id": "b.tp-72e772ac",
+            "basis": "Port on settled YHZ connected at 10G to settled YUL-ER-04; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/4",
+            "b_id": "b.tp-a63e5804",
+            "basis": "Port on settled YHZ connected at 10G to settled YUL-ER-07; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/2",
+            "b_id": "b.tp-16c09dd5",
+            "basis": "Port on settled YHZ connected at 100G to settled YOW; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/1",
+            "b_id": "b.tp-a25e9c52",
+            "basis": "Port on settled YHZ connected at 100G to settled YYZ; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-02/et-0/0/1",
+            "b_id": "b.tp-68370de9",
+            "basis": "Port on settled YVR connected at 10G to settled YOW; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-02/et-0/0/0",
+            "b_id": "b.tp-1891978b",
+            "basis": "Port on settled YVR connected at 10G to settled YHZ; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/ae4",
+            "b_id": "b.tp-86c6aec7",
+            "basis": "Unique bundle on settled YXE whose two members form the parallel connection to settled YWG.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/ae8",
+            "b_id": "b.tp-0f6c5a44",
+            "basis": "Unique bundle on settled YXE whose two members form the parallel connection to settled YOW.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/et-0/0/5",
+            "b_id": "b.tp-6d4406be",
+            "basis": "Unique non-bundled port on settled YXE connected at 100G to settled YHZ.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-04/et-0/0/0",
+            "b_id": "b.tp-32e15a14",
+            "basis": "Port on settled YUL-ER-04 connected at 10G to settled YHZ; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-04/et-0/0/1",
+            "b_id": "b.tp-e0ab2661",
+            "basis": "Port on settled YUL-ER-04 connected at 10G to settled YOW; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-1/0/1",
+            "b_id": "b.tp-2418fe41",
+            "basis": "Port on settled YOW connected at 10G to settled YVR; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-0/0/6",
+            "b_id": "b.tp-6b1cfb03",
+            "basis": "Unique non-bundled 100G port on settled YOW connected to settled YHZ.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/ae2",
+            "b_id": "b.tp-d40769e8",
+            "basis": "Unique bundle on settled YOW whose two members form the parallel connection to settled YXE.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-0/0/7",
+            "b_id": "b.tp-19da12cb",
+            "basis": "Port on settled YOW connected at 10G to settled YUL-ER-04; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/ae5",
+            "b_id": "b.tp-cb59b347",
+            "basis": "Unique bundle on settled YOW whose two members form the parallel connection to settled YYZ.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-1/0/0",
+            "b_id": "b.tp-b28b8755",
+            "basis": "Port on settled YOW connected at 10G to settled YUL-ER-07; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/et-0/0/2",
+            "b_id": "b.tp-5bbff6ef",
+            "basis": "Unique non-bundled port on settled YYZ connected at 100G to settled YWG.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/ae6",
+            "b_id": "b.tp-f4bae4dc",
+            "basis": "Unique bundle on settled YYZ whose two members form the parallel connection to settled YOW.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/et-0/0/3",
+            "b_id": "b.tp-59ebe37d",
+            "basis": "Unique non-bundled port on settled YYZ connected at 100G to settled YHZ.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-07/et-0/0/0",
+            "b_id": "b.tp-724e0671",
+            "basis": "Port on settled YUL-ER-07 connected at 10G to settled YHZ; this is the unique such endpoint.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-07/et-0/0/1",
+            "b_id": "b.tp-d4c9f43e",
+            "basis": "Port on settled YUL-ER-07 connected at 10G to settled YOW; this is the unique such endpoint.",
+            "confidence": 1.0
+          }
+        ],
+        "left_open": [
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Look-alike member of the YOW\u2013YXE bundle; recorded ownership, bundle membership, speed, and neighbour do not distinguish it from a.yow-ar-05/et-0/0/1."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Look-alike member of the YOW\u2013YXE bundle; recorded ownership, bundle membership, speed, and neighbour do not distinguish it from a.yow-ar-05/et-0/0/0."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Look-alike member of the YOW\u2013YYZ bundle; recorded facts do not distinguish it from a.yow-ar-05/et-0/0/4."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Look-alike member of the YOW\u2013YYZ bundle; recorded facts do not distinguish it from a.yow-ar-05/et-0/0/3."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Listed look-alike member of the YWG\u2013YXE bundle; a network check would be required to distinguish the two parallel members."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Listed look-alike member of the YWG\u2013YXE bundle; a network check would be required to distinguish the two parallel members."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/0",
+            "reason": "Look-alike 100G port from YXE to YYZ; the records do not distinguish it from a.yxe-cr-03/et-0/0/1."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/1",
+            "reason": "Look-alike 100G port from YXE to YYZ; the records do not distinguish it from a.yxe-cr-03/et-0/0/0."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Listed look-alike member of the YXE\u2013YWG bundle; a network check would be required to distinguish the two parallel members."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Listed look-alike member of the YXE\u2013YWG bundle; a network check would be required to distinguish the two parallel members."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Look-alike member of the YXE\u2013YOW bundle; recorded facts do not distinguish it from a.yxe-cr-03/et-0/0/7."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Look-alike member of the YXE\u2013YOW bundle; recorded facts do not distinguish it from a.yxe-cr-03/et-0/0/6."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/0",
+            "reason": "Look-alike 100G port from YYZ to YXE; the records do not distinguish it from a.yyz-cr-06/et-0/0/1."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/1",
+            "reason": "Look-alike 100G port from YYZ to YXE; the records do not distinguish it from a.yyz-cr-06/et-0/0/0."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Look-alike member of the YYZ\u2013YOW bundle; recorded facts do not distinguish it from a.yyz-cr-06/et-0/0/5."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Look-alike member of the YYZ\u2013YOW bundle; recorded facts do not distinguish it from a.yyz-cr-06/et-0/0/4."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "One of two indistinguishable B members of the YOW\u2013YXE bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "One of two indistinguishable B members of the YOW\u2013YXE bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "One of two indistinguishable B members of the YOW\u2013YYZ bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "One of two indistinguishable B members of the YOW\u2013YYZ bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Listed B look-alike member of the YWG\u2013YXE bundle; static records cannot distinguish it from b.tp-b3e678d5."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Listed B look-alike member of the YWG\u2013YXE bundle; static records cannot distinguish it from b.tp-b27a3a3f."
+          },
+          {
+            "id": "b.tp-76dde144",
+            "reason": "One of two indistinguishable B ports from YXE to YYZ; it cannot be assigned uniquely to either A port."
+          },
+          {
+            "id": "b.tp-d252c51c",
+            "reason": "One of two indistinguishable B ports from YXE to YYZ; it cannot be assigned uniquely to either A port."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Listed B look-alike member of the YXE\u2013YWG bundle; static records cannot distinguish it from b.tp-bef584d3."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Listed B look-alike member of the YXE\u2013YWG bundle; static records cannot distinguish it from b.tp-100c2374."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "One of two indistinguishable B members of the YXE\u2013YOW bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "One of two indistinguishable B members of the YXE\u2013YOW bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-6b80277f",
+            "reason": "One of two indistinguishable B ports from YYZ to YXE; it cannot be assigned uniquely to either A port."
+          },
+          {
+            "id": "b.tp-d54a4f47",
+            "reason": "One of two indistinguishable B ports from YYZ to YXE; it cannot be assigned uniquely to either A port."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "One of two indistinguishable B members of the YYZ\u2013YOW bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "One of two indistinguishable B members of the YYZ\u2013YOW bundle; it cannot be assigned uniquely to either A member port."
+          },
+          {
+            "id": "b.link-1d02317d",
+            "reason": "Explicitly listed as a B look-alike with b.link-5de62a8a; static records cannot distinguish the two parallel member links, and A has no separate link object for resolution."
+          },
+          {
+            "id": "b.link-5de62a8a",
+            "reason": "Explicitly listed as a B look-alike with b.link-1d02317d; static records cannot distinguish the two parallel member links, and A has no separate link object for resolution."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "verify",
+      "proposed": 26,
+      "verdicts": [
+        {
+          "a_id": "a.ywg-cr-00/ae3",
+          "b_id": "b.tp-c2fe3242",
+          "verdict": "determined",
+          "reason": "Both are bundles on the settled YWG device; their two members connect to the corresponding two-member bundle on the settled YXE device. This is the only such YWG bundle."
+        },
+        {
+          "a_id": "a.ywg-cr-00/et-0/0/0",
+          "b_id": "b.tp-c4779d73",
+          "verdict": "determined",
+          "reason": "The A port is on YWG and neighbours YYZ. The B port is on the corresponding YWG node and links to b.tp-5bbff6ef on the corresponding YYZ node; it is the only YWG port with that non-bundled relation."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/5",
+          "b_id": "b.tp-8c9a4121",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YHZ device and connect at 10 Gb/s to the corresponding YVR device, via b.tp-1891978b on B. No other YHZ port has that neighbour."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/0",
+          "b_id": "b.tp-eb7865a1",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YHZ device and connect to the corresponding YXE device; B links this port to b.tp-6d4406be. It is the unique YHZ\u2013YXE port."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/3",
+          "b_id": "b.tp-72e772ac",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YHZ device and connect to the settled YUL-04 device, with B's far end b.tp-32e15a14. This neighbour uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/4",
+          "b_id": "b.tp-a63e5804",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YHZ device and connect to the settled YUL-07 device, with B's far end b.tp-724e0671. This neighbour uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/2",
+          "b_id": "b.tp-16c09dd5",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YHZ device and connect to the corresponding YOW device, with B's far end b.tp-6b1cfb03. This is the unique YHZ\u2013YOW port."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/1",
+          "b_id": "b.tp-a25e9c52",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YHZ device and connect to the corresponding YYZ device, with B's far end b.tp-59ebe37d. This is the unique YHZ\u2013YYZ port."
+        },
+        {
+          "a_id": "a.yvr-er-02/et-0/0/1",
+          "b_id": "b.tp-68370de9",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YVR device and connect to the corresponding YOW device, with B's far end b.tp-2418fe41. It is YVR's unique YOW-facing port."
+        },
+        {
+          "a_id": "a.yvr-er-02/et-0/0/0",
+          "b_id": "b.tp-1891978b",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YVR device and connect to the corresponding YHZ device, with B's far end b.tp-8c9a4121. It is YVR's unique YHZ-facing port."
+        },
+        {
+          "a_id": "a.yxe-cr-03/ae4",
+          "b_id": "b.tp-86c6aec7",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on the corresponding YXE device whose members connect to the two members of YWG's bundle. This is the only YXE bundle facing YWG."
+        },
+        {
+          "a_id": "a.yxe-cr-03/ae8",
+          "b_id": "b.tp-0f6c5a44",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on the corresponding YXE device whose members connect to YOW's corresponding two-member bundle. This is the only YXE bundle facing YOW."
+        },
+        {
+          "a_id": "a.yxe-cr-03/et-0/0/5",
+          "b_id": "b.tp-6d4406be",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YXE device and connect to the corresponding YHZ device, with B's far end b.tp-eb7865a1. This is the unique YXE\u2013YHZ port."
+        },
+        {
+          "a_id": "a.yul-er-04/et-0/0/0",
+          "b_id": "b.tp-32e15a14",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YUL-04 device and connect to the corresponding YHZ device, with B's far end b.tp-72e772ac. This uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yul-er-04/et-0/0/1",
+          "b_id": "b.tp-e0ab2661",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YUL-04 device and connect to the corresponding YOW device, with B's far end b.tp-19da12cb. This uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-1/0/1",
+          "b_id": "b.tp-2418fe41",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YOW device and connect to the corresponding YVR device, with B's far end b.tp-68370de9. It is the unique YOW\u2013YVR port."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-0/0/6",
+          "b_id": "b.tp-6b1cfb03",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YOW device and connect to the corresponding YHZ device, with B's far end b.tp-16c09dd5. It is the unique YOW\u2013YHZ port."
+        },
+        {
+          "a_id": "a.yow-ar-05/ae2",
+          "b_id": "b.tp-d40769e8",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on the corresponding YOW device whose member links terminate at YXE's corresponding bundle. This is the only YOW bundle facing YXE."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-0/0/7",
+          "b_id": "b.tp-19da12cb",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YOW device and connect to the settled YUL-04 device, with B's far end b.tp-e0ab2661. This uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yow-ar-05/ae5",
+          "b_id": "b.tp-cb59b347",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on the corresponding YOW device whose members connect to YYZ's corresponding bundle. This is the only YOW bundle facing YYZ."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-1/0/0",
+          "b_id": "b.tp-b28b8755",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YOW device and connect to the settled YUL-07 device, with B's far end b.tp-d4c9f43e. This uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yyz-cr-06/et-0/0/2",
+          "b_id": "b.tp-5bbff6ef",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YYZ device and connect to the corresponding YWG device, with B's far end b.tp-c4779d73. It is the unique non-bundled YYZ\u2013YWG port."
+        },
+        {
+          "a_id": "a.yyz-cr-06/ae6",
+          "b_id": "b.tp-f4bae4dc",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on the corresponding YYZ device whose members connect to YOW's corresponding bundle. This is the only YYZ bundle."
+        },
+        {
+          "a_id": "a.yyz-cr-06/et-0/0/3",
+          "b_id": "b.tp-59ebe37d",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YYZ device and connect to the corresponding YHZ device, with B's far end b.tp-a25e9c52. This is the unique YYZ\u2013YHZ port."
+        },
+        {
+          "a_id": "a.yul-er-07/et-0/0/0",
+          "b_id": "b.tp-724e0671",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YUL-07 device and connect to the corresponding YHZ device, with B's far end b.tp-a63e5804. This uniquely identifies the port."
+        },
+        {
+          "a_id": "a.yul-er-07/et-0/0/1",
+          "b_id": "b.tp-d4c9f43e",
+          "verdict": "determined",
+          "reason": "Both are on the corresponding YUL-07 device and connect to the corresponding YOW device, with B's far end b.tp-b28b8755. This uniquely identifies the port."
+        }
+      ]
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 8,
+      "by_topology": 26,
+      "verified": true,
+      "verifier_rejections": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 16,
+      "left_open_lookalikes": 16,
+      "open_a_lookalikes": 16,
+      "device_questions": 0
+    }
+  ]
+}

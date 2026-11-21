@@ -1,0 +1,560 @@
+{
+  "case": "config_ipnet",
+  "model": "gpt-5.6-sol",
+  "reference": false,
+  "with_experiment": true,
+  "precision": 1.0,
+  "resolved_fraction": 1.0,
+  "surviving_false_cognates": 0,
+  "confirmed": [
+    [
+      "a.nbr",
+      "b.link"
+    ],
+    [
+      "a.lower",
+      "b.member"
+    ],
+    [
+      "a.mac",
+      "b.mac"
+    ],
+    [
+      "a.ip",
+      "b.ip"
+    ],
+    [
+      "a.ifname",
+      "b.ifname"
+    ],
+    [
+      "a.device",
+      "b.node"
+    ],
+    [
+      "a.speed",
+      "b.rate"
+    ],
+    [
+      "a.agg",
+      "b.lag"
+    ],
+    [
+      "a.rid",
+      "b.rid"
+    ],
+    [
+      "a.if",
+      "b.tp"
+    ]
+  ],
+  "residual_a": [
+    "a.ifindex"
+  ],
+  "residual_b": [
+    "b.network",
+    "b.tpid"
+  ],
+  "experiments_spent": 4,
+  "experiment_log": [
+    {
+      "a": "a.nbr",
+      "b": "b.link",
+      "ok": true,
+      "confirmed": true,
+      "relation": "identity"
+    },
+    {
+      "a": "a.ifindex",
+      "b": "b.tpid",
+      "ok": true,
+      "confirmed": false,
+      "relation": "false-cognate"
+    },
+    {
+      "a": "a.speed",
+      "b": "b.rate",
+      "ok": true,
+      "confirmed": true,
+      "relation": "identity"
+    },
+    {
+      "a": "a.ip",
+      "b": "b.ip",
+      "ok": true,
+      "confirmed": true,
+      "relation": "identity"
+    }
+  ],
+  "work": {
+    "candidates": 10,
+    "turns": 6,
+    "bilateral_checks": 10,
+    "experiments": 4
+  },
+  "effort": {
+    "total_tokens": 39129,
+    "reasoning_tokens": 2285,
+    "latency_s": 63.8,
+    "model": "gpt-5.6-sol"
+  },
+  "transcript": [
+    {
+      "from": "A",
+      "answers": [],
+      "questions": [
+        {
+          "their_id": "b.network",
+          "ask": "What does this container denote? Give a gloss, example, and its containment/identity relations to nodes, termination points, and links."
+        },
+        {
+          "their_id": "b.node",
+          "ask": "Does this denote one managed router/system, or a more abstract topology node? Give a gloss, example, and relations."
+        },
+        {
+          "their_id": "b.tp",
+          "ask": "Does this denote a physical Ethernet cable endpoint, a logical interface, or either? State endpoint identity scope and relations to node/link."
+        },
+        {
+          "their_id": "b.lag",
+          "ask": "Does this denote a logical aggregate interface over physical member endpoints? Give an example and relations to node, members, and links."
+        },
+        {
+          "their_id": "b.member",
+          "ask": "Describe the direction and meaning of this relation: what are its source and target, and does it express interface layering or link membership?"
+        },
+        {
+          "their_id": "b.rate",
+          "ask": "Is this nominal interface bandwidth in bits per second, measured traffic rate, or link capacity? State its units and bearer."
+        },
+        {
+          "their_id": "b.mac",
+          "ask": "Is this specifically the hardware/MAC address of a physical termination point? Give scope and relations."
+        },
+        {
+          "their_id": "b.ip",
+          "ask": "Is this a configured IPv4 address, IPv6 address, or either, and can it belong to physical and aggregate termination points?"
+        },
+        {
+          "their_id": "b.rid",
+          "ask": "Is this the routing identifier of a node/device? Give an example and relations."
+        },
+        {
+          "their_id": "b.ifname",
+          "ask": "Is this the device-assigned interface name whose uniqueness is only node-local? Give an example and relations."
+        }
+      ],
+      "proposals": [],
+      "ratifications": [],
+      "experiments": [
+        {
+          "my_id": "a.nbr",
+          "their_id": "b.link",
+          "question": "Does B's link preserve the same endpoint identity and connectivity as A's LLDP-learned far-end observation, rather than denoting a separately asserted bidirectional topology edge?"
+        },
+        {
+          "my_id": "a.ifindex",
+          "their_id": "b.tpid",
+          "question": "Is B's opaque termination-point ID semantically the same device-local integer interface index as A's if-index, preserving endpoint identity and scope?"
+        }
+      ],
+      "no_counterpart": [],
+      "done": false,
+      "experiment_results": [
+        {
+          "a": "a.nbr",
+          "b": "b.link",
+          "ok": true,
+          "confirmed": true,
+          "relation": "identity"
+        },
+        {
+          "a": "a.ifindex",
+          "b": "b.tpid",
+          "ok": true,
+          "confirmed": false,
+          "relation": "false-cognate"
+        }
+      ]
+    },
+    {
+      "from": "B",
+      "answers": [
+        {
+          "my_id": "b.network",
+          "gloss": "A jointly managed topology container: the set of topology nodes and links constituting one network view.",
+          "example": "net-5fd4f0fa contains nodes such as node-0d30dd9a and the links among their termination points.",
+          "relations": "Nodes are directly part of the network. Termination points are on those nodes, and links connect termination points in the topology. The network is the outer container, not itself a device or endpoint."
+        },
+        {
+          "my_id": "b.node",
+          "gloss": "A network device as represented as a node in this topology. It is a topology node corresponding to a device, rather than the entire topology.",
+          "example": "node-0d30dd9a.",
+          "relations": "Each node is part of b.network; termination points are on the node; the node may carry a router ID."
+        },
+        {
+          "my_id": "b.tp",
+          "gloss": "A link endpoint on a node. In this concept specifically, the lag flag is false, so it represents one physical port rather than an aggregate logical interface.",
+          "example": "tp-d4c9f43e on node-0d30dd9a.",
+          "relations": "It is scoped to/on one node and may be the source or destination endpoint of b.link. It may carry MAC address, IP address, and device interface name. Aggregate endpoints are distinguished as b.lag."
+        },
+        {
+          "my_id": "b.lag",
+          "gloss": "A termination point with lag=true, representing several physical termination points on the same node acting as one logical aggregate endpoint.",
+          "example": "tp-9d33f163 on node-0d30dd9a aggregates tp-b27a3a3f and tp-b3e678d5.",
+          "relations": "It is on one node and has physical b.tp members through b.member. As a termination point, it can function as a link endpoint, while preserving a distinct aggregate identity from its members."
+        },
+        {
+          "my_id": "b.member",
+          "gloss": "A directed reference from an aggregate/LAG termination point to each physical termination point participating in that aggregate.",
+          "example": "tp-9d33f163 -> tp-b27a3a3f and tp-b3e678d5.",
+          "relations": "Source is b.lag; target is b.tp. It expresses aggregate membership of same-node physical ports, not membership of topology links. It resembles a logical-over-lower-layer relationship only insofar as the aggregate is built over those physical endpoints."
+        },
+        {
+          "my_id": "b.rate",
+          "gloss": "The capacity/bandwidth assigned to a topology link, expressed in kilobits per second; it is not a measured traffic rate.",
+          "example": "100000000 Kbps on link-749b0c70.",
+          "relations": "It is an attribute of b.link, not directly an interface attribute in this model."
+        },
+        {
+          "my_id": "b.mac",
+          "gloss": "The hardware/MAC address of a physical, non-LAG termination point.",
+          "example": "02:33:5f:97:3d:aa on a physical termination point.",
+          "relations": "It identifies/address-labels b.tp and is scoped through that endpoint and its containing node."
+        },
+        {
+          "my_id": "b.ip",
+          "gloss": "An IP address held by a termination point at layer 3. The concept is not textually restricted to one IP version, although the represented examples are IPv4.",
+          "example": "10.0.0.24 on tp-d4c9f43e.",
+          "relations": "It is on b.tp. Because a LAG is also a termination point distinguished by its lag flag, an aggregate termination point may also hold an IP address when operating at layer 3."
+        },
+        {
+          "my_id": "b.rid",
+          "gloss": "The routing identifier of a topology node/device.",
+          "example": "10.255.0.3 on node-0d30dd9a.",
+          "relations": "It is an identifier of b.node, not an address of a particular termination point."
+        },
+        {
+          "my_id": "b.ifname",
+          "gloss": "The name assigned by the device to the interface represented by a termination point.",
+          "example": "et-0/0/1 for a physical endpoint or ae3 for an aggregate endpoint.",
+          "relations": "It is an identifier of a termination point. Its natural naming scope is the containing node/device rather than the whole network."
+        }
+      ],
+      "questions": [
+        {
+          "their_id": "a.device",
+          "ask": "Does this denote the managed network system/router itself, a topology representation of it, or either? Give an example and its relations to interfaces and adjacency observations."
+        },
+        {
+          "their_id": "a.if",
+          "ask": "Does this interface concept cover physical ports only, or both physical and logical interfaces? State its identity scope and relations to device, neighbors, addresses, and aggregate interfaces."
+        },
+        {
+          "their_id": "a.agg",
+          "ask": "Does this denote one logical link-aggregation interface over multiple member interfaces? Give an example and its endpoint and membership/layering relations."
+        },
+        {
+          "their_id": "a.lower",
+          "ask": "Give the exact direction and meaning of lower-layer-if: what is the source, what is the target, and is it specifically aggregate membership or general interface layering?"
+        },
+        {
+          "their_id": "a.speed",
+          "ask": "Is this nominal interface speed/capacity or measured traffic rate, what are its units, and is its bearer an interface or an adjacency/link?"
+        },
+        {
+          "their_id": "a.mac",
+          "ask": "Is phys-address the hardware MAC of an interface, and can it apply to physical interfaces, aggregate interfaces, or both?"
+        },
+        {
+          "their_id": "a.ip",
+          "ask": "Is this specifically a configured IPv4 address on an interface? State its bearer and whether physical and aggregate interfaces are both allowed."
+        },
+        {
+          "their_id": "a.rid",
+          "ask": "Is this the routing identifier of the device/system? Give its scope and relations."
+        },
+        {
+          "their_id": "a.ifname",
+          "ask": "Is this the device-assigned interface name, unique only within a device? Give examples and relations."
+        }
+      ],
+      "proposals": [],
+      "ratifications": [],
+      "experiments": [],
+      "no_counterpart": [
+        "b.network",
+        "b.tpid"
+      ],
+      "done": false
+    },
+    {
+      "from": "A",
+      "answers": [
+        {
+          "my_id": "a.device",
+          "gloss": "One managed router/system whose own interfaces and LLDP observations are reported; it denotes the device itself in the management model.",
+          "example": "ywg-cr-00.",
+          "relations": "Physical a.if and logical a.agg interfaces are on the device. LLDP a.nbr observations are learned on its physical interfaces. The device may carry a.rid."
+        },
+        {
+          "my_id": "a.if",
+          "gloss": "A physical Ethernet port only, representing one cable endpoint; logical aggregate interfaces are represented separately by a.agg.",
+          "example": "et-0/0/1 on ywg-cr-00.",
+          "relations": "It is on exactly one a.device, and its interface name and if-index are unique only within that device. It may carry a.speed, a.mac, and configured a.ip, have an a.nbr observation, and serve as a lower-layer member of a.agg."
+        },
+        {
+          "my_id": "a.agg",
+          "gloss": "One logical link-aggregation interface combining multiple physical interfaces of the same device so they act as one.",
+          "example": "ae3 on ywg-cr-00 over et-0/0/1 and et-0/0/2.",
+          "relations": "It is on one a.device and is layered over physical a.if members through a.lower. It has a distinct logical endpoint identity and may carry an interface name and configured IP address."
+        },
+        {
+          "my_id": "a.lower",
+          "gloss": "A directed layering reference from an aggregate interface to each physical interface underneath it.",
+          "example": "ae3 -> et-0/0/1 and ae3 -> et-0/0/2.",
+          "relations": "Source is a.agg and target is a.if. In this model it specifically records the physical members underlying an aggregate, rather than arbitrary interface layering or topology-link membership."
+        },
+        {
+          "my_id": "a.speed",
+          "gloss": "The nominal speed/bandwidth of a physical interface, not a measured traffic rate.",
+          "example": "100000000000 bits per second on et-0/0/1.",
+          "relations": "Its bearer is a.if, and its unit is bits per second; it is not directly an attribute of the LLDP adjacency in model A."
+        },
+        {
+          "my_id": "a.mac",
+          "gloss": "The hardware MAC address of a physical Ethernet interface.",
+          "example": "02:33:5f:97:3d:aa on et-0/0/1.",
+          "relations": "It identifies/address-labels a.if. Model A does not define this concept as an attribute of a.agg."
+        },
+        {
+          "my_id": "a.ip",
+          "gloss": "Specifically an IPv4 address configured on an interface.",
+          "example": "10.0.0.7 on aggregate interface ae3.",
+          "relations": "It can be configured on an interface, including a physical a.if or a logical a.agg where Layer-3 configuration is present; it is narrower than a version-neutral IP-address concept."
+        },
+        {
+          "my_id": "a.rid",
+          "gloss": "The routing identifier of a managed device/system.",
+          "example": "10.255.0.3 for ywg-cr-00.",
+          "relations": "It identifies a.device and is device-scoped, rather than belonging to a particular physical or aggregate interface."
+        },
+        {
+          "my_id": "a.ifname",
+          "gloss": "The interface name assigned by the device, unique only within that device.",
+          "example": "et-0/0/1 for a physical interface or ae3 for an aggregate interface.",
+          "relations": "It identifies an interface relative to its containing a.device; the same name can recur on another device."
+        }
+      ],
+      "questions": [
+        {
+          "their_id": "b.tpid",
+          "ask": "What exactly constitutes a tp-id, how is it generated and scoped, and what identity does it preserve if it is not a device-local if-index? Give a gloss, example, and relations to node and termination point."
+        }
+      ],
+      "proposals": [
+        {
+          "my_id": "a.device",
+          "their_id": "b.node",
+          "confidence": 0.96,
+          "rationale": "Both denote one network device/router carrying interfaces or termination points and a router ID; B additionally places the representation in a topology container."
+        },
+        {
+          "my_id": "a.if",
+          "their_id": "b.tp",
+          "confidence": 0.98,
+          "rationale": "Both specifically denote a physical, non-LAG port on one device/node that serves as a cable or link endpoint."
+        },
+        {
+          "my_id": "a.agg",
+          "their_id": "b.lag",
+          "confidence": 0.99,
+          "rationale": "Both denote a distinct logical aggregate endpoint on one device/node built from multiple same-device physical endpoints."
+        },
+        {
+          "my_id": "a.lower",
+          "their_id": "b.member",
+          "confidence": 0.98,
+          "rationale": "Both are directed from the aggregate endpoint to each underlying same-node physical member and express aggregate composition/layering."
+        },
+        {
+          "my_id": "a.nbr",
+          "their_id": "b.link",
+          "confidence": 1.0,
+          "rationale": "The decisive virtual experiment confirmed identity while preserving endpoint identity and connectivity."
+        },
+        {
+          "my_id": "a.mac",
+          "their_id": "b.mac",
+          "confidence": 0.99,
+          "rationale": "Both are the hardware MAC address of a physical, non-LAG Ethernet endpoint."
+        },
+        {
+          "my_id": "a.rid",
+          "their_id": "b.rid",
+          "confidence": 0.99,
+          "rationale": "Both are the routing identifier of the represented device/node."
+        },
+        {
+          "my_id": "a.ifname",
+          "their_id": "b.ifname",
+          "confidence": 0.99,
+          "rationale": "Both are device-assigned interface names naturally scoped to the containing device/node and applicable to physical or aggregate interfaces."
+        }
+      ],
+      "ratifications": [],
+      "experiments": [
+        {
+          "my_id": "a.speed",
+          "their_id": "b.rate",
+          "question": "After converting bits per second to kilobits per second and translating an interface endpoint to its incident link, do these preserve the same nominal capacity, or does B's link-level capacity differ from A's physical-interface speed?"
+        },
+        {
+          "my_id": "a.ip",
+          "their_id": "b.ip",
+          "question": "Does translation preserve address-family and bearer invariants so that A's specifically IPv4 configured interface address is the same concept as B's nominally version-neutral termination-point IP address?"
+        }
+      ],
+      "no_counterpart": [
+        "a.ifindex"
+      ],
+      "done": false,
+      "experiment_results": [
+        {
+          "a": "a.speed",
+          "b": "b.rate",
+          "ok": true,
+          "confirmed": true,
+          "relation": "identity"
+        },
+        {
+          "a": "a.ip",
+          "b": "b.ip",
+          "ok": true,
+          "confirmed": true,
+          "relation": "identity"
+        }
+      ]
+    },
+    {
+      "from": "B",
+      "answers": [
+        {
+          "my_id": "b.tpid",
+          "gloss": "An opaque identifier assigned to a termination point in the topology model. Its internal form and generation algorithm are unspecified; it is not semantically a device-local integer interface index.",
+          "example": "tp-d4c9f43e identifies one termination point on node-0d30dd9a.",
+          "relations": "It identifies exactly one b.tp within the topology/network identity space; that termination point is on a b.node. Device-facing identity such as et-0/0/1 is represented separately by b.ifname. No stronger generation or global-scope guarantee is present in model B."
+        }
+      ],
+      "questions": [],
+      "proposals": [],
+      "ratifications": [
+        {
+          "their_id": "a.device",
+          "my_id": "b.node",
+          "accept": true,
+          "reason": "Both denote one represented network device/router bearing endpoints and a router ID; B additionally records it as part of a topology container."
+        },
+        {
+          "their_id": "a.if",
+          "my_id": "b.tp",
+          "accept": true,
+          "reason": "Both denote a physical, non-aggregate port on one device/node and preserve the same endpoint identity."
+        },
+        {
+          "their_id": "a.agg",
+          "my_id": "b.lag",
+          "accept": true,
+          "reason": "Both denote a distinct logical aggregate endpoint composed of multiple same-device physical endpoints."
+        },
+        {
+          "their_id": "a.lower",
+          "my_id": "b.member",
+          "accept": true,
+          "reason": "Both are directed aggregate-to-physical-member relations expressing the same LAG composition."
+        },
+        {
+          "their_id": "a.nbr",
+          "my_id": "b.link",
+          "accept": true,
+          "reason": "The decisive virtual experiment confirmed identity and preservation of endpoint connectivity."
+        },
+        {
+          "their_id": "a.mac",
+          "my_id": "b.mac",
+          "accept": true,
+          "reason": "Both denote the hardware MAC address of a physical, non-LAG endpoint."
+        },
+        {
+          "their_id": "a.rid",
+          "my_id": "b.rid",
+          "accept": true,
+          "reason": "Both identify the represented router/device rather than one of its interfaces."
+        },
+        {
+          "their_id": "a.ifname",
+          "my_id": "b.ifname",
+          "accept": true,
+          "reason": "Both denote the device-assigned, device-scoped interface name and apply to physical or aggregate endpoints."
+        }
+      ],
+      "experiments": [],
+      "no_counterpart": [
+        "b.network",
+        "b.tpid"
+      ],
+      "done": true
+    },
+    {
+      "from": "A",
+      "answers": [],
+      "questions": [],
+      "proposals": [
+        {
+          "my_id": "a.speed",
+          "their_id": "b.rate",
+          "confidence": 1.0,
+          "rationale": "The decisive virtual experiment confirmed that unit conversion and endpoint-to-incident-link translation preserve the same nominal capacity."
+        },
+        {
+          "my_id": "a.ip",
+          "their_id": "b.ip",
+          "confidence": 1.0,
+          "rationale": "The decisive virtual experiment confirmed identity while preserving address-family and interface/termination-point bearer invariants."
+        }
+      ],
+      "ratifications": [],
+      "experiments": [],
+      "no_counterpart": [
+        "a.ifindex"
+      ],
+      "done": true
+    },
+    {
+      "from": "B",
+      "answers": [],
+      "questions": [],
+      "proposals": [],
+      "ratifications": [
+        {
+          "their_id": "a.speed",
+          "my_id": "b.rate",
+          "accept": true,
+          "reason": "The decisive virtual experiment confirmed that both represent the same nominal capacity after converting bits per second to kilobits per second and translating the physical interface to its incident topology link."
+        },
+        {
+          "their_id": "a.ip",
+          "my_id": "b.ip",
+          "accept": true,
+          "reason": "The decisive virtual experiment confirmed semantic identity and preservation of address-family and interface/termination-point bearer invariants."
+        }
+      ],
+      "experiments": [],
+      "no_counterpart": [
+        "b.network",
+        "b.tpid"
+      ],
+      "done": true
+    }
+  ]
+}

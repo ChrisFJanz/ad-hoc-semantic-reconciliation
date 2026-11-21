@@ -1,0 +1,364 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_medium",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 122,
+    "precision": 1.0,
+    "recall": 0.813,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 120,
+    "residual_experiment_only": 0,
+    "residual_native": 64,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 53362,
+    "reasoning_tokens": 838,
+    "latency_s": 27.13,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 122,
+      "open_a": 28,
+      "open_b": 92,
+      "lookalikes_a": 28,
+      "lookalikes_b": 24
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.yqb-cr-07/et-0/0/0",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/6",
+            "reason": "Look-alike member of ae7; the two parallel member links are not distinguished by the static records."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/3",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/1",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/2",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/5",
+            "reason": "Look-alike member of ae7; the two parallel member links are not distinguished by the static records."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/3",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/2",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/0",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yhz-cr-08/et-1/0/0",
+            "reason": "Look-alike member of ae9; the two parallel member links to the ae4 members on yqb-cr-14 are not distinguished."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/1",
+            "reason": "Look-alike member of ae4; the four parallel member ports and their opposite ports are not distinguished by the static records."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/7",
+            "reason": "Look-alike member of ae9; the two parallel member links to the ae4 members on yqb-cr-14 are not distinguished."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/0",
+            "reason": "Look-alike member of ae2; the two parallel links to yyz-cr-18 ae12 are not distinguished."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/1",
+            "reason": "Look-alike member of ae2; the two parallel links to yyz-cr-18 ae12 are not distinguished."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/3",
+            "reason": "Look-alike member of ae4; the two parallel links to yhz-cr-08 ae9 are not distinguished."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/2",
+            "reason": "Look-alike member of ae4; the two parallel links to yhz-cr-08 ae9 are not distinguished."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/2",
+            "reason": "Look-alike member of ae3; the two parallel links to yyz-cr-18 ae8 are not distinguished."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/1",
+            "reason": "Look-alike member of ae3; the two parallel links to yyz-cr-18 ae8 are not distinguished."
+          },
+          {
+            "id": "a.ywg-ar-15/et-1/0/0",
+            "reason": "Look-alike member of ae9; the two parallel links to yvr-er-17 ae2 are not distinguished."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/7",
+            "reason": "Look-alike member of ae9; the two parallel links to yvr-er-17 ae2 are not distinguished."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/1",
+            "reason": "Look-alike member of ae2; the two parallel links to ywg-ar-15 ae9 are not distinguished."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/0",
+            "reason": "Look-alike member of ae2; the two parallel links to ywg-ar-15 ae9 are not distinguished."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/0",
+            "reason": "Look-alike member of ae2; the two parallel links to yqb-cr-07 ae7 are not distinguished."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/3",
+            "reason": "Look-alike member of ae12; the two parallel links to yyc-ar-13 ae2 are not distinguished."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/6",
+            "reason": "Look-alike member of ae8; the two parallel links to ywg-ar-15 ae3 are not distinguished."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/7",
+            "reason": "Look-alike member of ae8; the two parallel links to ywg-ar-15 ae3 are not distinguished."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/1",
+            "reason": "Look-alike member of ae2; the two parallel links to yqb-cr-07 ae7 are not distinguished."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/2",
+            "reason": "Look-alike member of ae12; the two parallel links to yyc-ar-13 ae2 are not distinguished."
+          },
+          {
+            "id": "b.tp-e7a21bd5",
+            "reason": "Physical member of yhz-cr-08 ae9; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-dbc83434",
+            "reason": "Physical member of yhz-cr-08 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-d773459b",
+            "reason": "Physical member of yhz-cr-08 ae9; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-123cee98",
+            "reason": "Physical member of yhz-cr-08 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-0f1e44d2",
+            "reason": "Physical member of yhz-cr-08 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-5ef78e17",
+            "reason": "Physical member of yhz-cr-08 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-937d200e",
+            "reason": "Physical member of yyz-cr-18 ae8; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-7c77feb2",
+            "reason": "Physical member of yyz-cr-18 ae12; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-12e5712c",
+            "reason": "Physical member of yyz-cr-18 ae12; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-a81d81a4",
+            "reason": "Physical member of yyz-cr-18 ae2; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-d663803f",
+            "reason": "Physical member of yyz-cr-18 ae8; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-4f9f24c4",
+            "reason": "Physical member of yyz-cr-18 ae2; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-047ae90f",
+            "reason": "Physical member of yvr-er-17 ae2; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-e8abb3b4",
+            "reason": "Physical member of yvr-er-17 ae2; its two A counterparts are look-alikes."
+          },
+          {
+            "id": "b.tp-6f0fc1e3",
+            "reason": "Physical member of yyc-ar-13 ae2; both member ports are record-indistinguishable look-alikes."
+          },
+          {
+            "id": "b.tp-015ca880",
+            "reason": "Physical member of yyc-ar-13 ae2; both member ports are record-indistinguishable look-alikes."
+          },
+          {
+            "id": "b.tp-fed02a3f",
+            "reason": "Physical member of yqb-cr-14 ae4; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-678bedc9",
+            "reason": "Physical member of yqb-cr-14 ae4; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-10ff6ac4",
+            "reason": "Physical member of yqb-cr-07 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-054b8383",
+            "reason": "Physical member of yqb-cr-07 ae7; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-c1f3d7a3",
+            "reason": "Physical member of yqb-cr-07 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-b55f8e58",
+            "reason": "Physical member of yqb-cr-07 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-e3e12334",
+            "reason": "Physical member of yqb-cr-07 ae4; it participates in the unresolved four-by-four parallel-member symmetry."
+          },
+          {
+            "id": "b.tp-2d8c73e6",
+            "reason": "Physical member of yqb-cr-07 ae7; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-2a489b0c",
+            "reason": "Physical member of ywg-ar-15 ae3; both member ports are record-indistinguishable look-alikes."
+          },
+          {
+            "id": "b.tp-4063fc60",
+            "reason": "Physical member of ywg-ar-15 ae3; both member ports are record-indistinguishable look-alikes."
+          },
+          {
+            "id": "b.tp-9defe48c",
+            "reason": "Physical member of ywg-ar-15 ae9; its A counterparts form an unresolved two-port look-alike group."
+          },
+          {
+            "id": "b.tp-0ebf1200",
+            "reason": "Physical member of ywg-ar-15 ae9; its A counterparts form an unresolved two-port look-alike group."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-abbdcbf5",
+          "b.link-76e02b18",
+          "b.link-471b7887",
+          "b.link-5b44279b",
+          "b.link-7df8ea6d",
+          "b.link-57366802",
+          "b.link-a0bc6774",
+          "b.link-ceb56e00",
+          "b.link-008e5901",
+          "b.link-f4986a8d",
+          "b.link-e3121429",
+          "b.link-efc82c46",
+          "b.link-0e686a07",
+          "b.link-5d8a3191",
+          "b.link-0156be09",
+          "b.link-8d18018e",
+          "b.link-b5b95b58",
+          "b.link-fe867d38",
+          "b.link-f9cf9522",
+          "b.link-16217285",
+          "b.link-3b310467",
+          "b.link-66ac273c",
+          "b.link-6c84f475",
+          "b.link-dd43da11",
+          "b.link-ade40325",
+          "b.link-919b7bc1",
+          "b.link-24d86818",
+          "b.link-44bd8827",
+          "b.link-fbbc6fc0",
+          "b.link-c9b3345c",
+          "b.link-816f5653",
+          "b.link-df84fbb5",
+          "b.link-0414622e",
+          "b.link-f9299b07",
+          "b.link-3af2aa33",
+          "b.link-1761be62",
+          "b.link-4f8f57ea",
+          "b.link-d6d01cfc",
+          "b.link-c8bdceda",
+          "b.link-8c9c41e4",
+          "b.link-8d2a0c9c",
+          "b.link-1004178b",
+          "b.link-999fca3b",
+          "b.link-62a17da1",
+          "b.link-df41dd1e",
+          "b.link-8fd188f7",
+          "b.link-09d70270",
+          "b.link-995b950f",
+          "b.link-733be49f",
+          "b.link-15528831",
+          "b.link-81cd8332",
+          "b.link-c7f85069",
+          "b.link-3d71cf67",
+          "b.link-ee7770b4",
+          "b.link-7e5444cd",
+          "b.link-d7319301",
+          "b.link-baa8d9b0",
+          "b.link-56df57ae",
+          "b.link-b00c1b19",
+          "b.link-86e327ec",
+          "b.link-faed77df",
+          "b.link-b87b9e2d",
+          "b.link-3f49ad96",
+          "b.link-b6f2ec53"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 122,
+      "by_topology": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 28,
+      "left_open_lookalikes": 28,
+      "open_a_lookalikes": 28,
+      "device_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "one_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 38,
+    "precision": 1.0,
+    "recall": 0.76,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 45,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 3,
+    "interrogate_calls": 6,
+    "provision_calls": 0,
+    "turns": 3,
+    "total_tokens": 60825,
+    "reasoning_tokens": 1693,
+    "latency_s": 38.97,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "one_inert",
+      "stack": "sequenced-reasoner+anchors+one_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 38,
+      "open_a": 12,
+      "open_b": 33,
+      "lookalikes_a": 12,
+      "lookalikes_b": 6
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Look-alike bundle member; awaiting a live identifier to distinguish the two parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Look-alike bundle member; resolvable by elimination and topology after its peer is identified."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Look-alike ae4 member; resolvable through the ae3-to-ae4 physical-link topology after a YWG member is identified."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Look-alike ae4 member; resolvable through the ae3-to-ae4 physical-link topology after a YWG member is identified."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Look-alike bundle member; awaiting a live identifier to distinguish the two parallel ae8-to-ae2 links."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Look-alike bundle member; resolvable by elimination and topology after its peer is identified."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Look-alike ae2 member; resolvable through the ae8-to-ae2 physical-link topology after a YXE member is identified."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Look-alike ae2 member; resolvable through the ae8-to-ae2 physical-link topology after a YXE member is identified."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Look-alike bundle member; awaiting a live identifier to distinguish the two parallel ae5-to-ae6 links."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Look-alike bundle member; resolvable by elimination and topology after its peer is identified."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Look-alike ae6 member; resolvable through the ae5-to-ae6 physical-link topology after a YOW member is identified."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Look-alike ae6 member; resolvable through the ae5-to-ae6 physical-link topology after a YOW member is identified."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Candidate ae4 member in an unresolved pair of parallel links."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Candidate ae4 member in an unresolved pair of parallel links."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Candidate ae3 member in an unresolved pair of parallel links."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Candidate ae3 member in an unresolved pair of parallel links."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "Candidate ae8 member pending live identification of an A-side look-alike."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "Candidate ae8 member pending live identification of an A-side look-alike."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "Candidate ae2 member pending resolution of the corresponding ae8 member."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "Candidate ae2 member pending resolution of the corresponding ae8 member."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "Candidate ae5 member pending live identification of an A-side look-alike."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "Candidate ae5 member pending live identification of an A-side look-alike."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "Candidate ae6 member pending resolution of the corresponding ae5 member."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "Candidate ae6 member pending resolution of the corresponding ae5 member."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "device_questions": [
+          {
+            "individual_id": "a.ywg-cr-00/et-0/0/1",
+            "attribute": "mac-address"
+          },
+          {
+            "individual_id": "a.yxe-cr-03/et-0/0/6",
+            "attribute": "mac-address"
+          },
+          {
+            "individual_id": "a.yow-ar-05/et-0/0/3",
+            "attribute": "mac-address"
+          }
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.ywg-cr-00/et-0/0/1'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/6",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.yxe-cr-03/et-0/0/6",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.yxe-cr-03/et-0/0/6'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.yow-ar-05/et-0/0/3'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Unresolved look-alike ae3 member; the previous query used the wrong attribute name."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Unresolved look-alike ae3 member; distinguishable after one parallel member is identified live."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Unresolved look-alike ae4 member opposite the ae3 pair."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Unresolved look-alike ae4 member opposite the ae3 pair."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Unresolved look-alike ae8 member; the previous query used the wrong attribute name."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Unresolved look-alike ae8 member; distinguishable after one parallel member is identified live."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Unresolved look-alike ae2 member opposite the ae8 pair."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Unresolved look-alike ae2 member opposite the ae8 pair."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Unresolved look-alike ae5 member; the previous query used the wrong attribute name."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Unresolved look-alike ae5 member; distinguishable after one parallel member is identified live."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Unresolved look-alike ae6 member opposite the ae5 pair."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Unresolved look-alike ae6 member opposite the ae5 pair."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Unresolved ae4 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Unresolved ae4 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Unresolved ae3 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Unresolved ae3 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "Unresolved ae8 member pending live identification."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "Unresolved ae8 member pending live identification."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "Unresolved ae2 member opposite the ae8 pair."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "Unresolved ae2 member opposite the ae8 pair."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "Unresolved ae5 member pending live identification."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "Unresolved ae5 member pending live identification."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "Unresolved ae6 member opposite the ae5 pair."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "Unresolved ae6 member opposite the ae5 pair."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "device_questions": [
+          {
+            "individual_id": "a.ywg-cr-00/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "individual_id": "a.yxe-cr-03/et-0/0/6",
+            "attribute": "hardware-address"
+          },
+          {
+            "individual_id": "a.yow-ar-05/et-0/0/3",
+            "attribute": "hardware-address"
+          }
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:33:5f:97:3d:aa"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/6",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.yxe-cr-03/et-0/0/6",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:42:69:da:1c:f6"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0e:75:5a:5c:2e"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Look-alike ae3 member; its live hardware-address is not carried by B, so no identifier join was made."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Look-alike ae3 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Look-alike ae8 member; its live hardware-address is not carried by B, so no identifier join was made."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Look-alike ae4 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Look-alike ae8 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Look-alike ae4 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Look-alike ae5 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Look-alike ae2 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Look-alike ae5 member; its live hardware-address is not carried by B, so no identifier join was made."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Look-alike ae2 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Look-alike ae6 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Look-alike ae6 member; topology does not distinguish the parallel members without a successful network check."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Unresolved look-alike ae4 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "Unresolved ae8 member; the corresponding A look-alike could not be joined by hardware-address."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Unresolved look-alike ae4 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "Unresolved ae8 member; the corresponding A look-alike could not be joined by hardware-address."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "Unresolved ae5 member; the corresponding A look-alike could not be joined by hardware-address."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "Unresolved ae5 member; the corresponding A look-alike could not be joined by hardware-address."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "Unresolved ae2 member opposite the unresolved ae8 pair."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "Unresolved ae2 member opposite the unresolved ae8 pair."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "Unresolved ae6 member opposite the unresolved ae5 pair."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "Unresolved ae6 member opposite the unresolved ae5 pair."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Unresolved look-alike ae3 member in the parallel ae3-to-ae4 links."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Unresolved look-alike ae3 member in the parallel ae3-to-ae4 links."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "device_questions": [],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "one_inert",
+      "by_anchor": 38,
+      "by_topology": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 12,
+      "left_open_lookalikes": 12,
+      "open_a_lookalikes": 12,
+      "device_questions": 6
+    }
+  ]
+}

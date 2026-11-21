@@ -1,0 +1,5217 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "two-agent",
+  "row": {
+    "case": "instance_ipnet_large",
+    "model": "gpt-5.6-sol",
+    "placement": "both_cognitive",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 658,
+    "precision": 1.0,
+    "recall": 1.0,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 281,
+    "residual_experiment_only": 0,
+    "residual_native": 281,
+    "confirmed_provision": 116,
+    "refuted_provision": 50,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 166,
+    "turns": 14,
+    "total_tokens": 1050145,
+    "reasoning_tokens": 12315,
+    "latency_s": 249.01,
+    "mean_conf_correct": 0.588,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "two-agent"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_cognitive",
+      "stack": "two-agent-instance+op+confirm-lookalikes+staged60+anchors",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ]
+    },
+    {
+      "step": "stage",
+      "stage": 1,
+      "kind": "batch",
+      "devices_a": [
+        "a.yhz-ar-00",
+        "a.yeg-ar-83",
+        "a.yhz-cr-26",
+        "a.yow-cr-80",
+        "a.yul-er-94",
+        "a.yeg-ar-92",
+        "a.ywg-ar-79",
+        "a.yxe-ar-41",
+        "a.yxe-cr-30",
+        "a.yyc-ar-34",
+        "a.yyc-cr-17",
+        "a.yyz-ar-71",
+        "a.yeg-cr-10",
+        "a.yxe-er-93",
+        "a.yhz-er-25",
+        "a.yqb-cr-21",
+        "a.yeg-er-70",
+        "a.yyz-er-14",
+        "a.yhz-ar-31"
+      ],
+      "devices_b": [
+        "b.node-df41dd1e",
+        "b.node-b0de3a81",
+        "b.node-08159f23",
+        "b.node-0dad598f",
+        "b.node-b7d042b8",
+        "b.node-2724d2f1",
+        "b.node-1c081ae4",
+        "b.node-57d4b03f",
+        "b.node-8e8abfe9",
+        "b.node-7ea483df",
+        "b.node-7f8191e7",
+        "b.node-d37b5b34",
+        "b.node-f4f9e29b",
+        "b.node-b5635ec5",
+        "b.node-0985fe0f",
+        "b.node-0ddeda32",
+        "b.node-df8c1c32",
+        "b.node-0cd2bcb7",
+        "b.node-88b59079"
+      ],
+      "n_a": 60,
+      "n_b": 202
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "b.tp-8fd188f7",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-5ecba5d3",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-eb7872b0",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-ffd0c3f2",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-fec6d601",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-5c801000",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-ff4922c6",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-930f9d4e",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b20341a0",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-61e4fa18",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-81cd8332",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-791b5042",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-3680e5e6",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0e969a22",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a60577f4",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-5b708e65",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-7e54c5a5",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a24b3926",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b6f2ec53",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-faed77df",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a4fc1b11",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-c0685b31",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e5a95655",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-9cc80142",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-ce015c53",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-75c94ec2",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-67eeea35",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-932f08a7",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b8b42f05",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-ce52ca95",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0d383fc0",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-6061d88e",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-03acf333",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-3fac6fb1",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-770119ba",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-975df91d",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a7b820a4",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-9a00d4a0",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0fe281e8",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-87938130",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-84e5f3cf",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-36be8b25",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-45453a60",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2c727737",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-705a5971",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-ae8060f9",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-dec4bb46",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-4aff8842",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-30d8e67a",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-df84fbb5",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0414622e",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-c9b3345c",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-658190c9",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-9f178029",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-12c923d3",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-1d44d71a",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-91b1a738",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-c65e93a3",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-4983031f",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e108bf75",
+            "ask": "Provide all attributes and topology, especially owning device, bundle membership, LLDP neighbour, speed, and interface type."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-8fd188f7",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-df41dd1e (settled as a.yhz-ar-00); member of settled bundle b.tp-2b499bd9 (a.yhz-ar-00/ae2); endpoint of b.link-9684b319 to b.tp-930f9d4e on b.node-0dad598f (a.yow-cr-80)."
+          },
+          {
+            "my_id": "b.tp-5ecba5d3",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-df41dd1e (a.yhz-ar-00); member of settled bundle b.tp-2b499bd9 (a.yhz-ar-00/ae2); endpoint of b.link-d1736d5c to b.tp-b20341a0 on b.node-0dad598f (a.yow-cr-80)."
+          },
+          {
+            "my_id": "b.tp-eb7872b0",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-b0de3a81 (a.yeg-ar-83); member of settled bundle b.tp-a34234de (a.yeg-ar-83/ae9); endpoint of b.link-0fefbe19 to b.tp-81cd8332 on b.node-b7d042b8 (a.yul-er-94)."
+          },
+          {
+            "my_id": "b.tp-ffd0c3f2",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-b0de3a81 (a.yeg-ar-83); member of settled bundle b.tp-a34234de (a.yeg-ar-83/ae9); endpoint of b.link-891e3c3c to b.tp-791b5042 on b.node-b7d042b8 (a.yul-er-94)."
+          },
+          {
+            "my_id": "b.tp-fec6d601",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-08159f23 (a.yhz-cr-26); member of settled bundle b.tp-723bece7 (a.yhz-cr-26/ae10); endpoint of b.link-dc87b499 to b.tp-75c94ec2 on b.node-7ea483df (a.yyc-ar-34)."
+          },
+          {
+            "my_id": "b.tp-5c801000",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-08159f23 (a.yhz-cr-26); member of settled bundle b.tp-723bece7 (a.yhz-cr-26/ae10); endpoint of b.link-0340295e to b.tp-ce015c53 on b.node-7ea483df (a.yyc-ar-34)."
+          },
+          {
+            "my_id": "b.tp-ff4922c6",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0dad598f (a.yow-cr-80); member of settled bundle b.tp-ee11eda0 (a.yow-cr-80/ae2); endpoint of b.link-60afe2a8 to b.tp-87938130 on b.node-f4f9e29b (a.yeg-cr-10)."
+          },
+          {
+            "my_id": "b.tp-930f9d4e",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0dad598f (a.yow-cr-80); member of settled bundle b.tp-4e15c3b2 (a.yow-cr-80/ae8); endpoint of b.link-9684b319 to b.tp-8fd188f7 on b.node-df41dd1e (a.yhz-ar-00)."
+          },
+          {
+            "my_id": "b.tp-b20341a0",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0dad598f (a.yow-cr-80); member of settled bundle b.tp-4e15c3b2 (a.yow-cr-80/ae8); endpoint of b.link-d1736d5c to b.tp-5ecba5d3 on b.node-df41dd1e (a.yhz-ar-00)."
+          },
+          {
+            "my_id": "b.tp-61e4fa18",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0dad598f (a.yow-cr-80); member of settled bundle b.tp-ee11eda0 (a.yow-cr-80/ae2); endpoint of b.link-941dd911 to b.tp-0fe281e8 on b.node-f4f9e29b (a.yeg-cr-10)."
+          },
+          {
+            "my_id": "b.tp-81cd8332",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-b7d042b8 (a.yul-er-94); member of settled bundle b.tp-c7f85069 (a.yul-er-94/ae2); endpoint of b.link-0fefbe19 to b.tp-eb7872b0 on b.node-b0de3a81 (a.yeg-ar-83)."
+          },
+          {
+            "my_id": "b.tp-791b5042",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-b7d042b8 (a.yul-er-94); member of settled bundle b.tp-c7f85069 (a.yul-er-94/ae2); endpoint of b.link-891e3c3c to b.tp-ffd0c3f2 on b.node-b0de3a81 (a.yeg-ar-83)."
+          },
+          {
+            "my_id": "b.tp-3680e5e6",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-2724d2f1 (a.yeg-ar-92); member of settled bundle b.tp-bbfea825 (a.yeg-ar-92/ae5); endpoint of b.link-afa6cd85 to b.tp-2c727737 on b.node-b5635ec5 (a.yxe-er-93)."
+          },
+          {
+            "my_id": "b.tp-0e969a22",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-2724d2f1 (a.yeg-ar-92); member of settled bundle b.tp-bbfea825 (a.yeg-ar-92/ae5); endpoint of b.link-bd22b009 to b.tp-45453a60 on b.node-b5635ec5 (a.yxe-er-93)."
+          },
+          {
+            "my_id": "b.tp-a60577f4",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-1c081ae4 (a.ywg-ar-79); member of settled bundle b.tp-04dcac4f (a.ywg-ar-79/ae6); endpoint of b.link-68bdbb4f to settled b.tp-1d44d71a (a.yyz-er-14/et-0/0/0)."
+          },
+          {
+            "my_id": "b.tp-5b708e65",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-1c081ae4 (a.ywg-ar-79); member of settled bundle b.tp-04dcac4f (a.ywg-ar-79/ae6); endpoint of b.link-db7f0f18 to b.tp-91b1a738 on b.node-0cd2bcb7 (a.yyz-er-14)."
+          },
+          {
+            "my_id": "b.tp-7e54c5a5",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-57d4b03f (a.yxe-ar-41); member of settled bundle b.tp-b87b9e2d (a.yxe-ar-41/ae6); endpoint of b.link-62a1ca65 to b.tp-12c923d3 on b.node-0cd2bcb7 (a.yyz-er-14)."
+          },
+          {
+            "my_id": "b.tp-a24b3926",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-57d4b03f (a.yxe-ar-41); member of settled bundle b.tp-9c93fd4e (a.yxe-ar-41/ae11); endpoint of b.link-6cc02cf1 to b.tp-658190c9 on b.node-df8c1c32 (a.yeg-er-70)."
+          },
+          {
+            "my_id": "b.tp-b6f2ec53",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-57d4b03f (a.yxe-ar-41); member of settled bundle b.tp-9c93fd4e (a.yxe-ar-41/ae11); endpoint of b.link-d7fcbafb to b.tp-9f178029 on b.node-df8c1c32 (a.yeg-er-70)."
+          },
+          {
+            "my_id": "b.tp-faed77df",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-57d4b03f (a.yxe-ar-41); member of settled bundle b.tp-b87b9e2d (a.yxe-ar-41/ae6); endpoint of b.link-e34fd286 to b.tp-c65e93a3 on b.node-0cd2bcb7 (a.yyz-er-14)."
+          },
+          {
+            "my_id": "b.tp-a4fc1b11",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-8e8abfe9 (a.yxe-cr-30); member of settled bundle b.tp-0dd27e88 (a.yxe-cr-30/ae3); endpoint of b.link-8d1ceb8f to b.tp-c9b3345c on b.node-0ddeda32 (a.yqb-cr-21)."
+          },
+          {
+            "my_id": "b.tp-c0685b31",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-8e8abfe9 (a.yxe-cr-30); member of settled bundle b.tp-123d8abd (a.yxe-cr-30/ae13); endpoint of b.link-238034bc to settled b.tp-654d3d03 on b.node-4cd15f00 (a.yxe-ar-63)."
+          },
+          {
+            "my_id": "b.tp-e5a95655",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-8e8abfe9 (a.yxe-cr-30); member of settled bundle b.tp-123d8abd (a.yxe-cr-30/ae13); endpoint of b.link-ce6af56f to settled b.tp-3764620d on b.node-4cd15f00 (a.yxe-ar-63)."
+          },
+          {
+            "my_id": "b.tp-9cc80142",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-8e8abfe9 (a.yxe-cr-30); member of settled bundle b.tp-0dd27e88 (a.yxe-cr-30/ae3); endpoint of b.link-ee86aefa to b.tp-30d8e67a on b.node-0ddeda32 (a.yqb-cr-21)."
+          },
+          {
+            "my_id": "b.tp-ce015c53",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7ea483df (a.yyc-ar-34); member of settled bundle b.tp-9d33f163 (a.yyc-ar-34/ae3); endpoint of b.link-0340295e to b.tp-5c801000 on b.node-08159f23 (a.yhz-cr-26)."
+          },
+          {
+            "my_id": "b.tp-75c94ec2",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7ea483df (a.yyc-ar-34); member of settled bundle b.tp-9d33f163 (a.yyc-ar-34/ae3); endpoint of b.link-dc87b499 to b.tp-fec6d601 on b.node-08159f23 (a.yhz-cr-26)."
+          },
+          {
+            "my_id": "b.tp-67eeea35",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7f8191e7 (a.yyc-cr-17); member of settled bundle b.tp-0c646f55 (a.yyc-cr-17/ae19); endpoint of b.link-b73a6e9c to settled b.tp-b7021a56 on b.node-6277dfb0 (a.yqb-ar-56)."
+          },
+          {
+            "my_id": "b.tp-932f08a7",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7f8191e7 (a.yyc-cr-17); member of settled bundle b.tp-fe00af1b (a.yyc-cr-17/ae16); endpoint of b.link-61efcca2 to settled b.tp-41b4d904 on b.node-70b7b104 (a.yow-ar-55)."
+          },
+          {
+            "my_id": "b.tp-b8b42f05",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7f8191e7 (a.yyc-cr-17); member of settled bundle b.tp-fe00af1b (a.yyc-cr-17/ae16); endpoint of b.link-a5e9c093 to settled b.tp-24b3e116 on b.node-70b7b104 (a.yow-ar-55)."
+          },
+          {
+            "my_id": "b.tp-ce52ca95",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7f8191e7 (a.yyc-cr-17); member of settled bundle b.tp-af83645a (a.yyc-cr-17/ae12); endpoint of b.link-9a09d688 to b.tp-e108bf75 on b.node-88b59079 (a.yhz-ar-31)."
+          },
+          {
+            "my_id": "b.tp-0d383fc0",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7f8191e7 (a.yyc-cr-17); member of settled bundle b.tp-0c646f55 (a.yyc-cr-17/ae19); endpoint of b.link-8d8b915b to settled b.tp-8c5401cf on b.node-6277dfb0 (a.yqb-ar-56)."
+          },
+          {
+            "my_id": "b.tp-6061d88e",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-7f8191e7 (a.yyc-cr-17); member of settled bundle b.tp-af83645a (a.yyc-cr-17/ae12); endpoint of b.link-12141bc0 to b.tp-4983031f on b.node-88b59079 (a.yhz-ar-31)."
+          },
+          {
+            "my_id": "b.tp-03acf333",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-d37b5b34 (a.yyz-ar-71); member of settled bundle b.tp-18e01385 (a.yyz-ar-71/ae8); endpoint of b.link-1d09617e to b.tp-ae8060f9 on b.node-0985fe0f (a.yhz-er-25)."
+          },
+          {
+            "my_id": "b.tp-3fac6fb1",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-d37b5b34 (a.yyz-ar-71); member of settled bundle b.tp-18e01385 (a.yyz-ar-71/ae8); endpoint of b.link-00b4144f to b.tp-705a5971 on b.node-0985fe0f (a.yhz-er-25)."
+          },
+          {
+            "my_id": "b.tp-770119ba",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-a1af2e83 (a.yeg-cr-10/ae4); endpoint of b.link-fa10c40c to settled b.tp-94a27d78 on b.node-9c9f3a0f (a.yul-cr-05)."
+          },
+          {
+            "my_id": "b.tp-975df91d",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-b7d774de (a.yeg-cr-10/ae16); endpoint of b.link-5078a73b to settled b.tp-2d8c73e6 on b.node-817cdc42 (a.yeg-ar-89)."
+          },
+          {
+            "my_id": "b.tp-a7b820a4",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-b7d774de (a.yeg-cr-10/ae16); endpoint of b.link-70650e9a to settled b.tp-26e8cb85 on b.node-817cdc42 (a.yeg-ar-89)."
+          },
+          {
+            "my_id": "b.tp-9a00d4a0",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-a1af2e83 (a.yeg-cr-10/ae4); endpoint of b.link-930733a4 to settled b.tp-7080359a on b.node-9c9f3a0f (a.yul-cr-05)."
+          },
+          {
+            "my_id": "b.tp-0fe281e8",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-480324ff (a.yeg-cr-10/ae7); endpoint of b.link-941dd911 to b.tp-61e4fa18 on b.node-0dad598f (a.yow-cr-80)."
+          },
+          {
+            "my_id": "b.tp-87938130",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-480324ff (a.yeg-cr-10/ae7); endpoint of b.link-60afe2a8 to b.tp-ff4922c6 on b.node-0dad598f (a.yow-cr-80)."
+          },
+          {
+            "my_id": "b.tp-84e5f3cf",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-a1af2e83 (a.yeg-cr-10/ae4); endpoint of b.link-891295e3 to settled b.tp-2fe4f18e on b.node-9c9f3a0f (a.yul-cr-05)."
+          },
+          {
+            "my_id": "b.tp-36be8b25",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-f4f9e29b (a.yeg-cr-10); member of settled bundle b.tp-a1af2e83 (a.yeg-cr-10/ae4); endpoint of b.link-46edc356 to settled b.tp-315386af on b.node-9c9f3a0f (a.yul-cr-05)."
+          },
+          {
+            "my_id": "b.tp-45453a60",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-b5635ec5 (a.yxe-er-93); member of settled bundle b.tp-b0934096 (a.yxe-er-93/ae2); endpoint of b.link-bd22b009 to b.tp-0e969a22 on b.node-2724d2f1 (a.yeg-ar-92)."
+          },
+          {
+            "my_id": "b.tp-2c727737",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-b5635ec5 (a.yxe-er-93); member of settled bundle b.tp-b0934096 (a.yxe-er-93/ae2); endpoint of b.link-afa6cd85 to b.tp-3680e5e6 on b.node-2724d2f1 (a.yeg-ar-92)."
+          },
+          {
+            "my_id": "b.tp-705a5971",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-0985fe0f (a.yhz-er-25); member of settled bundle b.tp-a792ba9e (a.yhz-er-25/ae2); endpoint of b.link-00b4144f to b.tp-3fac6fb1 on b.node-d37b5b34 (a.yyz-ar-71)."
+          },
+          {
+            "my_id": "b.tp-ae8060f9",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-0985fe0f (a.yhz-er-25); member of settled bundle b.tp-a792ba9e (a.yhz-er-25/ae2); endpoint of b.link-1d09617e to b.tp-03acf333 on b.node-d37b5b34 (a.yyz-ar-71)."
+          },
+          {
+            "my_id": "b.tp-dec4bb46",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0ddeda32 (a.yqb-cr-21); member of settled bundle b.tp-f9299b07 (a.yqb-cr-21/ae7); endpoint of b.link-19e0afdd to settled b.tp-4ffbf640 on b.node-55d84441 (a.ywg-cr-11)."
+          },
+          {
+            "my_id": "b.tp-4aff8842",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0ddeda32 (a.yqb-cr-21); member of settled bundle b.tp-f9299b07 (a.yqb-cr-21/ae7); endpoint of b.link-b49a41a5 to settled b.tp-70800cc1 on b.node-55d84441 (a.ywg-cr-11)."
+          },
+          {
+            "my_id": "b.tp-30d8e67a",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0ddeda32 (a.yqb-cr-21); member of settled bundle b.tp-816f5653 (a.yqb-cr-21/ae2); endpoint of b.link-ee86aefa to b.tp-9cc80142 on b.node-8e8abfe9 (a.yxe-cr-30)."
+          },
+          {
+            "my_id": "b.tp-df84fbb5",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0ddeda32 (a.yqb-cr-21); member of settled bundle b.tp-f9299b07 (a.yqb-cr-21/ae7); endpoint of b.link-aca7c2a7 to settled b.tp-658402d9 on b.node-55d84441 (a.ywg-cr-11)."
+          },
+          {
+            "my_id": "b.tp-0414622e",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0ddeda32 (a.yqb-cr-21); member of settled bundle b.tp-f9299b07 (a.yqb-cr-21/ae7); endpoint of b.link-38288f44 to settled b.tp-186052b4 on b.node-55d84441 (a.ywg-cr-11)."
+          },
+          {
+            "my_id": "b.tp-c9b3345c",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-0ddeda32 (a.yqb-cr-21); member of settled bundle b.tp-816f5653 (a.yqb-cr-21/ae2); endpoint of b.link-8d1ceb8f to b.tp-a4fc1b11 on b.node-8e8abfe9 (a.yxe-cr-30)."
+          },
+          {
+            "my_id": "b.tp-658190c9",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-df8c1c32 (a.yeg-er-70); member of settled bundle b.tp-3989af15 (a.yeg-er-70/ae3); endpoint of b.link-6cc02cf1 to b.tp-a24b3926 on b.node-57d4b03f (a.yxe-ar-41)."
+          },
+          {
+            "my_id": "b.tp-9f178029",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-df8c1c32 (a.yeg-er-70); member of settled bundle b.tp-3989af15 (a.yeg-er-70/ae3); endpoint of b.link-d7fcbafb to b.tp-b6f2ec53 on b.node-57d4b03f (a.yxe-ar-41)."
+          },
+          {
+            "my_id": "b.tp-12c923d3",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-0cd2bcb7 (a.yyz-er-14); member of settled bundle b.tp-a4854f92 (a.yyz-er-14/ae5); endpoint of b.link-62a1ca65 to b.tp-7e54c5a5 on b.node-57d4b03f (a.yxe-ar-41)."
+          },
+          {
+            "my_id": "b.tp-1d44d71a",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-0cd2bcb7 (a.yyz-er-14); member of settled bundle b.tp-50a816be (a.yyz-er-14/ae2); endpoint of b.link-68bdbb4f to b.tp-a60577f4 on b.node-1c081ae4 (a.ywg-ar-79)."
+          },
+          {
+            "my_id": "b.tp-91b1a738",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-0cd2bcb7 (a.yyz-er-14); member of settled bundle b.tp-50a816be (a.yyz-er-14/ae2); endpoint of b.link-db7f0f18 to b.tp-5b708e65 on b.node-1c081ae4 (a.ywg-ar-79)."
+          },
+          {
+            "my_id": "b.tp-c65e93a3",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 10000000 kbps",
+            "topology": "Owned by b.node-0cd2bcb7 (a.yyz-er-14); member of settled bundle b.tp-a4854f92 (a.yyz-er-14/ae5); endpoint of b.link-e34fd286 to b.tp-faed77df on b.node-57d4b03f (a.yxe-ar-41)."
+          },
+          {
+            "my_id": "b.tp-4983031f",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-88b59079 (a.yhz-ar-31); member of settled bundle b.tp-79f022c5 (a.yhz-ar-31/ae3); endpoint of b.link-12141bc0 to b.tp-6061d88e on b.node-7f8191e7 (a.yyc-cr-17)."
+          },
+          {
+            "my_id": "b.tp-e108bf75",
+            "attributes": "physical-port; lag=false; observed attached-link capacity 100000000 kbps",
+            "topology": "Owned by b.node-88b59079 (a.yhz-ar-31); member of settled bundle b.tp-79f022c5 (a.yhz-ar-31/ae3); endpoint of b.link-9a09d688 to b.tp-ce52ca95 on b.node-7f8191e7 (a.yyc-cr-17)."
+          }
+        ],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-ar-83/et-0/0/7",
+        "b_id": "b.tp-eb7872b0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-ar-83/et-1/0/0",
+        "b_id": "b.tp-ffd0c3f2"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-ar-92/et-0/0/3",
+        "b_id": "b.tp-3680e5e6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-ar-92/et-0/0/4",
+        "b_id": "b.tp-0e969a22"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/0",
+        "b_id": "b.tp-770119ba"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/1",
+        "b_id": "b.tp-9a00d4a0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/2",
+        "b_id": "b.tp-84e5f3cf"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/3",
+        "b_id": "b.tp-36be8b25"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/5",
+        "b_id": "b.tp-0fe281e8"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/6",
+        "b_id": "b.tp-87938130"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-1/0/6",
+        "b_id": "b.tp-975df91d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-1/0/7",
+        "b_id": "b.tp-a7b820a4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-er-70/et-0/0/1",
+        "b_id": "b.tp-658190c9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-er-70/et-0/0/2",
+        "b_id": "b.tp-9f178029"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-ar-00/et-0/0/0",
+        "b_id": "b.tp-8fd188f7"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-ar-00/et-0/0/1",
+        "b_id": "b.tp-5ecba5d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-ar-31/et-0/0/1",
+        "b_id": "b.tp-e108bf75"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-ar-31/et-0/0/2",
+        "b_id": "b.tp-4983031f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-26/et-1/0/0",
+        "b_id": "b.tp-fec6d601"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-26/et-1/0/1",
+        "b_id": "b.tp-5c801000"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-er-25/et-0/0/0",
+        "b_id": "b.tp-ae8060f9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-er-25/et-0/0/1",
+        "b_id": "b.tp-705a5971"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/0",
+        "b_id": "b.tp-61e4fa18"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/1",
+        "b_id": "b.tp-ff4922c6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/6",
+        "b_id": "b.tp-930f9d4e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/7",
+        "b_id": "b.tp-b20341a0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/0",
+        "b_id": "b.tp-c9b3345c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/1",
+        "b_id": "b.tp-30d8e67a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/3",
+        "b_id": "b.tp-dec4bb46"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/4",
+        "b_id": "b.tp-4aff8842"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/5",
+        "b_id": "b.tp-df84fbb5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/6",
+        "b_id": "b.tp-0414622e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yul-er-94/et-0/0/0",
+        "b_id": "b.tp-81cd8332"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yul-er-94/et-0/0/1",
+        "b_id": "b.tp-791b5042"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-79/et-0/0/4",
+        "b_id": "b.tp-a60577f4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-79/et-0/0/5",
+        "b_id": "b.tp-5b708e65"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-ar-41/et-0/0/4",
+        "b_id": "b.tp-7e54c5a5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-ar-41/et-0/0/5",
+        "b_id": "b.tp-faed77df"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-ar-41/et-1/0/1",
+        "b_id": "b.tp-a24b3926"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-ar-41/et-1/0/2",
+        "b_id": "b.tp-b6f2ec53"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-30/et-0/0/1",
+        "b_id": "b.tp-a4fc1b11"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-30/et-0/0/2",
+        "b_id": "b.tp-9cc80142"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-30/et-1/0/3",
+        "b_id": "b.tp-c0685b31"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-30/et-1/0/4",
+        "b_id": "b.tp-e5a95655"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-er-93/et-0/0/0",
+        "b_id": "b.tp-2c727737"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-er-93/et-0/0/1",
+        "b_id": "b.tp-45453a60"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-ar-34/et-0/0/1",
+        "b_id": "b.tp-75c94ec2"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-ar-34/et-0/0/2",
+        "b_id": "b.tp-ce015c53"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-cr-17/et-1/0/2",
+        "b_id": "b.tp-ce52ca95"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-cr-17/et-1/0/3",
+        "b_id": "b.tp-6061d88e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-cr-17/et-1/0/6",
+        "b_id": "b.tp-932f08a7"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-cr-17/et-1/0/7",
+        "b_id": "b.tp-b8b42f05"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-cr-17/et-2/0/1",
+        "b_id": "b.tp-0d383fc0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-cr-17/et-2/0/2",
+        "b_id": "b.tp-67eeea35"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-ar-71/et-0/0/6",
+        "b_id": "b.tp-03acf333"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-ar-71/et-0/0/7",
+        "b_id": "b.tp-3fac6fb1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/0",
+        "b_id": "b.tp-1d44d71a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/1",
+        "b_id": "b.tp-91b1a738"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/3",
+        "b_id": "b.tp-12c923d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/4",
+        "b_id": "b.tp-c65e93a3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yeg-ar-83/et-0/0/7",
+            "their_id": "b.tp-eb7872b0"
+          },
+          {
+            "my_id": "a.yeg-ar-83/et-1/0/0",
+            "their_id": "b.tp-ffd0c3f2"
+          },
+          {
+            "my_id": "a.yeg-ar-92/et-0/0/3",
+            "their_id": "b.tp-3680e5e6"
+          },
+          {
+            "my_id": "a.yeg-ar-92/et-0/0/4",
+            "their_id": "b.tp-0e969a22"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/0",
+            "their_id": "b.tp-770119ba"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/1",
+            "their_id": "b.tp-9a00d4a0"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/2",
+            "their_id": "b.tp-84e5f3cf"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/3",
+            "their_id": "b.tp-36be8b25"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/5",
+            "their_id": "b.tp-0fe281e8"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/6",
+            "their_id": "b.tp-87938130"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-1/0/6",
+            "their_id": "b.tp-975df91d"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-1/0/7",
+            "their_id": "b.tp-a7b820a4"
+          },
+          {
+            "my_id": "a.yeg-er-70/et-0/0/1",
+            "their_id": "b.tp-658190c9"
+          },
+          {
+            "my_id": "a.yeg-er-70/et-0/0/2",
+            "their_id": "b.tp-9f178029"
+          },
+          {
+            "my_id": "a.yhz-ar-00/et-0/0/0",
+            "their_id": "b.tp-8fd188f7"
+          },
+          {
+            "my_id": "a.yhz-ar-00/et-0/0/1",
+            "their_id": "b.tp-5ecba5d3"
+          },
+          {
+            "my_id": "a.yhz-ar-31/et-0/0/1",
+            "their_id": "b.tp-e108bf75"
+          },
+          {
+            "my_id": "a.yhz-ar-31/et-0/0/2",
+            "their_id": "b.tp-4983031f"
+          },
+          {
+            "my_id": "a.yhz-cr-26/et-1/0/0",
+            "their_id": "b.tp-fec6d601"
+          },
+          {
+            "my_id": "a.yhz-cr-26/et-1/0/1",
+            "their_id": "b.tp-5c801000"
+          },
+          {
+            "my_id": "a.yhz-er-25/et-0/0/0",
+            "their_id": "b.tp-ae8060f9"
+          },
+          {
+            "my_id": "a.yhz-er-25/et-0/0/1",
+            "their_id": "b.tp-705a5971"
+          },
+          {
+            "my_id": "a.yow-cr-80/et-0/0/0",
+            "their_id": "b.tp-61e4fa18"
+          },
+          {
+            "my_id": "a.yow-cr-80/et-0/0/1",
+            "their_id": "b.tp-ff4922c6"
+          },
+          {
+            "my_id": "a.yow-cr-80/et-0/0/6",
+            "their_id": "b.tp-930f9d4e"
+          },
+          {
+            "my_id": "a.yow-cr-80/et-0/0/7",
+            "their_id": "b.tp-b20341a0"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/0",
+            "their_id": "b.tp-c9b3345c"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/1",
+            "their_id": "b.tp-30d8e67a"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/3",
+            "their_id": "b.tp-dec4bb46"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/4",
+            "their_id": "b.tp-4aff8842"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/5",
+            "their_id": "b.tp-df84fbb5"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/6",
+            "their_id": "b.tp-0414622e"
+          },
+          {
+            "my_id": "a.yul-er-94/et-0/0/0",
+            "their_id": "b.tp-81cd8332"
+          },
+          {
+            "my_id": "a.yul-er-94/et-0/0/1",
+            "their_id": "b.tp-791b5042"
+          },
+          {
+            "my_id": "a.ywg-ar-79/et-0/0/4",
+            "their_id": "b.tp-a60577f4"
+          },
+          {
+            "my_id": "a.ywg-ar-79/et-0/0/5",
+            "their_id": "b.tp-5b708e65"
+          },
+          {
+            "my_id": "a.yxe-ar-41/et-0/0/4",
+            "their_id": "b.tp-7e54c5a5"
+          },
+          {
+            "my_id": "a.yxe-ar-41/et-0/0/5",
+            "their_id": "b.tp-faed77df"
+          },
+          {
+            "my_id": "a.yxe-ar-41/et-1/0/1",
+            "their_id": "b.tp-a24b3926"
+          },
+          {
+            "my_id": "a.yxe-ar-41/et-1/0/2",
+            "their_id": "b.tp-b6f2ec53"
+          },
+          {
+            "my_id": "a.yxe-cr-30/et-0/0/1",
+            "their_id": "b.tp-a4fc1b11"
+          },
+          {
+            "my_id": "a.yxe-cr-30/et-0/0/2",
+            "their_id": "b.tp-9cc80142"
+          },
+          {
+            "my_id": "a.yxe-cr-30/et-1/0/3",
+            "their_id": "b.tp-c0685b31"
+          },
+          {
+            "my_id": "a.yxe-cr-30/et-1/0/4",
+            "their_id": "b.tp-e5a95655"
+          },
+          {
+            "my_id": "a.yxe-er-93/et-0/0/0",
+            "their_id": "b.tp-2c727737"
+          },
+          {
+            "my_id": "a.yxe-er-93/et-0/0/1",
+            "their_id": "b.tp-45453a60"
+          },
+          {
+            "my_id": "a.yyc-ar-34/et-0/0/1",
+            "their_id": "b.tp-75c94ec2"
+          },
+          {
+            "my_id": "a.yyc-ar-34/et-0/0/2",
+            "their_id": "b.tp-ce015c53"
+          },
+          {
+            "my_id": "a.yyc-cr-17/et-1/0/2",
+            "their_id": "b.tp-ce52ca95"
+          },
+          {
+            "my_id": "a.yyc-cr-17/et-1/0/3",
+            "their_id": "b.tp-6061d88e"
+          },
+          {
+            "my_id": "a.yyc-cr-17/et-1/0/6",
+            "their_id": "b.tp-932f08a7"
+          },
+          {
+            "my_id": "a.yyc-cr-17/et-1/0/7",
+            "their_id": "b.tp-b8b42f05"
+          },
+          {
+            "my_id": "a.yyc-cr-17/et-2/0/1",
+            "their_id": "b.tp-0d383fc0"
+          },
+          {
+            "my_id": "a.yyc-cr-17/et-2/0/2",
+            "their_id": "b.tp-67eeea35"
+          },
+          {
+            "my_id": "a.yyz-ar-71/et-0/0/6",
+            "their_id": "b.tp-03acf333"
+          },
+          {
+            "my_id": "a.yyz-ar-71/et-0/0/7",
+            "their_id": "b.tp-3fac6fb1"
+          },
+          {
+            "my_id": "a.yyz-er-14/et-0/0/0",
+            "their_id": "b.tp-1d44d71a"
+          },
+          {
+            "my_id": "a.yyz-er-14/et-0/0/1",
+            "their_id": "b.tp-91b1a738"
+          },
+          {
+            "my_id": "a.yyz-er-14/et-0/0/3",
+            "their_id": "b.tp-12c923d3"
+          },
+          {
+            "my_id": "a.yyz-er-14/et-0/0/4",
+            "their_id": "b.tp-c65e93a3"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-ar-92/et-0/0/4",
+        "b_id": "b.tp-3680e5e6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-ar-92/et-0/0/3",
+        "b_id": "b.tp-0e969a22"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/1",
+        "b_id": "b.tp-770119ba"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/3",
+        "b_id": "b.tp-9a00d4a0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/0",
+        "b_id": "b.tp-36be8b25"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/6",
+        "b_id": "b.tp-0fe281e8"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/5",
+        "b_id": "b.tp-87938130"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-ar-00/et-0/0/1",
+        "b_id": "b.tp-8fd188f7"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-ar-00/et-0/0/0",
+        "b_id": "b.tp-5ecba5d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/1",
+        "b_id": "b.tp-61e4fa18"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/0",
+        "b_id": "b.tp-ff4922c6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/7",
+        "b_id": "b.tp-930f9d4e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-cr-80/et-0/0/6",
+        "b_id": "b.tp-b20341a0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-79/et-0/0/5",
+        "b_id": "b.tp-a60577f4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-79/et-0/0/4",
+        "b_id": "b.tp-5b708e65"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-ar-41/et-0/0/5",
+        "b_id": "b.tp-7e54c5a5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-ar-41/et-0/0/4",
+        "b_id": "b.tp-faed77df"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-er-93/et-0/0/1",
+        "b_id": "b.tp-2c727737"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-er-93/et-0/0/0",
+        "b_id": "b.tp-45453a60"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/1",
+        "b_id": "b.tp-1d44d71a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/0",
+        "b_id": "b.tp-91b1a738"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/4",
+        "b_id": "b.tp-12c923d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-er-14/et-0/0/3",
+        "b_id": "b.tp-c65e93a3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/5",
+        "b_id": "b.tp-4aff8842"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/6",
+        "b_id": "b.tp-df84fbb5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/4",
+        "b_id": "b.tp-0414622e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "b.tp-3680e5e6",
+            "their_id": "a.yeg-ar-92/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-0e969a22",
+            "their_id": "a.yeg-ar-92/et-0/0/3"
+          },
+          {
+            "my_id": "b.tp-770119ba",
+            "their_id": "a.yeg-cr-10/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-9a00d4a0",
+            "their_id": "a.yeg-cr-10/et-0/0/3"
+          },
+          {
+            "my_id": "b.tp-36be8b25",
+            "their_id": "a.yeg-cr-10/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-0fe281e8",
+            "their_id": "a.yeg-cr-10/et-0/0/6"
+          },
+          {
+            "my_id": "b.tp-87938130",
+            "their_id": "a.yeg-cr-10/et-0/0/5"
+          },
+          {
+            "my_id": "b.tp-8fd188f7",
+            "their_id": "a.yhz-ar-00/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-5ecba5d3",
+            "their_id": "a.yhz-ar-00/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-61e4fa18",
+            "their_id": "a.yow-cr-80/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-ff4922c6",
+            "their_id": "a.yow-cr-80/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-930f9d4e",
+            "their_id": "a.yow-cr-80/et-0/0/7"
+          },
+          {
+            "my_id": "b.tp-b20341a0",
+            "their_id": "a.yow-cr-80/et-0/0/6"
+          },
+          {
+            "my_id": "b.tp-a60577f4",
+            "their_id": "a.ywg-ar-79/et-0/0/5"
+          },
+          {
+            "my_id": "b.tp-5b708e65",
+            "their_id": "a.ywg-ar-79/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-7e54c5a5",
+            "their_id": "a.yxe-ar-41/et-0/0/5"
+          },
+          {
+            "my_id": "b.tp-faed77df",
+            "their_id": "a.yxe-ar-41/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-2c727737",
+            "their_id": "a.yxe-er-93/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-45453a60",
+            "their_id": "a.yxe-er-93/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-1d44d71a",
+            "their_id": "a.yyz-er-14/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-91b1a738",
+            "their_id": "a.yyz-er-14/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-12c923d3",
+            "their_id": "a.yyz-er-14/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-c65e93a3",
+            "their_id": "a.yyz-er-14/et-0/0/3"
+          },
+          {
+            "my_id": "b.tp-4aff8842",
+            "their_id": "a.yqb-cr-21/et-0/0/5"
+          },
+          {
+            "my_id": "b.tp-df84fbb5",
+            "their_id": "a.yqb-cr-21/et-0/0/6"
+          },
+          {
+            "my_id": "b.tp-0414622e",
+            "their_id": "a.yqb-cr-21/et-0/0/4"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/0",
+        "b_id": "b.tp-9a00d4a0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/1",
+        "b_id": "b.tp-36be8b25"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yeg-cr-10/et-0/0/3",
+        "b_id": "b.tp-770119ba"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/4",
+        "b_id": "b.tp-df84fbb5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/5",
+        "b_id": "b.tp-0414622e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-21/et-0/0/6",
+        "b_id": "b.tp-4aff8842"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/0",
+            "their_id": "b.tp-9a00d4a0"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/1",
+            "their_id": "b.tp-36be8b25"
+          },
+          {
+            "my_id": "a.yeg-cr-10/et-0/0/3",
+            "their_id": "b.tp-770119ba"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/4",
+            "their_id": "b.tp-df84fbb5"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/5",
+            "their_id": "b.tp-0414622e"
+          },
+          {
+            "my_id": "a.yqb-cr-21/et-0/0/6",
+            "their_id": "b.tp-4aff8842"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [
+          "b.link-82c18dad",
+          "b.link-98a794cc",
+          "b.link-d1736d5c",
+          "b.link-b8a19d79",
+          "b.link-edf18feb",
+          "b.link-1acf090b",
+          "b.link-b7e6fac5",
+          "b.link-c9b580d5",
+          "b.link-9684b319",
+          "b.link-a6da2caa",
+          "b.link-5ef67109",
+          "b.link-0fefbe19",
+          "b.link-d528f09d",
+          "b.link-6ecc4c53",
+          "b.link-243fb689",
+          "b.link-891e3c3c",
+          "b.link-f39a0622",
+          "b.link-f5896e1d",
+          "b.link-fc519daa",
+          "b.link-bd40b14f",
+          "b.link-8735061c",
+          "b.link-39792604",
+          "b.link-77bd0faf",
+          "b.link-f04322f7",
+          "b.link-dc87b499",
+          "b.link-043e2aed",
+          "b.link-11267869",
+          "b.link-f9b23279",
+          "b.link-9e166f1d",
+          "b.link-7fa04f93",
+          "b.link-1561e882",
+          "b.link-44699f31",
+          "b.link-3cd5076b",
+          "b.link-02e39e97",
+          "b.link-0340295e",
+          "b.link-d09e5094",
+          "b.link-941dd911",
+          "b.link-73dec06e",
+          "b.link-60afe2a8",
+          "b.link-afa6cd85",
+          "b.link-33619c46",
+          "b.link-f3795581",
+          "b.link-3043a89b",
+          "b.link-bd22b009",
+          "b.link-782051b4",
+          "b.link-00ef0862",
+          "b.link-f405a07d",
+          "b.link-7bd2a70d",
+          "b.link-424184f6",
+          "b.link-e5a57170",
+          "b.link-6989d912",
+          "b.link-2741e1d0",
+          "b.link-db7f0f18",
+          "b.link-cf6ad169",
+          "b.link-68bdbb4f",
+          "b.link-62a1ca65",
+          "b.link-efe1cd3e",
+          "b.link-d7fcbafb",
+          "b.link-fafc9195",
+          "b.link-6cc02cf1",
+          "b.link-e34fd286",
+          "b.link-4a78b383",
+          "b.link-1e4e9518",
+          "b.link-28a47801",
+          "b.link-c864dd9f",
+          "b.link-c3be6d06",
+          "b.link-98275d6a",
+          "b.link-238034bc",
+          "b.link-22a39c26",
+          "b.link-1c005ca9",
+          "b.link-ee86aefa",
+          "b.link-48e70a47",
+          "b.link-8d1ceb8f",
+          "b.link-edca5971",
+          "b.link-08c24ad2",
+          "b.link-ce6af56f",
+          "b.link-0ee3b6a0",
+          "b.link-37a1153d",
+          "b.link-2b412120",
+          "b.link-2c623b2c",
+          "b.link-2e7950f4",
+          "b.link-6b1390e8",
+          "b.link-fd186fcf",
+          "b.link-cc14d771",
+          "b.link-317ad8db",
+          "b.link-8599f619",
+          "b.link-9a09d688",
+          "b.link-88e2b599",
+          "b.link-779ad032",
+          "b.link-de328028",
+          "b.link-8d8b915b",
+          "b.link-b4fcd93f",
+          "b.link-a5e9c093",
+          "b.link-bb6f1bb3",
+          "b.link-61efcca2",
+          "b.link-c1a40581",
+          "b.link-915a80d2",
+          "b.link-12175041",
+          "b.link-161e451c",
+          "b.link-95761db0",
+          "b.link-b73a6e9c",
+          "b.link-12141bc0",
+          "b.link-1d09617e",
+          "b.link-fa448264",
+          "b.link-a0c8b2ca",
+          "b.link-00b4144f",
+          "b.link-77a159ef",
+          "b.link-b239a129",
+          "b.link-5236f3f9",
+          "b.link-1058ad00",
+          "b.link-dae9c419",
+          "b.link-5078a73b",
+          "b.link-d112ba23",
+          "b.link-891295e3",
+          "b.link-d4213846",
+          "b.link-2ab0d280",
+          "b.link-09a0323e",
+          "b.link-77ec6f9d",
+          "b.link-52a1db77",
+          "b.link-70650e9a",
+          "b.link-46e19fa1",
+          "b.link-fa10c40c",
+          "b.link-46edc356",
+          "b.link-930733a4",
+          "b.link-fa41111f",
+          "b.link-8b351e38",
+          "b.link-38288f44",
+          "b.link-e3450b2a",
+          "b.link-221c42f3",
+          "b.link-b49a41a5",
+          "b.link-aca7c2a7",
+          "b.link-19e0afdd",
+          "b.link-95c84025",
+          "b.link-9e325e9c",
+          "b.link-0ef2d4c5",
+          "b.link-7ef8fa94",
+          "b.link-5c56b4af",
+          "b.link-8c423b92",
+          "b.link-926a4075",
+          "b.link-322874de",
+          "b.link-1c8e11e4",
+          "b.link-19b841f6"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "stage",
+      "stage": 2,
+      "kind": "batch",
+      "devices_a": [
+        "a.yow-ar-55",
+        "a.yqb-ar-56",
+        "a.yvr-ar-35",
+        "a.yxe-ar-63",
+        "a.yyz-ar-44",
+        "a.yul-cr-05",
+        "a.ywg-cr-11",
+        "a.yyz-ar-20",
+        "a.yeg-ar-89",
+        "a.yyc-ar-40",
+        "a.yxe-er-43",
+        "a.yow-er-03",
+        "a.yqb-er-54",
+        "a.yul-ar-81",
+        "a.yxe-ar-78",
+        "a.yhz-er-90",
+        "a.yvr-er-75"
+      ],
+      "devices_b": [
+        "b.node-70b7b104",
+        "b.node-6277dfb0",
+        "b.node-f73cf635",
+        "b.node-4cd15f00",
+        "b.node-9a30dd78",
+        "b.node-9c9f3a0f",
+        "b.node-55d84441",
+        "b.node-b79a303b",
+        "b.node-817cdc42",
+        "b.node-f0b890f9",
+        "b.node-d759af28",
+        "b.node-4cd49cb7",
+        "b.node-ade40325",
+        "b.node-4f8f57ea",
+        "b.node-8655ff3b",
+        "b.node-1297c111",
+        "b.node-a51a43f5"
+      ],
+      "n_a": 56,
+      "n_b": 198
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "b.tp-41b4d904",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-24b3e116",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-8c5401cf",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b7021a56",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-75731307",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a229fcbb",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-3764620d",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2ca391cc",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-092eda4d",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-654d3d03",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-59af6031",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0d436956",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-8c5f710c",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-7080359a",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-3ebbce6e",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-6a33db0f",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-45a9d5bb",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-3cc71ce9",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-94a27d78",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-806cbb2c",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-315386af",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2fe4f18e",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-cf7ca61b",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-98bca2ab",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-70800cc1",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-186052b4",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-4ffbf640",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-660bae06",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-658402d9",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-37e636ab",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-f50ad148",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b72a3ec9",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-26e8cb85",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2d8c73e6",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e9ac8e4a",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-d8b87351",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b823fd90",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-851cb3c1",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-afbb2049",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-15388c5e",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-9eb6d0d3",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-c41e508d",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-adc6d445",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2321a537",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a1bf0683",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-919b7bc1",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-88007a46",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-d6d01cfc",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-4fd3a691",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-c8bdceda",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-f9cf9522",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e83506d0",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-235379a5",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-367959dd",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-ab403a6d",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-17e0b6f1",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yow-ar-55/et-0/0/0",
+        "b_id": "b.tp-41b4d904"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-ar-56/et-0/0/0",
+        "b_id": "b.tp-8c5401cf"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yvr-ar-35/et-1/0/0",
+        "b_id": "b.tp-75731307"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-63/et-1/0/0",
+        "b_id": "b.tp-3764620d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {
+            "capacity": {
+              "A": 10000000000,
+              "B": 100000000000
+            },
+            "endpoint-identity": {
+              "A": [
+                "10.255.0.30",
+                "10.255.0.74"
+              ],
+              "B": [
+                "10.255.0.30",
+                "10.255.0.6"
+              ]
+            }
+          }
+        },
+        "message": "invariants diverge: the two are not the same component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-63/et-0/0/1",
+        "b_id": "b.tp-092eda4d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {
+            "capacity": {
+              "A": 100000000000,
+              "B": 10000000000
+            },
+            "endpoint-identity": {
+              "A": [
+                "10.255.0.30",
+                "10.255.0.6"
+              ],
+              "B": [
+                "10.255.0.30",
+                "10.255.0.74"
+              ]
+            }
+          }
+        },
+        "message": "invariants diverge: the two are not the same component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyz-ar-44/et-0/0/5",
+        "b_id": "b.tp-59af6031"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-0/0/3",
+        "b_id": "b.tp-70800cc1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyz-ar-20/et-0/0/0",
+        "b_id": "b.tp-f50ad148"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-89/et-0/0/1",
+        "b_id": "b.tp-26e8cb85"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-1/0/4",
+        "b_id": "b.tp-e9ac8e4a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-er-43/et-0/0/2",
+        "b_id": "b.tp-9eb6d0d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yow-er-03/et-0/0/1",
+        "b_id": "b.tp-adc6d445"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-er-54/et-0/0/0",
+        "b_id": "b.tp-a1bf0683"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-81/et-0/0/0",
+        "b_id": "b.tp-88007a46"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-78/et-0/0/0",
+        "b_id": "b.tp-f9cf9522"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-er-90/et-0/0/0",
+        "b_id": "b.tp-235379a5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yvr-er-75/et-0/0/0",
+        "b_id": "b.tp-ab403a6d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-41b4d904",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-70b7b104 (settled as a.yow-ar-55); member of bundle b.tp-a43dc6ef (a.yow-ar-55/ae2). Source endpoint of b.link-61efcca2, 100000000 kbps, to b.tp-932f08a7 (a.yyc-cr-17/et-1/0/6)."
+          },
+          {
+            "my_id": "b.tp-24b3e116",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-70b7b104; member of b.tp-a43dc6ef (a.yow-ar-55/ae2). Source endpoint of b.link-a5e9c093, 100000000 kbps, to b.tp-b8b42f05 (a.yyc-cr-17/et-1/0/7)."
+          },
+          {
+            "my_id": "b.tp-8c5401cf",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-6277dfb0 (a.yqb-ar-56); member of b.tp-98541537 (a.yqb-ar-56/ae2). Source of b.link-8d8b915b, 100000000 kbps, to b.tp-0d383fc0 (a.yyc-cr-17/et-2/0/1)."
+          },
+          {
+            "my_id": "b.tp-b7021a56",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-6277dfb0; member of b.tp-98541537 (a.yqb-ar-56/ae2). Destination of b.link-b73a6e9c, 100000000 kbps, from b.tp-67eeea35 (a.yyc-cr-17/et-2/0/2)."
+          },
+          {
+            "my_id": "b.tp-75731307",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f73cf635 (a.yvr-ar-35); member of b.tp-d6857ebe (a.yvr-ar-35/ae10). Destination of b.link-ac93fbde, 10000000 kbps, from b.tp-9eb6d0d3 on a.yxe-er-43."
+          },
+          {
+            "my_id": "b.tp-a229fcbb",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f73cf635; member of b.tp-d6857ebe (a.yvr-ar-35/ae10). Source of b.link-03ba334a, 10000000 kbps, to b.tp-c41e508d on a.yxe-er-43."
+          },
+          {
+            "my_id": "b.tp-3764620d",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4cd15f00 (a.yxe-ar-63); member of b.tp-0325329d (a.yxe-ar-63/ae3). Destination of b.link-ce6af56f, 100000000 kbps, from b.tp-e5a95655 (a.yxe-cr-30/et-1/0/4)."
+          },
+          {
+            "my_id": "b.tp-2ca391cc",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4cd15f00; member of b.tp-0b85e048 (a.yxe-ar-63/ae10). Source of b.link-eb219834, 10000000 kbps, to b.tp-2321a537 on a.yow-er-03."
+          },
+          {
+            "my_id": "b.tp-092eda4d",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4cd15f00; member of b.tp-0b85e048 (a.yxe-ar-63/ae10). Source of b.link-52b3a5dd, 10000000 kbps, to b.tp-adc6d445 on a.yow-er-03."
+          },
+          {
+            "my_id": "b.tp-654d3d03",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4cd15f00; member of b.tp-0325329d (a.yxe-ar-63/ae3). Source of b.link-238034bc, 100000000 kbps, to b.tp-c0685b31 (a.yxe-cr-30/et-1/0/3)."
+          },
+          {
+            "my_id": "b.tp-59af6031",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9a30dd78 (a.yyz-ar-44); member of b.tp-17b68c0d (a.yyz-ar-44/ae7). Source of b.link-0276386b, 10000000 kbps, to b.tp-919b7bc1 on a.yqb-er-54."
+          },
+          {
+            "my_id": "b.tp-0d436956",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9a30dd78; member of b.tp-17b68c0d (a.yyz-ar-44/ae7). Destination of b.link-9192cc59, 10000000 kbps, from b.tp-a1bf0683 on a.yqb-er-54."
+          },
+          {
+            "my_id": "b.tp-8c5f710c",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f (a.yul-cr-05); member of b.tp-91e69112 (a.yul-cr-05/ae20). Destination of b.link-5d309c82, 100000000 kbps, from b.tp-b72a3ec9 on a.yyz-ar-20."
+          },
+          {
+            "my_id": "b.tp-7080359a",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of four-port bundle b.tp-a5690188 (a.yul-cr-05/ae4). Destination of b.link-930733a4, 100000000 kbps, from b.tp-9a00d4a0 (a.yeg-cr-10/et-0/0/0)."
+          },
+          {
+            "my_id": "b.tp-3ebbce6e",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-306b9777 (a.yul-cr-05/ae10). Destination of b.link-a8ff5d9e, 100000000 kbps, from b.tp-d6d01cfc on a.yul-ar-81."
+          },
+          {
+            "my_id": "b.tp-6a33db0f",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-3c6451ac (a.yul-cr-05/ae13). Destination of b.link-395c3cca, 100000000 kbps, from b.tp-e83506d0 on a.yxe-ar-78."
+          },
+          {
+            "my_id": "b.tp-45a9d5bb",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-306b9777 (a.yul-cr-05/ae10). Source of b.link-3682867b, 100000000 kbps, to b.tp-88007a46 on a.yul-ar-81."
+          },
+          {
+            "my_id": "b.tp-3cc71ce9",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-91e69112 (a.yul-cr-05/ae20). Destination of b.link-96263ef5, 100000000 kbps, from b.tp-f50ad148 on a.yyz-ar-20."
+          },
+          {
+            "my_id": "b.tp-94a27d78",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of four-port b.tp-a5690188 (a.yul-cr-05/ae4). Destination of b.link-fa10c40c, 100000000 kbps, from b.tp-770119ba (a.yeg-cr-10/et-0/0/3)."
+          },
+          {
+            "my_id": "b.tp-806cbb2c",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-55d522ce (a.yul-cr-05/ae16). Source of b.link-5cfd5033, 100000000 kbps, to b.tp-b823fd90 on a.yyc-ar-40."
+          },
+          {
+            "my_id": "b.tp-315386af",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of four-port b.tp-a5690188 (a.yul-cr-05/ae4). Destination of b.link-46edc356, 100000000 kbps, from b.tp-36be8b25 (a.yeg-cr-10/et-0/0/1)."
+          },
+          {
+            "my_id": "b.tp-2fe4f18e",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of four-port b.tp-a5690188 (a.yul-cr-05/ae4). Source of b.link-891295e3, 100000000 kbps, to b.tp-84e5f3cf (a.yeg-cr-10/et-0/0/2)."
+          },
+          {
+            "my_id": "b.tp-cf7ca61b",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-55d522ce (a.yul-cr-05/ae16). Source of b.link-9e468a15, 100000000 kbps, to b.tp-d8b87351 on a.yyc-ar-40."
+          },
+          {
+            "my_id": "b.tp-98bca2ab",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-9c9f3a0f; member of b.tp-3c6451ac (a.yul-cr-05/ae13). Destination of b.link-0f0faaa2, 100000000 kbps, from b.tp-f9cf9522 on a.yxe-ar-78."
+          },
+          {
+            "my_id": "b.tp-70800cc1",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-55d84441 (a.ywg-cr-11); member of four-port b.tp-fd830b5e (a.ywg-cr-11/ae7). Destination of b.link-b49a41a5, 100000000 kbps, from b.tp-4aff8842 (a.yqb-cr-21/et-0/0/6)."
+          },
+          {
+            "my_id": "b.tp-186052b4",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-55d84441; member of four-port b.tp-fd830b5e (a.ywg-cr-11/ae7). Destination of b.link-38288f44, 100000000 kbps, from b.tp-0414622e (a.yqb-cr-21/et-0/0/5)."
+          },
+          {
+            "my_id": "b.tp-4ffbf640",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-55d84441; member of four-port b.tp-fd830b5e (a.ywg-cr-11/ae7). Destination of b.link-19e0afdd, 100000000 kbps, from b.tp-dec4bb46 (a.yqb-cr-21/et-0/0/3)."
+          },
+          {
+            "my_id": "b.tp-660bae06",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-55d84441; member of b.tp-9ee30c24 (a.ywg-cr-11/ae10). Destination of b.link-a11ee00d, 100000000 kbps, from b.tp-4fd3a691 on a.yul-ar-81."
+          },
+          {
+            "my_id": "b.tp-658402d9",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-55d84441; member of four-port b.tp-fd830b5e (a.ywg-cr-11/ae7). Source of b.link-aca7c2a7, 100000000 kbps, to b.tp-df84fbb5 (a.yqb-cr-21/et-0/0/4)."
+          },
+          {
+            "my_id": "b.tp-37e636ab",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-55d84441; member of b.tp-9ee30c24 (a.ywg-cr-11/ae10). Source of b.link-4eccf722, 100000000 kbps, to b.tp-c8bdceda on a.yul-ar-81."
+          },
+          {
+            "my_id": "b.tp-f50ad148",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-b79a303b (a.yyz-ar-20); member of b.tp-bf918e41 (a.yyz-ar-20/ae2). Source of b.link-96263ef5, 100000000 kbps, to b.tp-3cc71ce9 on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-b72a3ec9",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-b79a303b; member of b.tp-bf918e41 (a.yyz-ar-20/ae2). Source of b.link-5d309c82, 100000000 kbps, to b.tp-8c5f710c on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-26e8cb85",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-817cdc42 (a.yeg-ar-89); member of b.tp-1aca9b4c (a.yeg-ar-89/ae3). Destination of b.link-70650e9a, 100000000 kbps, from b.tp-a7b820a4 (a.yeg-cr-10/et-1/0/7)."
+          },
+          {
+            "my_id": "b.tp-2d8c73e6",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-817cdc42; member of b.tp-1aca9b4c (a.yeg-ar-89/ae3). Destination of b.link-5078a73b, 100000000 kbps, from b.tp-975df91d (a.yeg-cr-10/et-1/0/6)."
+          },
+          {
+            "my_id": "b.tp-e9ac8e4a",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f0b890f9 (a.yyc-ar-40); member of b.tp-de42eb6d (a.yyc-ar-40/ae14). Destination of b.link-f37fa056, 10000000 kbps, from b.tp-367959dd on a.yhz-er-90."
+          },
+          {
+            "my_id": "b.tp-d8b87351",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f0b890f9; member of b.tp-a094ce44 (a.yyc-ar-40/ae2). Destination of b.link-9e468a15, 100000000 kbps, from b.tp-cf7ca61b on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-b823fd90",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f0b890f9; member of b.tp-a094ce44 (a.yyc-ar-40/ae2). Destination of b.link-5cfd5033, 100000000 kbps, from b.tp-806cbb2c on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-851cb3c1",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f0b890f9; member of b.tp-de646e54 (a.yyc-ar-40/ae11). Destination of b.link-763a09a3, 10000000 kbps, from b.tp-17e0b6f1 on a.yvr-er-75."
+          },
+          {
+            "my_id": "b.tp-afbb2049",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f0b890f9; member of b.tp-de42eb6d (a.yyc-ar-40/ae14). Destination of b.link-2c819a1b, 10000000 kbps, from b.tp-235379a5 on a.yhz-er-90."
+          },
+          {
+            "my_id": "b.tp-15388c5e",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-f0b890f9; member of b.tp-de646e54 (a.yyc-ar-40/ae11). Source of b.link-ec42bd75, 10000000 kbps, to b.tp-ab403a6d on a.yvr-er-75."
+          },
+          {
+            "my_id": "b.tp-9eb6d0d3",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-d759af28 (a.yxe-er-43); member of b.tp-bcd7eeb5 (a.yxe-er-43/ae4). Source of b.link-ac93fbde, 10000000 kbps, to b.tp-75731307 on a.yvr-ar-35."
+          },
+          {
+            "my_id": "b.tp-c41e508d",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-d759af28; member of b.tp-bcd7eeb5 (a.yxe-er-43/ae4). Destination of b.link-03ba334a, 10000000 kbps, from b.tp-a229fcbb on a.yvr-ar-35."
+          },
+          {
+            "my_id": "b.tp-adc6d445",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4cd49cb7 (a.yow-er-03); member of b.tp-93cb8a6b (a.yow-er-03/ae3). Destination of b.link-52b3a5dd, 10000000 kbps, from b.tp-092eda4d on a.yxe-ar-63."
+          },
+          {
+            "my_id": "b.tp-2321a537",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4cd49cb7; member of b.tp-93cb8a6b (a.yow-er-03/ae3). Destination of b.link-eb219834, 10000000 kbps, from b.tp-2ca391cc on a.yxe-ar-63."
+          },
+          {
+            "my_id": "b.tp-a1bf0683",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-ade40325 (a.yqb-er-54); member of b.tp-24d86818 (a.yqb-er-54/ae2). Source of b.link-9192cc59, 10000000 kbps, to b.tp-0d436956 on a.yyz-ar-44."
+          },
+          {
+            "my_id": "b.tp-919b7bc1",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-ade40325; member of b.tp-24d86818 (a.yqb-er-54/ae2). Destination of b.link-0276386b, 10000000 kbps, from b.tp-59af6031 on a.yyz-ar-44."
+          },
+          {
+            "my_id": "b.tp-88007a46",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4f8f57ea (a.yul-ar-81); member of b.tp-e2962595 (a.yul-ar-81/ae2). Destination of b.link-3682867b, 100000000 kbps, from b.tp-45a9d5bb on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-d6d01cfc",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4f8f57ea; member of b.tp-e2962595 (a.yul-ar-81/ae2). Source of b.link-a8ff5d9e, 100000000 kbps, to b.tp-3ebbce6e on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-4fd3a691",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4f8f57ea; member of b.tp-8c9c41e4 (a.yul-ar-81/ae5). Source of b.link-a11ee00d, 100000000 kbps, to b.tp-660bae06 on a.ywg-cr-11."
+          },
+          {
+            "my_id": "b.tp-c8bdceda",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-4f8f57ea; member of b.tp-8c9c41e4 (a.yul-ar-81/ae5). Destination of b.link-4eccf722, 100000000 kbps, from b.tp-37e636ab on a.ywg-cr-11."
+          },
+          {
+            "my_id": "b.tp-f9cf9522",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-8655ff3b (a.yxe-ar-78); member of b.tp-16217285 (a.yxe-ar-78/ae2). Source of b.link-0f0faaa2, 100000000 kbps, to b.tp-98bca2ab on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-e83506d0",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-8655ff3b; member of b.tp-16217285 (a.yxe-ar-78/ae2). Source of b.link-395c3cca, 100000000 kbps, to b.tp-6a33db0f on a.yul-cr-05."
+          },
+          {
+            "my_id": "b.tp-235379a5",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-1297c111 (a.yhz-er-90); member of b.tp-a5789f9a (a.yhz-er-90/ae2). Source of b.link-2c819a1b, 10000000 kbps, to b.tp-afbb2049 on a.yyc-ar-40."
+          },
+          {
+            "my_id": "b.tp-367959dd",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-1297c111; member of b.tp-a5789f9a (a.yhz-er-90/ae2). Source of b.link-f37fa056, 10000000 kbps, to b.tp-e9ac8e4a on a.yyc-ar-40."
+          },
+          {
+            "my_id": "b.tp-ab403a6d",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-a51a43f5 (a.yvr-er-75); member of b.tp-6bd9d932 (a.yvr-er-75/ae2). Destination of b.link-ec42bd75, 10000000 kbps, from b.tp-15388c5e on a.yyc-ar-40."
+          },
+          {
+            "my_id": "b.tp-17e0b6f1",
+            "attributes": "physical-port; lag=false; no direct speed or LLDP attribute recorded.",
+            "topology": "Owned by b.node-a51a43f5; member of b.tp-6bd9d932 (a.yvr-er-75/ae2). Source of b.link-763a09a3, 10000000 kbps, to b.tp-851cb3c1 on a.yyc-ar-40."
+          }
+        ],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "b.tp-41b4d904",
+            "their_id": "a.yow-ar-55/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-8c5401cf",
+            "their_id": "a.yqb-ar-56/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-75731307",
+            "their_id": "a.yvr-ar-35/et-1/0/0"
+          },
+          {
+            "my_id": "b.tp-3764620d",
+            "their_id": "a.yxe-ar-63/et-1/0/0"
+          },
+          {
+            "my_id": "b.tp-092eda4d",
+            "their_id": "a.yxe-ar-63/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-59af6031",
+            "their_id": "a.yyz-ar-44/et-0/0/5"
+          },
+          {
+            "my_id": "b.tp-70800cc1",
+            "their_id": "a.ywg-cr-11/et-0/0/3"
+          },
+          {
+            "my_id": "b.tp-f50ad148",
+            "their_id": "a.yyz-ar-20/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-26e8cb85",
+            "their_id": "a.yeg-ar-89/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-e9ac8e4a",
+            "their_id": "a.yyc-ar-40/et-1/0/4"
+          },
+          {
+            "my_id": "b.tp-9eb6d0d3",
+            "their_id": "a.yxe-er-43/et-0/0/2"
+          },
+          {
+            "my_id": "b.tp-adc6d445",
+            "their_id": "a.yow-er-03/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-a1bf0683",
+            "their_id": "a.yqb-er-54/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-88007a46",
+            "their_id": "a.yul-ar-81/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-f9cf9522",
+            "their_id": "a.yxe-ar-78/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-235379a5",
+            "their_id": "a.yhz-er-90/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-ab403a6d",
+            "their_id": "a.yvr-er-75/et-0/0/0"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yow-ar-55/et-0/0/1",
+        "b_id": "b.tp-24b3e116"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-ar-56/et-0/0/1",
+        "b_id": "b.tp-b7021a56"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yvr-ar-35/et-1/0/0",
+        "b_id": "b.tp-a229fcbb"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yvr-ar-35/et-1/0/1",
+        "b_id": "b.tp-75731307"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-63/et-0/0/1",
+        "b_id": "b.tp-654d3d03"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-63/et-0/0/2",
+        "b_id": "b.tp-3764620d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-63/et-1/0/0",
+        "b_id": "b.tp-092eda4d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-63/et-1/0/1",
+        "b_id": "b.tp-2ca391cc"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyz-ar-44/et-0/0/6",
+        "b_id": "b.tp-0d436956"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-0/0/0",
+        "b_id": "b.tp-7080359a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-0/0/1",
+        "b_id": "b.tp-315386af"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-0/0/2",
+        "b_id": "b.tp-2fe4f18e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-0/0/3",
+        "b_id": "b.tp-94a27d78"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/0",
+        "b_id": "b.tp-45a9d5bb"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/1",
+        "b_id": "b.tp-3ebbce6e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/3",
+        "b_id": "b.tp-98bca2ab"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/4",
+        "b_id": "b.tp-6a33db0f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/6",
+        "b_id": "b.tp-806cbb2c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/7",
+        "b_id": "b.tp-cf7ca61b"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-2/0/2",
+        "b_id": "b.tp-8c5f710c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-2/0/3",
+        "b_id": "b.tp-3cc71ce9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-0/0/3",
+        "b_id": "b.tp-4ffbf640"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-0/0/4",
+        "b_id": "b.tp-658402d9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-0/0/5",
+        "b_id": "b.tp-186052b4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-0/0/6",
+        "b_id": "b.tp-70800cc1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-1/0/0",
+        "b_id": "b.tp-660bae06"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-1/0/1",
+        "b_id": "b.tp-37e636ab"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyz-ar-20/et-0/0/0",
+        "b_id": "b.tp-b72a3ec9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyz-ar-20/et-0/0/1",
+        "b_id": "b.tp-f50ad148"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-89/et-0/0/1",
+        "b_id": "b.tp-2d8c73e6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yeg-ar-89/et-0/0/2",
+        "b_id": "b.tp-26e8cb85"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-0/0/0",
+        "b_id": "b.tp-b823fd90"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-0/0/1",
+        "b_id": "b.tp-d8b87351"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-1/0/1",
+        "b_id": "b.tp-851cb3c1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-1/0/2",
+        "b_id": "b.tp-15388c5e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-1/0/4",
+        "b_id": "b.tp-afbb2049"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-1/0/5",
+        "b_id": "b.tp-e9ac8e4a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-er-43/et-0/0/2",
+        "b_id": "b.tp-c41e508d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-er-43/et-0/0/3",
+        "b_id": "b.tp-9eb6d0d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yow-er-03/et-0/0/2",
+        "b_id": "b.tp-2321a537"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-er-54/et-0/0/0",
+        "b_id": "b.tp-919b7bc1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yqb-er-54/et-0/0/1",
+        "b_id": "b.tp-a1bf0683"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-81/et-0/0/1",
+        "b_id": "b.tp-d6d01cfc"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-81/et-0/0/3",
+        "b_id": "b.tp-4fd3a691"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-81/et-0/0/4",
+        "b_id": "b.tp-c8bdceda"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "diverging_invariants": {}
+        },
+        "message": "a different component responded on each side: the two are not the same component, although their invariants agree"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yxe-ar-78/et-0/0/1",
+        "b_id": "b.tp-e83506d0"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yhz-er-90/et-0/0/1",
+        "b_id": "b.tp-367959dd"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yvr-er-75/et-0/0/0",
+        "b_id": "b.tp-17e0b6f1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yvr-er-75/et-0/0/1",
+        "b_id": "b.tp-ab403a6d"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "a.yow-ar-55/et-0/0/1",
+            "their_id": "b.tp-24b3e116"
+          },
+          {
+            "my_id": "a.yqb-ar-56/et-0/0/1",
+            "their_id": "b.tp-b7021a56"
+          },
+          {
+            "my_id": "a.yvr-ar-35/et-1/0/0",
+            "their_id": "b.tp-a229fcbb"
+          },
+          {
+            "my_id": "a.yvr-ar-35/et-1/0/1",
+            "their_id": "b.tp-75731307"
+          },
+          {
+            "my_id": "a.yxe-ar-63/et-0/0/1",
+            "their_id": "b.tp-654d3d03"
+          },
+          {
+            "my_id": "a.yxe-ar-63/et-0/0/2",
+            "their_id": "b.tp-3764620d"
+          },
+          {
+            "my_id": "a.yxe-ar-63/et-1/0/0",
+            "their_id": "b.tp-092eda4d"
+          },
+          {
+            "my_id": "a.yxe-ar-63/et-1/0/1",
+            "their_id": "b.tp-2ca391cc"
+          },
+          {
+            "my_id": "a.yyz-ar-44/et-0/0/6",
+            "their_id": "b.tp-0d436956"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-0/0/0",
+            "their_id": "b.tp-7080359a"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-0/0/1",
+            "their_id": "b.tp-315386af"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-0/0/2",
+            "their_id": "b.tp-2fe4f18e"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-0/0/3",
+            "their_id": "b.tp-94a27d78"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-1/0/0",
+            "their_id": "b.tp-45a9d5bb"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-1/0/1",
+            "their_id": "b.tp-3ebbce6e"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-1/0/3",
+            "their_id": "b.tp-98bca2ab"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-1/0/4",
+            "their_id": "b.tp-6a33db0f"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-1/0/6",
+            "their_id": "b.tp-806cbb2c"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-1/0/7",
+            "their_id": "b.tp-cf7ca61b"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-2/0/2",
+            "their_id": "b.tp-8c5f710c"
+          },
+          {
+            "my_id": "a.yul-cr-05/et-2/0/3",
+            "their_id": "b.tp-3cc71ce9"
+          },
+          {
+            "my_id": "a.ywg-cr-11/et-0/0/3",
+            "their_id": "b.tp-4ffbf640"
+          },
+          {
+            "my_id": "a.ywg-cr-11/et-0/0/4",
+            "their_id": "b.tp-658402d9"
+          },
+          {
+            "my_id": "a.ywg-cr-11/et-0/0/5",
+            "their_id": "b.tp-186052b4"
+          },
+          {
+            "my_id": "a.ywg-cr-11/et-0/0/6",
+            "their_id": "b.tp-70800cc1"
+          },
+          {
+            "my_id": "a.ywg-cr-11/et-1/0/0",
+            "their_id": "b.tp-660bae06"
+          },
+          {
+            "my_id": "a.ywg-cr-11/et-1/0/1",
+            "their_id": "b.tp-37e636ab"
+          },
+          {
+            "my_id": "a.yyz-ar-20/et-0/0/0",
+            "their_id": "b.tp-b72a3ec9"
+          },
+          {
+            "my_id": "a.yyz-ar-20/et-0/0/1",
+            "their_id": "b.tp-f50ad148"
+          },
+          {
+            "my_id": "a.yeg-ar-89/et-0/0/1",
+            "their_id": "b.tp-2d8c73e6"
+          },
+          {
+            "my_id": "a.yeg-ar-89/et-0/0/2",
+            "their_id": "b.tp-26e8cb85"
+          },
+          {
+            "my_id": "a.yyc-ar-40/et-0/0/0",
+            "their_id": "b.tp-b823fd90"
+          },
+          {
+            "my_id": "a.yyc-ar-40/et-0/0/1",
+            "their_id": "b.tp-d8b87351"
+          },
+          {
+            "my_id": "a.yyc-ar-40/et-1/0/1",
+            "their_id": "b.tp-851cb3c1"
+          },
+          {
+            "my_id": "a.yyc-ar-40/et-1/0/2",
+            "their_id": "b.tp-15388c5e"
+          },
+          {
+            "my_id": "a.yyc-ar-40/et-1/0/4",
+            "their_id": "b.tp-afbb2049"
+          },
+          {
+            "my_id": "a.yyc-ar-40/et-1/0/5",
+            "their_id": "b.tp-e9ac8e4a"
+          },
+          {
+            "my_id": "a.yxe-er-43/et-0/0/2",
+            "their_id": "b.tp-c41e508d"
+          },
+          {
+            "my_id": "a.yxe-er-43/et-0/0/3",
+            "their_id": "b.tp-9eb6d0d3"
+          },
+          {
+            "my_id": "a.yow-er-03/et-0/0/2",
+            "their_id": "b.tp-2321a537"
+          },
+          {
+            "my_id": "a.yqb-er-54/et-0/0/0",
+            "their_id": "b.tp-919b7bc1"
+          },
+          {
+            "my_id": "a.yqb-er-54/et-0/0/1",
+            "their_id": "b.tp-a1bf0683"
+          },
+          {
+            "my_id": "a.yul-ar-81/et-0/0/1",
+            "their_id": "b.tp-d6d01cfc"
+          },
+          {
+            "my_id": "a.yul-ar-81/et-0/0/3",
+            "their_id": "b.tp-4fd3a691"
+          },
+          {
+            "my_id": "a.yul-ar-81/et-0/0/4",
+            "their_id": "b.tp-c8bdceda"
+          },
+          {
+            "my_id": "a.yxe-ar-78/et-0/0/1",
+            "their_id": "b.tp-e83506d0"
+          },
+          {
+            "my_id": "a.yhz-er-90/et-0/0/1",
+            "their_id": "b.tp-367959dd"
+          },
+          {
+            "my_id": "a.yvr-er-75/et-0/0/0",
+            "their_id": "b.tp-17e0b6f1"
+          },
+          {
+            "my_id": "a.yvr-er-75/et-0/0/1",
+            "their_id": "b.tp-ab403a6d"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/7",
+        "b_id": "b.tp-806cbb2c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-cr-05/et-1/0/6",
+        "b_id": "b.tp-cf7ca61b"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-1/0/1",
+        "b_id": "b.tp-660bae06"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.ywg-cr-11/et-1/0/0",
+        "b_id": "b.tp-37e636ab"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-0/0/1",
+        "b_id": "b.tp-b823fd90"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yyc-ar-40/et-0/0/0",
+        "b_id": "b.tp-d8b87351"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-81/et-0/0/4",
+        "b_id": "b.tp-4fd3a691"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 2,
+      "args": {
+        "a_id": "a.yul-ar-81/et-0/0/3",
+        "b_id": "b.tp-c8bdceda"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [
+          {
+            "my_id": "b.tp-806cbb2c",
+            "their_id": "a.yul-cr-05/et-1/0/7"
+          },
+          {
+            "my_id": "b.tp-cf7ca61b",
+            "their_id": "a.yul-cr-05/et-1/0/6"
+          },
+          {
+            "my_id": "b.tp-660bae06",
+            "their_id": "a.ywg-cr-11/et-1/0/1"
+          },
+          {
+            "my_id": "b.tp-37e636ab",
+            "their_id": "a.ywg-cr-11/et-1/0/0"
+          },
+          {
+            "my_id": "b.tp-b823fd90",
+            "their_id": "a.yyc-ar-40/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-d8b87351",
+            "their_id": "a.yyc-ar-40/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-4fd3a691",
+            "their_id": "a.yul-ar-81/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-c8bdceda",
+            "their_id": "a.yul-ar-81/et-0/0/3"
+          }
+        ],
+        "no_counterpart": [
+          "b.link-a5e9c093",
+          "b.link-bb6f1bb3",
+          "b.link-61efcca2",
+          "b.link-67ce7a83",
+          "b.link-9c1016ed",
+          "b.link-d8941df2",
+          "b.link-c8e86528",
+          "b.link-edca5971",
+          "b.link-4be94d15",
+          "b.link-8d8b915b",
+          "b.link-b4fcd93f",
+          "b.link-98275d6a",
+          "b.link-fc3c41b0",
+          "b.link-570daf58",
+          "b.link-70513d12",
+          "b.link-b73a6e9c",
+          "b.link-d7be3f4e",
+          "b.link-bc2dd49f",
+          "b.link-ac93fbde",
+          "b.link-95d5afe6",
+          "b.link-779ad032",
+          "b.link-4b2e6627",
+          "b.link-3077cba2",
+          "b.link-03ba334a",
+          "b.link-f330fa59",
+          "b.link-413e9172",
+          "b.link-08c24ad2",
+          "b.link-926a4075",
+          "b.link-21fb0e8c",
+          "b.link-52b3a5dd",
+          "b.link-ceb2093e",
+          "b.link-eb219834",
+          "b.link-9b26167e",
+          "b.link-badfb325",
+          "b.link-238034bc",
+          "b.link-22a39c26",
+          "b.link-129db71c",
+          "b.link-f7157dc5",
+          "b.link-ce6af56f",
+          "b.link-fc8703f6",
+          "b.link-f31b0d42",
+          "b.link-67d0c5f0",
+          "b.link-c3be6d06",
+          "b.link-9c785108",
+          "b.link-0276386b",
+          "b.link-88b45dc2",
+          "b.link-dad4bf9d",
+          "b.link-ddda4deb",
+          "b.link-9192cc59",
+          "b.link-656da571",
+          "b.link-0f0faaa2",
+          "b.link-824b3b92",
+          "b.link-3682867b",
+          "b.link-71670aa4",
+          "b.link-5cfd5033",
+          "b.link-e0dbd9f8",
+          "b.link-395c3cca",
+          "b.link-5d309c82",
+          "b.link-e0ca9a3e",
+          "b.link-dc76118f",
+          "b.link-96263ef5",
+          "b.link-c1a40581",
+          "b.link-891295e3",
+          "b.link-d4213846",
+          "b.link-a6d4bff4",
+          "b.link-516915b2",
+          "b.link-161e451c",
+          "b.link-a8ff5d9e",
+          "b.link-fa10c40c",
+          "b.link-46edc356",
+          "b.link-9e468a15",
+          "b.link-930733a4",
+          "b.link-8599f619",
+          "b.link-226dbc29",
+          "b.link-38288f44",
+          "b.link-e3450b2a",
+          "b.link-b88a126d",
+          "b.link-b49a41a5",
+          "b.link-95761db0",
+          "b.link-4eccf722",
+          "b.link-022d710b",
+          "b.link-bc7d4463",
+          "b.link-aca7c2a7",
+          "b.link-a11ee00d",
+          "b.link-19e0afdd",
+          "b.link-336b9af2",
+          "b.link-5b60eb6c",
+          "b.link-fef50453",
+          "b.link-c590d9dc",
+          "b.link-12175041",
+          "b.link-c9c27788",
+          "b.link-50437de5",
+          "b.link-e76fce09",
+          "b.link-1739973f",
+          "b.link-365cb099",
+          "b.link-b1d6e526",
+          "b.link-61cfd4bb",
+          "b.link-ab91c2f1",
+          "b.link-5078a73b",
+          "b.link-d112ba23",
+          "b.link-3f568e4e",
+          "b.link-ac37b3c1",
+          "b.link-94f9fe5d",
+          "b.link-8322bf5f",
+          "b.link-70650e9a",
+          "b.link-adc52844",
+          "b.link-4f2db287",
+          "b.link-aa8de95c",
+          "b.link-e4f02d0d",
+          "b.link-128949d0",
+          "b.link-48257702",
+          "b.link-bbde0085",
+          "b.link-0c0eb819",
+          "b.link-8d9b5d83",
+          "b.link-ec42bd75",
+          "b.link-adc8d56e",
+          "b.link-7e4b888a",
+          "b.link-763a09a3",
+          "b.link-2ab0d280",
+          "b.link-c6055142",
+          "b.link-5aff3ce1",
+          "b.link-f37fa056",
+          "b.link-f8f551d3",
+          "b.link-117c8668",
+          "b.link-2c819a1b",
+          "b.link-8c423b92",
+          "b.link-19b841f6",
+          "b.link-582c5ef7",
+          "b.link-762619c9",
+          "b.link-29636aee",
+          "b.link-4e8b3543",
+          "b.link-d3132bb9",
+          "b.link-36b43169",
+          "b.link-bca0ed51",
+          "b.link-0a474f59",
+          "b.link-936c9240",
+          "b.link-56b1202b",
+          "b.link-d15d7945",
+          "b.link-6a04bc3f",
+          "b.link-663ba2f5",
+          "b.link-14e17ab6",
+          "b.link-c5fb137d"
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 2,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "staging",
+      "stages": 2,
+      "devices_bound": 96,
+      "batch_size": 60,
+      "anchored": 542,
+      "lookalikes_a": 116,
+      "lookalikes_b": 102
+    }
+  ]
+}

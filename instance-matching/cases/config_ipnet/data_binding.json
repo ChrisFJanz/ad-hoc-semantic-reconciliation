@@ -1,0 +1,13 @@
+{
+  "note": "Where each side keeps the values of its own attribute concepts in its populated graph (individual type and field), with the unit its model states. Each side knows this about its own data; nothing here relates the two sides.",
+  "a": {
+    "a.speed": {"types": ["physical-port", "link-bundle"], "field": "speed", "unit": "bits/second"},
+    "a.ip":    {"types": ["physical-port", "link-bundle"], "field": "ipv4-address", "unit": ""},
+    "a.rid":   {"types": ["network-device"], "field": "router-id", "unit": ""}
+  },
+  "b": {
+    "b.rate":  {"types": ["link"], "field": "rate-kbps", "unit": "Kbps"},
+    "b.ip":    {"types": ["physical-port", "link-bundle"], "field": "ip-address", "unit": ""},
+    "b.rid":   {"types": ["network-device"], "field": "router-id", "unit": ""}
+  }
+}

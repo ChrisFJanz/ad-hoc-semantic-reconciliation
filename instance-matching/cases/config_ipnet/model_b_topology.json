@@ -1,0 +1,257 @@
+{
+ "system": "Agent B",
+ "dialect": "IETF network topology with layer 2 and layer 3 augmentations (RFC 8345, RFC 8944, RFC 8346)",
+ "modules": [
+  "ietf-network",
+  "ietf-network-topology",
+  "ietf-l2-topology",
+  "ietf-l3-unicast-topology"
+ ],
+ "note": "Lifted semantic model, topology side. Each concept carries its lexical label, synonyms, a shallow kind, a gloss, a canonical example, the reference entry the agent bound it to (ref), plus structural relations (edges to other concept ids in this model) and concrete instances. A live side volunteers its gloss/example; an inert side exposes only label, kind, relations, and instances. ref of null marks an item with no public meaning.",
+ "concepts": [
+  {
+   "id": "b.network",
+   "label": "network",
+   "synonyms": [],
+   "kind": "container",
+   "gloss": "one topology: the set of nodes and links that are managed together",
+   "example": "net-5fd4f0fa",
+   "ref": "topology",
+   "relations": [],
+   "instances": [
+    "net-5fd4f0fa"
+   ]
+  },
+  {
+   "id": "b.node",
+   "label": "node",
+   "synonyms": [],
+   "kind": "node",
+   "gloss": "a network device as it appears in the topology",
+   "example": "node-0d30dd9a",
+   "ref": "network-device",
+   "relations": [
+    {
+     "rel": "part-of",
+     "target": "b.network"
+    }
+   ],
+   "instances": [
+    "node-0d30dd9a",
+    "node-4ac6850a",
+    "node-f6af83f5"
+   ]
+  },
+  {
+   "id": "b.tp",
+   "label": "termination-point",
+   "synonyms": [
+    "tp"
+   ],
+   "kind": "termination",
+   "gloss": "a point on a node where a link ends; with the lag flag false it is one physical port",
+   "example": "tp-d4c9f43e on node-0d30dd9a",
+   "ref": "physical-port",
+   "relations": [
+    {
+     "rel": "on-node",
+     "target": "b.node"
+    },
+    {
+     "rel": "terminates",
+     "target": "b.link"
+    }
+   ],
+   "instances": [
+    "tp-d4c9f43e",
+    "tp-b27a3a3f",
+    "tp-5a4d1e42"
+   ]
+  },
+  {
+   "id": "b.lag",
+   "label": "lag termination-point",
+   "synonyms": [
+    "lag",
+    "termination-point with lag true"
+   ],
+   "kind": "termination",
+   "gloss": "a termination point whose lag flag is true: several physical termination points of the same node acting as one",
+   "example": "tp-9d33f163 on node-0d30dd9a, over two member termination points",
+   "ref": "link-bundle",
+   "relations": [
+    {
+     "rel": "on-node",
+     "target": "b.node"
+    },
+    {
+     "rel": "has-member",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "tp-9d33f163",
+    "tp-1aca9b4c"
+   ]
+  },
+  {
+   "id": "b.member",
+   "label": "member-link-tp",
+   "synonyms": [],
+   "kind": "relation",
+   "gloss": "the reference from a lag termination point to each physical termination point that is one of its members",
+   "example": "tp-9d33f163 has members tp-b27a3a3f and tp-b3e678d5",
+   "ref": "bundle-membership",
+   "relations": [
+    {
+     "rel": "from",
+     "target": "b.lag"
+    },
+    {
+     "rel": "to",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "tp-9d33f163 -> tp-b27a3a3f, tp-b3e678d5"
+   ]
+  },
+  {
+   "id": "b.link",
+   "label": "link",
+   "synonyms": [],
+   "kind": "adjacency",
+   "gloss": "a connection from a source termination point on one node to a destination termination point on another node",
+   "example": "link-749b0c70 from tp-5a4d1e42 to tp-e489acd1",
+   "ref": "physical-connection",
+   "relations": [
+    {
+     "rel": "source",
+     "target": "b.tp"
+    },
+    {
+     "rel": "destination",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "link-749b0c70",
+    "link-2a184f3c"
+   ]
+  },
+  {
+   "id": "b.rate",
+   "label": "rate",
+   "synonyms": [],
+   "kind": "attribute",
+   "gloss": "the bandwidth of a link, in kilobits per second",
+   "example": "100000000 on link-749b0c70",
+   "ref": "nominal-speed",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "b.link"
+    }
+   ],
+   "instances": [
+    "100000000 Kbps",
+    "10000000 Kbps",
+    "200000000 Kbps"
+   ]
+  },
+  {
+   "id": "b.mac",
+   "label": "mac-address",
+   "synonyms": [],
+   "kind": "identifier",
+   "gloss": "the hardware address of a physical termination point",
+   "example": "02:33:5f:97:3d:aa",
+   "ref": "hardware-address",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "02:33:5f:97:3d:aa"
+   ]
+  },
+  {
+   "id": "b.ip",
+   "label": "ip-address",
+   "synonyms": [],
+   "kind": "addressing",
+   "gloss": "an IP address held by a termination point at layer 3",
+   "example": "10.0.0.24 on tp-d4c9f43e",
+   "ref": "ip-address",
+   "relations": [
+    {
+     "rel": "on",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "10.0.0.24",
+    "10.0.0.7"
+   ]
+  },
+  {
+   "id": "b.rid",
+   "label": "router-id",
+   "synonyms": [],
+   "kind": "identifier",
+   "gloss": "the routing identifier of a node",
+   "example": "10.255.0.3",
+   "ref": "router-id",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "b.node"
+    }
+   ],
+   "instances": [
+    "10.255.0.3",
+    "10.255.0.7"
+   ]
+  },
+  {
+   "id": "b.ifname",
+   "label": "interface-name",
+   "synonyms": [],
+   "kind": "identifier",
+   "gloss": "the name the device itself gives the interface that a termination point stands for",
+   "example": "et-0/0/1",
+   "ref": "interface-name",
+   "relations": [
+    {
+     "rel": "of",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "et-0/0/1",
+    "ae3"
+   ]
+  },
+  {
+   "id": "b.tpid",
+   "label": "tp-id",
+   "synonyms": [],
+   "kind": "opaque",
+   "gloss": "",
+   "example": "",
+   "ref": null,
+   "relations": [
+    {
+     "rel": "of",
+     "target": "b.tp"
+    }
+   ],
+   "instances": [
+    "tp-d4c9f43e",
+    "tp-b27a3a3f"
+   ]
+  }
+ ]
+}

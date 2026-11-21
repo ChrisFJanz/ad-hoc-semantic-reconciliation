@@ -1,0 +1,1031 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "one_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 34,
+    "precision": 1.0,
+    "recall": 0.68,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 53,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 4,
+    "interrogate_calls": 8,
+    "provision_calls": 0,
+    "turns": 3,
+    "total_tokens": 80754,
+    "reasoning_tokens": 3508,
+    "latency_s": 77.14,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "one_inert",
+      "stack": "sequenced-reasoner+anchors+verify+one_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 8,
+      "open_a": 42,
+      "open_b": 63,
+      "lookalikes_a": 16,
+      "lookalikes_b": 6
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [
+          {
+            "a_id": "a.ywg-cr-00/ae3",
+            "b_id": "b.tp-c2fe3242",
+            "basis": "Unique link bundle on the settled YWG device; its two members form the aggregate connection to the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-cr-00/et-0/0/0",
+            "b_id": "b.tp-c4779d73",
+            "basis": "Port on the settled YWG device with the unique recorded link to the settled YYZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/5",
+            "b_id": "b.tp-8c9a4121",
+            "basis": "Port on the settled YHZ device linked at 10 Gb/s to the settled YVR device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/0",
+            "b_id": "b.tp-eb7865a1",
+            "basis": "Port on the settled YHZ device with the unique link to the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/3",
+            "b_id": "b.tp-72e772ac",
+            "basis": "Port on the settled YHZ device linked at 10 Gb/s to settled device a.yul-er-04/b.node-b2bbe90c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/4",
+            "b_id": "b.tp-a63e5804",
+            "basis": "Port on the settled YHZ device linked at 10 Gb/s to settled device a.yul-er-07/b.node-0d30dd9a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/2",
+            "b_id": "b.tp-16c09dd5",
+            "basis": "Port on the settled YHZ device with the unique link to the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/1",
+            "b_id": "b.tp-a25e9c52",
+            "basis": "Port on the settled YHZ device with the unique link to the settled YYZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-02/et-0/0/1",
+            "b_id": "b.tp-68370de9",
+            "basis": "Port on the settled YVR device linked at 10 Gb/s to the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-02/et-0/0/0",
+            "b_id": "b.tp-1891978b",
+            "basis": "Port on the settled YVR device linked at 10 Gb/s to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/ae4",
+            "b_id": "b.tp-86c6aec7",
+            "basis": "Unique bundle on the settled YXE device whose members connect to the bundle on the settled YWG device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/ae8",
+            "b_id": "b.tp-0f6c5a44",
+            "basis": "Unique bundle on the settled YXE device whose members connect to the bundle on the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/et-0/0/5",
+            "b_id": "b.tp-6d4406be",
+            "basis": "Port on the settled YXE device with the unique link to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-04/et-0/0/0",
+            "b_id": "b.tp-32e15a14",
+            "basis": "Port on settled device a.yul-er-04/b.node-b2bbe90c linked to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-04/et-0/0/1",
+            "b_id": "b.tp-e0ab2661",
+            "basis": "Port on settled device a.yul-er-04/b.node-b2bbe90c linked to the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-1/0/1",
+            "b_id": "b.tp-2418fe41",
+            "basis": "Port on the settled YOW device linked at 10 Gb/s to the settled YVR device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-0/0/6",
+            "b_id": "b.tp-6b1cfb03",
+            "basis": "Port on the settled YOW device with the unique link to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/ae2",
+            "b_id": "b.tp-d40769e8",
+            "basis": "Unique bundle on the settled YOW device whose members connect to the bundle on the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-0/0/7",
+            "b_id": "b.tp-19da12cb",
+            "basis": "Port on the settled YOW device linked at 10 Gb/s to settled device a.yul-er-04/b.node-b2bbe90c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/ae5",
+            "b_id": "b.tp-cb59b347",
+            "basis": "Unique bundle on the settled YOW device whose members connect to the bundle on the settled YYZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-1/0/0",
+            "b_id": "b.tp-b28b8755",
+            "basis": "Port on the settled YOW device linked at 10 Gb/s to settled device a.yul-er-07/b.node-0d30dd9a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/et-0/0/2",
+            "b_id": "b.tp-5bbff6ef",
+            "basis": "Port on the settled YYZ device with the unique recorded link to the settled YWG device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/ae6",
+            "b_id": "b.tp-f4bae4dc",
+            "basis": "Unique bundle on the settled YYZ device whose members connect to the bundle on the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/et-0/0/3",
+            "b_id": "b.tp-59ebe37d",
+            "basis": "Port on the settled YYZ device with the unique link to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-07/et-0/0/0",
+            "b_id": "b.tp-724e0671",
+            "basis": "Port on settled device a.yul-er-07/b.node-0d30dd9a linked to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-07/et-0/0/1",
+            "b_id": "b.tp-d4c9f43e",
+            "basis": "Port on settled device a.yul-er-07/b.node-0d30dd9a linked to the settled YOW device.",
+            "confidence": 1.0
+          }
+        ],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Indistinguishable from the other YWG member of ae3 without a live identifier; the records permit either B member port."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Indistinguishable from the other YWG member of ae3 without a live identifier."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "One of the two indistinguishable YWG bundle-member ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "One of the two indistinguishable YWG bundle-member ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "YXE member of ae4; its identity depends on resolving the indistinguishable YWG bundle members."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "YXE member of ae4; its identity depends on resolving the indistinguishable YWG bundle members."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "One of the two indistinguishable YXE ae4 member ports; awaiting resolution of the connected YWG member."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "One of the two indistinguishable YXE ae4 member ports; awaiting resolution of the connected YWG member."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/0",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; topology permits either pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/1",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; topology permits either pairing."
+          },
+          {
+            "id": "b.tp-76dde144",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "b.tp-d252c51c",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/0",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; identity follows resolution of the connected YXE port."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/1",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; identity follows resolution of the connected YXE port."
+          },
+          {
+            "id": "b.tp-6b80277f",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; awaiting resolution of the connected YXE port."
+          },
+          {
+            "id": "b.tp-d54a4f47",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; awaiting resolution of the connected YXE port."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Indistinguishable from the other YXE ae8 member without resolving its connected YOW bundle member."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Indistinguishable from the other YXE ae8 member without resolving its connected YOW bundle member."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "One of two equivalent YXE ae8 member ports; awaiting resolution of the connected YOW member."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "One of two equivalent YXE ae8 member ports; awaiting resolution of the connected YOW member."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "One of two indistinguishable YOW ae2 members; topology permits either B member assignment."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "One of two indistinguishable YOW ae2 members; topology permits either B member assignment."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "One of two equivalent YOW ae2 member ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "One of two equivalent YOW ae2 member ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "One of two indistinguishable YOW ae5 members; topology permits either B member assignment."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "One of two indistinguishable YOW ae5 members; topology permits either B member assignment."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "One of two equivalent YOW ae5 member ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "One of two equivalent YOW ae5 member ports; awaiting a live identifier from A."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Indistinguishable from the other YYZ ae6 member without resolving its connected YOW bundle member."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Indistinguishable from the other YYZ ae6 member without resolving its connected YOW bundle member."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "One of two equivalent YYZ ae6 member ports; awaiting resolution of the connected YOW member."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "One of two equivalent YYZ ae6 member ports; awaiting resolution of the connected YOW member."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "device_questions": [
+          {
+            "individual_id": "a.ywg-cr-00/et-0/0/1",
+            "attribute": "mac-address"
+          },
+          {
+            "individual_id": "a.yxe-cr-03/et-0/0/0",
+            "attribute": "mac-address"
+          },
+          {
+            "individual_id": "a.yow-ar-05/et-0/0/0",
+            "attribute": "mac-address"
+          },
+          {
+            "individual_id": "a.yow-ar-05/et-0/0/3",
+            "attribute": "mac-address"
+          }
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "verify",
+      "proposed": 26,
+      "verdicts": [
+        {
+          "a_id": "a.ywg-cr-00/ae3",
+          "b_id": "b.tp-c2fe3242",
+          "verdict": "determined",
+          "reason": "Both are bundles on the settled-corresponding YWG device, and their two members connect to the settled-corresponding YXE device; this is the only such B bundle."
+        },
+        {
+          "a_id": "a.ywg-cr-00/et-0/0/0",
+          "b_id": "b.tp-c4779d73",
+          "verdict": "determined",
+          "reason": "Both ports are on the settled-corresponding YWG device and connect to the settled-corresponding YYZ device; b.tp-c4779d73 is the only B candidate with that endpoint."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/5",
+          "b_id": "b.tp-8c9a4121",
+          "verdict": "determined",
+          "reason": "Both ports are on YHZ and connect to the settled-corresponding YVR device; this is YHZ's only such B port."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/0",
+          "b_id": "b.tp-eb7865a1",
+          "verdict": "determined",
+          "reason": "Both ports are on YHZ and connect to the settled-corresponding YXE device; b.tp-eb7865a1 is the unique candidate."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/3",
+          "b_id": "b.tp-72e772ac",
+          "verdict": "determined",
+          "reason": "Both ports are on YHZ and connect to the settled-corresponding YUL-04 device; b.tp-72e772ac is the unique candidate."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/4",
+          "b_id": "b.tp-a63e5804",
+          "verdict": "determined",
+          "reason": "Both ports are on YHZ and connect to the settled-corresponding YUL-07 device; b.tp-a63e5804 is the unique candidate."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/2",
+          "b_id": "b.tp-16c09dd5",
+          "verdict": "determined",
+          "reason": "Both ports are on YHZ and connect to the settled-corresponding YOW device; b.tp-16c09dd5 is the unique candidate."
+        },
+        {
+          "a_id": "a.yhz-ar-01/et-0/0/1",
+          "b_id": "b.tp-a25e9c52",
+          "verdict": "determined",
+          "reason": "Both ports are on YHZ and connect to the settled-corresponding YYZ device; b.tp-a25e9c52 is the unique candidate."
+        },
+        {
+          "a_id": "a.yvr-er-02/et-0/0/1",
+          "b_id": "b.tp-68370de9",
+          "verdict": "determined",
+          "reason": "Both ports are on YVR and connect to the settled-corresponding YOW device; b.tp-68370de9 is the unique candidate."
+        },
+        {
+          "a_id": "a.yvr-er-02/et-0/0/0",
+          "b_id": "b.tp-1891978b",
+          "verdict": "determined",
+          "reason": "Both ports are on YVR and connect to the settled-corresponding YHZ device; b.tp-1891978b is the unique candidate."
+        },
+        {
+          "a_id": "a.yxe-cr-03/ae4",
+          "b_id": "b.tp-86c6aec7",
+          "verdict": "determined",
+          "reason": "Both are bundles on YXE whose two member links connect to the settled-corresponding YWG device; this uniquely selects b.tp-86c6aec7."
+        },
+        {
+          "a_id": "a.yxe-cr-03/ae8",
+          "b_id": "b.tp-0f6c5a44",
+          "verdict": "determined",
+          "reason": "Both are bundles on YXE whose two member links connect to the settled-corresponding YOW device; this uniquely selects b.tp-0f6c5a44."
+        },
+        {
+          "a_id": "a.yxe-cr-03/et-0/0/5",
+          "b_id": "b.tp-6d4406be",
+          "verdict": "determined",
+          "reason": "Both ports are on YXE and connect to the settled-corresponding YHZ device; b.tp-6d4406be is the unique candidate."
+        },
+        {
+          "a_id": "a.yul-er-04/et-0/0/0",
+          "b_id": "b.tp-32e15a14",
+          "verdict": "determined",
+          "reason": "Both ports are on YUL-04 and connect to the settled-corresponding YHZ device; b.tp-32e15a14 is the unique candidate."
+        },
+        {
+          "a_id": "a.yul-er-04/et-0/0/1",
+          "b_id": "b.tp-e0ab2661",
+          "verdict": "determined",
+          "reason": "Both ports are on YUL-04 and connect to the settled-corresponding YOW device; b.tp-e0ab2661 is the unique candidate."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-1/0/1",
+          "b_id": "b.tp-2418fe41",
+          "verdict": "determined",
+          "reason": "Both ports are on YOW and connect to the settled-corresponding YVR device; b.tp-2418fe41 is the unique candidate."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-0/0/6",
+          "b_id": "b.tp-6b1cfb03",
+          "verdict": "determined",
+          "reason": "Both ports are on YOW and connect to the settled-corresponding YHZ device; b.tp-6b1cfb03 is the unique candidate."
+        },
+        {
+          "a_id": "a.yow-ar-05/ae2",
+          "b_id": "b.tp-d40769e8",
+          "verdict": "determined",
+          "reason": "Both are bundles on YOW whose two member links connect to the settled-corresponding YXE device; this uniquely selects b.tp-d40769e8."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-0/0/7",
+          "b_id": "b.tp-19da12cb",
+          "verdict": "determined",
+          "reason": "Both ports are on YOW and connect to the settled-corresponding YUL-04 device; b.tp-19da12cb is the unique candidate."
+        },
+        {
+          "a_id": "a.yow-ar-05/ae5",
+          "b_id": "b.tp-cb59b347",
+          "verdict": "determined",
+          "reason": "Both are bundles on YOW whose two member links connect to the settled-corresponding YYZ device; this uniquely selects b.tp-cb59b347."
+        },
+        {
+          "a_id": "a.yow-ar-05/et-1/0/0",
+          "b_id": "b.tp-b28b8755",
+          "verdict": "determined",
+          "reason": "Both ports are on YOW and connect to the settled-corresponding YUL-07 device; b.tp-b28b8755 is the unique candidate."
+        },
+        {
+          "a_id": "a.yyz-cr-06/et-0/0/2",
+          "b_id": "b.tp-5bbff6ef",
+          "verdict": "determined",
+          "reason": "Both ports are on YYZ and connect to the settled-corresponding YWG device; b.tp-5bbff6ef is the unique candidate."
+        },
+        {
+          "a_id": "a.yyz-cr-06/ae6",
+          "b_id": "b.tp-f4bae4dc",
+          "verdict": "determined",
+          "reason": "Both are bundles on YYZ whose two member links connect to the settled-corresponding YOW device; this uniquely selects b.tp-f4bae4dc."
+        },
+        {
+          "a_id": "a.yyz-cr-06/et-0/0/3",
+          "b_id": "b.tp-59ebe37d",
+          "verdict": "determined",
+          "reason": "Both ports are on YYZ and connect to the settled-corresponding YHZ device; b.tp-59ebe37d is the unique candidate."
+        },
+        {
+          "a_id": "a.yul-er-07/et-0/0/0",
+          "b_id": "b.tp-724e0671",
+          "verdict": "determined",
+          "reason": "Both ports are on YUL-07 and connect to the settled-corresponding YHZ device; b.tp-724e0671 is the unique candidate."
+        },
+        {
+          "a_id": "a.yul-er-07/et-0/0/1",
+          "b_id": "b.tp-d4c9f43e",
+          "verdict": "determined",
+          "reason": "Both ports are on YUL-07 and connect to the settled-corresponding YOW device; b.tp-d4c9f43e is the unique candidate."
+        }
+      ]
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.ywg-cr-00/et-0/0/1'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/0",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.yxe-cr-03/et-0/0/0",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.yxe-cr-03/et-0/0/0'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/0",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.yow-ar-05/et-0/0/0",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.yow-ar-05/et-0/0/0'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "attribute": "mac-address"
+      },
+      "result": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "ok": true,
+        "answer": {},
+        "message": "no authoritative 'mac-address' for 'a.yow-ar-05/et-0/0/3'; interrogable attributes: hardware-address"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [],
+        "no_counterpart": [],
+        "device_questions": [
+          {
+            "individual_id": "a.ywg-cr-00/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "individual_id": "a.yxe-cr-03/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "individual_id": "a.yow-ar-05/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "individual_id": "a.yow-ar-05/et-0/0/3",
+            "attribute": "hardware-address"
+          }
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:33:5f:97:3d:aa"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.yxe-cr-03/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:f1:c2:6b:30:f9"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.yow-ar-05/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b4:eb:89:02:c4"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "reasoner",
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0e:75:5a:5c:2e"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [
+          {
+            "a_id": "a.ywg-cr-00/ae3",
+            "b_id": "b.tp-c2fe3242",
+            "basis": "Unique link bundle on the settled YWG device; its members form the aggregate connection to the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-cr-00/et-0/0/0",
+            "b_id": "b.tp-c4779d73",
+            "basis": "Port on the settled YWG device with the unique recorded link to the settled YYZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/5",
+            "b_id": "b.tp-8c9a4121",
+            "basis": "Port on the settled YHZ device linked at 10 Gb/s to the settled YVR device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/0",
+            "b_id": "b.tp-eb7865a1",
+            "basis": "Port on the settled YHZ device with the unique link to the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/3",
+            "b_id": "b.tp-72e772ac",
+            "basis": "Port on the settled YHZ device linked at 10 Gb/s to settled device a.yul-er-04/b.node-b2bbe90c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/4",
+            "b_id": "b.tp-a63e5804",
+            "basis": "Port on the settled YHZ device linked at 10 Gb/s to settled device a.yul-er-07/b.node-0d30dd9a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/2",
+            "b_id": "b.tp-16c09dd5",
+            "basis": "Port on the settled YHZ device with the unique link to the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-ar-01/et-0/0/1",
+            "b_id": "b.tp-a25e9c52",
+            "basis": "Port on the settled YHZ device with the unique link to the settled YYZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-02/et-0/0/1",
+            "b_id": "b.tp-68370de9",
+            "basis": "Port on the settled YVR device linked at 10 Gb/s to the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-02/et-0/0/0",
+            "b_id": "b.tp-1891978b",
+            "basis": "Port on the settled YVR device linked at 10 Gb/s to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/ae4",
+            "b_id": "b.tp-86c6aec7",
+            "basis": "Unique bundle on the settled YXE device whose members connect to the bundle on the settled YWG device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/ae8",
+            "b_id": "b.tp-0f6c5a44",
+            "basis": "Unique bundle on the settled YXE device whose members connect to the bundle on the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-cr-03/et-0/0/5",
+            "b_id": "b.tp-6d4406be",
+            "basis": "Port on the settled YXE device with the unique link to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-04/et-0/0/0",
+            "b_id": "b.tp-32e15a14",
+            "basis": "Port on settled device a.yul-er-04/b.node-b2bbe90c linked to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-04/et-0/0/1",
+            "b_id": "b.tp-e0ab2661",
+            "basis": "Port on settled device a.yul-er-04/b.node-b2bbe90c linked to the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-1/0/1",
+            "b_id": "b.tp-2418fe41",
+            "basis": "Port on the settled YOW device linked at 10 Gb/s to the settled YVR device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-0/0/6",
+            "b_id": "b.tp-6b1cfb03",
+            "basis": "Port on the settled YOW device with the unique link to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/ae2",
+            "b_id": "b.tp-d40769e8",
+            "basis": "Unique bundle on the settled YOW device whose members connect to the bundle on the settled YXE device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-0/0/7",
+            "b_id": "b.tp-19da12cb",
+            "basis": "Port on the settled YOW device linked at 10 Gb/s to settled device a.yul-er-04/b.node-b2bbe90c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/ae5",
+            "b_id": "b.tp-cb59b347",
+            "basis": "Unique bundle on the settled YOW device whose members connect to the bundle on the settled YYZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yow-ar-05/et-1/0/0",
+            "b_id": "b.tp-b28b8755",
+            "basis": "Port on the settled YOW device linked at 10 Gb/s to settled device a.yul-er-07/b.node-0d30dd9a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/et-0/0/2",
+            "b_id": "b.tp-5bbff6ef",
+            "basis": "Port on the settled YYZ device with the unique recorded link to the settled YWG device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/ae6",
+            "b_id": "b.tp-f4bae4dc",
+            "basis": "Unique bundle on the settled YYZ device whose members connect to the bundle on the settled YOW device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-06/et-0/0/3",
+            "b_id": "b.tp-59ebe37d",
+            "basis": "Port on the settled YYZ device with the unique link to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-07/et-0/0/0",
+            "b_id": "b.tp-724e0671",
+            "basis": "Port on settled device a.yul-er-07/b.node-0d30dd9a linked to the settled YHZ device.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-07/et-0/0/1",
+            "b_id": "b.tp-d4c9f43e",
+            "basis": "Port on settled device a.yul-er-07/b.node-0d30dd9a linked to the settled YOW device.",
+            "confidence": 1.0
+          }
+        ],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Indistinguishable from the other YWG ae3 member. Its live hardware-address is not carried by B, so it cannot settle a match."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Indistinguishable from the other YWG ae3 member; no usable identifier shared with B is available."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "One of two indistinguishable YWG bundle-member ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "One of two indistinguishable YWG bundle-member ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "One of two indistinguishable YXE ae4 members; assignment depends on unresolved YWG bundle-member pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "One of two indistinguishable YXE ae4 members; assignment depends on unresolved YWG bundle-member pairing."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "One of two indistinguishable YXE ae4 member ports; the connected YWG member is unresolved."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "One of two indistinguishable YXE ae4 member ports; the connected YWG member is unresolved."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/0",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports. Its live hardware-address is not carried by B, so topology still permits either pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/1",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; no usable identifier shared with B is available."
+          },
+          {
+            "id": "b.tp-76dde144",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "b.tp-d252c51c",
+            "reason": "One of two equivalent direct YXE-to-YYZ ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/0",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; identity depends on the unresolved connected YXE port."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/1",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; identity depends on the unresolved connected YXE port."
+          },
+          {
+            "id": "b.tp-6b80277f",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; the connected YXE port remains unresolved."
+          },
+          {
+            "id": "b.tp-d54a4f47",
+            "reason": "One of two equivalent direct YYZ-to-YXE ports; the connected YXE port remains unresolved."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "One of two indistinguishable YXE ae8 members; assignment depends on unresolved YOW ae2 member pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "One of two indistinguishable YXE ae8 members; assignment depends on unresolved YOW ae2 member pairing."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "One of two equivalent YXE ae8 member ports; the connected YOW member remains unresolved."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "One of two equivalent YXE ae8 member ports; the connected YOW member remains unresolved."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "One of two indistinguishable YOW ae2 members. Its live hardware-address is not carried by B, so topology still permits either assignment."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "One of two indistinguishable YOW ae2 members; no usable identifier shared with B is available."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "One of two equivalent YOW ae2 member ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "One of two equivalent YOW ae2 member ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "One of two indistinguishable YOW ae5 members. Its live hardware-address is not carried by B, so topology still permits either assignment."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "One of two indistinguishable YOW ae5 members; no usable identifier shared with B is available."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "One of two equivalent YOW ae5 member ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "One of two equivalent YOW ae5 member ports; A's reported hardware-address is absent from B."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "One of two indistinguishable YYZ ae6 members; assignment depends on unresolved YOW ae5 member pairing."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "One of two indistinguishable YYZ ae6 members; assignment depends on unresolved YOW ae5 member pairing."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "One of two equivalent YYZ ae6 member ports; the connected YOW member remains unresolved."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "One of two equivalent YYZ ae6 member ports; the connected YOW member remains unresolved."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "device_questions": [],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "one_inert",
+      "by_anchor": 8,
+      "by_topology": 26,
+      "verified": true,
+      "verifier_rejections": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 16,
+      "left_open_lookalikes": 16,
+      "open_a_lookalikes": 16,
+      "device_questions": 8
+    }
+  ]
+}

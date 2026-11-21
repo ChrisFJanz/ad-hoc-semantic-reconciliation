@@ -1,0 +1,193 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 38,
+    "precision": 1.0,
+    "recall": 0.76,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 45,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 19396,
+    "reasoning_tokens": 488,
+    "latency_s": 16.45,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 38,
+      "open_a": 12,
+      "open_b": 33,
+      "lookalikes_a": 12,
+      "lookalikes_b": 6
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Look-alike with a.ywg-cr-00/et-0/0/2; records determine only membership in settled bundle a.ywg-cr-00/ae3 and connection to a member of settled bundle a.yxe-cr-03/ae4, not the individual pairing."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Look-alike with a.ywg-cr-00/et-0/0/1; records determine only membership in settled bundle a.ywg-cr-00/ae3 and connection to a member of settled bundle a.yxe-cr-03/ae4, not the individual pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/7; records determine only membership in settled bundle a.yxe-cr-03/ae8 and connection to a member of settled bundle a.yow-ar-05/ae2, not the individual pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/2; records determine only membership in settled bundle a.yxe-cr-03/ae4 and connection to a member of settled bundle a.ywg-cr-00/ae3, not the individual pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/6; records determine only membership in settled bundle a.yxe-cr-03/ae8 and connection to a member of settled bundle a.yow-ar-05/ae2, not the individual pairing."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/3; records determine only membership in settled bundle a.yxe-cr-03/ae4 and connection to a member of settled bundle a.ywg-cr-00/ae3, not the individual pairing."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/3; records determine only membership in settled bundle a.yow-ar-05/ae5 and connection to a member of settled bundle a.yyz-cr-06/ae6, not the individual pairing."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/1; records determine only membership in settled bundle a.yow-ar-05/ae2 and connection to a member of settled bundle a.yxe-cr-03/ae8, not the individual pairing."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/4; records determine only membership in settled bundle a.yow-ar-05/ae5 and connection to a member of settled bundle a.yyz-cr-06/ae6, not the individual pairing."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/0; records determine only membership in settled bundle a.yow-ar-05/ae2 and connection to a member of settled bundle a.yxe-cr-03/ae8, not the individual pairing."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Look-alike with a.yyz-cr-06/et-0/0/5; records determine only membership in settled bundle a.yyz-cr-06/ae6 and connection to a member of settled bundle a.yow-ar-05/ae5, not the individual pairing."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Look-alike with a.yyz-cr-06/et-0/0/4; records determine only membership in settled bundle a.yyz-cr-06/ae6 and connection to a member of settled bundle a.yow-ar-05/ae5, not the individual pairing."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Look-alike with b.tp-100c2374 inside settled bundle b.tp-86c6aec7; its possible A counterparts are the indistinguishable members a.yxe-cr-03/et-0/0/2 and a.yxe-cr-03/et-0/0/3."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "Topology places it in settled bundle b.tp-0f6c5a44, but its possible A counterparts a.yxe-cr-03/et-0/0/6 and a.yxe-cr-03/et-0/0/7 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Look-alike with b.tp-bef584d3 inside settled bundle b.tp-86c6aec7; its possible A counterparts are the indistinguishable members a.yxe-cr-03/et-0/0/2 and a.yxe-cr-03/et-0/0/3."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "Topology places it in settled bundle b.tp-0f6c5a44, but its possible A counterparts a.yxe-cr-03/et-0/0/6 and a.yxe-cr-03/et-0/0/7 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "Topology places it in settled bundle b.tp-cb59b347, but its possible A counterparts a.yow-ar-05/et-0/0/3 and a.yow-ar-05/et-0/0/4 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "Topology places it in settled bundle b.tp-cb59b347, but its possible A counterparts a.yow-ar-05/et-0/0/3 and a.yow-ar-05/et-0/0/4 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "Topology places it in settled bundle b.tp-d40769e8, but its possible A counterparts a.yow-ar-05/et-0/0/0 and a.yow-ar-05/et-0/0/1 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "Topology places it in settled bundle b.tp-d40769e8, but its possible A counterparts a.yow-ar-05/et-0/0/0 and a.yow-ar-05/et-0/0/1 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "Topology places it in settled bundle b.tp-f4bae4dc, but its possible A counterparts a.yyz-cr-06/et-0/0/4 and a.yyz-cr-06/et-0/0/5 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "Topology places it in settled bundle b.tp-f4bae4dc, but its possible A counterparts a.yyz-cr-06/et-0/0/4 and a.yyz-cr-06/et-0/0/5 are a look-alike pair."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Look-alike with b.tp-b27a3a3f inside settled bundle b.tp-c2fe3242; its possible A counterparts are the indistinguishable members a.ywg-cr-00/et-0/0/1 and a.ywg-cr-00/et-0/0/2."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Look-alike with b.tp-b3e678d5 inside settled bundle b.tp-c2fe3242; its possible A counterparts are the indistinguishable members a.ywg-cr-00/et-0/0/1 and a.ywg-cr-00/et-0/0/2."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 38,
+      "by_topology": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 12,
+      "left_open_lookalikes": 12,
+      "open_a_lookalikes": 12,
+      "device_questions": 0
+    }
+  ]
+}

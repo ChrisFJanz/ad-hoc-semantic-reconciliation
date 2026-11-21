@@ -1,0 +1,885 @@
+{
+ "case": "instance_ipnet_small_namesonly",
+ "operational_case": "configuration (instance level): one network, two independently named models, no shared key",
+ "seed": "generated network, seed 1, size small, views names-only, A holds ['ip'], B holds ['ip']",
+ "false_cognates": [
+  {
+   "a": "a.ywg-cr-00/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.ywg-cr-00/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.ywg-cr-00/et-0/0/2",
+   "b": "b.NE10007/et-0/0/2",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yhz-ar-01/et-0/0/5",
+   "b": "b.NE10007/et-0/0/5",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yhz-ar-01/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yhz-ar-01/et-0/0/3",
+   "b": "b.NE10007/et-0/0/3",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yhz-ar-01/et-0/0/4",
+   "b": "b.NE10007/et-0/0/4",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yhz-ar-01/et-0/0/2",
+   "b": "b.NE10007/et-0/0/2",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yhz-ar-01/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yvr-er-02/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yvr-er-02/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/6",
+   "b": "b.NE10085/et-0/0/6",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/3",
+   "b": "b.NE10007/et-0/0/3",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/7",
+   "b": "b.NE10085/et-0/0/7",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/2",
+   "b": "b.NE10007/et-0/0/2",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yxe-cr-03/et-0/0/5",
+   "b": "b.NE10007/et-0/0/5",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yul-er-04/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yul-er-04/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yow-ar-05/et-0/0/4",
+   "b": "b.NE10007/et-0/0/4",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yow-ar-05/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yow-ar-05/et-0/0/6",
+   "b": "b.NE10033/et-0/0/6",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yow-ar-05/et-0/0/7",
+   "b": "b.NE10033/et-0/0/7",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yow-ar-05/et-0/0/3",
+   "b": "b.NE10007/et-0/0/3",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yow-ar-05/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yyz-cr-06/et-0/0/4",
+   "b": "b.NE10072/et-0/0/4",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yyz-cr-06/et-0/0/5",
+   "b": "b.NE10033/et-0/0/5",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yyz-cr-06/et-0/0/1",
+   "b": "b.NE10020/et-0/0/1",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yyz-cr-06/et-0/0/2",
+   "b": "b.NE10033/et-0/0/2",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yyz-cr-06/et-0/0/0",
+   "b": "b.NE10020/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yyz-cr-06/et-0/0/3",
+   "b": "b.NE10033/et-0/0/3",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yul-er-07/et-0/0/0",
+   "b": "b.NE10007/et-0/0/0",
+   "why": "same interface name on a different device."
+  },
+  {
+   "a": "a.yul-er-07/et-0/0/1",
+   "b": "b.NE10007/et-0/0/1",
+   "why": "same interface name on a different device."
+  }
+ ],
+ "experiment_only": [],
+ "oracle": {
+  "interrogate": {
+   "a.ywg-cr-00": {
+    "serial": "SN-CB7D29F4"
+   },
+   "a.ywg-cr-00/et-0/0/0": {
+    "hardware-address": "02:0e:71:e0:fd:77"
+   },
+   "a.ywg-cr-00/et-0/0/1": {
+    "hardware-address": "02:33:5f:97:3d:aa"
+   },
+   "a.ywg-cr-00/et-0/0/2": {
+    "hardware-address": "02:c9:11:f5:7c:ce"
+   },
+   "a.yhz-ar-01": {
+    "serial": "SN-D51ADDA1"
+   },
+   "a.yhz-ar-01/et-0/0/5": {
+    "hardware-address": "02:dd:63:fc:35:c7"
+   },
+   "a.yhz-ar-01/et-0/0/0": {
+    "hardware-address": "02:bf:2c:e0:37:53"
+   },
+   "a.yhz-ar-01/et-0/0/3": {
+    "hardware-address": "02:84:37:81:6b:dd"
+   },
+   "a.yhz-ar-01/et-0/0/4": {
+    "hardware-address": "02:40:6c:18:9c:24"
+   },
+   "a.yhz-ar-01/et-0/0/2": {
+    "hardware-address": "02:55:51:82:56:8b"
+   },
+   "a.yhz-ar-01/et-0/0/1": {
+    "hardware-address": "02:9d:c9:57:56:74"
+   },
+   "a.yvr-er-02": {
+    "serial": "SN-9F792B61"
+   },
+   "a.yvr-er-02/et-0/0/1": {
+    "hardware-address": "02:ff:08:a6:cd:90"
+   },
+   "a.yvr-er-02/et-0/0/0": {
+    "hardware-address": "02:c1:66:b1:32:69"
+   },
+   "a.yxe-cr-03": {
+    "serial": "SN-28C27031"
+   },
+   "a.yxe-cr-03/et-0/0/6": {
+    "hardware-address": "02:42:69:da:1c:f6"
+   },
+   "a.yxe-cr-03/et-0/0/0": {
+    "hardware-address": "02:f1:c2:6b:30:f9"
+   },
+   "a.yxe-cr-03/et-0/0/3": {
+    "hardware-address": "02:d8:61:9b:91:ff"
+   },
+   "a.yxe-cr-03/et-0/0/7": {
+    "hardware-address": "02:d4:b1:00:a9:ea"
+   },
+   "a.yxe-cr-03/et-0/0/2": {
+    "hardware-address": "02:70:eb:94:0b:d5"
+   },
+   "a.yxe-cr-03/et-0/0/1": {
+    "hardware-address": "02:88:75:34:a2:0f"
+   },
+   "a.yxe-cr-03/et-0/0/5": {
+    "hardware-address": "02:c9:bd:fa:0f:f0"
+   },
+   "a.yul-er-04": {
+    "serial": "SN-7A3514B9"
+   },
+   "a.yul-er-04/et-0/0/0": {
+    "hardware-address": "02:9f:c5:af:d7:60"
+   },
+   "a.yul-er-04/et-0/0/1": {
+    "hardware-address": "02:73:09:cb:4a:12"
+   },
+   "a.yow-ar-05": {
+    "serial": "SN-7BDB9A24"
+   },
+   "a.yow-ar-05/et-0/0/4": {
+    "hardware-address": "02:e7:07:8f:7f:89"
+   },
+   "a.yow-ar-05/et-1/0/1": {
+    "hardware-address": "02:09:50:66:a7:45"
+   },
+   "a.yow-ar-05/et-0/0/0": {
+    "hardware-address": "02:b4:eb:89:02:c4"
+   },
+   "a.yow-ar-05/et-0/0/6": {
+    "hardware-address": "02:96:e8:a4:fe:f2"
+   },
+   "a.yow-ar-05/et-0/0/7": {
+    "hardware-address": "02:52:e4:da:70:e6"
+   },
+   "a.yow-ar-05/et-0/0/3": {
+    "hardware-address": "02:0e:75:5a:5c:2e"
+   },
+   "a.yow-ar-05/et-0/0/1": {
+    "hardware-address": "02:ba:66:d3:f8:b6"
+   },
+   "a.yow-ar-05/et-1/0/0": {
+    "hardware-address": "02:42:04:13:6f:eb"
+   },
+   "a.yyz-cr-06": {
+    "serial": "SN-A8B43CA4"
+   },
+   "a.yyz-cr-06/et-0/0/4": {
+    "hardware-address": "02:82:10:24:2a:08"
+   },
+   "a.yyz-cr-06/et-0/0/5": {
+    "hardware-address": "02:38:5e:b0:94:23"
+   },
+   "a.yyz-cr-06/et-0/0/1": {
+    "hardware-address": "02:0e:c7:dd:01:e4"
+   },
+   "a.yyz-cr-06/et-0/0/2": {
+    "hardware-address": "02:0d:04:c3:6e:d8"
+   },
+   "a.yyz-cr-06/et-0/0/0": {
+    "hardware-address": "02:20:82:3c:fd:e6"
+   },
+   "a.yyz-cr-06/et-0/0/3": {
+    "hardware-address": "02:06:66:76:cf:b0"
+   },
+   "a.yul-er-07": {
+    "serial": "SN-BB4E247A"
+   },
+   "a.yul-er-07/et-0/0/0": {
+    "hardware-address": "02:ca:a4:da:1e:98"
+   },
+   "a.yul-er-07/et-0/0/1": {
+    "hardware-address": "02:9e:98:51:d5:81"
+   },
+   "b.NE10007": {
+    "serial": "SN-A8B43CA4"
+   },
+   "b.NE10007/et-0/0/5": {
+    "hardware-address": "02:38:5e:b0:94:23"
+   },
+   "b.NE10007/et-0/0/2": {
+    "hardware-address": "02:0d:04:c3:6e:d8"
+   },
+   "b.NE10007/et-0/0/1": {
+    "hardware-address": "02:0e:c7:dd:01:e4"
+   },
+   "b.NE10007/et-0/0/4": {
+    "hardware-address": "02:82:10:24:2a:08"
+   },
+   "b.NE10007/et-0/0/3": {
+    "hardware-address": "02:06:66:76:cf:b0"
+   },
+   "b.NE10007/et-0/0/0": {
+    "hardware-address": "02:20:82:3c:fd:e6"
+   },
+   "b.NE10020": {
+    "serial": "SN-9F792B61"
+   },
+   "b.NE10020/et-0/0/0": {
+    "hardware-address": "02:c1:66:b1:32:69"
+   },
+   "b.NE10020/et-0/0/1": {
+    "hardware-address": "02:ff:08:a6:cd:90"
+   },
+   "b.NE10033": {
+    "serial": "SN-28C27031"
+   },
+   "b.NE10033/et-0/0/5": {
+    "hardware-address": "02:c9:bd:fa:0f:f0"
+   },
+   "b.NE10033/et-0/0/6": {
+    "hardware-address": "02:42:69:da:1c:f6"
+   },
+   "b.NE10033/et-0/0/0": {
+    "hardware-address": "02:f1:c2:6b:30:f9"
+   },
+   "b.NE10033/et-0/0/3": {
+    "hardware-address": "02:d8:61:9b:91:ff"
+   },
+   "b.NE10033/et-0/0/7": {
+    "hardware-address": "02:d4:b1:00:a9:ea"
+   },
+   "b.NE10033/et-0/0/1": {
+    "hardware-address": "02:88:75:34:a2:0f"
+   },
+   "b.NE10033/et-0/0/2": {
+    "hardware-address": "02:70:eb:94:0b:d5"
+   },
+   "b.NE10046": {
+    "serial": "SN-7A3514B9"
+   },
+   "b.NE10046/et-0/0/0": {
+    "hardware-address": "02:9f:c5:af:d7:60"
+   },
+   "b.NE10046/et-0/0/1": {
+    "hardware-address": "02:73:09:cb:4a:12"
+   },
+   "b.NE10059": {
+    "serial": "SN-BB4E247A"
+   },
+   "b.NE10059/et-0/0/1": {
+    "hardware-address": "02:9e:98:51:d5:81"
+   },
+   "b.NE10059/et-0/0/0": {
+    "hardware-address": "02:ca:a4:da:1e:98"
+   },
+   "b.NE10072": {
+    "serial": "SN-D51ADDA1"
+   },
+   "b.NE10072/et-0/0/5": {
+    "hardware-address": "02:dd:63:fc:35:c7"
+   },
+   "b.NE10072/et-0/0/3": {
+    "hardware-address": "02:84:37:81:6b:dd"
+   },
+   "b.NE10072/et-0/0/2": {
+    "hardware-address": "02:55:51:82:56:8b"
+   },
+   "b.NE10072/et-0/0/1": {
+    "hardware-address": "02:9d:c9:57:56:74"
+   },
+   "b.NE10072/et-0/0/0": {
+    "hardware-address": "02:bf:2c:e0:37:53"
+   },
+   "b.NE10072/et-0/0/4": {
+    "hardware-address": "02:40:6c:18:9c:24"
+   },
+   "b.NE10085": {
+    "serial": "SN-7BDB9A24"
+   },
+   "b.NE10085/et-0/0/7": {
+    "hardware-address": "02:52:e4:da:70:e6"
+   },
+   "b.NE10085/et-0/0/0": {
+    "hardware-address": "02:b4:eb:89:02:c4"
+   },
+   "b.NE10085/et-0/0/4": {
+    "hardware-address": "02:e7:07:8f:7f:89"
+   },
+   "b.NE10085/et-0/0/1": {
+    "hardware-address": "02:ba:66:d3:f8:b6"
+   },
+   "b.NE10085/et-0/0/6": {
+    "hardware-address": "02:96:e8:a4:fe:f2"
+   },
+   "b.NE10085/et-1/0/0": {
+    "hardware-address": "02:42:04:13:6f:eb"
+   },
+   "b.NE10085/et-0/0/3": {
+    "hardware-address": "02:0e:75:5a:5c:2e"
+   },
+   "b.NE10085/et-1/0/1": {
+    "hardware-address": "02:09:50:66:a7:45"
+   },
+   "b.NE10098": {
+    "serial": "SN-CB7D29F4"
+   },
+   "b.NE10098/et-0/0/0": {
+    "hardware-address": "02:0e:71:e0:fd:77"
+   },
+   "b.NE10098/et-0/0/2": {
+    "hardware-address": "02:c9:11:f5:7c:ce"
+   },
+   "b.NE10098/et-0/0/1": {
+    "hardware-address": "02:33:5f:97:3d:aa"
+   }
+  },
+  "invariants": {
+   "C0:ae6": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.5"
+    ],
+    "connectivity": "0 of 2 wires between the two devices remain",
+    "capacity": 200000000000,
+    "layer-relationships": "bundle of 2 member ports"
+   },
+   "C0:p0": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.2"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C0:p1": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.2"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C0:p2": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.3"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C0:p3": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.4"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C0:p4": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C0:p5": {
+    "owner": "10.255.0.1",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C1:ae4": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.3"
+    ],
+    "connectivity": "0 of 2 wires between the two devices remain",
+    "capacity": 200000000000,
+    "layer-relationships": "bundle of 2 member ports"
+   },
+   "C1:ae8": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.5"
+    ],
+    "connectivity": "0 of 2 wires between the two devices remain",
+    "capacity": 200000000000,
+    "layer-relationships": "bundle of 2 member ports"
+   },
+   "C1:p0": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.2"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C1:p1": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.2"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C1:p2": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.3"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C1:p3": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.3"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C1:p5": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.4"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C1:p6": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C1:p7": {
+    "owner": "10.255.0.2",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C2:ae3": {
+    "owner": "10.255.0.3",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.3"
+    ],
+    "connectivity": "0 of 2 wires between the two devices remain",
+    "capacity": 200000000000,
+    "layer-relationships": "bundle of 2 member ports"
+   },
+   "C2:p0": {
+    "owner": "10.255.0.3",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.3"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "C2:p1": {
+    "owner": "10.255.0.3",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.3"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "C2:p2": {
+    "owner": "10.255.0.3",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.3"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "G0a:p0": {
+    "owner": "10.255.0.4",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.4"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0a:p1": {
+    "owner": "10.255.0.4",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.4"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0a:p2": {
+    "owner": "10.255.0.4",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.5"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0a:p3": {
+    "owner": "10.255.0.4",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.6"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0a:p4": {
+    "owner": "10.255.0.4",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.7"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0a:p5": {
+    "owner": "10.255.0.4",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.8"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0b:ae2": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.5"
+    ],
+    "connectivity": "0 of 2 wires between the two devices remain",
+    "capacity": 200000000000,
+    "layer-relationships": "bundle of 2 member ports"
+   },
+   "G0b:ae5": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.5"
+    ],
+    "connectivity": "0 of 2 wires between the two devices remain",
+    "capacity": 200000000000,
+    "layer-relationships": "bundle of 2 member ports"
+   },
+   "G0b:p0": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "G0b:p1": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.2",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "G0b:p3": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "G0b:p4": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.1",
+     "10.255.0.5"
+    ],
+    "connectivity": "1 of 2 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "member port of a bundle"
+   },
+   "G0b:p6": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.5"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 100000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0b:p7": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.5",
+     "10.255.0.6"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0b:p8": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.5",
+     "10.255.0.7"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "G0b:p9": {
+    "owner": "10.255.0.5",
+    "endpoint-identity": [
+     "10.255.0.5",
+     "10.255.0.8"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "X0:p0": {
+    "owner": "10.255.0.6",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.6"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "X0:p1": {
+    "owner": "10.255.0.6",
+    "endpoint-identity": [
+     "10.255.0.5",
+     "10.255.0.6"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "X1:p0": {
+    "owner": "10.255.0.7",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.7"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "X1:p1": {
+    "owner": "10.255.0.7",
+    "endpoint-identity": [
+     "10.255.0.5",
+     "10.255.0.7"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "X2:p0": {
+    "owner": "10.255.0.8",
+    "endpoint-identity": [
+     "10.255.0.4",
+     "10.255.0.8"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   },
+   "X2:p1": {
+    "owner": "10.255.0.8",
+    "endpoint-identity": [
+     "10.255.0.5",
+     "10.255.0.8"
+    ],
+    "connectivity": "0 of 1 wires between the two devices remain",
+    "capacity": 10000000000,
+    "layer-relationships": "standalone port"
+   }
+  }
+ },
+ "residual_by_placement": {
+  "both_cognitive": 0,
+  "one_inert": 0,
+  "both_inert": 0
+ },
+ "invariants": [
+  "owner",
+  "endpoint-identity",
+  "connectivity",
+  "capacity",
+  "layer-relationships"
+ ],
+ "verification_by_placement": {
+  "both_cognitive": "interrogation on either side; virtual operation on a candidate pair",
+  "one_inert": "interrogation on the live side only",
+  "both_inert": "static evidence only; propose for external adjudication"
+ }
+}

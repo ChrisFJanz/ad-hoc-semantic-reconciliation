@@ -1,0 +1,193 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 1,
+    "submitted": true,
+    "proposed": 38,
+    "precision": 1.0,
+    "recall": 0.76,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 45,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 19399,
+    "reasoning_tokens": 773,
+    "latency_s": 16.76,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 38,
+      "open_a": 12,
+      "open_b": 33,
+      "lookalikes_a": 12,
+      "lookalikes_b": 6
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [],
+        "left_open": [
+          {
+            "id": "a.ywg-cr-00/et-0/0/1",
+            "reason": "Look-alike with a.ywg-cr-00/et-0/0/2; both are members of settled bundle ae3, and the corresponding parallel links cannot be distinguished from the static records."
+          },
+          {
+            "id": "a.ywg-cr-00/et-0/0/2",
+            "reason": "Look-alike with a.ywg-cr-00/et-0/0/1; both are members of settled bundle ae3, and the corresponding parallel links cannot be distinguished from the static records."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/2",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/3; both are members of settled bundle ae4 and connect to the indistinguishable ae3 members."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/3",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/2; both are members of settled bundle ae4 and connect to the indistinguishable ae3 members."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/6",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/7; both are members of settled bundle ae8 and connect to indistinguishable members of settled bundle ae2."
+          },
+          {
+            "id": "a.yxe-cr-03/et-0/0/7",
+            "reason": "Look-alike with a.yxe-cr-03/et-0/0/6; both are members of settled bundle ae8 and connect to indistinguishable members of settled bundle ae2."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/0",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/1; both are members of settled bundle ae2 and connect to indistinguishable members of settled bundle ae8."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/1",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/0; both are members of settled bundle ae2 and connect to indistinguishable members of settled bundle ae8."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/3",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/4; both are members of settled bundle ae5 and connect to indistinguishable members of settled bundle ae6."
+          },
+          {
+            "id": "a.yow-ar-05/et-0/0/4",
+            "reason": "Look-alike with a.yow-ar-05/et-0/0/3; both are members of settled bundle ae5 and connect to indistinguishable members of settled bundle ae6."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/4",
+            "reason": "Look-alike with a.yyz-cr-06/et-0/0/5; both are members of settled bundle ae6 and connect to indistinguishable members of settled bundle ae5."
+          },
+          {
+            "id": "a.yyz-cr-06/et-0/0/5",
+            "reason": "Look-alike with a.yyz-cr-06/et-0/0/4; both are members of settled bundle ae6 and connect to indistinguishable members of settled bundle ae5."
+          },
+          {
+            "id": "b.tp-bef584d3",
+            "reason": "Look-alike with b.tp-100c2374 within settled bundle b.tp-86c6aec7; its possible A counterparts are the indistinguishable ae4 members."
+          },
+          {
+            "id": "b.tp-100c2374",
+            "reason": "Look-alike with b.tp-bef584d3 within settled bundle b.tp-86c6aec7; its possible A counterparts are the indistinguishable ae4 members."
+          },
+          {
+            "id": "b.tp-b27a3a3f",
+            "reason": "Look-alike with b.tp-b3e678d5 within settled bundle b.tp-c2fe3242; its possible A counterparts are the indistinguishable ae3 members."
+          },
+          {
+            "id": "b.tp-b3e678d5",
+            "reason": "Look-alike with b.tp-b27a3a3f within settled bundle b.tp-c2fe3242; its possible A counterparts are the indistinguishable ae3 members."
+          },
+          {
+            "id": "b.tp-a0597199",
+            "reason": "Member of settled bundle b.tp-0f6c5a44; the corresponding A ae8 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-2bfd876a",
+            "reason": "Member of settled bundle b.tp-0f6c5a44; the corresponding A ae8 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-2519f04a",
+            "reason": "Member of settled bundle b.tp-d40769e8; the corresponding A ae2 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-881b0151",
+            "reason": "Member of settled bundle b.tp-d40769e8; the corresponding A ae2 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-e489acd1",
+            "reason": "Member of settled bundle b.tp-cb59b347; the corresponding A ae5 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-3bb14dcf",
+            "reason": "Member of settled bundle b.tp-cb59b347; the corresponding A ae5 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-5a4d1e42",
+            "reason": "Member of settled bundle b.tp-f4bae4dc; the corresponding A ae6 members form an unresolved look-alike pair."
+          },
+          {
+            "id": "b.tp-7ce4df47",
+            "reason": "Member of settled bundle b.tp-f4bae4dc; the corresponding A ae6 members form an unresolved look-alike pair."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-b351bafd",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-8b45dde1",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-bcd7eeb5",
+          "b.link-e72b314d",
+          "b.link-b707eb03",
+          "b.link-afbc10fb",
+          "b.link-1d02317d",
+          "b.link-7ea483df",
+          "b.link-75c94ec2",
+          "b.link-9d33f163",
+          "b.link-dc842b34",
+          "b.link-93049346",
+          "b.link-749b0c70"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 38,
+      "by_topology": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 12,
+      "left_open_lookalikes": 12,
+      "open_a_lookalikes": 12,
+      "device_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "case": "config_ipnet",
+  "operational_case": "configuration",
+  "seed": "hand-authored (IP network: an interfaces view against a topology view of one network; after an exchange on the NMOP list, November 2026)",
+  "note": "Gold standard DERIVED from model ref bindings by derive_gold.py; do not hand-edit.",
+  "correspondences": [
+    {
+      "a": "a.lower",
+      "b": "b.member",
+      "ref": "bundle-membership"
+    },
+    {
+      "a": "a.mac",
+      "b": "b.mac",
+      "ref": "hardware-address"
+    },
+    {
+      "a": "a.ifname",
+      "b": "b.ifname",
+      "ref": "interface-name"
+    },
+    {
+      "a": "a.ip",
+      "b": "b.ip",
+      "ref": "ip-address"
+    },
+    {
+      "a": "a.agg",
+      "b": "b.lag",
+      "ref": "link-bundle"
+    },
+    {
+      "a": "a.device",
+      "b": "b.node",
+      "ref": "network-device"
+    },
+    {
+      "a": "a.speed",
+      "b": "b.rate",
+      "ref": "nominal-speed"
+    },
+    {
+      "a": "a.nbr",
+      "b": "b.link",
+      "ref": "physical-connection"
+    },
+    {
+      "a": "a.if",
+      "b": "b.tp",
+      "ref": "physical-port"
+    },
+    {
+      "a": "a.rid",
+      "b": "b.rid",
+      "ref": "router-id"
+    }
+  ],
+  "false_cognates": [
+    {
+      "a": "a.if",
+      "b": "b.ifname",
+      "why": "interface vs interface-name: both carry 'interface', but one is the port itself and the other is the label the device gives it; a.if's true partner is b.tp, b.ifname's is a.ifname."
+    },
+    {
+      "a": "a.agg",
+      "b": "b.link",
+      "why": "aggregate-interface (link aggregation) vs link: both suggest 'link', but one is a bundle of ports on one device and the other is a connection between two devices; a.agg's true partner is b.lag, b.link's is a.nbr."
+    },
+    {
+      "a": "a.ifindex",
+      "b": "b.tpid",
+      "why": "if-index vs tp-id: both are identifiers of an interface local to one system, but one is a device-local index and the other is an identifier the topology system issues for itself; neither has a counterpart."
+    }
+  ],
+  "residual": {
+    "a_only": [
+      {
+        "id": "a.ifindex",
+        "ref": "interface-index",
+        "reason": "native gap (self-extend)"
+      }
+    ],
+    "b_only": [
+      {
+        "id": "b.network",
+        "ref": "topology",
+        "reason": "native gap (self-extend)"
+      },
+      {
+        "id": "b.tpid",
+        "ref": null,
+        "reason": "opaque (no public meaning)"
+      }
+    ]
+  },
+  "residual_by_placement": {
+    "both_cognitive": 3,
+    "one_inert": 4,
+    "both_inert": 5
+  },
+  "invariants": [
+    "device-identity",
+    "port-ownership",
+    "bundle-membership",
+    "physical-connectivity",
+    "speed-with-unit",
+    "address-identity"
+  ],
+  "verification_by_placement": {
+    "both_cognitive": "closed-loop worked exchange, self-certifying",
+    "one_inert": "evidence and round-trip on invariants",
+    "both_inert": "external adjudication or downstream test"
+  }
+}

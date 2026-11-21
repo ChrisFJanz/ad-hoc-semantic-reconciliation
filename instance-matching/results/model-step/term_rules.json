@@ -1,0 +1,101 @@
+{
+  "model": "gpt-5.6-sol",
+  "from": "experiment_transcript_config_ipnet.json",
+  "effort": {
+    "total_tokens": 4148,
+    "rules": 10,
+    "asked": 10
+  },
+  "rules": [
+    {
+      "a_id": "a.agg",
+      "b_id": "b.lag",
+      "value_rule": "not-a-value",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "Both concepts are termination entities and carry no value of their own."
+    },
+    {
+      "a_id": "a.device",
+      "b_id": "b.node",
+      "value_rule": "not-a-value",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "Both concepts are node entities and carry no value of their own."
+    },
+    {
+      "a_id": "a.if",
+      "b_id": "b.tp",
+      "value_rule": "not-a-value",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "Both concepts are termination entities and carry no value of their own."
+    },
+    {
+      "a_id": "a.ifname",
+      "b_id": "b.ifname",
+      "value_rule": "identity",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "The interface name is carried unchanged."
+    },
+    {
+      "a_id": "a.ip",
+      "b_id": "b.ip",
+      "value_rule": "identity",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "The IP address is carried unchanged."
+    },
+    {
+      "a_id": "a.lower",
+      "b_id": "b.member",
+      "value_rule": "not-a-value",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "Both concepts are relations and carry no value of their own."
+    },
+    {
+      "a_id": "a.mac",
+      "b_id": "b.mac",
+      "value_rule": "identity",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "The MAC address is carried unchanged."
+    },
+    {
+      "a_id": "a.nbr",
+      "b_id": "b.link",
+      "value_rule": "not-a-value",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "Both concepts represent adjacencies and carry no value of their own."
+    },
+    {
+      "a_id": "a.rid",
+      "b_id": "b.rid",
+      "value_rule": "identity",
+      "a_to_b_factor": 1.0,
+      "a_unit": "",
+      "b_unit": "",
+      "note": "The router identifier is carried unchanged."
+    },
+    {
+      "a_id": "a.speed",
+      "b_id": "b.rate",
+      "value_rule": "scale",
+      "a_to_b_factor": 0.001,
+      "a_unit": "bits per second",
+      "b_unit": "kilobits per second",
+      "note": "Convert bits per second to kilobits per second."
+    }
+  ]
+}

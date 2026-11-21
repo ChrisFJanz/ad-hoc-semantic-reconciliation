@@ -1,0 +1,2745 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "two-agent",
+  "row": {
+    "case": "instance_ipnet_medium",
+    "model": "gpt-5.6-sol",
+    "placement": "both_cognitive",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 1,
+    "submitted": true,
+    "proposed": 150,
+    "precision": 1.0,
+    "recall": 1.0,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 64,
+    "residual_experiment_only": 0,
+    "residual_native": 64,
+    "confirmed_provision": 28,
+    "refuted_provision": 0,
+    "interrogated": 56,
+    "interrogate_calls": 56,
+    "provision_calls": 28,
+    "turns": 8,
+    "total_tokens": 282711,
+    "reasoning_tokens": 1960,
+    "latency_s": 87.77,
+    "mean_conf_correct": 0.593,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "two-agent"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_cognitive",
+      "stack": "two-agent-instance+op+confirm-lookalikes+staged60+anchors",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ]
+    },
+    {
+      "step": "stage",
+      "stage": 1,
+      "kind": "batch",
+      "devices_a": [
+        "a.yqb-cr-07",
+        "a.yvr-er-17",
+        "a.ywg-ar-15",
+        "a.yyz-cr-18",
+        "a.yhz-cr-08",
+        "a.yqb-cr-14",
+        "a.yyc-ar-13"
+      ],
+      "devices_b": [
+        "b.node-19f8c573",
+        "b.node-73050623",
+        "b.node-e267ee3c",
+        "b.node-48555212",
+        "b.node-e955bee5",
+        "b.node-1ac151fe",
+        "b.node-70336995"
+      ],
+      "n_a": 28,
+      "n_b": 70
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "b.tp-10ff6ac4",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-054b8383",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-c1f3d7a3",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-b55f8e58",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e3e12334",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2d8c73e6",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-047ae90f",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e8abb3b4",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-2a489b0c",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-4063fc60",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-9defe48c",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0ebf1200",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-937d200e",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-7c77feb2",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-12e5712c",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-a81d81a4",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-d663803f",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-4f9f24c4",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-e7a21bd5",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-dbc83434",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-d773459b",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-123cee98",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-0f1e44d2",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-5ef78e17",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-fed02a3f",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-678bedc9",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-6f0fc1e3",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "b.tp-015ca880",
+            "ask": "Provide all attributes and topology: owning device, higher-layer bundle, LLDP neighbour, speed, and interface type."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-10ff6ac4",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-10ff6ac4",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0e:71:e0:fd:77"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-054b8383",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-054b8383",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:37:53:c9:bd:fa"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-c1f3d7a3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-c1f3d7a3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0b:d5:33:5f:97"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-b55f8e58",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-b55f8e58",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:75:34:a2:0f:0b"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-e3e12334",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-e3e12334",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:91:ff:c9:11:f5"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-2d8c73e6",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-2d8c73e6",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:57:56:74:06:66"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-047ae90f",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-047ae90f",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:84:a9:fe:38:6d"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-e8abb3b4",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-e8abb3b4",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:e6:c1:56:76:78"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-2a489b0c",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-2a489b0c",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b1:32:69:dd:63"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-4063fc60",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-4063fc60",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:81:42:04:13:6f"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-9defe48c",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-9defe48c",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:91:ec:c7:6c:e7"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-0ebf1200",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-0ebf1200",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:28:17:07:02:f5"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-937d200e",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-937d200e",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:eb:57:13:c1:66"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-7c77feb2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-7c77feb2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:29:88:ba:97:3a"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-12e5712c",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-12e5712c",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d0:25:c2:4b:40"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-a81d81a4",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-a81d81a4",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:76:cf:b0:b4:eb"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-d663803f",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-d663803f",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:fc:35:c7:97:ff"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-4f9f24c4",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-4f9f24c4",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0f:f0:16:9d:c9"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-e7a21bd5",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-e7a21bd5",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:a4:fe:f2:3a:0c"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-dbc83434",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-dbc83434",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0d:04:c3:6e:d8"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-d773459b",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-d773459b",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:84:37:81:6b:dd"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-123cee98",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-123cee98",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:7c:ce:d4:58:bb"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-0f1e44d2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-0f1e44d2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:3d:aa:d8:61:9b"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-5ef78e17",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-5ef78e17",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b0:76:70:eb:94"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-fed02a3f",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-fed02a3f",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:9f:c5:af:d7:60"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-678bedc9",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-678bedc9",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0a:73:09:cb:4a"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-6f0fc1e3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-6f0fc1e3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:fa:45:35:a4:14"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-015ca880",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-015ca880",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:ae:3a:c1:27:72"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-10ff6ac4",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-19f8c573 (settled as a.yqb-cr-07); member of bundle b.tp-817cdc42 (settled as a.yqb-cr-07/ae4); linked via b.link-81cd8332 to b.tp-5ef78e17 on b.node-e955bee5 (a.yhz-cr-08), which is a member of a.yhz-cr-08/ae4."
+          },
+          {
+            "my_id": "b.tp-054b8383",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of b.tp-26e8cb85 (a.yqb-cr-07/ae7); linked via b.link-1004178b to b.tp-4f9f24c4 on b.node-48555212 (a.yyz-cr-18), member of a.yyz-cr-18/ae2."
+          },
+          {
+            "my_id": "b.tp-c1f3d7a3",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of b.tp-817cdc42 (a.yqb-cr-07/ae4); linked via b.link-76e02b18 to b.tp-0f1e44d2 on b.node-e955bee5 (a.yhz-cr-08), member of a.yhz-cr-08/ae4."
+          },
+          {
+            "my_id": "b.tp-b55f8e58",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of b.tp-817cdc42 (a.yqb-cr-07/ae4); linked via b.link-dd43da11 to b.tp-dbc83434 on b.node-e955bee5 (a.yhz-cr-08), member of a.yhz-cr-08/ae4."
+          },
+          {
+            "my_id": "b.tp-e3e12334",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of b.tp-817cdc42 (a.yqb-cr-07/ae4); linked via b.link-008e5901 to b.tp-123cee98 on b.node-e955bee5 (a.yhz-cr-08), member of a.yhz-cr-08/ae4."
+          },
+          {
+            "my_id": "b.tp-2d8c73e6",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-19f8c573 (a.yqb-cr-07); member of b.tp-26e8cb85 (a.yqb-cr-07/ae7); linked via b.link-baa8d9b0 to b.tp-a81d81a4 on b.node-48555212 (a.yyz-cr-18), member of a.yyz-cr-18/ae2."
+          },
+          {
+            "my_id": "b.tp-047ae90f",
+            "attributes": "physical-port; lag=false; link speed 10000000 kbps",
+            "topology": "Owned by b.node-73050623 (a.yvr-er-17); member of b.tp-f9ce6522 (a.yvr-er-17/ae2); linked via b.link-8d2a0c9c to b.tp-0ebf1200 on b.node-e267ee3c (a.ywg-ar-15), member of a.ywg-ar-15/ae9."
+          },
+          {
+            "my_id": "b.tp-e8abb3b4",
+            "attributes": "physical-port; lag=false; link speed 10000000 kbps",
+            "topology": "Owned by b.node-73050623 (a.yvr-er-17); member of b.tp-f9ce6522 (a.yvr-er-17/ae2); linked via b.link-ade40325 to b.tp-9defe48c on b.node-e267ee3c (a.ywg-ar-15), member of a.ywg-ar-15/ae9."
+          },
+          {
+            "my_id": "b.tp-2a489b0c",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of b.tp-c5f5a861 (a.ywg-ar-15/ae3); linked via b.link-d6d01cfc to b.tp-d663803f on b.node-48555212 (a.yyz-cr-18), member of a.yyz-cr-18/ae8."
+          },
+          {
+            "my_id": "b.tp-4063fc60",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of b.tp-c5f5a861 (a.ywg-ar-15/ae3); linked via b.link-e3121429 to b.tp-937d200e on b.node-48555212 (a.yyz-cr-18), member of a.yyz-cr-18/ae8."
+          },
+          {
+            "my_id": "b.tp-9defe48c",
+            "attributes": "physical-port; lag=false; link speed 10000000 kbps",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of b.tp-a174557c (a.ywg-ar-15/ae9); linked via b.link-ade40325 to b.tp-e8abb3b4 on b.node-73050623 (a.yvr-er-17), member of a.yvr-er-17/ae2."
+          },
+          {
+            "my_id": "b.tp-0ebf1200",
+            "attributes": "physical-port; lag=false; link speed 10000000 kbps",
+            "topology": "Owned by b.node-e267ee3c (a.ywg-ar-15); member of b.tp-a174557c (a.ywg-ar-15/ae9); linked via b.link-8d2a0c9c to b.tp-047ae90f on b.node-73050623 (a.yvr-er-17), member of a.yvr-er-17/ae2."
+          },
+          {
+            "my_id": "b.tp-937d200e",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of b.tp-c6ee14b1 (a.yyz-cr-18/ae8); linked via b.link-e3121429 to b.tp-4063fc60 on b.node-e267ee3c (a.ywg-ar-15), member of a.ywg-ar-15/ae3."
+          },
+          {
+            "my_id": "b.tp-7c77feb2",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of b.tp-d3ba4557 (a.yyz-cr-18/ae12); linked via b.link-56df57ae to b.tp-015ca880 on b.node-70336995 (a.yyc-ar-13), member of a.yyc-ar-13/ae2."
+          },
+          {
+            "my_id": "b.tp-12e5712c",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of b.tp-d3ba4557 (a.yyz-cr-18/ae12); linked via b.link-df84fbb5 to b.tp-6f0fc1e3 on b.node-70336995 (a.yyc-ar-13), member of a.yyc-ar-13/ae2."
+          },
+          {
+            "my_id": "b.tp-a81d81a4",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of b.tp-28b735f4 (a.yyz-cr-18/ae2); linked via b.link-baa8d9b0 to b.tp-2d8c73e6 on b.node-19f8c573 (a.yqb-cr-07), member of a.yqb-cr-07/ae7."
+          },
+          {
+            "my_id": "b.tp-d663803f",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of b.tp-c6ee14b1 (a.yyz-cr-18/ae8); linked via b.link-d6d01cfc to b.tp-2a489b0c on b.node-e267ee3c (a.ywg-ar-15), member of a.ywg-ar-15/ae3."
+          },
+          {
+            "my_id": "b.tp-4f9f24c4",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-48555212 (a.yyz-cr-18); member of b.tp-28b735f4 (a.yyz-cr-18/ae2); linked via b.link-1004178b to b.tp-054b8383 on b.node-19f8c573 (a.yqb-cr-07), member of a.yqb-cr-07/ae7."
+          },
+          {
+            "my_id": "b.tp-e7a21bd5",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08); member of b.tp-337ad96f (a.yhz-cr-08/ae9); linked via b.link-5d8a3191 to b.tp-fed02a3f on b.node-1ac151fe (a.yqb-cr-14), member of a.yqb-cr-14/ae4."
+          },
+          {
+            "my_id": "b.tp-dbc83434",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08); member of b.tp-182056df (a.yhz-cr-08/ae4); linked via b.link-dd43da11 to b.tp-b55f8e58 on b.node-19f8c573 (a.yqb-cr-07), member of a.yqb-cr-07/ae4."
+          },
+          {
+            "my_id": "b.tp-d773459b",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08); member of b.tp-337ad96f (a.yhz-cr-08/ae9); linked via b.link-5b44279b to b.tp-678bedc9 on b.node-1ac151fe (a.yqb-cr-14), member of a.yqb-cr-14/ae4."
+          },
+          {
+            "my_id": "b.tp-123cee98",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08); member of b.tp-182056df (a.yhz-cr-08/ae4); linked via b.link-008e5901 to b.tp-e3e12334 on b.node-19f8c573 (a.yqb-cr-07), member of a.yqb-cr-07/ae4."
+          },
+          {
+            "my_id": "b.tp-0f1e44d2",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08); member of b.tp-182056df (a.yhz-cr-08/ae4); linked via b.link-76e02b18 to b.tp-c1f3d7a3 on b.node-19f8c573 (a.yqb-cr-07), member of a.yqb-cr-07/ae4."
+          },
+          {
+            "my_id": "b.tp-5ef78e17",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-e955bee5 (a.yhz-cr-08); member of b.tp-182056df (a.yhz-cr-08/ae4); linked via b.link-81cd8332 to b.tp-10ff6ac4 on b.node-19f8c573 (a.yqb-cr-07), member of a.yqb-cr-07/ae4."
+          },
+          {
+            "my_id": "b.tp-fed02a3f",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14); member of b.tp-b8020545 (a.yqb-cr-14/ae4); linked via b.link-5d8a3191 to b.tp-e7a21bd5 on b.node-e955bee5 (a.yhz-cr-08), member of a.yhz-cr-08/ae9."
+          },
+          {
+            "my_id": "b.tp-678bedc9",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-1ac151fe (a.yqb-cr-14); member of b.tp-b8020545 (a.yqb-cr-14/ae4); linked via b.link-5b44279b to b.tp-d773459b on b.node-e955bee5 (a.yhz-cr-08), member of a.yhz-cr-08/ae9."
+          },
+          {
+            "my_id": "b.tp-6f0fc1e3",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13); member of b.tp-cb0dc9cf (a.yyc-ar-13/ae2); linked via b.link-df84fbb5 to b.tp-12e5712c on b.node-48555212 (a.yyz-cr-18), member of a.yyz-cr-18/ae12."
+          },
+          {
+            "my_id": "b.tp-015ca880",
+            "attributes": "physical-port; lag=false; link speed 100000000 kbps",
+            "topology": "Owned by b.node-70336995 (a.yyc-ar-13); member of b.tp-cb0dc9cf (a.yyc-ar-13/ae2); linked via b.link-56df57ae to b.tp-7c77feb2 on b.node-48555212 (a.yyz-cr-18), member of a.yyz-cr-18/ae12."
+          }
+        ],
+        "questions": [
+          {
+            "their_id": "a.yqb-cr-07/et-0/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-0/0/6",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-0/0/3",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-0/0/1",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-0/0/2",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-07/et-0/0/5",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yvr-er-17/et-0/0/1",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yvr-er-17/et-0/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/2",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/1",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-1/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.ywg-ar-15/et-0/0/7",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-0/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-1/0/3",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-0/0/6",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-0/0/7",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-0/0/1",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyz-cr-18/et-1/0/2",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/3",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/2",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-1/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/1",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yhz-cr-08/et-0/0/7",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-14/et-0/0/3",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yqb-cr-14/et-0/0/2",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/0",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          },
+          {
+            "their_id": "a.yyc-ar-13/et-0/0/1",
+            "ask": "Provide all authoritative attributes (especially hardware-address/serial) and topology: bundle membership, LLDP neighbour, speed, and interface type."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [
+          {
+            "my_id": "b.tp-10ff6ac4",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-054b8383",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-c1f3d7a3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-b55f8e58",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-e3e12334",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-2d8c73e6",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-047ae90f",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-e8abb3b4",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-2a489b0c",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-4063fc60",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-9defe48c",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-0ebf1200",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-937d200e",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-7c77feb2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-12e5712c",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-a81d81a4",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-d663803f",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-4f9f24c4",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-e7a21bd5",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-dbc83434",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-d773459b",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-123cee98",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-0f1e44d2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-5ef78e17",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-fed02a3f",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-678bedc9",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-6f0fc1e3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-015ca880",
+            "attribute": "hardware-address"
+          }
+        ],
+        "experiments": [],
+        "no_counterpart": [
+          "b.link-abbdcbf5",
+          "b.link-76e02b18",
+          "b.link-471b7887",
+          "b.link-008e5901",
+          "b.link-0e686a07",
+          "b.link-16217285",
+          "b.link-dd43da11",
+          "b.link-1761be62",
+          "b.link-4f8f57ea",
+          "b.link-1004178b",
+          "b.link-999fca3b",
+          "b.link-81cd8332",
+          "b.link-3d71cf67",
+          "b.link-baa8d9b0",
+          "b.link-b00c1b19",
+          "b.link-b6f2ec53",
+          "b.link-f9cf9522",
+          "b.link-ade40325",
+          "b.link-919b7bc1",
+          "b.link-8d2a0c9c",
+          "b.link-e3121429",
+          "b.link-efc82c46",
+          "b.link-0156be09",
+          "b.link-fe867d38",
+          "b.link-d6d01cfc",
+          "b.link-09d70270",
+          "b.link-8d18018e",
+          "b.link-df84fbb5",
+          "b.link-0414622e",
+          "b.link-8c9c41e4",
+          "b.link-df41dd1e",
+          "b.link-7e5444cd",
+          "b.link-56df57ae",
+          "b.link-b87b9e2d",
+          "b.link-5b44279b",
+          "b.link-7df8ea6d",
+          "b.link-5d8a3191",
+          "b.link-6c84f475",
+          "b.link-d7319301",
+          "b.link-ceb56e00",
+          "b.link-24d86818",
+          "b.link-3f49ad96"
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-07/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-07/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:75:34:a2:0f:0b"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-07/et-0/0/6",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-07/et-0/0/6",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:57:56:74:06:66"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-07/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-07/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:91:ff:c9:11:f5"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-07/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-07/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0e:71:e0:fd:77"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-07/et-0/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-07/et-0/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0b:d5:33:5f:97"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-07/et-0/0/5",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-07/et-0/0/5",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:37:53:c9:bd:fa"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yvr-er-17/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yvr-er-17/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:84:a9:fe:38:6d"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yvr-er-17/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yvr-er-17/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:e6:c1:56:76:78"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.ywg-ar-15/et-0/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.ywg-ar-15/et-0/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b1:32:69:dd:63"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.ywg-ar-15/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.ywg-ar-15/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:81:42:04:13:6f"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.ywg-ar-15/et-1/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.ywg-ar-15/et-1/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:28:17:07:02:f5"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.ywg-ar-15/et-0/0/7",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.ywg-ar-15/et-0/0/7",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:91:ec:c7:6c:e7"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-18/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-18/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0f:f0:16:9d:c9"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-18/et-1/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-18/et-1/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:29:88:ba:97:3a"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-18/et-0/0/6",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-18/et-0/0/6",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:eb:57:13:c1:66"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-18/et-0/0/7",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-18/et-0/0/7",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:fc:35:c7:97:ff"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-18/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-18/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:76:cf:b0:b4:eb"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-18/et-1/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-18/et-1/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d0:25:c2:4b:40"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yhz-cr-08/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yhz-cr-08/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:7c:ce:d4:58:bb"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yhz-cr-08/et-0/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yhz-cr-08/et-0/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:3d:aa:d8:61:9b"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yhz-cr-08/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yhz-cr-08/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0d:04:c3:6e:d8"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yhz-cr-08/et-1/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yhz-cr-08/et-1/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:84:37:81:6b:dd"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yhz-cr-08/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yhz-cr-08/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b0:76:70:eb:94"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yhz-cr-08/et-0/0/7",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yhz-cr-08/et-0/0/7",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:a4:fe:f2:3a:0c"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-14/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-14/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0a:73:09:cb:4a"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yqb-cr-14/et-0/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yqb-cr-14/et-0/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:9f:c5:af:d7:60"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyc-ar-13/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyc-ar-13/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:fa:45:35:a4:14"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyc-ar-13/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyc-ar-13/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:ae:3a:c1:27:72"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/0",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-07; member of a.yqb-cr-07/ae4; LLDP neighbour a.yhz-cr-08/et-0/0/0."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/6",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-07; member of a.yqb-cr-07/ae7; LLDP neighbour a.yyz-cr-18/et-0/0/1."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/3",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-07; member of a.yqb-cr-07/ae4; LLDP neighbour a.yhz-cr-08/et-0/0/3."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/1",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-07; member of a.yqb-cr-07/ae4; LLDP neighbour a.yhz-cr-08/et-0/0/1."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/2",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-07; member of a.yqb-cr-07/ae4; LLDP neighbour a.yhz-cr-08/et-0/0/2."
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/5",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-07; member of a.yqb-cr-07/ae7; LLDP neighbour a.yyz-cr-18/et-0/0/0."
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/1",
+            "attributes": "physical-port; speed=10000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yvr-er-17; member of a.yvr-er-17/ae2; LLDP neighbour a.ywg-ar-15/et-1/0/0."
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/0",
+            "attributes": "physical-port; speed=10000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yvr-er-17; member of a.yvr-er-17/ae2; LLDP neighbour a.ywg-ar-15/et-0/0/7."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/2",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.ywg-ar-15; member of a.ywg-ar-15/ae3; LLDP neighbour a.yyz-cr-18/et-0/0/7."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/1",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.ywg-ar-15; member of a.ywg-ar-15/ae3; LLDP neighbour a.yyz-cr-18/et-0/0/6."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-1/0/0",
+            "attributes": "physical-port; speed=10000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.ywg-ar-15; member of a.ywg-ar-15/ae9; LLDP neighbour a.yvr-er-17/et-0/0/1."
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/7",
+            "attributes": "physical-port; speed=10000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.ywg-ar-15; member of a.ywg-ar-15/ae9; LLDP neighbour a.yvr-er-17/et-0/0/0."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/0",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyz-cr-18; member of a.yyz-cr-18/ae2; LLDP neighbour a.yqb-cr-07/et-0/0/5."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/3",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyz-cr-18; member of a.yyz-cr-18/ae12; LLDP neighbour a.yyc-ar-13/et-0/0/1."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/6",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyz-cr-18; member of a.yyz-cr-18/ae8; LLDP neighbour a.ywg-ar-15/et-0/0/1."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/7",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyz-cr-18; member of a.yyz-cr-18/ae8; LLDP neighbour a.ywg-ar-15/et-0/0/2."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/1",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyz-cr-18; member of a.yyz-cr-18/ae2; LLDP neighbour a.yqb-cr-07/et-0/0/6."
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/2",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyz-cr-18; member of a.yyz-cr-18/ae12; LLDP neighbour a.yyc-ar-13/et-0/0/0."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/3",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yhz-cr-08; member of a.yhz-cr-08/ae4; LLDP neighbour a.yqb-cr-07/et-0/0/3."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/2",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yhz-cr-08; member of a.yhz-cr-08/ae4; LLDP neighbour a.yqb-cr-07/et-0/0/2."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/0",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yhz-cr-08; member of a.yhz-cr-08/ae4; LLDP neighbour a.yqb-cr-07/et-0/0/0."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-1/0/0",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yhz-cr-08; member of a.yhz-cr-08/ae9; LLDP neighbour a.yqb-cr-14/et-0/0/3."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/1",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yhz-cr-08; member of a.yhz-cr-08/ae4; LLDP neighbour a.yqb-cr-07/et-0/0/1."
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/7",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yhz-cr-08; member of a.yhz-cr-08/ae9; LLDP neighbour a.yqb-cr-14/et-0/0/2."
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/3",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-14; member of a.yqb-cr-14/ae4; LLDP neighbour a.yhz-cr-08/et-1/0/0."
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/2",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yqb-cr-14; member of a.yqb-cr-14/ae4; LLDP neighbour a.yhz-cr-08/et-0/0/7."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/0",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyc-ar-13; member of a.yyc-ar-13/ae2; LLDP neighbour a.yyz-cr-18/et-1/0/2."
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/1",
+            "attributes": "physical-port; speed=100000000000 bps; if-type=ethernetCsmacd; hardware-address not in static record (authoritative interrogation requested).",
+            "topology": "Owned by a.yyc-ar-13; member of a.yyc-ar-13/ae2; LLDP neighbour a.yyz-cr-18/et-1/0/3."
+          }
+        ],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/6",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-07/et-0/0/5",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yvr-er-17/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-1/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.ywg-ar-15/et-0/0/7",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/6",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/7",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-18/et-1/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-1/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yhz-cr-08/et-0/0/7",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yqb-cr-14/et-0/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyc-ar-13/et-0/0/1",
+            "attribute": "hardware-address"
+          }
+        ],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [
+          {
+            "my_id": "b.tp-10ff6ac4",
+            "their_id": "a.yqb-cr-07/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:0e:71:e0:fd:77 matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-054b8383",
+            "their_id": "a.yqb-cr-07/et-0/0/5",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:37:53:c9:bd:fa matches exactly; owning device, ae7 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-c1f3d7a3",
+            "their_id": "a.yqb-cr-07/et-0/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:0b:d5:33:5f:97 matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-b55f8e58",
+            "their_id": "a.yqb-cr-07/et-0/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:75:34:a2:0f:0b matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-e3e12334",
+            "their_id": "a.yqb-cr-07/et-0/0/3",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:91:ff:c9:11:f5 matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-2d8c73e6",
+            "their_id": "a.yqb-cr-07/et-0/0/6",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:57:56:74:06:66 matches exactly; owning device, ae7 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-047ae90f",
+            "their_id": "a.yvr-er-17/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:84:a9:fe:38:6d matches exactly; owning device, ae2 membership, 10-Gbps speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-e8abb3b4",
+            "their_id": "a.yvr-er-17/et-0/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:e6:c1:56:76:78 matches exactly; owning device, ae2 membership, 10-Gbps speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-2a489b0c",
+            "their_id": "a.ywg-ar-15/et-0/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:b1:32:69:dd:63 matches exactly; owning device, ae3 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-4063fc60",
+            "their_id": "a.ywg-ar-15/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:81:42:04:13:6f matches exactly; owning device, ae3 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-9defe48c",
+            "their_id": "a.ywg-ar-15/et-0/0/7",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:91:ec:c7:6c:e7 matches exactly; owning device, ae9 membership, 10-Gbps speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-0ebf1200",
+            "their_id": "a.ywg-ar-15/et-1/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:28:17:07:02:f5 matches exactly; owning device, ae9 membership, 10-Gbps speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-937d200e",
+            "their_id": "a.yyz-cr-18/et-0/0/6",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:eb:57:13:c1:66 matches exactly; owning device, ae8 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-7c77feb2",
+            "their_id": "a.yyz-cr-18/et-1/0/3",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:29:88:ba:97:3a matches exactly; owning device, ae12 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-12e5712c",
+            "their_id": "a.yyz-cr-18/et-1/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:d0:25:c2:4b:40 matches exactly; owning device, ae12 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-a81d81a4",
+            "their_id": "a.yyz-cr-18/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:76:cf:b0:b4:eb matches exactly; owning device, ae2 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-d663803f",
+            "their_id": "a.yyz-cr-18/et-0/0/7",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:fc:35:c7:97:ff matches exactly; owning device, ae8 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-4f9f24c4",
+            "their_id": "a.yyz-cr-18/et-0/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:0f:f0:16:9d:c9 matches exactly; owning device, ae2 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-e7a21bd5",
+            "their_id": "a.yhz-cr-08/et-0/0/7",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:a4:fe:f2:3a:0c matches exactly; owning device, ae9 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-dbc83434",
+            "their_id": "a.yhz-cr-08/et-0/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:0d:04:c3:6e:d8 matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-d773459b",
+            "their_id": "a.yhz-cr-08/et-1/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:84:37:81:6b:dd matches exactly; owning device, ae9 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-123cee98",
+            "their_id": "a.yhz-cr-08/et-0/0/3",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:7c:ce:d4:58:bb matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-0f1e44d2",
+            "their_id": "a.yhz-cr-08/et-0/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:3d:aa:d8:61:9b matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-5ef78e17",
+            "their_id": "a.yhz-cr-08/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:b0:76:70:eb:94 matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-fed02a3f",
+            "their_id": "a.yqb-cr-14/et-0/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:9f:c5:af:d7:60 matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-678bedc9",
+            "their_id": "a.yqb-cr-14/et-0/0/3",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:0a:73:09:cb:4a matches exactly; owning device, ae4 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-6f0fc1e3",
+            "their_id": "a.yyc-ar-13/et-0/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:fa:45:35:a4:14 matches exactly; owning device, ae2 membership, speed, and LLDP endpoint also agree."
+          },
+          {
+            "my_id": "b.tp-015ca880",
+            "their_id": "a.yyc-ar-13/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware address 02:ae:3a:c1:27:72 matches exactly; owning device, ae2 membership, speed, and LLDP endpoint also agree."
+          }
+        ],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/0",
+        "b_id": "b.tp-dbc83434"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/1",
+        "b_id": "b.tp-5ef78e17"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/2",
+        "b_id": "b.tp-0f1e44d2"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/3",
+        "b_id": "b.tp-123cee98"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-0/0/7",
+        "b_id": "b.tp-e7a21bd5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yhz-cr-08/et-1/0/0",
+        "b_id": "b.tp-d773459b"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/0",
+        "b_id": "b.tp-b55f8e58"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/1",
+        "b_id": "b.tp-10ff6ac4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/2",
+        "b_id": "b.tp-c1f3d7a3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/3",
+        "b_id": "b.tp-e3e12334"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/5",
+        "b_id": "b.tp-054b8383"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-07/et-0/0/6",
+        "b_id": "b.tp-2d8c73e6"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-14/et-0/0/2",
+        "b_id": "b.tp-fed02a3f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yqb-cr-14/et-0/0/3",
+        "b_id": "b.tp-678bedc9"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yvr-er-17/et-0/0/0",
+        "b_id": "b.tp-e8abb3b4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yvr-er-17/et-0/0/1",
+        "b_id": "b.tp-047ae90f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/1",
+        "b_id": "b.tp-4063fc60"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/2",
+        "b_id": "b.tp-2a489b0c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-0/0/7",
+        "b_id": "b.tp-9defe48c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-ar-15/et-1/0/0",
+        "b_id": "b.tp-0ebf1200"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-ar-13/et-0/0/0",
+        "b_id": "b.tp-6f0fc1e3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyc-ar-13/et-0/0/1",
+        "b_id": "b.tp-015ca880"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/0",
+        "b_id": "b.tp-4f9f24c4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/1",
+        "b_id": "b.tp-a81d81a4"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/6",
+        "b_id": "b.tp-937d200e"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-0/0/7",
+        "b_id": "b.tp-d663803f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-1/0/2",
+        "b_id": "b.tp-12e5712c"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "protocol",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-18/et-1/0/3",
+        "b_id": "b.tp-7c77feb2"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "invariants_preserved": true
+        },
+        "message": "the same component responded on both sides; all invariants preserved in place"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [
+          {
+            "their_id": "b.tp-10ff6ac4",
+            "my_id": "a.yqb-cr-07/et-0/0/1",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-054b8383",
+            "my_id": "a.yqb-cr-07/et-0/0/5",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-c1f3d7a3",
+            "my_id": "a.yqb-cr-07/et-0/0/2",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-b55f8e58",
+            "my_id": "a.yqb-cr-07/et-0/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-e3e12334",
+            "my_id": "a.yqb-cr-07/et-0/0/3",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-2d8c73e6",
+            "my_id": "a.yqb-cr-07/et-0/0/6",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-047ae90f",
+            "my_id": "a.yvr-er-17/et-0/0/1",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, 10-Gbps capacity, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-e8abb3b4",
+            "my_id": "a.yvr-er-17/et-0/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, 10-Gbps capacity, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-2a489b0c",
+            "my_id": "a.ywg-ar-15/et-0/0/2",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-4063fc60",
+            "my_id": "a.ywg-ar-15/et-0/0/1",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-9defe48c",
+            "my_id": "a.ywg-ar-15/et-0/0/7",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, 10-Gbps capacity, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-0ebf1200",
+            "my_id": "a.ywg-ar-15/et-1/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, 10-Gbps capacity, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-937d200e",
+            "my_id": "a.yyz-cr-18/et-0/0/6",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-7c77feb2",
+            "my_id": "a.yyz-cr-18/et-1/0/3",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-12e5712c",
+            "my_id": "a.yyz-cr-18/et-1/0/2",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-a81d81a4",
+            "my_id": "a.yyz-cr-18/et-0/0/1",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-d663803f",
+            "my_id": "a.yyz-cr-18/et-0/0/7",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-4f9f24c4",
+            "my_id": "a.yyz-cr-18/et-0/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-e7a21bd5",
+            "my_id": "a.yhz-cr-08/et-0/0/7",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-dbc83434",
+            "my_id": "a.yhz-cr-08/et-0/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-d773459b",
+            "my_id": "a.yhz-cr-08/et-1/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-123cee98",
+            "my_id": "a.yhz-cr-08/et-0/0/3",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-0f1e44d2",
+            "my_id": "a.yhz-cr-08/et-0/0/2",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-5ef78e17",
+            "my_id": "a.yhz-cr-08/et-0/0/1",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-fed02a3f",
+            "my_id": "a.yqb-cr-14/et-0/0/2",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-678bedc9",
+            "my_id": "a.yqb-cr-14/et-0/0/3",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-6f0fc1e3",
+            "my_id": "a.yyc-ar-13/et-0/0/0",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          },
+          {
+            "their_id": "b.tp-015ca880",
+            "my_id": "a.yyc-ar-13/et-0/0/1",
+            "accept": true,
+            "reason": "Exact authoritative hardware-address match; settled owner, bundle membership, speed, type, and LLDP connectivity agree."
+          }
+        ],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "experiments": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "staging",
+      "stages": 1,
+      "devices_bound": 22,
+      "batch_size": 60,
+      "anchored": 122,
+      "lookalikes_a": 28,
+      "lookalikes_b": 24
+    }
+  ]
+}

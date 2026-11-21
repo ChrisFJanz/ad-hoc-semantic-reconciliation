@@ -1,0 +1,1529 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "reasoner",
+  "row": {
+    "case": "instance_ipnet_medium",
+    "model": "gpt-5.6-sol",
+    "placement": "both_inert",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 102,
+    "precision": 1.0,
+    "recall": 0.68,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 160,
+    "residual_experiment_only": 0,
+    "residual_native": 64,
+    "confirmed_provision": 0,
+    "refuted_provision": 0,
+    "interrogated": 0,
+    "interrogate_calls": 0,
+    "provision_calls": 0,
+    "turns": 1,
+    "total_tokens": 107083,
+    "reasoning_tokens": 4838,
+    "latency_s": 100.3,
+    "mean_conf_correct": 1.0,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "reasoner"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_inert",
+      "stack": "sequenced-reasoner+anchors+verify+both_inert",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ],
+      "anchored": 22,
+      "open_a": 128,
+      "open_b": 192,
+      "lookalikes_a": 48,
+      "lookalikes_b": 36
+    },
+    {
+      "step": "turn",
+      "from": "reasoner",
+      "turn": {
+        "matches": [
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/0",
+            "b_id": "b.tp-938e8e7d",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/1",
+            "b_id": "b.tp-e72b314d",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yyz-cr-18/b.node-48555212.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/2",
+            "b_id": "b.tp-5b0a33aa",
+            "basis": "Same settled owning device; unique 100G link to settled device a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/3",
+            "b_id": "b.tp-b707eb03",
+            "basis": "Same settled owning device; unique 10G link to settled device a.yhz-er-03/b.node-93049346.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/4",
+            "b_id": "b.tp-5fab0df4",
+            "basis": "Same settled owning device; unique 10G link to settled device a.yeg-er-12/b.node-cde74eaf.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-00/et-0/0/5",
+            "b_id": "b.tp-afbc10fb",
+            "basis": "Same settled owning device; unique 10G link to settled device a.yvr-er-17/b.node-73050623.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-01/et-0/0/0",
+            "b_id": "b.tp-dc842b34",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-01/et-0/0/1",
+            "b_id": "b.tp-5fdb0b45",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-03/et-0/0/0",
+            "b_id": "b.tp-6db21975",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-03/et-0/0/1",
+            "b_id": "b.tp-749b0c70",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/0",
+            "b_id": "b.tp-c6f25bc4",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/1",
+            "b_id": "b.tp-84fc41dd",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yhz-cr-08/b.node-e955bee5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/2",
+            "b_id": "b.tp-495c5284",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/3",
+            "b_id": "b.tp-9e9381f9",
+            "basis": "Same settled owning device; unique link to settled device a.yul-er-10/b.node-605d651f.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/6",
+            "b_id": "b.tp-86c62197",
+            "basis": "Same settled owning device; unique link to settled device a.yxe-er-19/b.node-87e16012.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-0/0/7",
+            "b_id": "b.tp-4e221bcb",
+            "basis": "Same settled owning device; unique link to settled device a.yul-er-09/b.node-69f1c6ef.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-1/0/0",
+            "b_id": "b.tp-ea7925ac",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-er-01/b.node-0e94b6cb.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-1/0/1",
+            "b_id": "b.tp-46226a08",
+            "basis": "Same settled owning device; unique link to settled device a.yqb-er-21/b.node-4ac6850a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-ar-04/et-1/0/2",
+            "b_id": "b.tp-92bb256a",
+            "basis": "Same settled owning device; unique link to settled device a.yhz-er-20/b.node-75c94ec2.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-05/et-0/0/0",
+            "b_id": "b.tp-d908f04c",
+            "basis": "Same settled owning device; unique link to settled device a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-05/et-0/0/1",
+            "b_id": "b.tp-b351bafd",
+            "basis": "Same settled owning device; unique link to settled device a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/0",
+            "b_id": "b.tp-d6af3929",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/1",
+            "b_id": "b.tp-3a92311d",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yhz-cr-08/b.node-e955bee5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/2",
+            "b_id": "b.tp-0dad598f",
+            "basis": "Same settled owning device; unique 100G link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/3",
+            "b_id": "b.tp-ff4922c6",
+            "basis": "Same settled owning device; unique link to settled device a.yul-er-10/b.node-605d651f.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-0/0/6",
+            "b_id": "b.tp-5be6b19d",
+            "basis": "Same settled owning device; unique link to settled device a.yxe-er-19/b.node-87e16012.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-1/0/1",
+            "b_id": "b.tp-b20341a0",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-er-01/b.node-0e94b6cb.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-1/0/2",
+            "b_id": "b.tp-930f9d4e",
+            "basis": "Same settled owning device; unique link to settled device a.yqb-er-21/b.node-4ac6850a.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-ar-06/et-1/0/3",
+            "b_id": "b.tp-4e15c3b2",
+            "basis": "Same settled owning device; unique link to settled device a.yhz-er-20/b.node-75c94ec2.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/ae4",
+            "b_id": "b.tp-817cdc42",
+            "basis": "Same settled owner and unique four-member 400G bundle.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/ae7",
+            "b_id": "b.tp-26e8cb85",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yyz-cr-18.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/2",
+            "b_id": "b.tp-c3a9d712",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/3",
+            "b_id": "b.tp-af4bad0b",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/4",
+            "b_id": "b.tp-3c13c4d1",
+            "basis": "Same settled owning device; unique link to settled device a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/5",
+            "b_id": "b.tp-7a0f8e2d",
+            "basis": "Same settled owning device; unique link to settled device a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/6",
+            "b_id": "b.tp-e4c7a291",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-07/et-1/0/7",
+            "b_id": "b.tp-6547c535",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/ae4",
+            "b_id": "b.tp-182056df",
+            "basis": "Same settled owner and unique four-member 400G bundle.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/ae9",
+            "b_id": "b.tp-337ad96f",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yqb-cr-14.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/et-1/0/2",
+            "b_id": "b.tp-2fe5d398",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-cr-08/et-1/0/3",
+            "b_id": "b.tp-723cc2f3",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-09/et-0/0/2",
+            "b_id": "b.tp-cfc4ec5b",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-10/et-0/0/0",
+            "b_id": "b.tp-daba30e1",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yul-er-10/et-0/0/1",
+            "b_id": "b.tp-4fa05362",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/0",
+            "b_id": "b.tp-d759af28",
+            "basis": "Same settled owning device; unique link to settled device a.yyz-cr-18/b.node-48555212.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/1",
+            "b_id": "b.tp-5aafb184",
+            "basis": "Same settled owning device; unique link to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/2",
+            "b_id": "b.tp-7670ac83",
+            "basis": "Same settled owning device; unique link to settled device a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/3",
+            "b_id": "b.tp-c41e508d",
+            "basis": "Same settled owning device; unique link to settled device a.yxe-er-05/b.node-7de10377.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-ar-11/et-0/0/4",
+            "b_id": "b.tp-9eb6d0d3",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-er-16/b.node-717f3507.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-12/et-0/0/0",
+            "b_id": "b.tp-e887e610",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-15/b.node-e267ee3c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yeg-er-12/et-0/0/1",
+            "b_id": "b.tp-ce0949ac",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/ae2",
+            "b_id": "b.tp-cb0dc9cf",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yyz-cr-18.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/3",
+            "b_id": "b.tp-a08e5203",
+            "basis": "Same settled owning device; unique link to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/4",
+            "b_id": "b.tp-b0ed3745",
+            "basis": "Same settled owning device; unique link to settled device a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/5",
+            "b_id": "b.tp-5607f97f",
+            "basis": "Same settled owning device; unique link to settled device a.yxe-er-05/b.node-7de10377.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyc-ar-13/et-0/0/6",
+            "b_id": "b.tp-4c9295dd",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-er-16/b.node-717f3507.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-14/ae4",
+            "b_id": "b.tp-b8020545",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yhz-cr-08.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-cr-14/et-0/0/5",
+            "b_id": "b.tp-77169572",
+            "basis": "Same settled owning device; unique link to settled device a.yyz-cr-18/b.node-48555212.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/ae3",
+            "b_id": "b.tp-c5f5a861",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yyz-cr-18.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/ae9",
+            "b_id": "b.tp-a174557c",
+            "basis": "Same settled owner and unique two-member 20G bundle linked to a.yvr-er-17.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/0",
+            "b_id": "b.tp-6c9d7352",
+            "basis": "Same settled owning device; unique link to settled device a.yqb-cr-07/b.node-19f8c573.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/4",
+            "b_id": "b.tp-d37b5b34",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/5",
+            "b_id": "b.tp-efa34fc8",
+            "basis": "Same settled owning device; unique link to settled device a.yhz-er-03/b.node-93049346.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-ar-15/et-0/0/6",
+            "b_id": "b.tp-2f3252bd",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-er-12/b.node-cde74eaf.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-er-16/et-0/0/0",
+            "b_id": "b.tp-0a2481aa",
+            "basis": "Same settled owning device; unique link to settled device a.yyc-ar-13/b.node-70336995.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.ywg-er-16/et-0/0/1",
+            "b_id": "b.tp-70054b50",
+            "basis": "Same settled owning device; unique link to settled device a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-17/ae2",
+            "b_id": "b.tp-f9ce6522",
+            "basis": "Same settled owner and unique two-member 20G bundle linked to a.ywg-ar-15.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yvr-er-17/et-0/0/3",
+            "b_id": "b.tp-d28249b0",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/ae2",
+            "b_id": "b.tp-28b735f4",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yqb-cr-07.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/ae8",
+            "b_id": "b.tp-c6ee14b1",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.ywg-ar-15.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/ae12",
+            "b_id": "b.tp-d3ba4557",
+            "basis": "Same settled owner and unique two-member 200G bundle linked to a.yyc-ar-13.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/et-0/0/5",
+            "b_id": "b.tp-9f648f02",
+            "basis": "Same settled owning device; unique link to settled device a.yqb-cr-14/b.node-1ac151fe.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/et-1/0/1",
+            "b_id": "b.tp-2068cad6",
+            "basis": "Same settled owning device; unique link to settled device a.ywg-ar-00/b.node-bcd7eeb5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yyz-cr-18/et-1/0/5",
+            "b_id": "b.tp-87da760f",
+            "basis": "Same settled owning device; unique link to settled device a.yvr-ar-11/b.node-8b45dde1.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-19/et-0/0/0",
+            "b_id": "b.tp-117a7fb9",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yxe-er-19/et-0/0/1",
+            "b_id": "b.tp-05a6962e",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-20/et-0/0/0",
+            "b_id": "b.tp-ce015c53",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yhz-er-20/et-0/0/1",
+            "b_id": "b.tp-9d33f163",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-er-21/et-0/0/0",
+            "b_id": "b.tp-795d58af",
+            "basis": "Same settled owning device; unique link to settled device a.yeg-ar-06/b.node-f6af83f5.",
+            "confidence": 1.0
+          },
+          {
+            "a_id": "a.yqb-er-21/et-0/0/1",
+            "b_id": "b.tp-30ae4178",
+            "basis": "Same settled owning device; unique link to settled device a.yul-ar-04/b.node-d826d38c.",
+            "confidence": 1.0
+          }
+        ],
+        "left_open": [
+          {
+            "id": "a.yeg-ar-06/et-0/0/4",
+            "reason": "Member of a recorded look-alike group; the two parallel links to a.yyz-er-02 are not distinguishable without network verification."
+          },
+          {
+            "id": "a.yeg-ar-06/et-0/0/5",
+            "reason": "Member of a recorded look-alike group; the two parallel links to a.yyz-er-02 are not distinguishable without network verification."
+          },
+          {
+            "id": "a.yeg-ar-06/et-0/0/7",
+            "reason": "Member of a recorded look-alike group; parallel links to a.yul-er-09 are not distinguishable."
+          },
+          {
+            "id": "a.yeg-ar-06/et-1/0/0",
+            "reason": "Member of a recorded look-alike group; parallel links to a.yul-er-09 are not distinguishable."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/0",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/1",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/2",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/3",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/5",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/6",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yyz-cr-18."
+          },
+          {
+            "id": "a.yhz-cr-08/et-0/0/7",
+            "reason": "Member of a recorded look-alike pair in bundle ae9."
+          },
+          {
+            "id": "a.yhz-cr-08/et-1/0/0",
+            "reason": "Member of a recorded look-alike pair in bundle ae9."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/0",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/1",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/2",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/3",
+            "reason": "Member of the four-port core-bundle look-alike group."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/5",
+            "reason": "Member of a recorded look-alike pair in bundle ae7."
+          },
+          {
+            "id": "a.yqb-cr-07/et-0/0/6",
+            "reason": "Member of a recorded look-alike pair in bundle ae7."
+          },
+          {
+            "id": "a.yqb-cr-07/et-1/0/0",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yqb-cr-14."
+          },
+          {
+            "id": "a.yqb-cr-07/et-1/0/1",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yqb-cr-14."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/0",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yqb-cr-07."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yqb-cr-07."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/2",
+            "reason": "Member of a recorded look-alike pair in bundle ae4."
+          },
+          {
+            "id": "a.yqb-cr-14/et-0/0/3",
+            "reason": "Member of a recorded look-alike pair in bundle ae4."
+          },
+          {
+            "id": "a.yul-ar-04/et-0/0/4",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yyz-er-02."
+          },
+          {
+            "id": "a.yul-ar-04/et-0/0/5",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yyz-er-02."
+          },
+          {
+            "id": "a.yul-er-09/et-0/0/0",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yul-er-09/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/0",
+            "reason": "Member of a recorded look-alike pair in bundle ae2."
+          },
+          {
+            "id": "a.yvr-er-17/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair in bundle ae2."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair in bundle ae3."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/2",
+            "reason": "Member of a recorded look-alike pair in bundle ae3."
+          },
+          {
+            "id": "a.ywg-ar-15/et-0/0/7",
+            "reason": "Member of a recorded look-alike pair in bundle ae9."
+          },
+          {
+            "id": "a.ywg-ar-15/et-1/0/0",
+            "reason": "Member of a recorded look-alike pair in bundle ae9."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/0",
+            "reason": "Member of a recorded look-alike pair in bundle ae2."
+          },
+          {
+            "id": "a.yyc-ar-13/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair in bundle ae2."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/0",
+            "reason": "Member of a recorded look-alike pair in bundle ae2."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair in bundle ae2."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/3",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yhz-cr-08."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/4",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yhz-cr-08."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/6",
+            "reason": "Member of a recorded look-alike pair in bundle ae8."
+          },
+          {
+            "id": "a.yyz-cr-18/et-0/0/7",
+            "reason": "Member of a recorded look-alike pair in bundle ae8."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/2",
+            "reason": "Member of a recorded look-alike pair in bundle ae12."
+          },
+          {
+            "id": "a.yyz-cr-18/et-1/0/3",
+            "reason": "Member of a recorded look-alike pair in bundle ae12."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/0",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/1",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yeg-ar-06."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/2",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yul-ar-04."
+          },
+          {
+            "id": "a.yyz-er-02/et-0/0/3",
+            "reason": "Member of a recorded look-alike pair of parallel links to a.yul-ar-04."
+          },
+          {
+            "id": "b.tp-5d74b0c8",
+            "reason": "Its topology reaches an unresolved A look-alike pair between b.node-e955bee5 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-e7a21bd5",
+            "reason": "Bundle member in an unresolved parallel-link look-alike group."
+          },
+          {
+            "id": "b.tp-bc61b7d1",
+            "reason": "Its topology reaches an unresolved A look-alike pair between b.node-e955bee5 and b.node-48555212."
+          },
+          {
+            "id": "b.tp-dbc83434",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-d773459b",
+            "reason": "Bundle member in an unresolved parallel-link look-alike group."
+          },
+          {
+            "id": "b.tp-123cee98",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-0f1e44d2",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-5ef78e17",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-73ae9b38",
+            "reason": "Endpoint of an unresolved A look-alike pair between a.yul-ar-04 and a.yyz-er-02."
+          },
+          {
+            "id": "b.tp-add894a6",
+            "reason": "Endpoint of an unresolved A look-alike pair between a.yul-ar-04 and a.yyz-er-02."
+          },
+          {
+            "id": "b.tp-937d200e",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-7c77feb2",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-12e5712c",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-a81d81a4",
+            "reason": "Bundle member corresponding only to an unresolved A look-alike pair."
+          },
+          {
+            "id": "b.tp-d663803f",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-3f7c5eaa",
+            "reason": "Member of a recorded B look-alike pair of parallel links."
+          },
+          {
+            "id": "b.tp-4f9f24c4",
+            "reason": "Bundle member corresponding only to an unresolved A look-alike pair."
+          },
+          {
+            "id": "b.tp-39a6a9f1",
+            "reason": "Member of a recorded B look-alike pair of parallel links."
+          },
+          {
+            "id": "b.tp-047ae90f",
+            "reason": "Member of an unresolved two-member bundle look-alike pair."
+          },
+          {
+            "id": "b.tp-e8abb3b4",
+            "reason": "Member of an unresolved two-member bundle look-alike pair."
+          },
+          {
+            "id": "b.tp-bc38f82b",
+            "reason": "Member of a recorded B look-alike pair."
+          },
+          {
+            "id": "b.tp-61e4fa18",
+            "reason": "Endpoint of unresolved parallel links to b.node-6396c019."
+          },
+          {
+            "id": "b.tp-166a138a",
+            "reason": "Member of a recorded B look-alike pair."
+          },
+          {
+            "id": "b.tp-ee11eda0",
+            "reason": "Endpoint of unresolved parallel links to b.node-6396c019."
+          },
+          {
+            "id": "b.tp-88a5e946",
+            "reason": "Member of a recorded B look-alike pair."
+          },
+          {
+            "id": "b.tp-a0bfba3f",
+            "reason": "Member of a recorded B look-alike pair."
+          },
+          {
+            "id": "b.tp-6f0fc1e3",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-015ca880",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-fed02a3f",
+            "reason": "Bundle member corresponding only to an unresolved A look-alike pair."
+          },
+          {
+            "id": "b.tp-678bedc9",
+            "reason": "Bundle member corresponding only to an unresolved A look-alike pair."
+          },
+          {
+            "id": "b.tp-a3b6d183",
+            "reason": "Endpoint of unresolved parallel links to b.node-19f8c573."
+          },
+          {
+            "id": "b.tp-5de62a8a",
+            "reason": "Endpoint of unresolved parallel links to b.node-19f8c573."
+          },
+          {
+            "id": "b.tp-7ea483df",
+            "reason": "Endpoint of an unresolved A look-alike pair between a.yyz-er-02 and a.yul-ar-04."
+          },
+          {
+            "id": "b.tp-5ec94338",
+            "reason": "Endpoint of an unresolved A look-alike pair between a.yyz-er-02 and a.yul-ar-04."
+          },
+          {
+            "id": "b.tp-1d02317d",
+            "reason": "Endpoint of unresolved parallel links to b.node-f6af83f5."
+          },
+          {
+            "id": "b.tp-ea32f876",
+            "reason": "Endpoint of unresolved parallel links to b.node-f6af83f5."
+          },
+          {
+            "id": "b.tp-1aca9b4c",
+            "reason": "Endpoint of unresolved parallel links to b.node-1ac151fe."
+          },
+          {
+            "id": "b.tp-10ff6ac4",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-054b8383",
+            "reason": "Bundle member corresponding only to an unresolved A look-alike pair."
+          },
+          {
+            "id": "b.tp-c1f3d7a3",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-b55f8e58",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-e3e12334",
+            "reason": "Member of the recorded four-port B look-alike group."
+          },
+          {
+            "id": "b.tp-ca229ad8",
+            "reason": "Endpoint of unresolved parallel links to b.node-1ac151fe."
+          },
+          {
+            "id": "b.tp-2d8c73e6",
+            "reason": "Bundle member corresponding only to an unresolved A look-alike pair."
+          },
+          {
+            "id": "b.tp-2a489b0c",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-4063fc60",
+            "reason": "Member of a recorded B look-alike pair in a bundle."
+          },
+          {
+            "id": "b.tp-9defe48c",
+            "reason": "Member of an unresolved two-member bundle look-alike pair."
+          },
+          {
+            "id": "b.tp-0ebf1200",
+            "reason": "Member of an unresolved two-member bundle look-alike pair."
+          },
+          {
+            "id": "b.link-008e5901",
+            "reason": "Recorded B look-alike link; order is not evidence and network verification is unavailable."
+          },
+          {
+            "id": "b.link-76e02b18",
+            "reason": "Recorded B look-alike link; order is not evidence and network verification is unavailable."
+          },
+          {
+            "id": "b.link-81cd8332",
+            "reason": "Recorded B look-alike link; order is not evidence and network verification is unavailable."
+          },
+          {
+            "id": "b.link-dd43da11",
+            "reason": "Recorded B look-alike link; order is not evidence and network verification is unavailable."
+          },
+          {
+            "id": "b.link-15528831",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-66ac273c",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-56df57ae",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-df84fbb5",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-8d18018e",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-b87b9e2d",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-d6d01cfc",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          },
+          {
+            "id": "b.link-e3121429",
+            "reason": "Recorded B look-alike link; network verification is unavailable."
+          }
+        ],
+        "no_counterpart": [
+          "b.link-abbdcbf5",
+          "b.link-471b7887",
+          "b.link-5b44279b",
+          "b.link-7df8ea6d",
+          "b.link-57366802",
+          "b.link-a0bc6774",
+          "b.link-ceb56e00",
+          "b.link-f4986a8d",
+          "b.link-efc82c46",
+          "b.link-0e686a07",
+          "b.link-5d8a3191",
+          "b.link-0156be09",
+          "b.link-b5b95b58",
+          "b.link-fe867d38",
+          "b.link-f9cf9522",
+          "b.link-16217285",
+          "b.link-3b310467",
+          "b.link-6c84f475",
+          "b.link-ade40325",
+          "b.link-919b7bc1",
+          "b.link-24d86818",
+          "b.link-44bd8827",
+          "b.link-fbbc6fc0",
+          "b.link-c9b3345c",
+          "b.link-816f5653",
+          "b.link-0414622e",
+          "b.link-f9299b07",
+          "b.link-3af2aa33",
+          "b.link-1761be62",
+          "b.link-4f8f57ea",
+          "b.link-c8bdceda",
+          "b.link-8c9c41e4",
+          "b.link-8d2a0c9c",
+          "b.link-1004178b",
+          "b.link-999fca3b",
+          "b.link-62a17da1",
+          "b.link-df41dd1e",
+          "b.link-8fd188f7",
+          "b.link-09d70270",
+          "b.link-995b950f",
+          "b.link-733be49f",
+          "b.link-c7f85069",
+          "b.link-3d71cf67",
+          "b.link-ee7770b4",
+          "b.link-7e5444cd",
+          "b.link-d7319301",
+          "b.link-baa8d9b0",
+          "b.link-b00c1b19",
+          "b.link-86e327ec",
+          "b.link-faed77df",
+          "b.link-3f49ad96",
+          "b.link-b6f2ec53"
+        ],
+        "done": true
+      }
+    },
+    {
+      "step": "verify",
+      "proposed": 80,
+      "verdicts": [
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/0",
+          "b_id": "b.tp-938e8e7d",
+          "verdict": "determined",
+          "reason": "Both ports are on the settled corresponding ywg-ar-00 device; b.tp-938e8e7d is the unique port there linked to settled yqb-cr-07, matching A's LLDP neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/1",
+          "b_id": "b.tp-e72b314d",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-00, this is the unique B port linked to settled yyz-cr-18, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/2",
+          "b_id": "b.tp-5b0a33aa",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-00, this is the unique B port linked to settled ywg-ar-15, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/3",
+          "b_id": "b.tp-b707eb03",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-00, this is the unique B port linked to settled yhz-er-03, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/4",
+          "b_id": "b.tp-5fab0df4",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-00, this is the unique B port linked to settled yeg-er-12, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-00/et-0/0/5",
+          "b_id": "b.tp-afbc10fb",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-00, this is the unique B port linked to settled yvr-er-17, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-er-01/et-0/0/0",
+          "b_id": "b.tp-dc842b34",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-er-01, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-er-01/et-0/0/1",
+          "b_id": "b.tp-5fdb0b45",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-er-01, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yhz-er-03/et-0/0/0",
+          "b_id": "b.tp-6db21975",
+          "verdict": "determined",
+          "reason": "On corresponding yhz-er-03, this is the unique B port linked to settled ywg-ar-15, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yhz-er-03/et-0/0/1",
+          "b_id": "b.tp-749b0c70",
+          "verdict": "determined",
+          "reason": "On corresponding yhz-er-03, this is the unique B port linked to settled ywg-ar-00, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/0",
+          "b_id": "b.tp-c6f25bc4",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yqb-cr-07, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/1",
+          "b_id": "b.tp-84fc41dd",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yhz-cr-08, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/2",
+          "b_id": "b.tp-495c5284",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/3",
+          "b_id": "b.tp-9e9381f9",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yul-er-10, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/6",
+          "b_id": "b.tp-86c62197",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yxe-er-19, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-0/0/7",
+          "b_id": "b.tp-4e221bcb",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yul-er-09, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-1/0/0",
+          "b_id": "b.tp-ea7925ac",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yeg-er-01, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-1/0/1",
+          "b_id": "b.tp-46226a08",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yqb-er-21, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-ar-04/et-1/0/2",
+          "b_id": "b.tp-92bb256a",
+          "verdict": "determined",
+          "reason": "On corresponding yul-ar-04, this is the unique B port linked to settled yhz-er-20, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yxe-er-05/et-0/0/0",
+          "b_id": "b.tp-d908f04c",
+          "verdict": "determined",
+          "reason": "On corresponding yxe-er-05, this is the unique B port linked to settled yyc-ar-13, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yxe-er-05/et-0/0/1",
+          "b_id": "b.tp-b351bafd",
+          "verdict": "determined",
+          "reason": "On corresponding yxe-er-05, this is the unique B port linked to settled yvr-ar-11, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/0",
+          "b_id": "b.tp-d6af3929",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yqb-cr-07, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/1",
+          "b_id": "b.tp-3a92311d",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yhz-cr-08, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/2",
+          "b_id": "b.tp-0dad598f",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/3",
+          "b_id": "b.tp-ff4922c6",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yul-er-10, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-0/0/6",
+          "b_id": "b.tp-5be6b19d",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yxe-er-19, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-1/0/1",
+          "b_id": "b.tp-b20341a0",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yeg-er-01, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-1/0/2",
+          "b_id": "b.tp-930f9d4e",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yqb-er-21, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-ar-06/et-1/0/3",
+          "b_id": "b.tp-4e15c3b2",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-ar-06, this is the unique B port linked to settled yhz-er-20, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/ae4",
+          "b_id": "b.tp-817cdc42",
+          "verdict": "determined",
+          "reason": "Both are four-member bundles on corresponding yqb-cr-07 and are linked to the corresponding four-member bundle on yhz-cr-08."
+        },
+        {
+          "a_id": "a.yqb-cr-07/ae7",
+          "b_id": "b.tp-26e8cb85",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yqb-cr-07 and are linked to the corresponding bundle on yyz-cr-18."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/2",
+          "b_id": "b.tp-c3a9d712",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-07, this is the unique unbundled B port linked to settled ywg-ar-15, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/3",
+          "b_id": "b.tp-af4bad0b",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-07, this is the unique B port linked to settled ywg-ar-00, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/4",
+          "b_id": "b.tp-3c13c4d1",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-07, this is the unique B port linked to settled yyc-ar-13, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/5",
+          "b_id": "b.tp-7a0f8e2d",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-07, this is the unique B port linked to settled yvr-ar-11, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/6",
+          "b_id": "b.tp-e4c7a291",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-07, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-07/et-1/0/7",
+          "b_id": "b.tp-6547c535",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-07, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yhz-cr-08/ae4",
+          "b_id": "b.tp-182056df",
+          "verdict": "determined",
+          "reason": "Both are four-member bundles on corresponding yhz-cr-08 and are linked to the corresponding four-member bundle on yqb-cr-07."
+        },
+        {
+          "a_id": "a.yhz-cr-08/ae9",
+          "b_id": "b.tp-337ad96f",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yhz-cr-08 and are linked to the corresponding bundle on yqb-cr-14."
+        },
+        {
+          "a_id": "a.yhz-cr-08/et-1/0/2",
+          "b_id": "b.tp-2fe5d398",
+          "verdict": "determined",
+          "reason": "On corresponding yhz-cr-08, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yhz-cr-08/et-1/0/3",
+          "b_id": "b.tp-723cc2f3",
+          "verdict": "determined",
+          "reason": "On corresponding yhz-cr-08, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-er-09/et-0/0/2",
+          "b_id": "b.tp-cfc4ec5b",
+          "verdict": "determined",
+          "reason": "On corresponding yul-er-09, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-er-10/et-0/0/0",
+          "b_id": "b.tp-daba30e1",
+          "verdict": "determined",
+          "reason": "On corresponding yul-er-10, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yul-er-10/et-0/0/1",
+          "b_id": "b.tp-4fa05362",
+          "verdict": "determined",
+          "reason": "On corresponding yul-er-10, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/0",
+          "b_id": "b.tp-d759af28",
+          "verdict": "determined",
+          "reason": "On corresponding yvr-ar-11, this is the unique B port linked to settled yyz-cr-18, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/1",
+          "b_id": "b.tp-5aafb184",
+          "verdict": "determined",
+          "reason": "On corresponding yvr-ar-11, this is the unique B port linked to settled yqb-cr-07, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/2",
+          "b_id": "b.tp-7670ac83",
+          "verdict": "determined",
+          "reason": "On corresponding yvr-ar-11, this is the unique B port linked to settled yyc-ar-13, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/3",
+          "b_id": "b.tp-c41e508d",
+          "verdict": "determined",
+          "reason": "On corresponding yvr-ar-11, this is the unique B port linked to settled yxe-er-05, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yvr-ar-11/et-0/0/4",
+          "b_id": "b.tp-9eb6d0d3",
+          "verdict": "determined",
+          "reason": "On corresponding yvr-ar-11, this is the unique B port linked to settled ywg-er-16, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-er-12/et-0/0/0",
+          "b_id": "b.tp-e887e610",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-er-12, this is the unique B port linked to settled ywg-ar-15, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yeg-er-12/et-0/0/1",
+          "b_id": "b.tp-ce0949ac",
+          "verdict": "determined",
+          "reason": "On corresponding yeg-er-12, this is the unique B port linked to settled ywg-ar-00, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyc-ar-13/ae2",
+          "b_id": "b.tp-cb0dc9cf",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyc-ar-13 and are linked to the corresponding bundle on yyz-cr-18."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/3",
+          "b_id": "b.tp-a08e5203",
+          "verdict": "determined",
+          "reason": "On corresponding yyc-ar-13, this is the unique B port linked to settled yqb-cr-07, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/4",
+          "b_id": "b.tp-b0ed3745",
+          "verdict": "determined",
+          "reason": "On corresponding yyc-ar-13, this is the unique B port linked to settled yvr-ar-11, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/5",
+          "b_id": "b.tp-5607f97f",
+          "verdict": "determined",
+          "reason": "On corresponding yyc-ar-13, this is the unique B port linked to settled yxe-er-05, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyc-ar-13/et-0/0/6",
+          "b_id": "b.tp-4c9295dd",
+          "verdict": "determined",
+          "reason": "On corresponding yyc-ar-13, this is the unique B port linked to settled ywg-er-16, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-cr-14/ae4",
+          "b_id": "b.tp-b8020545",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yqb-cr-14 and are linked to the corresponding bundle on yhz-cr-08."
+        },
+        {
+          "a_id": "a.yqb-cr-14/et-0/0/5",
+          "b_id": "b.tp-77169572",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-cr-14, this is the unique B port linked to settled yyz-cr-18, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-15/ae3",
+          "b_id": "b.tp-c5f5a861",
+          "verdict": "determined",
+          "reason": "Both are two-member 200G bundles on corresponding ywg-ar-15 and are linked to the corresponding bundle on yyz-cr-18."
+        },
+        {
+          "a_id": "a.ywg-ar-15/ae9",
+          "b_id": "b.tp-a174557c",
+          "verdict": "determined",
+          "reason": "Both are two-member 20G bundles on corresponding ywg-ar-15 and are linked to the corresponding bundle on yvr-er-17."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/0",
+          "b_id": "b.tp-6c9d7352",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-15, this is the unique unbundled B port linked to settled yqb-cr-07, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/4",
+          "b_id": "b.tp-d37b5b34",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-15, this is the unique B port linked to settled ywg-ar-00, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/5",
+          "b_id": "b.tp-efa34fc8",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-15, this is the unique B port linked to settled yhz-er-03, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-ar-15/et-0/0/6",
+          "b_id": "b.tp-2f3252bd",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-ar-15, this is the unique B port linked to settled yeg-er-12, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-er-16/et-0/0/0",
+          "b_id": "b.tp-0a2481aa",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-er-16, this is the unique B port linked to settled yyc-ar-13, matching the A neighbour."
+        },
+        {
+          "a_id": "a.ywg-er-16/et-0/0/1",
+          "b_id": "b.tp-70054b50",
+          "verdict": "determined",
+          "reason": "On corresponding ywg-er-16, this is the unique B port linked to settled yvr-ar-11, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yvr-er-17/ae2",
+          "b_id": "b.tp-f9ce6522",
+          "verdict": "determined",
+          "reason": "Both are two-member 20G bundles on corresponding yvr-er-17 and are linked to the corresponding bundle on ywg-ar-15."
+        },
+        {
+          "a_id": "a.yvr-er-17/et-0/0/3",
+          "b_id": "b.tp-d28249b0",
+          "verdict": "determined",
+          "reason": "On corresponding yvr-er-17, this is the unique unbundled B port linked to settled ywg-ar-00, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyz-cr-18/ae2",
+          "b_id": "b.tp-28b735f4",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyz-cr-18 and are linked to the corresponding bundle on yqb-cr-07."
+        },
+        {
+          "a_id": "a.yyz-cr-18/ae8",
+          "b_id": "b.tp-c6ee14b1",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyz-cr-18 and are linked to the corresponding bundle on ywg-ar-15."
+        },
+        {
+          "a_id": "a.yyz-cr-18/ae12",
+          "b_id": "b.tp-d3ba4557",
+          "verdict": "determined",
+          "reason": "Both are two-member bundles on corresponding yyz-cr-18 and are linked to the corresponding bundle on yyc-ar-13."
+        },
+        {
+          "a_id": "a.yyz-cr-18/et-0/0/5",
+          "b_id": "b.tp-9f648f02",
+          "verdict": "determined",
+          "reason": "On corresponding yyz-cr-18, this is the unique B port linked to settled yqb-cr-14, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyz-cr-18/et-1/0/1",
+          "b_id": "b.tp-2068cad6",
+          "verdict": "determined",
+          "reason": "On corresponding yyz-cr-18, this is the unique B port linked to settled ywg-ar-00, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yyz-cr-18/et-1/0/5",
+          "b_id": "b.tp-87da760f",
+          "verdict": "determined",
+          "reason": "On corresponding yyz-cr-18, this is the unique B port linked to settled yvr-ar-11, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yxe-er-19/et-0/0/0",
+          "b_id": "b.tp-117a7fb9",
+          "verdict": "determined",
+          "reason": "On corresponding yxe-er-19, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yxe-er-19/et-0/0/1",
+          "b_id": "b.tp-05a6962e",
+          "verdict": "determined",
+          "reason": "On corresponding yxe-er-19, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yhz-er-20/et-0/0/0",
+          "b_id": "b.tp-ce015c53",
+          "verdict": "determined",
+          "reason": "On corresponding yhz-er-20, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yhz-er-20/et-0/0/1",
+          "b_id": "b.tp-9d33f163",
+          "verdict": "determined",
+          "reason": "On corresponding yhz-er-20, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-er-21/et-0/0/0",
+          "b_id": "b.tp-795d58af",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-er-21, this is the unique B port linked to settled yeg-ar-06, matching the A neighbour."
+        },
+        {
+          "a_id": "a.yqb-er-21/et-0/0/1",
+          "b_id": "b.tp-30ae4178",
+          "verdict": "determined",
+          "reason": "On corresponding yqb-er-21, this is the unique B port linked to settled yul-ar-04, matching the A neighbour."
+        }
+      ]
+    },
+    {
+      "step": "sequence",
+      "placement": "both_inert",
+      "by_anchor": 22,
+      "by_topology": 80,
+      "verified": true,
+      "verifier_rejections": 0,
+      "lookalike_matches_refused": 0,
+      "left_open": 48,
+      "left_open_lookalikes": 48,
+      "open_a_lookalikes": 48,
+      "device_questions": 0
+    }
+  ]
+}

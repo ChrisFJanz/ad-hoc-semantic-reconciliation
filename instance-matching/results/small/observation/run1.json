@@ -1,0 +1,1739 @@
+{
+  "model": "gpt-5.6-sol",
+  "stack": "two-agent",
+  "row": {
+    "case": "instance_ipnet_small",
+    "model": "gpt-5.6-sol",
+    "placement": "both_cognitive",
+    "reference_variant": "none",
+    "evidence": "name+key+attrs+rels",
+    "budget": "unbounded",
+    "trial": 0,
+    "submitted": true,
+    "proposed": 50,
+    "precision": 1.0,
+    "recall": 1.0,
+    "surviving_instance_fc": 0,
+    "experiment_only_recall": "",
+    "residual_total": 21,
+    "residual_experiment_only": 0,
+    "residual_native": 21,
+    "confirmed_provision": 12,
+    "refuted_provision": 4,
+    "interrogated": 24,
+    "interrogate_calls": 24,
+    "provision_calls": 16,
+    "turns": 6,
+    "total_tokens": 101598,
+    "reasoning_tokens": 2061,
+    "latency_s": 60.67,
+    "mean_conf_correct": 0.62,
+    "mean_conf_incorrect": "",
+    "surviving_traps": "",
+    "stack": "two-agent"
+  },
+  "transcript": [
+    {
+      "step": "prompt",
+      "placement": "both_cognitive",
+      "stack": "two-agent-instance+op+live+confirm-lookalikes+staged60+anchors",
+      "evidence": [
+        "attrs",
+        "key",
+        "name",
+        "rels"
+      ]
+    },
+    {
+      "step": "stage",
+      "stage": 1,
+      "kind": "batch",
+      "devices_a": [
+        "a.ywg-cr-00",
+        "a.yxe-cr-03",
+        "a.yyz-cr-06",
+        "a.yow-ar-05"
+      ],
+      "devices_b": [
+        "b.node-9b928c01",
+        "b.node-d57f7b85",
+        "b.node-891be86f",
+        "b.node-353f75fc"
+      ],
+      "n_a": 12,
+      "n_b": 30
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [
+          {
+            "their_id": "b.tp-b3e678d5",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-b27a3a3f",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-bef584d3",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-a0597199",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-100c2374",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-2bfd876a",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-5a4d1e42",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-7ce4df47",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-e489acd1",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-3bb14dcf",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-881b0151",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          },
+          {
+            "their_id": "b.tp-2519f04a",
+            "ask": "Provide all attributes and topology, especially owning device, higher-layer bundle, and LLDP neighbour."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "observations": [],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-b3e678d5",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-b3e678d5",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:c9:11:f5:7c:ce"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-b27a3a3f",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-b27a3a3f",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:33:5f:97:3d:aa"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-bef584d3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-bef584d3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:70:eb:94:0b:d5"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-a0597199",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-a0597199",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d4:b1:00:a9:ea"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-100c2374",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-100c2374",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d8:61:9b:91:ff"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-2bfd876a",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-2bfd876a",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:42:69:da:1c:f6"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-5a4d1e42",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-5a4d1e42",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:82:10:24:2a:08"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-7ce4df47",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-7ce4df47",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:38:5e:b0:94:23"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-e489acd1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-e489acd1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0e:75:5a:5c:2e"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-3bb14dcf",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-3bb14dcf",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:e7:07:8f:7f:89"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-881b0151",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-881b0151",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b4:eb:89:02:c4"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "individual_id": "b.tp-2519f04a",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "b.tp-2519f04a",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:ba:66:d3:f8:b6"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "b.tp-b3e678d5",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-9b928c01 (settled as a.ywg-cr-00); member of bundle b.tp-c2fe3242 (settled as a.ywg-cr-00/ae3); connected by b.link-5de62a8a (100000000 kbps) to b.tp-100c2374 on b.node-d57f7b85 (a.yxe-cr-03)."
+          },
+          {
+            "my_id": "b.tp-b27a3a3f",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-9b928c01 (settled as a.ywg-cr-00); member of bundle b.tp-c2fe3242 (settled as a.ywg-cr-00/ae3); connected by b.link-1d02317d (100000000 kbps) to b.tp-bef584d3 on b.node-d57f7b85 (a.yxe-cr-03)."
+          },
+          {
+            "my_id": "b.tp-bef584d3",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-d57f7b85 (settled as a.yxe-cr-03); member of bundle b.tp-86c6aec7 (settled as a.yxe-cr-03/ae4); connected by b.link-1d02317d (100000000 kbps) to b.tp-b27a3a3f on b.node-9b928c01 (a.ywg-cr-00)."
+          },
+          {
+            "my_id": "b.tp-a0597199",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-d57f7b85 (settled as a.yxe-cr-03); member of bundle b.tp-0f6c5a44 (settled as a.yxe-cr-03/ae8); connected by b.link-5aafb184 (100000000 kbps) to b.tp-2519f04a on b.node-353f75fc (a.yow-ar-05)."
+          },
+          {
+            "my_id": "b.tp-100c2374",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-d57f7b85 (settled as a.yxe-cr-03); member of bundle b.tp-86c6aec7 (settled as a.yxe-cr-03/ae4); connected by b.link-5de62a8a (100000000 kbps) to b.tp-b3e678d5 on b.node-9b928c01 (a.ywg-cr-00)."
+          },
+          {
+            "my_id": "b.tp-2bfd876a",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-d57f7b85 (settled as a.yxe-cr-03); member of bundle b.tp-0f6c5a44 (settled as a.yxe-cr-03/ae8); connected by b.link-678bedc9 (100000000 kbps) to b.tp-881b0151 on b.node-353f75fc (a.yow-ar-05)."
+          },
+          {
+            "my_id": "b.tp-5a4d1e42",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-891be86f (settled as a.yyz-cr-06); member of bundle b.tp-f4bae4dc (settled as a.yyz-cr-06/ae6); connected by b.link-749b0c70 (100000000 kbps) to b.tp-e489acd1 on b.node-353f75fc (a.yow-ar-05)."
+          },
+          {
+            "my_id": "b.tp-7ce4df47",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-891be86f (settled as a.yyz-cr-06); member of bundle b.tp-f4bae4dc (settled as a.yyz-cr-06/ae6); connected by b.link-117a7fb9 (100000000 kbps) to b.tp-3bb14dcf on b.node-353f75fc (a.yow-ar-05)."
+          },
+          {
+            "my_id": "b.tp-e489acd1",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-353f75fc (settled as a.yow-ar-05); member of bundle b.tp-cb59b347 (settled as a.yow-ar-05/ae5); connected by b.link-749b0c70 (100000000 kbps) to b.tp-5a4d1e42 on b.node-891be86f (a.yyz-cr-06)."
+          },
+          {
+            "my_id": "b.tp-3bb14dcf",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-353f75fc (settled as a.yow-ar-05); member of bundle b.tp-cb59b347 (settled as a.yow-ar-05/ae5); connected by b.link-117a7fb9 (100000000 kbps) to b.tp-7ce4df47 on b.node-891be86f (a.yyz-cr-06)."
+          },
+          {
+            "my_id": "b.tp-881b0151",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-353f75fc (settled as a.yow-ar-05); member of bundle b.tp-d40769e8 (settled as a.yow-ar-05/ae2); connected by b.link-678bedc9 (100000000 kbps) to b.tp-2bfd876a on b.node-d57f7b85 (a.yxe-cr-03)."
+          },
+          {
+            "my_id": "b.tp-2519f04a",
+            "attributes": "type=physical-port; lag=false; no other recorded static attributes.",
+            "topology": "Owned by b.node-353f75fc (settled as a.yow-ar-05); member of bundle b.tp-d40769e8 (settled as a.yow-ar-05/ae2); connected by b.link-5aafb184 (100000000 kbps) to b.tp-a0597199 on b.node-d57f7b85 (a.yxe-cr-03)."
+          }
+        ],
+        "questions": [
+          {
+            "their_id": "a.ywg-cr-00/et-0/0/1",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.ywg-cr-00/et-0/0/2",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yxe-cr-03/et-0/0/6",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yxe-cr-03/et-0/0/3",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yxe-cr-03/et-0/0/7",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yxe-cr-03/et-0/0/2",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yyz-cr-06/et-0/0/4",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yyz-cr-06/et-0/0/5",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yow-ar-05/et-0/0/4",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yow-ar-05/et-0/0/0",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yow-ar-05/et-0/0/3",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          },
+          {
+            "their_id": "a.yow-ar-05/et-0/0/1",
+            "ask": "Provide all attributes and topology, especially parent bundle, LLDP neighbour, and hardware-address. Please obtain an authoritative hardware-address if it is not in the static record."
+          }
+        ],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [
+          {
+            "my_id": "b.tp-b3e678d5",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-b27a3a3f",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-bef584d3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-a0597199",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-100c2374",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-2bfd876a",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-5a4d1e42",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-7ce4df47",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-e489acd1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-3bb14dcf",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-881b0151",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "b.tp-2519f04a",
+            "attribute": "hardware-address"
+          }
+        ],
+        "observations": [],
+        "no_counterpart": [
+          "b.link-5de62a8a",
+          "b.link-a3b6d183",
+          "b.link-b707eb03",
+          "b.link-1d02317d",
+          "b.link-b351bafd",
+          "b.link-678bedc9",
+          "b.link-b8020545",
+          "b.link-5aafb184",
+          "b.link-c41e508d",
+          "b.link-dc842b34",
+          "b.link-117a7fb9",
+          "b.link-05a6962e",
+          "b.link-93049346",
+          "b.link-749b0c70",
+          "b.link-bcd7eeb5",
+          "b.link-afbc10fb",
+          "b.link-7ea483df",
+          "b.link-9d33f163"
+        ],
+        "done": false
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.ywg-cr-00/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.ywg-cr-00/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:33:5f:97:3d:aa"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.ywg-cr-00/et-0/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.ywg-cr-00/et-0/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:c9:11:f5:7c:ce"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/6",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yxe-cr-03/et-0/0/6",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:42:69:da:1c:f6"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yxe-cr-03/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d8:61:9b:91:ff"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/7",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yxe-cr-03/et-0/0/7",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:d4:b1:00:a9:ea"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yxe-cr-03/et-0/0/2",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yxe-cr-03/et-0/0/2",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:70:eb:94:0b:d5"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-06/et-0/0/4",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-06/et-0/0/4",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:82:10:24:2a:08"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yyz-cr-06/et-0/0/5",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yyz-cr-06/et-0/0/5",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:38:5e:b0:94:23"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/4",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yow-ar-05/et-0/0/4",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:e7:07:8f:7f:89"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/0",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yow-ar-05/et-0/0/0",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:b4:eb:89:02:c4"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/3",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yow-ar-05/et-0/0/3",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:0e:75:5a:5c:2e"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "interrogate",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "individual_id": "a.yow-ar-05/et-0/0/1",
+        "attribute": "hardware-address"
+      },
+      "result": {
+        "id": "a.yow-ar-05/et-0/0/1",
+        "ok": true,
+        "answer": {
+          "hardware-address": "02:ba:66:d3:f8:b6"
+        },
+        "message": ""
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-cr-00/et-0/0/1",
+        "b_id": "b.tp-b3e678d5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "recorded_through_A": {
+            "in-octets": [
+              9406552766,
+              6521050730,
+              7357346097
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              2310486020,
+              4358928715,
+              5920795436
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through the two handles differs: two different components"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-03/et-0/0/2",
+        "b_id": "b.tp-100c2374"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "recorded_through_A": {
+            "in-octets": [
+              2533907086,
+              1121084754,
+              7978933754
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              3284755988,
+              7135508393,
+              8579114180
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through the two handles differs: two different components"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-03/et-0/0/6",
+        "b_id": "b.tp-a0597199"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "recorded_through_A": {
+            "in-octets": [
+              2060871471,
+              9492218460,
+              9443658855
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              4455549520,
+              2426861389,
+              9886363331
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through the two handles differs: two different components"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-ar-05/et-0/0/0",
+        "b_id": "b.tp-2519f04a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": false,
+          "recorded_through_A": {
+            "in-octets": [
+              3731618561,
+              5754446965,
+              1529990055
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              1568554967,
+              2515033819,
+              6512766710
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through the two handles differs: two different components"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-06/et-0/0/4",
+        "b_id": "b.tp-5a4d1e42"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              4909277713,
+              4690390544,
+              3220128532
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              4909277713,
+              4690390544,
+              3220128532
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "A",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-ar-05/et-0/0/3",
+        "b_id": "b.tp-e489acd1"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              6399866748,
+              5371612644,
+              3530743921
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              6399866748,
+              5371612644,
+              3530743921
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [
+          {
+            "my_id": "a.ywg-cr-00/et-0/0/1",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.ywg-cr-00 (settled as b.node-9b928c01); member of a.ywg-cr-00/ae3 (settled as b.tp-c2fe3242); LLDP neighbour a.yxe-cr-03/et-0/0/2."
+          },
+          {
+            "my_id": "a.ywg-cr-00/et-0/0/2",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.ywg-cr-00 (settled as b.node-9b928c01); member of a.ywg-cr-00/ae3 (settled as b.tp-c2fe3242); LLDP neighbour a.yxe-cr-03/et-0/0/3."
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/6",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yxe-cr-03 (settled as b.node-d57f7b85); member of a.yxe-cr-03/ae8 (settled as b.tp-0f6c5a44); LLDP neighbour a.yow-ar-05/et-0/0/0."
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/3",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yxe-cr-03 (settled as b.node-d57f7b85); member of a.yxe-cr-03/ae4 (settled as b.tp-86c6aec7); LLDP neighbour a.ywg-cr-00/et-0/0/2."
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/7",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yxe-cr-03 (settled as b.node-d57f7b85); member of a.yxe-cr-03/ae8 (settled as b.tp-0f6c5a44); LLDP neighbour a.yow-ar-05/et-0/0/1."
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/2",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yxe-cr-03 (settled as b.node-d57f7b85); member of a.yxe-cr-03/ae4 (settled as b.tp-86c6aec7); LLDP neighbour a.ywg-cr-00/et-0/0/1."
+          },
+          {
+            "my_id": "a.yyz-cr-06/et-0/0/4",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yyz-cr-06 (settled as b.node-891be86f); member of a.yyz-cr-06/ae6 (settled as b.tp-f4bae4dc); LLDP neighbour a.yow-ar-05/et-0/0/3."
+          },
+          {
+            "my_id": "a.yyz-cr-06/et-0/0/5",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yyz-cr-06 (settled as b.node-891be86f); member of a.yyz-cr-06/ae6 (settled as b.tp-f4bae4dc); LLDP neighbour a.yow-ar-05/et-0/0/4."
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/4",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yow-ar-05 (settled as b.node-353f75fc); member of a.yow-ar-05/ae5 (settled as b.tp-cb59b347); LLDP neighbour a.yyz-cr-06/et-0/0/5."
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/0",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yow-ar-05 (settled as b.node-353f75fc); member of a.yow-ar-05/ae2 (settled as b.tp-d40769e8); LLDP neighbour a.yxe-cr-03/et-0/0/6."
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/3",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yow-ar-05 (settled as b.node-353f75fc); member of a.yow-ar-05/ae5 (settled as b.tp-cb59b347); LLDP neighbour a.yyz-cr-06/et-0/0/4."
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/1",
+            "attributes": "speed=100000000000; if-type=ethernetCsmacd; hardware-address not in static record and requested authoritatively.",
+            "topology": "Owned by a.yow-ar-05 (settled as b.node-353f75fc); member of a.yow-ar-05/ae2 (settled as b.tp-d40769e8); LLDP neighbour a.yxe-cr-03/et-0/0/7."
+          }
+        ],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [
+          {
+            "my_id": "a.ywg-cr-00/et-0/0/1",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.ywg-cr-00/et-0/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/6",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/7",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/2",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-06/et-0/0/4",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yyz-cr-06/et-0/0/5",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/4",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/0",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/3",
+            "attribute": "hardware-address"
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/1",
+            "attribute": "hardware-address"
+          }
+        ],
+        "observations": [
+          {
+            "my_id": "a.ywg-cr-00/et-0/0/1",
+            "their_id": "b.tp-b3e678d5"
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/2",
+            "their_id": "b.tp-100c2374"
+          },
+          {
+            "my_id": "a.yxe-cr-03/et-0/0/6",
+            "their_id": "b.tp-a0597199"
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/0",
+            "their_id": "b.tp-2519f04a"
+          },
+          {
+            "my_id": "a.yyz-cr-06/et-0/0/4",
+            "their_id": "b.tp-5a4d1e42"
+          },
+          {
+            "my_id": "a.yow-ar-05/et-0/0/3",
+            "their_id": "b.tp-e489acd1"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-cr-00/et-0/0/2",
+        "b_id": "b.tp-b3e678d5"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              2310486020,
+              4358928715,
+              5920795436
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              2310486020,
+              4358928715,
+              5920795436
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.ywg-cr-00/et-0/0/1",
+        "b_id": "b.tp-b27a3a3f"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              9406552766,
+              6521050730,
+              7357346097
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              9406552766,
+              6521050730,
+              7357346097
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-03/et-0/0/2",
+        "b_id": "b.tp-bef584d3"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              2533907086,
+              1121084754,
+              7978933754
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              2533907086,
+              1121084754,
+              7978933754
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-03/et-0/0/3",
+        "b_id": "b.tp-100c2374"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              3284755988,
+              7135508393,
+              8579114180
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              3284755988,
+              7135508393,
+              8579114180
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-03/et-0/0/7",
+        "b_id": "b.tp-a0597199"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              4455549520,
+              2426861389,
+              9886363331
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              4455549520,
+              2426861389,
+              9886363331
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yxe-cr-03/et-0/0/6",
+        "b_id": "b.tp-2bfd876a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              2060871471,
+              9492218460,
+              9443658855
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              2060871471,
+              9492218460,
+              9443658855
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yyz-cr-06/et-0/0/5",
+        "b_id": "b.tp-7ce4df47"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              4087401494,
+              9717377664,
+              4592925347
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              4087401494,
+              9717377664,
+              4592925347
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-ar-05/et-0/0/4",
+        "b_id": "b.tp-3bb14dcf"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              7707351349,
+              2118689728,
+              1518576460
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              7707351349,
+              2118689728,
+              1518576460
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-ar-05/et-0/0/0",
+        "b_id": "b.tp-881b0151"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              3731618561,
+              5754446965,
+              1529990055
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              3731618561,
+              5754446965,
+              1529990055
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "virtual_provision",
+      "by": "B",
+      "stage": 1,
+      "args": {
+        "a_id": "a.yow-ar-05/et-0/0/1",
+        "b_id": "b.tp-2519f04a"
+      },
+      "result": {
+        "ok": true,
+        "answer": {
+          "confirmed": true,
+          "recorded_through_A": {
+            "in-octets": [
+              1568554967,
+              2515033819,
+              6512766710
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          },
+          "recorded_through_B": {
+            "in-octets": [
+              1568554967,
+              2515033819,
+              6512766710
+            ],
+            "intervals": [
+              "t-2",
+              "t-1",
+              "t"
+            ]
+          }
+        },
+        "message": "the data recorded through both handles is the same: one component"
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [
+          {
+            "my_id": "b.tp-b3e678d5",
+            "their_id": "a.ywg-cr-00/et-0/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:c9:11:f5:7c:ce); both are members of the settled ae3 bundle. The alternative a.ywg-cr-00/et-0/0/1 was decisively refuted by live observation."
+          },
+          {
+            "my_id": "b.tp-b27a3a3f",
+            "their_id": "a.ywg-cr-00/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:33:5f:97:3d:aa); both are members of the settled ae3 bundle and connect to the corresponding ae4 member."
+          },
+          {
+            "my_id": "b.tp-bef584d3",
+            "their_id": "a.yxe-cr-03/et-0/0/2",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:70:eb:94:0b:d5); both are members of the settled ae4 bundle. Observation refuted pairing this A port with b.tp-100c2374."
+          },
+          {
+            "my_id": "b.tp-100c2374",
+            "their_id": "a.yxe-cr-03/et-0/0/3",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:d8:61:9b:91:ff); both are members of the settled ae4 bundle and connect to the matching ae3 member."
+          },
+          {
+            "my_id": "b.tp-a0597199",
+            "their_id": "a.yxe-cr-03/et-0/0/7",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:d4:b1:00:a9:ea); both are members of settled ae8 and connect to the corresponding ae2 member. Pairing with et-0/0/6 was decisively refuted."
+          },
+          {
+            "my_id": "b.tp-2bfd876a",
+            "their_id": "a.yxe-cr-03/et-0/0/6",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:42:69:da:1c:f6); both are members of settled ae8 and connect to the matching ae2 member."
+          },
+          {
+            "my_id": "b.tp-7ce4df47",
+            "their_id": "a.yyz-cr-06/et-0/0/5",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:38:5e:b0:94:23); both are members of settled ae6. The other ae6 member b.tp-5a4d1e42 was already observation-confirmed as et-0/0/4."
+          },
+          {
+            "my_id": "b.tp-3bb14dcf",
+            "their_id": "a.yow-ar-05/et-0/0/4",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:e7:07:8f:7f:89); both are members of settled ae5. The other ae5 member b.tp-e489acd1 was observation-confirmed as et-0/0/3."
+          },
+          {
+            "my_id": "b.tp-881b0151",
+            "their_id": "a.yow-ar-05/et-0/0/0",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:b4:eb:89:02:c4); both are members of settled ae2. Observation refuted pairing et-0/0/0 with b.tp-2519f04a."
+          },
+          {
+            "my_id": "b.tp-2519f04a",
+            "their_id": "a.yow-ar-05/et-0/0/1",
+            "confidence": 1.0,
+            "rationale": "Authoritative hardware-address matches exactly (02:ba:66:d3:f8:b6); both are members of settled ae2 and connect to the corresponding ae8 member."
+          }
+        ],
+        "ratifications": [],
+        "interrogations": [],
+        "observations": [
+          {
+            "my_id": "b.tp-b3e678d5",
+            "their_id": "a.ywg-cr-00/et-0/0/2"
+          },
+          {
+            "my_id": "b.tp-b27a3a3f",
+            "their_id": "a.ywg-cr-00/et-0/0/1"
+          },
+          {
+            "my_id": "b.tp-bef584d3",
+            "their_id": "a.yxe-cr-03/et-0/0/2"
+          },
+          {
+            "my_id": "b.tp-100c2374",
+            "their_id": "a.yxe-cr-03/et-0/0/3"
+          },
+          {
+            "my_id": "b.tp-a0597199",
+            "their_id": "a.yxe-cr-03/et-0/0/7"
+          },
+          {
+            "my_id": "b.tp-2bfd876a",
+            "their_id": "a.yxe-cr-03/et-0/0/6"
+          },
+          {
+            "my_id": "b.tp-7ce4df47",
+            "their_id": "a.yyz-cr-06/et-0/0/5"
+          },
+          {
+            "my_id": "b.tp-3bb14dcf",
+            "their_id": "a.yow-ar-05/et-0/0/4"
+          },
+          {
+            "my_id": "b.tp-881b0151",
+            "their_id": "a.yow-ar-05/et-0/0/0"
+          },
+          {
+            "my_id": "b.tp-2519f04a",
+            "their_id": "a.yow-ar-05/et-0/0/1"
+          }
+        ],
+        "no_counterpart": [],
+        "done": false
+      }
+    },
+    {
+      "step": "turn",
+      "from": "A",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [
+          {
+            "their_id": "b.tp-b3e678d5",
+            "my_id": "a.ywg-cr-00/et-0/0/2",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address, owning device, bundle membership, and neighbour topology also agree."
+          },
+          {
+            "their_id": "b.tp-b27a3a3f",
+            "my_id": "a.ywg-cr-00/et-0/0/1",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address, owning device, bundle membership, and neighbour topology also agree."
+          },
+          {
+            "their_id": "b.tp-bef584d3",
+            "my_id": "a.yxe-cr-03/et-0/0/2",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae4 membership agree."
+          },
+          {
+            "their_id": "b.tp-100c2374",
+            "my_id": "a.yxe-cr-03/et-0/0/3",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae4 membership agree."
+          },
+          {
+            "their_id": "b.tp-a0597199",
+            "my_id": "a.yxe-cr-03/et-0/0/7",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae8 membership agree."
+          },
+          {
+            "their_id": "b.tp-2bfd876a",
+            "my_id": "a.yxe-cr-03/et-0/0/6",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae8 membership agree."
+          },
+          {
+            "their_id": "b.tp-7ce4df47",
+            "my_id": "a.yyz-cr-06/et-0/0/5",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae6 membership agree."
+          },
+          {
+            "their_id": "b.tp-3bb14dcf",
+            "my_id": "a.yow-ar-05/et-0/0/4",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae5 membership agree."
+          },
+          {
+            "their_id": "b.tp-881b0151",
+            "my_id": "a.yow-ar-05/et-0/0/0",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae2 membership agree."
+          },
+          {
+            "their_id": "b.tp-2519f04a",
+            "my_id": "a.yow-ar-05/et-0/0/1",
+            "accept": true,
+            "reason": "Decisive live observation confirmed identical counters; authoritative hardware-address and settled ae2 membership agree."
+          }
+        ],
+        "interrogations": [],
+        "observations": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "turn",
+      "from": "B",
+      "stage": 1,
+      "turn": {
+        "answers": [],
+        "questions": [],
+        "proposals": [],
+        "ratifications": [],
+        "interrogations": [],
+        "observations": [],
+        "no_counterpart": [],
+        "done": true
+      }
+    },
+    {
+      "step": "staging",
+      "stages": 1,
+      "devices_bound": 8,
+      "batch_size": 60,
+      "anchored": 38,
+      "lookalikes_a": 12,
+      "lookalikes_b": 6
+    }
+  ]
+}
