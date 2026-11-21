@@ -70,8 +70,8 @@ seen on a port. Agent B's model has twelve: nodes, termination points, links.
 Each agent lifts its own model. For every concept it states a meaning, and gives an example, looking
 only at its own side.
 
-The lift also states what a value needs in order to be used. Agent A records(v) a speed, in bits per
-second. Agent B records(v) a rate, in kilobits per second. The unit is context, and the lift makes
+The lift also states what a value needs in order to be used. Agent A records a speed, in bits per
+second. Agent B records a rate, in kilobits per second. The unit is context, and the lift makes
 it explicit.
 
 
@@ -82,7 +82,7 @@ that both sides can consult. Here it has twelve entries.
 
 An entry is more than a word. It has a label, a class, a definition, an example, and synonyms. Here
 is one in full: physical port. One physical attachment point on a device, where exactly one cable or
-fibre ends. The reference is thin because it stops there. It names no instance, and it records(v) no
+fibre ends. The reference is thin because it stops there. It names no instance, and it records no
 relationships.
 
 Each agent anchors its own concepts to these entries. Agent A's interface, and agent B's termination
@@ -119,7 +119,7 @@ Three concepts have no counterpart on the other side, and are left unmatched.
 GENERATE
 
 Generate. From the settled correspondences, a translator is produced for each side. For each pair of
-terms it records(v) how a value is rewritten. An address is carried unchanged. A speed in bits per
+terms it records how a value is rewritten. An address is carried unchanged. A speed in bits per
 second becomes a rate in kilobits per second.
 
 The translator is settled once, and applied afterwards with no further judgment.
@@ -236,15 +236,15 @@ In a larger network, in runs where no check was required, something else shows u
 proposes a match for a pair of look-alike ports without checking it, at full confidence. The other
 agent agrees. Both are wrong.
 
-This is more than a slip. Nothing in the first agent's records(n) favours one assignment over the
+This is more than a slip. Nothing in the first agent's records favours one assignment over the
 other, so its choice is arbitrary. And the swapped assignment fits everything that the second agent
-holds, so it agrees. Agreement cannot settle what the records(n) leave open.
+holds, so it agrees. Agreement cannot settle what the records leave open.
 
-But the records(n) do show where this can happen. Each agent can work out, from its own graph and
+But the records do show where this can happen. Each agent can work out, from its own graph and
 before any conversation, which of its individuals no recorded fact tells apart.
 
 So the protocol sets one rule. A match that involves a look-alike counts only when it has been
-checked against the network. Every other match stands on the records(n).
+checked against the network. Every other match stands on the records.
 
 In the small network, twelve of the fifty matches need that check. In the network of one hundred and
 fifty individuals, twenty-eight.
@@ -280,20 +280,20 @@ All fifty individuals are matched.
 
 A LIVE OBSERVATION
 
-Confirming a match does not have to mean operating anything. On a live* network, taking a port out
-of service to find out which port it is would be disruptive. A live* observation avoids that.
+Confirming a match does not have to mean operating anything. On a live network, taking a port out
+of service to find out which port it is would be disruptive. A live observation avoids that.
 
 It reads the data that the running network has already recorded for the component: its traffic
 counters, say, over the same intervals. It reads them through agent A's handle, and through agent
 B's. If the two readings are the same, both handles lead to one component. If they differ, the two
 are look-alikes.
 
-Nothing is provisioned, nothing is changed, and nothing is taken out of service. With live*
+Nothing is provisioned, nothing is changed, and nothing is taken out of service. With live
 observations in place of virtual experiments, the agents again match every individual correctly, in
 every run.
 
 So there are two ways to check a match against the network. A virtual experiment, on a digital twin,
-may operate the component. A live* observation, on the running network, only reads what is already
+may operate the component. A live observation, on the running network, only reads what is already
 recorded. And where a device can report an identifier of its own, such as a hardware address, the
 agents can ask it. In the recorded runs, they often did so before proposing a match.
 
@@ -305,12 +305,12 @@ withhold every IP address from both agents.
 
 Now only the twenty-two routers are settled by an identifier. Topology has to do real work. Eighty
 matches are fixed by it: each one relative to the routers, and to what is already settled. Those
-matches stand on the records(n), with no check.
+matches stand on the records, with no check.
 
 Forty-eight individuals are look-alikes, and each of their matches is checked against the network.
 
 All one hundred and fifty are matched correctly. So the rule holds where it matters: check only what
-the records(n) cannot tell apart.
+the records cannot tell apart.
 
 
 SCALE
@@ -327,7 +327,7 @@ devices at a time, in conversations of bounded size, and carry what is settled i
 two conversations are enough.
 
 In six runs out of six, all six hundred and fifty-eight are matched correctly: three with virtual
-experiments on the digital twin, and three with live* observations.
+experiments on the digital twin, and three with live observations.
 
 Compare the method before it was tightened, when every match went through conversation, and every
 one was checked. That took twelve conversations, about five hundred and eighty checks, and twenty-
@@ -348,10 +348,10 @@ A.
 
 The term is translated: a rate becomes a speed. The unit is converted: kilobits per second become
 bits per second. And the individual is matched: agent B's link becomes the two ports that agent A
-knows at its ends. Agent A's own records(n) say the same.
+knows at its ends. Agent A's own records say the same.
 
 Every one of the one hundred and eighty-six observations that agent B holds arrives in agreement
-with agent A's own records(n). And every component that one agent can name is the same component for
+with agent A's own records. And every component that one agent can name is the same component for
 the other.
 
 It makes no difference whether what crosses is a report, or an instruction. Either names a
@@ -361,27 +361,27 @@ component, and either arrives correctly only if the individuals are matched.
 THE SEQUENCE, BY PLACEMENT
 
 The method applies its tools in a fixed sequence. How far it gets depends on where the cognition is.
-Take three placements. Both sides inert: one reasoner, reading two static records(n). One side
+Take three placements. Both sides inert: one reasoner, reading two static records. One side
 inert. And both sides cognitive: the two agents we have followed.
 
-Some steps need only the records(n), so every placement has them: the identity anchor, topology, and
+Some steps need only the records, so every placement has them: the identity anchor, topology, and
 the detection of look-alikes.
 
 One more step belongs with them: a second, independent reading of each match. With two agents it
 comes by construction, because a match proposed by one agent is read by the other, against its own
-records(n). A single reasoner has no partner, so it needs a separate verification pass. Without one,
+records. A single reasoner has no partner, so it needs a separate verification pass. Without one,
 it can state the right basis for two matches and still cross them. In the recorded runs, that
 happened, and the second reading caught it.
 
-The next two steps need a live* system. Asking the other side takes an agent there. Asking a device
-for an identifier takes a live* side, and it settles a match only when both sides can ask.
+The next two steps need a live system. Asking the other side takes an agent there. Asking a device
+for an identifier takes a live side, and it settles a match only when both sides can ask.
 
-And a check against the network, by an experiment on a digital twin or by a live* observation, needs
+And a check against the network, by an experiment on a digital twin or by a live observation, needs
 a handle on the component from both sides. Only the two agents have it.
 
 The recorded runs show the consequence. In the small network, an inert placement matches thirty-
 eight of fifty: exactly what the identifiers settle. It leaves all twelve look-alikes open, and it
-guesses none of them. With one side live*, the result is the same. The two agents match all fifty.
+guesses none of them. With one side live, the result is the same. The two agents match all fifty.
 In the network of one hundred and fifty, the pattern repeats: one hundred and twenty-two, against
 all one hundred and fifty.
 
@@ -389,7 +389,7 @@ With addresses withheld, the single reasoner still does the topology step correc
 fifty, and about one hundred and two of one hundred and fifty, with none wrong. Again, only the two
 agents close the look-alikes.
 
-One condition should be stated. Here, the inert side's record(n) carries no identifier that only a
+One condition should be stated. Here, the inert side's record carries no identifier that only a
 device can report, such as a hardware address. If it published them, they would be identity anchors,
 and the first step would settle those matches.
 
@@ -397,10 +397,10 @@ and the first step would settle those matches.
 BACK TO THE MAP
 
 So the method reaches all the way down. The models translate. The individuals are bound: by identity
-anchor, by topology, and, where the records(n) cannot tell two apart, by a check against the
+anchor, by topology, and, where the records cannot tell two apart, by a check against the
 network. And both agents know in advance which matches need that check.
 
-What this needs is a way to check: a digital twin, for a virtual experiment, or the live* network,
+What this needs is a way to check: a digital twin, for a virtual experiment, or the live network,
 for an observation of what it has recorded. What it leaves for other work is whether an agent's data
 is current, and whether its claims can be trusted.
 
