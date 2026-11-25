@@ -2,6 +2,12 @@
 
 *Using machine cognition — a theory, a research programme, and a completed four-scenario study.*
 
+## What's new (2026-11-25)
+
+Housekeeping. Two internal working logs were removed from `study/_shelf/`, and a caveat in the YANG description
+synopsis (`study/reports/`) and a message in `study/pipeline/check_local_model.py` were reworded. No results or
+reports changed.
+
 ## What's new (2026-11-21)
 
 **Keeping the bindings, added to the [instance matching](instance-matching/) case study.** Once two agents refer
